@@ -1,0 +1,38 @@
+Build Summary: 28/28 steps succeeded; 95/95 tests passed
+app success
++- install lan-audio success
+|  +- compile exe lan-audio safe native success 59s MaxRSS:355M
+|     +- options cached
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 97ms MaxRSS:64M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 201ms MaxRSS:64M
+|     +- translate-c cached 197ms MaxRSS:64M
+|     +- translate-c cached 245ms MaxRSS:64M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe safe native success 40s MaxRSS:326M
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+network-test success
++- run test 6 pass (6 total) 7s MaxRSS:4M
+   +- compile test safe native cached 220ms MaxRSS:64M
+      +- translate-c (reused)
+test success
++- run test 47 pass (47 total) 2s MaxRSS:3M
+|  +- compile test safe native cached 178ms MaxRSS:64M
++- run test 4 pass (4 total) 259ms MaxRSS:2M
+|  +- compile test safe native success 58s MaxRSS:291M
++- run test 1 pass (1 total) 380ms MaxRSS:2M
+|  +- compile test safe native cached 385ms MaxRSS:64M
++- run test 37 pass (37 total) 611ms MaxRSS:3M
+   +- compile test safe native cached 172ms MaxRSS:64M
+

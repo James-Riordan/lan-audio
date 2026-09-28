@@ -1,0 +1,71 @@
+{
+  "observed_at_utc": "2026-09-26T12:10:51.975902+00:00",
+  "reason": "Reconcile explicitly reviewed TLS documentation/source-comment/package-doc additions from the coordinated dependency chat. Preserve strict runtime/source custody; do not bypass failed checks.",
+  "review": "All nine complete diffs inspected. Existing implementation bodies identical after line-ending normalization. Only two documented package inclusion paths added. SDK, backend lock, fixtures, HOST-DRIVER and all other 179 pinned files unchanged.",
+  "changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "0783d72b4615d5be30a3f6b0b0ce653837bc8d653366debb2449c51eb139f94e",
+      "new_sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90",
+      "classification": "Prepended current documentation navigation; prior README text unchanged.",
+      "diff": "--- reviewed-before/README.md\n+++ adopted/README.md\n@@ -1,3 +1,5 @@\n+> Current engineering handoff (2026-09-26): [documentation index](docs/README.md), [current source and verification](docs/verification/current.md), [file contracts](docs/reference/catalog.md), and [implementation roadmap](docs/roadmap/README.md). Earlier test counts below describe their original snapshots.\n+\n # tls-zig revision 2 \u2014 private OpenSSL 3.5.8 backend\n \n Package 0.1.5 adds `Config.alpn`: one opaque 1..255-byte protocol identifier,\n"
+    },
+    {
+      "path": "build.zig",
+      "old_sha256": "a90cf23c31ebe464c3a22677e9a51f2e62e6db5afc8a2514122fb6a4fd1d3fbf",
+      "new_sha256": "62d431a423ff9017333a57fb1611d943b639ed6839a9f1364dbcbb0513d49d20",
+      "classification": "Prepended reviewed Zig comment lines; original source body unchanged.",
+      "diff": "--- reviewed-before/build.zig\n+++ adopted/build.zig\n@@ -1,3 +1,13 @@\n+// Engineering contract (2026-09-26)\n+// Build graph and public module/runtime export definition.\n+// File contract: docs/reference/files/build.zig.md\n+// Ownership and invariant: Exports tls and runtime; links private Windows DLL import libraries,\n+// stages DLLs beside executables and provides test/host-test/interop/example steps. Standard\n+// target options do not establish non-Windows support.\n+// Next implementation obligation: Verify a clean external consumer whenever exported modules,\n+// runtime paths or package closure change. Add explicit documented steps for new suites; do not\n+// leave test files unreachable.\n+\n const std = @import(\"std\");\n fn staged(b: *std.Build, artifact: *std.Build.Step.Compile, bin: std.Build.LazyPath, name: []const u8) std.Build.LazyPath {\n     const files = b.addWriteFiles();\n"
+    },
+    {
+      "path": "build.zig.zon",
+      "old_sha256": "fbcc8f8b3beae8f9ffc657ec4e925f40fdab52d9f5438443a61f829fa6f68c95",
+      "new_sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d",
+      "classification": "Package inclusion adds only docs and AGENTS.md; version, fingerprint, compiler and dependency fields unchanged.",
+      "diff": "--- reviewed-before/build.zig.zon\n+++ adopted/build.zig.zon\n@@ -4,5 +4,5 @@\n     .fingerprint = 0xe9eea81f95b1f806,\n     .minimum_zig_version = \"0.17.0-dev.1859+dcceb318e\",\n     .dependencies = .{},\n-    .paths = .{ \"build.zig\", \"build.zig.zon\", \"src\", \"tests\", \"examples\", \"tools\", \"README.md\", \"HOST-DRIVER.md\", \"backend-lock.json\", \"evidence/source-provenance.json\", \"evidence/build-recovery.md\" },\n+    .paths = .{ \"docs\", \"AGENTS.md\", \"build.zig\", \"build.zig.zon\", \"src\", \"tests\", \"examples\", \"tools\", \"README.md\", \"HOST-DRIVER.md\", \"backend-lock.json\", \"evidence/source-provenance.json\", \"evidence/build-recovery.md\" },\n }\n"
+    },
+    {
+      "path": "examples/consumer/socket.c",
+      "old_sha256": "33a8ce05669e786e6516ae54c789283d0678d21865d3ad70ef09e0f98b08906a",
+      "new_sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c",
+      "classification": "Prepended reviewed C block comment; original source body unchanged.",
+      "diff": "--- reviewed-before/examples/consumer/socket.c\n+++ adopted/examples/consumer/socket.c\n@@ -1,3 +1,14 @@\n+/* Engineering contract (2026-09-26)\n+ * Windows-only nonblocking loopback transport demonstration.\n+ * File contract: docs/reference/files/examples/consumer/socket.c.md\n+ * Ownership and invariant: Owns Winsock initialization/socket cleanup. send is deliberately capped\n+ * at 7 bytes, receive at 113. -2 indicates would-block; EOF and errors remain distinct.\n+ * Opening/accepting performs bounded polling outside the library.\n+ * Next implementation obligation: Keep as a demo. T2 adds separate POSIX consumer support and\n+ * cancellation-aware connect/accept policy. A production connector must define address resolution,\n+ * IPv6, connect deadline and total resource limits.\n+ */\n+\n /* Windows-only demonstration transport. Network ownership stays outside tls. */\n #define WIN32_LEAN_AND_MEAN\n #include <winsock2.h>\n"
+    },
+    {
+      "path": "src/backend.c",
+      "old_sha256": "a40e4612e3cf924fc42260d1a97bf834ff74358cd8da9037dec430df690ac17a",
+      "new_sha256": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21",
+      "classification": "Prepended reviewed C block comment; original source body unchanged.",
+      "diff": "--- reviewed-before/src/backend.c\n+++ adopted/src/backend.c\n@@ -1,3 +1,17 @@\n+/* Engineering contract (2026-09-26)\n+ * Small OpenSSL records adapter owning SSL_CTX, SSL, paired BIOs and immutable pending write data.\n+ * File contract: docs/reference/files/src/backend.c.md\n+ * Ownership and invariant: Clear the OpenSSL error queue before a TLS operation and classify its\n+ * result immediately. TLS 1.3 only; explicit trust, SAN checking, single owned ALPN, no early-data\n+ * API. Two 32 KiB BIO buffers and one 16 KiB write block do not cap all provider allocation.\n+ * Shutdown preserves unread plaintext with peek and retries blocked alerts.\n+ * Next implementation obligation: Keep QUIC callbacks in a separate backend translation unit after\n+ * capability probing. Add provider initialization failure injection, time_t range handling and\n+ * allocation accounting. Review environment/provider loading policy before deployment. The C ABI\n+ * is internal; its constructors do not replicate all public Zig Config validation.\n+ * Verification: tests/transport.zig, tests/driver.zig\n+ */\n+\n #include \"backend.h\"\n #include <openssl/ssl.h>\n #include <openssl/err.h>\n"
+    },
+    {
+      "path": "src/backend.h",
+      "old_sha256": "6ead5064244ff32f649e9faf89f9d0dff819545728568a648292854fb4220a4a",
+      "new_sha256": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc",
+      "classification": "Prepended reviewed C block comment; original source body unchanged.",
+      "diff": "--- reviewed-before/src/backend.h\n+++ adopted/src/backend.h\n@@ -1,3 +1,17 @@\n+/* Engineering contract (2026-09-26)\n+ * Internal C ABI declarations and status-number vocabulary.\n+ * File contract: docs/reference/files/src/backend.h.md\n+ * Ownership and invariant: Keep C and Zig signatures aligned for size_t, integer widths, nullable\n+ * pointers and ownership. tz_free accepts null; operations require a live handle. Constructor\n+ * failure is null. The status comment includes -5 although the current implementation does not\n+ * emit it.\n+ * Next implementation obligation: Remove or formalize the unused -5 status in a focused ABI\n+ * cleanup. Add compile/link ABI checks for every supported target; validate argument order and\n+ * length parameters for custom ALPN. Do not promote this test-facing ABI to a compatibility\n+ * promise accidentally.\n+ * Verification: tests/transport.zig\n+ */\n+\n #ifndef TLS_ZIG_BACKEND_H\n #define TLS_ZIG_BACKEND_H\n #include <stddef.h>\n"
+    },
+    {
+      "path": "src/backend.zig",
+      "old_sha256": "1be07c3acdbc36b4aca27e6ff5ceeec7ba348efddfcdd93a7ef13fc12718da7a",
+      "new_sha256": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6",
+      "classification": "Prepended reviewed Zig comment lines; original source body unchanged.",
+      "diff": "--- reviewed-before/src/backend.zig\n+++ adopted/src/backend.zig\n@@ -1,3 +1,14 @@\n+//! Engineering contract (2026-09-26)\n+//! Manual Zig extern mirror of the internal C ABI.\n+//! File contract: docs/reference/files/src/backend.zig.md\n+//! Ownership and invariant: Use c_int/c_long/c_ulong for target C types and usize for size_t. Keep\n+//! opaque engine ownership in Engine. Nullability differs intentionally for creation/free versus\n+//! live operations. Do not infer target support from a successful declaration compile.\n+//! Next implementation obligation: Generate or verify the mirror against backend.h using a\n+//! compile/link smoke consumer; keep no independent protocol logic here. Expand symbols only\n+//! alongside the C implementation and wrapper tests.\n+//! Verification: tests/transport.zig\n+\n // Deliberately small C ABI mirror of backend.h. Zig 0.17 has no @cImport.\n pub const tz_engine = opaque {};\n pub extern fn tz_new(server: c_int, ca: ?[*:0]const u8, cert: ?[*:0]const u8, key: ?[*:0]const u8, peer: ?[*:0]const u8, ip: c_int, require_client: c_int, wall_time: i64) ?*tz_engine;\n"
+    },
+    {
+      "path": "src/driver.zig",
+      "old_sha256": "e172fcb02cb84541ef08bdb7e2f9ef2476170ef107141982c898c2395890e5d7",
+      "new_sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f",
+      "classification": "Prepended reviewed Zig comment lines; original source body unchanged.",
+      "diff": "--- reviewed-before/src/driver.zig\n+++ adopted/src/driver.zig\n@@ -1,3 +1,16 @@\n+//! Engineering contract (2026-09-26)\n+//! Serialized nonblocking transport driver with bounded ciphertext queues and early-response probe.\n+//! File contract: docs/reference/files/src/driver.zig.md\n+//! Ownership and invariant: Owns Engine, borrows transport context and optional atomic cancellation\n+//! flag. Read buffer remains exclusively borrowed until the operation completes or fails. Preserve\n+//! input suffixes and output prefixes. step has at most one transport callback or TLS/BIO\n+//! operation. Probe cannot bypass unfinished SSL_write, discard ciphertext, complete the write or\n+//! extend its deadline. Shutdown reads inherit the original close deadline.\n+//! Next implementation obligation: Keep serialized semantics explicit. Add a separate duplex design\n+//! only when a consumer needs it. Build deterministic scheduler traces for cancellation, half-close\n+//! and peer data during blocked output; verify readiness and deadline transitions rather than\n+//! counting loops as fairness.\n+//! Verification: tests/driver.zig\n //! Nonblocking host loop. Only the cancellation flag may be accessed concurrently.\n //! The host owns the socket and polling; callbacks must never block or reenter us.\n const std = @import(\"std\");\n"
+    },
+    {
+      "path": "src/root.zig",
+      "old_sha256": "d8623cca43e285d9f9ee2ef0cda2ae816df66b74f1c010d091690c01127eb31d",
+      "new_sha256": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57",
+      "classification": "Prepended reviewed Zig comment lines; original source body unchanged.",
+      "diff": "--- reviewed-before/src/root.zig\n+++ adopted/src/root.zig\n@@ -1,3 +1,17 @@\n+//! Engineering contract (2026-09-26)\n+//! Public TLS records Engine, configuration validation and C-status translation.\n+//! File contract: docs/reference/files/src/root.zig.md\n+//! Ownership and invariant: Engine owns the backend handle; do not copy after initialization.\n+//! Config strings and opaque ALPN are copied by init. Required peer checks and ALPN must pass\n+//! before plaintext access. tick uses milliseconds and an absolute handshake deadline; certificate\n+//! time uses supplied Unix seconds. InvalidState is not the same as a fatal TLS error. Fatal-alert\n+//! drain can remain available.\n+//! Next implementation obligation: Keep the 0.1.5 configurable single-ALPN behavior. Add capability\n+//! reporting and explicit platform/build rejection before portability work. Keep QUIC recordless\n+//! mode separate from feedRecords. Improve aggregate backend initialization errors only with a\n+//! stable diagnostic contract.\n+//! Verification: tests/transport.zig\n+\n const std = @import(\"std\");\n const c = @import(\"backend.zig\");\n pub const host = @import(\"driver.zig\");\n"
+    }
+  ],
+  "unchanged_pin_count": 179
+}

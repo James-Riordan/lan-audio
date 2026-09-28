@@ -1,0 +1,5 @@
+Build Summary: 3/3 steps succeeded; 20/20 tests passed
+lifecycle-test success
++- run test 20 pass (20 total) 522ms MaxRSS:3M
+   +- compile test safe native success 1m MaxRSS:292M
+

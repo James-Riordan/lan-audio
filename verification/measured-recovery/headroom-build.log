@@ -1,0 +1,68 @@
+recovery-probe
++- install audio-recovery-probe
+   +- compile exe audio-recovery-probe safe native 1 errors
+src\runtime\session_supervisor.zig:1:1: error: file exists in modules 'stream_runtime' and 'session_supervisor'
+src\runtime\session_supervisor.zig:1:1: note: files must belong to only one module
+src\runtime\stream.zig:269:97: note: file is imported here by the root of module 'stream_runtime'
+    if (options.max_queue_frames < options.prefill_frames or options.max_queue_frames > @import("recovery_policy.zig").maximum_queue_frames) return error.InvalidOptions;
+                                                                                                ^~~~~~~~~~~~~~~~~~~~~
+src\runtime\session_supervisor.zig:7:24: note: file is imported here by the root of module 'session_supervisor'
+const Policy = @import("recovery_policy.zig").Policy;
+                       ^~~~~~~~~~~~~~~~~~~~~
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" build-exe -OReleaseSafe --dep stream_runtime --dep session_supervisor --dep peer_policy --dep platform_host --dep network_host "-Mroot=tests\\integration\\recovery_session.zig" -OReleaseSafe --dep platform_host --dep audio_host --dep network_host --dep verified_channel --dep peer_policy --dep lan_audio --dep lifecycle --dep send_drain --dep receive_drain "-Mstream_runtime=src\\runtime\\stream.zig" -OReleaseSafe --dep stream_runtime --dep platform_host --dep network_host "-Msession_supervisor=src\\runtime\\session_supervisor.zig" -OReleaseSafe --dep lan_audio "-Mpeer_policy=src\\security\\peer_policy.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\platform.c" -lavrt -OReleaseSafe -I "src\\host" --dep platform_c "-Mplatform_host=src\\host\\platform.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\net\\native.c" -lws2_32 -OReleaseSafe -I "src\\host\\net" --dep network_c "-Mnetwork_host=src\\host\\net\\socket.zig" -OReleaseSafe --dep lan_audio --dep miniaudio "-Maudio_host=src\\host\\audio_device.zig" -OReleaseSafe --dep tls --dep network_host --dep lan_audio --dep peer_policy --dep channel_admission "-Mverified_channel=src\\host\\verified_channel.zig" -OReleaseSafe "-Mlan_audio=src\\root.zig" -OReleaseSafe "-Mlifecycle=src\\runtime\\lifecycle.zig" -OReleaseSafe --dep lan_audio --dep lifecycle "-Msend_drain=src\\runtime\\send_drain.zig" -OReleaseSafe --dep lan_audio --dep pending_audio --dep lifecycle "-Mreceive_drain=src\\runtime\\receive_drain.zig" -OReleaseSafe "-Mplatform_c=.zig-cache\\o\\571311ef41d1fe8e567be84ae17ac095\\platform.zig" -OReleaseSafe "-Mnetwork_c=.zig-cache\\o\\bfcccbbd378519942c7dc4388be68d1a\\native.zig" ".zig-cache\\o\\f8db0cea31c1d3943c7609e3eb059ddc\\miniaudio.lib" -OReleaseSafe -I ".zig-cache\\o\\b612c90714d41c109b931981da111308" --dep miniaudio_c "-Mminiaudio=../miniaudio-zig\\src\\root.zig" "../tls-zig\\deps\\openssl-install\\lib\\libssl.dll.a" "../tls-zig\\deps\\openssl-install\\lib\\libcrypto.dll.a" -cflags -std=c11 -Wall -Wextra -Werror -- "../tls-zig\\src\\backend.c" -OReleaseSafe -I "../tls-zig\\src" -isystem "../tls-zig\\deps\\openssl-install\\include" "-Mtls=../tls-zig\\src\\root.zig" -OReleaseSafe --dep lan_audio --dep peer_policy "-Mchannel_admission=src\\runtime\\channel_admission.zig" -OReleaseSafe --dep lan_audio "-Mpending_audio=src\\runtime\\pending_block.zig" -OReleaseSafe "-Mminiaudio_c=.zig-cache\\o\\2455e4cf7d970887ad1a90aac410ba48\\profile.zig" -lole32 -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name audio-recovery-probe --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+app
++- install lan-audio
+   +- compile exe lan-audio safe native 1 errors
+src\runtime\session_supervisor.zig:1:1: error: file exists in modules 'stream_runtime' and 'session_supervisor'
+src\runtime\session_supervisor.zig:1:1: note: files must belong to only one module
+src\runtime\stream.zig:269:97: note: file is imported here by the root of module 'stream_runtime'
+    if (options.max_queue_frames < options.prefill_frames or options.max_queue_frames > @import("recovery_policy.zig").maximum_queue_frames) return error.InvalidOptions;
+                                                                                                ^~~~~~~~~~~~~~~~~~~~~
+src\runtime\session_supervisor.zig:7:24: note: file is imported here by the root of module 'session_supervisor'
+const Policy = @import("recovery_policy.zig").Policy;
+                       ^~~~~~~~~~~~~~~~~~~~~
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" build-exe -OReleaseSafe --dep audio_host --dep app_options --dep stream_runtime --dep session_supervisor --dep platform_host --dep peer_policy --dep lan_audio "-Mroot=src\\app\\main.zig" -OReleaseSafe --dep lan_audio --dep miniaudio "-Maudio_host=src\\host\\audio_device.zig" "-Mapp_options=.zig-cache\\o\\99cc8e082b3da62eef3845e5e0d8d866\\options.zig" -OReleaseSafe --dep platform_host --dep audio_host --dep network_host --dep verified_channel --dep peer_policy --dep lan_audio --dep lifecycle --dep send_drain --dep receive_drain "-Mstream_runtime=src\\runtime\\stream.zig" -OReleaseSafe --dep stream_runtime --dep platform_host --dep network_host "-Msession_supervisor=src\\runtime\\session_supervisor.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\platform.c" -lavrt -OReleaseSafe -I "src\\host" --dep platform_c "-Mplatform_host=src\\host\\platform.zig" -OReleaseSafe --dep lan_audio "-Mpeer_policy=src\\security\\peer_policy.zig" -OReleaseSafe "-Mlan_audio=src\\root.zig" ".zig-cache\\o\\f8db0cea31c1d3943c7609e3eb059ddc\\miniaudio.lib" -OReleaseSafe -I ".zig-cache\\o\\b612c90714d41c109b931981da111308" --dep miniaudio_c "-Mminiaudio=../miniaudio-zig\\src\\root.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\net\\native.c" -lws2_32 -OReleaseSafe -I "src\\host\\net" --dep network_c "-Mnetwork_host=src\\host\\net\\socket.zig" -OReleaseSafe --dep tls --dep network_host --dep lan_audio --dep peer_policy --dep channel_admission "-Mverified_channel=src\\host\\verified_channel.zig" -OReleaseSafe "-Mlifecycle=src\\runtime\\lifecycle.zig" -OReleaseSafe --dep lan_audio --dep lifecycle "-Msend_drain=src\\runtime\\send_drain.zig" -OReleaseSafe --dep lan_audio --dep pending_audio --dep lifecycle "-Mreceive_drain=src\\runtime\\receive_drain.zig" -OReleaseSafe "-Mplatform_c=.zig-cache\\o\\571311ef41d1fe8e567be84ae17ac095\\platform.zig" -OReleaseSafe "-Mminiaudio_c=.zig-cache\\o\\2455e4cf7d970887ad1a90aac410ba48\\profile.zig" -OReleaseSafe "-Mnetwork_c=.zig-cache\\o\\bfcccbbd378519942c7dc4388be68d1a\\native.zig" "../tls-zig\\deps\\openssl-install\\lib\\libssl.dll.a" "../tls-zig\\deps\\openssl-install\\lib\\libcrypto.dll.a" -cflags -std=c11 -Wall -Wextra -Werror -- "../tls-zig\\src\\backend.c" -OReleaseSafe -I "../tls-zig\\src" -isystem "../tls-zig\\deps\\openssl-install\\include" "-Mtls=../tls-zig\\src\\root.zig" -OReleaseSafe --dep lan_audio --dep peer_policy "-Mchannel_admission=src\\runtime\\channel_admission.zig" -OReleaseSafe --dep lan_audio "-Mpending_audio=src\\runtime\\pending_block.zig" -lole32 -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name lan-audio --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 22/28 steps succeeded (2 failed); 96/96 tests passed
+app transitive failure
++- install lan-audio transitive failure
+|  +- compile exe lan-audio safe native 1 errors
+|     +- options cached
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 640ms MaxRSS:65M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 8s MaxRSS:65M
+|     +- translate-c cached 566ms MaxRSS:65M
+|     +- translate-c cached 506ms MaxRSS:65M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+recovery-probe transitive failure
++- install audio-recovery-probe transitive failure
+|  +- compile exe audio-recovery-probe safe native 1 errors
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+network-test success
++- run test 6 pass (6 total) 8s MaxRSS:4M
+   +- compile test safe native cached 533ms MaxRSS:65M
+      +- translate-c (reused)
+test success
++- run test 47 pass (47 total) 3s MaxRSS:3M
+|  +- compile test safe native cached 670ms MaxRSS:65M
++- run test 5 pass (5 total) 10s MaxRSS:2M
+|  +- compile test safe native success 1m MaxRSS:292M
++- run test 1 pass (1 total) 445ms MaxRSS:2M
+|  +- compile test safe native cached 1m MaxRSS:65M
++- run test 37 pass (37 total) 2s MaxRSS:3M
+   +- compile test safe native cached 672ms MaxRSS:65M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x3468c48f -j1 test network-test recovery-probe app -Dtransport-tests=true -Doptimize=ReleaseSafe --summary all

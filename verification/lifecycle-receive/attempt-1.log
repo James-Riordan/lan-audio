@@ -1,0 +1,19 @@
+lifecycle-test
++- run test
+   +- compile test debug native 1 errors
+tests\integration\runtime_lifecycle.zig:486:16: error: value with comptime-only type '@EnumLiteral()' depends on runtime control flow
+        try eq(if (ack_copied) .copied else .unknown, outcome.ack);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests\integration\runtime_lifecycle.zig:466:10: note: runtime control flow here
+    for ([_]bool{ false, true }) |ack_copied| {
+         ^~~~~~~~~~~~~~~~~~~~~~
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" test -ODebug --dep lifecycle --dep lan_audio --dep receive_drain "-Mroot=tests\\integration\\runtime_lifecycle.zig" -ODebug "-Mlifecycle=src\\runtime\\lifecycle.zig" -ODebug "-Mlan_audio=src\\root.zig" -ODebug --dep lan_audio --dep pending_audio --dep lifecycle "-Mreceive_drain=src\\runtime\\receive_drain.zig" -ODebug --dep lan_audio "-Mpending_audio=src\\runtime\\pending_block.zig" --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name test --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 0/3 steps succeeded (1 failed)
+lifecycle-test transitive failure
++- run test transitive failure
+   +- compile test debug native 1 errors
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xc83a5592 lifecycle-test --summary all

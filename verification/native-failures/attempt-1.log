@@ -1,0 +1,43 @@
+audio-test
++- run test
+   +- compile test debug native
+      +- compile lib miniaudio debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+Build Summary: 8/8 steps succeeded; 11/11 tests passed
+audio-test success
++- run test 6 pass (6 total) 947ms MaxRSS:10M
+|  +- compile test debug native success 7s MaxRSS:269M
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 1s MaxRSS:31M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 56ms MaxRSS:31M
++- run test 5 pass (5 total) 816ms MaxRSS:7M
+   +- compile test debug native success 7s MaxRSS:278M
+      +- WriteFile (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c (reused)
+

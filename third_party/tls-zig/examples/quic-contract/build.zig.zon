@@ -1,0 +1,8 @@
+.{
+    .name = .tls_quic_contract_consumer,
+    .fingerprint = 0x3d87082df3141dc4,
+    .version = "0.0.0",
+    .minimum_zig_version = "0.17.0-dev.1859+dcceb318e",
+    .dependencies = .{ .tls_zig = .{ .path = "../.." } },
+    .paths = .{ "build.zig", "build.zig.zon", "main.zig", "provider.zig" },
+}

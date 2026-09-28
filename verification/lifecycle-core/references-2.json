@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "tools/build_reference.py"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:06.125859+00:00",
+  "elapsed_seconds": 1.496945600003528,
+  "exit_code": 0,
+  "log": "references-2.log",
+  "log_sha256": "4814178e673fbbb2f6a449f129f6d7d509798f53ba3f0515879d5fc7b450d982"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/build_reference.py"
+    ],
+    "exit_code": 1,
+    "output": "Stale contracts: lan-audio/docs/verification/v2-independent.md\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_docs.py"
+    ],
+    "exit_code": 1,
+    "output": "unmapped file: C:\\Projects\\lan-audio\\docs\\media\\assembly.md\nunmapped file: C:\\Projects\\lan-audio\\src\\media\\block_assembler.zig\nunmapped file: C:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig\nunmapped file: C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_peer.py\nunmapped file: C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_reference.py\nunmapped file: C:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig\nunmapped file: C:\\Projects\\lan-audio\\tests\\integration\\v2_codec_probe.zig\nunmapped file: C:\\Projects\\lan-audio\\tests\\unit\\media\\assembler.zig\nunmapped file: C:\\Projects\\lan-audio\\tools\\test_v2_differential.py\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_handoff.py"
+    ],
+    "exit_code": 1,
+    "output": "unindexed: ('lan-audio', 'docs/media/assembly.md')\nunindexed: ('lan-audio', 'tools/test_v2_differential.py')\nunindexed: ('lan-audio', 'src/media/block_assembler.zig')\nunindexed: ('lan-audio', 'tests/integration/v2_codec_probe.zig')\nunindexed: ('lan-audio', 'tests/integration/tls_v2.zig')\nunindexed: ('lan-audio', 'tests/integration/loopback_transport.zig')\nunindexed: ('lan-audio', 'tests/integration/protocol_v2_peer.py')\nunindexed: ('lan-audio', 'tests/unit/media/assembler.zig')\nunindexed: ('lan-audio', 'tests/integration/protocol_v2_reference.py')\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_transport.py",
+      "--staged"
+    ],
+    "exit_code": 0,
+    "output": "PASS: 188 dependency files match reviewed custody; staged=True\n"
+  },
+  {
+    "command": [
+      "python",
+      "../miniaudio-zig/tools/check_vendor.py"
+    ],
+    "exit_code": 0,
+    "output": "PASS: 2 unchanged upstream files at 9634bedb5b5a2ca38c1ee7108a9358a4e233f14d\n"
+  }
+]

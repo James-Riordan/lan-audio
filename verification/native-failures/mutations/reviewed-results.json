@@ -1,0 +1,82 @@
+[
+  {
+    "name": "start-error-ready",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "--summary",
+      "all"
+    ],
+    "source_path": "src/host/audio_device.zig",
+    "original_sha256": "dc41cadb9c98068126f8651c645210fb4bb615c417005439adb6e1969dbf5350",
+    "mutant_sha256": "b2133099b7d187c37a83739e776f1a17444b98d62d79368ed002071a091cb346",
+    "log_sha256": "e8fcb7870d0d6d5e75e449135d0a858dd92dce3a77ebda5b5c298369f2c0bd2b",
+    "exit_code": 1,
+    "seconds": 51.357,
+    "witness": "native API failures preserve ownership cleanup and reconstruction",
+    "detected": true,
+    "reviewed_runtime_marker": "expected .failed, found .ready",
+    "review": "Initial classifier required literal test failure; this compiler reports a named test failed and a run-test failure count. Original records preserved."
+  },
+  {
+    "name": "stop-error-ready",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "--summary",
+      "all"
+    ],
+    "source_path": "src/host/audio_device.zig",
+    "original_sha256": "dc41cadb9c98068126f8651c645210fb4bb615c417005439adb6e1969dbf5350",
+    "mutant_sha256": "d48b6e680531145f393f5f05e4672f654323862012c4d69a5271c6dc43e5efed",
+    "log_sha256": "daee9e6d032025ebcaa1c2e07c469249c2a5acd6c1449982f9395e58c7d79dc0",
+    "exit_code": 1,
+    "seconds": 34.077,
+    "witness": "native API failures preserve ownership cleanup and reconstruction",
+    "detected": true,
+    "reviewed_runtime_marker": "expected .failed, found .ready",
+    "review": "Initial classifier required literal test failure; this compiler reports a named test failed and a run-test failure count. Original records preserved."
+  },
+  {
+    "name": "writable-means-connected",
+    "command": [
+      "zig",
+      "build",
+      "network-test",
+      "--summary",
+      "all"
+    ],
+    "source_path": "src/host/net/socket.zig",
+    "original_sha256": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+    "mutant_sha256": "0c57e6a76fd5bb7952e304ee0d612508dfa8b2e55054342ff2582edfafc7e389",
+    "log_sha256": "bcf9dab88340a56dc5d59b724d202b4e380c7cfc7cc9a3e2073ebe8c3639ec59",
+    "exit_code": 1,
+    "seconds": 35.314,
+    "witness": "refused connect never becomes connected merely because the socket is writable",
+    "detected": true,
+    "reviewed_runtime_marker": "expected error.SystemFailure, found true",
+    "review": "Initial classifier required literal test failure; this compiler reports a named test failed and a run-test failure count. Original records preserved."
+  },
+  {
+    "name": "eof-closes-both-directions",
+    "command": [
+      "zig",
+      "build",
+      "network-test",
+      "--summary",
+      "all"
+    ],
+    "source_path": "src/host/net/socket.zig",
+    "original_sha256": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+    "mutant_sha256": "0ab62be6c10c5c10144393746d07d9566301f68306657344f601ff6426a3f1d5",
+    "log_sha256": "d8d03cadcf408e2b5492bb64d163895193ccc44208b3f139e26cf259c7cbfa72",
+    "exit_code": 1,
+    "seconds": 29.803,
+    "witness": "IPv4 and IPv6 preserve byte prefixes and independent half close after listener release",
+    "detected": true,
+    "reviewed_runtime_marker": "return error.InvalidState;",
+    "review": "Initial classifier required literal test failure; this compiler reports a named test failed and a run-test failure count. Original records preserved."
+  }
+]

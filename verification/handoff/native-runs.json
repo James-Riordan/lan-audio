@@ -1,0 +1,87 @@
+[
+  {
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 17.482,
+    "log": "native-0.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 37.54,
+    "log": "native-1.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "dependency-test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 0.701,
+    "log": "native-2.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "capture-check",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 5.559,
+    "log": "native-3.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "transport-probe",
+      "-j1",
+      "-Dtransport-tests=true",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 14.053,
+    "log": "native-4.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/test_transport.py",
+      "--output",
+      "verification/handoff/interop.json"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 5.806,
+    "log": "native-5.log"
+  }
+]

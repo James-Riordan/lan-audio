@@ -1,0 +1,28 @@
+1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...OK
+2/11 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...OK
+3/11 runtime_lifecycle.test.each rolled back failure and partial acquisition independently initiates cleanup...OK
+4/11 runtime_lifecycle.test.pending worker acquisition reserves device and storage across cancel and deadline...OK
+5/11 runtime_lifecycle.test.callback may enter after stop and fence cannot return while callback is paused...OK
+6/11 runtime_lifecycle.test.every token field and contradictory result is rejected atomically...expected error.InvalidToken, found void
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff650b4c99a in expectError__anon_61892 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:218:9: 0x7ff650b5957c in test.every token field and contradictory result is rejected atomically (root_zcu.obj)
+        try std.testing.expectError(error.InvalidToken, host.controller.complete(bad, .acquired));
+        ^
+7/11 runtime_lifecycle.test.each cleanup failure preserves ownership and requires explicit retry with new identity...expected error.InvalidToken, found void
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff650b4c99a in expectError__anon_61892 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:255:9: 0x7ff650b59073 in test.each cleanup failure preserves ownership and requires explicit retry with new identity (root_zcu.obj)
+        try std.testing.expectError(error.InvalidToken, host.controller.complete(failed, success(failed.kind)));
+        ^
+8/11 runtime_lifecycle.test.old generation stop deadline and completion cannot affect restarted owner...OK
+9/11 runtime_lifecycle.test.namespace exhaustion never wraps and does not forget an acquired owner...OK
+10/11 runtime_lifecycle.test.wrong executor observes no dispatch and deadline cannot change terminal outcome...OK
+11/11 runtime_lifecycle.test.result matrix rejects every inappropriate tag without settling an issued effect...OK
+9 passed; 0 skipped; 2 failed.
+error: the following test command failed with exit code 1:
+C:\Users\James\Documents\Codex\2026-09-25\referenced-chatgpt-conversation-this-is-an-3\work\lifecycle-mutation-cache\o\8cd60bfbad44d30a749ac75d23d4d147\root.exe --seed=0x8fe3becf

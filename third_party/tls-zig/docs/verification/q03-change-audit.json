@@ -1,0 +1,137 @@
+{
+  "status": "verified",
+  "project": "tls-zig",
+  "created_utc": "2026-09-27T00:10:48.023207+00:00",
+  "scope": "Q03 adds directional key custody, independent vectors, native/pure consumers and qualification. Existing-source allowlist is QUIC root export/test import, authenticated adapter handoff and additive regression-count acceptance in the retained Q02 qualifier. Q00/Q01/Q02 receipts are requalified with exact prior bytes in history. All TLS source/seven receipts, original pins/builds, frozen fixture and SDK are unchanged from the Q02 baseline",
+  "excluded_self_path": "docs/verification/q03-change-audit.json",
+  "deleted_paths": [],
+  "source_files": 86,
+  "changes": [
+    {
+      "path": "docs/architecture/decisions/0004-application-key-handoff.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "8d7f254f5c9ea20e79b39b0ea134a798b763edf8b1f36adab3139751d98dacc6",
+      "bytes": 2370
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "modified",
+      "before_sha256": "5d959ea4c49fcf27a8e4d1194066d20640f2a024e535c025bbf9d2fda6b6b99b",
+      "after_sha256": "c0bd3f2c96f3924f11596bcb5049e260776aebc7e28bb629d190aacabb865c5c",
+      "bytes": 51932
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "556bc6f7745d6b90dd3adef84a165f4d691c78eb53291483fff3e8820446d897",
+      "after_sha256": "7f2cf2c67fb26ee7f5f7382670a747508049511ce496051eb550967877986af8",
+      "bytes": 192835
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "9fbc297dc3a3725c8350de7ab2dd6e89e6c7aa230a9b333e546035f0ef0fe1b0",
+      "after_sha256": "37d3bac4ae4a1ffb0059bc4ee3325108c22bb25733cf1d4a69f8e8f3eb1389e4",
+      "bytes": 4350
+    },
+    {
+      "path": "docs/verification/q03-final-gates.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "98b98fe2c238a725892b8386dc015743806d9660a98394d5e5d038f2177265a9",
+      "bytes": 4087
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "562e39f2e6df3a1fb6ce43ada6a270c1fd654672a2135e0819cd15055a49f2a7",
+      "bytes": 1051
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "562e39f2e6df3a1fb6ce43ada6a270c1fd654672a2135e0819cd15055a49f2a7",
+      "bytes": 1051
+    },
+    {
+      "path": "docs/verification/q03-implementation.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "37d3bac4ae4a1ffb0059bc4ee3325108c22bb25733cf1d4a69f8e8f3eb1389e4",
+      "bytes": 4350
+    }
+  ]
+}

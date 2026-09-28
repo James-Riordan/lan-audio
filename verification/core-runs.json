@@ -1,0 +1,64 @@
+[
+  {
+    "name": "core-debug",
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 14.387,
+    "log": "core-debug.log"
+  },
+  {
+    "name": "core-safe",
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 23.729,
+    "log": "core-safe.log"
+  },
+  {
+    "name": "consumer-debug",
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "dependency-test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 0.841,
+    "log": "consumer-debug.log"
+  },
+  {
+    "name": "consumer-linux",
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "check",
+      "-j1",
+      "-Dtarget=x86_64-linux-gnu",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 11.694,
+    "log": "consumer-linux.log"
+  }
+]

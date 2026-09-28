@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python",
+    "tests/integration/protocol_v2_peer.py",
+    "--output",
+    "verification/v2-independent/interop-attempt1.json"
+  ],
+  "exit_code": 0,
+  "seconds": 18.241418800003885
+}

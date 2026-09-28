@@ -1,0 +1,8 @@
+{
+  "scope": "External production Engine, valid ClientHello plus 8 surplus Initial bytes, server native input budget 1; direct absolute-path execution",
+  "chunk_id": "fce912",
+  "wall_time_seconds": 6.2518854,
+  "exit_code": 1,
+  "original_token_count": 42,
+  "output": "BUG: surplus Initial bytes survived encryption-level transition and readiness\nerror: SurplusInitialAccepted\n???:?:?: 0x7ff75173cab2 in ??? (recordless-consumer.exe)\n"
+}

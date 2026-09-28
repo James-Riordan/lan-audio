@@ -1,0 +1,76 @@
+[
+  {
+    "name": "vendor",
+    "cwd": "C:\\Projects\\miniaudio-zig",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/check_vendor.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.14,
+    "log": "vendor.log"
+  },
+  {
+    "name": "wrapper-debug",
+    "cwd": "C:\\Projects\\miniaudio-zig",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 10.498,
+    "log": "wrapper-debug.log"
+  },
+  {
+    "name": "wrapper-safe",
+    "cwd": "C:\\Projects\\miniaudio-zig",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 0.956,
+    "log": "wrapper-safe.log"
+  },
+  {
+    "name": "wrapper-null",
+    "cwd": "C:\\Projects\\miniaudio-zig",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "-Dnull-backend=true",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 10.527,
+    "log": "wrapper-null.log"
+  },
+  {
+    "name": "wrapper-linux",
+    "cwd": "C:\\Projects\\miniaudio-zig",
+    "command": [
+      "zig",
+      "build",
+      "check",
+      "-j1",
+      "-Dtarget=x86_64-linux-gnu",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 15.485,
+    "log": "wrapper-linux.log"
+  }
+]

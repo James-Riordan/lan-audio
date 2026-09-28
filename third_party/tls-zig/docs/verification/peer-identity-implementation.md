@@ -1,0 +1,9 @@
+# Current implementation — verified peer identity
+
+The records Engine now exposes `verifiedPeerLeafSha256()`, returning a copied digest of the verified peer leaf certificate only on a completed live connection. Both-role mutual TLS, independent digest oracles, output atomicity, close/EOF/cancel/timeout/authentication failure and tampered-record revocation are covered. Existing method signatures, Error and Driver remain intact.
+
+Fresh Debug/ReleaseSafe evidence covers 23 records tests, 11 host-driver tests, 17 independent Python peer cases, the public example, and 14 TCP cases using the external consumer. Both external consumer roles check the expected fixture certificate digest. Native QUIC Engine conformance (10 tests), C backend (25 scenarios), ABI (2 tests) and native consumer qualification also pass in both modes. Exact SDK verification passes before/after. The independent digest-provider allocation failure branch is not fault-injected by this increment.
+
+Seven of 37 packages are complete within scope, with all 89 obligations retained. Q00 real QUIC integration is next; native platforms, endpoint interoperability and production resource gates remain unfinished. Native evidence is Windows x86_64 only. Mac testing stays at the final GitHub clone/test stage, with CI/CD later. No GitHub publication or pin update has been performed.
+
+The TLS peer contains `docs/guides/peer-identity.md`, `peer-identity-runs`, `peer-identity-engine-runs`, and `peer-identity-backend-runs`. Source-bound completion receipts bind these fresh runs and reviewed unchanged pure/backend-integrity evidence. The earlier [level-integrity checkpoint](t02-level-implementation.md) and completion histories remain scoped historical evidence. [Final maintenance gates](peer-identity-final-gates.json) and [change audit](peer-identity-change-audit.json) record this increment.

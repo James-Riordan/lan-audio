@@ -1,0 +1,80 @@
+[
+  {
+    "label": "bypass-peer-build",
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 17.598
+  },
+  {
+    "label": "bypass-peer-peer",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--only",
+      "wrong-peer",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\mutations\\bypass-peer\\peers.json"
+    ],
+    "exit_code": 1,
+    "seconds": 2.426
+  },
+  {
+    "label": "retain-permission-build",
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 10.676
+  },
+  {
+    "label": "retain-permission-peer",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--only",
+      "valid",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\mutations\\retain-permission\\peers.json"
+    ],
+    "exit_code": 1,
+    "seconds": 2.016
+  },
+  {
+    "label": "stale-closes-current-build",
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 11.58
+  },
+  {
+    "label": "stale-closes-current-peer",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--only",
+      "valid",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\mutations\\stale-closes-current\\peers.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.983
+  }
+]

@@ -1,0 +1,24 @@
+test_atomic_json_preserves_old_file_on_publish_failure (__main__.BootstrapTests.test_atomic_json_preserves_old_file_on_publish_failure) ... ok
+test_cached_archive_corruption_never_downloads_or_executes (__main__.BootstrapTests.test_cached_archive_corruption_never_downloads_or_executes) ... ok
+test_deep_pairing_json_is_a_controlled_rejection (__main__.BootstrapTests.test_deep_pairing_json_is_a_controlled_rejection) ... ok
+Downloading https://example.invalid/file
+Downloading https://example.invalid/file
+test_download_hash_and_size_failures_leave_no_published_archive (__main__.BootstrapTests.test_download_hash_and_size_failures_leave_no_published_archive) ... ok
+test_frame_size_checked_before_payload_read (__main__.BootstrapTests.test_frame_size_checked_before_payload_read) ... ok
+test_invitation_rejects_bad_addresses_ports_and_tokens (__main__.BootstrapTests.test_invitation_rejects_bad_addresses_ports_and_tokens) ... ok
+test_real_os_lock_released_after_failure (__main__.BootstrapTests.test_real_os_lock_released_after_failure) ... ok
+test_reviewed_complete_dependency_closure (__main__.BootstrapTests.test_reviewed_complete_dependency_closure) ... ok
+test_tar_link_rejected_without_following_target (__main__.BootstrapTests.test_tar_link_rejected_without_following_target) ... ok
+test_unauthenticated_discovery_cannot_select_receiver (__main__.BootstrapTests.test_unauthenticated_discovery_cannot_select_receiver) ... ok
+test_zip_traversal_and_case_collision_rejected (__main__.BootstrapTests.test_zip_traversal_and_case_collision_rejected) ... ok
+test_malformed_unicode_token_does_not_kill_listener (__main__.PairingTests.test_malformed_unicode_token_does_not_kill_listener) ... ok
+test_real_tls_pairing_publishes_only_receiver_and_preserves_repeat (__main__.PairingTests.test_real_tls_pairing_publishes_only_receiver_and_preserves_repeat) ... ok
+test_receiver_publication_survives_lost_final_response (__main__.PairingTests.test_receiver_publication_survives_lost_final_response) ... ok
+test_remote_filename_injection_never_writes (__main__.PairingTests.test_remote_filename_injection_never_writes) ... ok
+test_wrong_certificate_never_releases_token_or_accepts_payload (__main__.PairingTests.test_wrong_certificate_never_releases_token_or_accepts_payload) ... ok
+test_wrong_token_gets_no_private_payload_and_good_retry_succeeds (__main__.PairingTests.test_wrong_token_gets_no_private_payload_and_good_retry_succeeds) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 7.225s
+
+OK

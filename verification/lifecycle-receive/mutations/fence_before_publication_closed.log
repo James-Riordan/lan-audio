@@ -1,0 +1,17 @@
+1/1 runtime_lifecycle.test.receiver short tail and maximum block preserve identities with zero writes and paused return...expected null, found .{ .generation = 1, .serial = 4, .executor = .native, .kind = .fence_device, .resource = .device }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff74eb5bca8 in expectEqualInner__anon_61622 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff74eb5bdcc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:109:13: 0x7ff74eb5bdf7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:437:9: 0x7ff74eb61e78 in test.receiver short tail and maximum block preserve identities with zero writes and paused return (root_zcu.obj)
+        try host.noSecondDispatch();
+        ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\1869ae6327b07e11eb492318b43e69db\root.exe --seed=0xfc611723

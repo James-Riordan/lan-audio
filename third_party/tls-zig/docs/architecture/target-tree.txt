@@ -1,0 +1,72 @@
+2026-09-26-r3; source paths retained; no empty planned source stubs.
+
+EXISTING AGENTS.md
+EXISTING CHECKPOINT.md
+EXISTING HANDOFF-shutdown.md
+EXISTING HANDOFF-tcp-consumer.md
+EXISTING HOST-DRIVER.md
+EXISTING README.md
+EXISTING SOURCE-ORIGIN.json
+EXISTING backend-lock.json
+PLANNED T14 bench/engine.zig
+EXISTING build.zig
+EXISTING build.zig.zon
+PLANNED T07 build/backend.zig
+EXISTING evidence/build-recovery.md
+EXISTING evidence/source-provenance.json
+EXISTING examples/consumer/build.zig
+EXISTING examples/consumer/build.zig.zon
+EXISTING examples/consumer/main.zig
+EXISTING examples/consumer/socket.c
+PLANNED T08 examples/consumer/socket_posix.c
+EXISTING examples/roundtrip.zig
+EXISTING src/backend.c
+EXISTING src/backend.h
+EXISTING src/backend.zig
+PLANNED T04 src/backend/quic.c
+PLANNED T05 src/backend/quic.h
+EXISTING src/driver.zig
+PLANNED T10 src/policy/credentials.zig
+PLANNED T11 src/policy/verification.zig
+PLANNED T01 src/quic/contract.zig
+PLANNED T02 src/quic/engine.zig
+PLANNED T03 src/quic/events.zig
+EXISTING src/root.zig
+PLANNED T09 tests/abi.zig
+EXISTING tests/driver.zig
+EXISTING tests/fixtures/ca.pem
+EXISTING tests/fixtures/client.key
+EXISTING tests/fixtures/client.pem
+EXISTING tests/fixtures/expired.key
+EXISTING tests/fixtures/expired.pem
+EXISTING tests/fixtures/other-ca.pem
+EXISTING tests/fixtures/server.key
+EXISTING tests/fixtures/server.pem
+EXISTING tests/fixtures/wrong-purpose.key
+EXISTING tests/fixtures/wrong-purpose.pem
+PLANNED T13 tests/interop/matrix.py
+PLANNED T06 tests/quic_contract.zig
+PLANNED T12 tests/resource_limits.zig
+EXISTING tests/transport.zig
+EXISTING tools/build-openssl.sh
+EXISTING tools/check-docs.py
+EXISTING tools/check-event-model.py
+EXISTING tools/check-models.py
+EXISTING tools/check-plan.py
+EXISTING tools/fetch-openssl.py
+EXISTING tools/interop.py
+EXISTING tools/make_fixtures.py
+EXISTING tools/pin-backend.py
+EXISTING tools/probe-quic-tls.c
+EXISTING tools/probe-quic-tls.py
+EXISTING tools/qualify.ps1
+EXISTING tools/tcp_interop.py
+EXISTING tools/tcp_server_interop.py
+EXISTING tools/tcp_upload_interop.py
+EXISTING tools/test-openssl.sh
+PLANNED T00 tools/verify-backend.py
+
+EXISTING tools/test-plan-lifecycle.py
+
+EXISTING tools/probe-quic-pair.c
+EXISTING tools/probe-quic-pair.py

@@ -1,0 +1,28 @@
+Backend: OpenSSL 3.5.8 25 Aug 2026
+Verified loaded DLL: C:\Projects\tls-zig\.zig-cache\o\05e5131735e7d32f912cb82a5ff12ee2\libssl-3-x64.dll
+Verified loaded DLL: C:\Projects\tls-zig\.zig-cache\o\05e5131735e7d32f912cb82a5ff12ee2\libcrypto-3-x64.dll
+Independent peer: OpenSSL 3.0.18 30 Sep 2025
+PASS backend server / authenticated Python client roundtrip
+PASS backend client / Python server roundtrip
+PASS backend rejects wrong server hostname
+PASS backend rejects untrusted server
+PASS Python client rejects wrong server hostname
+PASS server rejects incompatible ALPN
+PASS server rejects missing ALPN
+PASS client rejects missing ALPN
+PASS server rejects TLS 1.2
+PASS client rejects TLS 1.2
+PASS mTLS accepts trusted Python client
+PASS mTLS rejects absent client certificate
+PASS mTLS rejects untrusted client chain
+PASS final peer data during shutdown / backend client / raw EOF rejected
+PASS final peer data during shutdown / backend client / close_notify
+PASS final peer data during shutdown / backend server / raw EOF rejected
+PASS final peer data during shutdown / backend server / close_notify
+17 independent-peer cases passed
+Build Summary: 4/4 steps succeeded
+interop success
++- run python success 238ms
+   +- WriteFile libssl-3-x64.dll cached
+      +- compile lib tls-test-backend debug native cached 63ms MaxRSS:16M
+

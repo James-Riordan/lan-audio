@@ -1,0 +1,3680 @@
+{
+  "schema": 1,
+  "artifacts": [
+    {
+      "path": "docs/README.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/architecture/decisions/0001-compatible-growth.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/architecture/decisions/0002-implementation-profile.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/architecture/decisions/0003-application-packet-custody.md",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/architecture/decisions/0004-application-key-handoff.md",
+      "role": "Q03 key handoff/update source contract or history",
+      "maintenance": "Preserve historical evidence; do not close active work without exact qualification."
+    },
+    {
+      "path": "docs/architecture/decisions/0005-recovery-spaces.md",
+      "role": "Q04 recovery source contract, decision or qualification",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/architecture/directory-map.md",
+      "role": "nested existing/planned source directory map",
+      "maintenance": "Update together with roadmap/source inventory."
+    },
+    {
+      "path": "docs/architecture/portability.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/architecture/principles.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/architecture/structure.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/architecture/target-tree.txt",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/contracts/connection-transactions.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/contracts/provider-leases.md",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/contracts/quic-tls.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/contracts/recordless-events.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/contracts/resource-budgets.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/ecosystem/configuration-and-capabilities.md",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/ecosystem/docz-migration.md",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/ecosystem/maintenance-and-observability.md",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/ecosystem/overview.md",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/ecosystem/producer-observations.json",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/formal/event-custody.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/formal/invariants.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/formal/recovery.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/formal/tls-driver.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/guides/host-usage.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/guides/peer-identity.md",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/reference/catalog.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/AGENTS.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/CHECKPOINT.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/HANDOFF-shutdown.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/HANDOFF-tcp-consumer.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/HOST-DRIVER.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/README.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/SOURCE-ORIGIN.json.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/backend-lock.json.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/build.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/build.zig.zon.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/evidence/build-recovery.md.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/evidence/source-provenance.json.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/examples/consumer/build.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/examples/consumer/build.zig.zon.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/examples/consumer/main.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/examples/consumer/socket.c.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-contract/build.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-contract/build.zig.zon.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-contract/main.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-contract/provider.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-engine/build.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-engine/build.zig.zon.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/quic-engine/main.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/examples/roundtrip.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/src/backend.c.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/src/backend.h.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/src/backend.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/src/backend/quic.c.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/src/backend/quic.h.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/src/backend/quic.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/src/driver.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/src/quic.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/src/quic/contract.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/src/quic/engine.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/src/quic/events.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/src/quic_engine.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/src/root.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/driver.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/ca.pem.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/client.key.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/client.pem.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/expired.key.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/expired.pem.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/other-ca.pem.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/server.key.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/server.pem.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/wrong-purpose.key.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/fixtures/wrong-purpose.pem.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/backend.c.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/backend_abi.c.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/backend_abi.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/contract.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/events.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/negative/direction-as-level.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/negative/generation-as-sequence.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/negative/raw-byte-count.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/negative/valid.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/negative/wall-as-monotonic.zig.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic/reference_peer.c.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/quic_contract.zig.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tests/transport.zig.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/build-openssl.sh.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/check-docs.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/check-event-model.py.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/reference/files/tools/check-models.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/check-plan.py.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/reference/files/tools/fetch-openssl.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/interop.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/make_fixtures.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/pin-backend.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-pair.c.md",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-pair.py.md",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-tls.c.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-tls.py.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/reference/files/tools/qualify-quic-backend.py.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tools/qualify-quic-core.py.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tools/qualify-quic-engine.py.md",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/reference/files/tools/qualify.ps1.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/tcp_interop.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/tcp_server_interop.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/tcp_upload_interop.py.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/test-backend.py.md",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/reference/files/tools/test-openssl.sh.md",
+      "role": "source-bound per-file contract",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/reference/files/tools/test-plan-lifecycle.py.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/reference/files/tools/test-quic-types.py.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/reference/files/tools/verify-backend.py.md",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/reference/standards.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/README.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/completion-protocol.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/roadmap/decision-register.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/roadmap/files/bench/engine.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/build/backend.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/examples/consumer/socket_posix.c.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/backend/quic.c.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/backend/quic.h.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/policy/credentials.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/policy/verification.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/contract.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/engine.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/events.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/tests/abi.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/tests/interop/matrix.py.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/tests/quic_contract.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/tests/resource_limits.zig.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/files/tools/verify-backend.py.md",
+      "role": "planned-file design card; not implementation",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/first-work-orders.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/roadmap/takeover.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/roadmap/work-graph.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/security/threat-model.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "role": "machine-readable inventory or dated verification evidence",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/baseline-r2.md",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/verification/baseline-r3.md",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/verification/baseline-r4.md",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/baseline-r5.md",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/baseline-t00.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/baseline-v1.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/verification/change-audit.json",
+      "role": "dated verification/traceability artifact",
+      "maintenance": "Preserve attribution; revise only with reviewed evidence."
+    },
+    {
+      "path": "docs/verification/completions/T00.json",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/completions/T01.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/completions/T02.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/completions/T03.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/completions/T04.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/completions/T05.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/completions/T06.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/completions/history/T00-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T00-before-native-adapter.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/completions/history/T00-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/completions/history/T00-before-recordless-core.json",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/completions/history/T01-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T01-before-native-adapter.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/completions/history/T01-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/completions/history/T02-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T02-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/completions/history/T03-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T03-before-native-adapter.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/completions/history/T03-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/completions/history/T04-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T04-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/completions/history/T05-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T05-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/completions/history/T06-before-level-integrity.json",
+      "role": "Historical native completion before level-integrity fix",
+      "maintenance": "Preserve; superseded by source-bound fix evidence."
+    },
+    {
+      "path": "docs/verification/completions/history/T06-before-peer-identity.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/current.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/dependency-inventory.json",
+      "role": "machine-readable inventory or dated verification evidence",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/failed-attempt-121343/run-results.json",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/failed-attempt-121343/runs/debug.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/failed-attempt-121343/runs/format.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/failed-attempt-121343/runs/models.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/backend-Debug.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/backend-Debug.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/backend-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/backend-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/runs.json",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/sdk-after.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/sdk-after.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/sdk.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-backend-runs/sdk.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-change-audit.json",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/consumer-Debug.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/consumer-Debug.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/engine-Debug.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/engine-Debug.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/engine-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/engine-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/runs.json",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/sdk-after.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/sdk-after.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/sdk.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-engine-runs/sdk.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-gates.json",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/docs-normal.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/docs-normal.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/docs-optimized.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/docs-optimized.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/lifecycle-normal.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/lifecycle-normal.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/plan-normal.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/plan-normal.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/plan-optimized.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-final-runs/plan-optimized.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-implementation.md",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/backend.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/backend.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/consumer-Debug.stderr.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/consumer-Debug.stdout.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/engine.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/engine.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/fixture-oracle.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/models-optimized.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/models-optimized.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/models.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/models.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/records-Debug.stderr.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/records-Debug.stdout.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/records-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/records-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/runs.json",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/sdk-after.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/sdk-after.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/sdk-before.stderr.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/sdk-before.stdout.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_interop-Debug.stderr.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_interop-Debug.stdout.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_interop-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_interop-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_server_interop-Debug.stderr.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_server_interop-Debug.stdout.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_server_interop-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_server_interop-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_upload_interop-Debug.stderr.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_upload_interop-Debug.stdout.log",
+      "role": "Verified peer identity contract or qualification evidence",
+      "maintenance": "Preserve history; refresh source-bound evidence after changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_upload_interop-ReleaseSafe.stderr.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/peer-identity-runs/tcp_upload_interop-ReleaseSafe.stdout.log",
+      "role": "Verified peer identity qualification",
+      "maintenance": "Retain historical evidence; refresh source-bound receipts on changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0.json",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/alpn.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/backpressure.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/budgeted.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/combined.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/compile.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-alert.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-params.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-receive.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-release.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-secret.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-send.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fragmented.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/full.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/missing-client.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/mutual.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/tickets.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/wrong-ca.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/wrong-host.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2.json",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/alpn.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/backpressure.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/budgeted.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/combined.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/compile.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-alert.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-params.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-receive.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-release.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-secret.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-send.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fragmented.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/full.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/missing-client.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/mutual.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/tickets.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/wrong-ca.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/wrong-host.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-1-wrong-ca.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-1.json",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-2-fail-release.log",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-2.json",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/q00-change-audit.json",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-gates.json",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-normal.stderr.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-normal.stdout.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-optimized.stderr.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-optimized.stdout.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-normal.stderr.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-normal.stdout.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-normal.stderr.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-normal.stdout.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-optimized.stderr.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-optimized.stdout.log",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q00-implementation.md",
+      "role": "Q00 adapter contract or scoped evidence",
+      "maintenance": "Preserve completed and interrupted histories; qualify exact source closures."
+    },
+    {
+      "path": "docs/verification/q01-change-audit.json",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-gates.json",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/docs-normal.stderr.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/docs-normal.stdout.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/docs-optimized.stderr.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/docs-optimized.stdout.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/lifecycle-normal.stderr.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/lifecycle-normal.stdout.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/plan-normal.stderr.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/plan-normal.stdout.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/plan-optimized.stderr.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-final-runs/plan-optimized.stdout.log",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q01-implementation.md",
+      "role": "Q01 protected TLS contract or qualification evidence",
+      "maintenance": "Preserve historical evidence; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-change-audit.json",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-gates.json",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-normal.stderr.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-normal.stdout.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-optimized.stderr.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-optimized.stdout.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-normal.stderr.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-normal.stdout.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-normal.stderr.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-normal.stdout.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-optimized.stderr.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-optimized.stdout.log",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q02-implementation.md",
+      "role": "Q02 application packet source/qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-change-audit.json",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-gates.json",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-normal.stderr.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-normal.stdout.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-optimized.stderr.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/docs-optimized.stdout.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-normal.stderr.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-normal.stdout.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-normal.stderr.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-normal.stdout.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-optimized.stderr.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-final-runs/plan-optimized.stdout.log",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q03-implementation.md",
+      "role": "Q03 key custody/update qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-change-audit.json",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-gates.json",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-normal.stderr.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-normal.stdout.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-optimized.stderr.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-optimized.stdout.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-normal.stderr.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-normal.stdout.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-normal.stderr.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-normal.stdout.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-optimized.stderr.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-optimized.stdout.log",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/q04-implementation.md",
+      "role": "Q04 coordinated recovery qualification evidence",
+      "maintenance": "Preserve historical receipts; requalify changed execution closures."
+    },
+    {
+      "path": "docs/verification/quic-provider-pair.md",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/quic-provider-probe.md",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/verification/r2-change-audit.json",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/verification/r2-check-results.json",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/verification/r2-probe-result.json",
+      "role": "revision-2 design, exact plan or scoped verification evidence",
+      "maintenance": "Update alongside source/requirements; preserve prior receipts and distinguish proposed from implemented."
+    },
+    {
+      "path": "docs/verification/r3-change-audit.json",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/verification/r3-check-results.json",
+      "role": "revision-3 implementation preparation or scoped evidence",
+      "maintenance": "Keep design, lifecycle, source and evidence consistent; retain historical receipts."
+    },
+    {
+      "path": "docs/verification/r4-change-audit.json",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/verification/r4-check-results.json",
+      "role": "staged ecosystem integration design, provenance or scoped checks",
+      "maintenance": "Preserve producer authority and evidence scope; adopt through reviewed source/delta checks."
+    },
+    {
+      "path": "docs/verification/r5-change-audit.json",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/r5-check-results.json",
+      "role": "revision-5 provider experiment, contract or scoped evidence",
+      "maintenance": "Retain native evidence scope and hashes; update plan/source contracts when implementation changes."
+    },
+    {
+      "path": "docs/verification/requirements.json",
+      "role": "dated verification/traceability artifact",
+      "maintenance": "Preserve attribution; revise only with reviewed evidence."
+    },
+    {
+      "path": "docs/verification/requirements.md",
+      "role": "dated verification/traceability artifact",
+      "maintenance": "Preserve attribution; revise only with reviewed evidence."
+    },
+    {
+      "path": "docs/verification/run-results.json",
+      "role": "machine-readable inventory or dated verification evidence",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/runs/consumer-build.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/debug.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/docs.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/format.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/interop-example.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/models.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/release-safe.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/tcp_interop.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/tcp_server_interop.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/runs/tcp_upload_interop.log",
+      "role": "dated verification execution log",
+      "maintenance": "Retain run outcome and source attribution; new run gets new receipt."
+    },
+    {
+      "path": "docs/verification/source-inventory.json",
+      "role": "machine-readable inventory or dated verification evidence",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/strategy.md",
+      "role": "authored architecture, guide, model or navigation artifact",
+      "maintenance": "Update with its source/requirement change; retain historical result attribution."
+    },
+    {
+      "path": "docs/verification/t00-change-audit.json",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-final-gates.json",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-implementation.md",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/backend-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/backend-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/backend-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/backend-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-event-model-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-event-model-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-event-model-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-event-model-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-models-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-models-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-models-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/check-models-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/consumer-build.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/consumer-build.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/debug.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/debug.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-docs-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-docs-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-docs-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-docs-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-plan-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-plan-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-plan-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/final-plan-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/interop-example.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/interop-example.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/release-safe.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/release-safe.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/sdk-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/sdk-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/sdk-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/sdk-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/tcp_interop.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/tcp_interop.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/tcp_server_interop.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/tcp_server_interop.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/tcp_upload_interop.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/tcp_upload_interop.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/test-plan-lifecycle-normal.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/test-plan-lifecycle-normal.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/test-plan-lifecycle-optimized.stderr.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t00-runs/test-plan-lifecycle-optimized.stdout.log",
+      "role": "T00 implementation contract or scoped execution evidence",
+      "maintenance": "Retain historical receipts; update current contracts only after source review and matching checks."
+    },
+    {
+      "path": "docs/verification/t01-change-audit.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/consumer-Debug.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/consumer-Debug.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/core-Debug.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/core-Debug.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/core-ReleaseSafe.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/core-ReleaseSafe.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-aarch64-linux-musl.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-aarch64-linux-musl.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-aarch64-macos.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-aarch64-macos.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-aarch64-windows-gnu.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-aarch64-windows-gnu.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86-windows-gnu.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86-windows-gnu.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86_64-freebsd.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86_64-freebsd.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86_64-linux-musl.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86_64-linux-musl.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86_64-macos.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/cross-x86_64-macos.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-core-runs/runs.json",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-event-model-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-event-model-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-event-model-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-event-model-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-models-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-models-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-models-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/check-models-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/counter-debug.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/counter-debug.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/models.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/negative-normal.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/negative-normal.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/negative-optimized.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/negative-optimized.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/relocated-consumer.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/relocated-consumer.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/relocation.json",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/runs.json",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-gates.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/docs-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/docs-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/docs-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/docs-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/lifecycle-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/lifecycle-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/plan-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/plan-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/plan-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-final-runs/plan-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-implementation.md",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/backend-normal.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/backend-normal.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/backend-optimized-retry.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/backend-optimized.stderr.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/backend-optimized.stdout.log",
+      "role": "Recordless core implementation contract or scoped evidence",
+      "maintenance": "Keep source-bound evidence current; retain historical receipts and distinguish compile-only targets from native qualification."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/consumer-build.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/consumer-build.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/debug.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/debug.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/interop-example.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/interop-example.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/release-safe.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/release-safe.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/retry.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/runs.json",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/sdk-normal.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/sdk-normal.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/sdk-optimized.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/sdk-optimized.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/tcp_interop.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/tcp_interop.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/tcp_server_interop.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/tcp_server_interop.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/tcp_upload_interop.stderr.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t01-regression-runs/tcp_upload_interop.stdout.log",
+      "role": "Recordless core source contract or scoped qualification evidence",
+      "maintenance": "Retain historical evidence and failed attempts; update current source contracts only after review."
+    },
+    {
+      "path": "docs/verification/t02-change-audit.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/consumer-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/consumer-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/core-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/core-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/core-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/core-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-aarch64-linux-musl.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-aarch64-linux-musl.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-aarch64-macos.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-aarch64-macos.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-aarch64-windows-gnu.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-aarch64-windows-gnu.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86-windows-gnu.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86-windows-gnu.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86_64-freebsd.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86_64-freebsd.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86_64-linux-musl.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86_64-linux-musl.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86_64-macos.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/cross-x86_64-macos.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-core-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/consumer-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/consumer-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/engine-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/engine-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/engine-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/engine-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/sdk-after.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/sdk-after.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-cancellation-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/consumer-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/consumer-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/engine-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/engine-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/engine-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/engine-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/sdk-after.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/sdk-after.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-engine-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/check-models-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/check-models-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/check-models-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/check-models-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-final-gates.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/docs-normal.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/docs-normal.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/docs-optimized.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/docs-optimized.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/lifecycle-normal.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/lifecycle-normal.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/plan-normal.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/plan-normal.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/plan-optimized.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-final-runs/plan-optimized.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-implementation.md",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-change-audit.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-gates.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/docs-normal.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/docs-normal.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/docs-optimized.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/docs-optimized.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/lifecycle-normal.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/lifecycle-normal.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/lifecycle-optimized.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/lifecycle-optimized.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/plan-normal.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/plan-normal.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/plan-optimized.stderr.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-final-runs/plan-optimized.stdout.log",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-gap-probe/build.zig.txt",
+      "role": "Level-integrity regression source or retained evidence",
+      "maintenance": "Preserve genuine failures and qualify reviewed fixes."
+    },
+    {
+      "path": "docs/verification/t02-level-gap-probe/build.zig.zon.txt",
+      "role": "Level-integrity regression source or retained evidence",
+      "maintenance": "Preserve genuine failures and qualify reviewed fixes."
+    },
+    {
+      "path": "docs/verification/t02-level-gap-probe/main.zig.txt",
+      "role": "Level-integrity regression source or retained evidence",
+      "maintenance": "Preserve genuine failures and qualify reviewed fixes."
+    },
+    {
+      "path": "docs/verification/t02-level-gap-probe/surplus-initial-failure.json",
+      "role": "Level-integrity regression source or retained evidence",
+      "maintenance": "Preserve genuine failures and qualify reviewed fixes."
+    },
+    {
+      "path": "docs/verification/t02-level-gap-probe/surplus-initial-fixed.json",
+      "role": "Level-integrity regression source or retained evidence",
+      "maintenance": "Preserve genuine failures and qualify reviewed fixes."
+    },
+    {
+      "path": "docs/verification/t02-level-implementation.md",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/consumer-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/consumer-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/engine-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/engine-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/engine-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/engine-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/sdk-after.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/sdk-after.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-level-integrity.md",
+      "role": "Level-integrity regression source or retained evidence",
+      "maintenance": "Preserve genuine failures and qualify reviewed fixes."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/backend-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/backend-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/backend-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/backend-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/consumer-build.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/consumer-build.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/interop-example.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/interop-example.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/release-safe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/release-safe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/runs.json",
+      "role": "Native recordless Engine source contract or scoped evidence",
+      "maintenance": "Retain history and failures; requalify changed source closures before completion."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/sdk-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/sdk-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/sdk-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/sdk-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/tcp_interop.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/tcp_interop.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/tcp_server_interop.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/tcp_server_interop.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/tcp_upload_interop.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t02-regression-runs/tcp_upload_interop.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/backend-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/backend-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/backend-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/backend-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/sdk-after.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/sdk-after.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-abi-production-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/consumer-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/consumer-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/consumer-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/consumer-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/core-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/core-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/core-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/core-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-aarch64-linux-musl.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-aarch64-linux-musl.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-aarch64-macos.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-aarch64-macos.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-aarch64-windows-gnu.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-aarch64-windows-gnu.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86-windows-gnu.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86-windows-gnu.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86_64-freebsd.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86_64-freebsd.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86_64-linux-musl.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86_64-linux-musl.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86_64-macos.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/cross-x86_64-macos.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-core-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/backend-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/backend-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/backend-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/backend-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/sdk-after.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/sdk-after.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-final-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/backend-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/backend-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/backend-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/backend-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/sdk-after.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/sdk-after.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-optimized-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/backend-Debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/backend-Debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/backend-ReleaseSafe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/backend-ReleaseSafe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/runs.json",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/sdk.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-native-runs/sdk.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/backend-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/backend-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/backend-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/backend-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/consumer-build.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/consumer-build.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/debug.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/debug.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/interop-example.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/interop-example.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/release-safe.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/release-safe.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/sdk-normal.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/sdk-normal.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/sdk-optimized.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/sdk-optimized.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/tcp_interop.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/tcp_interop.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/tcp_server_interop.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/tcp_server_interop.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/tcp_upload_interop.stderr.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    },
+    {
+      "path": "docs/verification/t04-regression-runs/tcp_upload_interop.stdout.log",
+      "role": "Native recordless adapter contract or scoped evidence",
+      "maintenance": "Retain history; source changes require reviewed contracts and qualification."
+    }
+  ]
+}

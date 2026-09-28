@@ -1,0 +1,3 @@
+usage: build_mac_candidate.py [-h] --openssl-archive OPENSSL_ARCHIVE
+                              --output OUTPUT --zig ZIG
+build_mac_candidate.py: error: run this candidate build on an Intel Mac; cross-builds are not qualified here

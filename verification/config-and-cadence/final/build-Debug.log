@@ -1,0 +1,70 @@
+Build Summary: 45/45 steps succeeded; 117/117 tests passed
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe debug native success 16s MaxRSS:306M
+|     +- translate-c cached 138ms MaxRSS:59M
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 330ms MaxRSS:59M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 49ms MaxRSS:59M
+|     +- translate-c cached 111ms MaxRSS:59M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+worker-probe success
++- install audio-worker-probe success
+|  +- compile exe audio-worker-probe debug native success 11s MaxRSS:306M
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+app success
++- install lan-audio success
+|  +- compile exe lan-audio debug native success 18s MaxRSS:333M
+|     +- options cached
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+platform-test success
++- run test 2 pass (2 total) 482ms MaxRSS:4M
+   +- compile test debug native cached 504ms MaxRSS:60M
+      +- translate-c (reused)
+policy-test success
++- run test 7 pass (7 total) 159ms MaxRSS:3M
+   +- compile test debug native success 9s MaxRSS:289M
+network-test success
++- run test 6 pass (6 total) 8s MaxRSS:4M
+   +- compile test debug native cached 167ms MaxRSS:60M
+      +- translate-c (reused)
+audio-test success
++- run test 6 pass (6 total) 2s MaxRSS:8M
+|  +- compile test debug native success 26s MaxRSS:298M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c (reused)
++- run test 7 pass (7 total) 2s MaxRSS:9M
+   +- compile test debug native success 26s MaxRSS:306M
+      +- WriteFile (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c (reused)
+config-test success
++- run test 3 pass (3 total) 385ms MaxRSS:3M
+   +- compile test debug native success 17s MaxRSS:311M
+test success
++- run test 47 pass (47 total) 7s MaxRSS:3M
+|  +- compile test debug native success 11s MaxRSS:309M
++- run test 2 pass (2 total) 565ms MaxRSS:3M
+|  +- compile test debug native cached 11s MaxRSS:60M
++- run test 37 pass (37 total) 305ms MaxRSS:3M
+   +- compile test debug native success 9s MaxRSS:312M
+

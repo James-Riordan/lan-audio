@@ -1,0 +1,1 @@
+Initial zig build test -j1 --summary all failed at v2.zig:47:43: type u32 cannot represent integer value 18446744073709551615. The subtraction maxInt(u64) - frames inferred the narrower operand type. Repaired by explicitly widening frames to u64 before subtraction. This observation is from the command tool output; subsequent full command logs are separate.

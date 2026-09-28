@@ -1,0 +1,7 @@
+Building LAN Audio (one build job).
+info: to access the help menu: zig build -h
+error: unrecognized argument: --global-cache-dir
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=.lan-audio\zig-0d43c9a98a90c859\lib --zig=C:\Users\James\AppData\Local\Temp\LAN standalone é fh2g7ed8\lan-audio\.lan-audio\zig-0d43c9a98a90c859\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x2156e8f1 app -j1 -Doptimize=ReleaseSafe --prefix C:\Users\James\AppData\Local\Temp\LAN standalone é fh2g7ed8\lan-audio\.lan-audio\builds\405a1f7f2913acad67133053 --cache-dir C:\Users\James\AppData\Local\Temp\LAN standalone é fh2g7ed8\lan-audio\.lan-audio\zig-local --global-cache-dir C:\Users\James\AppData\Local\Temp\LAN standalone é fh2g7ed8\lan-audio\.lan-audio\zig-global
+LAN Audio stopped: Command '['C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone é fh2g7ed8\\lan-audio\\.lan-audio\\zig-0d43c9a98a90c859\\zig.exe', 'build', 'app', '-j1', '-Doptimize=ReleaseSafe', '--prefix', 'C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone é fh2g7ed8\\lan-audio\\.lan-audio\\builds\\405a1f7f2913acad67133053', '--cache-dir', 'C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone é fh2g7ed8\\lan-audio\\.lan-audio\\zig-local', '--global-cache-dir', 'C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone é fh2g7ed8\\lan-audio\\.lan-audio\\zig-global']' returned non-zero exit status 1.
+Your saved pair was not rotated. Fix the reported issue and rerun the same command.

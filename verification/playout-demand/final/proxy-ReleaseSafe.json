@@ -1,0 +1,267 @@
+{
+  "matched": true,
+  "sender": [
+    {
+      "attempt": 1,
+      "prefill_frames": 1920,
+      "frames": 11280,
+      "failure": "TransportFailure",
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 55,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": "transport_failed",
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": {
+          "draining": false,
+          "committed": 11280,
+          "offered_frames": 0,
+          "frontier": null,
+          "local": "interrupted",
+          "end": "not_attempted",
+          "remote": "unknown",
+          "secure_close": "not_attempted"
+        }
+      },
+      "audio": {
+        "max_output_request_frames": 240,
+        "first_starvation_requested": 0,
+        "first_starvation_available": 0,
+        "first_starvation_rendered": 0,
+        "captured_frames": 11760,
+        "dropped_frames": 0,
+        "rendered_frames": 0,
+        "silent_frames": 11760,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 292,
+      "starved": false,
+      "unplayed_frames": 0,
+      "delivery_timing": {
+        "last_publication_ms": null,
+        "max_publication_gap_ms": 0,
+        "max_receive_ms": 0,
+        "starvation_gap_ms": 0,
+        "published_frames": 0,
+        "playback_started_ms": null,
+        "playback_observed_ms": null,
+        "observed_playback_frames": 0,
+        "max_playback_lead_frames": 0,
+        "max_frames_between_observations": 0
+      }
+    },
+    {
+      "attempt": 2,
+      "prefill_frames": 1920,
+      "frames": 47520,
+      "failure": null,
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 209,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": null,
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": {
+          "draining": true,
+          "committed": 47520,
+          "offered_frames": 0,
+          "frontier": 47520,
+          "local": "transferred",
+          "end": "copied",
+          "remote": "confirmed",
+          "secure_close": "clean"
+        }
+      },
+      "audio": {
+        "max_output_request_frames": 240,
+        "first_starvation_requested": 0,
+        "first_starvation_available": 0,
+        "first_starvation_rendered": 0,
+        "captured_frames": 47520,
+        "dropped_frames": 0,
+        "rendered_frames": 0,
+        "silent_frames": 47520,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 1362,
+      "starved": false,
+      "unplayed_frames": 0,
+      "delivery_timing": {
+        "last_publication_ms": null,
+        "max_publication_gap_ms": 0,
+        "max_receive_ms": 0,
+        "starvation_gap_ms": 0,
+        "published_frames": 0,
+        "playback_started_ms": null,
+        "playback_observed_ms": null,
+        "observed_playback_frames": 0,
+        "max_playback_lead_frames": 0,
+        "max_frames_between_observations": 0
+      }
+    }
+  ],
+  "receiver": [
+    {
+      "attempt": 1,
+      "prefill_frames": 1920,
+      "frames": 7920,
+      "failure": "PlaybackStarved",
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 8,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": "media_fault",
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": null
+      },
+      "audio": {
+        "max_output_request_frames": 240,
+        "first_starvation_requested": 240,
+        "first_starvation_available": 0,
+        "first_starvation_rendered": 7920,
+        "captured_frames": 0,
+        "dropped_frames": 0,
+        "rendered_frames": 7920,
+        "silent_frames": 6960,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 203,
+      "starved": true,
+      "unplayed_frames": 0,
+      "delivery_timing": {
+        "last_publication_ms": 5559211,
+        "max_publication_gap_ms": 18,
+        "max_receive_ms": 18,
+        "starvation_gap_ms": 63,
+        "published_frames": 7920,
+        "playback_started_ms": 5559087,
+        "playback_observed_ms": 5559274,
+        "observed_playback_frames": 7920,
+        "max_playback_lead_frames": 144,
+        "max_frames_between_observations": 1920
+      }
+    },
+    {
+      "attempt": 2,
+      "prefill_frames": 3600,
+      "frames": 47520,
+      "failure": null,
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 10,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": null,
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": {
+          "frontier": 47520,
+          "publication_closed": true,
+          "local": "drained",
+          "ack": "copied",
+          "remote": "unobserved",
+          "secure_close": "clean"
+        },
+        "send": null
+      },
+      "audio": {
+        "max_output_request_frames": 240,
+        "first_starvation_requested": 0,
+        "first_starvation_available": 0,
+        "first_starvation_rendered": 0,
+        "captured_frames": 0,
+        "dropped_frames": 0,
+        "rendered_frames": 47520,
+        "silent_frames": 6960,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 1146,
+      "starved": false,
+      "unplayed_frames": 0,
+      "delivery_timing": {
+        "last_publication_ms": 5560697,
+        "max_publication_gap_ms": 19,
+        "max_receive_ms": 19,
+        "starvation_gap_ms": 0,
+        "published_frames": 47520,
+        "playback_started_ms": 5559794,
+        "playback_observed_ms": 5560697,
+        "observed_playback_frames": 43440,
+        "max_playback_lead_frames": 144,
+        "max_frames_between_observations": 960
+      }
+    }
+  ],
+  "proxy": [
+    {
+      "connection": 1,
+      "peak_queued_bytes": 23880,
+      "delayed": true,
+      "received_bytes": 94640,
+      "forwarded_bytes": 70760,
+      "media_direction_bytes": 68289,
+      "stall_start_seconds": 0.2911831000001257
+    },
+    {
+      "connection": 2,
+      "peak_queued_bytes": 5970,
+      "delayed": false,
+      "received_bytes": 399297,
+      "forwarded_bytes": 399297,
+      "media_direction_bytes": 396732,
+      "stall_start_seconds": null
+    }
+  ],
+  "sender_stderr": "Capture started: 48 kHz stereo.\nConnection interrupted (TransportFailure); retrying in 250 ms with 40 ms playback reserve.\nCapture started: 48 kHz stereo.\n",
+  "receiver_stderr": "Listening on 127.0.0.1:57516; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\nConnection interrupted (PlaybackStarved); retrying in 250 ms with 75 ms playback reserve.\nListening on 127.0.0.1:57516; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\n",
+  "binary_sha256": "65988d3b6f37b0009f1ea1478534d1b87fe38b18193c9461be224634b181bbf2"
+}

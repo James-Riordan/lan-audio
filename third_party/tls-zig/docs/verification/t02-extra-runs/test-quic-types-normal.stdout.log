@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "compiler": "0.17.0-dev.1859+dcceb318e",
+  "cases": [
+    {
+      "case": "valid",
+      "passed": true,
+      "compiler_exit": 0,
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build-obj",
+        "-fno-emit-bin",
+        "--dep",
+        "tls_quic",
+        "-Mroot=C:\\Projects\\tls-zig\\tests\\quic\\negative\\valid.zig",
+        "-Mtls_quic=C:\\Projects\\tls-zig\\src\\quic.zig"
+      ],
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "case": "direction-as-level",
+      "passed": true,
+      "compiler_exit": 1,
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build-obj",
+        "-fno-emit-bin",
+        "--dep",
+        "tls_quic",
+        "-Mroot=C:\\Projects\\tls-zig\\tests\\quic\\negative\\direction-as-level.zig",
+        "-Mtls_quic=C:\\Projects\\tls-zig\\src\\quic.zig"
+      ],
+      "stdout": "",
+      "stderr": "tests\\quic\\negative\\direction-as-level.zig:4:40: error: expected type 'quic.contract.EncryptionLevel', found 'quic.contract.Direction'\n    const invalid: c.EncryptionLevel = source;\n                                       ^~~~~~\nsrc\\quic\\contract.zig:25:23: note: enum declared here\npub const Direction = enum(u8) { read, write };\n                      ^~~~~~~~~~~~~~~~~~~~~~~~\nsrc\\quic\\contract.zig:23:29: note: enum declared here\npub const EncryptionLevel = enum(u8) { initial, handshake, application };\n                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nreferenced by:\n    typeCheck: tests\\quic\\negative\\direction-as-level.zig:2:1\n    root: C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\start.zig:13:22\n    3 reference(s) hidden; use '-freference-trace=5' to see all references\n"
+    },
+    {
+      "case": "wall-as-monotonic",
+      "passed": true,
+      "compiler_exit": 1,
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build-obj",
+        "-fno-emit-bin",
+        "--dep",
+        "tls_quic",
+        "-Mroot=C:\\Projects\\tls-zig\\tests\\quic\\negative\\wall-as-monotonic.zig",
+        "-Mtls_quic=C:\\Projects\\tls-zig\\src\\quic.zig"
+      ],
+      "stdout": "",
+      "stderr": "tests\\quic\\negative\\wall-as-monotonic.zig:4:36: error: expected type 'quic.contract.MonotonicNs', found 'quic.contract.WallTimeSeconds'\n    const invalid: c.MonotonicNs = source;\n                                   ^~~~~~\nsrc\\quic\\contract.zig:31:29: note: struct declared here\npub const WallTimeSeconds = struct { value: i64 };\n                            ^~~~~~~~~~~~~~~~~~~~~\nsrc\\quic\\contract.zig:32:25: note: struct declared here\npub const MonotonicNs = struct {\n                        ^~~~~~\nreferenced by:\n    typeCheck: tests\\quic\\negative\\wall-as-monotonic.zig:2:1\n    root: C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\start.zig:13:22\n    3 reference(s) hidden; use '-freference-trace=5' to see all references\n"
+    },
+    {
+      "case": "raw-byte-count",
+      "passed": true,
+      "compiler_exit": 1,
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build-obj",
+        "-fno-emit-bin",
+        "--dep",
+        "tls_quic",
+        "-Mroot=C:\\Projects\\tls-zig\\tests\\quic\\negative\\raw-byte-count.zig",
+        "-Mtls_quic=C:\\Projects\\tls-zig\\src\\quic.zig"
+      ],
+      "stdout": "",
+      "stderr": "tests\\quic\\negative\\raw-byte-count.zig:4:34: error: expected type 'quic.contract.ByteCount', found 'usize'\n    const invalid: c.ByteCount = source;\n                                 ^~~~~~\nsrc\\quic\\contract.zig:29:23: note: struct declared here\npub const ByteCount = struct { value: usize };\n                      ^~~~~~~~~~~~~~~~~~~~~~~\nreferenced by:\n    typeCheck: tests\\quic\\negative\\raw-byte-count.zig:2:1\n    root: C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\start.zig:13:22\n    3 reference(s) hidden; use '-freference-trace=5' to see all references\n"
+    },
+    {
+      "case": "generation-as-sequence",
+      "passed": true,
+      "compiler_exit": 1,
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build-obj",
+        "-fno-emit-bin",
+        "--dep",
+        "tls_quic",
+        "-Mroot=C:\\Projects\\tls-zig\\tests\\quic\\negative\\generation-as-sequence.zig",
+        "-Mtls_quic=C:\\Projects\\tls-zig\\src\\quic.zig"
+      ],
+      "stdout": "",
+      "stderr": "tests\\quic\\negative\\generation-as-sequence.zig:4:33: error: expected type 'quic.contract.Sequence', found 'quic.contract.OwnerGeneration'\n    const invalid: c.Sequence = source;\n                                ^~~~~~\nsrc\\quic\\contract.zig:40:29: note: struct declared here\npub const OwnerGeneration = struct { value: u64 };\n                            ^~~~~~~~~~~~~~~~~~~~~\nsrc\\quic\\contract.zig:39:22: note: struct declared here\npub const Sequence = struct { value: u64 };\n                     ^~~~~~~~~~~~~~~~~~~~~\nreferenced by:\n    typeCheck: tests\\quic\\negative\\generation-as-sequence.zig:2:1\n    root: C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\start.zig:13:22\n    3 reference(s) hidden; use '-freference-trace=5' to see all references\n"
+    }
+  ]
+}

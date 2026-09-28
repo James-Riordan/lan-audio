@@ -1,0 +1,131 @@
+[
+  {
+    "name": "bypass-peer",
+    "caught": true,
+    "source_sha256": "61faefe5380db403114b38159a8c01e430a70996a889e5b098a211c315cddd68",
+    "failed_cases": [
+      {
+        "tls_role": "client",
+        "audio_role": "sender",
+        "mode": "wrong-peer",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "sender",
+        "mode": "wrong-peer",
+        "exit_code": 1
+      }
+    ]
+  },
+  {
+    "name": "retain-permission",
+    "caught": true,
+    "source_sha256": "63fe04d879f8d5be88940d45b039d51518fdb7f376dd7f8bdf1e12c2b136558d",
+    "failed_cases": [
+      {
+        "tls_role": "client",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "client",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "client",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "client",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      }
+    ]
+  },
+  {
+    "name": "stale-closes-current",
+    "caught": true,
+    "source_sha256": "4c4142d39b9b9ac24a9e8633dfe1e10370271f0f6f13d06dbee1c552217dcd71",
+    "failed_cases": [
+      {
+        "tls_role": "client",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "client",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "client",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "client",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "sender",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      },
+      {
+        "tls_role": "server",
+        "audio_role": "receiver",
+        "mode": "valid",
+        "exit_code": 1
+      }
+    ]
+  }
+]

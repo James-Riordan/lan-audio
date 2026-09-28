@@ -1,0 +1,4 @@
+Build Summary: 2/2 steps succeeded
+core-check success
++- compile test debug aarch64-macos success 4s MaxRSS:250M
+

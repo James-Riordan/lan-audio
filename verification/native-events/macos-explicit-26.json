@@ -1,0 +1,13 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "lifecycle-check",
+    "-Dtarget=x86_64-macos.26.0",
+    "--verbose",
+    "--summary",
+    "all"
+  ],
+  "exit_code": 0,
+  "seconds": 20.60157849999814
+}

@@ -1,0 +1,12 @@
+{
+  "source": "Observed tool output from initial format/build commands; diagnostic excerpt, not a reconstructed full raw log.",
+  "commands": [
+    ["zig", "fmt", "src/runtime/lifecycle.zig", "tests/integration/runtime_lifecycle.zig", "build.zig"],
+    ["zig", "build", "lifecycle-test", "--summary", "all"]
+  ],
+  "build_exit_code": 1,
+  "diagnostic": "tests/integration/runtime_lifecycle.zig:209:38: error: binary operator '*' has whitespace on one side, but not the other",
+  "rejected_source": "var foreign = [_]lc.Token{token} ** 5;",
+  "tests_executed": false,
+  "resolution": "Use explicit repeated token elements, then format with the pinned compiler."
+}

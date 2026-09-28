@@ -1,0 +1,22 @@
+Build Summary: 19/19 steps succeeded; 91/91 tests passed
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe safe native success 29s MaxRSS:319M
+|     +- translate-c cached 34ms MaxRSS:50M
+|     +- translate-c cached 44ms MaxRSS:50M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 41ms MaxRSS:50M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 34ms MaxRSS:50M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+test success
++- run test 47 pass (47 total) 403ms MaxRSS:3M
+|  +- compile test safe native cached 25s MaxRSS:50M
++- run test 5 pass (5 total) 54ms MaxRSS:2M
+|  +- compile test safe native cached 83ms MaxRSS:51M
++- run test 2 pass (2 total) 133ms MaxRSS:2M
+|  +- compile test safe native success 25s MaxRSS:280M
++- run test 37 pass (37 total) 33ms MaxRSS:3M
+   +- compile test safe native cached 98ms MaxRSS:51M
+

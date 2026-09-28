@@ -1,0 +1,4 @@
+ignore_reroute True
+consume_failed_output True
+fault_expected_stop True
+resume_failed_generation True

@@ -1,0 +1,59 @@
+[
+  {
+    "cwd": "C:\\Projects\\tls-zig",
+    "command": [
+      "zig",
+      "fmt",
+      "--check",
+      "src",
+      "tests/transport.zig"
+    ],
+    "exit_code": 0,
+    "seconds": 0.027,
+    "log": "tls-0.log"
+  },
+  {
+    "cwd": "C:\\Projects\\tls-zig",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 20.415,
+    "log": "tls-1.log"
+  },
+  {
+    "cwd": "C:\\Projects\\tls-zig",
+    "command": [
+      "zig",
+      "build",
+      "host-test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 16.956,
+    "log": "tls-2.log"
+  },
+  {
+    "cwd": "C:\\Projects\\tls-zig",
+    "command": [
+      "zig",
+      "build",
+      "interop",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 0.444,
+    "log": "tls-3.log"
+  }
+]

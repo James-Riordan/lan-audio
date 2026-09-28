@@ -1,0 +1,2 @@
+TIMEOUT
+Command '['zig', 'build', 'test', 'host-test', '-j1', '--summary', 'all']' timed out after 180 seconds

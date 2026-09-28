@@ -1,0 +1,162 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "executable_sha256": "90da8d1b0f682caba1a642c0962aea2cf8065bd4dde28ed8c8eeb834917107dd",
+  "fixture_fingerprints": {
+    "client": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+    "server": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd"
+  },
+  "results": [
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.087,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "expected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.099,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "expected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.149,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "expected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.083,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "expected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.069,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "READY 55232\nexpected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.071,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "READY 55234\nexpected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.085,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 55236\nexpected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.12,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 55238\nexpected error.Revoked, found error.Canceled\nREJECT TestUnexpectedError revoked=false tls_released=true\nerror: UnrevokedFailure\nC:\\Projects\\tls-zig\\src\\root.zig:176:34: 0x7ff6eb59b026 in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (self.terminal) |err| return err;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:22: 0x7ff6eb59a939 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\std\\testing.zig:65:13: 0x7ff6eb4574f8 in expectError__anon_3445 (audio-verified-probe_zcu.obj)\n            return error.TestUnexpectedError;\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:106:5: 0x7ff6eb459f86 in exercise (audio-verified-probe_zcu.obj)\n    try std.testing.expectError(error.Revoked, connection.refresh(7, rules));\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:161:85: 0x7ff6eb45bbef in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    }
+  ]
+}

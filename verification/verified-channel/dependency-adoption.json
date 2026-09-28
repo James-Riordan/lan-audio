@@ -1,0 +1,32 @@
+{
+  "scope": "Explicit records-only adoption; existing stable Engine/Driver and Windows SDK retained. New leaf identity export reviewed, owner regression evidence bound by copied T00 receipt. QUIC modules are configured by build.zig but are not dependencies of imported tls module or our probe. Consumer tests follow; Apple TLS remains unqualified.",
+  "changes": [
+    {
+      "path": "build.zig",
+      "before": "62d431a423ff9017333a57fb1611d943b639ed6839a9f1364dbcbb0513d49d20",
+      "after": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134"
+    },
+    {
+      "path": "src/backend.c",
+      "before": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21",
+      "after": "dfcc61371663a4fc54b7b6aad16518f966707cf376ab7cb4f83bf8689de622a4"
+    },
+    {
+      "path": "src/backend.h",
+      "before": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc",
+      "after": "0e0f3dbfae408fe39bd33592e943e5cdce43abbaadbe906216b4d1bf93569cbd"
+    },
+    {
+      "path": "src/backend.zig",
+      "before": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6",
+      "after": "9a7e22086f439b6381c0810f6259cd923c359b7e8c920222a1f974c0e7e91c9c"
+    },
+    {
+      "path": "src/root.zig",
+      "before": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57",
+      "after": "99587be81255039fef2f9e8c8d803097f0243748c9ba0e5f766ae257c56dc0b3"
+    }
+  ],
+  "owner_receipt_sha256": "c0f263dcd5896af803c369466321369ba1a99fd231ad47441576c136796cdeaa",
+  "review": "C export validates live verified peer, TLS completion, shutdown/EOF/failure and returns copied SHA256 with atomic output. Zig separate error set preserves existing methods. Build examined in full: records module retains DLL import archives, explicit SDK paths and C flags; additional QUIC module/test graph is unrequested. No SDK, driver, fixtures or existing source entry outside these five changed."
+}

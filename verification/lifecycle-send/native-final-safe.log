@@ -1,0 +1,37 @@
+audio-test
++- run test
+   +- compile test safe native
+      +- compile lib miniaudio safe native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+Build Summary: 6/6 steps succeeded; 3/3 tests passed
+audio-test success
++- run test 3 pass (3 total) 1s MaxRSS:6M
+   +- compile test safe native success 52s MaxRSS:296M
+      +- WriteFile cached
+      +- compile lib miniaudio safe native cached 74ms MaxRSS:52M
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c cached 1s MaxRSS:52M
+

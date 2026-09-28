@@ -1,0 +1,53 @@
+{
+  "binary_sha256": "877e27916271be007b4d8d26518ecc7c508c973b64ce7912f70929fadf2ebb86",
+  "results": [
+    {
+      "role": "sender",
+      "mode": "wrong-peer",
+      "listener": false,
+      "matched": true,
+      "seconds": 0.051,
+      "exit_code": 1,
+      "error": null,
+      "events": [
+        {
+          "attempt": 1,
+          "prefill_frames": 960,
+          "frames": 0,
+          "failure": "WrongPeer",
+          "lifecycle": {
+            "phase": "stopped",
+            "generation": 1,
+            "serial": 2,
+            "held": [
+              false,
+              false,
+              false
+            ],
+            "pending": null,
+            "worker_joined": false,
+            "device_fenced": false,
+            "first_cause": "requested",
+            "cleanup_blocked": false,
+            "deadline_expired": false,
+            "receive": null,
+            "send": null
+          },
+          "audio": null,
+          "active_ms": 0,
+          "starved": false,
+          "unplayed_frames": 0
+        }
+      ],
+      "peers": [
+        {
+          "frames": 0,
+          "clean": false,
+          "authenticated": false,
+          "stream": null
+        }
+      ],
+      "stderr": "error: WrongPeer\nC:\\Projects\\lan-audio\\tests\\integration\\recovery_session.zig:60:68: 0x7ff7ce1e01ed in main (audio-recovery-probe_zcu.obj)\n    if (!summary.intentional_stop) if (summary.last_failure) |err| return err;\n                                                                   ^\n"
+    }
+  ]
+}

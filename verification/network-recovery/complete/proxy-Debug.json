@@ -1,0 +1,109 @@
+{
+  "matched": false,
+  "sender": [
+    {
+      "attempt": 1,
+      "prefill_frames": 1920,
+      "frames": 47760,
+      "failure": null,
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 210,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": null,
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": {
+          "draining": true,
+          "committed": 47760,
+          "offered_frames": 0,
+          "frontier": 47760,
+          "local": "transferred",
+          "end": "copied",
+          "remote": "confirmed",
+          "secure_close": "clean"
+        }
+      },
+      "audio": {
+        "captured_frames": 47760,
+        "dropped_frames": 0,
+        "rendered_frames": 0,
+        "silent_frames": 47760,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 1250,
+      "starved": false,
+      "unplayed_frames": 0
+    }
+  ],
+  "receiver": [
+    {
+      "attempt": 1,
+      "prefill_frames": 1920,
+      "frames": 47760,
+      "failure": null,
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 10,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": null,
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": {
+          "frontier": 47760,
+          "publication_closed": true,
+          "local": "drained",
+          "ack": "copied",
+          "remote": "unobserved",
+          "secure_close": "clean"
+        },
+        "send": null
+      },
+      "audio": {
+        "captured_frames": 0,
+        "dropped_frames": 0,
+        "rendered_frames": 47760,
+        "silent_frames": 480,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 1016,
+      "starved": false,
+      "unplayed_frames": 0
+    }
+  ],
+  "proxy": [
+    {
+      "connection": 1,
+      "peak_queued_bytes": 5970,
+      "delayed": true,
+      "received_bytes": 401288,
+      "forwarded_bytes": 401288
+    }
+  ],
+  "sender_stderr": "Capture started: 48 kHz stereo.\n",
+  "receiver_stderr": "Listening on 127.0.0.1:60980; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\n",
+  "binary_sha256": "5be037ef2b05ef15c652c18d670a5a787cc25e3eff00f6f0dff4f086ff186b9f"
+}

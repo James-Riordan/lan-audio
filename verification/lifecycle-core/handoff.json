@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "tools/check_handoff.py"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:21.981738+00:00",
+  "elapsed_seconds": 3.1247729000024265,
+  "exit_code": 0,
+  "log": "handoff.log",
+  "log_sha256": "4c4d8251c901c8a7776ee235e092fe664e12e009f0e3ff004daa7b908d908a2e"
+}

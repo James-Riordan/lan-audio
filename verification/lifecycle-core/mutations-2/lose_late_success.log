@@ -1,0 +1,76 @@
+1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...OK
+2/11 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...slices differ. first difference occurs at index 0 (0x0)
+
+============ expected this output: =============  len: 3 (0x3)
+
+[0]: true
+[1]: false
+[2]: false
+
+============= instead found this: ==============  len: 3 (0x3)
+
+[0]: false
+[1]: false
+[2]: false
+
+================================================
+
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:379:5: 0x7ff67e48d958 in expectEqualSlices__anon_62027 (root_zcu.obj)
+    return error.TestExpectedEqual;
+    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:137:27: 0x7ff67e48d9f7 in expectEqualInner__anon_62012 (root_zcu.obj)
+        .array => |array| try expectEqualSlices(array.child, &expected, &actual),
+                          ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff67e48e8be in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:90:9: 0x7ff67e48e8ef in finish (root_zcu.obj)
+        try eq(self.owned, self.controller.snapshot().held);
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:149:13: 0x7ff67e49aa00 in test.cancel during every acquisition retains parents for late success failure and partial debt (root_zcu.obj)
+            try host.finish(result);
+            ^
+3/11 runtime_lifecycle.test.each rolled back failure and partial acquisition independently initiates cleanup...OK
+4/11 runtime_lifecycle.test.pending worker acquisition reserves device and storage across cancel and deadline...slices differ. first difference occurs at index 2 (0x2)
+
+============ expected this output: =============  len: 3 (0x3)
+
+[0]: true
+[1]: true
+[2]: true
+
+============= instead found this: ==============  len: 3 (0x3)
+
+[0]: true
+[1]: true
+[2]: false
+
+================================================
+
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:379:5: 0x7ff67e48d958 in expectEqualSlices__anon_62027 (root_zcu.obj)
+    return error.TestExpectedEqual;
+    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:137:27: 0x7ff67e48d9f7 in expectEqualInner__anon_62012 (root_zcu.obj)
+        .array => |array| try expectEqualSlices(array.child, &expected, &actual),
+                          ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff67e48e8be in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:90:9: 0x7ff67e48e8ef in finish (root_zcu.obj)
+        try eq(self.owned, self.controller.snapshot().held);
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:181:5: 0x7ff67e49a34c in test.pending worker acquisition reserves device and storage across cancel and deadline (root_zcu.obj)
+    try host.finish(.acquired);
+    ^
+5/11 runtime_lifecycle.test.callback may enter after stop and fence cannot return while callback is paused...OK
+6/11 runtime_lifecycle.test.every token field and contradictory result is rejected atomically...OK
+7/11 runtime_lifecycle.test.each cleanup failure preserves ownership and requires explicit retry with new identity...OK
+8/11 runtime_lifecycle.test.old generation stop deadline and completion cannot affect restarted owner...OK
+9/11 runtime_lifecycle.test.namespace exhaustion never wraps and does not forget an acquired owner...OK
+10/11 runtime_lifecycle.test.wrong executor observes no dispatch and deadline cannot change terminal outcome...OK
+11/11 runtime_lifecycle.test.result matrix rejects every inappropriate tag without settling an issued effect...OK
+9 passed; 0 skipped; 2 failed.
+error: the following test command failed with exit code 1:
+C:\Users\James\Documents\Codex\2026-09-25\referenced-chatgpt-conversation-this-is-an-3\work\lifecycle-mutation-cache\o\ddb0e1a4a9bd2bdef052fde4d87f293b\root.exe --seed=0x343e6519

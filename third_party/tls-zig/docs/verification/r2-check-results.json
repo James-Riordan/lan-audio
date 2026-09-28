@@ -1,0 +1,657 @@
+{
+  "status": "passed",
+  "date_utc": "2026-09-26T12:39:26.056342+00:00",
+  "scope": "revision-2 maintenance and finite-model checks; native protocol regressions retained from unchanged baseline",
+  "source_inventory_sha256": "6d270eeaf9f5c70447286f5cd9dcf63745ab8d346c0d5c6b0c45a17f3fcc7ec8",
+  "plan_sha256": "c9fe222f230ca1ac51b8f07b7bd7fd68988406450a8a7eee579bc02bcede3ac8",
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "result": {
+        "project": "tls-zig",
+        "passed": true,
+        "errors": [],
+        "negative_controls_detected": [
+          "source hash drift",
+          "unindexed file",
+          "broken local link",
+          "missing contract",
+          "stale declaration location",
+          "unsafe inventory path",
+          "malformed JSON"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\quic-zig"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "project": "tls-zig",
+        "work_packages": 37,
+        "acceptance_obligations": 74,
+        "completion_order": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00",
+          "Q10",
+          "T01",
+          "T07",
+          "Q11",
+          "T03",
+          "T05",
+          "T08",
+          "T09",
+          "T04",
+          "T10",
+          "T02",
+          "T11",
+          "T06",
+          "T12",
+          "Q00",
+          "T13",
+          "T14",
+          "Q01",
+          "Q02",
+          "Q04",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q13",
+          "Q20",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q16",
+          "Q19",
+          "Q21"
+        ],
+        "peer_checked": true,
+        "negative_controls_detected": [
+          "cycle",
+          "unknown dependency",
+          "duplicate id",
+          "unsafe path",
+          "noncanonical path",
+          "missing oracle",
+          "duplicate acceptance",
+          "false completion",
+          "invalid shape"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-event-model.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "scope": "finite proposed custody model; no implementation refinement or liveness proof",
+        "normal": [
+          {
+            "passed": true,
+            "capacity": 1,
+            "states": 23,
+            "edges": 155
+          },
+          {
+            "passed": true,
+            "capacity": 2,
+            "states": 33,
+            "edges": 233
+          }
+        ],
+        "injected_faults": {
+          "overwrite": {
+            "passed": false,
+            "capacity": 2,
+            "states": 6,
+            "edges": 24,
+            "violation": "lost emitted event",
+            "trace": [
+              "emit 0",
+              "emit 1",
+              "overwrite full queue"
+            ]
+          },
+          "stale-ack": {
+            "passed": false,
+            "capacity": 2,
+            "states": 11,
+            "edges": 65,
+            "violation": "stale/foreign acknowledgement mutated state",
+            "trace": [
+              "emit 0",
+              "nextEvent",
+              "copy/derive 0",
+              "ack issuer=7 sequence=1"
+            ]
+          },
+          "early-ack": {
+            "passed": false,
+            "capacity": 2,
+            "states": 9,
+            "edges": 37,
+            "violation": "retired before independent copy/derivation",
+            "trace": [
+              "emit 0",
+              "nextEvent",
+              "ack issuer=7 sequence=0"
+            ]
+          }
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-models.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "finite abstract safety models; no Zig/C refinement or liveness proof",
+        "models": {
+          "ack_ticket": {
+            "correct_model": {
+              "states": 20,
+              "edges": 36,
+              "counterexample": null
+            },
+            "injected_fault": {
+              "states": 18,
+              "edges": 23,
+              "counterexample": [
+                "admit ack-eliciting packet",
+                "prepare ticket 1",
+                "admit ack-eliciting packet",
+                "send ticket 1"
+              ]
+            }
+          },
+          "late_ack_custody": {
+            "correct_model": {
+              "states": 10,
+              "edges": 14,
+              "counterexample": null
+            },
+            "injected_fault": {
+              "states": 11,
+              "edges": 13,
+              "counterexample": [
+                "send original span {0,1}",
+                "lose packet 0",
+                "send retransmission span {0,1}",
+                "ACK packet 0",
+                "lose packet 1"
+              ]
+            }
+          },
+          "authenticated_shutdown": {
+            "correct_model": {
+              "states": 15,
+              "edges": 20,
+              "counterexample": null
+            },
+            "injected_fault": {
+              "states": 15,
+              "edges": 20,
+              "counterexample": [
+                "consume one final plaintext byte",
+                "consume one final plaintext byte",
+                "receive raw transport EOF",
+                "finish shutdown"
+              ]
+            }
+          }
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "result": {
+        "project": "tls-zig",
+        "passed": true,
+        "errors": [],
+        "negative_controls_detected": [
+          "source hash drift",
+          "unindexed file",
+          "broken local link",
+          "missing contract",
+          "stale declaration location",
+          "unsafe inventory path",
+          "malformed JSON"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\quic-zig"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "project": "tls-zig",
+        "work_packages": 37,
+        "acceptance_obligations": 74,
+        "completion_order": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00",
+          "Q10",
+          "T01",
+          "T07",
+          "Q11",
+          "T03",
+          "T05",
+          "T08",
+          "T09",
+          "T04",
+          "T10",
+          "T02",
+          "T11",
+          "T06",
+          "T12",
+          "Q00",
+          "T13",
+          "T14",
+          "Q01",
+          "Q02",
+          "Q04",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q13",
+          "Q20",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q16",
+          "Q19",
+          "Q21"
+        ],
+        "peer_checked": true,
+        "negative_controls_detected": [
+          "cycle",
+          "unknown dependency",
+          "duplicate id",
+          "unsafe path",
+          "noncanonical path",
+          "missing oracle",
+          "duplicate acceptance",
+          "false completion",
+          "invalid shape"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-event-model.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "scope": "finite proposed custody model; no implementation refinement or liveness proof",
+        "normal": [
+          {
+            "passed": true,
+            "capacity": 1,
+            "states": 23,
+            "edges": 155
+          },
+          {
+            "passed": true,
+            "capacity": 2,
+            "states": 33,
+            "edges": 233
+          }
+        ],
+        "injected_faults": {
+          "overwrite": {
+            "passed": false,
+            "capacity": 2,
+            "states": 6,
+            "edges": 24,
+            "violation": "lost emitted event",
+            "trace": [
+              "emit 0",
+              "emit 1",
+              "overwrite full queue"
+            ]
+          },
+          "stale-ack": {
+            "passed": false,
+            "capacity": 2,
+            "states": 11,
+            "edges": 65,
+            "violation": "stale/foreign acknowledgement mutated state",
+            "trace": [
+              "emit 0",
+              "nextEvent",
+              "copy/derive 0",
+              "ack issuer=7 sequence=1"
+            ]
+          },
+          "early-ack": {
+            "passed": false,
+            "capacity": 2,
+            "states": 9,
+            "edges": 37,
+            "violation": "retired before independent copy/derivation",
+            "trace": [
+              "emit 0",
+              "nextEvent",
+              "ack issuer=7 sequence=0"
+            ]
+          }
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\check-models.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "finite abstract safety models; no Zig/C refinement or liveness proof",
+        "models": {
+          "ack_ticket": {
+            "correct_model": {
+              "states": 20,
+              "edges": 36,
+              "counterexample": null
+            },
+            "injected_fault": {
+              "states": 18,
+              "edges": 23,
+              "counterexample": [
+                "admit ack-eliciting packet",
+                "prepare ticket 1",
+                "admit ack-eliciting packet",
+                "send ticket 1"
+              ]
+            }
+          },
+          "late_ack_custody": {
+            "correct_model": {
+              "states": 10,
+              "edges": 14,
+              "counterexample": null
+            },
+            "injected_fault": {
+              "states": 11,
+              "edges": 13,
+              "counterexample": [
+                "send original span {0,1}",
+                "lose packet 0",
+                "send retransmission span {0,1}",
+                "ACK packet 0",
+                "lose packet 1"
+              ]
+            }
+          },
+          "authenticated_shutdown": {
+            "correct_model": {
+              "states": 15,
+              "edges": 20,
+              "counterexample": null
+            },
+            "injected_fault": {
+              "states": 15,
+              "edges": 20,
+              "counterexample": [
+                "consume one final plaintext byte",
+                "consume one final plaintext byte",
+                "receive raw transport EOF",
+                "finish shutdown"
+              ]
+            }
+          }
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "filesystem_negative_controls": [
+    "missing planned card",
+    "card acceptance drift",
+    "unmigrated implementation",
+    "unindexed planned card"
+  ],
+  "preexisting_source_preserved": [
+    "AGENTS.md",
+    "backend-lock.json",
+    "build.zig",
+    "build.zig.zon",
+    "CHECKPOINT.md",
+    "HANDOFF-shutdown.md",
+    "HANDOFF-tcp-consumer.md",
+    "HOST-DRIVER.md",
+    "README.md",
+    "SOURCE-ORIGIN.json",
+    "evidence/build-recovery.md",
+    "evidence/source-provenance.json",
+    "examples/roundtrip.zig",
+    "examples/consumer/build.zig",
+    "examples/consumer/build.zig.zon",
+    "examples/consumer/main.zig",
+    "examples/consumer/socket.c",
+    "src/backend.c",
+    "src/backend.h",
+    "src/backend.zig",
+    "src/driver.zig",
+    "src/root.zig",
+    "tests/driver.zig",
+    "tests/transport.zig",
+    "tests/fixtures/ca.pem",
+    "tests/fixtures/client.key",
+    "tests/fixtures/client.pem",
+    "tests/fixtures/expired.key",
+    "tests/fixtures/expired.pem",
+    "tests/fixtures/other-ca.pem",
+    "tests/fixtures/server.key",
+    "tests/fixtures/server.pem",
+    "tests/fixtures/wrong-purpose.key",
+    "tests/fixtures/wrong-purpose.pem",
+    "tools/build-openssl.sh",
+    "tools/check-models.py",
+    "tools/fetch-openssl.py",
+    "tools/interop.py",
+    "tools/make_fixtures.py",
+    "tools/pin-backend.py",
+    "tools/qualify.ps1",
+    "tools/tcp_interop.py",
+    "tools/tcp_server_interop.py",
+    "tools/tcp_upload_interop.py",
+    "tools/test-openssl.sh"
+  ],
+  "only_preexisting_source_changed": "tools/check-docs.py",
+  "native_probe_receipt": "r2-probe-result.json",
+  "native_probe_negative_controls": [
+    {
+      "name": "nonempty scratch",
+      "optimized": false,
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\probe-quic-tls.py",
+        "--work-dir",
+        "C:\\Users\\James\\AppData\\Local\\Temp\\r2-probe-reject-o_hl3lf9\\occupied",
+        "--sdk-root",
+        "C:\\Projects\\tls-zig\\deps\\openssl-install"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": {
+        "passed": false,
+        "error": "Use a new empty scratch directory for this probe."
+      }
+    },
+    {
+      "name": "missing SDK",
+      "optimized": false,
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\probe-quic-tls.py",
+        "--work-dir",
+        "C:\\Users\\James\\AppData\\Local\\Temp\\r2-probe-reject-o_hl3lf9\\new",
+        "--sdk-root",
+        "C:\\Users\\James\\AppData\\Local\\Temp\\r2-probe-reject-o_hl3lf9\\absent-sdk"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": {
+        "passed": false,
+        "error": "SDK hash/path mismatch: bin/libcrypto-3-x64.dll"
+      }
+    },
+    {
+      "name": "nonempty scratch",
+      "optimized": true,
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\probe-quic-tls.py",
+        "--work-dir",
+        "C:\\Users\\James\\AppData\\Local\\Temp\\r2-probe-reject-11czwmq_\\occupied",
+        "--sdk-root",
+        "C:\\Projects\\tls-zig\\deps\\openssl-install"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": {
+        "passed": false,
+        "error": "Use a new empty scratch directory for this probe."
+      }
+    },
+    {
+      "name": "missing SDK",
+      "optimized": true,
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r2\\stage\\tls-zig\\tools\\probe-quic-tls.py",
+        "--work-dir",
+        "C:\\Users\\James\\AppData\\Local\\Temp\\r2-probe-reject-11czwmq_\\new",
+        "--sdk-root",
+        "C:\\Users\\James\\AppData\\Local\\Temp\\r2-probe-reject-11czwmq_\\absent-sdk"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": {
+        "passed": false,
+        "error": "SDK hash/path mismatch: bin/libcrypto-3-x64.dll"
+      }
+    }
+  ],
+  "live_adoption_checks": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-docs.py",
+        "--with-sdk"
+      ],
+      "exit_code": 0,
+      "result": {
+        "project": "tls-zig",
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-plan.py",
+        "--peer",
+        "C:\\Projects\\quic-zig"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "project": "tls-zig",
+        "work_packages": 37,
+        "acceptance_obligations": 74,
+        "completion_order": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00",
+          "Q10",
+          "T01",
+          "T07",
+          "Q11",
+          "T03",
+          "T05",
+          "T08",
+          "T09",
+          "T04",
+          "T10",
+          "T02",
+          "T11",
+          "T06",
+          "T12",
+          "Q00",
+          "T13",
+          "T14",
+          "Q01",
+          "Q02",
+          "Q04",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q13",
+          "Q20",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q16",
+          "Q19",
+          "Q21"
+        ],
+        "peer_checked": true
+      }
+    }
+  ],
+  "live_adoption_date_utc": "2026-09-26T12:42:35.051993+00:00"
+}

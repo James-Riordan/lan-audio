@@ -1,0 +1,31 @@
+#!/bin/sh
+set -eu
+cd -- "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+for argument in "$@"; do
+    case "$argument" in
+        --help|-h)
+            echo 'LAN Audio - Intel Mac receiver'
+            echo '  sh start                  Prepare, pair once, then receive audio.'
+            echo '  sh start --prepare        Download/build only; no pairing or audio.'
+            echo '  sh start --config FILE    Use a specific declarative launcher file.'
+            echo 'Default settings: lan-audio.launch.json beside this launcher.'
+            echo 'Start this Mac first, then start.cmd on Windows. Ctrl+C stops.'
+            exit 0
+            ;;
+    esac
+done
+if [ "$(uname -s)" != Darwin ] || [ "$(uname -m)" != x86_64 ]; then
+    echo 'This launcher currently supports Intel macOS 12+; Windows uses start.cmd.' >&2
+    exit 1
+fi
+if ! /usr/bin/xcode-select -p >/dev/null 2>&1; then
+    echo 'Apple developer tools are needed to build LAN Audio.'
+    echo 'Finish the Apple installation window, then run sh start again.'
+    /usr/bin/xcode-select --install
+    exit 1
+fi
+if ! /usr/bin/python3 -c 'import sys; assert sys.version_info >= (3,9)' >/dev/null 2>&1; then
+    echo 'Update Apple Command Line Tools to a version with Python 3.9 or newer, then rerun sh start.' >&2
+    exit 1
+fi
+exec /usr/bin/python3 tools/bootstrap.py "$@"

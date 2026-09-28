@@ -1,0 +1,11 @@
+.{
+    .name = .lan_audio,
+    .fingerprint = 0xb8118a297f99bde9,
+    .version = "0.3.0",
+    .minimum_zig_version = "0.17.0-dev.1859+dcceb318e",
+    .dependencies = .{
+        .miniaudio_zig = .{ .path = "../miniaudio-zig" },
+        .tls_zig = .{ .path = "../tls-zig" },
+    },
+    .paths = .{ "AGENTS.md", "build.zig", "build.zig.zon", "src", "tests", "docs", "spec", "tools", "README.md", "transport-lock.json", "verification/RESULTS.md", "verification/models.json", "verification/source-snapshot.json", "verification/transport/RESULTS.md", "verification/transport/receipt.json", "verification/callback/RESULTS.md", "verification/callback/receipt.json" },
+}

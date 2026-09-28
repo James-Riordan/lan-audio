@@ -1,0 +1,57 @@
+network-test
++- run test
+   +- compile test debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+network-test
++- run test 4 pass, 2 fail (6 total)
+error: 'network_host.test.IPv4 and IPv6 preserve byte prefixes and independent half close after listener release' failed:
+       C:\Projects\lan-audio\src\host\net\socket.zig:107:9: 0x7ff71d81e3cf in fail (test_zcu.obj)
+               return error.SystemFailure;
+               ^
+       C:\Projects\lan-audio\src\host\net\socket.zig:151:67: 0x7ff71d82c541 in shutdownWrite (test_zcu.obj)
+               if (c.la_net_shutdown_write(&self.native) != c.LA_NET_OK) return self.fail();
+                                                                         ^
+       C:\Projects\lan-audio\tests\integration\network_host.zig:63:9: 0x7ff71d8298a9 in test.IPv4 and IPv6 preserve byte prefixes and independent half close after listener release (test_zcu.obj)
+               try pair.client.shutdownWrite();
+               ^
+error: 'network_host.test.refused connect never becomes connected merely because the socket is writable' failed:
+       expected error.SystemFailure, found true
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff71d820bd4 in expectError__anon_63698 (test_zcu.obj)
+               return error.TestExpectedError;
+               ^
+       C:\Projects\lan-audio\tests\integration\network_host.zig:134:5: 0x7ff71d823e86 in test.refused connect never becomes connected merely because the socket is writable (test_zcu.obj)
+           try std.testing.expectError(error.SystemFailure, client.finishConnect());
+           ^
+failed command: ".\\.zig-cache\\o\\08a1ad4abe5be04e15ef347d8b926479\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x933d432 --listen=-
+
+Build Summary: 2/4 steps succeeded (1 failed); 4/6 tests passed (2 failed)
+network-test transitive failure
++- run test 4 pass, 2 fail (6 total)
+   +- compile test debug native success 17s MaxRSS:292M
+      +- translate-c cached 80ms MaxRSS:59M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x933d432 network-test --summary all

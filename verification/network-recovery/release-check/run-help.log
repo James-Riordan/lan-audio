@@ -1,0 +1,25 @@
+run
++- Run installed LAN Audio
+   +- WriteFile lan-audio.exe
+      +- compile exe lan-audio safe native 1 errors
+src\host\platform.zig:47:14: error: root source file struct 'platform' has no member named 'uintptr_t'
+    native: c.uintptr_t = 0,
+            ~^~~~~~~~~~
+.zig-cache\o\571311ef41d1fe8e567be84ae17ac095\platform.zig:1:1: note: struct declared here
+const __root = @This();
+^~~~~
+referenced by:
+    init: src\host\platform.zig:48:20
+    work: src\runtime\stream.zig:126:38
+    13 reference(s) hidden; use '-freference-trace=15' to see all references
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" build-exe -OReleaseSafe --dep audio_host --dep app_options --dep stream_runtime --dep session_supervisor --dep platform_host --dep peer_policy --dep lan_audio "-Mroot=src\\app\\main.zig" -OReleaseSafe --dep lan_audio --dep miniaudio "-Maudio_host=src\\host\\audio_device.zig" "-Mapp_options=.zig-cache\\o\\99cc8e082b3da62eef3845e5e0d8d866\\options.zig" -OReleaseSafe --dep platform_host --dep audio_host --dep network_host --dep verified_channel --dep peer_policy --dep lan_audio --dep lifecycle --dep send_drain --dep receive_drain "-Mstream_runtime=src\\runtime\\stream.zig" -OReleaseSafe --dep stream_runtime --dep platform_host --dep network_host "-Msession_supervisor=src\\runtime\\session_supervisor.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\platform.c" -lavrt -OReleaseSafe -I "src\\host" --dep platform_c "-Mplatform_host=src\\host\\platform.zig" -OReleaseSafe --dep lan_audio "-Mpeer_policy=src\\security\\peer_policy.zig" -OReleaseSafe "-Mlan_audio=src\\root.zig" ".zig-cache\\o\\f8db0cea31c1d3943c7609e3eb059ddc\\miniaudio.lib" -OReleaseSafe -I ".zig-cache\\o\\b612c90714d41c109b931981da111308" --dep miniaudio_c "-Mminiaudio=../miniaudio-zig\\src\\root.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\net\\native.c" -lws2_32 -OReleaseSafe -I "src\\host\\net" --dep network_c "-Mnetwork_host=src\\host\\net\\socket.zig" -OReleaseSafe --dep tls --dep network_host --dep lan_audio --dep peer_policy --dep channel_admission "-Mverified_channel=src\\host\\verified_channel.zig" -OReleaseSafe "-Mlifecycle=src\\runtime\\lifecycle.zig" -OReleaseSafe --dep lan_audio --dep lifecycle "-Msend_drain=src\\runtime\\send_drain.zig" -OReleaseSafe --dep lan_audio --dep pending_audio --dep lifecycle "-Mreceive_drain=src\\runtime\\receive_drain.zig" -OReleaseSafe "-Mplatform_c=.zig-cache\\o\\571311ef41d1fe8e567be84ae17ac095\\platform.zig" -OReleaseSafe "-Mminiaudio_c=.zig-cache\\o\\2455e4cf7d970887ad1a90aac410ba48\\profile.zig" -OReleaseSafe "-Mnetwork_c=.zig-cache\\o\\114ca5a6b2eced70fa58c9ea1abb8766\\native.zig" "../tls-zig\\deps\\openssl-install\\lib\\libssl.dll.a" "../tls-zig\\deps\\openssl-install\\lib\\libcrypto.dll.a" -cflags -std=c11 -Wall -Wextra -Werror -- "../tls-zig\\src\\backend.c" -OReleaseSafe -I "../tls-zig\\src" -isystem "../tls-zig\\deps\\openssl-install\\include" "-Mtls=../tls-zig\\src\\root.zig" -OReleaseSafe --dep lan_audio --dep peer_policy "-Mchannel_admission=src\\runtime\\channel_admission.zig" -OReleaseSafe --dep lan_audio "-Mpending_audio=src\\runtime\\pending_block.zig" -lole32 -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name lan-audio --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 6/10 steps succeeded (1 failed)
+run transitive failure
++- Run installed LAN Audio transitive failure
+   +- WriteFile lan-audio.exe transitive failure
+      +- compile exe lan-audio safe native 1 errors
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x7abf0289 run -Doptimize=ReleaseSafe -- help

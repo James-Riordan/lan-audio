@@ -1,0 +1,3901 @@
+{
+  "observed_at_utc": "2026-09-26T12:39:23.773983+00:00",
+  "host": "Windows-10-10.0.19045-SP0",
+  "python_version": "3.14.3",
+  "scope": "Private pending receive custody, decoder/gate/queue composition, independent authenticated peer qualification, explicit TLS documentation adoption and dependency-owned reference integration.",
+  "prior_receipt": {
+    "path": "C:\\Projects\\lan-audio\\verification\\runtime-blueprint\\receipt.json",
+    "bytes": 147504,
+    "sha256": "94c16e16446fdaaea8a88037d097b47804ab6104c65b6637fe164fab8eacf8e9"
+  },
+  "prior_phase_evidence_verified": true,
+  "sources_and_installed_assets": [
+    {
+      "path": "C:\\Projects\\lan-audio\\.gitignore",
+      "bytes": 61,
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\AGENTS.md",
+      "bytes": 1882,
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig",
+      "bytes": 7070,
+      "sha256": "5e9bbb25b2f753a6846005d2bf9dc0e1a06f5046423999d566d8d92c0b67ed20"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig.zon",
+      "bytes": 662,
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\architecture\\modules.md",
+      "bytes": 3839,
+      "sha256": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\architecture\\platform-capabilities.md",
+      "bytes": 3517,
+      "sha256": "f836e62b1cde517cd53061420bd645c3b982c8bc6bd942e210a1bb9fe9923f1a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\ARCHITECTURE.md",
+      "bytes": 13449,
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\CALLBACKS.md",
+      "bytes": 6702,
+      "sha256": "af94844cc303677942177e63004306a1892f9532b3f60dfdf1d04aa114c05b0f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\DEPENDENCIES.md",
+      "bytes": 7715,
+      "sha256": "7f585eab6f3049884cba9c89d7aa27cd4f99f78aa19fbb31be2fc4c07450d39e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\design\\receive-drain.md",
+      "bytes": 8366,
+      "sha256": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\design\\system-mathematics.md",
+      "bytes": 6660,
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\development\\documentation.md",
+      "bytes": 3224,
+      "sha256": "1751ecc7ee546215a2fe94e8d933106cb1ad0cc2faf9a2caae563648aca0ef21"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\development\\workflow.md",
+      "bytes": 2769,
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\completion-sequence.md",
+      "bytes": 8966,
+      "sha256": "39a70cd6d48f7117315618b4b665dea305e52eaf1ee0861955389b56e839e243"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\decisions.md",
+      "bytes": 5126,
+      "sha256": "b2cd4a4068ed3bd7a5cb1933488a4c15aa53c4d97535a45453e2c33b5e7e9361"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\interfaces.md",
+      "bytes": 7194,
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\layout.md",
+      "bytes": 6955,
+      "sha256": "d58a239a362af7266e220dc132b9e5a7cc190984f45a0ca8068838b2b35c4532"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\roadmap.md",
+      "bytes": 4039,
+      "sha256": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\runtime-blueprint.md",
+      "bytes": 13035,
+      "sha256": "68157111072692baee0590d18551a6bed436c2fc951b1afa78032a358f45cba6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\START_HERE.md",
+      "bytes": 5196,
+      "sha256": "9776a62eb558feefa910ceb440f5d06fdfc5d60d58315eef1e76b79c7c574b00"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\01-target-builds.md",
+      "bytes": 3079,
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\02-fidelity-protocol.md",
+      "bytes": 4625,
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\03-identity-endpoints.md",
+      "bytes": 3207,
+      "sha256": "523ea77f3b547b8fb40d763e575d034a0bb51a2c76eec2f7e677ef29721c5bbe"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\04-first-sound.md",
+      "bytes": 4680,
+      "sha256": "9550de9bde0483fab2b6ab69f4a41ffbefdd974a381c45a945e6fc4e13a33d15"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\05-timing-clocks.md",
+      "bytes": 2885,
+      "sha256": "504cc4c20cbe9718d5822b9d881fc239d264c53e9750dbfb985a6f606ba91ed4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\06-network-resilience.md",
+      "bytes": 2752,
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\07-observability.md",
+      "bytes": 2320,
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\08-user-experience.md",
+      "bytes": 2299,
+      "sha256": "bff51a468f61e821ffbe3ed34fa11c13e88dc27e074470576e50851067e40ccc"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\09-packaging.md",
+      "bytes": 2411,
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\10-qualification.md",
+      "bytes": 2389,
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\proof-ledger.md",
+      "bytes": 7018,
+      "sha256": "037b0125e4ba2dc3d23b9bbc7fdff0996f782f9052cf84d9f03ae2242887714e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\quantitative-design.md",
+      "bytes": 6594,
+      "sha256": "f68abc33e34faaa3729ce9789da947eb6d23355671da29aded7d6ba8bfbe102b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\README.md",
+      "bytes": 4639,
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\runtime-argument.md",
+      "bytes": 10235,
+      "sha256": "fc62dd3247c63cec0989650c1bfd77ec426a947ddb8a21251f04f734c9d429ad"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\stream-argument.md",
+      "bytes": 10101,
+      "sha256": "4e6d5ac4d58d4f430261f7d48de36942e124f4b923631b46e619a0ece028a819"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\MATHEMATICS.md",
+      "bytes": 19013,
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\media\\assembly.md",
+      "bytes": 6768,
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\media\\pending-block.md",
+      "bytes": 6941,
+      "sha256": "2070f8862ddff42baae405581d910fbef524695858cc6fdd485baa6f49ab8714"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\PRODUCT.md",
+      "bytes": 9277,
+      "sha256": "6de406291c90508c7e5acada35a157706b219223f204c88808f271258c0b5c4b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\protocol\\negotiation.md",
+      "bytes": 5106,
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\protocol\\v2.md",
+      "bytes": 7835,
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\README.md",
+      "bytes": 2857,
+      "sha256": "0e63ad5f1aacd31529e47a6e63db664cbc21d6fe641fceb6ad87d1c258fb5e35"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\api-contracts.md",
+      "bytes": 15123,
+      "sha256": "5515762ed61480c0f0745e631917c5a0f3f2962d91e4b57f62c6a39e915a4a2c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\evidence.md",
+      "bytes": 137543,
+      "sha256": "14c00761acf4067620ba02e40bb1741f6f61539680992e0635ba9e0bb2db4c74"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\file-index.json",
+      "bytes": 105538,
+      "sha256": "f93142b5b52035524caa9c98df2fa72b1b1d35239e59dc3c2f170f245947dde7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\lan-audio.md",
+      "bytes": 127079,
+      "sha256": "dfa13be676605ab02b1db61010df6912676e03bd2ba89254568297dee323ba81"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\miniaudio-zig.md",
+      "bytes": 33057,
+      "sha256": "79b5c60e9b01b61cecc631f2facf19f8599bbc376dd8aa21d3f28badcad11268"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\README.md",
+      "bytes": 2773,
+      "sha256": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\tls-zig.md",
+      "bytes": 185026,
+      "sha256": "1b52de7a842bde4365569a13ed509f884e46fa30b24a94621c1a02393da29ff8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\upstream-assets.md",
+      "bytes": 59427,
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\TRANSPORT.md",
+      "bytes": 8295,
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\acceptance-matrix.md",
+      "bytes": 4317,
+      "sha256": "260143a0119215d3f0d9fa3821a44045f96b7c884ed5bfba91101c59219b53b9"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\runtime-obligations.md",
+      "bytes": 9364,
+      "sha256": "65324672449fa0ac1f46e3bf51b31dc9db3d34b8026b68bca0a4c0ea920c69d8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\scenarios.md",
+      "bytes": 4483,
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\v2-independent.md",
+      "bytes": 6108,
+      "sha256": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\VERIFICATION.md",
+      "bytes": 5039,
+      "sha256": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\README.md",
+      "bytes": 5988,
+      "sha256": "0d4b095ab86a2ac95edfacd5411b0411b3969a98104c27fd6cbac10908385caf"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\concurrency\\SpscPublication.cfg",
+      "bytes": 138,
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\concurrency\\SpscPublication.tla",
+      "bytes": 2292,
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\README.md",
+      "bytes": 6151,
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\ReceiveDrain.cfg",
+      "bytes": 202,
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\ReceiveDrain.tla",
+      "bytes": 5019,
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\RuntimeOwnership.cfg",
+      "bytes": 227,
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\RuntimeOwnership.tla",
+      "bytes": 7664,
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\session\\SessionWindow.cfg",
+      "bytes": 212,
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\session\\SessionWindow.tla",
+      "bytes": 3912,
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\stream\\EndDrain.cfg",
+      "bytes": 166,
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\stream\\EndDrain.tla",
+      "bytes": 1949,
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\audio\\callback_bridge.zig",
+      "bytes": 2167,
+      "sha256": "69e4021d0b24d90b4dba29ab669527a8e3d8cbbd6d82fa59fea61f3c301bce1b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\audio\\frame_queue.zig",
+      "bytes": 4067,
+      "sha256": "8d9e3fe0520a171ea4ba2e628d862398188beea1da45a425c342185c5e608502"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\host\\audio_device.zig",
+      "bytes": 4797,
+      "sha256": "87c2326dd76963d7da783cfab83660ae553bdf779a240a1e0e6da4f8fa52b327"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\block_assembler.zig",
+      "bytes": 4262,
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\format.zig",
+      "bytes": 1886,
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\playout_window.zig",
+      "bytes": 3125,
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig",
+      "bytes": 4631,
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\v1.zig",
+      "bytes": 7648,
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\v2.zig",
+      "bytes": 9445,
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\README.md",
+      "bytes": 2424,
+      "sha256": "a07d5823b00c9fe40374d9ff69524ebbe5b4fd487d8bdd093992e3030bf502d5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\root.zig",
+      "bytes": 1037,
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\runtime\\pending_block.zig",
+      "bytes": 3532,
+      "sha256": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session\\receiver.zig",
+      "bytes": 3727,
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session\\session.zig",
+      "bytes": 2946,
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\dependency.zig",
+      "bytes": 459,
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\hardware\\windows_capture.zig",
+      "bytes": 2160,
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\audio_device.zig",
+      "bytes": 1904,
+      "sha256": "9d7f658e26ebfcc57fb0b6cbf391af9098c5ea53aaa67b81f75faeb31e2034f8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig",
+      "bytes": 2346,
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_peer.py",
+      "bytes": 11632,
+      "sha256": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_reference.py",
+      "bytes": 2599,
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\tls_receiver.zig",
+      "bytes": 6347,
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig",
+      "bytes": 8102,
+      "sha256": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\v2_codec_probe.zig",
+      "bytes": 2787,
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\callback.zig",
+      "bytes": 4372,
+      "sha256": "af29243eca657a06a895eefda7e4aca2f1e19cd6ea502ca594adf2ff0b40eff6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\core.zig",
+      "bytes": 6681,
+      "sha256": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\media\\assembler.zig",
+      "bytes": 6261,
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\protocol\\negotiation.zig",
+      "bytes": 7040,
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\protocol\\v2.zig",
+      "bytes": 7527,
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\runtime\\pending_block.zig",
+      "bytes": 9158,
+      "sha256": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\wire.zig",
+      "bytes": 6153,
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\build_reference.py",
+      "bytes": 10473,
+      "sha256": "4a8088b0694691fa414d9eee43607913442a8f02600e0432147b897becad433c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_docs.py",
+      "bytes": 1372,
+      "sha256": "2f10ce5c88dd3cc1ea61b20ed44dc76a7e02ccfe5806167ff42bd6f4b4c5828a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_handoff.py",
+      "bytes": 2278,
+      "sha256": "2fe93a9c900f994297361f1299536c860baf194d18984e613036a291cc8d263c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_models.py",
+      "bytes": 3889,
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_transport.py",
+      "bytes": 1708,
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\reference_contracts.json",
+      "bytes": 266437,
+      "sha256": "dd2cccf3dc3f508471193b590903957375030708f2698c17ce5055e64a6f2d89"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\test_transport.py",
+      "bytes": 8958,
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\test_v2_differential.py",
+      "bytes": 7838,
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\transport-lock.json",
+      "bytes": 33515,
+      "sha256": "06fc7ad3a0e9793f875180925595edf049c3e862a06765db90c82a60a4efe86a"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\.gitignore",
+      "bytes": 40,
+      "sha256": "23ccdb9ea9e115eea42eeff7c2d98cebc0557c1cc07a7bed3c624cde15388f04"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\build.zig",
+      "bytes": 4812,
+      "sha256": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\build.zig.zon",
+      "bytes": 298,
+      "sha256": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\architecture\\build-and-abi.md",
+      "bytes": 4351,
+      "sha256": "f2da902c0c9a93ff8a8580dbe335e3cf457e026cc53f5f61fdedb51e2d3949d8"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\CONTRACT.md",
+      "bytes": 4597,
+      "sha256": "da00459a2c49ab0bcf16d261826c852df692fb7b6d35ef1e45ce69c320ab09ca"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\contracts\\device-lifecycle.md",
+      "bytes": 6404,
+      "sha256": "76937c50af6a70f97a9d35d0e348a249b40f5f79cfc58b60eba5e12a63abfb16"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\contracts\\pcm-and-conversion.md",
+      "bytes": 5544,
+      "sha256": "d9fb2daae301b8db8ff0f0595869641c8919d478b0e6dc3cbfeac9a7dc1fcea2"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\DEPENDENCIES.md",
+      "bytes": 2284,
+      "sha256": "2341b51711884963da4d2a7b7a5c4565836b65108e7f8209cccb6f60a49d84c2"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\FILES.md",
+      "bytes": 3094,
+      "sha256": "4aca926aa99bc6e4f41649069c4e9c1f09868cfd5163bd02727d15efffc0b307"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\implementation\\qualification.md",
+      "bytes": 8577,
+      "sha256": "dc4e08adc0d52fce318010e33773a4e729fde256c18336b71a5599a038549625"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\README.md",
+      "bytes": 2207,
+      "sha256": "351e453ce373db8aebf1abe33328839d1290bd860a37216dec8dbe1644c607fe"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\reference\\catalog.json",
+      "bytes": 8495,
+      "sha256": "a9913588396a6505c11dc0c5bdaa89b7904fc7fca3f50d835f9020441e726651"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\reference\\files.md",
+      "bytes": 23013,
+      "sha256": "feb477b450fee5f8ff40421e175da4b4e901a4ceb47c0f19c72b8f391689371a"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\reference\\upstream.md",
+      "bytes": 5518,
+      "sha256": "dbc2ef620314cb8c34f66bd442ea0200db3b4dfaf6bccc0ace07f05af3d5f185"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\verification\\abi.md",
+      "bytes": 6513,
+      "sha256": "dedfcc8eaee92163028308e6e62c7d2b212de87e545dfc8c848dcc242ad3715e"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\verification\\README.md",
+      "bytes": 3590,
+      "sha256": "347c6cc16bf91b9d44a2838e08bac23c36725700ddb72221c97e1affc0b2bb60"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\VERIFICATION.md",
+      "bytes": 2247,
+      "sha256": "4dd18a6bbba2035f1ea5f206afde7131c902106aa3a70f0ae921f0a6ce264f89"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\README.md",
+      "bytes": 3283,
+      "sha256": "e41025584d483566251a31bd0503be4c8f5ff10dc52b733b6c5a7d10f6afba7c"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\native.c",
+      "bytes": 218,
+      "sha256": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\profile.h",
+      "bytes": 463,
+      "sha256": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\root.zig",
+      "bytes": 594,
+      "sha256": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\abi.zig",
+      "bytes": 4382,
+      "sha256": "546b81390dbaed6148f144eb4f933ee335b85b3cbb6b3e70ebb81630f30f2f75"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\abi_probe.c",
+      "bytes": 3393,
+      "sha256": "48cc227b60d07183cef25084d83ca1d9a03379380b45a19f118d5b5c8094e085"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\consumer\\build.zig",
+      "bytes": 1166,
+      "sha256": "29dea367b60d59c9160f843e3bd0c90034f7ab9e8009d28d0fb76ef653904a58"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\consumer\\build.zig.zon",
+      "bytes": 289,
+      "sha256": "b35353f0cf4ff09d5a50a4483dc5e80f293862f4ad9fd67c599e3cf8471b59f2"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\consumer\\consumer.zig",
+      "bytes": 778,
+      "sha256": "bf7e743fb99bfd726f237287e6ce4ac167a741470aca029edf23bd5822fba51f"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\contract.zig",
+      "bytes": 1820,
+      "sha256": "29388ef98c0e6b988d708377a455cfe5b4fa05ca6c7f9ad7ec587cca3b037d5c"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\test_abi_runner.py",
+      "bytes": 3025,
+      "sha256": "a3ffea36c573f7d8871192411ddb81c80b87726c7511e9bc157e84ac96c7a965"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\test_check_docs.py",
+      "bytes": 5556,
+      "sha256": "73e17ea38b9f1b88a51bde0ae9faab4354bf52d706636babfc8a4f5fec0af8d8"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tools\\check_docs.py",
+      "bytes": 8351,
+      "sha256": "8dad3ddc7272243f0cba95de4b7844fff13fa52bd2db1b7a980d8db808bbee16"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tools\\check_vendor.py",
+      "bytes": 691,
+      "sha256": "fad1dde8431845c3d452c0a0e7eb818020827c0335a3a623e9adddf08e15a949"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tools\\test_abi.py",
+      "bytes": 7909,
+      "sha256": "c8945663c7eaffbee90bdd83d097b9c47479f057e26d2e0937c7bbf28d2840c7"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\UPSTREAM.json",
+      "bytes": 519,
+      "sha256": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\LICENSE",
+      "bytes": 2597,
+      "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h",
+      "bytes": 4108168,
+      "sha256": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\AGENTS.md",
+      "bytes": 1272,
+      "sha256": "801b092a51908202937dee31ea0aab3a858581a97b2b63269327573a3422dbf5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\backend-lock.json",
+      "bytes": 27737,
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\build.zig",
+      "bytes": 5208,
+      "sha256": "62d431a423ff9017333a57fb1611d943b639ed6839a9f1364dbcbb0513d49d20"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\build.zig.zon",
+      "bytes": 394,
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\CHECKPOINT.md",
+      "bytes": 8567,
+      "sha256": "01c99aeb4224f9693e2055b9d5702ff2da71fca3b2decb6a3a7b668fd0baab4a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\bin\\libcrypto-3-x64.dll",
+      "bytes": 6777674,
+      "sha256": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\bin\\libssl-3-x64.dll",
+      "bytes": 918251,
+      "sha256": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\bin\\openssl.exe",
+      "bytes": 1384802,
+      "sha256": "6785566f72a2c113629003c6c5b6b10e931b225d5f1f816750fd74355abf4f46"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\aes.h",
+      "bytes": 3311,
+      "sha256": "130e304c466bda5db6de2fdbca3a970905070ab935d702e61c8371334851ea27"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\asn1.h",
+      "bytes": 57753,
+      "sha256": "07a4863ad1c13c558325deb9ccd0184f979f589d1c68bb1df9b903a404d02406"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\asn1err.h",
+      "bytes": 5169,
+      "sha256": "9d60638b3d0c52170d390fe566c0b96a6381590590cc3dd71339eb85140fe1d6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\asn1t.h",
+      "bytes": 38618,
+      "sha256": "1933928ab928f633ffd7d331d49894f386a478f2d3eddf095ba1cea280ce21b6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\async.h",
+      "bytes": 3019,
+      "sha256": "708d52ecd7bb5ca83d243ddecb132db0693b0809f65c093eabda549156934030"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\asyncerr.h",
+      "bytes": 739,
+      "sha256": "eb6ea0f0389aa7846ea5b8f5b7b8d2a82a7b52e7dbfa105bc137e52be1399a69"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\bio.h",
+      "bytes": 41421,
+      "sha256": "5a5ae5e2fea83c1bccd40b5b9e0b2bd6219cd9d9424a6eda6b9c487a2114e721"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\bioerr.h",
+      "bytes": 2355,
+      "sha256": "fe1bf57251e4eaab30d2a6aa2048ee93deb1f0f15ef6634f61093b4d405586c6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\blowfish.h",
+      "bytes": 2136,
+      "sha256": "97064924914f71425e48f5d53893abca0f07f329dde7a8b93b581dc9ee2e837a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\bn.h",
+      "bytes": 22309,
+      "sha256": "da179e5d98e8351e3e29f148bd88b42cba84fe60c7927a584f213bf2d09c38ed"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\bnerr.h",
+      "bytes": 1329,
+      "sha256": "beeb78746fbcc2c09e1f833f4c2ea72e845e757390aad7dc8699f7787b580204"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\buffer.h",
+      "bytes": 1591,
+      "sha256": "c7b9803f89bb492176a1e2738999dad86195ab8048a26e8ec9ef6948b8882e8a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\buffererr.h",
+      "bytes": 587,
+      "sha256": "4dea6e8ec7f09bfbdaa85fa3e75572b95d2ea62a813e7420a04f5f56ee7ccdfd"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\byteorder.h",
+      "bytes": 8444,
+      "sha256": "f062018f5fbe9f8459967dffaaa8e27f34596fb0da21fc011d0d556384a0305c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\camellia.h",
+      "bytes": 3266,
+      "sha256": "e03acf0f3406032e5322e4f3368e8e48e5b73e8846955c3bcb3a4f1cb54d2ebc"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cast.h",
+      "bytes": 1880,
+      "sha256": "4fafc375a53d88fe4c709d8ee5fb74dc0fcaf91915837c3c6b4df0d916b07f0a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cmac.h",
+      "bytes": 1449,
+      "sha256": "048677b08aab6fd862d2b8b15556db8355d2142b93a9431ffba1d75a25912847"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cmp.h",
+      "bytes": 48152,
+      "sha256": "a56346471600315a467bd3d7727a78c6b2b004be8a09f5c55af3ac86b1510433"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cmp_util.h",
+      "bytes": 1627,
+      "sha256": "16c51c48c83c930b018ff711553e107f1870f1cedd32d94c06f15709b080c321"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cmperr.h",
+      "bytes": 4821,
+      "sha256": "220d1a903b66e25fa1de92f3ee8b3f5ef27de6dface0a4ea68e683a19e3549a7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cms.h",
+      "bytes": 31120,
+      "sha256": "ac9030882559eaf3292aa59bf6a361505ac99f85318ce00b6c6b0671b162a97a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cmserr.h",
+      "bytes": 4547,
+      "sha256": "1cfc091ae52fe85c79bccfe1cc2d0e2979afff511e6a91fd04142596a65ac31a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\comp.h",
+      "bytes": 4696,
+      "sha256": "3f95492b4054a8064bc75f770766aa6c8c0866cbd267939460786e13092a053e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\comperr.h",
+      "bytes": 1002,
+      "sha256": "03faa7ac9cf7ec99350a55758a685056dae8f75992887e0411c23b0d8c5d83b0"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\conf.h",
+      "bytes": 10404,
+      "sha256": "c6632d4644f9311e558ab71be30064729260f5e231e471d7c6ca88b0b6cf9647"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\conf_api.h",
+      "bytes": 1328,
+      "sha256": "38dce9e9e0a438fcaf1d173c26e61c821bfd3756e221e3be76cf010580ac52f7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\conferr.h",
+      "bytes": 1697,
+      "sha256": "ea9346e399d5dd1fbcca4f34078e1acb5039333602ecaf72faa04e32cdd55484"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\configuration.h",
+      "bytes": 4954,
+      "sha256": "63ad45c993c1f15fb37cb469865f6900fa478b8bffbc1c6d25913d5ca8b065bf"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\conftypes.h",
+      "bytes": 1176,
+      "sha256": "496997cc0f4c32b840677eeefd3ecb488453254be6e228b8cd34d4a4061a9e28"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\core.h",
+      "bytes": 7820,
+      "sha256": "4d4e63e2e01d06530515adbbe3c93601c5f0f5e1a96754d34d3470bccfcbdbc3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\core_dispatch.h",
+      "bytes": 46932,
+      "sha256": "877d786bd366e80baa763d2c6c0b94e1d91c92cb0b6fa26d4004e6b0c3e6dd81"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\core_names.h",
+      "bytes": 29422,
+      "sha256": "75fa3a3dab458aa2c0e84a61a052fccb92fc1aca74aaa3a1af8b3e5fe2407ce0"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\core_object.h",
+      "bytes": 1047,
+      "sha256": "e8fa8c62ad1367bd325d59d721214d1a7afd5423205134152f60cc39a8590c8a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\crmf.h",
+      "bytes": 19661,
+      "sha256": "b4b3fd06761da291414aac3cccf97503ec5704c2fb67c8c13c6eda0b8bcad92f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\crmferr.h",
+      "bytes": 1858,
+      "sha256": "9f2ff7a468b5048d543fef0324b39abdea63fa07bc915f62ff42a1937d7258c2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\crypto.h",
+      "bytes": 23136,
+      "sha256": "da6f7d83fba9ec56705709d7cd9b4cb4d528dcb8fb340465a99236f5bc38a0ee"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cryptoerr.h",
+      "bytes": 1986,
+      "sha256": "c457c0591449551657a69ff9727784a79cc1afd899ac733c682c1a41fefdaa19"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cryptoerr_legacy.h",
+      "bytes": 48019,
+      "sha256": "985664cb71a62441b2822028340bb4ad5e3f98d6c74ba4c1bc7c997e188b97d3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ct.h",
+      "bytes": 22255,
+      "sha256": "54b34eb7204903d64ed7100fc5d93f2f8f92fe2921682dec4857c861324d3b3e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\cterr.h",
+      "bytes": 1241,
+      "sha256": "26d971ab2166ba4473864506dcd933290fa6c321956ef46220eb61fb33a04c89"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\decoder.h",
+      "bytes": 4907,
+      "sha256": "72dbf52e4dc4efbfaddbf31ab6f2bec3e9a5c22eed865d057b960a014a4b9ec8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\decodererr.h",
+      "bytes": 740,
+      "sha256": "c6818c667bdf8c37c5423580e0551359c69efc884198d28675db23e9fc70946e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\des.h",
+      "bytes": 7764,
+      "sha256": "420afefcf27f28046912c5f156bc9e93d71a2c8a47bf0f605695a13f391cd5f9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\dh.h",
+      "bytes": 13025,
+      "sha256": "25080c32c48d5a88053c4b83c326e8f024b68249a0ef65d3c45af4f9aab6e0c6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\dherr.h",
+      "bytes": 1702,
+      "sha256": "70f9e260865a9aae4c5f9a72d42d878e4dc216c906709245a8da2cceb79c3a14"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\dsa.h",
+      "bytes": 10982,
+      "sha256": "dac47d9779f83eb4e5a4f57c234e6eb25277cea68001384360e16c8859c38338"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\dsaerr.h",
+      "bytes": 1164,
+      "sha256": "b8fb8dae664d18298ae4b0c5444378e3f5c5d095256acb50764230159b1a15d6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\dtls1.h",
+      "bytes": 1239,
+      "sha256": "3477022a712ecbb2bfb61b297c57026f1c354d52c638dfb22292183bd68d2e8f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\e_os2.h",
+      "bytes": 8445,
+      "sha256": "d7300e16ec04f764e8fd45ae5288c37ab5af09dd1ea204d17c54c0155c69921c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\e_ostime.h",
+      "bytes": 1147,
+      "sha256": "0528cffa1548778b3ad52d4abb527e5f31590fb1bab4b0f55aad391efd79fd68"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ebcdic.h",
+      "bytes": 1025,
+      "sha256": "f50d3c91cb24772cf3155fe6464d811219b8f7c65ea3d4f974f58c03c3f27ab5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ec.h",
+      "bytes": 62313,
+      "sha256": "2cc0edb6a18c4c1199bfce6799ca56362a6c27d41dfdfee62177a3d53a8c9a65"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ecdh.h",
+      "bytes": 361,
+      "sha256": "5b99fdd1dfea38640ed8a506fb9b66db381cc26a1254448a81cc6b161e41850f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ecdsa.h",
+      "bytes": 361,
+      "sha256": "5b99fdd1dfea38640ed8a506fb9b66db381cc26a1254448a81cc6b161e41850f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ecerr.h",
+      "bytes": 3359,
+      "sha256": "c072432649cd1e4bd1eb8c1f636bc2b57045d6f620d69d61c85f589d1c6b63e3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\encoder.h",
+      "bytes": 4570,
+      "sha256": "73459b25f863cf9bbb3de66f04ffe7ddaf9450f3c26afb1d5827325fa0a89fd9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\encodererr.h",
+      "bytes": 741,
+      "sha256": "d010ca78b1df89c7fe3410d2aa5674179bf6750a445382ab8a0314c20a5b9799"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\engine.h",
+      "bytes": 37536,
+      "sha256": "185311cc9702aa00fcafefad6f83ca1f597659d5075b66100c61053e1be5f47d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\engineerr.h",
+      "bytes": 2034,
+      "sha256": "2732c698916f320ba12ba690a80c1ef0651112015c5eac6141b1c3c315d1f5fc"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\err.h",
+      "bytes": 20436,
+      "sha256": "0d673984ff62d55d1fb4534d8136b7325e5264efeeb0b911cc94a4922681e080"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ess.h",
+      "bytes": 8721,
+      "sha256": "0b8cb052d0ed0e193465c39b61e11e9d17cc4c355077ab15da710103e23524b1"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\esserr.h",
+      "bytes": 982,
+      "sha256": "9ab984787cce1224e1426be57987e7726d8c5d38651dd96802a7d433c5288ae4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\evp.h",
+      "bytes": 94953,
+      "sha256": "41b42c68adfd98b9d8a80fb2d78bbdaf1094f43dd02be045c7d8605edf36a706"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\evperr.h",
+      "bytes": 5528,
+      "sha256": "ee0a462f1985667434a2b8a91d5df67ce2ee74e4ad9246f660dece5fafcf4474"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\fips_names.h",
+      "bytes": 1638,
+      "sha256": "95f0ddd1271d1bb609acbe42924e903a2dda8e224cced9eb56f5680a6ae75a8e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\fipskey.h",
+      "bytes": 1267,
+      "sha256": "6d2280433f59da2d0f8a87ef67d0f83b74821f9ef625746982875ff104740e69"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\hmac.h",
+      "bytes": 1892,
+      "sha256": "9caf0b993c6ae2b3c75b9b585c8539dd358ca5f4edc42447295f87fc504eb1b9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\hpke.h",
+      "bytes": 6081,
+      "sha256": "58f81dab37eddc03b86db9dd640980fca872ddf19f4477482826a64f20454cb9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\http.h",
+      "bytes": 4717,
+      "sha256": "1f8d65d9633d54a74e8477396f2e3d34f5cdafc753fa8d56a5ee31753f5b734f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\httperr.h",
+      "bytes": 1892,
+      "sha256": "56b740a25198f30d19c8ed57b36679bbb32f8f2d97291155d4b3091c347ae423"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\idea.h",
+      "bytes": 2285,
+      "sha256": "d114cb69e2e820008c508b7ad9002586806d82e3006e88162bd4a7c2dcd1e801"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\indicator.h",
+      "bytes": 818,
+      "sha256": "4be987d4fe4a4b39feac27c2ee85000e1b6ca7188d8ca9f75689a8205c2b4563"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\kdf.h",
+      "bytes": 4938,
+      "sha256": "a4a7c722598b9b5b5fa6e4d659a7c8cf659c5db60c7396ed021d434c45e552c6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\kdferr.h",
+      "bytes": 480,
+      "sha256": "cbf4bd667f0a53459163f546920c2c98ce6d10b0db99176c779d8bf32f04e8b7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\lhash.h",
+      "bytes": 33375,
+      "sha256": "ba50a0dc4caa9662e138f913566c44454a68f6e59c405c761c1f387f58855af4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\macros.h",
+      "bytes": 10751,
+      "sha256": "dc27bc9e94abbb9e49bbcb604da5c061a65145586ac388c3fb4fc311daaccf96"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\md2.h",
+      "bytes": 1336,
+      "sha256": "a8eb0a1cdd0ced053d0f5dc5d1f63fe67f96a83c1cc37b6bf7adde85a567a631"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\md4.h",
+      "bytes": 1610,
+      "sha256": "75d0ff7b22daa2ab31a0cd03ce9ca10cef64f431d32c49def33d0f0164e36f0d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\md5.h",
+      "bytes": 1608,
+      "sha256": "e22e567d09253eebf2c17f620783808f407bc7b969aa90bf3b44ac9001f6d329"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\mdc2.h",
+      "bytes": 1312,
+      "sha256": "740c2361d9b0ab5330ae0054e368f573416c401cb3855b72323967b29232421f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ml_kem.h",
+      "bytes": 959,
+      "sha256": "58ecec9d4d95ab5172290a4c5725b7b6940149ecdbff5a33b93cc67ede1b25f7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\modes.h",
+      "bytes": 8135,
+      "sha256": "8ea97ace0601cdce6a12d0e1e92aefec062c299d0fcb5ff6477e3d752a9b9763"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\obj_mac.h",
+      "bytes": 289525,
+      "sha256": "d51cb3f619888a0485ba46ad886f76ac605ce78a3cfbc080460947ab2dbb3a02"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\objects.h",
+      "bytes": 7567,
+      "sha256": "b6227db488aa39ed20a29e67d48fe8fefb2f649a1afcc3149cba22ac26510057"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\objectserr.h",
+      "bytes": 686,
+      "sha256": "fc14e6c9e71fb550363394f912cb72e6078dd11e300bdddfdd17ec118c88dc4b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ocsp.h",
+      "bytes": 27873,
+      "sha256": "fb6b98fe220246983fef2af0392e37578ef52a71cb2044eb07f5f57a84a66f88"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ocsperr.h",
+      "bytes": 1636,
+      "sha256": "51b319980fb406b70ff0aee9c145c260553f4ff6516305b9c2864643096cc30c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\opensslconf.h",
+      "bytes": 510,
+      "sha256": "7f4b522c049d0bd0d651e6f6ebe71d6df0c37231a94e32524da3f4642ebda3be"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\opensslv.h",
+      "bytes": 3466,
+      "sha256": "b3edda4f71b6f328b62bb59339e76f945740c992c2509b8e53ef1afda937cce5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ossl_typ.h",
+      "bytes": 561,
+      "sha256": "8d430751bbcd1d9695f3dd85b16958fd6255dfbf55775207923f67cba1754548"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\param_build.h",
+      "bytes": 2363,
+      "sha256": "f078c5549e172b49da9993ef68c7b7fedafd66b05255c9bf8a37154f0a40bdb7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\params.h",
+      "bytes": 7060,
+      "sha256": "b76d73449d8d44d14a7da9918caf3d1feee85b384e2d62ace73a8a1126152702"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pem.h",
+      "bytes": 22667,
+      "sha256": "9098124ff7a21c8f1db5ddead59b1cf092f88c9f44bf88dacd3c8de9c67ade76"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pem2.h",
+      "bytes": 523,
+      "sha256": "5bd104c872bbfee2d16f5af88c01b0aeee9f177ecc88c0dd237c9c9948eeedc6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pemerr.h",
+      "bytes": 1836,
+      "sha256": "18c1dbdde2452416b1d49c7512b7c4b8bf26ac7b83f5c0ee5e27e9bec454d2fb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pkcs12.h",
+      "bytes": 17021,
+      "sha256": "ab0eab4385122882f6e3fc65f7986a6d65c8b49a7d6148ed017762bbf5e17889"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pkcs12err.h",
+      "bytes": 1427,
+      "sha256": "fbf4142e0ee58b6c6841890d873f07ba0362e21ad74702d70552122e01c096e9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pkcs7.h",
+      "bytes": 21888,
+      "sha256": "280aac0483477bc2d55e94a5f93e42e96a72ec518ae082ebd6f1b394b95681d4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\pkcs7err.h",
+      "bytes": 2242,
+      "sha256": "717e017e7d0981928b33820660e19d5c264a06a5e824b94194036a8be92be07c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\prov_ssl.h",
+      "bytes": 969,
+      "sha256": "23b96759ae94e17c7c0e7ee32a531676be2a276a6d9802828e80268e20f224fd"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\proverr.h",
+      "bytes": 6414,
+      "sha256": "3aaec27b2bf592b5861a3524b6f03a541d7de34e6dfcbcabc2b6bc40221bc743"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\provider.h",
+      "bytes": 3383,
+      "sha256": "dac4bfad226a8e5513cecf472e41e0b7ed93c95374a0ec3fd56f7b046e0aeff1"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\quic.h",
+      "bytes": 2101,
+      "sha256": "a80af6c42394132eaad8de7177c6b0b3f747711730e8dd687acdc34284b3c2f8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\rand.h",
+      "bytes": 4058,
+      "sha256": "cb240ffedfd9516ec7a8cd0796951d46a4707c0460f940371620c83f7bafd037"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\randerr.h",
+      "bytes": 2486,
+      "sha256": "a6acbb47da2f26fe5e572f232eb9d9ebcd65bb7c01d5984ab26229e5bf0bd45e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\rc2.h",
+      "bytes": 1771,
+      "sha256": "b86a429de0c73aca6e0504b8833c1dcd9e8c7cdf65c2b31b38d0d0c7b19cc5e9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\rc4.h",
+      "bytes": 1075,
+      "sha256": "1bb4fa9d14861cdcf0a721d8d1026be80ce019da459ffdd8b5c1d12365110e78"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\rc5.h",
+      "bytes": 2146,
+      "sha256": "dd71ab468383a2a8ca4ff34f9273b481c1ed518c380da6d1ab82e9ca6b7edbd9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ripemd.h",
+      "bytes": 1537,
+      "sha256": "4457b36942bc0e298c993b48468ef8f3f00331a9d67bd0b894dd5bc5f58ab35d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\rsa.h",
+      "bytes": 22275,
+      "sha256": "2c9780f9b4b35c3f14271962938e16b8505e9f5d38566c104bce9a82be23a0e1"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\rsaerr.h",
+      "bytes": 3861,
+      "sha256": "b4f87b5dddc672b81de0dfd7f3c4e6409887bd08b286c99ded8f1255e5836804"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\safestack.h",
+      "bytes": 29171,
+      "sha256": "050aa1f62de6d1473debd7405279a50fa17c79e9fee5484d605fa93c1bf6bf1d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\seed.h",
+      "bytes": 3611,
+      "sha256": "75a00b017f40beba051fdaad04876e18d3c80d1b1f1c21d78fafc69ae8e3b034"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\self_test.h",
+      "bytes": 4720,
+      "sha256": "4bb6ecb6d55e5e1bee6ef79c24bc8691174ad1b5c160f7d3daea150c140d3abb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\sha.h",
+      "bytes": 4404,
+      "sha256": "7e006accd6565cc97dee672c097acc5e38482be7cd4fa1e0c316bf466425b895"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\srp.h",
+      "bytes": 15176,
+      "sha256": "fb5313c401adeccd5970bc008d39dcde3892f165ac2207d646979566c4415783"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\srtp.h",
+      "bytes": 1888,
+      "sha256": "6efa8edb1f040ba35cb05a671efc74c1494b9d4badc32d47cd5bb99e1a9cda38"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ssl.h",
+      "bytes": 122123,
+      "sha256": "a6a87709e0726b6194269baac236daa473f04d23bc7de1f87e0baa44d9abe8a8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ssl2.h",
+      "bytes": 625,
+      "sha256": "d33dc2afbcdee20f20ffcdd5cda6777c5e49a7cc37d513e4618b71a99129af20"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ssl3.h",
+      "bytes": 12748,
+      "sha256": "f98e0eb1702bf99614e92e2d09f1af5b59309e156441e40ab711df7d661536aa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\sslerr.h",
+      "bytes": 15413,
+      "sha256": "7a9dab7a198ea5c17fe5cf8e1905a54ae88c0044a86c1accf1e7cc9e7de374e2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\sslerr_legacy.h",
+      "bytes": 18269,
+      "sha256": "988c235994713d83d73ee904804f7edb4f6e321b4ab94c5aa5a9a0c7134fb499"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\stack.h",
+      "bytes": 3122,
+      "sha256": "c81fbb17b5476dca609b96eb11372d1d246a49096838c2cf7e81ad6b25f69316"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\store.h",
+      "bytes": 14008,
+      "sha256": "0fd665a474792f49055d7bd6e2bebed1449fb2dfd21ac042aa2cbc4cb6c8c66e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\storeerr.h",
+      "bytes": 1702,
+      "sha256": "e13ecdf3c46b4dde5d857f8a7a3e2c0a444e309aa05d789bf99d73ecefab87aa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\symhacks.h",
+      "bytes": 1102,
+      "sha256": "2b54552189bfbf4204c28c6a421b21702a3cd3dba37570dbcdadb7ee648f155b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\thread.h",
+      "bytes": 865,
+      "sha256": "583716b74d6aa0596c1d1b06cb16f657d4d9fb9c13cf30505ec0327046af6baf"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\tls1.h",
+      "bytes": 63321,
+      "sha256": "f075f51b48cdc3503e40b8f81fb2b760ba2d4f315d2844759d9089ffb10613dc"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\trace.h",
+      "bytes": 10823,
+      "sha256": "5b7f86a453e6b404ff019e23e84de856c2a25b8243d4bfb92c92471a3735e332"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ts.h",
+      "bytes": 19419,
+      "sha256": "3de4eecd9a731d9a05a1b7baab18cb1c62f59f8a9f9e5ed049525a8ada9207b8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\tserr.h",
+      "bytes": 2077,
+      "sha256": "27e66bf494926dea06d8c3800823f2485cf1a7f8f41f5628ff4a443f9bcceb87"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\txt_db.h",
+      "bytes": 1635,
+      "sha256": "cbd03be764d6d12e12895703756fbe5f2b7611d4cd55d343837d48e8e6e60523"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\types.h",
+      "bytes": 7354,
+      "sha256": "de5422d2e621df11c17ab18473ea4f2368ecc64b1e45311c4890cc62b31f81c5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\ui.h",
+      "bytes": 18529,
+      "sha256": "b5830554086cd2fcdfc7916f4a5ce9db5268da5471a2a9c1278729ee7949135c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\uierr.h",
+      "bytes": 1062,
+      "sha256": "a21be118ee97343a03dc28256370839e5751c82a2a7bcb4c60fcbd97a9e2bef5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\whrlpool.h",
+      "bytes": 1681,
+      "sha256": "d38ef40783400956d571e442d4f459e9c611239d719eb128e19bc64982d01922"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\x509.h",
+      "bytes": 67506,
+      "sha256": "a853a3e3a586a31dbb0ac8f88c900757748712e6ff6c82aa9897ea67a6218b1b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\x509_acert.h",
+      "bytes": 22005,
+      "sha256": "7e3b443e87f104f57950b3a49ee5711431567f939b40bcc50a22aa168b8fe885"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\x509_vfy.h",
+      "bytes": 47193,
+      "sha256": "bdaf17b19bccb7bd1ec6455a88b57cadcaf3b61eba250bc424b68da00e713119"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\x509err.h",
+      "bytes": 2368,
+      "sha256": "be93ee6c9d58aadb5f836d5e293ec93c94ffc603c46a1d8d1c8b31cf83959fb9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\x509v3.h",
+      "bytes": 129364,
+      "sha256": "0fa2c0d23ac6b34bd1de78818b0e67ef6df7f788b2d36b60abf111a553f429eb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\include\\openssl\\x509v3err.h",
+      "bytes": 3578,
+      "sha256": "b9be8b0429bfaefb973531e81d598e40779b3788e129c4cc9e33651d2308b990"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\cmake\\OpenSSL\\OpenSSLConfig.cmake",
+      "bytes": 6247,
+      "sha256": "c5a5d11fc9639570e9c9cf416b50739e5fc32d5704bc972f5cf762a171f237cf"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\cmake\\OpenSSL\\OpenSSLConfigVersion.cmake",
+      "bytes": 523,
+      "sha256": "45aab6e3978b3dede5383cba2b47940f00c79bc64eea581cbcd319aa3d957089"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\engines-3\\capi.dll",
+      "bytes": 107083,
+      "sha256": "dacc5c6cc5f0a09ff3618d580e33774df243efb77547554335e34ffda3c50dec"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\engines-3\\loader_attic.dll",
+      "bytes": 128437,
+      "sha256": "eaec1312c2565b2fcf036841947c6c497782575b1cde2f3bfdee1c7c045769c3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\engines-3\\padlock.dll",
+      "bytes": 80050,
+      "sha256": "5bc3ce76a46c964c700dc4faebfbc0b2e6077fbb84ee7fb647974e13733b6286"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\libcrypto.a",
+      "bytes": 9608836,
+      "sha256": "023a1e04c33b61549c23f0d5aba4fb197628a22897e2c953df00d6da4fd10446"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\libcrypto.dll.a",
+      "bytes": 4006532,
+      "sha256": "c0008586576bb1e85d12cd8f218a16b5a4d272990cf56f846ece749d05830f48"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\libssl.a",
+      "bytes": 1087088,
+      "sha256": "61c0fb61ec624cb2b90f277b0870f895fb5673d0b122e49268263ad2997349e5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\libssl.dll.a",
+      "bytes": 412736,
+      "sha256": "48ed05721fb806a705329278ab8a5221f92c628f9e64eccaf379b30d5b65f356"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\ossl-modules\\legacy.dll",
+      "bytes": 211579,
+      "sha256": "6731b1965bd470d427e3e0c31e991f29dd0971544b7f5c71b036b02b180663d2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\pkgconfig\\libcrypto.pc",
+      "bytes": 418,
+      "sha256": "822d6a62381e364ec9b6f07194f7721700b2aa8ce40992d07fea2b6bf4447c0c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\pkgconfig\\libssl.pc",
+      "bytes": 353,
+      "sha256": "2c5a463d8abbe7402460daf22ccfc76de220927414448d0462fc9aac8cea638b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\pkgconfig\\openssl.pc",
+      "bytes": 307,
+      "sha256": "b394288357bb68582514b062bc3f53a1cd6b59e3f0d53eb5e193c45c9b84939a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\LICENSE.txt",
+      "bytes": 10175,
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\ct_log_list.cnf",
+      "bytes": 412,
+      "sha256": "f1c1803d13d1d0b755b13b23c28bd4e20e07baf9f2b744c9337ba5866aa0ec3b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\ct_log_list.cnf.dist",
+      "bytes": 412,
+      "sha256": "f1c1803d13d1d0b755b13b23c28bd4e20e07baf9f2b744c9337ba5866aa0ec3b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\misc\\CA.pl",
+      "bytes": 13415,
+      "sha256": "f87ea885e124ed592ccfce3010348c2286b83548e360d8c311925c0422891828"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\misc\\tsget",
+      "bytes": 6746,
+      "sha256": "f12c221ef4a07e582031c7dfd72416aa176fdd530f48f8ccde3d47ed176a09d8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\misc\\tsget.pl",
+      "bytes": 6746,
+      "sha256": "f12c221ef4a07e582031c7dfd72416aa176fdd530f48f8ccde3d47ed176a09d8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\openssl.cnf",
+      "bytes": 12411,
+      "sha256": "a65a2cb9f4ee8ffdc7ef4f0ac600c0bdafb95b7b1ab457188ac610a62f5ad6b3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\openssl.cnf.dist",
+      "bytes": 12411,
+      "sha256": "a65a2cb9f4ee8ffdc7ef4f0ac600c0bdafb95b7b1ab457188ac610a62f5ad6b3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\decisions\\0001-compatible-growth.md",
+      "bytes": 1383,
+      "sha256": "c795015b731672bcff419e32078603465a423e8823bbe30868c12451ed930a2e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\directory-map.md",
+      "bytes": 2278,
+      "sha256": "7c692477f2f0db04210e9c2fa193404d9d71870add43dce19e58216835fe1ed7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\portability.md",
+      "bytes": 2532,
+      "sha256": "fd9e17b74da50e33004702dcac930294bfd138247c5763d0e23fc6c6c55e8e3a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\principles.md",
+      "bytes": 2963,
+      "sha256": "c0ba87e7754781176091b91e35d3454179f93a332484148cb2dca3727fe30841"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\structure.md",
+      "bytes": 3610,
+      "sha256": "af22b84ad6a0ec9db26e2aaf6830997823c58d55f9e5e7570bf629e9cf7c152f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\target-tree.txt",
+      "bytes": 2432,
+      "sha256": "a2d04134e362cc73a43efdbf7cb12e32bcdd471b6646d430fb2538e9da97d06b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\contracts\\quic-tls.md",
+      "bytes": 4871,
+      "sha256": "d8ce914ea574f5f3d5789e14aff1d12164decb3460a671a1e4d6256f7b45ebaa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\formal\\invariants.md",
+      "bytes": 4452,
+      "sha256": "688a2bf3e1a9d70643810e87a775f334e2c420314ddf46020a4dcf885f0b5026"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\formal\\recovery.md",
+      "bytes": 3057,
+      "sha256": "f38aafd164ec7ed7c42769cf15048a7a64661d30691303e35aac3523e33ebada"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\formal\\tls-driver.md",
+      "bytes": 3100,
+      "sha256": "f2df35d4b3810e6429423f7af9938f65bfc1c7099d2257a710ae04a9b71b84d2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\guides\\host-usage.md",
+      "bytes": 3348,
+      "sha256": "2bbfd5d9368d414522769209e4b5d2bf9dde3c137e766d65f41e06e31a68b5fa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\README.md",
+      "bytes": 1640,
+      "sha256": "176e27755b3809b8ddd1b3a010f6ac52796a2371588f24fad68e6dccff50371b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\catalog.md",
+      "bytes": 6503,
+      "sha256": "3f38f8dffc2ed14288775e9b84f43a6aa9214c9af5b8fe244beffab0f4a3f32a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\AGENTS.md.md",
+      "bytes": 939,
+      "sha256": "fe89694bb7c6fdfdda1a0ce278bffc526549f5fb8edf0a55dce92aa53444a1b5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\backend-lock.json.md",
+      "bytes": 934,
+      "sha256": "9e71cd0c8ff7cf7c6055e33022af8ec179368fb1466a2404adf907d11f9ced0f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\build.zig.md",
+      "bytes": 2189,
+      "sha256": "486158d4900070ab44af0388383d8e06dee77a88ff61e5d6df293d3f8fc99135"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\build.zig.zon.md",
+      "bytes": 995,
+      "sha256": "4746861771735159c4db0fe2f5efeddeaadf0eb6184837e2b458119d83b7fff8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\CHECKPOINT.md.md",
+      "bytes": 960,
+      "sha256": "4239486beb160409758d633f2e56e6a2e0955ba1f94805b8cf889b1d2009b68b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\evidence\\build-recovery.md.md",
+      "bytes": 1005,
+      "sha256": "8f3f1e4aeaeaa59c9881786ed94dc585702588c35dcac9ffa63b6eca516ae73a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\evidence\\source-provenance.json.md",
+      "bytes": 1020,
+      "sha256": "8f935bb13ed93fbf3278720da7542f862c2f9378ee98e8dcbd71b5ddd8c2c14e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\examples\\consumer\\build.zig.md",
+      "bytes": 1785,
+      "sha256": "6098ddc1738816907dffe8afd5c4035ff51489cec47be16f064ab1ce2ac75823"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\examples\\consumer\\build.zig.zon.md",
+      "bytes": 959,
+      "sha256": "bcc27d8d61fa7e4761b7674a4f509ed602dd2abaa3fdfaffd3d85aaa80307c69"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\examples\\consumer\\main.zig.md",
+      "bytes": 9573,
+      "sha256": "dfdd08b926a5c3ddfbad504487fb9143c69f867e353fba19e1f33e11e9a50d24"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\examples\\consumer\\socket.c.md",
+      "bytes": 5370,
+      "sha256": "009145e8d1ffc140a69fb7625c019918f3db323c356ae135d080fc599b137d46"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\examples\\roundtrip.zig.md",
+      "bytes": 2348,
+      "sha256": "d7c3081d4bbde36e2178e82a8c7aa2f1192530dab0bd93aa5c2b4e12fbe7bf4c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\HANDOFF-shutdown.md.md",
+      "bytes": 978,
+      "sha256": "7e1e673abab0402422555ef80823a92f4cbb9c8a5a6e851d94dbd966b4343c7b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\HANDOFF-tcp-consumer.md.md",
+      "bytes": 990,
+      "sha256": "d3eb4f833c75fcfa1c3b9ba3aae51c95c6095e425388a4c193eff57feb76624c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\HOST-DRIVER.md.md",
+      "bytes": 960,
+      "sha256": "49eac385668966566f6bf28ee707734fab4e57abad89301bfcb3ab45e1e3eb05"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\README.md.md",
+      "bytes": 1078,
+      "sha256": "0fde8437a8e56c712499cdb10dc84da46486e92807a1359e82cb5875525cab3f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\SOURCE-ORIGIN.json.md",
+      "bytes": 974,
+      "sha256": "ba26376052a9d76faaa4f6b616a09b84ade706d3b1f79c1a76df22334f167e2f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\src\\backend.c.md",
+      "bytes": 8220,
+      "sha256": "52874f120cf92ebc36d2b9326573c6e2891107c6b188ad669726b7fb0cf85d3b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\src\\backend.h.md",
+      "bytes": 6637,
+      "sha256": "3110d084600803a8a59e5bb76ebdc2447dcdd30234c790d7e0f7c182501f2251"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\src\\backend.zig.md",
+      "bytes": 6744,
+      "sha256": "d213b4947347647f44032fd4474f32c56057fa1970164e7b733d7b81fca4a58b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\src\\driver.zig.md",
+      "bytes": 8058,
+      "sha256": "169db7ef7ee60d0cc227216b09a2aca0287d43633e463d0c49d516e3f423ca30"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\src\\root.zig.md",
+      "bytes": 7531,
+      "sha256": "7194ca31edeb278146cd3c22d1d495707b2a6bd3bd55a83c0fd43a475de003e3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\driver.zig.md",
+      "bytes": 6943,
+      "sha256": "1e037cc0b22f63f3b52bd527bc71a9ea3293951cca40139b74b2ca6d4b17daee"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\ca.pem.md",
+      "bytes": 1113,
+      "sha256": "84f7a19c3d0abe35adec486111a03548451e9e061de88c8dc12a40f764d2895f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\client.key.md",
+      "bytes": 1157,
+      "sha256": "337dcd5f45da73b6e21612450f21c0cf7e16920c61466e7694e70a6ca7afde5d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\client.pem.md",
+      "bytes": 1152,
+      "sha256": "ab0ccf490b280f181fb2a5533cbde0ef49bbfa91a4180e8802b4df070a9cd68f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\expired.key.md",
+      "bytes": 1188,
+      "sha256": "93be53144c0024e87381fd84b812734997d66411a3fd5cdc9fdc5e3f057a5bb1"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\expired.pem.md",
+      "bytes": 1183,
+      "sha256": "60da210d62c095de6ce22bb15fe0be54b842e9dfb9560597f6fe5defe04443ab"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\other-ca.pem.md",
+      "bytes": 1158,
+      "sha256": "c455ae669628a6580c0c7898151c1b3ee750de15672399f5cfbf4964ed5cb891"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\server.key.md",
+      "bytes": 1168,
+      "sha256": "888c7294e37dedd9aea1ef5ef1875a3065ff4178d4876d1ae8839d5d1ed37fd6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\server.pem.md",
+      "bytes": 1163,
+      "sha256": "59dc78240574a61d5e0464d1ab783fc4cdaf60f3e5de58de02f9383f50b3e1ef"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\wrong-purpose.key.md",
+      "bytes": 1216,
+      "sha256": "13631bea54f388affe0835066b059f5e6ae18b527b6de3c95ba271d253b4673b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\fixtures\\wrong-purpose.pem.md",
+      "bytes": 1211,
+      "sha256": "13d0f29e01a4bd745c64d049447cf803e4d69cf0475876f005d4ea22efc1535b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tests\\transport.zig.md",
+      "bytes": 6941,
+      "sha256": "11fb9a841f9cf56f3a514c191f716b125689dadb4fb64ccdb96d655c50624f71"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\build-openssl.sh.md",
+      "bytes": 1031,
+      "sha256": "4b037c7bea22bc8d9e03b2c6654156192a05938f83cfa73960223a2717fab46c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\check-docs.py.md",
+      "bytes": 3539,
+      "sha256": "673a52e88add116a90199517c6eb4b400a98b6e96600892ec669615c12d5811c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\check-models.py.md",
+      "bytes": 3937,
+      "sha256": "dac5be88f12790f66f81bbb6f9eb41fde8b8207de774ff99b09a7f23cadad33f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\fetch-openssl.py.md",
+      "bytes": 1137,
+      "sha256": "0f68ee541020a5032cd5473a2e5f56ef2791ef8e040065099a8bb69892708342"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\interop.py.md",
+      "bytes": 5146,
+      "sha256": "ba960d0c4595fb63ff245f28344e9d426693a9729c9c15989f6c3a1f748e4bb2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\make_fixtures.py.md",
+      "bytes": 1774,
+      "sha256": "54848e98f554a1df8385e76809f87a3e3a9fba43c8c011e1b416e595545f62fe"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\pin-backend.py.md",
+      "bytes": 1741,
+      "sha256": "8b10e19e5709734528b48926a288a932a3e1d73ddf4135615618969d8837083d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\qualify.ps1.md",
+      "bytes": 1037,
+      "sha256": "679874d856848c0fbe01883afe70f9c61734c068065bc86c7072d26554b76665"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\tcp_interop.py.md",
+      "bytes": 2029,
+      "sha256": "efcaa8fec604f8b34af1774d98a937fbfc1b2a36fd727822827ea86bcff454d5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\tcp_server_interop.py.md",
+      "bytes": 1773,
+      "sha256": "053c022a761dfe69d2e374634c08574a8d7e6ead6a5fe93c456b412c9258f4b1"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\tcp_upload_interop.py.md",
+      "bytes": 2109,
+      "sha256": "d5a09deac8992ec8ca743a3bda004d54c8eef3a9b6926ea8c93a2cdb228c2bdc"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\test-openssl.sh.md",
+      "bytes": 1034,
+      "sha256": "62920f724b16886ee692d94507882d331da7100c00372cd4910332c860fe9905"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\standards.md",
+      "bytes": 1606,
+      "sha256": "0ff34209fe0fb343ec7488805018e52cf65efbce7470e2ab64bbb6342da14402"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\bench\\engine.zig.md",
+      "bytes": 1605,
+      "sha256": "3e639ddcf5be71f3b3702c8e6352cdbbec5d92d12c323210702b104c0ffde7fb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\build\\backend.zig.md",
+      "bytes": 1634,
+      "sha256": "50174063cbdcca65496416373d97fc5f3332a369b64ec4c64be0a3d2979faf48"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\examples\\consumer\\socket_posix.c.md",
+      "bytes": 1585,
+      "sha256": "74f50b8ae4c32b0e0ed89aaa9fba3769a1662990730792274a3e6741cb8f9f74"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\backend\\quic.c.md",
+      "bytes": 1637,
+      "sha256": "fb785b5ba8d9b77cdcfdcea5d805e80ca83296ddb2ff023d02ffc7bf567a8b28"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\backend\\quic.h.md",
+      "bytes": 1578,
+      "sha256": "ba6b792e18c4755f05b52789714bdb210ed7ba84d0ae315faaafa9f5bfafeaa4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\policy\\credentials.zig.md",
+      "bytes": 1620,
+      "sha256": "4b56c0bc320f37f45c12536f78c77320317d9c8ecd8c9b24879d8e41961b0de2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\policy\\verification.zig.md",
+      "bytes": 1594,
+      "sha256": "1921bd08b53a9fcb0d0c6a8e62804da64cc687d92407195df1d4d1b8ed1bc5cb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\quic\\contract.zig.md",
+      "bytes": 1636,
+      "sha256": "e9a5208fc242aaa7de76bdc0d91dbf79eb53a7ebc9f4dcbd634dfd5e562a5910"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\quic\\engine.zig.md",
+      "bytes": 1590,
+      "sha256": "875ed83e3c92384fdcd7741729bcb212523e852095d5046bf9a5a137a55d307e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\quic\\events.zig.md",
+      "bytes": 1627,
+      "sha256": "44ffc7c474f58d977a954a435d195a568b84908b5149bc0007d2fe16ebbb7ed4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\tests\\abi.zig.md",
+      "bytes": 1544,
+      "sha256": "3a1333f5e69b236bee5377d48e129ca01f098b8312273fcfbc0c7cedea63ea86"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\tests\\interop\\matrix.py.md",
+      "bytes": 1596,
+      "sha256": "ac48be1bc447108d788607881075d9114be78d17472b0a6ed5a2b81a15e0b80e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\tests\\quic_contract.zig.md",
+      "bytes": 1593,
+      "sha256": "5b338a009765ee274936410c55b02fe3078cf7abcfc219c30bc079129acc7faa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\tests\\resource_limits.zig.md",
+      "bytes": 1616,
+      "sha256": "dc875cbb2909dd1fda19a7272a07affbfb5e97d19d1a1b70fe7665a9bff80010"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\tools\\verify-backend.py.md",
+      "bytes": 1571,
+      "sha256": "002a7c3299fba9624e5fd87d6becc9f88406a299514fa275ce9282d41cd6d645"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\first-work-orders.md",
+      "bytes": 2284,
+      "sha256": "af2b557696bc64f23d2f1b658c37533a52d9c0eb4026002791d93a4bfdd3bfa8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\README.md",
+      "bytes": 3749,
+      "sha256": "3626e1f33e4ffd420481cbd0c2e224922e898774b1c5669ee4cab8890e2af075"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\security\\threat-model.md",
+      "bytes": 3192,
+      "sha256": "e1bd44f87641861d01d3474d5b84f0b9eba9510a1ae2a1386fb5bf2e660f944d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\artifact-register.json",
+      "bytes": 23764,
+      "sha256": "b3a3827afec1173ee5ab7c78911c48265d47bfa70308db099421daa6add0f5dc"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\change-audit.json",
+      "bytes": 20607,
+      "sha256": "4d2d4987cadfdeaf29e8e00c854c594de614697ba7ed5df11006ee9ac6461f98"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\current.md",
+      "bytes": 2638,
+      "sha256": "ad87c49b5712a3fc00252ec6b4fe095c8fc91286452b74f0921e63986363968c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\dependency-inventory.json",
+      "bytes": 71419,
+      "sha256": "bee48802922ecac6e0a960bce3cd906df0eed4ecded2c4ebc615a08a1969cc3d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\failed-attempt-121343\\run-results.json",
+      "bytes": 2322,
+      "sha256": "97c06b98aa3457f7ea16785b742766f172247d9c500454c33f4bb75515356996"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\failed-attempt-121343\\runs\\debug.log",
+      "bytes": 111,
+      "sha256": "99da015693a2e298f02c34fa00c4d4fbbea4abc3cfd0a9046bdd76886b00549f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\failed-attempt-121343\\runs\\format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\failed-attempt-121343\\runs\\models.log",
+      "bytes": 1385,
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\requirements.json",
+      "bytes": 4826,
+      "sha256": "343de571b0ad8539ccc59b28be6b04e99208f89f007bcbe288581fcdf2426d62"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\requirements.md",
+      "bytes": 1132,
+      "sha256": "d6b422e7aa7a214b95bd3889aabea77abeed17c0eb281f9de51c04b8cc4f77ee"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\run-results.json",
+      "bytes": 6444,
+      "sha256": "bcd9692343ef20b04e1e91ec32046942736158d9127a547d33c16ba07606d397"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\consumer-build.log",
+      "bytes": 1303,
+      "sha256": "de9c60f8eae65f2aabcf833ec40c310312cac8f9a044ec39b2ea92d595dfc815"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\debug.log",
+      "bytes": 2966,
+      "sha256": "6345705e92b6b2f4adacf10df69844cbd52b587a2b13f32ec3744b1e8534c76d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\docs.log",
+      "bytes": 206,
+      "sha256": "fafef72bbe51e69c54e144e540f35cb1c0aeb9193853acc9df5f2147fd05c02e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\format.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\interop-example.log",
+      "bytes": 1639,
+      "sha256": "d12c38abab91731a99fd146bdd104b5348ccde750412c159ceff03ce6d370156"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\models.log",
+      "bytes": 1385,
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\release-safe.log",
+      "bytes": 2969,
+      "sha256": "1f890de2fce78e9dae808273a3ae1f00f60b54dff83d14750032293d9ff613f9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\tcp_interop.log",
+      "bytes": 243,
+      "sha256": "a7fd14b3d8af0d02ea3ec6112e08b270f49c2ff6b8b6825fa65e2aeaa4f39988"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\tcp_server_interop.log",
+      "bytes": 215,
+      "sha256": "bc8a1cad16aba64188e73070db5355accb62950d5f4045a977fc510ceeb4b473"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\runs\\tcp_upload_interop.log",
+      "bytes": 363,
+      "sha256": "74d16e173c5328376da2dc47b9a9958e32904f71d04468f959343d8994094a1d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\source-inventory.json",
+      "bytes": 16499,
+      "sha256": "1c09caf89643e42812c076b7ed1482c76634dc7c594608ae69d1eea96bb2e24d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\strategy.md",
+      "bytes": 3241,
+      "sha256": "62003871808fa8f143bea3ec4dcc278d57129e49b2bffa0b57c6caae3817570d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\evidence\\build-recovery.md",
+      "bytes": 3242,
+      "sha256": "62da642c146947480514adee7190f6b64a0f1c08156d0dda452afe6ff69085e9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\evidence\\source-provenance.json",
+      "bytes": 1407,
+      "sha256": "23d65ebab94bef0b664985604cb19ac172146f95bd5154b0a93e55761e971830"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\examples\\consumer\\build.zig",
+      "bytes": 1441,
+      "sha256": "8e67d1e2b2c25053c3c6b097a71f92d7e81bd8ef7920787d0c8032de94fdb620"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\examples\\consumer\\build.zig.zon",
+      "bytes": 285,
+      "sha256": "08021454f3c86bdf6fd55e42885a4d00259fd99b6b7889497d2bbf62d3b37f0c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\examples\\consumer\\main.zig",
+      "bytes": 11192,
+      "sha256": "f0324d2e6867253c2611f8349666d04d885a1394b49efeef60e2778ff1100b30"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\examples\\consumer\\socket.c",
+      "bytes": 4830,
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\examples\\roundtrip.zig",
+      "bytes": 2846,
+      "sha256": "e5e442435e8f30a7e34d9ac39dd70131bdcd7cb0cc48a0615c9f42974a4f79f0"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\HANDOFF-shutdown.md",
+      "bytes": 2172,
+      "sha256": "ad78248b14893bfb5cc746facba0e9fa9798ac140928891d28d4df584a4389cb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\HANDOFF-tcp-consumer.md",
+      "bytes": 1833,
+      "sha256": "553c72bb57fe9ad49580aad89d30c3e607dda63e96720f9a04fba0d04e9a9f71"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\HOST-DRIVER.md",
+      "bytes": 7714,
+      "sha256": "184019fce5dbb97f50b21aa72de7231cf821f0dfb74a3c3f826d5f8b32296e97"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\README.md",
+      "bytes": 14357,
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\SOURCE-ORIGIN.json",
+      "bytes": 858,
+      "sha256": "94920eb7271a06691f20e91a9d06692f37c33f8700e5a2d91a46d79b3858d049"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\src\\backend.c",
+      "bytes": 9438,
+      "sha256": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\src\\backend.h",
+      "bytes": 2285,
+      "sha256": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\src\\backend.zig",
+      "bytes": 1976,
+      "sha256": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\src\\driver.zig",
+      "bytes": 16070,
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\src\\root.zig",
+      "bytes": 9328,
+      "sha256": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\driver.zig",
+      "bytes": 17276,
+      "sha256": "ebd171a3e78d7e0a9cf0111f57c05f3aafb4dc12b4d5e929e60f5f28a6281d09"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\ca.pem",
+      "bytes": 583,
+      "sha256": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\client.key",
+      "bytes": 241,
+      "sha256": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\client.pem",
+      "bytes": 652,
+      "sha256": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\expired.key",
+      "bytes": 241,
+      "sha256": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\expired.pem",
+      "bytes": 652,
+      "sha256": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\other-ca.pem",
+      "bytes": 599,
+      "sha256": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\server.key",
+      "bytes": 241,
+      "sha256": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\server.pem",
+      "bytes": 648,
+      "sha256": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\wrong-purpose.key",
+      "bytes": 241,
+      "sha256": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\fixtures\\wrong-purpose.pem",
+      "bytes": 660,
+      "sha256": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tests\\transport.zig",
+      "bytes": 17744,
+      "sha256": "9d75a04ee6159fa82190682a43c4a8f0c10fdca4d6932a11fd6354ec26f03e99"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\build-openssl.sh",
+      "bytes": 1080,
+      "sha256": "935c6f9e7e03265544d099c1182eb4b8af6bc785f93a001734485c39a5435c4f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\check-docs.py",
+      "bytes": 7089,
+      "sha256": "7ddf52129aa19411db43e322aaf7c5e68276f4446ddf72ad10e20f7e6ee03a1b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\check-models.py",
+      "bytes": 3870,
+      "sha256": "ed5e57b103ca09e7fb519d46553f7db6b132245802196364672f5925e225acda"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\fetch-openssl.py",
+      "bytes": 2313,
+      "sha256": "e93c38e4a2175f793416fcdea43e5259ca3b1442364188e4f13240dd0480c9b5"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\interop.py",
+      "bytes": 9311,
+      "sha256": "37c7d6f3faf20d4a8d943a3309eaa9758af21ede04f5dee1571c3c8714cae1ab"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\make_fixtures.py",
+      "bytes": 2479,
+      "sha256": "ac8d59c6da99f23f6db1484db277a101930925e731cb61fd52e5d007251ea1e3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\pin-backend.py",
+      "bytes": 2042,
+      "sha256": "457015b7e4c662b099a90345cc420175e0a947421f6e99d70c2e093b68a308d4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\qualify.ps1",
+      "bytes": 2698,
+      "sha256": "89fc56c2d3dc469a121cebc0da5f305c81a6a77bd68739df55a51efc528985f4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\tcp_interop.py",
+      "bytes": 4356,
+      "sha256": "20cf425269c076b5af4d6465bd5ba7a3e63d8b7d82a348a97538236e2a96c962"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\tcp_server_interop.py",
+      "bytes": 3951,
+      "sha256": "c72112debda63837dd631660c173e8f475d3647fcb29838b1bf1b5204f227959"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\tcp_upload_interop.py",
+      "bytes": 4596,
+      "sha256": "3a7aea18bbd4eedafc208f8e3af55128a9cb061c9ffdaef638eb0259c342ab28"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\test-openssl.sh",
+      "bytes": 1742,
+      "sha256": "ee8b7db47b7498e5765eb915a09f7ce47013aec1fcb3c551e2eb14d4a095064c"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\.gitignore",
+      "bytes": 61,
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\AGENTS.md",
+      "bytes": 1882,
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\build.zig",
+      "bytes": 6569,
+      "sha256": "68e4ec96c0cf5492467dbfefc8afd8d942726da31941137c58acc86306317060"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\build.zig.zon",
+      "bytes": 662,
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\architecture\\modules.md",
+      "bytes": 3777,
+      "sha256": "ffb324c6fd701db42db331aa9806cf0805d274259d44612fc5f31b06111fee41"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\architecture\\platform-capabilities.md",
+      "bytes": 3517,
+      "sha256": "f836e62b1cde517cd53061420bd645c3b982c8bc6bd942e210a1bb9fe9923f1a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\ARCHITECTURE.md",
+      "bytes": 13449,
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\CALLBACKS.md",
+      "bytes": 6702,
+      "sha256": "af94844cc303677942177e63004306a1892f9532b3f60dfdf1d04aa114c05b0f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\DEPENDENCIES.md",
+      "bytes": 7715,
+      "sha256": "7f585eab6f3049884cba9c89d7aa27cd4f99f78aa19fbb31be2fc4c07450d39e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\design\\receive-drain.md",
+      "bytes": 8070,
+      "sha256": "8d4c4eb85102fe80506177d6b303a70e93cb625b9d315657943c79fe064e2469"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\design\\system-mathematics.md",
+      "bytes": 6660,
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\development\\documentation.md",
+      "bytes": 3224,
+      "sha256": "1751ecc7ee546215a2fe94e8d933106cb1ad0cc2faf9a2caae563648aca0ef21"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\development\\workflow.md",
+      "bytes": 2769,
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\completion-sequence.md",
+      "bytes": 8902,
+      "sha256": "a1ffe5b970485005864a76dc37c5c1d4be739e877b4215c437802ec0e9154511"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\decisions.md",
+      "bytes": 5126,
+      "sha256": "b2cd4a4068ed3bd7a5cb1933488a4c15aa53c4d97535a45453e2c33b5e7e9361"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\interfaces.md",
+      "bytes": 7194,
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\layout.md",
+      "bytes": 6751,
+      "sha256": "9b6af13cc71f6c866745ac3ac8278666c4debd76c196103e22effe8fcdec9a6c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\roadmap.md",
+      "bytes": 3964,
+      "sha256": "b5c6059affc986997fc27f8b755b14d0b8e834058c4be103fa3369be2f50cbeb"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\runtime-blueprint.md",
+      "bytes": 12954,
+      "sha256": "e8a7f0911f62daf685dcd25616b7193132b442ff929062085bb54788431cef4d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\START_HERE.md",
+      "bytes": 5078,
+      "sha256": "eac2ab2454014c211a43fadf28f81396e76841d1f33ddd27cbb2e306b7d65c85"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\01-target-builds.md",
+      "bytes": 3079,
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\02-fidelity-protocol.md",
+      "bytes": 4625,
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\03-identity-endpoints.md",
+      "bytes": 3207,
+      "sha256": "523ea77f3b547b8fb40d763e575d034a0bb51a2c76eec2f7e677ef29721c5bbe"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\04-first-sound.md",
+      "bytes": 4535,
+      "sha256": "4e810ed1d2d2e963ae42cff1e3b919259357b325186fd96cf92fc838de0290e1"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\05-timing-clocks.md",
+      "bytes": 2885,
+      "sha256": "504cc4c20cbe9718d5822b9d881fc239d264c53e9750dbfb985a6f606ba91ed4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\06-network-resilience.md",
+      "bytes": 2752,
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\07-observability.md",
+      "bytes": 2320,
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\08-user-experience.md",
+      "bytes": 2299,
+      "sha256": "bff51a468f61e821ffbe3ed34fa11c13e88dc27e074470576e50851067e40ccc"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\09-packaging.md",
+      "bytes": 2411,
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\implementation\\work-packages\\10-qualification.md",
+      "bytes": 2389,
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\literate\\proof-ledger.md",
+      "bytes": 6988,
+      "sha256": "4e3f5122aea0b0d81f06282b1d122e1e1c47d9c6ebc2853034e5ae92b82b1b09"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\literate\\quantitative-design.md",
+      "bytes": 6594,
+      "sha256": "f68abc33e34faaa3729ce9789da947eb6d23355671da29aded7d6ba8bfbe102b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\literate\\README.md",
+      "bytes": 4639,
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\literate\\runtime-argument.md",
+      "bytes": 10235,
+      "sha256": "fc62dd3247c63cec0989650c1bfd77ec426a947ddb8a21251f04f734c9d429ad"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\literate\\stream-argument.md",
+      "bytes": 10101,
+      "sha256": "4e6d5ac4d58d4f430261f7d48de36942e124f4b923631b46e619a0ece028a819"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\MATHEMATICS.md",
+      "bytes": 19013,
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\media\\assembly.md",
+      "bytes": 6768,
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\PRODUCT.md",
+      "bytes": 9277,
+      "sha256": "6de406291c90508c7e5acada35a157706b219223f204c88808f271258c0b5c4b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\protocol\\negotiation.md",
+      "bytes": 5106,
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\protocol\\v2.md",
+      "bytes": 7835,
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\README.md",
+      "bytes": 2652,
+      "sha256": "cb5a461b19568e490c3fcc429cf0ca6aac89bf84ce67610eda7d10157b2730cd"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\api-contracts.md",
+      "bytes": 14948,
+      "sha256": "f4e4029433110b4bbcfafe0314610cd32ef41222b5d71d80e09c44a2bacea1ac"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\evidence.md",
+      "bytes": 108008,
+      "sha256": "55c9bf7b7c77a9d7ad26ecb6db24797ae4907d64167a9fcf1a74a059068cbdac"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\file-index.json",
+      "bytes": 73800,
+      "sha256": "df262109fd6dc6d577edd8a32d9d712052a7c8c17c61afe807d14dfb73f379c4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\lan-audio.md",
+      "bytes": 121850,
+      "sha256": "661fc6aff66babc9f54a451f79f00b8988d8974da62ce09f54cca2767b99dfaf"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\miniaudio-zig.md",
+      "bytes": 14560,
+      "sha256": "bfa7168727e78512c2b79fb4e07d6f37c7117e8ecc10b6367e29b698db642dd8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\README.md",
+      "bytes": 2403,
+      "sha256": "b3b001c4e83456f757738c71f5c1a36cda441f1c77c9c03f8b70639fa3dda593"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\tls-zig.md",
+      "bytes": 45185,
+      "sha256": "3a61bcadc085f631119aeb42b85d5070a4b66cfd43ca5a7272f8dd8ec246682a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\reference\\upstream-assets.md",
+      "bytes": 59427,
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\TRANSPORT.md",
+      "bytes": 8295,
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\verification\\acceptance-matrix.md",
+      "bytes": 4317,
+      "sha256": "260143a0119215d3f0d9fa3821a44045f96b7c884ed5bfba91101c59219b53b9"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\verification\\runtime-obligations.md",
+      "bytes": 9153,
+      "sha256": "af002a3e00ed86cb0955db66a5af171239426dfd30f2446b730036e533e813c4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\verification\\scenarios.md",
+      "bytes": 4483,
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\verification\\v2-independent.md",
+      "bytes": 5873,
+      "sha256": "8253a201d38ae5c9df7b221c91ef9bad4075e703d8ad4b76bdfd97629f28a481"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\docs\\VERIFICATION.md",
+      "bytes": 4934,
+      "sha256": "6484f84f09128095e18a653b5dffa98db2d38d05ed3a289bd59a34bd59934d21"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\README.md",
+      "bytes": 5738,
+      "sha256": "843f762c523982db2a86a07071860006829793d426946bf84dd42d3f2eda3865"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\concurrency\\SpscPublication.cfg",
+      "bytes": 138,
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\concurrency\\SpscPublication.tla",
+      "bytes": 2292,
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\README.md",
+      "bytes": 6151,
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\runtime\\ReceiveDrain.cfg",
+      "bytes": 202,
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\runtime\\ReceiveDrain.tla",
+      "bytes": 5019,
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\runtime\\RuntimeOwnership.cfg",
+      "bytes": 227,
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\runtime\\RuntimeOwnership.tla",
+      "bytes": 7664,
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\session\\SessionWindow.cfg",
+      "bytes": 212,
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\session\\SessionWindow.tla",
+      "bytes": 3912,
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\stream\\EndDrain.cfg",
+      "bytes": 166,
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\spec\\stream\\EndDrain.tla",
+      "bytes": 1949,
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\audio\\callback_bridge.zig",
+      "bytes": 2167,
+      "sha256": "69e4021d0b24d90b4dba29ab669527a8e3d8cbbd6d82fa59fea61f3c301bce1b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\audio\\frame_queue.zig",
+      "bytes": 4067,
+      "sha256": "8d9e3fe0520a171ea4ba2e628d862398188beea1da45a425c342185c5e608502"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\host\\audio_device.zig",
+      "bytes": 4797,
+      "sha256": "87c2326dd76963d7da783cfab83660ae553bdf779a240a1e0e6da4f8fa52b327"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\media\\block_assembler.zig",
+      "bytes": 4262,
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\media\\format.zig",
+      "bytes": 1886,
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\media\\playout_window.zig",
+      "bytes": 3125,
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\protocol\\negotiation.zig",
+      "bytes": 4631,
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\protocol\\v1.zig",
+      "bytes": 7648,
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\protocol\\v2.zig",
+      "bytes": 9445,
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\README.md",
+      "bytes": 2255,
+      "sha256": "530cf8bf2dd157c74b713929548a1f1afe6fe0dbb826bf8b4b25d561c3175c71"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\root.zig",
+      "bytes": 1037,
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\session\\receiver.zig",
+      "bytes": 3727,
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\src\\session\\session.zig",
+      "bytes": 2946,
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\dependency.zig",
+      "bytes": 459,
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\hardware\\windows_capture.zig",
+      "bytes": 2160,
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\audio_device.zig",
+      "bytes": 1904,
+      "sha256": "9d7f658e26ebfcc57fb0b6cbf391af9098c5ea53aaa67b81f75faeb31e2034f8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\loopback_transport.zig",
+      "bytes": 2346,
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\protocol_v2_peer.py",
+      "bytes": 11105,
+      "sha256": "53510f5124e696449f8f657264750cd58094ba304cc346db18f339258e9ce3ec"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\protocol_v2_reference.py",
+      "bytes": 2599,
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\tls_receiver.zig",
+      "bytes": 6347,
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\tls_v2.zig",
+      "bytes": 6306,
+      "sha256": "10bd45080e329996c4e97c77bd1f6967ed647e312023a581b3ec0c10f41d3abd"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\integration\\v2_codec_probe.zig",
+      "bytes": 2787,
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\unit\\callback.zig",
+      "bytes": 4372,
+      "sha256": "af29243eca657a06a895eefda7e4aca2f1e19cd6ea502ca594adf2ff0b40eff6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\unit\\core.zig",
+      "bytes": 6635,
+      "sha256": "e36951fa0e5e67dc47031b8dde53717828fbb4fa280503f779210692c20e2453"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\unit\\media\\assembler.zig",
+      "bytes": 6261,
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\unit\\protocol\\negotiation.zig",
+      "bytes": 7040,
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\unit\\protocol\\v2.zig",
+      "bytes": 7527,
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tests\\unit\\wire.zig",
+      "bytes": 6153,
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\build_reference.py",
+      "bytes": 10133,
+      "sha256": "cf523eb638fa569a0daad44ee3b26a06ccb2c27b94997e22cb475e82d204b38b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\check_docs.py",
+      "bytes": 1372,
+      "sha256": "2f10ce5c88dd3cc1ea61b20ed44dc76a7e02ccfe5806167ff42bd6f4b4c5828a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\check_handoff.py",
+      "bytes": 2278,
+      "sha256": "2fe93a9c900f994297361f1299536c860baf194d18984e613036a291cc8d263c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\check_models.py",
+      "bytes": 3889,
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\check_transport.py",
+      "bytes": 1708,
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\reference_contracts.json",
+      "bytes": 140045,
+      "sha256": "3036ae8cc23d0ee371c03ccf5d99642fbf30d74b5a4ced99d9213b8a6a60d44e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\test_transport.py",
+      "bytes": 8958,
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\tools\\test_v2_differential.py",
+      "bytes": 7838,
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before\\transport-lock.json",
+      "bytes": 33198,
+      "sha256": "8373c873f1a87e51fa0ca33b5dedf78647f116c3dee86a749a298c14d6781200"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\before.json",
+      "bytes": 14480,
+      "sha256": "2cd217da2df97742f2c1276d6462e0335b93bf7629a43df3cd35ac03b1fead76"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-1.log",
+      "bytes": 128,
+      "sha256": "1312b4ec59fcece353cd62c0c3e7297c1956d548a9ffab4ed3b334d6371079ea"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-2.log",
+      "bytes": 176,
+      "sha256": "7409be1f0d63ba22efed23a389fe5a147337627603a53ad2f9c56257af91957a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-3.log",
+      "bytes": 117,
+      "sha256": "7ccdbb71109a8a28f5f5980fa144182d8e39b98398fb32794956109413002a46"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-4.log",
+      "bytes": 122,
+      "sha256": "27c97a92f9ad12a8c95fbfd817e4e1f80ba283db7bf60d52e0cbd71236e01a5a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-5.log",
+      "bytes": 527,
+      "sha256": "58d2b8001fa76d3a69ba2e32a80ca94426f54294f1910e8c2165ad154b760b88"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\command-6.log",
+      "bytes": 596,
+      "sha256": "6eeee2456fe189705b17d26f76b5b6a42010ae27db5b0ef1d48dc1a85adf9929"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\commands.json",
+      "bytes": 2585,
+      "sha256": "8402bcac7619c33d7ec58f9d79cb08b0d95d416fad42982fbe1fffc8add981b4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\debug-execution-observation.json",
+      "bytes": 503,
+      "sha256": "6889a86759cfb38bde075717f695297ab91d883a8cb38ba9802aebbb68b971d8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\build.zig",
+      "bytes": 5208,
+      "sha256": "62d431a423ff9017333a57fb1611d943b639ed6839a9f1364dbcbb0513d49d20"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\build.zig.zon",
+      "bytes": 394,
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\examples\\consumer\\socket.c",
+      "bytes": 4830,
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\README.md",
+      "bytes": 14357,
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\src\\backend.c",
+      "bytes": 9438,
+      "sha256": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\src\\backend.h",
+      "bytes": 2285,
+      "sha256": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\src\\backend.zig",
+      "bytes": 1976,
+      "sha256": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\src\\driver.zig",
+      "bytes": 16070,
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-adopted\\src\\root.zig",
+      "bytes": 9328,
+      "sha256": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\build.zig",
+      "bytes": 4586,
+      "sha256": "a90cf23c31ebe464c3a22677e9a51f2e62e6db5afc8a2514122fb6a4fd1d3fbf"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\build.zig.zon",
+      "bytes": 373,
+      "sha256": "fbcc8f8b3beae8f9ffc657ec4e925f40fdab52d9f5438443a61f829fa6f68c95"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\examples\\consumer\\socket.c",
+      "bytes": 4153,
+      "sha256": "33a8ce05669e786e6516ae54c789283d0678d21865d3ad70ef09e0f98b08906a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\README.md",
+      "bytes": 14048,
+      "sha256": "0783d72b4615d5be30a3f6b0b0ce653837bc8d653366debb2449c51eb139f94e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\src\\backend.c",
+      "bytes": 8438,
+      "sha256": "a40e4612e3cf924fc42260d1a97bf834ff74358cd8da9037dec430df690ac17a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\src\\backend.h",
+      "bytes": 1480,
+      "sha256": "6ead5064244ff32f649e9faf89f9d0dff819545728568a648292854fb4220a4a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\src\\backend.zig",
+      "bytes": 1262,
+      "sha256": "1be07c3acdbc36b4aca27e6ff5ceeec7ba348efddfcdd93a7ef13fc12718da7a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\src\\driver.zig",
+      "bytes": 15041,
+      "sha256": "e172fcb02cb84541ef08bdb7e2f9ef2476170ef107141982c898c2395890e5d7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-before\\src\\root.zig",
+      "bytes": 8364,
+      "sha256": "d8623cca43e285d9f9ee2ef0cda2ae816df66b74f1c010d091690c01127eb31d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-consumer.json",
+      "bytes": 1595,
+      "sha256": "845d4e2e73de8e5baa35a8e79ac29564192a9f172ed3416d0152ad548aeb32b4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\dependency-consumer.log",
+      "bytes": 379,
+      "sha256": "9535a62381cfd4d6190d6aecfcd5aa6933762d771c40115b0ffdfa77eb621f5b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\document-checks.json",
+      "bytes": 1980,
+      "sha256": "701872f89052a878cf9a6a3c6598647101c6438a7e5440a0ae39d8e2f3c36afb"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\initial-compile-observation.json",
+      "bytes": 632,
+      "sha256": "6182f2288a3e7c580f2d579c5581aca4f71aafe210d46df0d98ca2edb3f0cc79"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\interop-final.json",
+      "bytes": 11813,
+      "sha256": "2602dcf47f01a1a42542945c79c39d7a79746ca445323fa87d011f1017b0b366"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\miniaudio-abi-integration.json",
+      "bytes": 17796,
+      "sha256": "54b098b350cf66c109e4a8d133b17084fbdf0a7a1ee72e08985f5dc6d2b2df92"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\pending-test-attempt1.zig",
+      "bytes": 9100,
+      "sha256": "e48961a04c720ff592e6567b538d74d2448ee7f5af9d756ff0612188a5fad344"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\RESULTS.md",
+      "bytes": 6214,
+      "sha256": "a3753be6c05136eaf1e4e83c1d19f6ecbc9c9cea3652c62bff0015975474d023"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\tls-documentation-adoption.json",
+      "bytes": 12586,
+      "sha256": "91163b5d091b68285397c42fb0ed6b4f617f0276b68a41e09a9976feacbb181e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\tls-reference-integration.json",
+      "bytes": 5527,
+      "sha256": "8b22542830877fb4179c539e48932822c1f30145ac255d56934c913ac212c289"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\transport-0.log",
+      "bytes": 64,
+      "sha256": "4759571745c41123f6adb9c2f32299472e99a9a6300a4c203aa8d03b871c104b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\transport-1.log",
+      "bytes": 1020,
+      "sha256": "92eb4a5d23ee5316c256cf105e60cefb4a2199326d5f3fe7bf58c64663951315"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\transport-2.log",
+      "bytes": 621,
+      "sha256": "a573d67223ca4fdcae5733f31365d07ce3e8167ca126df13d9c4e15c96b28847"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\transport-3.log",
+      "bytes": 379,
+      "sha256": "73fed786422e5ee100b3bde09a9d59c0b0fea238255f1cb3e044c1f9e19a9d24"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\transport-commands.json",
+      "bytes": 1516,
+      "sha256": "21f1e4d5b09168b7245d63782f53f39dc59241eaeeca0183817487ed0fd9617d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\pending-custody\\v1-regression.json",
+      "bytes": 5589,
+      "sha256": "7f067314bff5cab633c2147e6d423663a7eb6b94f3779f6f09a90dd28f71d60a"
+    }
+  ],
+  "changed_prior_paths": [
+    "build.zig",
+    "docs/architecture/modules.md",
+    "docs/design/receive-drain.md",
+    "docs/implementation/completion-sequence.md",
+    "docs/implementation/layout.md",
+    "docs/implementation/roadmap.md",
+    "docs/implementation/runtime-blueprint.md",
+    "docs/implementation/START_HERE.md",
+    "docs/implementation/work-packages/04-first-sound.md",
+    "docs/literate/proof-ledger.md",
+    "docs/README.md",
+    "docs/reference/api-contracts.md",
+    "docs/reference/evidence.md",
+    "docs/reference/file-index.json",
+    "docs/reference/lan-audio.md",
+    "docs/reference/miniaudio-zig.md",
+    "docs/reference/README.md",
+    "docs/reference/tls-zig.md",
+    "docs/verification/runtime-obligations.md",
+    "docs/verification/v2-independent.md",
+    "docs/VERIFICATION.md",
+    "README.md",
+    "src/README.md",
+    "tests/integration/protocol_v2_peer.py",
+    "tests/integration/tls_v2.zig",
+    "tests/unit/core.zig",
+    "tools/build_reference.py",
+    "tools/reference_contracts.json",
+    "transport-lock.json"
+  ],
+  "added_paths": [
+    "docs/media/pending-block.md",
+    "src/runtime/pending_block.zig",
+    "tests/unit/runtime/pending_block.zig"
+  ],
+  "unchanged_existing_runtime_models_and_audio_vendor": [
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig.zon",
+      "bytes": 662,
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\concurrency\\SpscPublication.cfg",
+      "bytes": 138,
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\concurrency\\SpscPublication.tla",
+      "bytes": 2292,
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\ReceiveDrain.cfg",
+      "bytes": 202,
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\ReceiveDrain.tla",
+      "bytes": 5019,
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\RuntimeOwnership.cfg",
+      "bytes": 227,
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\RuntimeOwnership.tla",
+      "bytes": 7664,
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\session\\SessionWindow.cfg",
+      "bytes": 212,
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\session\\SessionWindow.tla",
+      "bytes": 3912,
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\stream\\EndDrain.cfg",
+      "bytes": 166,
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\stream\\EndDrain.tla",
+      "bytes": 1949,
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\audio\\callback_bridge.zig",
+      "bytes": 2167,
+      "sha256": "69e4021d0b24d90b4dba29ab669527a8e3d8cbbd6d82fa59fea61f3c301bce1b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\audio\\frame_queue.zig",
+      "bytes": 4067,
+      "sha256": "8d9e3fe0520a171ea4ba2e628d862398188beea1da45a425c342185c5e608502"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\host\\audio_device.zig",
+      "bytes": 4797,
+      "sha256": "87c2326dd76963d7da783cfab83660ae553bdf779a240a1e0e6da4f8fa52b327"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\block_assembler.zig",
+      "bytes": 4262,
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\format.zig",
+      "bytes": 1886,
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\playout_window.zig",
+      "bytes": 3125,
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig",
+      "bytes": 4631,
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\v1.zig",
+      "bytes": 7648,
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\v2.zig",
+      "bytes": 9445,
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\root.zig",
+      "bytes": 1037,
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session\\receiver.zig",
+      "bytes": 3727,
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session\\session.zig",
+      "bytes": 2946,
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\dependency.zig",
+      "bytes": 459,
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\hardware\\windows_capture.zig",
+      "bytes": 2160,
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\audio_device.zig",
+      "bytes": 1904,
+      "sha256": "9d7f658e26ebfcc57fb0b6cbf391af9098c5ea53aaa67b81f75faeb31e2034f8"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig",
+      "bytes": 2346,
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_reference.py",
+      "bytes": 2599,
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\tls_receiver.zig",
+      "bytes": 6347,
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\v2_codec_probe.zig",
+      "bytes": 2787,
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\callback.zig",
+      "bytes": 4372,
+      "sha256": "af29243eca657a06a895eefda7e4aca2f1e19cd6ea502ca594adf2ff0b40eff6"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\media\\assembler.zig",
+      "bytes": 6261,
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\protocol\\negotiation.zig",
+      "bytes": 7040,
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\protocol\\v2.zig",
+      "bytes": 7527,
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\wire.zig",
+      "bytes": 6153,
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\native.c",
+      "bytes": 218,
+      "sha256": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\profile.h",
+      "bytes": 463,
+      "sha256": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\root.zig",
+      "bytes": 594,
+      "sha256": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\UPSTREAM.json",
+      "bytes": 519,
+      "sha256": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\LICENSE",
+      "bytes": 2597,
+      "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h",
+      "bytes": 4108168,
+      "sha256": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+    }
+  ],
+  "reviewed_tls_adoption": {
+    "changed_pins": [
+      "README.md",
+      "build.zig",
+      "build.zig.zon",
+      "examples/consumer/socket.c",
+      "src/backend.c",
+      "src/backend.h",
+      "src/backend.zig",
+      "src/driver.zig",
+      "src/root.zig"
+    ],
+    "unchanged_pins": 179,
+    "evidence": "tls-documentation-adoption.json"
+  },
+  "test_summary": {
+    "pure_debug": 42,
+    "pure_release_safe": 42,
+    "new_pending_tests": 7,
+    "independent_v2_scenarios": 22,
+    "v1_regressions": 16,
+    "receiver_frames": 1285,
+    "short_writes_including_zero": 1680,
+    "zero_writes": 1260,
+    "cross_compilation_only": [
+      "x86_64-macos",
+      "aarch64-linux-gnu"
+    ]
+  },
+  "application_commands": [
+    {
+      "command": [
+        "zig",
+        "fmt",
+        "--check",
+        "build.zig",
+        "src",
+        "tests"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 0.037099299996043555,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-0.log"
+    },
+    {
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 10.796427699999185,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-1.log"
+    },
+    {
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 25.53071959999943,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-2.log"
+    },
+    {
+      "command": [
+        "zig",
+        "build",
+        "core-check",
+        "-Dtarget=x86_64-macos",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 6.163124300001073,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-3.log"
+    },
+    {
+      "command": [
+        "zig",
+        "build",
+        "core-check",
+        "-Dtarget=aarch64-linux-gnu",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 5.7271206000004895,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-4.log"
+    },
+    {
+      "command": [
+        "zig",
+        "build",
+        "v2-transport-probes",
+        "-Dtransport-tests=true",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 38.190543400000024,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-5.log"
+    },
+    {
+      "command": [
+        "python",
+        "tests/integration/protocol_v2_peer.py",
+        "--output",
+        "verification/pending-custody/interop.json"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 1,
+      "seconds": 0.20385150000220165,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "command-6.log"
+    }
+  ],
+  "transport_commands": [
+    {
+      "command": [
+        "python",
+        "tools/check_transport.py",
+        "--staged"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 0.2756283000053372,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "transport-0.log"
+    },
+    {
+      "command": [
+        "zig",
+        "build",
+        "v2-transport-probes",
+        "transport-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 49.29560610000044,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "transport-1.log"
+    },
+    {
+      "command": [
+        "python",
+        "tests/integration/protocol_v2_peer.py",
+        "--output",
+        "verification/pending-custody/interop-final.json"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 17.054459099999804,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "transport-2.log"
+    },
+    {
+      "command": [
+        "python",
+        "tools/test_transport.py",
+        "--output",
+        "verification/pending-custody/v1-regression.json"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "seconds": 7.003895599998941,
+      "environment_overrides": {
+        "LC_ALL": "C",
+        "LANG": "C"
+      },
+      "log": "transport-3.log"
+    }
+  ],
+  "dependency_consumer": {
+    "command": [
+      "zig",
+      "build",
+      "dependency-test",
+      "--cache-dir",
+      ".zig-cache/pending-dependency-consumer",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 15.027597599997534,
+    "source_hashes": {
+      "C:\\Projects\\lan-audio\\build.zig": "5e9bbb25b2f753a6846005d2bf9dc0e1a06f5046423999d566d8d92c0b67ed20",
+      "C:\\Projects\\lan-audio\\build.zig.zon": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+      "C:\\Projects\\lan-audio\\tests\\dependency.zig": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+      "C:\\Projects\\miniaudio-zig\\build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+      "C:\\Projects\\miniaudio-zig\\build.zig.zon": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e",
+      "C:\\Projects\\miniaudio-zig\\src\\root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+      "C:\\Projects\\miniaudio-zig\\src\\profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+      "C:\\Projects\\miniaudio-zig\\src\\native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+      "C:\\Projects\\miniaudio-zig\\UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+      "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+    },
+    "sources_unchanged": true,
+    "log": "dependency-consumer.log",
+    "physical_devices": false
+  },
+  "documentation_custody_checks": [
+    {
+      "command": [
+        "python",
+        "tools/build_reference.py"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "Rendered 455 file entries: 289 authored/support, 166 installed SDK files\n"
+    },
+    {
+      "command": [
+        "python",
+        "tools/check_docs.py"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "PASS: 455 authored/vendor files mapped; local Markdown targets exist (anchors not checked)\n"
+    },
+    {
+      "command": [
+        "python",
+        "tools/check_handoff.py"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "PASS: 455 files have contract/index coverage; local Zig imports and work-package exits resolve\n"
+    },
+    {
+      "command": [
+        "python",
+        "tools/check_transport.py",
+        "--staged"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "PASS: 188 dependency files match reviewed custody; staged=True\n"
+    },
+    {
+      "command": [
+        "python",
+        "../miniaudio-zig/tools/check_vendor.py"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "PASS: 2 unchanged upstream files at 9634bedb5b5a2ca38c1ee7108a9358a4e233f14d\n"
+    },
+    {
+      "command": [
+        "python",
+        "../miniaudio-zig/tools/check_docs.py"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "PASS: 35 files mapped; local links, explicit anchors, source snippets and vendor custody checked\n"
+    },
+    {
+      "command": [
+        "python",
+        "../tls-zig/tools/check-docs.py",
+        "--self-test",
+        "--with-sdk"
+      ],
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "output": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": [],\n  \"negative_controls_detected\": [\n    \"source hash drift\",\n    \"unindexed file\",\n    \"broken local link\",\n    \"missing contract\"\n  ]\n}\n"
+    }
+  ],
+  "miniaudio_qualification_integration": {
+    "scope": "Dependency-owned Windows ABI qualification contract integration; no production audio API or profile change. Application consumer was tested separately.",
+    "owner_chat": "Document lan-audio project structure",
+    "owner_thread_id": "01a0dd89-1bef-7430-9ace-245eff924dfe",
+    "changed_source_paths": [
+      "README.md",
+      "build.zig",
+      "docs/CONTRACT.md",
+      "docs/README.md",
+      "docs/architecture/build-and-abi.md",
+      "docs/implementation/qualification.md",
+      "docs/reference/catalog.json",
+      "docs/reference/files.md",
+      "docs/reference/upstream.md",
+      "docs/verification/README.md"
+    ],
+    "added_source_paths": [
+      "docs/verification/abi.md",
+      "tests/abi.zig",
+      "tests/abi_probe.c",
+      "tests/consumer/build.zig",
+      "tests/consumer/build.zig.zon",
+      "tests/consumer/consumer.zig",
+      "tests/test_abi_runner.py",
+      "tools/test_abi.py"
+    ],
+    "imported_contract_keys": [
+      "miniaudio-zig/README.md",
+      "miniaudio-zig/build.zig",
+      "miniaudio-zig/docs/CONTRACT.md",
+      "miniaudio-zig/docs/README.md",
+      "miniaudio-zig/docs/architecture/build-and-abi.md",
+      "miniaudio-zig/docs/implementation/qualification.md",
+      "miniaudio-zig/docs/reference/catalog.json",
+      "miniaudio-zig/docs/reference/files.md",
+      "miniaudio-zig/docs/reference/upstream.md",
+      "miniaudio-zig/docs/verification/README.md",
+      "miniaudio-zig/docs/verification/abi.md",
+      "miniaudio-zig/tests/abi.zig",
+      "miniaudio-zig/tests/abi_probe.c",
+      "miniaudio-zig/tests/consumer/build.zig",
+      "miniaudio-zig/tests/consumer/build.zig.zon",
+      "miniaudio-zig/tests/consumer/consumer.zig",
+      "miniaudio-zig/tests/test_abi_runner.py",
+      "miniaudio-zig/tools/test_abi.py"
+    ],
+    "new_registry_keys": [
+      "miniaudio-zig/docs/verification/abi.md",
+      "miniaudio-zig/tests/abi.zig",
+      "miniaudio-zig/tests/abi_probe.c",
+      "miniaudio-zig/tests/consumer/build.zig",
+      "miniaudio-zig/tests/consumer/build.zig.zon",
+      "miniaudio-zig/tests/consumer/consumer.zig",
+      "miniaudio-zig/tests/test_abi_runner.py",
+      "miniaudio-zig/tools/test_abi.py"
+    ],
+    "source_hashes": {
+      ".gitignore": "23ccdb9ea9e115eea42eeff7c2d98cebc0557c1cc07a7bed3c624cde15388f04",
+      "README.md": "e41025584d483566251a31bd0503be4c8f5ff10dc52b733b6c5a7d10f6afba7c",
+      "UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+      "build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+      "build.zig.zon": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e",
+      "docs/CONTRACT.md": "da00459a2c49ab0bcf16d261826c852df692fb7b6d35ef1e45ce69c320ab09ca",
+      "docs/DEPENDENCIES.md": "2341b51711884963da4d2a7b7a5c4565836b65108e7f8209cccb6f60a49d84c2",
+      "docs/FILES.md": "4aca926aa99bc6e4f41649069c4e9c1f09868cfd5163bd02727d15efffc0b307",
+      "docs/README.md": "351e453ce373db8aebf1abe33328839d1290bd860a37216dec8dbe1644c607fe",
+      "docs/VERIFICATION.md": "4dd18a6bbba2035f1ea5f206afde7131c902106aa3a70f0ae921f0a6ce264f89",
+      "docs/architecture/build-and-abi.md": "f2da902c0c9a93ff8a8580dbe335e3cf457e026cc53f5f61fdedb51e2d3949d8",
+      "docs/contracts/device-lifecycle.md": "76937c50af6a70f97a9d35d0e348a249b40f5f79cfc58b60eba5e12a63abfb16",
+      "docs/contracts/pcm-and-conversion.md": "d9fb2daae301b8db8ff0f0595869641c8919d478b0e6dc3cbfeac9a7dc1fcea2",
+      "docs/implementation/qualification.md": "dc4e08adc0d52fce318010e33773a4e729fde256c18336b71a5599a038549625",
+      "docs/reference/catalog.json": "a9913588396a6505c11dc0c5bdaa89b7904fc7fca3f50d835f9020441e726651",
+      "docs/reference/files.md": "feb477b450fee5f8ff40421e175da4b4e901a4ceb47c0f19c72b8f391689371a",
+      "docs/reference/upstream.md": "dbc2ef620314cb8c34f66bd442ea0200db3b4dfaf6bccc0ace07f05af3d5f185",
+      "docs/verification/README.md": "347c6cc16bf91b9d44a2838e08bac23c36725700ddb72221c97e1affc0b2bb60",
+      "docs/verification/abi.md": "dedfcc8eaee92163028308e6e62c7d2b212de87e545dfc8c848dcc242ad3715e",
+      "src/native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+      "src/profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+      "src/root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+      "tests/abi.zig": "546b81390dbaed6148f144eb4f933ee335b85b3cbb6b3e70ebb81630f30f2f75",
+      "tests/abi_probe.c": "48cc227b60d07183cef25084d83ca1d9a03379380b45a19f118d5b5c8094e085",
+      "tests/consumer/build.zig": "29dea367b60d59c9160f843e3bd0c90034f7ab9e8009d28d0fb76ef653904a58",
+      "tests/consumer/build.zig.zon": "b35353f0cf4ff09d5a50a4483dc5e80f293862f4ad9fd67c599e3cf8471b59f2",
+      "tests/consumer/consumer.zig": "bf7e743fb99bfd726f237287e6ce4ac167a741470aca029edf23bd5822fba51f",
+      "tests/contract.zig": "29388ef98c0e6b988d708377a455cfe5b4fa05ca6c7f9ad7ec587cca3b037d5c",
+      "tests/test_abi_runner.py": "a3ffea36c573f7d8871192411ddb81c80b87726c7511e9bc157e84ac96c7a965",
+      "tests/test_check_docs.py": "73e17ea38b9f1b88a51bde0ae9faab4354bf52d706636babfc8a4f5fec0af8d8",
+      "tools/check_docs.py": "8dad3ddc7272243f0cba95de4b7844fff13fa52bd2db1b7a980d8db808bbee16",
+      "tools/check_vendor.py": "fad1dde8431845c3d452c0a0e7eb818020827c0335a3a623e9adddf08e15a949",
+      "tools/test_abi.py": "c8945663c7eaffbee90bdd83d097b9c47479f057e26d2e0937c7bbf28d2840c7",
+      "vendor/miniaudio/LICENSE": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb",
+      "vendor/miniaudio/miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+    },
+    "matrix_commands": 16,
+    "accepted_commands": 16,
+    "limits": [
+      "Windows host/profile evidence only; native Mac/Linux and physical callback lifetime remain open.",
+      "Eight intentional runtime rejections are accepted negative controls, not zero-exit commands.",
+      "Initial incomplete classifier run remains in the owner snapshot; final receipts supersede its qualification status without rewriting it."
+    ],
+    "evidence_files": [
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\audio-abi-reference-contracts-additions.json",
+        "sha256": "6ff01e92f7bd52e6304bb2f0f501dc171d4519cce971413c1f356d4b2a16d575",
+        "bytes": 12661
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-handoff.md",
+        "sha256": "1587aeeb37208cfd2d63a903514ea5dba6903501c7a3e2a19806c824c83e9c23",
+        "bytes": 5262
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-consumer.log",
+        "sha256": "9adeb223e533670e36a53f493faa90508f7689d01151f576eae70d7031933c1b",
+        "bytes": 367
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-none.log",
+        "sha256": "e432491ab06210d76acf12bdc72c9bdf1a377607f05798604d1a5b5e9f234f0a",
+        "bytes": 638
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-profile.log",
+        "sha256": "6175b3289118fe8149835cb9dd3b5d93938ea730de9ce992cb72c5154ce41071",
+        "bytes": 3269
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-size.log",
+        "sha256": "6f9bc0648e601b8d91db93b2e2a7c91f0962d9b9adb2d42c43b75dd37a960c0b",
+        "bytes": 2235
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-consumer.log",
+        "sha256": "c3e3ae4cc1302193de60e20b17c55a6227d969e6888e9163b1f3974229174409",
+        "bytes": 365
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-none.log",
+        "sha256": "bdc12420fb36c4a9b2005878a61d6dd0a6ddc05fe9cfcc7586163eab6883e062",
+        "bytes": 637
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-profile.log",
+        "sha256": "44422b4abda102a6bbbdc4537cdeca001f147ab4cc3a514a3c8c70ab66198046",
+        "bytes": 3270
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-size.log",
+        "sha256": "4b491bffae160573c05062c479c00c5d29d21ed66ff5ed64c51e3ae59659f744",
+        "bytes": 2233
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\documentation.log",
+        "sha256": "f12dcfdcdc965871458cfae3e57c25ff4a75bfb0cdec2b0ed5cfdc87085a8dae",
+        "bytes": 98
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\final-receipt.json",
+        "sha256": "4fc9ff38bd35f168081613515e23ccc50f8d030e82e27acc043112140d9cf12f",
+        "bytes": 6129
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-consumer.log",
+        "sha256": "b439cd1f0a2819708bb9d83c810152416b8ae8d5c68f00c49528a210dd6bd532",
+        "bytes": 366
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-none.log",
+        "sha256": "00371691cc47484aceb41f7559427ef4f1dfe6fb4836bc4c158b0372915d3df9",
+        "bytes": 638
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-profile.log",
+        "sha256": "ee9c1a5f5b062ee4eca04f77e46ce066465dcaab9991412a31dd2bebdaab8799",
+        "bytes": 3259
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-size.log",
+        "sha256": "d330402c9084bfeb067ec1727138c6b1b97b4ed68cac6f862a58fc6a7c73b6b4",
+        "bytes": 2227
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-consumer.log",
+        "sha256": "2ef2e13518b409d28185731b458361fc654684402fdbe0a21fe5bab2be801c35",
+        "bytes": 367
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-none.log",
+        "sha256": "8199a6bba609b61bee55e6957cb67629ef5509cffedba96ebba98e33c3d91f14",
+        "bytes": 637
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-profile.log",
+        "sha256": "09782e51f2df022b389a18b1347017d5ac0d7ab8d93ffeafa7740cae98bfadc3",
+        "bytes": 3258
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-size.log",
+        "sha256": "5e0b2fc2f426fed4b8cbadc92f880562df4b4ed0ec096e56afb8c41f4ffc6b70",
+        "bytes": 2225
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\receipt.json",
+        "sha256": "969868452df711a28fe783a4673193cf19ce0eb0b26035c604787befb8896af5",
+        "bytes": 12311
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\ReleaseSafe-native-none.log",
+        "sha256": "92439ec1962db10c50d5f6e13348c319b5fa5ef360168c11c2728ef8c92d9088",
+        "bytes": 633
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\ReleaseSafe-native-size.log",
+        "sha256": "f7e7cf8577a3fe90164afec64c73275117bcc19b51002a3521ed208eddf47203",
+        "bytes": 1534
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\python-tests.log",
+        "sha256": "4fe8b7ff4a89ff334bb1f02d3f1dc3f3a68adbf27f545d0449ddbfab3b19ed16",
+        "bytes": 2640
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\receipt.json",
+        "sha256": "202ec27b60d4916158fe26ce963d649e8522da964de4e04c41bd6efa1a70ac92",
+        "bytes": 17346
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-consumer.log",
+        "sha256": "cc58a5f1ab89b9f0457e5ac3977eea4aa26f1a7fc2b0fb4c95f5d9ad6b0ba884",
+        "bytes": 366
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-none.log",
+        "sha256": "24932c81a0709bd67a48598a0b52ffde7d13247e2b50375bfb3b62ae290ba5df",
+        "bytes": 634
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-profile.log",
+        "sha256": "634aab803ffb3972e07649f713e0361ff7da15137b846864d99b9ff03f448385",
+        "bytes": 1861
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-size.log",
+        "sha256": "336c24023a1bee48ef9fd3de9fe1b80288067b1f5665eb709db7afeb7b4584f4",
+        "bytes": 1543
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-consumer.log",
+        "sha256": "4903ef13c9efaccc8eb9086d18d9cab5fc9d1551493e74e02f82569518eddd54",
+        "bytes": 364
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-none.log",
+        "sha256": "9a11f2a7ff55091ef9c12298847fea1decde715425bf0c0714400f341a3ebdd7",
+        "bytes": 634
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-profile.log",
+        "sha256": "e50ebe283622ee419a5b6a3c2d095e081f9bd06fef026139d8d1cefbab8082f1",
+        "bytes": 1860
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-size.log",
+        "sha256": "2e311f6bcfc8c969e2abadefce37c78760d346772fa8ac6940b8f5d1c0bf9c67",
+        "bytes": 1541
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\RESULTS.md",
+        "sha256": "2f167b4abaf1521ce3cc53d19fd7760c01503ffab199b0989754dd5b4b411009",
+        "bytes": 3421
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\vendor.log",
+        "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f",
+        "bytes": 78
+      },
+      {
+        "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\zig-format.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    ]
+  },
+  "reference_counts": {
+    "total": 455,
+    "authored_or_support": 289
+  },
+  "reference_render_after_checks": {
+    "exit_code": 0,
+    "output": "Rendered 455 file entries: 289 authored/support, 166 installed SDK files\n"
+  },
+  "limits": [
+    "Debug execution is preserved as the original tool-output observation; command-1.log is a cached rerun.",
+    "Existing formal models and codec differential suite were not rerun because those sources are unchanged; no mechanical refinement proof is claimed.",
+    "The v2 sink is synchronous, not a native playback callback. ACK does not establish acoustic completion.",
+    "C02 lifecycle and C03-C09 product slices remain open. No physical capture/playback was performed in this phase.",
+    "Dependency-owned documentation/source extraction establishes navigation, not semantic proof of every file.",
+    "The Mac is unavailable and Monterey unconfirmed. Cross compilation cannot qualify native Mac audio, TLS, packaging or two-host use."
+  ]
+}

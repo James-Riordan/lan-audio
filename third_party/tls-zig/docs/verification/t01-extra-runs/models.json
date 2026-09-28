@@ -1,0 +1,125 @@
+[
+  {
+    "id": "counter-debug",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "test",
+      "src/quic/events.zig"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/counter-debug.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/counter-debug.stderr.log",
+      "sha256": "8f940b6779c412e1a5a8f17ea92e3ae7d9248d1be7a1b4e53374c41118a5b5c3"
+    }
+  },
+  {
+    "id": "check-models-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/check-models.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/check-models-normal.stdout.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/check-models-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "check-event-model-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/check-event-model.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/check-event-model-normal.stdout.log",
+      "sha256": "67eb28a8740d242f5f52c30d2f5a3706b6062e7eec5c0f44a531d9d3b2723b06"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/check-event-model-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "test-plan-lifecycle-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/test-plan-lifecycle.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-normal.stdout.log",
+      "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "check-models-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "tools/check-models.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/check-models-optimized.stdout.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/check-models-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "check-event-model-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "tools/check-event-model.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/check-event-model-optimized.stdout.log",
+      "sha256": "67eb28a8740d242f5f52c30d2f5a3706b6062e7eec5c0f44a531d9d3b2723b06"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/check-event-model-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "test-plan-lifecycle-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "tools/test-plan-lifecycle.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-optimized.stdout.log",
+      "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/test-plan-lifecycle-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]

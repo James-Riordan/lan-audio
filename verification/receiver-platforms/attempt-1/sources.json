@@ -1,0 +1,6 @@
+{
+  "build.zig": "be884d708893d03136119d30743ab2dea5a09f9e1cbc066981731031ecc5d620",
+  "src/security/peer_policy.zig": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+  "src/runtime/channel_admission.zig": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+  "tests/integration/peer_policy.zig": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520"
+}

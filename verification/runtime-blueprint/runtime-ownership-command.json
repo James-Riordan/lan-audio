@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "tools/check_models.py",
+    "--model",
+    "RuntimeOwnership",
+    "--java",
+    "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+    "--jar",
+    "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "exit_code": 0,
+  "stderr": ""
+}

@@ -1,0 +1,153 @@
+[
+  {
+    "name": "build-Debug",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "app",
+      "config-test",
+      "-j1",
+      "-Doptimize=Debug",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 6.476
+  },
+  {
+    "name": "desktop-Debug",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/desktop_setup.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 14.12
+  },
+  {
+    "name": "config-Debug",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/configuration.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 1.212
+  },
+  {
+    "name": "pair-Debug",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/pairing.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.697
+  },
+  {
+    "name": "build-ReleaseSafe",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "app",
+      "config-test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.674
+  },
+  {
+    "name": "desktop-ReleaseSafe",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/desktop_setup.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 18.803
+  },
+  {
+    "name": "config-ReleaseSafe",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/configuration.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.973
+  },
+  {
+    "name": "pair-ReleaseSafe",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/pairing.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 0.856
+  },
+  {
+    "name": "mac-config-compile",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "config-check",
+      "-j1",
+      "-Dtarget=x86_64-macos.12.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 4.198
+  },
+  {
+    "name": "references",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/build_reference.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 1.41
+  },
+  {
+    "name": "docs",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/check_docs.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 1.491
+  },
+  {
+    "name": "contracts",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/check_handoff.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "seconds": 2.762
+  },
+  {
+    "name": "custody",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/check_transport.py",
+      "--staged"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 0,
+    "seconds": 0.121
+  }
+]

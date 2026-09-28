@@ -1,0 +1,643 @@
+{
+  "executable_sha256": "95546a5add1e2399789cdf27982011f7b40969013a53e70d66f6bfd33e457d0a",
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "results": [
+    {
+      "role": "sender",
+      "mode": "valid",
+      "matched": true,
+      "seconds": 3.522,
+      "exit_code": 0,
+      "peer": {
+        "frames": 95040,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 95040,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 407,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95040,
+            "offered_frames": 0,
+            "frontier": 95040,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "confirmed",
+            "secure_close": "clean"
+          }
+        },
+        "audio": {
+          "captured_frames": 95040,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95040,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "valid",
+      "matched": true,
+      "seconds": 5.733,
+      "exit_code": 0,
+      "peer": {
+        "frames": 48000,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 48000,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 48000,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 48000,
+          "silent_frames": 205440,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "short",
+      "matched": true,
+      "seconds": 0.792,
+      "exit_code": 0,
+      "peer": {
+        "frames": 17,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 17,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 17,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 17,
+          "silent_frames": 6223,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "empty",
+      "matched": true,
+      "seconds": 0.464,
+      "exit_code": 0,
+      "peer": {
+        "frames": 0,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 0,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 0,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 3360,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "wrong-ack",
+      "matched": true,
+      "seconds": 2.302,
+      "exit_code": 1,
+      "peer": {
+        "frames": 95760,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 95760,
+        "failure": "Discontinuous",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 409,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95760,
+            "offered_frames": 0,
+            "frontier": 95760,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 95760,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95760,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\nerror: Discontinuous\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:40:31: 0x7ff7a65de943 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "disconnect",
+      "matched": true,
+      "seconds": 0.293,
+      "exit_code": 1,
+      "peer": {
+        "frames": 960,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 1440,
+        "failure": "TransportFailure",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 14,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": false,
+            "committed": 1440,
+            "offered_frames": 0,
+            "frontier": null,
+            "local": "interrupted",
+            "end": "not_attempted",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 2400,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 2400,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\nerror: TransportFailure\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:40:31: 0x7ff7a65de943 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "duplicate",
+      "matched": true,
+      "seconds": 0.211,
+      "exit_code": 1,
+      "peer": {
+        "frames": 480,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 240,
+        "failure": "Discontinuous",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 1200,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: Discontinuous\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:40:31: 0x7ff7a65de943 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "stall",
+      "matched": true,
+      "seconds": 2.743,
+      "exit_code": 1,
+      "peer": {
+        "frames": 960,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 960,
+        "failure": "Deadline",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 960,
+          "silent_frames": 98400,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\nerror: Deadline\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:40:31: 0x7ff7a65de943 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "cancel",
+      "matched": true,
+      "seconds": 0.645,
+      "exit_code": 1,
+      "peer": {
+        "frames": 22560,
+        "authenticated": true,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "result": {
+        "frames": 22560,
+        "failure": "Canceled",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 102,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "requested",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": false,
+            "committed": 22560,
+            "offered_frames": 0,
+            "frontier": null,
+            "local": "interrupted",
+            "end": "not_attempted",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 22800,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 22800,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\nerror: Canceled\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:40:31: 0x7ff7a65de943 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "cancel",
+      "matched": true,
+      "seconds": 0.743,
+      "exit_code": 1,
+      "peer": {
+        "frames": 25200,
+        "authenticated": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "result": {
+        "frames": 24240,
+        "failure": "Canceled",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "requested",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 23760,
+          "silent_frames": 2160,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\nerror: Canceled\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:40:31: 0x7ff7a65de943 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "listener",
+      "matched": true,
+      "seconds": 2.338,
+      "exit_code": 0,
+      "peer": {
+        "frames": 97920,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 97920,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 419,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 97920,
+            "offered_frames": 0,
+            "frontier": 97920,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "confirmed",
+            "secure_close": "clean"
+          }
+        },
+        "audio": {
+          "captured_frames": 97920,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 97920,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Listening on 127.0.0.1:63051; waiting for the approved peer.\nCapture started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "listener",
+      "matched": true,
+      "seconds": 1.341,
+      "exit_code": 0,
+      "peer": {
+        "frames": 48000,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 48000,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 48000,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 48000,
+          "silent_frames": 4320,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Listening on 127.0.0.1:63142; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\n",
+      "stdout": null
+    }
+  ]
+}

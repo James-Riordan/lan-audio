@@ -1,0 +1,23 @@
+1/1 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff681abbce8 in expectEqualInner__anon_61632 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff681abbe0c in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:126:13: 0x7ff681abbe37 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:117:17: 0x7ff681abd024 in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:164:27: 0x7ff681abe6f9 in acquire (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:204:9: 0x7ff681ac17d3 in test.cancel before each dispatch reclaims exactly the acquired prefix (root_zcu.obj)
+        try host.acquire(prefix);
+        ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\359baef336c66565453cc554d3a66857\root.exe --seed=0x8e400768

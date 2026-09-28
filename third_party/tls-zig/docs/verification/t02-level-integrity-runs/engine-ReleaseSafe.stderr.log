@@ -1,0 +1,17 @@
+1/10 quic_contract.test.real Engine pair gates completion on acknowledged policy and keys...OK
+2/10 quic_contract.test.one-byte fragments exercise ring wrap partial acceptance and bounded scheduling...OK
+3/10 quic_contract.test.wrong identity trust ALPN and rejected parameters deny readiness with stable terminal errors...OK
+4/10 quic_contract.test.failed release and failed alert retain native callback state through provider destruction...OK
+5/10 quic_contract.test.construction unwinds every wrapper allocation failure and rejects drift before allocation...OK
+6/10 quic_contract.test.input capacity zero offers deadlines and excess provider counts have distinct outcomes...OK
+7/10 quic_contract.test.both Engine roles interoperate with a direct OpenSSL peer and decrypt its protected QUIC packet...OK
+8/10 quic_contract.test.post-handshake tickets are driven locally without a second completion and KeyUpdate is rejected...OK
+9/10 quic_contract.test.cancel at every borrowed handshake event in both roles denies readiness and disposes custody once...OK
+10/10 quic_contract.test.surplus Initial bytes cannot hide in a lease or remain queued across level advancement...OK
+All 10 tests passed.
+Build Summary: 4/4 steps succeeded
+quic-engine-test success
++- native recordless Engine conformance success 874ms
+   +- WriteFile libssl-3-x64.dll success
+      +- compile test safe native success 53s MaxRSS:334M
+

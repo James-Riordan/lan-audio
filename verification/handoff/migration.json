@@ -1,0 +1,177 @@
+{
+  "moves": {
+    "src/session.zig": "src/session/session.zig",
+    "src/receiver.zig": "src/session/receiver.zig",
+    "src/window.zig": "src/media/playout_window.zig",
+    "src/wire.zig": "src/protocol/v1.zig",
+    "src/frame_queue.zig": "src/audio/frame_queue.zig",
+    "src/callback_bridge.zig": "src/audio/callback_bridge.zig",
+    "src/audio_device.zig": "src/host/audio_device.zig",
+    "tests/core.zig": "tests/unit/core.zig",
+    "tests/wire.zig": "tests/unit/wire.zig",
+    "tests/callback.zig": "tests/unit/callback.zig",
+    "tests/audio_device.zig": "tests/integration/audio_device.zig",
+    "tests/tls_probe.zig": "tests/integration/tls_receiver.zig",
+    "tests/windows_capture.zig": "tests/hardware/windows_capture.zig",
+    "spec/SessionWindow.tla": "spec/session/SessionWindow.tla",
+    "spec/SessionWindow.cfg": "spec/session/SessionWindow.cfg",
+    "spec/EndDrain.tla": "spec/stream/EndDrain.tla",
+    "spec/EndDrain.cfg": "spec/stream/EndDrain.cfg",
+    "spec/SpscPublication.tla": "spec/concurrency/SpscPublication.tla",
+    "spec/SpscPublication.cfg": "spec/concurrency/SpscPublication.cfg"
+  },
+  "before": [
+    {
+      "path": ".gitignore",
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393"
+    },
+    {
+      "path": "build.zig",
+      "sha256": "a4cb0af9c566fa79ffa72a5c29658ea6aa46be9117d978bc8d515e7710d089dd"
+    },
+    {
+      "path": "build.zig.zon",
+      "sha256": "cbd0b2ed45f17ddec6d8ff6bac142d3948bee9245a7e10b9a65e390f0512ab09"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "dd8d171c7927b69802c981278987ac4ff2394616d47e1a46264de08963644af8"
+    },
+    {
+      "path": "docs/CALLBACKS.md",
+      "sha256": "578ba147b5d5196687f450aa65b56c0933a4946a6f858e8b206310a3fd5493ec"
+    },
+    {
+      "path": "docs/DEPENDENCIES.md",
+      "sha256": "a65a2c89a517f177071410a02df1c176e623523f77106b67cc4fde49531bf079"
+    },
+    {
+      "path": "docs/MATHEMATICS.md",
+      "sha256": "e57e49bd4e2c197005e4a0b49b268fd0150db67b3f17d5c3c27969778449b108"
+    },
+    {
+      "path": "docs/PRODUCT.md",
+      "sha256": "f7528cf11ccb7fae7db3a1fa3170be774734f3a9b0946092ef95030c2c152371"
+    },
+    {
+      "path": "docs/TRANSPORT.md",
+      "sha256": "3064be6337a16b7874aa8c5825b028051d8df14aee734bac9a4a25b2163284a2"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "c35e9741022164d747ad2ed2476e1bd65a0746c90bd250a58c9ad33843d6103e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6827212974955581c2ad229dd54df93c671fe2fac421a459ab8f4e06c80f170a"
+    },
+    {
+      "path": "spec/EndDrain.cfg",
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378"
+    },
+    {
+      "path": "spec/EndDrain.tla",
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7"
+    },
+    {
+      "path": "spec/README.md",
+      "sha256": "21a94664ff369ca9c3885cdcca99cb6169eef47d760960a83516c2f3b0a86a5a"
+    },
+    {
+      "path": "spec/SessionWindow.cfg",
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c"
+    },
+    {
+      "path": "spec/SessionWindow.tla",
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742"
+    },
+    {
+      "path": "spec/SpscPublication.cfg",
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb"
+    },
+    {
+      "path": "spec/SpscPublication.tla",
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22"
+    },
+    {
+      "path": "src/audio_device.zig",
+      "sha256": "87c2326dd76963d7da783cfab83660ae553bdf779a240a1e0e6da4f8fa52b327"
+    },
+    {
+      "path": "src/callback_bridge.zig",
+      "sha256": "ee3a23ab715ca3afe07dc62b0752fc6f1c1c97fd4a1d8cec33e585bf2c473c54"
+    },
+    {
+      "path": "src/frame_queue.zig",
+      "sha256": "2f5e21108e3bcf0fcc98f3dc57af22db38d4e23c89f2f88de4bcece9faaa7777"
+    },
+    {
+      "path": "src/receiver.zig",
+      "sha256": "cea042407300b590417085a14f89e4852004fe17050fe65a7f5c6d3401d309b7"
+    },
+    {
+      "path": "src/root.zig",
+      "sha256": "d76c4ba82e7c90b8de3d105fdf81dfc9100fe7218ab739cd850068c8f3e7f2d8"
+    },
+    {
+      "path": "src/session.zig",
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124"
+    },
+    {
+      "path": "src/window.zig",
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e"
+    },
+    {
+      "path": "src/wire.zig",
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0"
+    },
+    {
+      "path": "tests/audio_device.zig",
+      "sha256": "9d7f658e26ebfcc57fb0b6cbf391af9098c5ea53aaa67b81f75faeb31e2034f8"
+    },
+    {
+      "path": "tests/callback.zig",
+      "sha256": "af29243eca657a06a895eefda7e4aca2f1e19cd6ea502ca594adf2ff0b40eff6"
+    },
+    {
+      "path": "tests/core.zig",
+      "sha256": "8ef337a01283909767c32e09920b2668546f70ca3b424c2bcae681d154e72568"
+    },
+    {
+      "path": "tests/dependency.zig",
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3"
+    },
+    {
+      "path": "tests/tls_probe.zig",
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353"
+    },
+    {
+      "path": "tests/windows_capture.zig",
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b"
+    },
+    {
+      "path": "tests/wire.zig",
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052"
+    },
+    {
+      "path": "tools/check_docs.py",
+      "sha256": "f81536ade6d26fdb123c13e492efb7c90fa17fa6489d011be446ca10cbcabcdb"
+    },
+    {
+      "path": "tools/check_models.py",
+      "sha256": "f875bf9969f2580c52b9fdda61c034bd6c09abc6638d25ea33e6f7abde682b4a"
+    },
+    {
+      "path": "tools/check_transport.py",
+      "sha256": "2e16387988e429a489814b0a84b97e4adc536b496164bf240a19bf4e4e69475a"
+    },
+    {
+      "path": "tools/test_transport.py",
+      "sha256": "15201e3acfdaa964721d23965b9e7339d14b037e1c80d9332c90c5bc0a393336"
+    },
+    {
+      "path": "transport-lock.json",
+      "sha256": "8373c873f1a87e51fa0ca33b5dedf78647f116c3dee86a749a298c14d6781200"
+    }
+  ]
+}

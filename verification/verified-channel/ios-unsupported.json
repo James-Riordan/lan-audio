@@ -1,0 +1,14 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "verified-transport-probe",
+    "-Dtransport-tests=true",
+    "-Dtarget=aarch64-ios.16.0",
+    "--summary",
+    "all"
+  ],
+  "exit": 1,
+  "seconds": 0.31,
+  "expected_rejection": true
+}

@@ -1,0 +1,197 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "results": [
+    {
+      "case": "fragmented-roundtrip",
+      "passed": true,
+      "exit_code": 0,
+      "peer": {
+        "authenticated": true,
+        "ack": true,
+        "clean_close": true,
+        "error": null
+      },
+      "output": "PASS audio TLS probe: blocks=20 samples=9600 checksum=15014 clean_close=true\ncallback_frames=4800 silent_frames=960 backend=null\n"
+    },
+    {
+      "case": "wrong-name",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1081)"
+      },
+      "output": "error: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:275:21: 0x7ff6ad13d01a in step (audio-tls-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:69:9: 0x7ff6ad006515 in main (audio-tls-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.HandshakeFailed;\n        ^\n"
+    },
+    {
+      "case": "wrong-alpn",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"
+      },
+      "output": "error: AlpnMismatch\nC:\\Projects\\tls-zig\\src\\driver.zig:275:21: 0x7ff6ad13d01a in step (audio-tls-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:69:9: 0x7ff6ad006515 in main (audio-tls-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.HandshakeFailed;\n        ^\n"
+    },
+    {
+      "case": "missing-alpn",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"
+      },
+      "output": "error: AlpnMismatch\nC:\\Projects\\tls-zig\\src\\driver.zig:275:21: 0x7ff6ad13d01a in step (audio-tls-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:69:9: 0x7ff6ad006515 in main (audio-tls-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.HandshakeFailed;\n        ^\n"
+    },
+    {
+      "case": "expired",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_EXPIRED] sslv3 alert certificate expired (_ssl.c:1081)"
+      },
+      "output": "error: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:275:21: 0x7ff6ad13d01a in step (audio-tls-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:69:9: 0x7ff6ad006515 in main (audio-tls-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.HandshakeFailed;\n        ^\n"
+    },
+    {
+      "case": "untrusted-client",
+      "passed": false,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1081)"
+      },
+      "output": "error: TransportFailure\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:30:20: 0x7ff6ad13e95c in recv (audio-tls-probe_zcu.obj)\n        if (n < 0) return error.TransportFailure;\n                   ^\nC:\\Projects\\tls-zig\\src\\driver.zig:79:9: 0x7ff6ad135f8d in abort (audio-tls-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:301:91: 0x7ff6ad13d7a8 in step (audio-tls-probe_zcu.obj)\n                const n = (self.transport.recv(self.transport.context, &self.input) catch return self.abort(error.TransportFailure)) orelse return .wait_input;\n                                                                                          ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:86:24: 0x7ff6ad006b2c in main (audio-tls-probe_zcu.obj)\n        const result = try network.run(&driver);\n                       ^\n"
+    },
+    {
+      "case": "oversized",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: InvalidLength\nC:\\Projects\\lan-audio\\src\\wire.zig:43:69: 0x7ff6ad13a927 in header (audio-tls-probe_zcu.obj)\n    if (std.mem.readInt(u32, bytes[8..12], .big) != bodySize(kind)) return error.InvalidLength;\n                                                                    ^\nC:\\Projects\\lan-audio\\src\\wire.zig:98:60: 0x7ff6ad139cb5 in feed (audio-tls-probe_zcu.obj)\n            if (self.wanted == header_size) self.wanted = (try header(self.storage[0..header_size])).total;\n                                                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:95:25: 0x7ff6ad00709d in main (audio-tls-probe_zcu.obj)\n            const fed = try parser.feed(incoming[offset..result.complete]);\n                        ^\n"
+    },
+    {
+      "case": "bad-profile",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: InvalidProfile\nC:\\Projects\\lan-audio\\src\\wire.zig:61:57: 0x7ff6ad139473 in validate (audio-tls-probe_zcu.obj)\n            std.mem.readInt(u16, b[10..12], .big) != 0) return error.InvalidProfile;\n                                                        ^\nC:\\Projects\\lan-audio\\src\\wire.zig:69:5: 0x7ff6ad13a1a4 in parse (audio-tls-probe_zcu.obj)\n    try validate(message);\n    ^\nC:\\Projects\\lan-audio\\src\\wire.zig:100:33: 0x7ff6ad139e26 in feed (audio-tls-probe_zcu.obj)\n                const message = try parse(self.storage[0..self.used]);\n                                ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:95:25: 0x7ff6ad00709d in main (audio-tls-probe_zcu.obj)\n            const fed = try parser.feed(incoming[offset..result.complete]);\n                        ^\n"
+    },
+    {
+      "case": "audio-before-start",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: UnexpectedMessage\nC:\\Projects\\lan-audio\\src\\receiver.zig:39:43: 0x7ff6ad13790b in accept (audio-tls-probe_zcu.obj)\n            const id = self.stream orelse return error.UnexpectedMessage;\n                                          ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:99:17: 0x7ff6ad00729c in main (audio-tls-probe_zcu.obj)\n                try receiver.accept(message);\n                ^\n"
+    },
+    {
+      "case": "wrong-stream",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: WrongStream\nC:\\Projects\\lan-audio\\src\\receiver.zig:40:57: 0x7ff6ad13796a in accept (audio-tls-probe_zcu.obj)\n            if (!std.mem.eql(u8, &id, &message.stream)) return error.WrongStream;\n                                                        ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:99:17: 0x7ff6ad00729c in main (audio-tls-probe_zcu.obj)\n                try receiver.accept(message);\n                ^\n"
+    },
+    {
+      "case": "duplicate",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Late\nC:\\Projects\\lan-audio\\src\\window.zig:31:39: 0x7ff6ad13822b in insert (audio-tls-probe_zcu.obj)\n            if (sequence < self.next) return error.Late;\n                                      ^\nC:\\Projects\\lan-audio\\src\\receiver.zig:46:21: 0x7ff6ad137bc4 in accept (audio-tls-probe_zcu.obj)\n                    try self.window.insert(self.window.epoch, message.sequence, &pcm);\n                    ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:99:17: 0x7ff6ad00729c in main (audio-tls-probe_zcu.obj)\n                try receiver.accept(message);\n                ^\n"
+    },
+    {
+      "case": "truncated-frame",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: Truncated\nC:\\Projects\\lan-audio\\src\\wire.zig:109:45: 0x7ff6ad13b397 in finish (audio-tls-probe_zcu.obj)\n        if (self.used != 0 and !self.ready) return error.Truncated;\n                                            ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:88:13: 0x7ff6ad006c78 in main (audio-tls-probe_zcu.obj)\n            try parser.finish();\n            ^\n"
+    },
+    {
+      "case": "missing-end",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: MissingEnd\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:89:13: 0x7ff6ad006bfb in main (audio-tls-probe_zcu.obj)\n            return error.MissingEnd;\n            ^\n"
+    },
+    {
+      "case": "after-end",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: DataAfterEnd\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:94:33: 0x7ff6ad006e84 in main (audio-tls-probe_zcu.obj)\n            if (receiver.ended) return error.DataAfterEnd;\n                                ^\n"
+    },
+    {
+      "case": "raw-eof",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: TransportFailure\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:23:20: 0x7ff6ad13f98c in send (audio-tls-probe_zcu.obj)\n        if (n < 0) return error.TransportFailure;\n                   ^\nC:\\Projects\\tls-zig\\src\\driver.zig:79:9: 0x7ff6ad135f8d in abort (audio-tls-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:287:85: 0x7ff6ad13d34c in step (audio-tls-probe_zcu.obj)\n                const n = (self.transport.send(self.transport.context, bytes) catch return self.abort(error.TransportFailure)) orelse return .wait_output;\n                                                                                    ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:128:9: 0x7ff6ad007f1c in main (audio-tls-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.WriteFailed;\n        ^\n"
+    },
+    {
+      "case": "stalled",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: OperationDeadline\nC:\\Projects\\tls-zig\\src\\driver.zig:79:9: 0x7ff6ad135f8d in abort (audio-tls-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:86:41: 0x7ff6ad135b72 in check (audio-tls-probe_zcu.obj)\n        if (now_ms >= self.deadline_ms) return self.abort(error.OperationDeadline);\n                                        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:222:9: 0x7ff6ad13c656 in step (audio-tls-probe_zcu.obj)\n        try self.check(now_ms);\n        ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:35:28: 0x7ff6ad00582b in run (audio-tls-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\tls_probe.zig:86:24: 0x7ff6ad006b2c in main (audio-tls-probe_zcu.obj)\n        const result = try network.run(&driver);\n                       ^\n"
+    }
+  ]
+}

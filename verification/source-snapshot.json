@@ -1,0 +1,357 @@
+{
+  "observed_at_utc": "2026-09-26T00:23:38.321393+00:00",
+  "host": "Windows-10-10.0.19045-SP0",
+  "zig_version": "0.17.0-dev.1859+dcceb318e",
+  "python_version": "3.14.3",
+  "sources": [
+    {
+      "path": "C:\\Projects\\lan-audio\\.gitignore",
+      "bytes": 61,
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig",
+      "bytes": 1582,
+      "sha256": "f7b1d7d11985b39637c4379ec8fbb69ba4851ad4030da6b074c73872b943cf1a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig.zon",
+      "bytes": 417,
+      "sha256": "35d8fc4fe495b528c2cece8d67b165179c7752a1651a9895972131a78caea29a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\ARCHITECTURE.md",
+      "bytes": 7843,
+      "sha256": "c9170b2dace2c16ebad69a24cfe274726090181cdb261428e0384b106e7a30e2"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\DEPENDENCIES.md",
+      "bytes": 6197,
+      "sha256": "64d10ebab5ece030c4ce52aabcd39c347fd0761217c9d0f3aaebaf949639f7bc"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\MATHEMATICS.md",
+      "bytes": 12384,
+      "sha256": "9aca091989280f8aabdec38d1034a5f5be0eb3779573c5b3f0c2675eb254a1b9"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\PRODUCT.md",
+      "bytes": 4902,
+      "sha256": "be9340c4d0c417031d6c481c125a5649d6b310acbc8ec6d8366eb940fd4a03d7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\VERIFICATION.md",
+      "bytes": 3226,
+      "sha256": "3aa6bccc2bfe58cfb3e664f9cc43f5833c17debc553a75b4c55f47a9d682bf36"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\README.md",
+      "bytes": 2685,
+      "sha256": "fc5eff518cbc74edae543a285a4dc1f11603017cbaaf202823ae87a081e846b2"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\README.md",
+      "bytes": 2054,
+      "sha256": "22cf9a3fa3c80ac57a842fe0502ca4d78b41ed2fd6f7330eab3d96042daa01c7"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\SessionWindow.cfg",
+      "bytes": 212,
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\SessionWindow.tla",
+      "bytes": 3912,
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\root.zig",
+      "bytes": 337,
+      "sha256": "164b205ce77d450ed7fd67390246f7619e2f7914b4fb50fbe3aac7d8a03e6bc5"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session.zig",
+      "bytes": 2946,
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\window.zig",
+      "bytes": 3125,
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\core.zig",
+      "bytes": 6443,
+      "sha256": "c960a3f0a00f588ae8444a6689649aa08e0f50df20114364bfb38c65c0c15a3a"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\dependency.zig",
+      "bytes": 459,
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_docs.py",
+      "bytes": 1637,
+      "sha256": "f81536ade6d26fdb123c13e492efb7c90fa17fa6489d011be446ca10cbcabcdb"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_models.py",
+      "bytes": 2364,
+      "sha256": "13bccb472154a7f8782ff9a0135a08ae7b0fa1bcd41252e458f7d1dd8c559599"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\.gitignore",
+      "bytes": 40,
+      "sha256": "23ccdb9ea9e115eea42eeff7c2d98cebc0557c1cc07a7bed3c624cde15388f04"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\build.zig",
+      "bytes": 2802,
+      "sha256": "e6a3138c27ad3c44e3031b0592ecbad77970d8d445e07c37be20f7d3a4f2160c"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\build.zig.zon",
+      "bytes": 298,
+      "sha256": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\CONTRACT.md",
+      "bytes": 4275,
+      "sha256": "63af620f4e3ff20e351a644319b2ffba83fcec9fb6ae1b969ee4dc6e37380806"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\DEPENDENCIES.md",
+      "bytes": 2284,
+      "sha256": "2341b51711884963da4d2a7b7a5c4565836b65108e7f8209cccb6f60a49d84c2"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\FILES.md",
+      "bytes": 2705,
+      "sha256": "c0f41ddc184bb495e4f47f88dc06bf385112c0ad43f5c277451df22770349acb"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\docs\\VERIFICATION.md",
+      "bytes": 2247,
+      "sha256": "4dd18a6bbba2035f1ea5f206afde7131c902106aa3a70f0ae921f0a6ce264f89"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\README.md",
+      "bytes": 2648,
+      "sha256": "81d07fec301f06572022adceff5458b77a4f43c6c64b09e3340328cf0fe35a70"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\native.c",
+      "bytes": 218,
+      "sha256": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\profile.h",
+      "bytes": 463,
+      "sha256": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\src\\root.zig",
+      "bytes": 594,
+      "sha256": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tests\\contract.zig",
+      "bytes": 1820,
+      "sha256": "29388ef98c0e6b988d708377a455cfe5b4fa05ca6c7f9ad7ec587cca3b037d5c"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\tools\\check_vendor.py",
+      "bytes": 691,
+      "sha256": "fad1dde8431845c3d452c0a0e7eb818020827c0335a3a623e9adddf08e15a949"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\UPSTREAM.json",
+      "bytes": 519,
+      "sha256": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\LICENSE",
+      "bytes": 2597,
+      "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+    },
+    {
+      "path": "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h",
+      "bytes": 4108168,
+      "sha256": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+    }
+  ],
+  "context_observations": [
+    {
+      "path": "C:/Projects/quic-zig/README.md",
+      "sha256": "85405339356430d291a27fff6fd3e53a82ae1a849419744f71027da07095b75e",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/quic-zig/build.zig.zon",
+      "sha256": "237f8c9bb04c00341016a0aaef54da7a13365b06e37f2feda7d3d6da3b672484",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/tls-zig/README.md",
+      "sha256": "ffed1db3ac2db81042a1ab5f25563f5c271db67f0d7a86456a723189414ca404",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/tls-zig/build.zig",
+      "sha256": "a90cf23c31ebe464c3a22677e9a51f2e62e6db5afc8a2514122fb6a4fd1d3fbf",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/tls-zig/build.zig.zon",
+      "sha256": "9f0e09488de81bdabf6123d6580992a68f74e64f584b6e491623bba6ae458861",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/paseto-zig/README.md",
+      "sha256": "9d0c7caa4e154aaebb5ab7908c2a1b0fd249efe621a0ad87a5dbddc7bbfb658f",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/paseto-zig/build.zig.zon",
+      "sha256": "4f6e121f3eaba218ed193d373b4490630349c68dab04e4df3bf27936dd51b276",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/zson/build.zig.zon",
+      "sha256": "7861d8b3c398bd10d8e21943ca986d62a08dd36173685fbebd251c68390da703",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/jcr-architecture/docs/ONTOLOGY-AND-OWNERSHIP.md",
+      "sha256": "ca8db359fb24cae42fe7efb1b8fd07acee4149ef8501863b79bfaf6789d4da15",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Projects/jcr-architecture/baseline/0.1/01-ECOSYSTEM-CONSTITUTION.md",
+      "sha256": "379c9f30330cf676776137ab18ccb38fcccd1445b6ce90fae75e3285df9c1999",
+      "role": "read-only design context; not an admitted runtime dependency"
+    },
+    {
+      "path": "C:/Inbox/Downloads/Personal/JCR_Ecosystem_Engineering_Directive.md",
+      "sha256": "09891480d4d4b8800a4f61fd9e77a5681b39df642892eeac0963c8eaae69d8fc",
+      "role": "read-only design context; not an admitted runtime dependency"
+    }
+  ],
+  "tools": [
+    {
+      "name": "zig",
+      "path": "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.EXE",
+      "sha256": "c55a2e58974d09c79653b3438312052102d5f06dab7eb19f22b6df0c4b10ce16"
+    },
+    {
+      "name": "python",
+      "path": "C:\\Users\\James\\AppData\\Local\\Python\\bin\\python.EXE",
+      "sha256": "dc429f283ed3b11145d76c723c2c544ce0fb67cfb877ae93d7e3635084eb479d"
+    },
+    {
+      "name": "java",
+      "path": "C:\\Applications\\Development\\Toolchains\\temurin\\17.0.20+8\\bin\\java.exe",
+      "sha256": "5b463cad4fcd8e4c655cc1c6f45a3b2ebb002adac94ebad2fdaa4f43e2aee211"
+    },
+    {
+      "name": "tlc",
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar",
+      "sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\consumer-debug.log",
+      "sha256": "7c4d3a1d91af7bd3cdd5e31166194132a0ec782a9237d82b1fe6faa9546e87ae"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\consumer-linux.log",
+      "sha256": "4adecb39bda1c5a0302710a1e8110c95dd1830cf87d1b42dd12d82d5bd0b5735"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\consumer-macos.log",
+      "sha256": "9b5bd6809a60541593c83265062ddb4181ea911eeabd5870ca6392f769566e49"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\core-debug.log",
+      "sha256": "a5fee0e6000c71e0806395362b0959d046db1ba746bd0e92230407d96513aab2"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\core-runs.json",
+      "sha256": "3cc3f4804d0e1b438f3aa8c857a83dcfacdf1bf09dbe96168089fdf71c6cae28"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\core-safe.log",
+      "sha256": "46460984dedc220c8c113abe19d02bfec02df464484835aa92371c3faa91d83f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\models.json",
+      "sha256": "f4962d8a933035b00ea3f5ca4f6f232b170a79b66c7e97b51fae2775628bbe5d"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\RESULTS.md",
+      "sha256": "e796f181a9333bbbea7244fc58613e3ede1bf455a6bec19a60aac68206ac4708"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\wrapper-debug.log",
+      "sha256": "b48d70ce0cb11ec1ff3ccc31e1ec4821fcd141805dd814540e6028894d32b1e0"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\wrapper-linux.log",
+      "sha256": "60d4b7217e519d12e5ad15428ee66daf6a37f6f2ae2ffae3e367f2610b8c5a36"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\wrapper-null.log",
+      "sha256": "a387b359211457c47171b28f7fe75ef8b24f3e77a3d9bd0a6d62926d1032ac71"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\wrapper-runs.json",
+      "sha256": "40a7744a5cf6cc54326c53f2b977633df1e1d1c722e19d051664584d4ac7fb74"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\verification\\wrapper-safe.log",
+      "sha256": "433dfff4c1130ddf74ff6eb9f68664d866c91ecb103a69c2d0773ad5be466ced"
+    }
+  ],
+  "final_reruns": [
+    {
+      "command": "zig build check -j1 -Dtarget=x86_64-linux-gnu --summary all",
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "reason": "final kernel and consumer source",
+      "log": "consumer-linux.log"
+    },
+    {
+      "command": "zig build test -j1 --summary all",
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "reason": "after stale callback completion epoch guard",
+      "log": "core-debug.log"
+    },
+    {
+      "command": "zig build test -j1 -Doptimize=ReleaseSafe --summary all",
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "reason": "after stale callback completion epoch guard",
+      "log": "core-safe.log"
+    },
+    {
+      "command": "zig build check -j1 -Dtarget=aarch64-macos --summary all",
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 1,
+      "result": "pure kernel compiled, audio blocked by missing Apple frameworks",
+      "log": "consumer-macos.log"
+    },
+    {
+      "command": "python tools/check_docs.py",
+      "cwd": "C:\\Projects\\lan-audio",
+      "exit_code": 0,
+      "result": "35 authored/vendor paths mapped; local link targets exist"
+    }
+  ],
+  "limits": "Sequential byte observations; not atomic, signed, a full compiler distribution hash, a release or semantic correctness proof. Candidate file hashes are scope/provenance only."
+}

@@ -1,0 +1,12 @@
+{
+  "audio-recovery-probe.exe": "14b9e3ef0e4d51e9fcd99f93f8832c86314c29863f004e0d6b2de732dac5299b",
+  "audio-tls-probe.exe": "c683cc66bfcb555e43c9b241b782ee353d02692b3b62b703717377f6cfbd50e9",
+  "audio-v2-codec-probe.dll": "18b30ff3ee733203a6fb8b87e5309062952f319bc1d19ee03c73aa13bf309ee6",
+  "audio-v2-receiver-probe.exe": "255a00a27558557c8338d8006e0f7e6405f3ad02d1c5a38d0dcd3397f3a7b378",
+  "audio-v2-sender-probe.exe": "6471c040664db60da23db40526fedba24618d7ad18a4601b90b0657dec188e52",
+  "audio-verified-probe.exe": "382c882c01a383f8c6f26c0ca3dc3791714da0f03f000b5a9661ee3dec0e147c",
+  "audio-worker-probe.exe": "95546a5add1e2399789cdf27982011f7b40969013a53e70d66f6bfd33e457d0a",
+  "lan-audio.exe": "93eec9f9dcf66329cfe84995e830ff69aab31d337f9cc69fa08ab012af66a298",
+  "libcrypto-3-x64.dll": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d",
+  "libssl-3-x64.dll": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce"
+}

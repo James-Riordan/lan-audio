@@ -1,0 +1,35 @@
+[
+  {
+    "name": "repeat-prepare",
+    "command": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "start.cmd --prepare"
+    ],
+    "exit_code": 0,
+    "seconds": 2.14
+  },
+  {
+    "name": "isolated-onboarding",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone \u00e9 fh2g7ed8\\lan-audio\\.lan-audio\\python-f6cca216a359be84\\python.exe",
+      "tests/integration/repository_launcher.py"
+    ],
+    "exit_code": 0,
+    "seconds": 7.76
+  },
+  {
+    "name": "package-candidate",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone \u00e9 fh2g7ed8\\lan-audio\\.lan-audio\\python-f6cca216a359be84\\python.exe",
+      "tools/desktop_release.py",
+      "--output",
+      ".lan-audio/test-package",
+      "--revision",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ],
+    "exit_code": 0,
+    "seconds": 0.67
+  }
+]

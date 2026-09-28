@@ -1,0 +1,2450 @@
+{
+  "phase": "verified-channel",
+  "observed_at_utc": "2026-09-26T19:26:36.605196+00:00",
+  "host": "Windows-10-10.0.19045-SP0",
+  "zig": "0.17.0-dev.1859+dcceb318e",
+  "prior_receipt": {
+    "path": "C:\\Projects\\lan-audio\\verification\\receiver-platforms\\receipt.json",
+    "sha256": "18631d3e831db5c87fee13c8f7e0fc76029b58be3780088d330edab2480c229d"
+  },
+  "prior_application_files_verified": 135,
+  "prior_evidence_files_verified": 206,
+  "scope": "Real native Socket/TLS/peer authorization/v2 records. No physical audio or production receiver apps.",
+  "final_host_runs": [
+    {
+      "label": "build-Debug",
+      "command": [
+        "zig",
+        "build",
+        "verified-transport-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=Debug",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 19.139
+    },
+    {
+      "label": "peer-Debug",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/verified_channel_peer.py",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\final-host\\Debug.json"
+      ],
+      "exit_code": 0,
+      "seconds": 11.16
+    },
+    {
+      "label": "build-ReleaseSafe",
+      "command": [
+        "zig",
+        "build",
+        "verified-transport-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 22.743
+    },
+    {
+      "label": "peer-ReleaseSafe",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/verified_channel_peer.py",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\final-host\\ReleaseSafe.json"
+      ],
+      "exit_code": 0,
+      "seconds": 7.795
+    }
+  ],
+  "integration_and_component_runs": [
+    {
+      "label": "debug-build",
+      "command": [
+        "zig",
+        "build",
+        "verified-transport-probe",
+        "v2-transport-probes",
+        "transport-probe",
+        "policy-test",
+        "network-test",
+        "-Dtransport-tests=true",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 60.595
+    },
+    {
+      "label": "debug-peer",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/verified_channel_peer.py",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\qualified\\debug-peers.json"
+      ],
+      "exit_code": 0,
+      "seconds": 27.343
+    },
+    {
+      "label": "legacy-v2",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/protocol_v2_peer.py",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\qualified\\legacy-v2.json"
+      ],
+      "exit_code": 0,
+      "seconds": 24.108
+    },
+    {
+      "label": "legacy-v1",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/test_transport.py",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\qualified\\legacy-v1.json"
+      ],
+      "exit_code": 0,
+      "seconds": 11.057
+    },
+    {
+      "label": "safe-build",
+      "command": [
+        "zig",
+        "build",
+        "verified-transport-probe",
+        "policy-test",
+        "network-test",
+        "-Dtransport-tests=true",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 48.652
+    },
+    {
+      "label": "safe-peer",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/verified_channel_peer.py",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\qualified\\safe-peers.json"
+      ],
+      "exit_code": 0,
+      "seconds": 17.813
+    },
+    {
+      "label": "custody",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_transport.py",
+        "--staged"
+      ],
+      "exit_code": 0,
+      "seconds": 1.556
+    }
+  ],
+  "mutations": [
+    {
+      "name": "bypass-peer",
+      "caught": true,
+      "source_sha256": "61faefe5380db403114b38159a8c01e430a70996a889e5b098a211c315cddd68",
+      "failed_cases": [
+        {
+          "tls_role": "client",
+          "audio_role": "sender",
+          "mode": "wrong-peer",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "sender",
+          "mode": "wrong-peer",
+          "exit_code": 1
+        }
+      ]
+    },
+    {
+      "name": "retain-permission",
+      "caught": true,
+      "source_sha256": "63fe04d879f8d5be88940d45b039d51518fdb7f376dd7f8bdf1e12c2b136558d",
+      "failed_cases": [
+        {
+          "tls_role": "client",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "client",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "client",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "client",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        }
+      ]
+    },
+    {
+      "name": "stale-closes-current",
+      "caught": true,
+      "source_sha256": "4c4142d39b9b9ac24a9e8633dfe1e10370271f0f6f13d06dbee1c552217dcd71",
+      "failed_cases": [
+        {
+          "tls_role": "client",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "client",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "client",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "client",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "sender",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        },
+        {
+          "tls_role": "server",
+          "audio_role": "receiver",
+          "mode": "valid",
+          "exit_code": 1
+        }
+      ]
+    }
+  ],
+  "buffered_regressions": [
+    {
+      "label": "before-build",
+      "command": [
+        "zig",
+        "build",
+        "verified-transport-probe",
+        "-Dtransport-tests=true",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 12.616
+    },
+    {
+      "label": "buffered-deadline",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/verified_channel_peer.py",
+        "--only",
+        "buffered-deadline",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\buffered-record-regression\\buffered-deadline.json"
+      ],
+      "exit_code": 1,
+      "seconds": 1.346
+    },
+    {
+      "label": "after-end",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/integration/verified_channel_peer.py",
+        "--only",
+        "after-end",
+        "--output",
+        "C:\\Projects\\lan-audio\\verification\\verified-channel\\buffered-record-regression\\after-end.json"
+      ],
+      "exit_code": 1,
+      "seconds": 1.37
+    }
+  ],
+  "checks": [
+    {
+      "name": "reference",
+      "command": [
+        "python",
+        "tools/build_reference.py",
+        "--application-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "docs",
+      "command": [
+        "python",
+        "tools/check_docs.py",
+        "--application-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "handoff",
+      "command": [
+        "python",
+        "tools/check_handoff.py",
+        "--application-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "custody",
+      "command": [
+        "python",
+        "tools/check_transport.py",
+        "--staged"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "dependency_adoption": {
+    "scope": "Explicit records-only adoption; existing stable Engine/Driver and Windows SDK retained. New leaf identity export reviewed, owner regression evidence bound by copied T00 receipt. QUIC modules are configured by build.zig but are not dependencies of imported tls module or our probe. Consumer tests follow; Apple TLS remains unqualified.",
+    "changes": [
+      {
+        "path": "build.zig",
+        "before": "62d431a423ff9017333a57fb1611d943b639ed6839a9f1364dbcbb0513d49d20",
+        "after": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134"
+      },
+      {
+        "path": "src/backend.c",
+        "before": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21",
+        "after": "dfcc61371663a4fc54b7b6aad16518f966707cf376ab7cb4f83bf8689de622a4"
+      },
+      {
+        "path": "src/backend.h",
+        "before": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc",
+        "after": "0e0f3dbfae408fe39bd33592e943e5cdce43abbaadbe906216b4d1bf93569cbd"
+      },
+      {
+        "path": "src/backend.zig",
+        "before": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6",
+        "after": "9a7e22086f439b6381c0810f6259cd923c359b7e8c920222a1f974c0e7e91c9c"
+      },
+      {
+        "path": "src/root.zig",
+        "before": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57",
+        "after": "99587be81255039fef2f9e8c8d803097f0243748c9ba0e5f766ae257c56dc0b3"
+      }
+    ],
+    "owner_receipt_sha256": "c0f263dcd5896af803c369466321369ba1a99fd231ad47441576c136796cdeaa",
+    "review": "C export validates live verified peer, TLS completion, shutdown/EOF/failure and returns copied SHA256 with atomic output. Zig separate error set preserves existing methods. Build examined in full: records module retains DLL import archives, explicit SDK paths and C flags; additional QUIC module/test graph is unrequested. No SDK, driver, fixtures or existing source entry outside these five changed."
+  },
+  "application_files": {
+    ".gitignore": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+    "AGENTS.md": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+    "build.zig": "1eb2611ed0b5d02b0c29875088cfffad00be3270e23b4aa5a47199450a1dddb7",
+    "build.zig.zon": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+    "docs/architecture/ecosystem-integration.md": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+    "docs/architecture/modules.md": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+    "docs/architecture/platform-capabilities.md": "7bfd20dc55aa93457abf88b44f7f7496b35d1a4329e7807041adc8dc7d270aef",
+    "docs/ARCHITECTURE.md": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+    "docs/CALLBACKS.md": "4b9fc9f5f77277339dbbfd4386081669cb28ee199b9b02a8e51ec679352a7260",
+    "docs/DEPENDENCIES.md": "bc24cdf5c5df25cd24a4bef5c932aedf9b5029bc2f12361c9fdea5237c8ef529",
+    "docs/design/configuration-resolution.md": "4c7b9834d8982a3f8772cf78d5dd56283c372f21c79c8fa710df1d40fab831b8",
+    "docs/design/lifecycle-transactions.md": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+    "docs/design/receive-drain.md": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+    "docs/design/system-mathematics.md": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+    "docs/development/documentation.md": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+    "docs/development/workflow.md": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+    "docs/implementation/completion-sequence.md": "c70cdb5dc4d490a7ffd962a8fd63356172238342554dbca599f878a09bc797f5",
+    "docs/implementation/decisions.md": "c8ebf56107012eb399526a687fa121d44b8f0aaa62871ccb5352598f394982bc",
+    "docs/implementation/interfaces.md": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+    "docs/implementation/layout.md": "7322a7bb959892618541b9f2fffecb5d2703459eaf9dfbee18ea8b4a63463c3a",
+    "docs/implementation/roadmap.md": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+    "docs/implementation/runtime-blueprint.md": "413c0237d3d544b0e679e21763a54346013daa31833aeecaf5c4414686fbafd3",
+    "docs/implementation/START_HERE.md": "f49587b0f119c577198aed32c1af9309ec4e8d6a62ac9ca0d74cc33d16a2a133",
+    "docs/implementation/takeover-readiness.md": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+    "docs/implementation/work-packages/01-target-builds.md": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+    "docs/implementation/work-packages/02-fidelity-protocol.md": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+    "docs/implementation/work-packages/03-identity-endpoints.md": "b8dc46f7e6852eb0a287bf15062fd516d5ec6339c7136a62062886682c1feab5",
+    "docs/implementation/work-packages/04-first-sound.md": "9550de9bde0483fab2b6ab69f4a41ffbefdd974a381c45a945e6fc4e13a33d15",
+    "docs/implementation/work-packages/05-timing-clocks.md": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+    "docs/implementation/work-packages/06-network-resilience.md": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+    "docs/implementation/work-packages/07-observability.md": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+    "docs/implementation/work-packages/08-user-experience.md": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+    "docs/implementation/work-packages/09-packaging.md": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+    "docs/implementation/work-packages/10-qualification.md": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+    "docs/implementation/work-packages/11-apple-receivers.md": "635d583935c8775c94dd992915a57111280257c811efecd1cb6523db336c7822",
+    "docs/literate/proof-ledger.md": "f28eb517b5a83a36f44a144c5f75dffca17b75a4066c344343ea98854ce4ba58",
+    "docs/literate/quantitative-design.md": "f68abc33e34faaa3729ce9789da947eb6d23355671da29aded7d6ba8bfbe102b",
+    "docs/literate/README.md": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+    "docs/literate/runtime-argument.md": "29c72d4d36dfac4f87a7f2d33809dd1fc4cd74ab4c8edf07bfa1661b1f4262d9",
+    "docs/literate/stream-argument.md": "4e6d5ac4d58d4f430261f7d48de36942e124f4b923631b46e619a0ece028a819",
+    "docs/MATHEMATICS.md": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+    "docs/media/assembly.md": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+    "docs/media/pending-block.md": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+    "docs/PRODUCT.md": "c0885c8bb5a9159460ac57b11612051c2f3ba75928aeaa96c92cc941952f56d9",
+    "docs/protocol/negotiation.md": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+    "docs/protocol/v2.md": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+    "docs/README.md": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+    "docs/reference/api-contracts.md": "9a0053053747b98432fcc14e39cfebcd2e50cb321a6f587d14f93930f9cb9b6b",
+    "docs/reference/evidence.md": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+    "docs/reference/file-index.json": "1d9dacf215a4deca7b6e015f8cb888c5b2424a9290a73e880d6512a82be7dc6e",
+    "docs/reference/lan-audio.md": "679f0a59bc69f86cf0845b2b2998b91e9bf56e81b8385b32b44beaaa41cbade9",
+    "docs/reference/miniaudio-zig.md": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+    "docs/reference/README.md": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+    "docs/reference/tls-zig.md": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+    "docs/reference/upstream-assets.md": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+    "docs/runtime/device-discovery.md": "a084ce3eefa860caa3be57d63ce4d63d4234d035e82de8c84f33232e696d5fce",
+    "docs/runtime/lifecycle-core.md": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+    "docs/runtime/native-events.md": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+    "docs/runtime/native-failures.md": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+    "docs/runtime/native-fence.md": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+    "docs/runtime/network-owner.md": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+    "docs/runtime/peer-authorization.md": "7f5f427920fda5418a1ff428fc7144d4fb1dbc060ec1429be175ab3d2347afc4",
+    "docs/runtime/receive-drain.md": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+    "docs/runtime/send-drain.md": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+    "docs/runtime/verified-channel.md": "a0d376d72ca52e8fb4f400ff9cf16fde091a287aad6e3ee85d22aca017e10537",
+    "docs/TRANSPORT.md": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+    "docs/verification/acceptance-matrix.md": "825fa798bd3954e8c5dba4e8693fb00b68f3df137e4e5f2a605f40ab64c9cbac",
+    "docs/verification/runtime-obligations.md": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+    "docs/verification/scenarios.md": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+    "docs/verification/v2-independent.md": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+    "docs/VERIFICATION.md": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+    "README.md": "eda722c55b6f3b1f78b7e26596e72202e8add11c69f297d40984a818222cd0d3",
+    "spec/concurrency/SpscPublication.cfg": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+    "spec/concurrency/SpscPublication.tla": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+    "spec/README.md": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+    "spec/runtime/lifecycle_transactions.py": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+    "spec/runtime/ReceiveDrain.cfg": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+    "spec/runtime/ReceiveDrain.tla": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+    "spec/runtime/RuntimeOwnership.cfg": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+    "spec/runtime/RuntimeOwnership.tla": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+    "spec/session/SessionWindow.cfg": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+    "spec/session/SessionWindow.tla": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+    "spec/stream/EndDrain.cfg": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+    "spec/stream/EndDrain.tla": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+    "src/app/main.zig": "9230df1f82b4c001349cf4da53b57575b94c73130734294b5c6bbda011e2569e",
+    "src/audio/callback_bridge.zig": "aa560ade34583d2fbcb2e024491fb232c1b90f3446b32a7ff731c6fbe0d2c3ef",
+    "src/audio/frame_queue.zig": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+    "src/host/audio_device.zig": "64265a3bab0fe55ba3eac39c3e3b1a5c8e64b10bf7719595d243484b7df87bb4",
+    "src/host/net/native.c": "8a8be9c796430320dd18d9214e09e995c6819d9beab95c8a26dbdbd4d80203e8",
+    "src/host/net/native.h": "15f0bce3a92493a2e3c38126d411c37273ad107a3f2037eb1be4592e03a91448",
+    "src/host/net/socket.zig": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+    "src/host/verified_channel.zig": "e6c20eddaa768393b66dab908a29175abf09c639ac4b1f2c8b8269f8575bf1ab",
+    "src/media/block_assembler.zig": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+    "src/media/format.zig": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+    "src/media/playout_window.zig": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+    "src/protocol/negotiation.zig": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+    "src/protocol/v1.zig": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+    "src/protocol/v2.zig": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+    "src/README.md": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+    "src/root.zig": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+    "src/runtime/channel_admission.zig": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+    "src/runtime/lifecycle.zig": "6217a0552185432991be5fbd1653073f6b09e0cfa51f32f8d9d29557e9fa7d50",
+    "src/runtime/pending_block.zig": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+    "src/runtime/receive_drain.zig": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+    "src/runtime/send_drain.zig": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+    "src/security/peer_policy.zig": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+    "src/session/receiver.zig": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+    "src/session/session.zig": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+    "tests/dependency.zig": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+    "tests/hardware/windows_capture.zig": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+    "tests/integration/audio_device.zig": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+    "tests/integration/loopback_transport.zig": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+    "tests/integration/network_host.zig": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+    "tests/integration/peer_policy.zig": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520",
+    "tests/integration/protocol_v2_peer.py": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+    "tests/integration/protocol_v2_reference.py": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+    "tests/integration/runtime_lifecycle.zig": "cb8dc5c7b329ceaa2fcac1758f730dd468ed6646f76a0d32d6f4bae9f8f2b86c",
+    "tests/integration/tls_receiver.zig": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+    "tests/integration/tls_v2.zig": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+    "tests/integration/v2_codec_probe.zig": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+    "tests/integration/verified_channel.zig": "3602af1b96df6384de70c5d999eb7a31d1e93b8fbbd4eea73a90b694df357280",
+    "tests/integration/verified_channel_peer.py": "03ac9d143a7bb71af5bc81a5b3ef0f23ad56d6c2ba694a186c859d9f5cff2887",
+    "tests/unit/callback.zig": "a50ce904530b120949a7d61582e1bb250722368cc760824893e5f1d9ce9c8bdd",
+    "tests/unit/core.zig": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+    "tests/unit/media/assembler.zig": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+    "tests/unit/protocol/negotiation.zig": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+    "tests/unit/protocol/v2.zig": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+    "tests/unit/runtime/pending_block.zig": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+    "tests/unit/wire.zig": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+    "tools/build_reference.py": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+    "tools/check_docs.py": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+    "tools/check_handoff.py": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+    "tools/check_lifecycle_spec.py": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+    "tools/check_models.py": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+    "tools/check_transport.py": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+    "tools/reference_contracts.json": "3e245995ac8b165525ed45404b82ff2ac6cdc5e9adbcf5bd88bc7b30c2039c65",
+    "tools/test_transport.py": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+    "tools/test_v2_differential.py": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+    "transport-lock.json": "e2ffcfcbab87ccf7f1f10ec20f334e65457e8220c9572fec28adf9fe3c5bf061"
+  },
+  "changed_or_added_paths": [
+    "build.zig",
+    "docs/DEPENDENCIES.md",
+    "docs/implementation/completion-sequence.md",
+    "docs/implementation/layout.md",
+    "docs/implementation/runtime-blueprint.md",
+    "docs/implementation/START_HERE.md",
+    "docs/implementation/work-packages/03-identity-endpoints.md",
+    "docs/literate/proof-ledger.md",
+    "docs/reference/api-contracts.md",
+    "docs/reference/file-index.json",
+    "docs/reference/lan-audio.md",
+    "docs/runtime/peer-authorization.md",
+    "docs/runtime/verified-channel.md",
+    "docs/verification/acceptance-matrix.md",
+    "README.md",
+    "src/host/verified_channel.zig",
+    "tests/integration/verified_channel.zig",
+    "tests/integration/verified_channel_peer.py",
+    "tools/reference_contracts.json",
+    "transport-lock.json"
+  ],
+  "stable_source_files": [
+    "src/root.zig",
+    "src/host/audio_device.zig",
+    "src/host/net/socket.zig",
+    "src/host/net/native.c",
+    "src/host/net/native.h",
+    "src/runtime/send_drain.zig",
+    "src/runtime/receive_drain.zig",
+    "src/runtime/lifecycle.zig",
+    "src/app/main.zig"
+  ],
+  "source_snapshot": "source-snapshot",
+  "executable": {
+    "path": "zig-out/bin/audio-verified-probe.exe",
+    "sha256": "d10d248332b90e4d135df8d335e6e51d17a5f1eae88daea1c88a94fde40b0e49",
+    "configuration": "ReleaseSafe"
+  },
+  "limits": [
+    "Windows native execution only; MacBook/iPhone receivers unimplemented/unqualified.",
+    "Public credentials/frozen wall time only in test probe. Real enrollment/storage remains open.",
+    "No physical audio, actual worker/controller/callback mapping, sustained timing or release claim.",
+    "Legacy/component regressions retain unchanged source closure; final host guards freshly qualify 43 cases in both modes.",
+    "TLS owner receipt is reviewed records-only adoption, not adoption of independently evolving QUIC sources."
+  ],
+  "evidence_files": [
+    {
+      "path": "attempt-1/build.log",
+      "sha256": "8c256e455ef0772b40312c2ba45d4768fb90088c70ac89adfe46a562f9a4d54a",
+      "bytes": 1384
+    },
+    {
+      "path": "attempt-1/build.zig",
+      "sha256": "0ac591dd8f791ea48242fd4da4e7f75c46c0d960f5139735f8666ea8334cb0f3",
+      "bytes": 15624
+    },
+    {
+      "path": "attempt-1/run.json",
+      "sha256": "e92fe24766a0028d822272126f21795a5ba1c7c254d2d89d6d290cdbf4cf562e",
+      "bytes": 144
+    },
+    {
+      "path": "attempt-1/src/host/verified_channel.zig",
+      "sha256": "ee383898d9d2a51a3c86accbd06f4fa106133878431b572d752138213d0b1213",
+      "bytes": 9581
+    },
+    {
+      "path": "attempt-1/tests/integration/verified_channel.zig",
+      "sha256": "fdaa7c127d0857e60c4077899a2f3ca80f2c4e4317e4dc8db30a8cade5f5155a",
+      "bytes": 8411
+    },
+    {
+      "path": "attempt-2/classifier-review.json",
+      "sha256": "2ec9e082d4fb089ebc35f5da8608407d4ea0085ac167d6cf44cd1faa652c8e82",
+      "bytes": 420
+    },
+    {
+      "path": "attempt-2/peers.json",
+      "sha256": "56351ea1e2d6d23382db0b6e1e70e9e6dbd688de5486eb9fd57d74a1574f064f",
+      "bytes": 54120
+    },
+    {
+      "path": "attempt-2/run-0.log",
+      "sha256": "30d4b1c7e4637a6d7283e6a7d498012d36c0922f936059ac92a10799b51a0489",
+      "bytes": 1383
+    },
+    {
+      "path": "attempt-2/run-1.log",
+      "sha256": "fdb91a8aec2c22c2de18def8d60626e9f9390f387460ffe6ae4446168b06ff57",
+      "bytes": 1831
+    },
+    {
+      "path": "attempt-2/runs.json",
+      "sha256": "9bf703b379d3bec91e51c47eed6976fa488cbe9dfdc599318c898aedf590100c",
+      "bytes": 461
+    },
+    {
+      "path": "attempt-2/source/build.zig",
+      "sha256": "0ac591dd8f791ea48242fd4da4e7f75c46c0d960f5139735f8666ea8334cb0f3",
+      "bytes": 15624
+    },
+    {
+      "path": "attempt-2/source/src/host/verified_channel.zig",
+      "sha256": "ee383898d9d2a51a3c86accbd06f4fa106133878431b572d752138213d0b1213",
+      "bytes": 9581
+    },
+    {
+      "path": "attempt-2/source/tests/integration/verified_channel.zig",
+      "sha256": "e1e3697fa86c5bcf3050a4ac844d0f4590f92eb2fd49794713ae916a7796df1f",
+      "bytes": 8434
+    },
+    {
+      "path": "attempt-2/source/tests/integration/verified_channel_peer.py",
+      "sha256": "ef2784aec02427d8e3d70d9ecd23fca3bdaa13ce8ece8c6badbe1335101ede1b",
+      "bytes": 11360
+    },
+    {
+      "path": "attempt-3/peers.json",
+      "sha256": "669ace66dd2a3c6ce8d56f4ddcdb1ec765ad70ca56e0fc62beae1d1218cbb628",
+      "bytes": 62649
+    },
+    {
+      "path": "attempt-3/run-0.log",
+      "sha256": "b051cf2ab752c099261c704b0e14b0ea6b92d44527e43a6bf9920c8dd8cd4ae5",
+      "bytes": 1385
+    },
+    {
+      "path": "attempt-3/run-1.log",
+      "sha256": "80cc1584a60e4ee844396d28cb983809026025bc0b382dea9802b908212777a7",
+      "bytes": 2023
+    },
+    {
+      "path": "attempt-3/runs.json",
+      "sha256": "05e79f4b9db8dfb4c4facf1581376e4db3c315f4f656afcc323831929abe3b71",
+      "bytes": 461
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "bec4403031a582436b956cdbade818d83b88ef802ea67d73c84c8cf4a21080d0",
+      "bytes": 14590
+    },
+    {
+      "path": "before/.gitignore",
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+      "bytes": 61
+    },
+    {
+      "path": "before/AGENTS.md",
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+      "bytes": 1882
+    },
+    {
+      "path": "before/build.zig",
+      "sha256": "30fddc50389ff4938f808a95371dab00a71d37817122ec8bfe8f9470fe26e41b",
+      "bytes": 14214
+    },
+    {
+      "path": "before/build.zig.zon",
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+      "bytes": 662
+    },
+    {
+      "path": "before/docs/architecture/ecosystem-integration.md",
+      "sha256": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+      "bytes": 10194
+    },
+    {
+      "path": "before/docs/architecture/modules.md",
+      "sha256": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+      "bytes": 3839
+    },
+    {
+      "path": "before/docs/architecture/platform-capabilities.md",
+      "sha256": "7bfd20dc55aa93457abf88b44f7f7496b35d1a4329e7807041adc8dc7d270aef",
+      "bytes": 6448
+    },
+    {
+      "path": "before/docs/ARCHITECTURE.md",
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+      "bytes": 13449
+    },
+    {
+      "path": "before/docs/CALLBACKS.md",
+      "sha256": "4b9fc9f5f77277339dbbfd4386081669cb28ee199b9b02a8e51ec679352a7260",
+      "bytes": 7763
+    },
+    {
+      "path": "before/docs/DEPENDENCIES.md",
+      "sha256": "7f585eab6f3049884cba9c89d7aa27cd4f99f78aa19fbb31be2fc4c07450d39e",
+      "bytes": 7715
+    },
+    {
+      "path": "before/docs/design/configuration-resolution.md",
+      "sha256": "4c7b9834d8982a3f8772cf78d5dd56283c372f21c79c8fa710df1d40fab831b8",
+      "bytes": 9509
+    },
+    {
+      "path": "before/docs/design/lifecycle-transactions.md",
+      "sha256": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+      "bytes": 16779
+    },
+    {
+      "path": "before/docs/design/receive-drain.md",
+      "sha256": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+      "bytes": 8366
+    },
+    {
+      "path": "before/docs/design/system-mathematics.md",
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+      "bytes": 6660
+    },
+    {
+      "path": "before/docs/development/documentation.md",
+      "sha256": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+      "bytes": 4262
+    },
+    {
+      "path": "before/docs/development/workflow.md",
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+      "bytes": 2769
+    },
+    {
+      "path": "before/docs/implementation/completion-sequence.md",
+      "sha256": "9f353de4c1922597c89ece447b99bc87b8e90495b007fe7ad3efa077841b1a8c",
+      "bytes": 11110
+    },
+    {
+      "path": "before/docs/implementation/decisions.md",
+      "sha256": "c8ebf56107012eb399526a687fa121d44b8f0aaa62871ccb5352598f394982bc",
+      "bytes": 8632
+    },
+    {
+      "path": "before/docs/implementation/interfaces.md",
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+      "bytes": 7194
+    },
+    {
+      "path": "before/docs/implementation/layout.md",
+      "sha256": "ccc55dfbe89a45db2121a0dcc83ff083f13696b03b28ab66a0f748b3e4635016",
+      "bytes": 8550
+    },
+    {
+      "path": "before/docs/implementation/roadmap.md",
+      "sha256": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+      "bytes": 4039
+    },
+    {
+      "path": "before/docs/implementation/runtime-blueprint.md",
+      "sha256": "f379e7596490ffaaedb4638676bc982dba681c7b21041adf00233a628249d0b4",
+      "bytes": 13963
+    },
+    {
+      "path": "before/docs/implementation/START_HERE.md",
+      "sha256": "500a1931bb842116c750f223971408828423ecd702038a22cc1460d67bf3b457",
+      "bytes": 7560
+    },
+    {
+      "path": "before/docs/implementation/takeover-readiness.md",
+      "sha256": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+      "bytes": 8881
+    },
+    {
+      "path": "before/docs/implementation/work-packages/01-target-builds.md",
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+      "bytes": 3079
+    },
+    {
+      "path": "before/docs/implementation/work-packages/02-fidelity-protocol.md",
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+      "bytes": 4625
+    },
+    {
+      "path": "before/docs/implementation/work-packages/03-identity-endpoints.md",
+      "sha256": "60bdb9cf914ec3fc3060104547bf5a8f2f93170a43d2b9e6b9b22e186273e1c3",
+      "bytes": 3947
+    },
+    {
+      "path": "before/docs/implementation/work-packages/04-first-sound.md",
+      "sha256": "9550de9bde0483fab2b6ab69f4a41ffbefdd974a381c45a945e6fc4e13a33d15",
+      "bytes": 4680
+    },
+    {
+      "path": "before/docs/implementation/work-packages/05-timing-clocks.md",
+      "sha256": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+      "bytes": 3505
+    },
+    {
+      "path": "before/docs/implementation/work-packages/06-network-resilience.md",
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+      "bytes": 2752
+    },
+    {
+      "path": "before/docs/implementation/work-packages/07-observability.md",
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+      "bytes": 2320
+    },
+    {
+      "path": "before/docs/implementation/work-packages/08-user-experience.md",
+      "sha256": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+      "bytes": 2815
+    },
+    {
+      "path": "before/docs/implementation/work-packages/09-packaging.md",
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+      "bytes": 2411
+    },
+    {
+      "path": "before/docs/implementation/work-packages/10-qualification.md",
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+      "bytes": 2389
+    },
+    {
+      "path": "before/docs/implementation/work-packages/11-apple-receivers.md",
+      "sha256": "635d583935c8775c94dd992915a57111280257c811efecd1cb6523db336c7822",
+      "bytes": 5754
+    },
+    {
+      "path": "before/docs/literate/proof-ledger.md",
+      "sha256": "a89af3bb2745d5cadd4bd2a16bdc622e65ecfe8b7940333cafcd693938f6581e",
+      "bytes": 8670
+    },
+    {
+      "path": "before/docs/literate/quantitative-design.md",
+      "sha256": "f68abc33e34faaa3729ce9789da947eb6d23355671da29aded7d6ba8bfbe102b",
+      "bytes": 6594
+    },
+    {
+      "path": "before/docs/literate/README.md",
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+      "bytes": 4639
+    },
+    {
+      "path": "before/docs/literate/runtime-argument.md",
+      "sha256": "29c72d4d36dfac4f87a7f2d33809dd1fc4cd74ab4c8edf07bfa1661b1f4262d9",
+      "bytes": 10428
+    },
+    {
+      "path": "before/docs/literate/stream-argument.md",
+      "sha256": "4e6d5ac4d58d4f430261f7d48de36942e124f4b923631b46e619a0ece028a819",
+      "bytes": 10101
+    },
+    {
+      "path": "before/docs/MATHEMATICS.md",
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+      "bytes": 19013
+    },
+    {
+      "path": "before/docs/media/assembly.md",
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+      "bytes": 6768
+    },
+    {
+      "path": "before/docs/media/pending-block.md",
+      "sha256": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+      "bytes": 7285
+    },
+    {
+      "path": "before/docs/PRODUCT.md",
+      "sha256": "c0885c8bb5a9159460ac57b11612051c2f3ba75928aeaa96c92cc941952f56d9",
+      "bytes": 11558
+    },
+    {
+      "path": "before/docs/protocol/negotiation.md",
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+      "bytes": 5106
+    },
+    {
+      "path": "before/docs/protocol/v2.md",
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+      "bytes": 7835
+    },
+    {
+      "path": "before/docs/README.md",
+      "sha256": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+      "bytes": 3392
+    },
+    {
+      "path": "before/docs/reference/api-contracts.md",
+      "sha256": "5ba246ff356a99c14a8e764acad04c7ce32b83e5be847619039f63322c0ea96a",
+      "bytes": 16549
+    },
+    {
+      "path": "before/docs/reference/evidence.md",
+      "sha256": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+      "bytes": 220775
+    },
+    {
+      "path": "before/docs/reference/file-index.json",
+      "sha256": "b8f081f2d52631305cb433f70ad277b475f186baca7da4ce5aebff4a1ec0478b",
+      "bytes": 137955
+    },
+    {
+      "path": "before/docs/reference/lan-audio.md",
+      "sha256": "b24c39a42777b56e0144a270def11a80e75609b853ed4805bad257bbe40923f4",
+      "bytes": 172289
+    },
+    {
+      "path": "before/docs/reference/miniaudio-zig.md",
+      "sha256": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+      "bytes": 46334
+    },
+    {
+      "path": "before/docs/reference/README.md",
+      "sha256": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+      "bytes": 2773
+    },
+    {
+      "path": "before/docs/reference/tls-zig.md",
+      "sha256": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+      "bytes": 283610
+    },
+    {
+      "path": "before/docs/reference/upstream-assets.md",
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+      "bytes": 59427
+    },
+    {
+      "path": "before/docs/runtime/device-discovery.md",
+      "sha256": "a084ce3eefa860caa3be57d63ce4d63d4234d035e82de8c84f33232e696d5fce",
+      "bytes": 2635
+    },
+    {
+      "path": "before/docs/runtime/lifecycle-core.md",
+      "sha256": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+      "bytes": 12628
+    },
+    {
+      "path": "before/docs/runtime/native-events.md",
+      "sha256": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+      "bytes": 8616
+    },
+    {
+      "path": "before/docs/runtime/native-failures.md",
+      "sha256": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+      "bytes": 3156
+    },
+    {
+      "path": "before/docs/runtime/native-fence.md",
+      "sha256": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+      "bytes": 10074
+    },
+    {
+      "path": "before/docs/runtime/network-owner.md",
+      "sha256": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+      "bytes": 7847
+    },
+    {
+      "path": "before/docs/runtime/peer-authorization.md",
+      "sha256": "6f284efc3c2030efeab9922f6cc070f13d207c0d63612f6c8272f05dd67a1f4e",
+      "bytes": 6428
+    },
+    {
+      "path": "before/docs/runtime/receive-drain.md",
+      "sha256": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+      "bytes": 10734
+    },
+    {
+      "path": "before/docs/runtime/send-drain.md",
+      "sha256": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+      "bytes": 8084
+    },
+    {
+      "path": "before/docs/TRANSPORT.md",
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+      "bytes": 8295
+    },
+    {
+      "path": "before/docs/verification/acceptance-matrix.md",
+      "sha256": "389919822edb33e670f1d0c68fd37314836456a6119547b36c77187e26a6e1d6",
+      "bytes": 4983
+    },
+    {
+      "path": "before/docs/verification/runtime-obligations.md",
+      "sha256": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+      "bytes": 11420
+    },
+    {
+      "path": "before/docs/verification/scenarios.md",
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+      "bytes": 4483
+    },
+    {
+      "path": "before/docs/verification/v2-independent.md",
+      "sha256": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+      "bytes": 6108
+    },
+    {
+      "path": "before/docs/VERIFICATION.md",
+      "sha256": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+      "bytes": 5039
+    },
+    {
+      "path": "before/README.md",
+      "sha256": "34a99500e87d2ca375a7c1c9b5437b2de9070dd38728d970deec8a7ba687a367",
+      "bytes": 6893
+    },
+    {
+      "path": "before/spec/concurrency/SpscPublication.cfg",
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+      "bytes": 138
+    },
+    {
+      "path": "before/spec/concurrency/SpscPublication.tla",
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+      "bytes": 2292
+    },
+    {
+      "path": "before/spec/README.md",
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+      "bytes": 6151
+    },
+    {
+      "path": "before/spec/runtime/lifecycle_transactions.py",
+      "sha256": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+      "bytes": 9108
+    },
+    {
+      "path": "before/spec/runtime/ReceiveDrain.cfg",
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+      "bytes": 202
+    },
+    {
+      "path": "before/spec/runtime/ReceiveDrain.tla",
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+      "bytes": 5019
+    },
+    {
+      "path": "before/spec/runtime/RuntimeOwnership.cfg",
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+      "bytes": 227
+    },
+    {
+      "path": "before/spec/runtime/RuntimeOwnership.tla",
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+      "bytes": 7664
+    },
+    {
+      "path": "before/spec/session/SessionWindow.cfg",
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+      "bytes": 212
+    },
+    {
+      "path": "before/spec/session/SessionWindow.tla",
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+      "bytes": 3912
+    },
+    {
+      "path": "before/spec/stream/EndDrain.cfg",
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+      "bytes": 166
+    },
+    {
+      "path": "before/spec/stream/EndDrain.tla",
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+      "bytes": 1949
+    },
+    {
+      "path": "before/src/app/main.zig",
+      "sha256": "9230df1f82b4c001349cf4da53b57575b94c73130734294b5c6bbda011e2569e",
+      "bytes": 3434
+    },
+    {
+      "path": "before/src/audio/callback_bridge.zig",
+      "sha256": "aa560ade34583d2fbcb2e024491fb232c1b90f3446b32a7ff731c6fbe0d2c3ef",
+      "bytes": 5409
+    },
+    {
+      "path": "before/src/audio/frame_queue.zig",
+      "sha256": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+      "bytes": 4379
+    },
+    {
+      "path": "before/src/host/audio_device.zig",
+      "sha256": "64265a3bab0fe55ba3eac39c3e3b1a5c8e64b10bf7719595d243484b7df87bb4",
+      "bytes": 39772
+    },
+    {
+      "path": "before/src/host/net/native.c",
+      "sha256": "8a8be9c796430320dd18d9214e09e995c6819d9beab95c8a26dbdbd4d80203e8",
+      "bytes": 9492
+    },
+    {
+      "path": "before/src/host/net/native.h",
+      "sha256": "15f0bce3a92493a2e3c38126d411c37273ad107a3f2037eb1be4592e03a91448",
+      "bytes": 1283
+    },
+    {
+      "path": "before/src/host/net/socket.zig",
+      "sha256": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+      "bytes": 9097
+    },
+    {
+      "path": "before/src/media/block_assembler.zig",
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+      "bytes": 4262
+    },
+    {
+      "path": "before/src/media/format.zig",
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+      "bytes": 1886
+    },
+    {
+      "path": "before/src/media/playout_window.zig",
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+      "bytes": 3125
+    },
+    {
+      "path": "before/src/protocol/negotiation.zig",
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+      "bytes": 4631
+    },
+    {
+      "path": "before/src/protocol/v1.zig",
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+      "bytes": 7648
+    },
+    {
+      "path": "before/src/protocol/v2.zig",
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+      "bytes": 9445
+    },
+    {
+      "path": "before/src/README.md",
+      "sha256": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+      "bytes": 2907
+    },
+    {
+      "path": "before/src/root.zig",
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+      "bytes": 1037
+    },
+    {
+      "path": "before/src/runtime/channel_admission.zig",
+      "sha256": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+      "bytes": 4212
+    },
+    {
+      "path": "before/src/runtime/lifecycle.zig",
+      "sha256": "6217a0552185432991be5fbd1653073f6b09e0cfa51f32f8d9d29557e9fa7d50",
+      "bytes": 18349
+    },
+    {
+      "path": "before/src/runtime/pending_block.zig",
+      "sha256": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+      "bytes": 3532
+    },
+    {
+      "path": "before/src/runtime/receive_drain.zig",
+      "sha256": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+      "bytes": 8696
+    },
+    {
+      "path": "before/src/runtime/send_drain.zig",
+      "sha256": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+      "bytes": 9389
+    },
+    {
+      "path": "before/src/security/peer_policy.zig",
+      "sha256": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+      "bytes": 4277
+    },
+    {
+      "path": "before/src/session/receiver.zig",
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+      "bytes": 3727
+    },
+    {
+      "path": "before/src/session/session.zig",
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+      "bytes": 2946
+    },
+    {
+      "path": "before/tests/dependency.zig",
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+      "bytes": 459
+    },
+    {
+      "path": "before/tests/hardware/windows_capture.zig",
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+      "bytes": 2160
+    },
+    {
+      "path": "before/tests/integration/audio_device.zig",
+      "sha256": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+      "bytes": 7905
+    },
+    {
+      "path": "before/tests/integration/loopback_transport.zig",
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+      "bytes": 2346
+    },
+    {
+      "path": "before/tests/integration/network_host.zig",
+      "sha256": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+      "bytes": 9593
+    },
+    {
+      "path": "before/tests/integration/peer_policy.zig",
+      "sha256": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520",
+      "bytes": 10693
+    },
+    {
+      "path": "before/tests/integration/protocol_v2_peer.py",
+      "sha256": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+      "bytes": 11632
+    },
+    {
+      "path": "before/tests/integration/protocol_v2_reference.py",
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+      "bytes": 2599
+    },
+    {
+      "path": "before/tests/integration/runtime_lifecycle.zig",
+      "sha256": "cb8dc5c7b329ceaa2fcac1758f730dd468ed6646f76a0d32d6f4bae9f8f2b86c",
+      "bytes": 54783
+    },
+    {
+      "path": "before/tests/integration/tls_receiver.zig",
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+      "bytes": 6347
+    },
+    {
+      "path": "before/tests/integration/tls_v2.zig",
+      "sha256": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+      "bytes": 8102
+    },
+    {
+      "path": "before/tests/integration/v2_codec_probe.zig",
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+      "bytes": 2787
+    },
+    {
+      "path": "before/tests/unit/callback.zig",
+      "sha256": "a50ce904530b120949a7d61582e1bb250722368cc760824893e5f1d9ce9c8bdd",
+      "bytes": 8237
+    },
+    {
+      "path": "before/tests/unit/core.zig",
+      "sha256": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+      "bytes": 6681
+    },
+    {
+      "path": "before/tests/unit/media/assembler.zig",
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+      "bytes": 6261
+    },
+    {
+      "path": "before/tests/unit/protocol/negotiation.zig",
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+      "bytes": 7040
+    },
+    {
+      "path": "before/tests/unit/protocol/v2.zig",
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+      "bytes": 7527
+    },
+    {
+      "path": "before/tests/unit/runtime/pending_block.zig",
+      "sha256": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+      "bytes": 9158
+    },
+    {
+      "path": "before/tests/unit/wire.zig",
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+      "bytes": 6153
+    },
+    {
+      "path": "before/tools/build_reference.py",
+      "sha256": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+      "bytes": 12577
+    },
+    {
+      "path": "before/tools/check_docs.py",
+      "sha256": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+      "bytes": 1756
+    },
+    {
+      "path": "before/tools/check_handoff.py",
+      "sha256": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+      "bytes": 2723
+    },
+    {
+      "path": "before/tools/check_lifecycle_spec.py",
+      "sha256": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+      "bytes": 2774
+    },
+    {
+      "path": "before/tools/check_models.py",
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+      "bytes": 3889
+    },
+    {
+      "path": "before/tools/check_transport.py",
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+      "bytes": 1708
+    },
+    {
+      "path": "before/tools/reference_contracts.json",
+      "sha256": "f610afee373faedd8d5decf4be62fae0fa190f63d151dda8fe62abf1c8a8bdf4",
+      "bytes": 380394
+    },
+    {
+      "path": "before/tools/test_transport.py",
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+      "bytes": 8958
+    },
+    {
+      "path": "before/tools/test_v2_differential.py",
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+      "bytes": 7838
+    },
+    {
+      "path": "before/transport-lock.json",
+      "sha256": "06fc7ad3a0e9793f875180925595edf049c3e862a06765db90c82a60a4efe86a",
+      "bytes": 33515
+    },
+    {
+      "path": "buffered-record-regression/after-end.json",
+      "sha256": "7df5440e749e10e03f36e46ebdc0fa4a4416584386f7832c99d2cd45e97441ef",
+      "bytes": 1669
+    },
+    {
+      "path": "buffered-record-regression/after-end.log",
+      "sha256": "b8625def1079e6ccea46c8209bcab1450a7e0ccc4939e5e3768c9ae1ec5443b3",
+      "bytes": 50
+    },
+    {
+      "path": "buffered-record-regression/before-build.log",
+      "sha256": "31b709cba09f7d1255b79eca68e5ee673503de7155736cc3eb780a9112b642f2",
+      "bytes": 1384
+    },
+    {
+      "path": "buffered-record-regression/buffered-deadline.json",
+      "sha256": "f4961d6d5ba01081b7f5d2fdcab0dc3cd34aebf541c58f77437e96191e2b149b",
+      "bytes": 1532
+    },
+    {
+      "path": "buffered-record-regression/buffered-deadline.log",
+      "sha256": "1167ae90054e82208f0e108b03ebf8decb31db9ddb3ac3255d3146815f6ab1b6",
+      "bytes": 58
+    },
+    {
+      "path": "buffered-record-regression/runs.json",
+      "sha256": "6fe51cd5f902659c3f33cc9459cc9529fc63459a707214bb01985bae4dddd02d",
+      "bytes": 1084
+    },
+    {
+      "path": "buffered-record-review/finding.txt",
+      "sha256": "4932fbc616f0484bc7d3d54f0f237f6a82381b0b2e940cf4028876f3abeb12f6",
+      "bytes": 291
+    },
+    {
+      "path": "buffered-record-review/src/host/verified_channel.zig",
+      "sha256": "ee383898d9d2a51a3c86accbd06f4fa106133878431b572d752138213d0b1213",
+      "bytes": 9581
+    },
+    {
+      "path": "buffered-record-review/tests/integration/verified_channel.zig",
+      "sha256": "365270fd489b2f38864af61919929df07b327d3beb7d290d689adcc572d24c1f",
+      "bytes": 8995
+    },
+    {
+      "path": "buffered-record-review/tests/integration/verified_channel_peer.py",
+      "sha256": "56d2ada8845f376283adebc5909eee294a08f9c5a4bd80c8441792ff15dd90e9",
+      "bytes": 12196
+    },
+    {
+      "path": "custody.log",
+      "sha256": "4759571745c41123f6adb9c2f32299472e99a9a6300a4c203aa8d03b871c104b",
+      "bytes": 64
+    },
+    {
+      "path": "dependency-adoption.json",
+      "sha256": "3c4f5266b44e2bc4410bae3b35df027d1b3284d7a76ba1fd79aa9cb223a09faa",
+      "bytes": 1958
+    },
+    {
+      "path": "docs.log",
+      "sha256": "cb899bdfafd5bbff9896ccc5cdc05fe4a2cc761001a232a5b7430313024498be",
+      "bytes": 88
+    },
+    {
+      "path": "final-host/build-Debug.log",
+      "sha256": "37a2209b949d296d33b8c062a08632882b186e94731cb6ad4cd973d56483a9eb",
+      "bytes": 1383
+    },
+    {
+      "path": "final-host/build-ReleaseSafe.log",
+      "sha256": "62ed2a510ae72585f6e09565ae5840565be164e1e0abc2ee09253d4cea5291d6",
+      "bytes": 1382
+    },
+    {
+      "path": "final-host/Debug.json",
+      "sha256": "f44adab6c2b6b0ab2aa14b4f12c065776e368bb9bd6dae6513a61dc0066e4f6a",
+      "bytes": 63867
+    },
+    {
+      "path": "final-host/peer-Debug.log",
+      "sha256": "39579c1b076178a9b65484eb2530faa6d52016a0a48ab44eb72c61a549b89d66",
+      "bytes": 2081
+    },
+    {
+      "path": "final-host/peer-ReleaseSafe.log",
+      "sha256": "39579c1b076178a9b65484eb2530faa6d52016a0a48ab44eb72c61a549b89d66",
+      "bytes": 2081
+    },
+    {
+      "path": "final-host/ReleaseSafe.json",
+      "sha256": "4d061f511e9b6a315fab2929df2e7e96dfcf643e5c8b4283617db2f053515c2a",
+      "bytes": 28295
+    },
+    {
+      "path": "final-host/runs.json",
+      "sha256": "0946c5d21fecd9e54d9f56f7fc4a2626fe022cd94c29c3f99dd9e89cef40f068",
+      "bytes": 1267
+    },
+    {
+      "path": "handoff.log",
+      "sha256": "c1b85c47dbc59596d922f0961ed7fb6732e26dcb1118051f432f07cf444957f5",
+      "bytes": 108
+    },
+    {
+      "path": "ios-unsupported.json",
+      "sha256": "794d264217f2714f22691202ac5f0db5b464fb76c2790acb196b8dba7fa11e07",
+      "bytes": 243
+    },
+    {
+      "path": "ios-unsupported.log",
+      "sha256": "7787dd55824ed8da0679ab218dfa67580602c4d2683b59ed35bae3a8bf79606d",
+      "bytes": 759
+    },
+    {
+      "path": "mutations/bypass-peer/peers.json",
+      "sha256": "6f5b79d410b6384b62a7386a4da41b4afe7d3ee1530f52a3aa715c331404deb6",
+      "bytes": 4154
+    },
+    {
+      "path": "mutations/bypass-peer/verified_channel.zig",
+      "sha256": "61faefe5380db403114b38159a8c01e430a70996a889e5b098a211c315cddd68",
+      "bytes": 9758
+    },
+    {
+      "path": "mutations/bypass-peer-build.log",
+      "sha256": "6d191641e65fa64379deb9329570cfdeaf71e3d168f9d7e46b9a4afa61beb3d0",
+      "bytes": 1385
+    },
+    {
+      "path": "mutations/bypass-peer-peer.log",
+      "sha256": "12f78372eab9ad2917f89b3809809d3b9ef74b85d11f69bd3913bbb66a7ab1e0",
+      "bytes": 98
+    },
+    {
+      "path": "mutations/results.json",
+      "sha256": "f4d0c7a1618a2942c8506f1fccca4fa27f22e0bade0fb5f83c7a8eb2f8604ae0",
+      "bytes": 2975
+    },
+    {
+      "path": "mutations/retain-permission/peers.json",
+      "sha256": "e1a7380fe644f53e7557e5450683c20796f0643a68607ef0c34b4fa72bf26638",
+      "bytes": 15298
+    },
+    {
+      "path": "mutations/retain-permission/verified_channel.zig",
+      "sha256": "63fe04d879f8d5be88940d45b039d51518fdb7f376dd7f8bdf1e12c2b136558d",
+      "bytes": 9716
+    },
+    {
+      "path": "mutations/retain-permission-build.log",
+      "sha256": "c881b1fbd50b07e50d120d35ce61eb6d814f7c937752215bf5bda36058463d52",
+      "bytes": 1383
+    },
+    {
+      "path": "mutations/retain-permission-peer.log",
+      "sha256": "d660419b06ca5d5906d57d60a16a62087dc2e97acab1f3b48dc08ca3c2584e04",
+      "bytes": 360
+    },
+    {
+      "path": "mutations/runs.json",
+      "sha256": "217d88f26828249bbe1319214fac465d3d0802fedb2390dabd6982768db2010e",
+      "bytes": 2002
+    },
+    {
+      "path": "mutations/stale-closes-current/peers.json",
+      "sha256": "28d14c668434797aba517df3023d51badd7a4d5d6ee070d4ecbac58f11e64d4e",
+      "bytes": 9306
+    },
+    {
+      "path": "mutations/stale-closes-current/verified_channel.zig",
+      "sha256": "4c4142d39b9b9ac24a9e8633dfe1e10370271f0f6f13d06dbee1c552217dcd71",
+      "bytes": 9817
+    },
+    {
+      "path": "mutations/stale-closes-current-build.log",
+      "sha256": "9cd33034756fd0cd8d4e3e4db1a0c0f01310270a2d6d50baff48531c199c9970",
+      "bytes": 1383
+    },
+    {
+      "path": "mutations/stale-closes-current-peer.log",
+      "sha256": "d660419b06ca5d5906d57d60a16a62087dc2e97acab1f3b48dc08ca3c2584e04",
+      "bytes": 360
+    },
+    {
+      "path": "qualified/custody.log",
+      "sha256": "4759571745c41123f6adb9c2f32299472e99a9a6300a4c203aa8d03b871c104b",
+      "bytes": 64
+    },
+    {
+      "path": "qualified/debug-build.log",
+      "sha256": "4c744d9e13118487ef89577c278bd671d8e4a4d8a055881a77603aed3959e375",
+      "bytes": 2658
+    },
+    {
+      "path": "qualified/debug-peer.log",
+      "sha256": "80cc1584a60e4ee844396d28cb983809026025bc0b382dea9802b908212777a7",
+      "bytes": 2023
+    },
+    {
+      "path": "qualified/debug-peers.json",
+      "sha256": "7665a88232b7a5b404a58edd8a837fa4ba054fae13435e13013e2bfdba16a8d7",
+      "bytes": 62650
+    },
+    {
+      "path": "qualified/legacy-v1.json",
+      "sha256": "8361a3444b4438f9c1a9db3511e2cec1cebe19db034e2def1fe11eecc0701b29",
+      "bytes": 14733
+    },
+    {
+      "path": "qualified/legacy-v1.log",
+      "sha256": "73fed786422e5ee100b3bde09a9d59c0b0fea238255f1cb3e044c1f9e19a9d24",
+      "bytes": 379
+    },
+    {
+      "path": "qualified/legacy-v2.json",
+      "sha256": "1d3c9d7f61beb10aa679f1207b9a011072943eb39862555f8171f86624142da5",
+      "bytes": 24239
+    },
+    {
+      "path": "qualified/legacy-v2.log",
+      "sha256": "a573d67223ca4fdcae5733f31365d07ce3e8167ca126df13d9c4e15c96b28847",
+      "bytes": 621
+    },
+    {
+      "path": "qualified/runs.json",
+      "sha256": "7f7c841f5b6e0336cf0a19b3b6b0fb8b44b815e10af3a91b3f3e784f7299049a",
+      "bytes": 2304
+    },
+    {
+      "path": "qualified/safe-build.log",
+      "sha256": "b723e62ef54e13f71bda65d4bcbd4025aa4261bda445481c42c954aa1da530f1",
+      "bytes": 1671
+    },
+    {
+      "path": "qualified/safe-peer.log",
+      "sha256": "80cc1584a60e4ee844396d28cb983809026025bc0b382dea9802b908212777a7",
+      "bytes": 2023
+    },
+    {
+      "path": "qualified/safe-peers.json",
+      "sha256": "17e3eda5ada518efeb6bf463d325203574dbed27222f2f4b23859cc837556c3a",
+      "bytes": 27735
+    },
+    {
+      "path": "reference.log",
+      "sha256": "200405af90470e8723171d280633373c52b3075f8fc0b7f8092cbdfdc4eb47a7",
+      "bytes": 145
+    },
+    {
+      "path": "RESULTS.md",
+      "sha256": "4e2ebeff873bfbe401aa00fc09ebc8172647822856699e29341433cd9ac07203",
+      "bytes": 3246
+    },
+    {
+      "path": "reviewed-tls/backend-lock.json",
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef",
+      "bytes": 27737
+    },
+    {
+      "path": "reviewed-tls/build.zig",
+      "sha256": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134",
+      "bytes": 10498
+    },
+    {
+      "path": "reviewed-tls/build.zig.zon",
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d",
+      "bytes": 394
+    },
+    {
+      "path": "reviewed-tls/docs/guides/peer-identity.md",
+      "sha256": "1063f03fba95b09359fe80520cca18af7113c6ff8f4ba1bc02f4b9e25425824e",
+      "bytes": 2918
+    },
+    {
+      "path": "reviewed-tls/docs/verification/completions/T00.json",
+      "sha256": "c0f263dcd5896af803c369466321369ba1a99fd231ad47441576c136796cdeaa",
+      "bytes": 122817
+    },
+    {
+      "path": "reviewed-tls/docs/verification/peer-identity-change-audit.json",
+      "sha256": "f3cd72d90a89bccf61ce1416842bee37f1b72761fad7bc4d048284d3fde7d9fd",
+      "bytes": 30910
+    },
+    {
+      "path": "reviewed-tls/docs/verification/peer-identity-final-gates.json",
+      "sha256": "eecea6b71e2ff6182d66204b8379d9ead35d506333dda21a92fab03fc204fc83",
+      "bytes": 4207
+    },
+    {
+      "path": "reviewed-tls/evidence/source-provenance.json",
+      "sha256": "23d65ebab94bef0b664985604cb19ac172146f95bd5154b0a93e55761e971830",
+      "bytes": 1407
+    },
+    {
+      "path": "reviewed-tls/examples/consumer/socket.c",
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c",
+      "bytes": 4830
+    },
+    {
+      "path": "reviewed-tls/HOST-DRIVER.md",
+      "sha256": "184019fce5dbb97f50b21aa72de7231cf821f0dfb74a3c3f826d5f8b32296e97",
+      "bytes": 7714
+    },
+    {
+      "path": "reviewed-tls/README.md",
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90",
+      "bytes": 14357
+    },
+    {
+      "path": "reviewed-tls/src/backend.c",
+      "sha256": "dfcc61371663a4fc54b7b6aad16518f966707cf376ab7cb4f83bf8689de622a4",
+      "bytes": 10411
+    },
+    {
+      "path": "reviewed-tls/src/backend.h",
+      "sha256": "0e0f3dbfae408fe39bd33592e943e5cdce43abbaadbe906216b4d1bf93569cbd",
+      "bytes": 2754
+    },
+    {
+      "path": "reviewed-tls/src/backend.zig",
+      "sha256": "9a7e22086f439b6381c0810f6259cd923c359b7e8c920222a1f974c0e7e91c9c",
+      "bytes": 2072
+    },
+    {
+      "path": "reviewed-tls/src/driver.zig",
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f",
+      "bytes": 16070
+    },
+    {
+      "path": "reviewed-tls/src/root.zig",
+      "sha256": "99587be81255039fef2f9e8c8d803097f0243748c9ba0e5f766ae257c56dc0b3",
+      "bytes": 10496
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/ca.pem",
+      "sha256": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b",
+      "bytes": 583
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/client.key",
+      "sha256": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2",
+      "bytes": 241
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/client.pem",
+      "sha256": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde",
+      "bytes": 652
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/expired.key",
+      "sha256": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6",
+      "bytes": 241
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/expired.pem",
+      "sha256": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220",
+      "bytes": 652
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/other-ca.pem",
+      "sha256": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2",
+      "bytes": 599
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/server.key",
+      "sha256": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b",
+      "bytes": 241
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/server.pem",
+      "sha256": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4",
+      "bytes": 648
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/wrong-purpose.key",
+      "sha256": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575",
+      "bytes": 241
+    },
+    {
+      "path": "reviewed-tls/tests/fixtures/wrong-purpose.pem",
+      "sha256": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab",
+      "bytes": 660
+    },
+    {
+      "path": "source-snapshot/.gitignore",
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+      "bytes": 61
+    },
+    {
+      "path": "source-snapshot/AGENTS.md",
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+      "bytes": 1882
+    },
+    {
+      "path": "source-snapshot/build.zig",
+      "sha256": "1eb2611ed0b5d02b0c29875088cfffad00be3270e23b4aa5a47199450a1dddb7",
+      "bytes": 15747
+    },
+    {
+      "path": "source-snapshot/build.zig.zon",
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+      "bytes": 662
+    },
+    {
+      "path": "source-snapshot/docs/architecture/ecosystem-integration.md",
+      "sha256": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+      "bytes": 10194
+    },
+    {
+      "path": "source-snapshot/docs/architecture/modules.md",
+      "sha256": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+      "bytes": 3839
+    },
+    {
+      "path": "source-snapshot/docs/architecture/platform-capabilities.md",
+      "sha256": "7bfd20dc55aa93457abf88b44f7f7496b35d1a4329e7807041adc8dc7d270aef",
+      "bytes": 6448
+    },
+    {
+      "path": "source-snapshot/docs/ARCHITECTURE.md",
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+      "bytes": 13449
+    },
+    {
+      "path": "source-snapshot/docs/CALLBACKS.md",
+      "sha256": "4b9fc9f5f77277339dbbfd4386081669cb28ee199b9b02a8e51ec679352a7260",
+      "bytes": 7763
+    },
+    {
+      "path": "source-snapshot/docs/DEPENDENCIES.md",
+      "sha256": "bc24cdf5c5df25cd24a4bef5c932aedf9b5029bc2f12361c9fdea5237c8ef529",
+      "bytes": 8243
+    },
+    {
+      "path": "source-snapshot/docs/design/configuration-resolution.md",
+      "sha256": "4c7b9834d8982a3f8772cf78d5dd56283c372f21c79c8fa710df1d40fab831b8",
+      "bytes": 9509
+    },
+    {
+      "path": "source-snapshot/docs/design/lifecycle-transactions.md",
+      "sha256": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+      "bytes": 16779
+    },
+    {
+      "path": "source-snapshot/docs/design/receive-drain.md",
+      "sha256": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+      "bytes": 8366
+    },
+    {
+      "path": "source-snapshot/docs/design/system-mathematics.md",
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+      "bytes": 6660
+    },
+    {
+      "path": "source-snapshot/docs/development/documentation.md",
+      "sha256": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+      "bytes": 4262
+    },
+    {
+      "path": "source-snapshot/docs/development/workflow.md",
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+      "bytes": 2769
+    },
+    {
+      "path": "source-snapshot/docs/implementation/completion-sequence.md",
+      "sha256": "c70cdb5dc4d490a7ffd962a8fd63356172238342554dbca599f878a09bc797f5",
+      "bytes": 11239
+    },
+    {
+      "path": "source-snapshot/docs/implementation/decisions.md",
+      "sha256": "c8ebf56107012eb399526a687fa121d44b8f0aaa62871ccb5352598f394982bc",
+      "bytes": 8632
+    },
+    {
+      "path": "source-snapshot/docs/implementation/interfaces.md",
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+      "bytes": 7194
+    },
+    {
+      "path": "source-snapshot/docs/implementation/layout.md",
+      "sha256": "7322a7bb959892618541b9f2fffecb5d2703459eaf9dfbee18ea8b4a63463c3a",
+      "bytes": 8866
+    },
+    {
+      "path": "source-snapshot/docs/implementation/roadmap.md",
+      "sha256": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+      "bytes": 4039
+    },
+    {
+      "path": "source-snapshot/docs/implementation/runtime-blueprint.md",
+      "sha256": "413c0237d3d544b0e679e21763a54346013daa31833aeecaf5c4414686fbafd3",
+      "bytes": 14390
+    },
+    {
+      "path": "source-snapshot/docs/implementation/START_HERE.md",
+      "sha256": "f49587b0f119c577198aed32c1af9309ec4e8d6a62ac9ca0d74cc33d16a2a133",
+      "bytes": 7689
+    },
+    {
+      "path": "source-snapshot/docs/implementation/takeover-readiness.md",
+      "sha256": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+      "bytes": 8881
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/01-target-builds.md",
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+      "bytes": 3079
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/02-fidelity-protocol.md",
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+      "bytes": 4625
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/03-identity-endpoints.md",
+      "sha256": "b8dc46f7e6852eb0a287bf15062fd516d5ec6339c7136a62062886682c1feab5",
+      "bytes": 4226
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/04-first-sound.md",
+      "sha256": "9550de9bde0483fab2b6ab69f4a41ffbefdd974a381c45a945e6fc4e13a33d15",
+      "bytes": 4680
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/05-timing-clocks.md",
+      "sha256": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+      "bytes": 3505
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/06-network-resilience.md",
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+      "bytes": 2752
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/07-observability.md",
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+      "bytes": 2320
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/08-user-experience.md",
+      "sha256": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+      "bytes": 2815
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/09-packaging.md",
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+      "bytes": 2411
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/10-qualification.md",
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+      "bytes": 2389
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/11-apple-receivers.md",
+      "sha256": "635d583935c8775c94dd992915a57111280257c811efecd1cb6523db336c7822",
+      "bytes": 5754
+    },
+    {
+      "path": "source-snapshot/docs/literate/proof-ledger.md",
+      "sha256": "f28eb517b5a83a36f44a144c5f75dffca17b75a4066c344343ea98854ce4ba58",
+      "bytes": 9100
+    },
+    {
+      "path": "source-snapshot/docs/literate/quantitative-design.md",
+      "sha256": "f68abc33e34faaa3729ce9789da947eb6d23355671da29aded7d6ba8bfbe102b",
+      "bytes": 6594
+    },
+    {
+      "path": "source-snapshot/docs/literate/README.md",
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+      "bytes": 4639
+    },
+    {
+      "path": "source-snapshot/docs/literate/runtime-argument.md",
+      "sha256": "29c72d4d36dfac4f87a7f2d33809dd1fc4cd74ab4c8edf07bfa1661b1f4262d9",
+      "bytes": 10428
+    },
+    {
+      "path": "source-snapshot/docs/literate/stream-argument.md",
+      "sha256": "4e6d5ac4d58d4f430261f7d48de36942e124f4b923631b46e619a0ece028a819",
+      "bytes": 10101
+    },
+    {
+      "path": "source-snapshot/docs/MATHEMATICS.md",
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+      "bytes": 19013
+    },
+    {
+      "path": "source-snapshot/docs/media/assembly.md",
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+      "bytes": 6768
+    },
+    {
+      "path": "source-snapshot/docs/media/pending-block.md",
+      "sha256": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+      "bytes": 7285
+    },
+    {
+      "path": "source-snapshot/docs/PRODUCT.md",
+      "sha256": "c0885c8bb5a9159460ac57b11612051c2f3ba75928aeaa96c92cc941952f56d9",
+      "bytes": 11558
+    },
+    {
+      "path": "source-snapshot/docs/protocol/negotiation.md",
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+      "bytes": 5106
+    },
+    {
+      "path": "source-snapshot/docs/protocol/v2.md",
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+      "bytes": 7835
+    },
+    {
+      "path": "source-snapshot/docs/README.md",
+      "sha256": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+      "bytes": 3392
+    },
+    {
+      "path": "source-snapshot/docs/reference/api-contracts.md",
+      "sha256": "9a0053053747b98432fcc14e39cfebcd2e50cb321a6f587d14f93930f9cb9b6b",
+      "bytes": 17064
+    },
+    {
+      "path": "source-snapshot/docs/reference/evidence.md",
+      "sha256": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+      "bytes": 220775
+    },
+    {
+      "path": "source-snapshot/docs/reference/file-index.json",
+      "sha256": "1d9dacf215a4deca7b6e015f8cb888c5b2424a9290a73e880d6512a82be7dc6e",
+      "bytes": 138953
+    },
+    {
+      "path": "source-snapshot/docs/reference/lan-audio.md",
+      "sha256": "679f0a59bc69f86cf0845b2b2998b91e9bf56e81b8385b32b44beaaa41cbade9",
+      "bytes": 176886
+    },
+    {
+      "path": "source-snapshot/docs/reference/miniaudio-zig.md",
+      "sha256": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+      "bytes": 46334
+    },
+    {
+      "path": "source-snapshot/docs/reference/README.md",
+      "sha256": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+      "bytes": 2773
+    },
+    {
+      "path": "source-snapshot/docs/reference/tls-zig.md",
+      "sha256": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+      "bytes": 283610
+    },
+    {
+      "path": "source-snapshot/docs/reference/upstream-assets.md",
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+      "bytes": 59427
+    },
+    {
+      "path": "source-snapshot/docs/runtime/device-discovery.md",
+      "sha256": "a084ce3eefa860caa3be57d63ce4d63d4234d035e82de8c84f33232e696d5fce",
+      "bytes": 2635
+    },
+    {
+      "path": "source-snapshot/docs/runtime/lifecycle-core.md",
+      "sha256": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+      "bytes": 12628
+    },
+    {
+      "path": "source-snapshot/docs/runtime/native-events.md",
+      "sha256": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+      "bytes": 8616
+    },
+    {
+      "path": "source-snapshot/docs/runtime/native-failures.md",
+      "sha256": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+      "bytes": 3156
+    },
+    {
+      "path": "source-snapshot/docs/runtime/native-fence.md",
+      "sha256": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+      "bytes": 10074
+    },
+    {
+      "path": "source-snapshot/docs/runtime/network-owner.md",
+      "sha256": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+      "bytes": 7847
+    },
+    {
+      "path": "source-snapshot/docs/runtime/peer-authorization.md",
+      "sha256": "7f5f427920fda5418a1ff428fc7144d4fb1dbc060ec1429be175ab3d2347afc4",
+      "bytes": 6572
+    },
+    {
+      "path": "source-snapshot/docs/runtime/receive-drain.md",
+      "sha256": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+      "bytes": 10734
+    },
+    {
+      "path": "source-snapshot/docs/runtime/send-drain.md",
+      "sha256": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+      "bytes": 8084
+    },
+    {
+      "path": "source-snapshot/docs/runtime/verified-channel.md",
+      "sha256": "a0d376d72ca52e8fb4f400ff9cf16fde091a287aad6e3ee85d22aca017e10537",
+      "bytes": 7317
+    },
+    {
+      "path": "source-snapshot/docs/TRANSPORT.md",
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+      "bytes": 8295
+    },
+    {
+      "path": "source-snapshot/docs/verification/acceptance-matrix.md",
+      "sha256": "825fa798bd3954e8c5dba4e8693fb00b68f3df137e4e5f2a605f40ab64c9cbac",
+      "bytes": 5315
+    },
+    {
+      "path": "source-snapshot/docs/verification/runtime-obligations.md",
+      "sha256": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+      "bytes": 11420
+    },
+    {
+      "path": "source-snapshot/docs/verification/scenarios.md",
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+      "bytes": 4483
+    },
+    {
+      "path": "source-snapshot/docs/verification/v2-independent.md",
+      "sha256": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+      "bytes": 6108
+    },
+    {
+      "path": "source-snapshot/docs/VERIFICATION.md",
+      "sha256": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+      "bytes": 5039
+    },
+    {
+      "path": "source-snapshot/README.md",
+      "sha256": "eda722c55b6f3b1f78b7e26596e72202e8add11c69f297d40984a818222cd0d3",
+      "bytes": 7228
+    },
+    {
+      "path": "source-snapshot/spec/concurrency/SpscPublication.cfg",
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+      "bytes": 138
+    },
+    {
+      "path": "source-snapshot/spec/concurrency/SpscPublication.tla",
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+      "bytes": 2292
+    },
+    {
+      "path": "source-snapshot/spec/README.md",
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+      "bytes": 6151
+    },
+    {
+      "path": "source-snapshot/spec/runtime/lifecycle_transactions.py",
+      "sha256": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+      "bytes": 9108
+    },
+    {
+      "path": "source-snapshot/spec/runtime/ReceiveDrain.cfg",
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+      "bytes": 202
+    },
+    {
+      "path": "source-snapshot/spec/runtime/ReceiveDrain.tla",
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+      "bytes": 5019
+    },
+    {
+      "path": "source-snapshot/spec/runtime/RuntimeOwnership.cfg",
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+      "bytes": 227
+    },
+    {
+      "path": "source-snapshot/spec/runtime/RuntimeOwnership.tla",
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+      "bytes": 7664
+    },
+    {
+      "path": "source-snapshot/spec/session/SessionWindow.cfg",
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+      "bytes": 212
+    },
+    {
+      "path": "source-snapshot/spec/session/SessionWindow.tla",
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+      "bytes": 3912
+    },
+    {
+      "path": "source-snapshot/spec/stream/EndDrain.cfg",
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+      "bytes": 166
+    },
+    {
+      "path": "source-snapshot/spec/stream/EndDrain.tla",
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+      "bytes": 1949
+    },
+    {
+      "path": "source-snapshot/src/app/main.zig",
+      "sha256": "9230df1f82b4c001349cf4da53b57575b94c73130734294b5c6bbda011e2569e",
+      "bytes": 3434
+    },
+    {
+      "path": "source-snapshot/src/audio/callback_bridge.zig",
+      "sha256": "aa560ade34583d2fbcb2e024491fb232c1b90f3446b32a7ff731c6fbe0d2c3ef",
+      "bytes": 5409
+    },
+    {
+      "path": "source-snapshot/src/audio/frame_queue.zig",
+      "sha256": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+      "bytes": 4379
+    },
+    {
+      "path": "source-snapshot/src/host/audio_device.zig",
+      "sha256": "64265a3bab0fe55ba3eac39c3e3b1a5c8e64b10bf7719595d243484b7df87bb4",
+      "bytes": 39772
+    },
+    {
+      "path": "source-snapshot/src/host/net/native.c",
+      "sha256": "8a8be9c796430320dd18d9214e09e995c6819d9beab95c8a26dbdbd4d80203e8",
+      "bytes": 9492
+    },
+    {
+      "path": "source-snapshot/src/host/net/native.h",
+      "sha256": "15f0bce3a92493a2e3c38126d411c37273ad107a3f2037eb1be4592e03a91448",
+      "bytes": 1283
+    },
+    {
+      "path": "source-snapshot/src/host/net/socket.zig",
+      "sha256": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+      "bytes": 9097
+    },
+    {
+      "path": "source-snapshot/src/host/verified_channel.zig",
+      "sha256": "e6c20eddaa768393b66dab908a29175abf09c639ac4b1f2c8b8269f8575bf1ab",
+      "bytes": 9975
+    },
+    {
+      "path": "source-snapshot/src/media/block_assembler.zig",
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+      "bytes": 4262
+    },
+    {
+      "path": "source-snapshot/src/media/format.zig",
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+      "bytes": 1886
+    },
+    {
+      "path": "source-snapshot/src/media/playout_window.zig",
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+      "bytes": 3125
+    },
+    {
+      "path": "source-snapshot/src/protocol/negotiation.zig",
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+      "bytes": 4631
+    },
+    {
+      "path": "source-snapshot/src/protocol/v1.zig",
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+      "bytes": 7648
+    },
+    {
+      "path": "source-snapshot/src/protocol/v2.zig",
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+      "bytes": 9445
+    },
+    {
+      "path": "source-snapshot/src/README.md",
+      "sha256": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+      "bytes": 2907
+    },
+    {
+      "path": "source-snapshot/src/root.zig",
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+      "bytes": 1037
+    },
+    {
+      "path": "source-snapshot/src/runtime/channel_admission.zig",
+      "sha256": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+      "bytes": 4212
+    },
+    {
+      "path": "source-snapshot/src/runtime/lifecycle.zig",
+      "sha256": "6217a0552185432991be5fbd1653073f6b09e0cfa51f32f8d9d29557e9fa7d50",
+      "bytes": 18349
+    },
+    {
+      "path": "source-snapshot/src/runtime/pending_block.zig",
+      "sha256": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+      "bytes": 3532
+    },
+    {
+      "path": "source-snapshot/src/runtime/receive_drain.zig",
+      "sha256": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+      "bytes": 8696
+    },
+    {
+      "path": "source-snapshot/src/runtime/send_drain.zig",
+      "sha256": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+      "bytes": 9389
+    },
+    {
+      "path": "source-snapshot/src/security/peer_policy.zig",
+      "sha256": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+      "bytes": 4277
+    },
+    {
+      "path": "source-snapshot/src/session/receiver.zig",
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+      "bytes": 3727
+    },
+    {
+      "path": "source-snapshot/src/session/session.zig",
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+      "bytes": 2946
+    },
+    {
+      "path": "source-snapshot/tests/dependency.zig",
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+      "bytes": 459
+    },
+    {
+      "path": "source-snapshot/tests/hardware/windows_capture.zig",
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+      "bytes": 2160
+    },
+    {
+      "path": "source-snapshot/tests/integration/audio_device.zig",
+      "sha256": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+      "bytes": 7905
+    },
+    {
+      "path": "source-snapshot/tests/integration/loopback_transport.zig",
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+      "bytes": 2346
+    },
+    {
+      "path": "source-snapshot/tests/integration/network_host.zig",
+      "sha256": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+      "bytes": 9593
+    },
+    {
+      "path": "source-snapshot/tests/integration/peer_policy.zig",
+      "sha256": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520",
+      "bytes": 10693
+    },
+    {
+      "path": "source-snapshot/tests/integration/protocol_v2_peer.py",
+      "sha256": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+      "bytes": 11632
+    },
+    {
+      "path": "source-snapshot/tests/integration/protocol_v2_reference.py",
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+      "bytes": 2599
+    },
+    {
+      "path": "source-snapshot/tests/integration/runtime_lifecycle.zig",
+      "sha256": "cb8dc5c7b329ceaa2fcac1758f730dd468ed6646f76a0d32d6f4bae9f8f2b86c",
+      "bytes": 54783
+    },
+    {
+      "path": "source-snapshot/tests/integration/tls_receiver.zig",
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+      "bytes": 6347
+    },
+    {
+      "path": "source-snapshot/tests/integration/tls_v2.zig",
+      "sha256": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+      "bytes": 8102
+    },
+    {
+      "path": "source-snapshot/tests/integration/v2_codec_probe.zig",
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+      "bytes": 2787
+    },
+    {
+      "path": "source-snapshot/tests/integration/verified_channel.zig",
+      "sha256": "3602af1b96df6384de70c5d999eb7a31d1e93b8fbbd4eea73a90b694df357280",
+      "bytes": 9319
+    },
+    {
+      "path": "source-snapshot/tests/integration/verified_channel_peer.py",
+      "sha256": "03ac9d143a7bb71af5bc81a5b3ef0f23ad56d6c2ba694a186c859d9f5cff2887",
+      "bytes": 12913
+    },
+    {
+      "path": "source-snapshot/tests/unit/callback.zig",
+      "sha256": "a50ce904530b120949a7d61582e1bb250722368cc760824893e5f1d9ce9c8bdd",
+      "bytes": 8237
+    },
+    {
+      "path": "source-snapshot/tests/unit/core.zig",
+      "sha256": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+      "bytes": 6681
+    },
+    {
+      "path": "source-snapshot/tests/unit/media/assembler.zig",
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+      "bytes": 6261
+    },
+    {
+      "path": "source-snapshot/tests/unit/protocol/negotiation.zig",
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+      "bytes": 7040
+    },
+    {
+      "path": "source-snapshot/tests/unit/protocol/v2.zig",
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+      "bytes": 7527
+    },
+    {
+      "path": "source-snapshot/tests/unit/runtime/pending_block.zig",
+      "sha256": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+      "bytes": 9158
+    },
+    {
+      "path": "source-snapshot/tests/unit/wire.zig",
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+      "bytes": 6153
+    },
+    {
+      "path": "source-snapshot/tools/build_reference.py",
+      "sha256": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+      "bytes": 12577
+    },
+    {
+      "path": "source-snapshot/tools/check_docs.py",
+      "sha256": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+      "bytes": 1756
+    },
+    {
+      "path": "source-snapshot/tools/check_handoff.py",
+      "sha256": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+      "bytes": 2723
+    },
+    {
+      "path": "source-snapshot/tools/check_lifecycle_spec.py",
+      "sha256": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+      "bytes": 2774
+    },
+    {
+      "path": "source-snapshot/tools/check_models.py",
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+      "bytes": 3889
+    },
+    {
+      "path": "source-snapshot/tools/check_transport.py",
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+      "bytes": 1708
+    },
+    {
+      "path": "source-snapshot/tools/reference_contracts.json",
+      "sha256": "3e245995ac8b165525ed45404b82ff2ac6cdc5e9adbcf5bd88bc7b30c2039c65",
+      "bytes": 383680
+    },
+    {
+      "path": "source-snapshot/tools/test_transport.py",
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+      "bytes": 8958
+    },
+    {
+      "path": "source-snapshot/tools/test_v2_differential.py",
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+      "bytes": 7838
+    },
+    {
+      "path": "source-snapshot/transport-lock.json",
+      "sha256": "e2ffcfcbab87ccf7f1f10ec20f334e65457e8220c9572fec28adf9fe3c5bf061",
+      "bytes": 33627
+    },
+    {
+      "path": "support/document_verified_channel.py",
+      "sha256": "4c3794dbf12fa3c435b400f310eeb51142ff4bd58e0d8339cd681a774dca8767",
+      "bytes": 7463
+    },
+    {
+      "path": "support/qualify_verified_channel.py",
+      "sha256": "c53fceae3f75cc26c93c12806d108b94b62b9a954f48626f7917d83d38cee851",
+      "bytes": 6102
+    },
+    {
+      "path": "support/seal_verified_channel.py",
+      "sha256": "c906c1048a541075056f2bdfd2ba62af4d5d4077e9c722a5ff7c39a9f10bc1de",
+      "bytes": 9204
+    }
+  ]
+}

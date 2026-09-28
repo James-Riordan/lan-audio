@@ -1,0 +1,8 @@
+LAN Audio — development build
+
+Usage:
+  lan-audio devices [--json]  List system-output devices without starting audio
+  lan-audio version           Show this build's version
+  lan-audio help              Show this help
+
+Streaming and pairing are still under development.

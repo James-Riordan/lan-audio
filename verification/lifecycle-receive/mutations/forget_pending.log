@@ -1,0 +1,11 @@
+1/1 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...expected error.Busy, found 2
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff7cab8e25e in expectError__anon_61973 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:202:13: 0x7ff7cab8f881 in test.cancel during every acquisition retains parents for late success failure and partial debt (root_zcu.obj)
+            try std.testing.expectError(error.Busy, host.controller.begin());
+            ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\9edf65d134087a3d04a8d0781b4183d6\root.exe --seed=0x38e665eb

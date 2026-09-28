@@ -1,0 +1,17 @@
+Dependency custody: 188 pinned files and both staged DLLs verified
+fragmented-roundtrip: PASS
+wrong-name: PASS
+wrong-alpn: PASS
+missing-alpn: PASS
+expired: PASS
+untrusted-client: PASS
+oversized: PASS
+bad-profile: PASS
+audio-before-start: PASS
+wrong-stream: PASS
+duplicate: PASS
+truncated-frame: PASS
+missing-end: PASS
+after-end: PASS
+raw-eof: PASS
+stalled: PASS

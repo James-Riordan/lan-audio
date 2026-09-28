@@ -1,0 +1,104 @@
+{
+  "binary_sha256": "877e27916271be007b4d8d26518ecc7c508c973b64ce7912f70929fadf2ebb86",
+  "results": [
+    {
+      "role": "receiver",
+      "mode": "missing-client",
+      "listener": true,
+      "matched": true,
+      "seconds": 1.349,
+      "exit_code": 0,
+      "error": null,
+      "events": [
+        {
+          "attempt": 1,
+          "prefill_frames": 960,
+          "frames": 0,
+          "failure": "PeerAuthentication",
+          "lifecycle": {
+            "phase": "stopped",
+            "generation": 1,
+            "serial": 2,
+            "held": [
+              false,
+              false,
+              false
+            ],
+            "pending": null,
+            "worker_joined": false,
+            "device_fenced": false,
+            "first_cause": "requested",
+            "cleanup_blocked": false,
+            "deadline_expired": false,
+            "receive": null,
+            "send": null
+          },
+          "audio": null,
+          "active_ms": 0,
+          "starved": false,
+          "unplayed_frames": 0
+        },
+        {
+          "attempt": 2,
+          "prefill_frames": 960,
+          "frames": 48000,
+          "failure": null,
+          "lifecycle": {
+            "phase": "stopped",
+            "generation": 1,
+            "serial": 10,
+            "held": [
+              false,
+              false,
+              false
+            ],
+            "pending": null,
+            "worker_joined": true,
+            "device_fenced": true,
+            "first_cause": null,
+            "cleanup_blocked": false,
+            "deadline_expired": false,
+            "receive": {
+              "frontier": 48000,
+              "publication_closed": true,
+              "local": "drained",
+              "ack": "copied",
+              "remote": "unobserved",
+              "secure_close": "clean"
+            },
+            "send": null
+          },
+          "audio": {
+            "captured_frames": 0,
+            "dropped_frames": 0,
+            "rendered_frames": 48000,
+            "silent_frames": 0,
+            "missing_output_frames": 0,
+            "invalid_buffers": 0,
+            "capture_faults": 0,
+            "counters_exact": true
+          },
+          "active_ms": 1000,
+          "starved": false,
+          "unplayed_frames": 0
+        }
+      ],
+      "peers": [
+        {
+          "frames": 0,
+          "clean": false,
+          "authenticated": false,
+          "stream": null
+        },
+        {
+          "frames": 48000,
+          "clean": true,
+          "authenticated": true,
+          "stream": "02020202020202020202020202020202",
+          "max_send_gap_ms": 6.01
+        }
+      ],
+      "stderr": "Listening on 127.0.0.1:59945; waiting for the approved peer.\nConnection interrupted (PeerAuthentication); retrying in 250 ms with 20 ms playback reserve.\nListening on 127.0.0.1:59945; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\n"
+    }
+  ]
+}

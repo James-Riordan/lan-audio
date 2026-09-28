@@ -1,0 +1,15 @@
+LAN Audio — development build
+
+Usage:
+  lan-audio devices [--json]  List system-output devices without starting audio
+  lan-audio version           Show this build's version
+  lan-audio help              Show this help
+
+  lan-audio send --address RECEIVER_IP [options]
+  lan-audio receive --address LOCAL_IP [options]
+
+Streaming requires: --ca FILE --cert FILE --key FILE --peer-fingerprint SHA256
+Sender also requires: --peer-name RECEIVER_CERTIFICATE_DNS_NAME
+Optional: --port 46321 --device EXACT_NAME --buffer-ms 20 --seconds N
+Use numeric IP addresses. Buffer range: 5-60 ms. Seconds applies to sender only.
+Development candidate: desktop streaming depends on target TLS build support.

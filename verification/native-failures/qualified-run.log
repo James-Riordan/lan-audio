@@ -1,0 +1,5 @@
+{"name": "windows-debug", "command": ["zig", "build", "audio-test", "network-test", "--summary", "all"], "exit_code": 0, "seconds": 80.764, "at_utc": "2026-09-26T18:07:56.145972+00:00"}
+{"name": "windows-safe", "command": ["zig", "build", "audio-test", "network-test", "-Doptimize=ReleaseSafe", "--summary", "all"], "exit_code": 0, "seconds": 31.519, "at_utc": "2026-09-26T18:08:27.665751+00:00"}
+{"name": "linux-compile", "command": ["zig", "build", "network-check", "-Dtarget=x86_64-linux-musl", "--summary", "all"], "exit_code": 0, "seconds": 11.836, "at_utc": "2026-09-26T18:08:39.501922+00:00"}
+{"name": "monterey-compile", "command": ["zig", "build", "network-check", "-Dtarget=x86_64-macos.12.0", "--summary", "all"], "exit_code": 0, "seconds": 6.718, "at_utc": "2026-09-26T18:08:46.220428+00:00"}
+{"name": "macos-26-compile", "command": ["zig", "build", "network-check", "-Dtarget=x86_64-macos.26.0", "--summary", "all"], "exit_code": 0, "seconds": 40.108, "at_utc": "2026-09-26T18:09:26.328853+00:00"}

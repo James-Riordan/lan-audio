@@ -1,0 +1,16 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "transport-probe",
+    "-Dtransport-tests=true",
+    "-Doptimize=ReleaseSafe",
+    "-j1",
+    "--summary",
+    "all"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "exit_code": 0,
+  "seconds": 13.397413200000301,
+  "log": "transport-safe-build.log"
+}

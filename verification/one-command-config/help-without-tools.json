@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "target": "Windows",
+      "exit_code": 0,
+      "stdout": "LAN Audio - Windows sender\n  .\\start.cmd                  Prepare, pair once, then send audio.\n  .\\start.cmd --prepare        Download/build only; no pairing or audio.\n  .\\start.cmd --config FILE    Use a specific declarative launcher file.\nDefault settings: lan-audio.launch.json beside this launcher.\nStart sh start on the Mac first. Keep both windows open. Ctrl+C stops.\n",
+      "stderr": ""
+    },
+    {
+      "target": "POSIX shell",
+      "exit_code": 0,
+      "stdout": "LAN Audio - Intel Mac receiver\n  sh start                  Prepare, pair once, then receive audio.\n  sh start --prepare        Download/build only; no pairing or audio.\n  sh start --config FILE    Use a specific declarative launcher file.\nDefault settings: lan-audio.launch.json beside this launcher.\nStart this Mac first, then start.cmd on Windows. Ctrl+C stops.\n",
+      "stderr": ""
+    }
+  ],
+  "files_unchanged": true,
+  "native_mac_execution": false
+}

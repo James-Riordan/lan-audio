@@ -1,0 +1,786 @@
+# miniaudio-zig: granular file contracts
+
+Generated from reviewed `tools/reference_contracts.json`. Edit the contract data, then render; do not edit this chapter alone.
+
+
+<a id="file-gitignore"></a>
+
+## `.gitignore`
+
+**Responsibility.** Separate generated caches/output from authored source and custody.
+
+**Contract and ownership.** Ignore only reproducible/disposable outputs; do not hide contracts, models, vendored bytes, locks or needed evidence.
+
+**Failure/change obligations.** Broad patterns can hide new source; inspect actual inventory after edits. Ignored status is not permission to delete user data.
+
+**Verification.** Compare source inventory with build outputs and ensure all authored files remain documented.
+
+**Next actionable work.** Add narrowly scoped patterns when new generators require them; keep release inputs explicit.
+
+
+<a id="file-build-zig"></a>
+
+## `build.zig`
+
+**Responsibility.** Build the production wrapper unchanged and add independent ABI compile/run artifacts plus isolated test-only fault controls.
+
+**Contract and ownership.** Apply matching target/optimization/backend macros to C, translation and probe; test-abi runs five cases, default test runs eight freshly.
+
+**Failure/change obligations.** abi-test-fault affects only the C probe; compiler errors are failures and never become qualified mutation detections.
+
+**Verification.** Four Debug/ReleaseSafe native/null matrix rows each pass clean tests, reject size/profile faults and pass a separate package consumer.
+
+**Next actionable work.** Retain existing exports and production native source/profile; extend selected ABI facts only for newly adopted surfaces.
+
+**Declared surface / navigation:** `build`; `std`; `target`; `optimize`; `null_only`; `abi_fault`; `native`; `translated`; `module`; `tests`; `abi_tests`; `run_abi`; `run_contract`; `check`; `test_step`.
+
+
+<a id="file-build-zig-zon"></a>
+
+## `build.zig.zon`
+
+**Responsibility.** Replace recursive package directories with the exact 47 authored/vendor paths, including .gitignore.
+
+**Contract and ownership.** Preserve name, version, fingerprint, compiler floor and dependency set; new files require deliberate package inclusion.
+
+**Failure/change obligations.** Broad directory inclusion previously admitted nested compiler/Python caches and omitted a catalogued file.
+
+**Verification.** Actual Zig selection equals inventory in live/noisy/archive forms; package identity and file bytes survive relocation.
+
+**Next actionable work.** Maintain explicit paths with per-file contracts; never let a verifier repair the list automatically.
+
+
+<a id="file-docs-architecture-build-and-abi-md"></a>
+
+## `docs/architecture/build-and-abi.md`
+
+**Responsibility.** Explain the exact-file package policy and why actual compiler selection must be tested.
+
+**Contract and ownership.** Production C/translation build graph stays unchanged; package closure excludes caches through explicit paths.
+
+**Failure/change obligations.** Ignoring directories in documentation or Git does not guarantee the pinned compiler excludes them from broad package paths.
+
+**Verification.** Controlled cache-noise and archive-derived consumer checks supplement the existing ABI graph.
+
+**Next actionable work.** Keep source-package and binary reproducibility claims distinct when changing packaging or compiler versions.
+
+**Declared surface / navigation:** `One import, one profile, one implementation`; `The actual build graph`; `Feature boundary`; `Targets and dependencies`; `Build effects and packaging`.
+
+
+<a id="file-docs-architecture-ecosystem-boundary-md"></a>
+
+## `docs/architecture/ecosystem-boundary.md`
+
+**Responsibility.** Translate the JCR vision into reusable-library ownership, identity/locator, staged configuration, capability and Docz boundaries.
+
+**Contract and ownership.** Freeze resolved context per operation; keep product policy out of the binding; runtime availability differs from build/qualification facts.
+
+**Failure/change obligations.** Comptime cannot create missing permissions/drivers; raw symbols do not imply qualified resampling; renaming Markdown does not implement Docz.
+
+**Verification.** Require typed-interface/context equivalence, source-scoped capabilities and real Docz producer/reader migration evidence.
+
+**Next actionable work.** Adopt a read-only host inspection/report boundary before publication, language or document migration adapters.
+
+**Declared surface / navigation:** `The audio dependency within the JCR ecosystem`; `A small reusable component inside a broad system`; `Identity, location and authority`; `Configuration at the correct stage`; `Capability facts need a scope and a lifetime`; `Quartz and Docz adoption for this handbook`; `First implementation boundary`.
+
+
+<a id="file-docs-contract-md"></a>
+
+## `docs/CONTRACT.md`
+
+**Responsibility.** Keep public ownership/PCM rules and identify the independent ABI suite as additional bounded evidence.
+
+**Contract and ownership.** C-produced sizes/alignments/offsets/constants and synthetic callback checks complement device lifetime contracts without replacing them.
+
+**Failure/change obligations.** Matching types and a synchronous sentinel cannot establish native callback quiescence or safe arbitrary C use.
+
+**Verification.** Confirm selected ABI facts with matrix receipts and retain separate real device/lifecycle qualification.
+
+**Next actionable work.** Extend contracts and targeted tests when new types or operations cross the application boundary.
+
+**Declared surface / navigation:** `Binding and device contract`; `Authority and purpose`; `Storage, lifetime and concurrency`; `PCM dimensions and error behavior`; `Capability boundaries and evidence`.
+
+
+<a id="file-docs-contracts-conversion-control-md"></a>
+
+## `docs/contracts/conversion-control.md`
+
+**Responsibility.** Document and derive consequences of the adopted generic quantizer and stock linear uint32 phase overflow.
+
+**Contract and ownership.** Keep requested/represented/effective ratios explicit; validate finite/range/cast bounds and actual reduced denominators.
+
+**Failure/change obligations.** Large integer rates and the separate direct-linear helper are not automatically safe workarounds; failure atomicity is unproven.
+
+**Verification.** O0/O2 probes reproduce plus/minus100ppm behavior, dynamic enablement and three phase transitions; widened arithmetic supplies expectations.
+
+**Next actionable work.** Evaluate bounded explicit rates, a reviewed source fix or another backend with precision/phase/quality evidence.
+
+**Declared surface / navigation:** `Rate control: representation, phase and adopted-source limitations`; `Three quantities must remain visible`; `R01a: the generic helper is too coarse for a presumed fine actuator`; `R01b: large integer rates are not an automatic precision fix`; `Choosing a future actuator`; `Controller contract before gain selection`.
+
+
+<a id="file-docs-contracts-conversion-custody-md"></a>
+
+## `docs/contracts/conversion-custody.md`
+
+**Responsibility.** Define two frame-domain ledgers, proposed adapter operations, partial-publication custody and terminal lifecycle.
+
+**Contract and ownership.** A=U+C+Ds and P=H+Q+B+Do; synthetic input and callback silence are separate; native errors do not imply rollback.
+
+**Failure/change obligations.** No-progress is not EOF, null input is not flush, source consumption is not rendered completion, and queue empty is not a fence.
+
+**Verification.** Hand-worked short-write trace and negative arithmetic/fence examples seed independent future adapter tests.
+
+**Next actionable work.** Choose a finite terminal recipe and negotiate compatible converted-output acknowledgement semantics.
+
+**Declared surface / navigation:** `Conversion custody, terminal state and completion`; `Values, buffers and clocks are separate`; `Proposed adapter seam`; `Lifecycle and terminal protocol`; `Worked prefix trace`; `Acknowledgement and discontinuity obligations`.
+
+
+<a id="file-docs-contracts-device-lifecycle-md"></a>
+
+## `docs/contracts/device-lifecycle.md`
+
+**Responsibility.** Specify stable context/device/userdata ownership, start-time callbacks, enumeration snapshot invalidation and cleanup.
+
+**Contract and ownership.** Callbacks may run before start returns; list pointers expire on refresh; native/control owners retain storage through fences.
+
+**Failure/change obligations.** Start/stop failure preserves acquired-resource obligations; timeouts, queue-empty and notifications do not authorize free.
+
+**Verification.** Q03 fake-native tests must exercise synchronous start callbacks, failed acquisition, refresh and paused callback return.
+
+**Next actionable work.** Apply these obligations to LAN Audio C03, keeping product lifecycle policy out of the raw binding.
+
+**Declared surface / navigation:** `Devices, borrowed lists and callback lifetimes`; `Acquisition ledger and stable storage`; `The start-time callback trap`; `Enumeration has a different ownership boundary`; `Callbacks, diagnostics and completion`.
+
+
+<a id="file-docs-contracts-pcm-and-conversion-md"></a>
+
+## `docs/contracts/pcm-and-conversion.md`
+
+**Responsibility.** Connect existing frame/partial-count rules to reproduced rate-control constraints and detailed custody/tail contracts.
+
+**Contract and ownership.** Source and output units remain separate; actual native counts govern; successful rate calls alone do not establish precision.
+
+**Failure/change obligations.** Generic quantization and large-denominator phase overflow block naive adaptive control adoption.
+
+**Verification.** Read the source-bound characterization and exact arithmetic examples; no DSP/hardware qualification implied.
+
+**Next actionable work.** Resolve R01 before using either generic ratio or large integer-rate paths in production.
+
+**Declared surface / navigation:** `Frames, conversion and preservation claims`; `Dimensions and representation`; `Partial conversion is normal`; `Conservation and tail accounting`; `Deliberate adoption boundaries`.
+
+
+<a id="file-docs-contracts-qualification-records-md"></a>
+
+## `docs/contracts/qualification-records.md`
+
+**Responsibility.** Define proposed source/environment/check records, comparison profiles, multiset findings and redacted repair handoffs.
+
+**Contract and ownership.** Intentionally varying source revisions may be comparable; tools/oracles/coverage need explicit compatibility; incomplete coverage cannot prove absence.
+
+**Failure/change obligations.** Newly observed is not necessarily newly introduced, persistent is not harmless, and known-defect reproduction is not capability qualification.
+
+**Verification.** Independent duplicate-finding conservation, source-only variation, mismatch and missing-coverage examples pass.
+
+**Next actionable work.** Use the owning ecosystem schema or a versioned adapter to real producer formats; preserve raw evidence and unknown facts.
+
+**Declared surface / navigation:** `Qualification records, comparison and repair handoff`; `A result is more than pass or fail`; `Comparable does not mean byte-identical subjects`; `Capability regression, new coverage and attribution`; `Retry results and repair packages`; `Machine-readable format adoption`.
+
+
+<a id="file-docs-dependencies-md"></a>
+
+## `docs/DEPENDENCIES.md`
+
+**Responsibility.** Connect the actual dependency closure to conditional JCR/MetaOS/Docz integration requirements.
+
+**Contract and ownership.** No new runtime/build language, registry, GUI or orchestration dependency is admitted by ecosystem membership.
+
+**Failure/change obligations.** A compiler floor, source hash or successful old test does not establish a new capability or authority.
+
+**Verification.** Production sources, metadata, profile, build and vendor identity remain unchanged in this documentation increment.
+
+**Next actionable work.** Admit each future adapter only with an owned versioned contract, real caller and qualified scope.
+
+**Declared surface / navigation:** `Complete dependency boundary for this build profile`.
+
+
+<a id="file-docs-files-md"></a>
+
+## `docs/FILES.md`
+
+**Responsibility.** Keep the original compact role overview accurate alongside the exact every-file catalogue.
+
+**Contract and ownership.** Integrity checks are read-only; explicit qualification runners write evidence; Zig and C probe roles remain distinct.
+
+**Failure/change obligations.** The overview is not the complete current inventory; exploratory evidence is not production source.
+
+**Verification.** Confirm catalogue and handbook navigation, tool responsibilities and unchanged production sources.
+
+**Next actionable work.** Retain shallow source ownership and add real files only with their caller and tests.
+
+**Declared surface / navigation:** `File-by-file ownership and verification`.
+
+
+<a id="file-docs-implementation-adoption-transaction-md"></a>
+
+## `docs/implementation/adoption-transaction.md`
+
+**Responsibility.** Specify isolated candidate states, expected-base publication, idempotent/superseded retries, closure consistency and recovery.
+
+**Contract and ownership.** Pre-publication failures preserve adopted bytes; same-token payload conflicts fail; later edits cannot be rolled back by an old retry.
+
+**Failure/change obligations.** A lock, rename, commit or copy sequence alone does not prove atomic readers or power-loss durability.
+
+**Verification.** Abstract conflict/retry checks complement the required future host fault schedule and actual filesystem tests.
+
+**Next actionable work.** Updater owner implements inspection then candidate isolation and a qualified publication/recovery protocol.
+
+**Declared surface / navigation:** `Source adoption as a recoverable transaction`; `Inputs frozen at preparation`; `State machine and persistent facts`; `Laws a future implementation must preserve`; `Required check selection and invalidation`; `File-level preparation and integration plan`.
+
+
+<a id="file-docs-implementation-conversion-handoff-md"></a>
+
+## `docs/implementation/conversion-handoff.md`
+
+**Responsibility.** Specify canonical future files, caller/owner boundaries, supporting tests/fixtures and R01-R08 decisions.
+
+**Contract and ownership.** Follow application WP05 src/host native adapter ownership and keep pure clocks/controllers in src/media.
+
+**Failure/change obligations.** Native control precision/phase, quality, END/ACK, resources and targets remain explicit activation gates.
+
+**Verification.** Per-file independent oracles and the ordered fixed-rate-to-adaptive sequence make future work reviewable.
+
+**Next actionable work.** Resolve reproduced R01 constraints in isolation after safe runtime prerequisites, without empty scaffolding.
+
+**Declared surface / navigation:** `Conversion handoff: files, decisions and order of work`; `Ownership and the canonical future layout`; `Decisions that must exist before production activation`; `Smallest coherent implementation sequence`; `Completion record for the next implementer`.
+
+
+<a id="file-docs-implementation-qualification-md"></a>
+
+## `docs/implementation/qualification.md`
+
+**Responsibility.** Advance the Q05 source subgate to an implemented runner while keeping S02-S08 native/product obligations explicit.
+
+**Contract and ownership.** Only a successful source-bound package receipt closes S01 for its observed compiler/host.
+
+**Failure/change obligations.** Source/archive/consumer success does not close all target, physical, license or deployment gates.
+
+**Verification.** Exact source selection, deterministic tar and two fresh relocated public-consumer profiles execute.
+
+**Next actionable work.** Use the release ledger for remaining native lifecycle, DSP, actual runtime closure and supported-host work.
+
+**Declared surface / navigation:** `Missing work with concrete exit gates`; `Q01: independently compare the C and Zig ABI`; `Q02: make the upstream upgrade transaction reviewable`; `Q03: qualify the application's device owner`; `Q04: adopt conversion with separate source/output clocks`; `Q05: package and qualify the actual supported targets`.
+
+
+<a id="file-docs-implementation-release-readiness-md"></a>
+
+## `docs/implementation/release-readiness.md`
+
+**Responsibility.** Split Q05 into S01-S08 with exact source/tool/profile/environment/evidence identities and file-level owners.
+
+**Contract and ownership.** Separate source closure, ABI, native lifetime, DSP, product runtime, licensing, provenance and updater recovery.
+
+**Failure/change obligations.** Windows source evidence cannot qualify Intel Mac, fix known resampler limitations, select a license or create signed release artifacts.
+
+**Verification.** S01 has a real runner/receipt; every other gate states concrete missing facts and acceptance boundaries.
+
+**Next actionable work.** Continue the first available unmet gate while retaining application C02/C03 ordering and hardware limitations.
+
+**Declared surface / navigation:** `Dependency release readiness: closure, targets and evidence`; `Identity and the release input graph`; `Gate ledger`; `Target record without unsupported extrapolation`; `Concrete file responsibilities`; `Ready for the next implementation session`.
+
+
+<a id="file-docs-readme-md"></a>
+
+## `docs/README.md`
+
+**Responsibility.** Add source-package qualification and separate release-readiness gates to the implementation reading route.
+
+**Contract and ownership.** Separate source distribution evidence from native lifetime, DSP, product runtime and release policy.
+
+**Failure/change obligations.** File presence and successful source tests do not complete Q05 or qualify missing hardware.
+
+**Verification.** 47-file catalogue, 50 source anchors and local navigation pass in live and portable snapshots.
+
+**Next actionable work.** Follow the release ledger after the current application lifecycle prerequisites.
+
+**Declared surface / navigation:** `Read the binding as an engineering argument`.
+
+
+<a id="file-docs-reference-catalog-json"></a>
+
+## `docs/reference/catalog.json`
+
+**Responsibility.** Map 47 authored/vendor files and 50 source snippets, including package tooling/tests and release documentation.
+
+**Contract and ownership.** Exact file navigation agrees with the independently observed compiler package selection.
+
+**Failure/change obligations.** Missing/new/stale files and bad anchors remain failures; neither catalogue nor package paths self-repair.
+
+**Verification.** Read-only local/portable docs checks and actual package selection pass.
+
+**Next actionable work.** Merge this twelve-entry central-reference delta after the matching dependency files are adopted.
+
+**Declared surface / navigation:** `schema`; `scope`; `files`; `source_anchors`.
+
+
+<a id="file-docs-reference-files-md"></a>
+
+## `docs/reference/files.md`
+
+**Responsibility.** Update manifest/consumer ownership and add granular contracts for the package runner, tests and release chapters.
+
+**Contract and ownership.** Describe actual command ordering, effects, rejection witnesses, compiler-specific interfaces and evidence limits.
+
+**Failure/change obligations.** Fresh consumer execution cannot be inferred from cached tests; known self-created archives are not a general hostile-upload service.
+
+**Verification.** Seven new unit tests and actual source-package qualification cover the named boundaries.
+
+**Next actionable work.** Extend per-file evidence with genuine target/use changes instead of adding placeholder directories.
+
+**Declared surface / navigation:** `Every-file implementation handbook`; `build.zig`; `build.zig.zon`; `src/root.zig`; `src/profile.h`; `src/native.c`; `tests/contract.zig`; `tools/check_vendor.py`; `UPSTREAM.json`; `vendor/miniaudio/miniaudio.h`; `vendor/miniaudio/LICENSE`; `.gitignore`; `README.md`; `docs/CONTRACT.md`; `docs/DEPENDENCIES.md`; `docs/FILES.md`; `docs/VERIFICATION.md`; `docs/README.md`; `docs/architecture/build-and-abi.md`; `docs/contracts/device-lifecycle.md`; `docs/contracts/pcm-and-conversion.md`; `docs/reference/upstream.md`; `docs/reference/files.md`; `docs/reference/catalog.json`; `docs/implementation/qualification.md`; `docs/verification/README.md`; `tools/check_docs.py`; `tests/test_check_docs.py`; `tests/abi_probe.c`; `tests/abi.zig`; `tests/consumer/build.zig`; `tests/consumer/build.zig.zon`; `tests/consumer/consumer.zig`; `tools/test_abi.py`; `tests/test_abi_runner.py`; `docs/verification/abi.md`; `docs/implementation/conversion-handoff.md`; `docs/contracts/conversion-custody.md`; `docs/contracts/conversion-control.md`; `docs/verification/conversion.md`; `docs/architecture/ecosystem-boundary.md`; `docs/implementation/adoption-transaction.md`; `docs/contracts/qualification-records.md`; `docs/verification/ecosystem.md`; `tools/test_package.py`; `tests/test_package_runner.py`; `docs/verification/source-package.md`; `docs/implementation/release-readiness.md`.
+
+
+<a id="file-docs-reference-upstream-md"></a>
+
+## `docs/reference/upstream.md`
+
+**Responsibility.** Extend symbol-level navigation with adopted generic quantization and stock linear phase-remapping hazards.
+
+**Contract and ownership.** Source declarations/implementation and immutable adoption hashes remain authoritative; generic and direct-linear helpers differ.
+
+**Failure/change obligations.** Source anchor presence is not correctness, and a precise integer pair alone is not safe phase control.
+
+**Verification.** C-only O0/O2 reproductions and read-only source-anchor/vendor checks bind these specific observations.
+
+**Next actionable work.** Review an explicit bounded-profile or source-candidate decision; never repair vendor bytes silently.
+
+**Declared surface / navigation:** `Navigate the adopted header without forking it`; `Review scope`; `Symbol-level route to the contract`; `Unreviewed source and platform work`.
+
+
+<a id="file-docs-verification-abi-md"></a>
+
+## `docs/verification/abi.md`
+
+**Responsibility.** Own Q01 selector protocol, mathematical comparison, guarded sentinel, two defect controls, consumer boundary and evidence interpretation.
+
+**Contract and ownership.** Five device-facing types, twelve offsets, eight values and synthetic callback arguments cross independently evaluated C/Zig paths.
+
+**Failure/change obligations.** No claim of full upstream ABI, OS callback lifetime, timing, physical device operation or unsupported native targets.
+
+**Verification.** 16 matrix commands include eight clean passes and eight expected assertion rejections; all require precise executed witnesses.
+
+**Next actionable work.** Use new phase directories and extend targeted facts as actual application ABI use grows.
+
+**Declared surface / navigation:** `Independent C/Zig ABI qualification`; `Why the comparison is useful`; `Coverage and selector protocol`; `Build graph and deliberate defects`; `Independent package consumer`; `Run and interpret the matrix`; `Remaining boundary`.
+
+
+<a id="file-docs-verification-conversion-md"></a>
+
+## `docs/verification/conversion.md`
+
+**Responsibility.** Specify source-scoped reproduction, candidate record fields, failure matrix, independent numerical oracle and target completion.
+
+**Contract and ownership.** Record algorithm/delay/boundary conventions, input/output domains, actual quantizer, limits and independently justified tolerances.
+
+**Failure/change obligations.** Known-defect passes, zero-only signals, same-implementation oracles and absent native targets cannot establish Q04.
+
+**Verification.** Preserved C probe logs, nine finite arithmetic checks and planned fake/native/DSP/controller campaigns have explicit evidence limits.
+
+**Next actionable work.** Implement application tests and obtain actual Windows/Intel Mac quality, lifecycle and drift observations before activation.
+
+**Declared surface / navigation:** `Conversion qualification: independent evidence before activation`; `What the present characterization establishes`; `Candidate record: fill facts, never copy assumed defaults`; `Functional and failure matrix`; `Numerical oracle and comparison method`; `Controller and target completion`.
+
+
+<a id="file-docs-verification-ecosystem-md"></a>
+
+## `docs/verification/ecosystem.md`
+
+**Responsibility.** Specify future adapter roles and acceptance for inspection, check invocation, report comparison, publication/recovery and document migration.
+
+**Contract and ownership.** Each boundary has explicit owner, input/output, effect/failure scope and an independent fault/oracle plan.
+
+**Failure/change obligations.** Sequential Python model tests do not implement OS atomicity, persistent exactly-once behavior, authorization or ecosystem APIs.
+
+**Verification.** Twelve source-delivered abstract tests pass; native, durability and Docz tools remain future qualified gates.
+
+**Next actionable work.** Close one real host capability at a time with source-bound evidence and explicit target limitations.
+
+**Declared surface / navigation:** `Ecosystem boundary acceptance and future file contracts`; `First vertical boundary: read-only inspection`; `File responsibilities for the future host adapter`; `Transaction fault schedule`; `Report comparison acceptance`; `Configuration and capability acceptance`; `Docz/Quartz migration acceptance`; `Present evidence and completion gates`.
+
+
+<a id="file-docs-verification-readme-md"></a>
+
+## `docs/verification/README.md`
+
+**Responsibility.** Route source closure checks to their commands, observed defects and bounded evidence interpretation.
+
+**Contract and ownership.** Actual compiler-selected archives and a relocated consumer are different evidence from a working-tree build.
+
+**Failure/change obligations.** Do not relabel this dependency check as a clean-machine product installation or physical audio test.
+
+**Verification.** Source-package receipt and companion parser/archive negative tests are linked to exact authored bytes.
+
+**Next actionable work.** Record each future gate under a new phase and retain historical results without relabeling.
+
+**Declared surface / navigation:** `Reproduce evidence without overstating it`; `What each result establishes`; `A receipt is an observation`.
+
+
+<a id="file-docs-verification-source-package-md"></a>
+
+## `docs/verification/source-package.md`
+
+**Responsibility.** Document the observed 71-selected/43-authored baseline defect, exact-file fix, executable gate and compiler/archive assumptions.
+
+**Contract and ownership.** Require package selection and content equality across source, controlled noise, compiler archive and relocation.
+
+**Failure/change obligations.** Source tar determinism is not binary reproducibility, hermetic toolchain execution, clean-machine runtime loading or target/device support.
+
+**Verification.** The new receipt records package/tar/source identities, all commands, actual consumers and retained compiler warnings.
+
+**Next actionable work.** Use new output directories and requalify version-specific parser/cache layout rather than accepting missing evidence.
+
+**Declared surface / navigation:** `Source-package closure and relocation`; `Defects found in the previous package declaration`; `Executable qualification`; `Failures and evidence interpretation`; `Scope of a pass`.
+
+
+<a id="file-docs-verification-md"></a>
+
+## `docs/VERIFICATION.md`
+
+**Responsibility.** Authoritative scoped guide: Executed adoption evidence — 2026-09-25.
+
+**Contract and ownership.** Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.
+
+**Failure/change obligations.** Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.
+
+**Verification.** Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.
+
+**Next actionable work.** Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations.
+
+**Declared surface / navigation:** `Executed adoption evidence — 2026-09-25`.
+
+
+<a id="file-readme-md"></a>
+
+## `README.md`
+
+**Responsibility.** Expose the executable source-package gate and remaining release responsibilities from the package entry point.
+
+**Contract and ownership.** Exact selected files and relocated public-consumer evidence complement existing ABI/device contracts.
+
+**Failure/change obligations.** Source closure does not imply physical audio, Mac support or released application artifacts.
+
+**Verification.** Run test_package into a new directory and retain source-bound commands/hashes and fresh consumer witnesses.
+
+**Next actionable work.** Use docs/implementation/release-readiness.md to select the next unmet supported-target gate.
+
+**Declared surface / navigation:** `miniaudio-zig`; `Build and use`; `Status and licensing`.
+
+
+<a id="file-src-native-c"></a>
+
+## `src/native.c`
+
+**Responsibility.** Sole MINIAUDIO_IMPLEMENTATION translation unit.
+
+**Contract and ownership.** Include the shared profile; no second implementation definition in tests or consumers.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** Keep the wrapper thin; upstream changes require deliberate adoption, not local rewrites.
+
+
+<a id="file-src-profile-h"></a>
+
+## `src/profile.h`
+
+**Responsibility.** Single authoritative ABI feature profile for C compilation and Zig translation.
+
+**Contract and ownership.** Disabled high-level codecs/engine/resource-manager features must match on both paths; layout-changing macros cannot differ across consumers.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** Review any feature addition for symbols, dependencies, allocation/lifetime changes and all target ABI tests.
+
+
+<a id="file-src-root-zig"></a>
+
+## `src/root.zig`
+
+**Responsibility.** Expose only the translated C API and upstream ownership/lifetime boundary.
+
+**Contract and ownership.** The raw c import adds no pointer safety or alternate owning device hierarchy. Keep userdata/context/device addresses stable.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** WP04 keeps application policy in lan-audio; add wrapper abstractions only with a demonstrated reusable contract.
+
+**Declared surface / navigation:** `c`.
+
+
+<a id="file-tests-abi-zig"></a>
+
+## `tests/abi.zig`
+
+**Responsibility.** Compare public translated types against independent C facts and verify a C-to-Zig callback sentinel plus invalid probe requests.
+
+**Contract and ownership.** Five tests cover object layout, selected fields, constants, guarded callback arguments and selector/null rejection.
+
+**Failure/change obligations.** Collect layout differences before failing; synthetic callback must not allocate, throw across C or infer real device guarantees.
+
+**Verification.** Five clean ABI tests pass in each native/null Debug/ReleaseSafe row; deliberate size/profile faults fail the exact expected groups.
+
+**Next actionable work.** Extend only for additional real ABI use and keep independent expected names, types and selector IDs reviewable.
+
+**Declared surface / navigation:** `mz_abi_size`; `mz_abi_align`; `mz_abi_offset`; `mz_abi_enum`; `mz_abi_call_callback`; `sentinel`; `std`; `c`; `objects`; `native_size`; `native_align`; `fields`; `translated`; `native`; `values`; `C and Zig object sizes and alignments agree`; `C and Zig callback userdata and endpoint field offsets agree`; `C and Zig adopted result and enum values agree`; `C invokes the translated callback type with intact arguments and guards`; `probe rejects invalid selectors and null callback`.
+
+
+<a id="file-tests-abi-probe-c"></a>
+
+## `tests/abi_probe.c`
+
+**Responsibility.** Produce native C99 size/alignment/offset/enum facts and invoke a guarded six-sample synthetic callback.
+
+**Contract and ownership.** Primitive returns avoid a circular probe struct; invalid selectors/null callback have explicit test-local sentinels.
+
+**Failure/change obligations.** Never define MINIAUDIO_IMPLEMENTATION or pass intentionally mismatched aggregate objects to production native functions.
+
+**Verification.** Matrix detects reported size+1 and actual MA_MAX_DEVICE_NAME_LENGTH=511 probe-only profile mismatch.
+
+**Next actionable work.** Add C-produced facts for newly used ABI surfaces while preserving the documented selector protocol.
+
+**Declared surface / navigation:** `mz_abi_size`; `mz_abi_align`; `mz_abi_offset`; `mz_abi_enum`; `mz_abi_call_callback`.
+
+
+<a id="file-tests-consumer-build-zig"></a>
+
+## `tests/consumer/build.zig`
+
+**Responsibility.** Build a standalone package consumer using only dependency.module("miniaudio") and ordinary public linkage.
+
+**Contract and ownership.** Forward target, optimization and null profile; separate compile-only check from fresh one-test execution.
+
+**Failure/change obligations.** Private source includes or manual native linking would invalidate the independence of this consumer evidence.
+
+**Verification.** Its test passes separately in all four local Q01 configurations with actual C symbol calls.
+
+**Next actionable work.** Keep it minimal and add public compatibility assertions only for promised consumer behavior.
+
+**Declared surface / navigation:** `build`; `std`; `target`; `optimize`; `null_only`; `dependency`; `tests`; `run`.
+
+
+<a id="file-tests-consumer-build-zig-zon"></a>
+
+## `tests/consumer/build.zig.zon`
+
+**Responsibility.** Identify the miniaudio_abi_consumer fixture, compiler floor, parent-relative library dependency and three-file package closure.
+
+**Contract and ownership.** Compiler-suggested fingerprint is test package identity, not release custody; dependency direction remains consumer to library.
+
+**Failure/change obligations.** Parent-relative fixture success does not establish distributable application dependency closure.
+
+**Verification.** Independent consumer builds parse the manifest and import the public module in all four local configurations.
+
+**Next actionable work.** Preserve fixture layout/identity and keep release packaging obligations under Q05.
+
+
+<a id="file-tests-consumer-consumer-zig"></a>
+
+## `tests/consumer/consumer.zig`
+
+**Responsibility.** Exercise public dependency import, native stereo PCM byte sizing and native configuration returned by value.
+
+**Contract and ownership.** Known expected byte units/type/default fields are independent of the function result; no private root or ABI helper is imported.
+
+**Failure/change obligations.** One downstream link/config test does not prove all library calls, hardware access or device lifetime safety.
+
+**Verification.** One executed test passes in each of the four host matrix configurations with no device initialization.
+
+**Next actionable work.** Use this seam for public API compatibility obligations without duplicating every internal test.
+
+**Declared surface / navigation:** `std`; `c`; `config`; `external package receives the linked native PCM and configuration API`.
+
+
+<a id="file-tests-contract-zig"></a>
+
+## `tests/contract.zig`
+
+**Responsibility.** Independent ABI/version/frame-unit/default configuration and explicit null initialization tests.
+
+**Contract and ownership.** Context/device remain in stable local storage; context outlives device; explicit null backend prevents physical-device fallback.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** Add platform/profile regressions as needed; active callback and application teardown tests belong to the audio host.
+
+**Declared surface / navigation:** `std`; `c`; `config`; `backends`; `pinned upstream version and interleaved PCM units`; `configuration defaults are obtained from upstream`; `explicit null context and device retain stable storage until teardown`.
+
+
+<a id="file-tests-test-abi-runner-py"></a>
+
+## `tests/test_abi_runner.py`
+
+**Responsibility.** Six independent log-fixture tests constrain qualification classification, including optimized logs and cached/infrastructure/unrelated failures.
+
+**Contract and ownership.** Importing the runner executes no builds; fake logs exercise required counts, exit statuses and size/offset witnesses.
+
+**Failure/change obligations.** A generic nonzero exit or absent witness must not be accepted as detecting the intended defect.
+
+**Verification.** All six tests pass alongside the 17 existing documentation checker tests.
+
+**Next actionable work.** Update expected totals deliberately when the ABI suite changes while retaining all false-success rejection cases.
+
+**Declared surface / navigation:** `EvidenceClassification`.
+
+
+<a id="file-tests-test-check-docs-py"></a>
+
+## `tests/test_check_docs.py`
+
+**Responsibility.** Seventeen independent fixture tests for documentation coverage, link/anchor drift, source drift, custody and exclusions.
+
+**Contract and ownership.** Use synthetic vendor bytes in a temporary root; assert failures and byte-for-byte absence of checker repair.
+
+**Failure/change obligations.** Test results establish tooling behavior only, never audio device safety, ABI completeness or upstream correctness.
+
+**Verification.** python -m unittest discover -s tests -p test_check_docs.py -v; production files are not mutated by these tests.
+
+**Next actionable work.** Extend only for a new checker obligation or discovered regression; preserve baseline and per-fault independence.
+
+**Declared surface / navigation:** `DocumentationGate`.
+
+
+<a id="file-tests-test-package-runner-py"></a>
+
+## `tests/test_package_runner.py`
+
+**Responsibility.** Exercise package parser, exact-set, runtime-witness and archive rejection cases using independent temporary fixtures.
+
+**Contract and ownership.** Seven tests require correct compiler records, deterministic tar bytes, exact regular-file membership and fresh consumer evidence.
+
+**Failure/change obligations.** Reject missing/duplicate/unsafe paths, leaked bytecode, wrong bytes, links and duplicate/extra members; cached compilation may remain valid.
+
+**Verification.** All seven new tests and the existing 23 tooling tests pass; no native compile or source mutation occurs in this suite.
+
+**Next actionable work.** Retain explicit malformed and infrastructure cases when the evidence interface changes.
+
+**Declared surface / navigation:** `PackageEvidence`.
+
+
+<a id="file-tools-check-docs-py"></a>
+
+## `tools/check_docs.py`
+
+**Responsibility.** Read-only exact file coverage, explicit anchors, simple Markdown links, source-snippet and vendor-custody validation.
+
+**Contract and ownership.** Prune known generated caches and top-level evidence only; reject unknown files, escapes, duplicates and broken references.
+
+**Failure/change obligations.** Return nonzero diagnostics without repair, download, rehash or device use; this is not a complete Markdown/security parser.
+
+**Verification.** Run tests/test_check_docs.py independent temporary fixtures and verify the real 27-file project passes.
+
+**Next actionable work.** Maintain schema/exclusion documentation and add focused negative fixtures when validation behavior changes.
+
+**Declared surface / navigation:** `unique_object`; `read_json`; `contained`; `inventory`; `explicit_ids`; `check`; `main`.
+
+
+<a id="file-tools-check-vendor-py"></a>
+
+## `tools/check_vendor.py`
+
+**Responsibility.** Read-only validation of the adopted upstream header/license.
+
+**Contract and ownership.** Resolve only contained declared paths and compare SHA-256; no fetch, fallback, modification or automatic new hashes.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** Use before any upstream adoption; retain old/new hashes and native consumer evidence.
+
+
+<a id="file-tools-test-abi-py"></a>
+
+## `tools/test_abi.py`
+
+**Responsibility.** Run four native ABI profiles, two deliberate defects per row and separate package consumers into a new source-bound evidence directory.
+
+**Contract and ownership.** Record exact compiler/source/host, command logs/timing/exit codes and accepted runtime witnesses; hash sources before and after.
+
+**Failure/change obligations.** Reject cached passes, unexpected failure, existing output paths and source drift; timeout/launch/compile failure never counts as mutation success.
+
+**Verification.** All 16 native commands meet expectations and classifier unit fixtures guard false qualification paths.
+
+**Next actionable work.** Retain receipts/caches as phase artifacts and rerun on actual new supported hosts; no source repair or automatic adoption.
+
+**Declared surface / navigation:** `classify`; `source_hashes`; `main`.
+
+
+<a id="file-tools-test-package-py"></a>
+
+## `tools/test_package.py`
+
+**Responsibility.** Qualify exact source selection, noise-independent package identity, deterministic tar, compiler cache archive and relocated public consumer.
+
+**Contract and ownership.** Require pinned compiler/format, valid source inventory, unique output, exact members/hashes, fresh one-test executions and unchanged inputs.
+
+**Failure/change obligations.** Reject malformed/duplicate/unsafe records, cache leakage, altered members, native/infrastructure failures and source drift; never modify source or pins.
+
+**Verification.** Live/noisy/tar selection agrees; compiler-produced archive passes docs/custody; Debug/native and ReleaseSafe/null consumers execute freshly.
+
+**Next actionable work.** Requalify the compiler debug/cache adapter on tool/package identity changes; retain clean-machine/native support gates separately.
+
+**Declared surface / navigation:** `digest`; `parse_fetch`; `require_selection`; `consumer_pass`; `write_archive`; `extract_own_archive`; `main`.
+
+
+<a id="file-upstream-json"></a>
+
+## `UPSTREAM.json`
+
+**Responsibility.** Own exact upstream tag/commit, source hashes and provenance limits.
+
+**Contract and ownership.** Records unmodified miniaudio 0.11.25 at the adopted commit; authenticated retrieval is not signature verification.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** Revisit on a planned upgrade with source diff, license/profile/API review and platform qualification.
+
+**Declared surface / navigation:** `repository`; `tag`; `commit`; `adopted`; `files`; `verification`; `local_modifications`.
+
+
+<a id="file-vendor-miniaudio-license"></a>
+
+## `vendor/miniaudio/LICENSE`
+
+**Responsibility.** Unmodified upstream license notice.
+
+**Contract and ownership.** Preserve byte-for-byte and include applicable notice in distributions; it does not choose a license for new JCR code.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** WP09 resolves new-code licensing and retains dependency notices.
+
+
+<a id="file-vendor-miniaudio-miniaudio-h"></a>
+
+## `vendor/miniaudio/miniaudio.h`
+
+**Responsibility.** Preserved upstream declarations, manual, device backends and DSP implementation.
+
+**Contract and ownership.** Do not annotate/reformat this 4 MB custody object. Application uses low-level devices/PCM; upstream allocation/driver timing is outside the project proof.
+
+**Failure/change obligations.** Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.
+
+**Verification.** Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.
+
+**Next actionable work.** For endpoint/resampler work inspect the exact pinned API sections and qualify behavior; never claim the whole upstream source was formally verified.

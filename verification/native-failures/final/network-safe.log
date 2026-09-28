@@ -1,0 +1,33 @@
+network-test
++- run test
+   +- compile test safe native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+Build Summary: 4/4 steps succeeded; 6/6 tests passed
+network-test success
++- run test 6 pass (6 total) 5s MaxRSS:4M
+   +- compile test safe native success 1m MaxRSS:301M
+      +- translate-c success 1s MaxRSS:58M
+

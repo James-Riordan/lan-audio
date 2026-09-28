@@ -1,0 +1,87 @@
+# Dependency closure and architecture decisions
+
+Scope means the audio project's actual transitive dependencies, plus an explicit
+record of candidates needed for the eventual product. It does not silently make
+every project in `C:/Projects` a runtime dependency or authorize following historical
+instructions found inside another repository.
+
+## Actual admitted graph
+
+```text
+lan-audio pure kernel ──build──> Zig std/compiler
+lan-audio dependency-test ──package──> ../miniaudio-zig
+miniaudio-zig ──source──> miniaudio 0.11.25 (pinned, vendored)
+miniaudio-zig ──link/load──> target libc/compiler runtime + OS audio backends
+verification ──tool──> Python stdlib; Java 17 + official TLC 1.7.4
+```
+
+The [wrapper dependency record](../../miniaudio-zig/docs/DEPENDENCIES.md) expands
+every admitted source/toolchain/platform layer. The window/session kernel does not
+import miniaudio; the independent consumer proves package linking separately.
+The sibling path is a local-development dependency, not a self-contained release
+artifact. A release must package both or replace the path with immutable hash-pinned
+package custody and test from a clean checkout.
+
+## Observed candidates, with explicit admission decisions
+
+| Candidate / local evidence | Observed capability | Audio decision and unmet obligations |
+|---|---|---|
+| `C:/Projects/quic-zig/README.md`, `build.zig.zon` | Offline QUIC v1 Initial/Handshake codec, bounded CRYPTO and recovery; declares no full connection engine | Not linked. A production media transport also needs integrated TLS, application data, datagrams or a justified stream profile, congestion/pacing and host/network qualification |
+| `C:/Projects/tls-zig/README.md`, `build.zig`, `build.zig.zon` | TLS 1.3 over a host-owned reliable stream; private OpenSSL 3.5.8 backend; Windows-specific imported DLL archives/staging | Not linked. Cross-platform backend, trust/pairing and deployment evidence required; its current build is not a portable drop-in QUIC TLS provider |
+| `C:/Projects/paseto-zig/README.md`, `build.zig.zon` | Bounded v4.local token codec, no external runtime packages declared | Not linked. Tokens alone do not supply streaming transport, handshake, peer identity policy or media replay protection |
+| `C:/Projects/zson/build.zig.zon`; JCR ownership record | Existing ZSON language/schema owner | Not linked while there is no runtime configuration parser. Later adopt a real supported profile and audit actual evaluation dependencies |
+| Opus / `opus-zig` | No local package found in the inspected project inventory | Not required by the initial PCM design. Add only with measured bandwidth/quality need, pinned upstream, encode/decode bounds, legal custody and impairment tests |
+| mDNS / `mdns-zig` | No local package found in the inspected inventory | Optional discovery later; manual endpoint selection can precede it. Discovery never authenticates peers |
+| Zap, MetaOS, Mediaz, Hydra | Separate network-policy, host-integration, catalog and orchestration owners | Optional integrations, not initial mandatory runtime dependencies |
+
+No existing candidate's source or release pins were modified. The listed summaries
+are source/document observations, not independent execution of those libraries'
+full test suites or a file-by-file correctness certification of OpenSSL/QUIC.
+An admitted transport must bring its entire transitive source/native/runtime closure
+into this same process before the product can claim secure cross-platform streaming.
+
+## Decisions and rejected shortcuts
+
+**D1 — Transparent upstream naming.** `miniaudio-zig` is a Zig Lib. It is not the
+ZApp and not a newly declared primitive ZLib. The spelling follows upstream
+`miniaudio`. The reference product retains a provisional descriptive directory
+name until a product identity is selected deliberately.
+
+**D2 — First profile uses PCM.** This removes codec complexity from initial timing
+and device qualification. The bandwidth is calculated in `MATHEMATICS.md`; adoption
+of Opus is conditional on measured need, not assumed because audio crosses a network.
+
+**D3 — Transport stays an explicit unresolved integration gate.** Do not send
+application audio in publicly derivable QUIC Initial protection. Do not substitute
+PASETO tokens for channel authentication. A reliable TLS stream is a possible
+functional baseline only after acknowledging head-of-line delay and integrating
+bounded queues/deadlines; a qualified authenticated-datagram transport may be a
+better fit. No custom cryptographic protocol is invented by this preparation.
+
+**D4 — Format boundaries remain distinct.** `build.zig.zon` is Zig package metadata.
+It is not ZSON. No fake `.zson` manifest or schema is added to satisfy naming.
+Runtime configuration and generated Sysl realizations require actual owner contracts.
+
+**D5 — Preserve upstream and established owners.** Wrap/document upstream at the
+boundary; do not restyle 4 MB of third-party code or rewrite unrelated libraries.
+Miniaudio's ABI is pinned; source and compile definitions travel together.
+
+**D6 — No unsupported platform promises.** macOS playback and macOS system capture
+are separate capabilities. Upstream's low-level loopback profile is WASAPI-specific.
+Windows-to-Mac is the first proposed journey; reverse-direction system capture is
+an additional host design, not a consequence of the name cross-platform.
+
+## Provenance
+
+Local context read on 2026-09-25: supplied
+`C:/Inbox/Downloads/Personal/JCR_Ecosystem_Engineering_Directive.md`;
+`C:/Projects/jcr-architecture/docs/ONTOLOGY-AND-OWNERSHIP.md`;
+`C:/Projects/jcr-architecture/baseline/0.1/01-ECOSYSTEM-CONSTITUTION.md`;
+the candidate files above and the previously inspected Obsidian vault.
+
+Third-party sources:
+[miniaudio release 0.11.25](https://github.com/mackron/miniaudio/releases/tag/0.11.25),
+[pinned source](https://github.com/mackron/miniaudio/tree/9634bedb5b5a2ca38c1ee7108a9358a4e233f14d),
+[official TLC 1.7.4](https://github.com/tlaplus/tlaplus/releases/tag/v1.7.4).
+Downloads were commit/release-addressed over HTTPS. Local hashes are recorded;
+no signature verification or whole-upstream security audit is claimed.

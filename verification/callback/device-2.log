@@ -1,0 +1,19 @@
+capture-test
++- run test 0 pass, 1 fail (1 total)
+error: 'windows_capture.test.Windows system-output capture supplies finite encodable stereo frames' failed:
+       C:\Projects\lan-audio\tests\windows_capture.zig:34:22: 0x7ff684667923 in test.Windows system-output capture supplies finite encodable stereo frames (test_zcu.obj)
+           if (blocks == 0) return error.NoCaptureFrames;
+                            ^
+failed command: ".\\.zig-cache\\o\\ec0689224d7460c718eb387f2bc28c2c\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0xc2aca8e7 --listen=-
+
+Build Summary: 4/6 steps succeeded (1 failed); 0/1 tests passed (1 failed)
+capture-test transitive failure
++- run test 0 pass, 1 fail (1 total)
+   +- compile test debug native success 3s MaxRSS:260M
+      +- WriteFile cached
+      +- compile lib miniaudio debug native cached 25ms MaxRSS:16M
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c cached 16ms MaxRSS:16M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xc2aca8e7 capture-test -j1 --summary all

@@ -1,0 +1,92 @@
+//! Shared connection authorization for desktop and mobile receiver owners.
+//! Repeat authorization is idempotent only for the same live verified binding.
+//! This is a serialized protocol guard, not a thread/device/transport destructor.
+const std = @import("std");
+const core = @import("lan_audio");
+const security = @import("peer_policy");
+
+pub const Error = security.Error || core.Negotiation.Error;
+pub const Authorization = enum { established, unchanged };
+pub const Snapshot = struct {
+    generation: u64,
+    revoked: bool,
+    permit: ?security.Permit,
+    phase: core.Negotiation.Phase,
+    stream: core.wire_v2.StreamId,
+    next_frame: u64,
+};
+
+/// Do not mutate fields or copy a live owner. Its enclosing lifecycle supplies a
+/// fresh nonwrapping generation and closes native owners separately on rejection.
+pub const Channel = struct {
+    generation: u64,
+    expected_peer: security.Fingerprint,
+    gate: core.Negotiation,
+    permit: ?security.Permit = null,
+    revoked: bool = false,
+
+    pub fn init(generation: u64, local_role: security.Role, expected_peer: security.Fingerprint) Error!Channel {
+        if (generation == 0) return error.InvalidGeneration;
+        return .{ .generation = generation, .expected_peer = expected_peer, .gate = core.Negotiation.init(local_role) };
+    }
+
+    fn current(self: *const Channel, generation: u64) Error!void {
+        if (generation != self.generation) return error.StaleGeneration;
+        if (self.revoked) return error.Revoked;
+    }
+
+    pub fn authorize(self: *Channel, policy: *const security.Policy, evidence: security.Evidence) Error!Authorization {
+        try self.current(evidence.generation);
+        // Stale completions are harmless. A failed CURRENT-channel authentication
+        // or changed binding invalidates authorization and all further admission.
+        errdefer self.invalidate();
+        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);
+        if (self.permit) |existing| {
+            if (!std.meta.eql(existing, candidate)) return error.AuthorizationChanged;
+            return .unchanged; // Preserve negotiated stream, format and frontier.
+        }
+        try self.gate.authorizeChannel();
+        self.permit = candidate;
+        return .established;
+    }
+
+    fn admitted(self: *Channel, generation: u64, policy_revision: u64) Error!void {
+        try self.current(generation);
+        errdefer self.invalidate();
+        const permit = self.permit orelse return error.Unauthenticated;
+        if (permit.policy_revision != policy_revision) return error.AuthorizationChanged;
+    }
+
+    /// One logical record, after outgoing copied custody or before incoming
+    /// media publication. Partial I/O retries must never apply the record twice.
+    pub fn apply(self: *Channel, generation: u64, policy_revision: u64, direction: core.Negotiation.Direction, message: core.wire_v2.Message) Error!void {
+        try self.admitted(generation, policy_revision);
+        errdefer self.invalidate();
+        try self.gate.apply(direction, message);
+    }
+
+    /// Receiver only: caller supplies actual downstream drain/quiescence evidence.
+    /// Repeated attestation remains harmless while this stream is draining.
+    pub fn confirmDrained(self: *Channel, generation: u64, policy_revision: u64) Error!void {
+        try self.admitted(generation, policy_revision);
+        errdefer self.invalidate();
+        try self.gate.confirmDrained();
+    }
+
+    fn invalidate(self: *Channel) void {
+        self.revoked = true;
+        self.permit = null;
+        self.gate.phase = .failed;
+    }
+
+    /// Idempotent permission revocation, not proof of worker/native reclamation.
+    /// A stale platform callback cannot stop a replacement generation.
+    pub fn revoke(self: *Channel, generation: u64) Error!void {
+        if (generation != self.generation) return error.StaleGeneration;
+        self.invalidate();
+    }
+
+    pub fn snapshot(self: *const Channel) Snapshot {
+        return .{ .generation = self.generation, .revoked = self.revoked, .permit = self.permit, .phase = self.gate.phase, .stream = self.gate.stream, .next_frame = self.gate.next_frame };
+    }
+};

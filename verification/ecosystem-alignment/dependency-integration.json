@@ -1,0 +1,190 @@
+{
+  "scope": "12 dependency-owner conversion contracts and 28 TLS r2/r3 paths integrated into application navigation; no runtime/build/vendor/pin changes by this phase.",
+  "miniaudio_contracts": [
+    "miniaudio-zig/docs/FILES.md",
+    "miniaudio-zig/docs/README.md",
+    "miniaudio-zig/docs/contracts/conversion-control.md",
+    "miniaudio-zig/docs/contracts/conversion-custody.md",
+    "miniaudio-zig/docs/contracts/pcm-and-conversion.md",
+    "miniaudio-zig/docs/implementation/conversion-handoff.md",
+    "miniaudio-zig/docs/implementation/qualification.md",
+    "miniaudio-zig/docs/reference/catalog.json",
+    "miniaudio-zig/docs/reference/files.md",
+    "miniaudio-zig/docs/reference/upstream.md",
+    "miniaudio-zig/docs/verification/README.md",
+    "miniaudio-zig/docs/verification/conversion.md"
+  ],
+  "tls_added_paths": [
+    "docs/architecture/decisions/0002-implementation-profile.md",
+    "docs/contracts/connection-transactions.md",
+    "docs/contracts/recordless-events.md",
+    "docs/contracts/resource-budgets.md",
+    "docs/formal/event-custody.md",
+    "docs/reference/files/tools/check-event-model.py.md",
+    "docs/reference/files/tools/check-plan.py.md",
+    "docs/reference/files/tools/probe-quic-tls.c.md",
+    "docs/reference/files/tools/probe-quic-tls.py.md",
+    "docs/reference/files/tools/test-plan-lifecycle.py.md",
+    "docs/roadmap/completion-protocol.md",
+    "docs/roadmap/decision-register.md",
+    "docs/roadmap/implementation-plan.json",
+    "docs/roadmap/takeover.md",
+    "docs/roadmap/work-graph.md",
+    "docs/verification/baseline-r2.md",
+    "docs/verification/baseline-v1.md",
+    "docs/verification/quic-provider-probe.md",
+    "docs/verification/r2-change-audit.json",
+    "docs/verification/r2-check-results.json",
+    "docs/verification/r2-probe-result.json",
+    "docs/verification/r3-change-audit.json",
+    "docs/verification/r3-check-results.json",
+    "tools/check-event-model.py",
+    "tools/check-plan.py",
+    "tools/probe-quic-tls.c",
+    "tools/probe-quic-tls.py",
+    "tools/test-plan-lifecycle.py"
+  ],
+  "miniaudio_sources": {
+    ".gitignore": "23ccdb9ea9e115eea42eeff7c2d98cebc0557c1cc07a7bed3c624cde15388f04",
+    "README.md": "e41025584d483566251a31bd0503be4c8f5ff10dc52b733b6c5a7d10f6afba7c",
+    "UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+    "build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+    "build.zig.zon": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e",
+    "docs/CONTRACT.md": "da00459a2c49ab0bcf16d261826c852df692fb7b6d35ef1e45ce69c320ab09ca",
+    "docs/DEPENDENCIES.md": "2341b51711884963da4d2a7b7a5c4565836b65108e7f8209cccb6f60a49d84c2",
+    "docs/FILES.md": "2b2a2b7ecbcad6dc0dc5e63e30bf9a59d6b4d9eba956124c73b50ed1ced95b0a",
+    "docs/README.md": "9e5ee477767039739892b10634f04bf43f42205ecd4cf7d9fff5ff3848e4e2e3",
+    "docs/VERIFICATION.md": "4dd18a6bbba2035f1ea5f206afde7131c902106aa3a70f0ae921f0a6ce264f89",
+    "docs/architecture/build-and-abi.md": "f2da902c0c9a93ff8a8580dbe335e3cf457e026cc53f5f61fdedb51e2d3949d8",
+    "docs/contracts/conversion-control.md": "47ed27ff963b0a6a913d49e658e0ab2ba15cc6ac282c06dcd4d393048376a675",
+    "docs/contracts/conversion-custody.md": "ff2253528010bac87e8c89b520018670b7d59ceb224f62274e4e71998a319f01",
+    "docs/contracts/device-lifecycle.md": "76937c50af6a70f97a9d35d0e348a249b40f5f79cfc58b60eba5e12a63abfb16",
+    "docs/contracts/pcm-and-conversion.md": "630cced9e958106db292532c7c0a37e2d32e32557ee7d3814f6523d95f7bd9fc",
+    "docs/implementation/conversion-handoff.md": "eaa869723b00c035880058bcd1137038bbc7640e788ad0c0f866f4ff21f08a94",
+    "docs/implementation/qualification.md": "b8a72c9ebec717b5e19cf88dd5582807cbeb6a0e9ba6154dc35f2735e01fea5e",
+    "docs/reference/catalog.json": "b94c3a5173f6bcb1cec960544a2382b9c9a2092411cf08d0a1d57d433337cd5d",
+    "docs/reference/files.md": "3cdba6a20cd8c87684969cf310e0bbf36e86ccd3c430c7e11303c338079b5b7a",
+    "docs/reference/upstream.md": "d66869ab5fc8a2bcfc945c48738d4aee38e4e1cdb668886e2df6bcd9169e2916",
+    "docs/verification/README.md": "37e7e83f0f98eadb40f37e907210f418868dfd7fd10aa5aee0de30ad096fdec6",
+    "docs/verification/abi.md": "dedfcc8eaee92163028308e6e62c7d2b212de87e545dfc8c848dcc242ad3715e",
+    "docs/verification/conversion.md": "814d6a49872835460f041ad93fca7e7c716edc852d4657761ed06f43e9134efa",
+    "src/native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+    "src/profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+    "src/root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+    "tests/abi.zig": "546b81390dbaed6148f144eb4f933ee335b85b3cbb6b3e70ebb81630f30f2f75",
+    "tests/abi_probe.c": "48cc227b60d07183cef25084d83ca1d9a03379380b45a19f118d5b5c8094e085",
+    "tests/consumer/build.zig": "29dea367b60d59c9160f843e3bd0c90034f7ab9e8009d28d0fb76ef653904a58",
+    "tests/consumer/build.zig.zon": "b35353f0cf4ff09d5a50a4483dc5e80f293862f4ad9fd67c599e3cf8471b59f2",
+    "tests/consumer/consumer.zig": "bf7e743fb99bfd726f237287e6ce4ac167a741470aca029edf23bd5822fba51f",
+    "tests/contract.zig": "29388ef98c0e6b988d708377a455cfe5b4fa05ca6c7f9ad7ec587cca3b037d5c",
+    "tests/test_abi_runner.py": "a3ffea36c573f7d8871192411ddb81c80b87726c7511e9bc157e84ac96c7a965",
+    "tests/test_check_docs.py": "73e17ea38b9f1b88a51bde0ae9faab4354bf52d706636babfc8a4f5fec0af8d8",
+    "tools/check_docs.py": "8dad3ddc7272243f0cba95de4b7844fff13fa52bd2db1b7a980d8db808bbee16",
+    "tools/check_vendor.py": "fad1dde8431845c3d452c0a0e7eb818020827c0335a3a623e9adddf08e15a949",
+    "tools/test_abi.py": "c8945663c7eaffbee90bdd83d097b9c47479f057e26d2e0937c7bbf28d2840c7",
+    "vendor/miniaudio/LICENSE": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb",
+    "vendor/miniaudio/miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+  },
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\audio-conversion-reference-contracts-additions.json",
+      "sha256": "92ea6f31e5ad37354ba21f01f140dd8a5c63b86ac17a78629038980f95a875c7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-handoff.md",
+      "sha256": "1fd56eb8648045d3c2cdcc814fc7dedb37c261dea716e95a344285fdf21814d1"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\before.json",
+      "sha256": "3bef73e010a787de75c9f91463834fb1021dd60d0a447d59e66aa3dff4101860"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\characterization\\debug-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\characterization\\debug-run.log",
+      "sha256": "885a4a28b2df4f3817df228f7cc1563e10364fdbbcc44f96b675e8bb30d5bd22"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\characterization\\optimized-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\characterization\\optimized-run.log",
+      "sha256": "885a4a28b2df4f3817df228f7cc1563e10364fdbbcc44f96b675e8bb30d5bd22"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\characterization\\receipt.json",
+      "sha256": "cd4342ecf88302c5ed44f2861083e58a52f170b45f24612045e4153eba8b6af5"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\characterization\\version.log",
+      "sha256": "6d772c1af112030e0b32b7f86e58780c711e73ddde831b29318c3a9222537888"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\documentation.log",
+      "sha256": "7457bfaffe0d382002ebdbdfbc8671b8cf8417241bf06f485f6892b53fb9bb2e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\examples.log",
+      "sha256": "d881907d18fa78fed16c08f112bf6eacd0e70bd8cada5c518735d221414307f2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\probes\\check_examples.py",
+      "sha256": "c91a950dafd553c48fa2b0de25f5bee3aacb54c6d9dcb07536fb26b5eb9dd7e9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\probes\\probe.c",
+      "sha256": "e215fca6fdfc9e9bd2ad0403a6969614a5105c04345d228afaf24f1d52258729"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\probes\\run_probe.py",
+      "sha256": "f100d0ebf9999241b37aba6a9164012dbef40bc861dc938ce69f9a1df65cf8d2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\receipt.json",
+      "sha256": "b1a459c599df7244bb371fb81b3937dac9741f319dbeaa527cc083a472377e96"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\RESULTS.md",
+      "sha256": "6840545bfad27b7f8256f27291deffa66d8cd2627fd5956457e759146f0df538"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\tooling-tests-observation.txt",
+      "sha256": "f51af28761b2c852a8379dcd51978a274ce7d7a27b9ccbdd7ab36a0b27a688d3"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-conversion-readiness\\miniaudio-zig\\verification\\conversion-readiness\\vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r2-change-audit.json",
+      "sha256": "96ea9acca4675ca46db139ae213c0bf4e95145a73699c59afe287c500233437e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r2-check-results.json",
+      "sha256": "c0c199f88301dad084fa98f2b4ceffb4008a3818efdc16fbdbbc989470a7c7fb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r2-probe-result.json",
+      "sha256": "0102c661a944aa22d160211ac58cf4a21a80f24d27f2d9d5114254cb5b8707ac"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r3-change-audit.json",
+      "sha256": "89af2ae3857a4e560bbf4b4391d7c65dd0922a78e8441801cefed59295583507"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r3-check-results.json",
+      "sha256": "baeda104e1ccf33d39ba5c381ab9ae66f3af0f1ab55877aeedb431ced92cc445"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\source-inventory.json",
+      "sha256": "587d464903ad62c6c44fff4de62b0b6199a33c4035ef880847a7a66efef74783"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\artifact-register.json",
+      "sha256": "31af2de97fcb7fdaf9356dc736fc5ef5347086bdc91389c5d735f459ad35665e"
+    }
+  ]
+}

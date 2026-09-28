@@ -1,0 +1,60 @@
+Build Summary: 40/40 steps succeeded; 109/109 tests passed
+verified-transport-probe success
++- install audio-verified-probe success
+|  +- compile exe audio-verified-probe safe native success 22s MaxRSS:277M
+|     +- translate-c cached 20s MaxRSS:16M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+worker-probe success
++- install audio-worker-probe success
+|  +- compile exe audio-worker-probe safe native success 22s MaxRSS:293M
+|     +- translate-c success 20s MaxRSS:17M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 44ms MaxRSS:20M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c cached 26ms MaxRSS:16M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+app success
++- install lan-audio success
+|  +- compile exe lan-audio safe native success 19s MaxRSS:298M
+|     +- options cached
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+platform-test success
++- run test 1 pass (1 total) 19s MaxRSS:4M
+   +- compile test safe native success 22s MaxRSS:271M
+      +- translate-c (reused)
+policy-test success
++- run test 7 pass (7 total) 253ms MaxRSS:3M
+   +- compile test safe native cached 23s MaxRSS:16M
+network-test success
++- run test 6 pass (6 total) 19s MaxRSS:5M
+   +- compile test safe native cached 22s MaxRSS:40M
+      +- translate-c (reused)
+audio-test success
++- run test 6 pass (6 total) 704ms MaxRSS:6M
+|  +- compile test safe native cached 116ms MaxRSS:21M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- run test 7 pass (7 total) 704ms MaxRSS:6M
+   +- compile test safe native cached 117ms MaxRSS:20M
+      +- WriteFile (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c (reused)
+test success
++- run test 45 pass (45 total) 253ms MaxRSS:3M
+|  +- compile test safe native success 23s MaxRSS:305M
++- run test 37 pass (37 total) 226ms MaxRSS:3M
+   +- compile test safe native success 23s MaxRSS:322M
+

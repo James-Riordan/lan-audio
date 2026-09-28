@@ -1,0 +1,131 @@
+[
+  {
+    "command": [
+      "zig",
+      "fmt",
+      "--check",
+      "build.zig",
+      "src",
+      "tests"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 0.037099299996043555,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-0.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 10.796427699999185,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-1.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-Doptimize=ReleaseSafe",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 25.53071959999943,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-2.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "core-check",
+      "-Dtarget=x86_64-macos",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 6.163124300001073,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-3.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "core-check",
+      "-Dtarget=aarch64-linux-gnu",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 5.7271206000004895,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-4.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "v2-transport-probes",
+      "-Dtransport-tests=true",
+      "-Doptimize=ReleaseSafe",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 38.190543400000024,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-5.log"
+  },
+  {
+    "command": [
+      "python",
+      "tests/integration/protocol_v2_peer.py",
+      "--output",
+      "verification/pending-custody/interop.json"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 1,
+    "seconds": 0.20385150000220165,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "command-6.log"
+  }
+]

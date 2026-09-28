@@ -1,0 +1,11 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "lifecycle-test",
+    "--summary",
+    "all"
+  ],
+  "exit_code": 0,
+  "seconds": 25.256391525268555
+}

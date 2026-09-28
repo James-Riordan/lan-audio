@@ -1,0 +1,9 @@
+{
+  "build.zig": "89ca045ca8faf3485bce6642f29ff530d337c261a3fd36f32529c2bcf0fc14be",
+  "src/host/audio_device.zig": "dc41cadb9c98068126f8651c645210fb4bb615c417005439adb6e1969dbf5350",
+  "src/host/net/native.c": "8a8be9c796430320dd18d9214e09e995c6819d9beab95c8a26dbdbd4d80203e8",
+  "src/host/net/native.h": "15f0bce3a92493a2e3c38126d411c37273ad107a3f2037eb1be4592e03a91448",
+  "src/host/net/socket.zig": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+  "tests/integration/network_host.zig": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+  "tests/integration/audio_device.zig": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5"
+}

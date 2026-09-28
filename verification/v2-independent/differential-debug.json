@@ -1,0 +1,21 @@
+{
+  "seed": 1245925938,
+  "random_cases": 4000,
+  "maximum_cases": 14000,
+  "maximum_input_bytes": 8241,
+  "child_deadline_seconds": 120,
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "library": "C:\\Projects\\lan-audio\\zig-out\\bin\\audio-v2-codec-probe.dll",
+  "library_sha256": "18b30ff3ee733203a6fb8b87e5309062952f319bc1d19ee03c73aa13bf309ee6",
+  "result": {
+    "passed": true,
+    "cases": 13631,
+    "accepted": 1017,
+    "rejected": 12614,
+    "corpus_sha256": "27be576a11754eb00d7a86a1060f08fd35dcf5e9af6331243c79e5798e0a18f3",
+    "seconds": 8.014339499997732,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

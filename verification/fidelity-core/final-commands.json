@@ -1,0 +1,71 @@
+[
+  {
+    "command": [
+      "zig",
+      "fmt",
+      "--check",
+      "build.zig",
+      "build.zig.zon",
+      "src",
+      "tests"
+    ],
+    "exit_code": 0,
+    "seconds": 0.04284820000066247,
+    "log": "final-0.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 11.130470699999933,
+    "log": "final-1.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 25.522302800000034,
+    "log": "final-2.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "core-check",
+      "-j1",
+      "-Dtarget=x86_64-macos",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 4.816365900000164,
+    "log": "final-3.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "core-check",
+      "-j1",
+      "-Dtarget=aarch64-linux-gnu",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 12.67977400000018,
+    "log": "final-4.log"
+  }
+]

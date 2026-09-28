@@ -1,0 +1,143 @@
+{
+  "revision": "2026-09-26-r4",
+  "status": "applied-and-verified",
+  "project": "tls-zig",
+  "excluded_self_path": "docs/verification/r4-change-audit.json",
+  "deleted_paths": [],
+  "application_pins_modified": false,
+  "changes": [
+    {
+      "path": "docs/README.md",
+      "change": "modified",
+      "before_sha256": "33f986a319cd1b36941498c71f8eec78f0a71f04c5cb6bb749c98dee7068d87e",
+      "after_sha256": "fe5b8c044b39230eb6207b5c380b80ee0274b280cf680af5f6dbd840d79baf1f",
+      "bytes": 2699
+    },
+    {
+      "path": "docs/ecosystem/configuration-and-capabilities.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "738d1de012c7129fa0619a09151b33ceff1de8f77b41feba05e396e340595e71",
+      "bytes": 5676
+    },
+    {
+      "path": "docs/ecosystem/docz-migration.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "d079bc0e80271827d86c7ec79bdce4f8f250334e38c32ce029774266c6ab388e",
+      "bytes": 4414
+    },
+    {
+      "path": "docs/ecosystem/maintenance-and-observability.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9d6cc1ec3a26a3a356fe596dac7c293dd18b35041c2709bb97312530fb94df36",
+      "bytes": 4932
+    },
+    {
+      "path": "docs/ecosystem/overview.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "3ef0433a0d68ad280d511e9b22e712a2305b8bd57bbf86726000e1a5dcc297f9",
+      "bytes": 6175
+    },
+    {
+      "path": "docs/ecosystem/producer-observations.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "2fab87fa53105da64ba596d9dbc777bbd98c8267a2d3400713f6f820271d5d11",
+      "bytes": 4472
+    },
+    {
+      "path": "docs/roadmap/files/build/backend.zig.md",
+      "change": "modified",
+      "before_sha256": "6973a0e7323f3a9f8518b9b9d15b1c38090f526caf42082afbd16e189104813d",
+      "after_sha256": "d344a712b04a4ed936173ef3a71ba4cdb0c8881a586f1fff0a35206d4663ff43",
+      "bytes": 3859
+    },
+    {
+      "path": "docs/roadmap/files/src/policy/credentials.zig.md",
+      "change": "modified",
+      "before_sha256": "806132669d53c328a7caacc95fbd7ef3b2336f0952ba08c760c442bb21bf3fe2",
+      "after_sha256": "5ae82f879ea8623c4351d1ed348ea5b1ac96df21c30981adef52d087a9bce2d8",
+      "bytes": 3809
+    },
+    {
+      "path": "docs/roadmap/files/src/policy/verification.zig.md",
+      "change": "modified",
+      "before_sha256": "840caf1574ee758c0c6e2abc6db73256162562999dfab1c7f1a3fa1e0c5de3ab",
+      "after_sha256": "f013acb1afd80110aa40ad791bf97206b3b97bf79665c685b7f099c96244c6e2",
+      "bytes": 3847
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/contract.zig.md",
+      "change": "modified",
+      "before_sha256": "4aa2c25794a044372c8f2a167169d81913ff07f791fb887636e4e93e1ca20fa9",
+      "after_sha256": "a82cd47b1da7a544f23a64860bd4fc9a80dc58cf66675eb31f8e4179d853e77c",
+      "bytes": 3945
+    },
+    {
+      "path": "docs/roadmap/files/tests/abi.zig.md",
+      "change": "modified",
+      "before_sha256": "f4e2b012fa71c934a122417d2d44004f8d1be74a9f42d0cc9307ad78b75ad988",
+      "after_sha256": "869bfaa7474182d86381af1dde2f97a9835e71af796fb09c9930f70c5b14d658",
+      "bytes": 3650
+    },
+    {
+      "path": "docs/roadmap/files/tests/interop/matrix.py.md",
+      "change": "modified",
+      "before_sha256": "3e16d802ab2828f56b6d50de0ea41b6c55281fd0fb9ab43f263bb819c8afd8ef",
+      "after_sha256": "aa948597b5bd0dd1acfefa773eff233bfcc200c9163d21d1956dcc19bb1eafa2",
+      "bytes": 4056
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "modified",
+      "before_sha256": "18ce173d92c3f2e00375c9849755b646550a8dad5c475fc31fc826dc6ff92506",
+      "after_sha256": "c3952b88ce3d72b31ae18ac61e04f61efc3e1819d6f638e895e1477e699dc748",
+      "bytes": 49228
+    },
+    {
+      "path": "docs/roadmap/takeover.md",
+      "change": "modified",
+      "before_sha256": "9b4a3421243c2be0601553b84ba453aaa1ae2a947d32f2c9fbe18538420011a6",
+      "after_sha256": "c119452e46bbb80b6780be492f0baf7c0003c4a7166f908fedb7fb3ab813d64a",
+      "bytes": 4756
+    },
+    {
+      "path": "docs/roadmap/work-graph.md",
+      "change": "modified",
+      "before_sha256": "b26fe09169fae710a8c9c58303523870c707137fe8b963777cfe36aa730a673c",
+      "after_sha256": "b3453913ad2d0348e96666d09527917f4ed75a8423b315c5e66767e17d166e62",
+      "bytes": 3048
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "31af2de97fcb7fdaf9356dc736fc5ef5347086bdc91389c5d735f459ad35665e",
+      "after_sha256": "6e96e58944b3c6bc59bd20dde2d7072967eb1effced7e948f98be06e735f648a",
+      "bytes": 32145
+    },
+    {
+      "path": "docs/verification/baseline-r3.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "a15eb85f0b9c3d0707590981b40bfe65361ac06890ed6f9085dfbcd1ec754518",
+      "bytes": 1829
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "a15eb85f0b9c3d0707590981b40bfe65361ac06890ed6f9085dfbcd1ec754518",
+      "after_sha256": "d2a99d4f8120265b41e54d7e011a1fca1ce00e4499f6ce2fa9de9c8e54193748",
+      "bytes": 1394
+    },
+    {
+      "path": "docs/verification/r4-check-results.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "4adae7a800ac92f9c0892b4539fe83e7bc4179f1c118f138638d3becdb0f247e",
+      "bytes": 4806
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+lose_late_success detected=True
+ignore_token_fields detected=True
+duplicate_dispatch detected=True
+release_live_worker detected=True
+forget_pending detected=True
+release_unfenced_device detected=True
+drop_pending_suffix detected=True
+skip_callback_fence detected=True
+require_full_tail detected=True
+fence_before_publication_closed detected=True

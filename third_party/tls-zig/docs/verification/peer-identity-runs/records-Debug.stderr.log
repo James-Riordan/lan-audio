@@ -1,0 +1,60 @@
+OpenSSL 3.5.8 25 Aug 2026
+TLS 1.3, verified localhost, ALPN http/1.1
+HTTP/1.1 200 OK
+Content-Length: 8
+
+tls-zig
+1/11 driver.test.peer probe observes early response without changing blocked ciphertext or deadline...OK
+2/11 driver.test.peer probe during blocked write honors cancel deadline and raw EOF...OK
+3/11 driver.test.idle probe output flush preserves order before next application write...OK
+4/11 driver.test.host driver preserves partial writes and received suffixes across reads...OK
+5/11 driver.test.host shutdown preserves deadline across final plaintext reads and rejects raw EOF...OK
+6/11 driver.test.host operation deadline expires despite slow transport progress...OK
+7/11 driver.test.atomic cancellation stops blocked reads and writes without touching transport...OK
+8/11 driver.test.host cannot extend a shutdown deadline by switching to read...OK
+9/11 driver.test.host rejects invalid transport counts and backward clocks...OK
+10/11 driver.test.host authentication failure flushes fragmented alert and retains diagnostics...OK
+11/11 driver.test.host raw EOF during handshake is terminal even when alert delivery blocks...OK
+All 11 tests passed.
+1/23 transport.test.verified peer leaf digest is copied only from completed peer-verified TLS...OK
+2/23 transport.test.digest query rejects unverified clients and closing or ended connections...OK
+3/23 transport.test.digest C boundary leaves failed outputs and success suffix unchanged...OK
+4/23 transport.test.record authentication failure revokes a previously exportable identity...OK
+5/23 transport.test.custom ALPN is owned by each connection and bounds are checked...OK
+6/23 transport.test.ALPN mismatch rejects handshake before application data...OK
+7/23 transport.test.opaque ALPN accepts the maximum legal identifier...OK
+8/23 transport.test.qualified runtime backend is OpenSSL 3.5.8...OK
+9/23 transport.test.TLS13 HTTP1 roundtrip with single-byte handshake fragments...OK
+10/23 transport.test.wrong DNS name fails before application access...OK
+11/23 transport.test.explicit trust excludes an unrelated CA...OK
+12/23 transport.test.expired certificate and future validity use supplied wall time...OK
+13/23 transport.test.client-only EKU cannot authenticate a server...OK
+14/23 transport.test.IP SAN succeeds and wrong IP fails...OK
+15/23 transport.test.mTLS requires a trusted client certificate...OK
+16/23 transport.test.AEAD record tampering is terminal and releases no plaintext...OK
+17/23 transport.test.clean close_notify differs from raw EOF and truncated record...OK
+18/23 transport.test.shutdown preserves final records in both roles and still rejects truncation...OK
+19/23 transport.test.shutdown retries a blocked close alert before reading final peer data...OK
+20/23 transport.test.bounded output retains write data across WANT_WRITE...OK
+21/23 transport.test.input bounds, empty input, and explicit EOF...OK
+22/23 transport.test.absolute deadline, backward clock, and idempotent cancel...OK
+23/23 transport.test.invalid configuration and mismatched credentials fail at creation...OK
+All 23 tests passed.
+Build Summary: 16/16 steps succeeded
+example success
++- run staged TLS example success 449ms
+   +- WriteFile libssl-3-x64.dll success
+      +- compile exe tls-example debug native success 15s MaxRSS:252M
+interop success
++- run python success 1s
+   +- WriteFile libssl-3-x64.dll success
+      +- compile lib tls-test-backend debug native success 15s MaxRSS:48M
+host-test success
++- run host driver tests success 916ms
+   +- WriteFile libssl-3-x64.dll success
+      +- compile test debug native success 11s MaxRSS:281M
+test success
++- run staged TLS tests success 972ms
+   +- WriteFile libssl-3-x64.dll success
+      +- compile test debug native success 12s MaxRSS:286M
+

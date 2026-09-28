@@ -1,0 +1,10 @@
+app
++- fail failure
+error: Native audio/application profile is not implemented for this target. Shared core, policy and lifecycle checks remain available.
+
+Build Summary: 0/2 steps succeeded (1 failed)
+app transitive failure
++- fail failure
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x4552db05 app -Dtarget=aarch64-ios.16.0 --summary all

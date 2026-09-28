@@ -1,0 +1,7 @@
+{
+  "status": "checks passed through application contracts; final live-sibling custody failed",
+  "checks_sha256": "1bac6bd1d2a395e19f1a1eec529a05171d1556f13e55ef9f82f00d4d6fced76e",
+  "source_boundary": "../repository-launcher/before.json",
+  "source_boundary_sha256": "8d722fcc2fb12e918b666eb247b69db0cabb00da2eb069a4f0385998dfbaacee",
+  "native_mac_executed": false
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "label": "build-Debug",
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=Debug",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 19.139
+  },
+  {
+    "label": "peer-Debug",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\final-host\\Debug.json"
+    ],
+    "exit_code": 0,
+    "seconds": 11.16
+  },
+  {
+    "label": "build-ReleaseSafe",
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 22.743
+  },
+  {
+    "label": "peer-ReleaseSafe",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\final-host\\ReleaseSafe.json"
+    ],
+    "exit_code": 0,
+    "seconds": 7.795
+  }
+]

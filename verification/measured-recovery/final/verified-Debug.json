@@ -1,0 +1,902 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "executable_sha256": "32f7235f3de362e9fc1107ec5c158c8e176347cc631cbe007b3e403accf76cbc",
+  "fixture_fingerprints": {
+    "client": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+    "server": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd"
+  },
+  "results": [
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.051,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.041,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.044,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.044,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-peer",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.079,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT WrongPeer revoked=true tls_released=true\nerror: WrongPeer\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:86:72: 0x7ff60826c667 in authorize (audio-verified-probe_zcu.obj)\n        if (!std.mem.eql(u8, &evidence.verified_leaf, &expected_peer)) return error.WrongPeer;\n                                                                       ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff60826beaf in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:16: 0x7ff60826b875 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-role",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongRole"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.073,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT WrongRole revoked=true tls_released=true\nerror: WrongRole\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:90:50: 0x7ff60826c8d9 in authorize (audio-verified-probe_zcu.obj)\n            if (!rule.roles.allows(remote_role)) return error.WrongRole;\n                                                 ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff60826beaf in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:16: 0x7ff60826b875 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "unapproved",
+      "family": "ipv4",
+      "expected_errors": [
+        "UnauthorizedPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.074,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT UnauthorizedPeer revoked=true tls_released=true\nerror: UnauthorizedPeer\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:93:9: 0x7ff60826c727 in authorize (audio-verified-probe_zcu.obj)\n        return error.UnauthorizedPeer;\n        ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff60826beaf in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:16: 0x7ff60826b875 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "cancel",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.065,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT Canceled revoked=true tls_released=true\nerror: Canceled\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:75:13: 0x7ff608261939 in current (audio-verified-probe_zcu.obj)\n            return error.Canceled;\n            ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:128:9: 0x7ff60826b996 in refresh (audio-verified-probe_zcu.obj)\n        try self.current(generation);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:30:13: 0x7ff608128165 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, rules);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "revoke",
+      "family": "ipv4",
+      "expected_errors": [
+        "Revoked"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.063,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT Revoked revoked=true tls_released=true\nerror: Revoked\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:72:35: 0x7ff6082618d5 in current (audio-verified-probe_zcu.obj)\n        if (self.channel.revoked) return error.Revoked;\n                                  ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:128:9: 0x7ff60826b996 in refresh (audio-verified-probe_zcu.obj)\n        try self.current(generation);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:35:13: 0x7ff608128333 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, rules);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.062,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:45:53: 0x7ff60826bf66 in authorize (audio-verified-probe_zcu.obj)\n            if (!std.meta.eql(existing, candidate)) return error.AuthorizationChanged;\n                                                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:41:13: 0x7ff6081285b9 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, &revised);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "cancel-wait",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.133,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "REJECT Canceled revoked=true tls_released=true\nerror: Canceled\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:191:59: 0x7ff60826f6fb in wait (audio-verified-probe_zcu.obj)\n            if (canceled) |flag| if (flag.load(.acquire)) return error.Canceled;\n                                                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:104:32: 0x7ff60825e632 in run (audio-verified-probe_zcu.obj)\n                .wait_input => try self.socket.wait(.input, deadline, self.canceled),\n                               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:188:32: 0x7ff6082652e5 in receive (audio-verified-probe_zcu.obj)\n                const result = try self.run(deadline);\n                               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:85:13: 0x7ff6081298d2 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.receive(7, 1, deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "raw-eof",
+      "family": "ipv4",
+      "expected_errors": [
+        "TlsFailure",
+        "TransportFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.074,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "REJECT TransportFailure revoked=true tls_released=true\nerror: TransportFailure\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:129:9: 0x7ff60826e47f in fail (audio-verified-probe_zcu.obj)\n        return error.SystemFailure;\n        ^\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:148:9: 0x7ff60826e998 in send (audio-verified-probe_zcu.obj)\n        return switch (c.la_net_send(&self.native, bytes.ptr, bytes.len, &count)) {\n        ^\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:217:9: 0x7ff60826e5d3 in transportSend (audio-verified-probe_zcu.obj)\n        return self.send(bytes) catch error.TransportFailure;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:92:9: 0x7ff608260bcd in abort (audio-verified-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:300:85: 0x7ff60825f79c in step (audio-verified-probe_zcu.obj)\n                const n = (self.transport.send(self.transport.context, bytes) catch return self.abort(error.TransportFailure)) orelse return .wait_output;\n                                                                                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:165:24: 0x7ff60826579d in finishSend (audio-verified-probe_zcu.obj)\n        const result = try self.run(deadline);\n                       ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:144:9: 0x7ff608264932 in send (audio-verified-probe_zcu.obj)\n        try self.finishSend(generation, revision, deadline);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:96:13: 0x7ff608129eb8 in exercise (audio-verified-probe_zcu.obj)\n            try connection.send(7, 1, try wire.encodeAudio(&out, stream, position, pcm[0 .. frames * 2], connection.channel.gate.format), deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "current-revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.077,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "REJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:93:49: 0x7ff6082616d0 in permitted (audio-verified-probe_zcu.obj)\n        if (permit.policy_revision != revision) return error.AuthorizationChanged;\n                                                ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:150:9: 0x7ff608268ea2 in beginSend (audio-verified-probe_zcu.obj)\n        try self.permitted(generation, revision);\n        ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:143:9: 0x7ff6082648fd in send (audio-verified-probe_zcu.obj)\n        try self.beginSend(generation, revision, bytes, deadline);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:89:9: 0x7ff6081299d0 in exercise (audio-verified-probe_zcu.obj)\n        try connection.send(7, 2, \"bad\", deadline);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "before-handshake",
+      "family": "ipv4",
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.05,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "REJECT InvalidState revoked=true tls_released=true\nerror: InvalidState\nC:\\Projects\\tls-zig\\src\\root.zig:178:34: 0x7ff60826c26d in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (!self.authenticated) return error.InvalidState;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:130:22: 0x7ff60826ba69 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:18:13: 0x7ff608127c59 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, rules);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-alpn",
+      "family": "ipv4",
+      "expected_errors": [
+        "AlpnMismatch"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.064,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT AlpnMismatch revoked=true tls_released=true\nerror: AlpnMismatch\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff60825f46a in step (audio-verified-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "expired",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.057,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_EXPIRED] sslv3 alert certificate expired (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "REJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff60825f46a in step (audio-verified-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline",
+        "OperationDeadline"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.114,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "REJECT Deadline revoked=true tls_released=true\nerror: Deadline\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:195:39: 0x7ff60826f805 in wait (audio-verified-probe_zcu.obj)\n            if (after >= deadline_ms) return error.Deadline;\n                                      ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:104:32: 0x7ff60825e632 in run (audio-verified-probe_zcu.obj)\n                .wait_input => try self.socket.wait(.input, deadline, self.canceled),\n                               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 1.19,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "READY 53681\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.423,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "READY 53683\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.329,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 53685\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.263,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 53687\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-peer",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.21,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53689\nREJECT WrongPeer revoked=true tls_released=true\nerror: WrongPeer\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:86:72: 0x7ff60826c667 in authorize (audio-verified-probe_zcu.obj)\n        if (!std.mem.eql(u8, &evidence.verified_leaf, &expected_peer)) return error.WrongPeer;\n                                                                       ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff60826beaf in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:16: 0x7ff60826b875 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-role",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongRole"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.124,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53695\nREJECT WrongRole revoked=true tls_released=true\nerror: WrongRole\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:90:50: 0x7ff60826c8d9 in authorize (audio-verified-probe_zcu.obj)\n            if (!rule.roles.allows(remote_role)) return error.WrongRole;\n                                                 ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff60826beaf in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:16: 0x7ff60826b875 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "unapproved",
+      "family": "ipv4",
+      "expected_errors": [
+        "UnauthorizedPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.235,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53699\nREJECT UnauthorizedPeer revoked=true tls_released=true\nerror: UnauthorizedPeer\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:93:9: 0x7ff60826c727 in authorize (audio-verified-probe_zcu.obj)\n        return error.UnauthorizedPeer;\n        ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff60826beaf in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:120:16: 0x7ff60826b875 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "cancel",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.275,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53701\nREJECT Canceled revoked=true tls_released=true\nerror: Canceled\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:75:13: 0x7ff608261939 in current (audio-verified-probe_zcu.obj)\n            return error.Canceled;\n            ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:128:9: 0x7ff60826b996 in refresh (audio-verified-probe_zcu.obj)\n        try self.current(generation);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:30:13: 0x7ff608128165 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, rules);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "revoke",
+      "family": "ipv4",
+      "expected_errors": [
+        "Revoked"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.226,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53703\nREJECT Revoked revoked=true tls_released=true\nerror: Revoked\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:72:35: 0x7ff6082618d5 in current (audio-verified-probe_zcu.obj)\n        if (self.channel.revoked) return error.Revoked;\n                                  ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:128:9: 0x7ff60826b996 in refresh (audio-verified-probe_zcu.obj)\n        try self.current(generation);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:35:13: 0x7ff608128333 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, rules);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.102,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53705\nREJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:45:53: 0x7ff60826bf66 in authorize (audio-verified-probe_zcu.obj)\n            if (!std.meta.eql(existing, candidate)) return error.AuthorizationChanged;\n                                                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:131:16: 0x7ff60826bae4 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:41:13: 0x7ff6081285b9 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, &revised);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "cancel-wait",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.133,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 53707\nREJECT Canceled revoked=true tls_released=true\nerror: Canceled\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:191:59: 0x7ff60826f6fb in wait (audio-verified-probe_zcu.obj)\n            if (canceled) |flag| if (flag.load(.acquire)) return error.Canceled;\n                                                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:104:32: 0x7ff60825e632 in run (audio-verified-probe_zcu.obj)\n                .wait_input => try self.socket.wait(.input, deadline, self.canceled),\n                               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:188:32: 0x7ff6082652e5 in receive (audio-verified-probe_zcu.obj)\n                const result = try self.run(deadline);\n                               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:85:13: 0x7ff6081298d2 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.receive(7, 1, deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "raw-eof",
+      "family": "ipv4",
+      "expected_errors": [
+        "TlsFailure",
+        "TransportFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.092,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 53709\nREJECT TransportFailure revoked=true tls_released=true\nerror: TransportFailure\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:129:9: 0x7ff60826e47f in fail (audio-verified-probe_zcu.obj)\n        return error.SystemFailure;\n        ^\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:148:9: 0x7ff60826e998 in send (audio-verified-probe_zcu.obj)\n        return switch (c.la_net_send(&self.native, bytes.ptr, bytes.len, &count)) {\n        ^\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:217:9: 0x7ff60826e5d3 in transportSend (audio-verified-probe_zcu.obj)\n        return self.send(bytes) catch error.TransportFailure;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:92:9: 0x7ff608260bcd in abort (audio-verified-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:300:85: 0x7ff60825f79c in step (audio-verified-probe_zcu.obj)\n                const n = (self.transport.send(self.transport.context, bytes) catch return self.abort(error.TransportFailure)) orelse return .wait_output;\n                                                                                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:165:24: 0x7ff60826579d in finishSend (audio-verified-probe_zcu.obj)\n        const result = try self.run(deadline);\n                       ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:144:9: 0x7ff608264932 in send (audio-verified-probe_zcu.obj)\n        try self.finishSend(generation, revision, deadline);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:96:13: 0x7ff608129eb8 in exercise (audio-verified-probe_zcu.obj)\n            try connection.send(7, 1, try wire.encodeAudio(&out, stream, position, pcm[0 .. frames * 2], connection.channel.gate.format), deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "current-revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.059,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 53711\nREJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:93:49: 0x7ff6082616d0 in permitted (audio-verified-probe_zcu.obj)\n        if (permit.policy_revision != revision) return error.AuthorizationChanged;\n                                                ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:150:9: 0x7ff608268ea2 in beginSend (audio-verified-probe_zcu.obj)\n        try self.permitted(generation, revision);\n        ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:143:9: 0x7ff6082648fd in send (audio-verified-probe_zcu.obj)\n        try self.beginSend(generation, revision, bytes, deadline);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:89:9: 0x7ff6081299d0 in exercise (audio-verified-probe_zcu.obj)\n        try connection.send(7, 2, \"bad\", deadline);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "before-handshake",
+      "family": "ipv4",
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.055,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 0
+      },
+      "output": "READY 53713\nREJECT InvalidState revoked=true tls_released=true\nerror: InvalidState\nC:\\Projects\\tls-zig\\src\\root.zig:178:34: 0x7ff60826c26d in verifiedPeerLeafSha256 (audio-verified-probe_zcu.obj)\n        if (!self.authenticated) return error.InvalidState;\n                                 ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:130:22: 0x7ff60826ba69 in refresh (audio-verified-probe_zcu.obj)\n        const leaf = try self.driver.engine.verifiedPeerLeafSha256();\n                     ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:18:13: 0x7ff608127c59 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.refresh(7, rules);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-alpn",
+      "family": "ipv4",
+      "expected_errors": [
+        "TlsFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.053,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL] tlsv1 alert no application protocol (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "READY 53715\nREJECT TlsFailure revoked=true tls_released=true\nerror: TlsFailure\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff60825f46a in step (audio-verified-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "expired",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.062,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_EXPIRED] sslv3 alert certificate expired (_ssl.c:2710)",
+        "application_received": 0
+      },
+      "output": "READY 53717\nREJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff60825f46a in step (audio-verified-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline",
+        "OperationDeadline"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.115,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 53719\nREJECT Deadline revoked=true tls_released=true\nerror: Deadline\nC:\\Projects\\lan-audio\\src\\host\\net\\socket.zig:195:39: 0x7ff60826f805 in wait (audio-verified-probe_zcu.obj)\n            if (after >= deadline_ms) return error.Deadline;\n                                      ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:104:32: 0x7ff60825e632 in run (audio-verified-probe_zcu.obj)\n                .wait_input => try self.socket.wait(.input, deadline, self.canceled),\n                               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-name",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.055,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "REJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff60825f46a in step (audio-verified-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "missing-client",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication",
+        "TlsFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.053,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: TLSV13_ALERT_CERTIFICATE_REQUIRED] tlsv13 alert certificate required (_ssl.c:2710)",
+        "application_received": 0
+      },
+      "output": "READY 53723\nREJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff60825f46a in step (audio-verified-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:101:28: 0x7ff60825e538 in run (audio-verified-probe_zcu.obj)\n            const result = try self.driver.step(try net.nowMilliseconds());\n                           ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:118:17: 0x7ff60826b7a7 in handshake (audio-verified-probe_zcu.obj)\n            if (try self.run(deadline) != .complete) return error.UnexpectedCompletion;\n                ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff608127d35 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "buffered-deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.046,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 53725\nREJECT Deadline revoked=true tls_released=true\nerror: Deadline\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:176:52: 0x7ff608264ca6 in receive (audio-verified-probe_zcu.obj)\n        if (try net.nowMilliseconds() >= deadline) return error.Deadline;\n                                                   ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:73:13: 0x7ff608129691 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.receive(7, 1, 0);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "bad-accept",
+      "family": "ipv4",
+      "expected_errors": [
+        "FormatMismatch"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.058,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record",
+        "application_received": 64
+      },
+      "output": "REJECT FormatMismatch revoked=true tls_released=true\nerror: FormatMismatch\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:61:64: 0x7ff6082669de in apply (audio-verified-probe_zcu.obj)\n                if (!self.format.eql(try v2.profile(message))) return error.FormatMismatch;\n                                                               ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:65:9: 0x7ff608265de1 in apply (audio-verified-probe_zcu.obj)\n        try self.gate.apply(direction, message);\n        ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:183:21: 0x7ff60826509e in receive (audio-verified-probe_zcu.obj)\n                    try self.channel.apply(generation, revision, .incoming, message);\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:51:13: 0x7ff60812897c in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.receive(7, 1, deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-ack",
+      "family": "ipv4",
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.061,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 10584
+      },
+      "output": "REJECT Discontinuous revoked=true tls_released=true\nerror: Discontinuous\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:82:58: 0x7ff608266de1 in apply (audio-verified-probe_zcu.obj)\n                if (message.position != self.next_frame) return error.Discontinuous;\n                                                         ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:65:9: 0x7ff608265de1 in apply (audio-verified-probe_zcu.obj)\n        try self.gate.apply(direction, message);\n        ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:183:21: 0x7ff60826509e in receive (audio-verified-probe_zcu.obj)\n                    try self.channel.apply(generation, revision, .incoming, message);\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:99:13: 0x7ff60812a055 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.receive(7, 1, deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "after-ack",
+      "family": "ipv4",
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.051,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 10584
+      },
+      "output": "REJECT DataAfterEnd revoked=true tls_released=true\nerror: DataAfterEnd\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:218:38: 0x7ff60825e020 in finish (audio-verified-probe_zcu.obj)\n        if (self.offset < self.used) return error.DataAfterEnd;\n                                     ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:119:5: 0x7ff60812a7c0 in exercise (audio-verified-probe_zcu.obj)\n    try connection.finish(7, 1, deadline);\n    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "truncated",
+      "family": "ipv4",
+      "expected_errors": [
+        "Truncated"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.052,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)",
+        "application_received": 0
+      },
+      "output": "READY 53733\nREJECT Truncated revoked=true tls_released=true\nerror: Truncated\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:148:45: 0x7ff608261397 in finish (audio-verified-probe_zcu.obj)\n        if (self.used != 0 and !self.ready) return error.Truncated;\n                                            ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:190:21: 0x7ff6082653ec in receive (audio-verified-probe_zcu.obj)\n                    try self.parser.finish();\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:53:13: 0x7ff608128a78 in exercise (audio-verified-probe_zcu.obj)\n        _ = try connection.receive(7, 1, deadline);\n            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "duplicate",
+      "family": "ipv4",
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.05,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 64
+      },
+      "output": "READY 53735\nREJECT Discontinuous revoked=true tls_released=true\nerror: Discontinuous\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:67:58: 0x7ff608266b1e in apply (audio-verified-probe_zcu.obj)\n                if (message.position != self.next_frame) return error.Discontinuous;\n                                                         ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:65:9: 0x7ff608265de1 in apply (audio-verified-probe_zcu.obj)\n        try self.gate.apply(direction, message);\n        ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:183:21: 0x7ff60826509e in receive (audio-verified-probe_zcu.obj)\n                    try self.channel.apply(generation, revision, .incoming, message);\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:103:29: 0x7ff60812a159 in exercise (audio-verified-probe_zcu.obj)\n            const message = try connection.receive(7, 1, deadline);\n                            ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "after-end",
+      "family": "ipv4",
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.046,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record",
+        "application_received": 64
+      },
+      "output": "READY 53737\nREJECT DataAfterEnd revoked=true tls_released=true\nerror: DataAfterEnd\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:207:38: 0x7ff6082617bb in confirmDrained (audio-verified-probe_zcu.obj)\n        if (self.offset < self.used) return error.DataAfterEnd;\n                                     ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:115:25: 0x7ff60812a5b1 in exercise (audio-verified-probe_zcu.obj)\n        for (0..32) |_| try connection.confirmDrained(7, 1);\n                        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:176:9: 0x7ff60812c583 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    }
+  ]
+}

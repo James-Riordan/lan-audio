@@ -1,0 +1,130 @@
+{
+  "status": "verified",
+  "project": "tls-zig",
+  "created_utc": "2026-09-26T19:41:17.456713+00:00",
+  "scope": "Q00 real adapter, dual-package native/scripted consumer and qualifier are new QUIC source. Only existing QUIC src/root.zig changes, adding the explicit adapter export. TLS source and seven sealed TLS receipts, root builds/manifests, frozen fixture and all SDK files remain unchanged from the sealed identity baseline.",
+  "excluded_self_path": "docs/verification/q00-change-audit.json",
+  "deleted_paths": [],
+  "source_files": 86,
+  "changes": [
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "modified",
+      "before_sha256": "cd525134ed58f00f6da8ac56eded458ad4c062e926b97bc886d5f23fbc54629a",
+      "after_sha256": "f181847a731c64e55d4325cb574c20f66cb031b4abed59970ecc7a1a0503a9c0",
+      "bytes": 51821
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "b36ed4a352098bf2e36da51209b34114edf89a6d29016755f5dad91064501e91",
+      "after_sha256": "58fb9191b91089370e5dd15612efc622514af72f699df30126facb0255abe85d",
+      "bytes": 181105
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "1f8fd4fbfd06de164a3983f25dcd0ad57e4869c5aa4df5a9a0483cb0cbefceb1",
+      "after_sha256": "6320276ccbf0b0f0f42957e352b3fa4c8c7426c3a6c7cd71ab14dd604c7f08a4",
+      "bytes": 4173
+    },
+    {
+      "path": "docs/verification/q00-final-gates.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "597e6e1f328991a4ecce3814eb48f21cecd5dc0f9507aa1eb780d4dc15ebaf07",
+      "bytes": 4087
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q00-final-runs/docs-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q00-final-runs/lifecycle-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "db376619975da601b312980ba58681882631f216aa6e77b1bbce5508f250242f",
+      "bytes": 1050
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q00-final-runs/plan-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "db376619975da601b312980ba58681882631f216aa6e77b1bbce5508f250242f",
+      "bytes": 1050
+    },
+    {
+      "path": "docs/verification/q00-implementation.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "6320276ccbf0b0f0f42957e352b3fa4c8c7426c3a6c7cd71ab14dd604c7f08a4",
+      "bytes": 4173
+    }
+  ]
+}

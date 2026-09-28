@@ -1,0 +1,19 @@
+policy-test
++- run test 6 pass, 1 fail (7 total)
+error: 'peer_policy.test.stale platform events cannot change a replacement and repeated revocation converges' failed:
+       expected error.StaleGeneration, found void
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff7ba51b62a in expectError__anon_61620 (test_zcu.obj)
+               return error.TestExpectedError;
+               ^
+       C:\Projects\lan-audio\tests\integration\peer_policy.zig:159:5: 0x7ff7ba521951 in test.stale platform events cannot change a replacement and repeated revocation converges (test_zcu.obj)
+           try std.testing.expectError(error.StaleGeneration, current.revoke(8));
+           ^
+failed command: ".\\.zig-cache\\o\\d0312b15edb15b54127f68a68cd03feb\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x280a7b45 --listen=-
+
+Build Summary: 1/3 steps succeeded (1 failed); 6/7 tests passed (1 failed)
+policy-test transitive failure
++- run test 6 pass, 1 fail (7 total)
+   +- compile test debug native success 9s MaxRSS:283M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x280a7b45 policy-test --summary all

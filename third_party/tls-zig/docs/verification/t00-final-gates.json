@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-26T15:27:32.732549+00:00",
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check-docs.py",
+        "--self-test",
+        "--with-sdk"
+      ],
+      "exit_code": 0,
+      "logs": [
+        {
+          "path": "docs/verification/t00-runs/final-docs-normal.stdout.log",
+          "sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0"
+        },
+        {
+          "path": "docs/verification/t00-runs/final-docs-normal.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Projects\\quic-zig"
+      ],
+      "exit_code": 0,
+      "logs": [
+        {
+          "path": "docs/verification/t00-runs/final-plan-normal.stdout.log",
+          "sha256": "b76b987819fc68553c949748d0d96d0aa8b14fa377f4556497ae4196153274cd"
+        },
+        {
+          "path": "docs/verification/t00-runs/final-plan-normal.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "tools/check-docs.py",
+        "--self-test",
+        "--with-sdk"
+      ],
+      "exit_code": 0,
+      "logs": [
+        {
+          "path": "docs/verification/t00-runs/final-docs-optimized.stdout.log",
+          "sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0"
+        },
+        {
+          "path": "docs/verification/t00-runs/final-docs-optimized.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "tools/check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Projects\\quic-zig"
+      ],
+      "exit_code": 0,
+      "logs": [
+        {
+          "path": "docs/verification/t00-runs/final-plan-optimized.stdout.log",
+          "sha256": "b76b987819fc68553c949748d0d96d0aa8b14fa377f4556497ae4196153274cd"
+        },
+        {
+          "path": "docs/verification/t00-runs/final-plan-optimized.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ]
+}

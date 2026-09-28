@@ -1,0 +1,50 @@
+{
+  "source_sha256": {
+    "src/runtime/lifecycle.zig": "a04771edff888c7e29505b8ee6279b831e433bb206fd79b88609fa056b4e98ac",
+    "src/runtime/receive_drain.zig": "899fe13fc967708de564c79b8b92739393373d3b27a2ef2667b16fa8d16173fb",
+    "tests/integration/runtime_lifecycle.zig": "54dc9216f38f493c8eff796715914af90d9fab5e1a43bbcaa8a566a55f2b058c",
+    "build.zig": "6f437da99fae198e79964e136824a84afd767acc96b89ccf460bc5a3cbc94b85"
+  },
+  "runs": [
+    {
+      "name": "final-debug",
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "--cache-dir",
+        ".zig-cache/lifecycle-receive-final",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 68.14763210000092
+    },
+    {
+      "name": "final-release-safe",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-test",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 48.97398320000502
+    },
+    {
+      "name": "intel-mac-compile",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-check",
+        "-Dtarget=x86_64-macos",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 18.58285320000141
+    }
+  ]
+}

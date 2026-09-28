@@ -1,0 +1,4 @@
+Preparing a private Python runtime for LAN Audio...
+Downloading https://pkg.hexops.org/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip
+Building LAN Audio (one build job).
+Build ready: C:\Projects\lan-audio\.lan-audio\builds\a50f8d5cb12c23763db05660\bin

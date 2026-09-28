@@ -1,0 +1,16 @@
+OpenSSL 3.5.8 25 Aug 2026
+TLS 1.3, verified localhost, ALPN http/1.1
+HTTP/1.1 200 OK
+Content-Length: 8
+
+tls-zig
+Build Summary: 8/8 steps succeeded
+example success
++- run staged TLS example success 3s
+   +- WriteFile libssl-3-x64.dll cached
+      +- compile exe tls-example debug native cached 1s MaxRSS:68M
+interop success
++- run python success 4s
+   +- WriteFile libssl-3-x64.dll cached
+      +- compile lib tls-test-backend debug native cached 1s MaxRSS:68M
+

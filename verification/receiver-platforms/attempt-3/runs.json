@@ -1,0 +1,29 @@
+[
+  {
+    "name": "native-app",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "policy-test",
+      "app",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 29.977
+  },
+  {
+    "name": "policy-ios",
+    "command": [
+      "zig",
+      "build",
+      "policy-check",
+      "-Dtarget=aarch64-ios.16.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 1.366
+  }
+]

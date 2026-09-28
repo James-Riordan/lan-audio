@@ -1,0 +1,21 @@
+test_archive_traversal_and_links_rejected (__main__.AcquisitionTests.test_archive_traversal_and_links_rejected) ... ok
+test_complete_and_repeat_without_network (__main__.AcquisitionTests.test_complete_and_repeat_without_network) ... ok
+test_extractor_silent_omission_rejected (__main__.AcquisitionTests.test_extractor_silent_omission_rejected) ... ok
+test_interrupted_extraction_and_configure_only_recovery (__main__.AcquisitionTests.test_interrupted_extraction_and_configure_only_recovery) ... ok
+test_modified_complete_tree_preserved_and_replaced (__main__.AcquisitionTests.test_modified_complete_tree_preserved_and_replaced) ... ok
+test_multiple_ranges_exact_boundaries (__main__.AcquisitionTests.test_multiple_ranges_exact_boundaries) ... ok
+test_promotion_failure_restores_old_tree (__main__.AcquisitionTests.test_promotion_failure_restores_old_tree) ... ok
+test_ranges_errors_and_wrong_digest_never_promote (__main__.AcquisitionTests.test_ranges_errors_and_wrong_digest_never_promote) ... ok
+test_duplicate_and_malformed_manifest (__main__.BackendTests.test_duplicate_and_malformed_manifest) ... ok
+test_exact_set_changed_missing_extra (__main__.BackendTests.test_exact_set_changed_missing_extra) ... ok
+test_interop_refuses_disabled_assertions_before_side_effects (__main__.BackendTests.test_interop_refuses_disabled_assertions_before_side_effects) ... ok
+test_link_rejected (__main__.BackendTests.test_link_rejected) ... ok
+test_pin_version_check_unconditional (__main__.BackendTests.test_pin_version_check_unconditional) ... ok
+test_qualification_binds_verified_root_and_profile (__main__.BackendTests.test_qualification_binds_verified_root_and_profile) ... ok
+test_qualification_rejects_extra_sdk_before_build (__main__.BackendTests.test_qualification_rejects_extra_sdk_before_build) ... ok
+test_unsafe_and_ambiguous_manifest_paths (__main__.BackendTests.test_unsafe_and_ambiguous_manifest_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 133.489s
+
+OK

@@ -1,0 +1,39 @@
+[
+  {
+    "name": "debug",
+    "command": [
+      "zig",
+      "build",
+      "lifecycle-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 16.623258100000385
+  },
+  {
+    "name": "release-safe",
+    "command": [
+      "zig",
+      "build",
+      "lifecycle-test",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 120.45408090000274
+  },
+  {
+    "name": "core-regression",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 3.6573033000022406
+  }
+]

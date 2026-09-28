@@ -1,0 +1,8 @@
+Build Summary: 5/5 steps succeeded
+capture-check success
++- compile test debug native success 4s MaxRSS:270M
+   +- WriteFile cached
+   +- compile lib miniaudio debug native cached 34ms MaxRSS:40M
+   +- compile lib miniaudio debug native (reused)
+   +- translate-c cached 381ms MaxRSS:40M
+

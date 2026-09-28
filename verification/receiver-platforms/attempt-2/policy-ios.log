@@ -1,0 +1,12 @@
+build.zig:133:11: error: no field named 'args' in struct 'Build'
+    if (b.args) |args| app_run.addArgs(args);
+          ^~~~
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\Build.zig:1:1: note: struct declared here
+const Build = @This();
+^~~~~
+referenced by:
+    runPackageScript [inlined]: C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\Build.zig:2145:50
+    main: C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\compiler\configurer.zig:138:29
+    3 reference(s) hidden; use '-freference-trace=5' to see all references
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xaa492d09 policy-check -Dtarget=aarch64-ios.16.0 --summary all

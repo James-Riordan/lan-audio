@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Projects\lan-audio\tests\integration\protocol_v2_peer.py", line 234, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\Projects\lan-audio\tests\integration\protocol_v2_peer.py", line 208, in main
+    print(f'Custody: {verify(staged=True)} pins plus private DLLs verified', flush=True)
+                      ~~~~~~^^^^^^^^^^^^^
+  File "C:\Projects\lan-audio\tools\check_transport.py", line 23, in verify
+    raise RuntimeError(f"dependency changed: {entry['path']}")
+RuntimeError: dependency changed: README.md

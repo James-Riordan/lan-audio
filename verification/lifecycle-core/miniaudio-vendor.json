@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "../miniaudio-zig/tools/check_vendor.py"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:27.273326+00:00",
+  "elapsed_seconds": 0.13790400000289083,
+  "exit_code": 0,
+  "log": "miniaudio-vendor.log",
+  "log_sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+}

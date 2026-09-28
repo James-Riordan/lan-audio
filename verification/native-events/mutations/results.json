@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "name": "ignore_reroute",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "--summary",
+        "all",
+        "--cache-dir",
+        "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations"
+      ],
+      "cwd": "C:\\Projects\\lan-audio\\verification\\native-events\\mutations\\ignore_reroute",
+      "exit_code": 1,
+      "seconds": 40.73659069999849,
+      "expected_test": "installed native notifications invalidate both directions without consuming media",
+      "witness": "error: 'audio_device.test.installed native notifications invalidate both directions without consuming media' failed",
+      "detected": true,
+      "source_sha256": "789866e1b566ad464bf8610c18d496aec3e6284e68c7054c08e565d768250a9d",
+      "log_sha256": "5038bf42e483c50e4a3c09ff033aa255d28e534872770772ec5e40c4dc7dbd9f"
+    },
+    {
+      "name": "consume_failed_output",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "--summary",
+        "all",
+        "--cache-dir",
+        "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations"
+      ],
+      "cwd": "C:\\Projects\\lan-audio\\verification\\native-events\\mutations\\consume_failed_output",
+      "exit_code": 1,
+      "seconds": 51.43500370000402,
+      "expected_test": "installed native notifications invalidate both directions without consuming media",
+      "witness": "error: 'audio_device.test.installed native notifications invalidate both directions without consuming media' failed",
+      "detected": true,
+      "source_sha256": "b3fc232c50252326f6dcbc3aac5d7716b4474876f125efbe7f8b33a35e00c4da",
+      "log_sha256": "50b2396b9871147dd8597e54ec369fee68244af2911256079a0f8b7f40564ce1"
+    },
+    {
+      "name": "fault_expected_stop",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "--summary",
+        "all",
+        "--cache-dir",
+        "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations"
+      ],
+      "cwd": "C:\\Projects\\lan-audio\\verification\\native-events\\mutations\\fault_expected_stop",
+      "exit_code": 1,
+      "seconds": 19.270691400000942,
+      "expected_test": "installed native notifications invalidate both directions without consuming media",
+      "witness": "error: 'audio_device.test.installed native notifications invalidate both directions without consuming media' failed",
+      "detected": true,
+      "source_sha256": "b970d7119fc39d81b5d904481fec162229d045a489b718d34cef9f69ec287834",
+      "log_sha256": "d3afa967385b6e3f024e1015c77648753fcd1aa55eb06f8df305964ce082f170"
+    },
+    {
+      "name": "resume_failed_generation",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "--summary",
+        "all",
+        "--cache-dir",
+        "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations"
+      ],
+      "cwd": "C:\\Projects\\lan-audio\\verification\\native-events\\mutations\\resume_failed_generation",
+      "exit_code": 1,
+      "seconds": 14.77760720000515,
+      "expected_test": "installed native notifications invalidate both directions without consuming media",
+      "witness": "error: 'audio_device.test.installed native notifications invalidate both directions without consuming media' failed",
+      "detected": true,
+      "source_sha256": "fecd91aa41c740918e38e5cc5d93228a70cc176f2ea88675685b59cab9fd5717",
+      "log_sha256": "ba02281730636ffd9b78cdc5c2e6efa341f9ed9cacf39389b144e1582b20b8c3"
+    }
+  ],
+  "passed": true
+}

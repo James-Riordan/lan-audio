@@ -1,0 +1,8 @@
+.{
+    .name = .recordless_consumer,
+    .fingerprint = 0x9fa85e1aae8360c6,
+    .version = "0.0.0",
+    .minimum_zig_version = "0.17.0-dev.1859+dcceb318e",
+    .dependencies = .{ .tls_zig = .{ .path = "../.." } },
+    .paths = .{ "build.zig", "build.zig.zon", "main.zig" },
+}

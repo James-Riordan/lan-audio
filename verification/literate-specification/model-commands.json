@@ -1,0 +1,66 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "RuntimeOwnership",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:/Users/James/Documents/Codex/2026-09-25/referenced-chatgpt-conversation-this-is-an-3/work/formal-tools/tla2tools.jar"
+    ],
+    "exit_code": 0,
+    "seconds": 4.86530970000058,
+    "stderr": "",
+    "report": "RuntimeOwnership-final.json"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "SessionWindow",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:/Users/James/Documents/Codex/2026-09-25/referenced-chatgpt-conversation-this-is-an-3/work/formal-tools/tla2tools.jar"
+    ],
+    "exit_code": 0,
+    "seconds": 5.322747700000036,
+    "stderr": "",
+    "report": "SessionWindow-final.json"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "EndDrain",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:/Users/James/Documents/Codex/2026-09-25/referenced-chatgpt-conversation-this-is-an-3/work/formal-tools/tla2tools.jar"
+    ],
+    "exit_code": 0,
+    "seconds": 3.8176865999994334,
+    "stderr": "",
+    "report": "EndDrain-final.json"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "SpscPublication",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:/Users/James/Documents/Codex/2026-09-25/referenced-chatgpt-conversation-this-is-an-3/work/formal-tools/tla2tools.jar"
+    ],
+    "exit_code": 0,
+    "seconds": 2.8733384999995906,
+    "stderr": "",
+    "report": "SpscPublication-final.json"
+  }
+]

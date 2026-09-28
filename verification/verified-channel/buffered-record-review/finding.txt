@@ -1,0 +1,1 @@
+Post-campaign source review: reject already-buffered trailing bytes before receiver drain attestation/ACK, and enforce receive absolute deadline even when complete plaintext is already buffered. Prior qualification remains immutable; fresh host qualification follows these additional guards.

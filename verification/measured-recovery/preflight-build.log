@@ -1,0 +1,66 @@
+test
++- run test 2 pass, 1 crash (3 total)
+error: 'recovery_policy.test.measured reserve skips inadequate retries, rounds up and respects every budget' exited with code 3 with stderr:
+       thread 17704 panic: integer overflow
+       C:\Projects\lan-audio\src\runtime\recovery_policy.zig:31: 0x7ff74a02060e in failedObserved (test_zcu.obj)
+                   const gap_frames: u32 = @intCast(@min(observed.delivery_gap_ms, 240) * 48);
+       
+       C:\Projects\lan-audio\src\runtime\recovery_policy.zig:54:25: 0x7ff74a02060e in test.measured reserve skips inadequate retries, rounds up and respects every budget (test_zcu.obj)
+           _ = p.failedObserved(error.PlaybackStarved, false, 100, .{ .delivery_gap_ms = 80, .callback_frames = 240 });
+                               ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\compiler\test_runner.zig:143:68: 0x7ff74a00fb86 in mainServer (test_zcu.obj)
+                       const status: TestResults.Status = if (test_fn.func()) |v| s: {
+                                                                          ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\compiler\test_runner.zig:72:26: 0x7ff74a012fae in main (test_zcu.obj)
+               return mainServer(init) catch |err| panic("internal test runner failure: {t}", .{err});
+                                ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\start.zig:788: 0x7ff74a00f353 in callMain (test_zcu.obj)
+           if (fn_info.param_types[0].? == std.process.Init.Minimal) return wrapMain(root.main(.{
+       
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\start.zig:575:17: 0x7ff74a00f353 in WinStartup (test_zcu.obj)
+               callMain(std.os.windows.peb().ProcessParameters.CommandLine.slice(), .global),
+                       ^
+       ???:?:?: 0x7ffb39257373 in ??? (KERNEL32.DLL)
+       ???:?:?: 0x7ffb3967cc90 in ??? (ntdll.dll)
+failed command: ".\\.zig-cache\\o\\6c0106baba721a9ecd3fd0fe553d6ee8\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x6571f750 --listen=-
+
+Build Summary: 26/28 steps succeeded (1 failed); 93/94 tests passed (1 crashed)
+app success
++- install lan-audio success
+|  +- compile exe lan-audio safe native success 51s MaxRSS:356M
+|     +- options cached
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 242ms MaxRSS:64M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 225ms MaxRSS:64M
+|     +- translate-c cached 6s MaxRSS:64M
+|     +- translate-c success 6s MaxRSS:64M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe safe native success 1m MaxRSS:325M
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+network-test success
++- run test 6 pass (6 total) 3s MaxRSS:4M
+   +- compile test safe native success 50s MaxRSS:309M
+      +- translate-c (reused)
+test transitive failure
++- run test 47 pass (47 total) 1s MaxRSS:3M
+|  +- compile test safe native cached 137ms MaxRSS:64M
++- run test 2 pass, 1 crash (3 total)
+|  +- compile test safe native success 46s MaxRSS:289M
++- run test 1 pass (1 total) 116ms MaxRSS:2M
+|  +- compile test safe native success 1m MaxRSS:286M
++- run test 37 pass (37 total) 842ms MaxRSS:3M
+   +- compile test safe native cached 423ms MaxRSS:64M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x6571f750 -j1 test network-test recovery-probe app -Dtransport-tests=true -Doptimize=ReleaseSafe --summary all

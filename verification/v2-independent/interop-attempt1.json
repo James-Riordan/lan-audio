@@ -1,0 +1,422 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "binary_sha256": {
+    "sender": "ad6552d7c3eea253bf7094f143b1fb92bdabeed932c8737724a7719020c15927",
+    "receiver": "de489ffacb36654d729b8f118dbce7120bc68630cda5a1691e34bec819147d88"
+  },
+  "results": [
+    {
+      "role": "receiver",
+      "case": "roundtrip",
+      "passed": true,
+      "exit_code": 0,
+      "expected_errors": null,
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": true,
+        "error": null
+      },
+      "output": "PASS v2 role=receiver frames=1285 exact_words=true clean_close=true\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "empty",
+      "passed": true,
+      "exit_code": 0,
+      "expected_errors": null,
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": true,
+        "clean_close": true,
+        "error": null
+      },
+      "output": "PASS v2 role=receiver frames=0 exact_words=true clean_close=true\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "roundtrip",
+      "passed": true,
+      "exit_code": 0,
+      "expected_errors": null,
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": true,
+        "error": null
+      },
+      "output": "PASS v2 role=sender frames=1285 exact_words=true clean_close=true\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "bad-profile",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidProfile"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: InvalidProfile\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "audio-before-offer",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: InvalidState\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "wrong-stream",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "WrongStream"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: WrongStream\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "duplicate",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Discontinuous\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "gap",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Discontinuous\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "nonfinite",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidSamples"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: InvalidSamples\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "truncated",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Truncated"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: Truncated\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "missing-end",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "MissingEnd"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: MissingEnd\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "after-end",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: DataAfterEnd\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "raw-eof",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "TlsFailure",
+        "TransportFailure"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: TransportFailure\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "stalled",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "OperationDeadline"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: OperationDeadline\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "wrong-alpn",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "AlpnMismatch"
+      ],
+      "peer": {
+        "authenticated": false,
+        "alpn": null,
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"
+      },
+      "output": "error: AlpnMismatch\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "wrong-name",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "peer": {
+        "authenticated": false,
+        "alpn": null,
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1081)"
+      },
+      "output": "error: PeerAuthentication\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "bad-accept",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "FormatMismatch"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: FormatMismatch\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "wrong-stream-accept",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "WrongStream"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: WrongStream\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "early-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: InvalidState\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "wrong-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Discontinuous\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "missing-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "MissingAck"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: MissingAck\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "after-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: DataAfterEnd\n",
+      "peer_terminated": true
+    }
+  ]
+}

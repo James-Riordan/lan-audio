@@ -1,0 +1,7 @@
+{
+  "method": "Python ssl.PEM_cert_to_DER_cert(first PEM certificate), hashlib.sha256",
+  "leaf_sha256": {
+    "client": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+    "server": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd"
+  }
+}

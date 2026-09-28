@@ -1,0 +1,42 @@
+1/11 driver.test.peer probe observes early response without changing blocked ciphertext or deadline...OK
+2/11 driver.test.peer probe during blocked write honors cancel deadline and raw EOF...OK
+3/11 driver.test.idle probe output flush preserves order before next application write...OK
+4/11 driver.test.host driver preserves partial writes and received suffixes across reads...OK
+5/11 driver.test.host shutdown preserves deadline across final plaintext reads and rejects raw EOF...OK
+6/11 driver.test.host operation deadline expires despite slow transport progress...OK
+7/11 driver.test.atomic cancellation stops blocked reads and writes without touching transport...OK
+8/11 driver.test.host cannot extend a shutdown deadline by switching to read...OK
+9/11 driver.test.host rejects invalid transport counts and backward clocks...OK
+10/11 driver.test.host authentication failure flushes fragmented alert and retains diagnostics...OK
+11/11 driver.test.host raw EOF during handshake is terminal even when alert delivery blocks...OK
+All 11 tests passed.
+1/19 transport.test.custom ALPN is owned by each connection and bounds are checked...OK
+2/19 transport.test.ALPN mismatch rejects handshake before application data...OK
+3/19 transport.test.opaque ALPN accepts the maximum legal identifier...OK
+4/19 transport.test.qualified runtime backend is OpenSSL 3.5.8...OK
+5/19 transport.test.TLS13 HTTP1 roundtrip with single-byte handshake fragments...OK
+6/19 transport.test.wrong DNS name fails before application access...OK
+7/19 transport.test.explicit trust excludes an unrelated CA...OK
+8/19 transport.test.expired certificate and future validity use supplied wall time...OK
+9/19 transport.test.client-only EKU cannot authenticate a server...OK
+10/19 transport.test.IP SAN succeeds and wrong IP fails...OK
+11/19 transport.test.mTLS requires a trusted client certificate...OK
+12/19 transport.test.AEAD record tampering is terminal and releases no plaintext...OK
+13/19 transport.test.clean close_notify differs from raw EOF and truncated record...OK
+14/19 transport.test.shutdown preserves final records in both roles and still rejects truncation...OK
+15/19 transport.test.shutdown retries a blocked close alert before reading final peer data...OK
+16/19 transport.test.bounded output retains write data across WANT_WRITE...OK
+17/19 transport.test.input bounds, empty input, and explicit EOF...OK
+18/19 transport.test.absolute deadline, backward clock, and idempotent cancel...OK
+19/19 transport.test.invalid configuration and mismatched credentials fail at creation...OK
+All 19 tests passed.
+Build Summary: 8/8 steps succeeded
+host-test success
++- run host driver tests success 589ms
+   +- WriteFile libssl-3-x64.dll cached
+      +- compile test safe native cached 205ms MaxRSS:53M
+test success
++- run staged TLS tests success 634ms
+   +- WriteFile libssl-3-x64.dll cached
+      +- compile test safe native cached 95ms MaxRSS:53M
+

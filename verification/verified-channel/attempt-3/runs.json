@@ -1,0 +1,24 @@
+[
+  {
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "--summary",
+      "all"
+    ],
+    "exit": 0,
+    "seconds": 22.968473300003097
+  },
+  {
+    "command": [
+      "python",
+      "tests/integration/verified_channel_peer.py",
+      "--output",
+      "verification\\verified-channel\\attempt-3\\peers.json"
+    ],
+    "exit": 0,
+    "seconds": 64.62606380000943
+  }
+]

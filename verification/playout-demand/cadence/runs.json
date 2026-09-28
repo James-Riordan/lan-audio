@@ -1,0 +1,156 @@
+[
+  {
+    "name": "install-Debug",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-j1",
+      "app",
+      "recovery-probe",
+      "worker-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=Debug",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.385
+  },
+  {
+    "name": "recovery-Debug",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--output",
+      "verification/playout-demand/cadence/recovery-Debug.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 13.827
+  },
+  {
+    "name": "workers-Debug",
+    "command": [
+      "python",
+      "tests/integration/live_worker_peer.py",
+      "--output",
+      "verification/playout-demand/cadence/workers-Debug.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 16.707
+  },
+  {
+    "name": "install-ReleaseSafe",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-j1",
+      "app",
+      "recovery-probe",
+      "worker-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 7.787
+  },
+  {
+    "name": "recovery-ReleaseSafe",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--output",
+      "verification/playout-demand/cadence/recovery-ReleaseSafe.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 14.877
+  },
+  {
+    "name": "workers-ReleaseSafe",
+    "command": [
+      "python",
+      "tests/integration/live_worker_peer.py",
+      "--output",
+      "verification/playout-demand/cadence/workers-ReleaseSafe.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 16.362
+  },
+  {
+    "name": "jitter-repeat-0",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--only",
+      "jitter",
+      "--output",
+      "verification/playout-demand/cadence/jitter-repeat-0.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.286
+  },
+  {
+    "name": "jitter-repeat-1",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--only",
+      "jitter",
+      "--output",
+      "verification/playout-demand/cadence/jitter-repeat-1.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.131
+  },
+  {
+    "name": "jitter-repeat-2",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--only",
+      "jitter",
+      "--output",
+      "verification/playout-demand/cadence/jitter-repeat-2.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 1.886
+  },
+  {
+    "name": "jitter-repeat-3",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--only",
+      "jitter",
+      "--output",
+      "verification/playout-demand/cadence/jitter-repeat-3.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.557
+  },
+  {
+    "name": "jitter-repeat-4",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--only",
+      "jitter",
+      "--output",
+      "verification/playout-demand/cadence/jitter-repeat-4.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.122
+  }
+]

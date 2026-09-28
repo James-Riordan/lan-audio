@@ -1,0 +1,51 @@
+[
+  {
+    "name": "fmt",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "fmt",
+      "--check",
+      "build.zig",
+      "src",
+      "tests"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 0.356
+  },
+  {
+    "name": "build-Debug",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "test",
+      "audio-test",
+      "network-test",
+      "policy-test",
+      "platform-test",
+      "app",
+      "worker-probe",
+      "recovery-probe",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=Debug",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 41.695
+  },
+  {
+    "name": "recovery-Debug",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--output",
+      "verification/network-recovery/acceptance/recovery-Debug.json"
+    ],
+    "exit_code": 1,
+    "passed": false,
+    "seconds": 8.292
+  }
+]

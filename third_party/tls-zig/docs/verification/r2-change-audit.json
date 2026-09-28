@@ -1,0 +1,340 @@
+{
+  "revision": "2026-09-26-r2",
+  "status": "applied-and-verified",
+  "project": "tls-zig",
+  "baseline": "pre-r2 snapshot retained separately; v1 change-audit/run-results unchanged",
+  "excluded_self_path": "docs/verification/r2-change-audit.json",
+  "deleted_paths": [],
+  "application_pins_modified": false,
+  "changes": [
+    {
+      "path": "docs/README.md",
+      "change": "modified",
+      "before_sha256": "176e27755b3809b8ddd1b3a010f6ac52796a2371588f24fad68e6dccff50371b",
+      "after_sha256": "a839c118a7e52f03640cdd6fda053a6aacb971cb114be404da1cd3379c7fd7dc",
+      "bytes": 2086
+    },
+    {
+      "path": "docs/architecture/directory-map.md",
+      "change": "modified",
+      "before_sha256": "7c692477f2f0db04210e9c2fa193404d9d71870add43dce19e58216835fe1ed7",
+      "after_sha256": "7ad7afcd73a822468f658247d519ddeabbd180d639695f8981814761b939fd66",
+      "bytes": 2487
+    },
+    {
+      "path": "docs/architecture/target-tree.txt",
+      "change": "modified",
+      "before_sha256": "a2d04134e362cc73a43efdbf7cb12e32bcdd471b6646d430fb2538e9da97d06b",
+      "after_sha256": "0450c93d0758fd1fee49cd49285e36ee6d9b462c59d1f324fd990c0cecfd6ed3",
+      "bytes": 2195
+    },
+    {
+      "path": "docs/contracts/quic-tls.md",
+      "change": "modified",
+      "before_sha256": "d8ce914ea574f5f3d5789e14aff1d12164decb3460a671a1e4d6256f7b45ebaa",
+      "after_sha256": "68fb19975e33b8ab2178c7ef7601440f986a6b0a0b878e12a7aee44940b57298",
+      "bytes": 5023
+    },
+    {
+      "path": "docs/contracts/recordless-events.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "760c29f8ca1506a3415b41cda253b939cad70798a902a3ac30380226ef02259e",
+      "bytes": 8424
+    },
+    {
+      "path": "docs/formal/event-custody.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "dd19b261a34a82847ec1df249cdbf0c1077fa562354aa798d58f0456370c0584",
+      "bytes": 3643
+    },
+    {
+      "path": "docs/reference/catalog.md",
+      "change": "modified",
+      "before_sha256": "3f38f8dffc2ed14288775e9b84f43a6aa9214c9af5b8fe244beffab0f4a3f32a",
+      "after_sha256": "623d76546bd517feced02789d3e665a31ea33d8010e910582501e9406c2666b2",
+      "bytes": 7401
+    },
+    {
+      "path": "docs/reference/files/src/backend.c.md",
+      "change": "modified",
+      "before_sha256": "52874f120cf92ebc36d2b9326573c6e2891107c6b188ad669726b7fb0cf85d3b",
+      "after_sha256": "da23d73f8816f15bd98659a98a93185b95f288790547f1d0a7be76db92c7733c",
+      "bytes": 8517
+    },
+    {
+      "path": "docs/reference/files/src/backend.h.md",
+      "change": "modified",
+      "before_sha256": "3110d084600803a8a59e5bb76ebdc2447dcdd30234c790d7e0f7c182501f2251",
+      "after_sha256": "dbf05e2cf6a892570c646bc44dc5a24df4ff26a39b9135da0a44b37ab4614723",
+      "bytes": 7692
+    },
+    {
+      "path": "docs/reference/files/tools/build-openssl.sh.md",
+      "change": "modified",
+      "before_sha256": "4b037c7bea22bc8d9e03b2c6654156192a05938f83cfa73960223a2717fab46c",
+      "after_sha256": "d7e0aaf5f1f76f73991376a23e9c412f7562d335bfde609b5398657870681370",
+      "bytes": 1540
+    },
+    {
+      "path": "docs/reference/files/tools/check-docs.py.md",
+      "change": "modified",
+      "before_sha256": "673a52e88add116a90199517c6eb4b400a98b6e96600892ec669615c12d5811c",
+      "after_sha256": "e28aba06192a8de563a4fe69308350332ff77bab1a6378146f7dac5d2711c7c7",
+      "bytes": 3177
+    },
+    {
+      "path": "docs/reference/files/tools/check-event-model.py.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "dff0f83de45fd0b4f959f64657e59ee17f84efbc9ac0108b44ed922fa322da3c",
+      "bytes": 2809
+    },
+    {
+      "path": "docs/reference/files/tools/check-plan.py.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "15fa4b720b9d79027701522c10dbe4cf98e093b08935e96b81498e4b9d0c74fd",
+      "bytes": 2575
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-tls.c.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "84c09fa6083f6a608b4284ce28ea1f2f7283197380efd94c5fb485c961dfe483",
+      "bytes": 3743
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-tls.py.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1cd5913b31fe6d32a5b1d8a347af1f5d91a414109b4e5ae60e8975d19bc039ec",
+      "bytes": 1962
+    },
+    {
+      "path": "docs/reference/standards.md",
+      "change": "modified",
+      "before_sha256": "0ff34209fe0fb343ec7488805018e52cf65efbce7470e2ab64bbb6342da14402",
+      "after_sha256": "e8a910ea1a52e853fe316f748489129651a4dc3d0ca842487e0025c5b5816e1e",
+      "bytes": 2107
+    },
+    {
+      "path": "docs/roadmap/README.md",
+      "change": "modified",
+      "before_sha256": "3626e1f33e4ffd420481cbd0c2e224922e898774b1c5669ee4cab8890e2af075",
+      "after_sha256": "074c828473f2dbef1a8aaedd1c8f822214436ad4f111db34c71960fffa00f4d7",
+      "bytes": 3894
+    },
+    {
+      "path": "docs/roadmap/files/bench/engine.zig.md",
+      "change": "modified",
+      "before_sha256": "3e639ddcf5be71f3b3702c8e6352cdbbec5d92d12c323210702b104c0ffde7fb",
+      "after_sha256": "c2f531664ad59d0510d12b4e541600a54a390e197f0e1bea1995c9089b6860f1",
+      "bytes": 2849
+    },
+    {
+      "path": "docs/roadmap/files/build/backend.zig.md",
+      "change": "modified",
+      "before_sha256": "50174063cbdcca65496416373d97fc5f3332a369b64ec4c64be0a3d2979faf48",
+      "after_sha256": "39ddf319ec4a7f4a625b0869f14613474bac48e23be74dd165ba379191c4d2ae",
+      "bytes": 2938
+    },
+    {
+      "path": "docs/roadmap/files/examples/consumer/socket_posix.c.md",
+      "change": "modified",
+      "before_sha256": "74f50b8ae4c32b0e0ed89aaa9fba3769a1662990730792274a3e6741cb8f9f74",
+      "after_sha256": "e106b1e5666fb111ceafe9285cb1377448380f51916eab8ccf2ca6595a0ce795",
+      "bytes": 2850
+    },
+    {
+      "path": "docs/roadmap/files/src/backend/quic.c.md",
+      "change": "modified",
+      "before_sha256": "fb785b5ba8d9b77cdcfdcea5d805e80ca83296ddb2ff023d02ffc7bf567a8b28",
+      "after_sha256": "2ab74e267ffb49c725e6ec04bddb4677c7b4c650144a215ee46fda33e603cb75",
+      "bytes": 3147
+    },
+    {
+      "path": "docs/roadmap/files/src/backend/quic.h.md",
+      "change": "modified",
+      "before_sha256": "ba6b792e18c4755f05b52789714bdb210ed7ba84d0ae315faaafa9f5bfafeaa4",
+      "after_sha256": "8e01683d0c96aa9931d3a83d74a37d01120df62864f0537053dfeecaa3d63d6f",
+      "bytes": 2906
+    },
+    {
+      "path": "docs/roadmap/files/src/policy/credentials.zig.md",
+      "change": "modified",
+      "before_sha256": "4b56c0bc320f37f45c12536f78c77320317d9c8ecd8c9b24879d8e41961b0de2",
+      "after_sha256": "e463f01acb8d2bc4ddcccb3c0dbd431de67988e3a410b882b69b1a9589df8bcf",
+      "bytes": 2925
+    },
+    {
+      "path": "docs/roadmap/files/src/policy/verification.zig.md",
+      "change": "modified",
+      "before_sha256": "1921bd08b53a9fcb0d0c6a8e62804da64cc687d92407195df1d4d1b8ed1bc5cb",
+      "after_sha256": "85305a19b5c827ec2025ad58a8aa1753ac41f26077148b4361e5fcd3e783ffc3",
+      "bytes": 2919
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/contract.zig.md",
+      "change": "modified",
+      "before_sha256": "e9a5208fc242aaa7de76bdc0d91dbf79eb53a7ebc9f4dcbd634dfd5e562a5910",
+      "after_sha256": "472cca3da05aea2cf91562ae3db6dc2a1b96bb94fdf03dac9f713cbd025e1713",
+      "bytes": 3018
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/engine.zig.md",
+      "change": "modified",
+      "before_sha256": "875ed83e3c92384fdcd7741729bcb212523e852095d5046bf9a5a137a55d307e",
+      "after_sha256": "7f8b1a8ff0d769d5f0a9dec3be6b7a380586afcc526e6947b2d504814ed27cd0",
+      "bytes": 3106
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/events.zig.md",
+      "change": "modified",
+      "before_sha256": "44ffc7c474f58d977a954a435d195a568b84908b5149bc0007d2fe16ebbb7ed4",
+      "after_sha256": "6232587eb98aaffec2e1a986eb3ce7297aaf6c69e6e5e9960c82184cde32311d",
+      "bytes": 2948
+    },
+    {
+      "path": "docs/roadmap/files/tests/abi.zig.md",
+      "change": "modified",
+      "before_sha256": "3a1333f5e69b236bee5377d48e129ca01f098b8312273fcfbc0c7cedea63ea86",
+      "after_sha256": "aa23ff332c4a42c73a1af0af503b96aad569cff616ed6051f96f25763c047bba",
+      "bytes": 2730
+    },
+    {
+      "path": "docs/roadmap/files/tests/interop/matrix.py.md",
+      "change": "modified",
+      "before_sha256": "ac48be1bc447108d788607881075d9114be78d17472b0a6ed5a2b81a15e0b80e",
+      "after_sha256": "b344c97fe1cfbb3f192cd74d81bafa58bb65edf01aaa41dd09950286d5392068",
+      "bytes": 3149
+    },
+    {
+      "path": "docs/roadmap/files/tests/quic_contract.zig.md",
+      "change": "modified",
+      "before_sha256": "5b338a009765ee274936410c55b02fe3078cf7abcfc219c30bc079129acc7faa",
+      "after_sha256": "3b09b16bef3539e8aaca3aa4533a3f13ff5e84cc006da593113a3fbc60aaa523",
+      "bytes": 2980
+    },
+    {
+      "path": "docs/roadmap/files/tests/resource_limits.zig.md",
+      "change": "modified",
+      "before_sha256": "dc875cbb2909dd1fda19a7272a07affbfb5e97d19d1a1b70fe7665a9bff80010",
+      "after_sha256": "5354116f124c29605cbc268b592e71bbc691ea9045f20746261495e451ef7b8a",
+      "bytes": 3068
+    },
+    {
+      "path": "docs/roadmap/files/tools/verify-backend.py.md",
+      "change": "modified",
+      "before_sha256": "002a7c3299fba9624e5fd87d6becc9f88406a299514fa275ce9282d41cd6d645",
+      "after_sha256": "f85a247002a534bb7a2070e42ea6cb637578835b5c07c5cdaef1e4f36c327a15",
+      "bytes": 2972
+    },
+    {
+      "path": "docs/roadmap/first-work-orders.md",
+      "change": "modified",
+      "before_sha256": "af2b557696bc64f23d2f1b658c37533a52d9c0eb4026002791d93a4bfdd3bfa8",
+      "after_sha256": "2219d692ace26ae2b110f3201ff2f96ad154e126431de50b16bb32fb4570297e",
+      "bytes": 2307
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "c9fe222f230ca1ac51b8f07b7bd7fd68988406450a8a7eee579bc02bcede3ac8",
+      "bytes": 43008
+    },
+    {
+      "path": "docs/roadmap/work-graph.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "fbaaa8c94ef6d41682b72f167491607e19e7e94aba8e3c07ed5fd0643039f882",
+      "bytes": 3681
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "b3a3827afec1173ee5ab7c78911c48265d47bfa70308db099421daa6add0f5dc",
+      "after_sha256": "9af39c854f1229b01397c96b6af0e10d1b2a87c9b97daec295a33a5229e3702e",
+      "bytes": 27422
+    },
+    {
+      "path": "docs/verification/baseline-v1.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "ad87c49b5712a3fc00252ec6b4fe095c8fc91286452b74f0921e63986363968c",
+      "bytes": 2638
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "ad87c49b5712a3fc00252ec6b4fe095c8fc91286452b74f0921e63986363968c",
+      "after_sha256": "43f6efe7ee9191dbd86020a6dc4498772ac34feb0ed11de9c39cb3f5fb39d063",
+      "bytes": 2733
+    },
+    {
+      "path": "docs/verification/quic-provider-probe.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "caec4ace198d876a27977cd4a0ed265025042eeb83b2a0edd9949229111bd1c7",
+      "bytes": 3045
+    },
+    {
+      "path": "docs/verification/r2-check-results.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "c0c199f88301dad084fa98f2b4ceffb4008a3818efdc16fbdbbc989470a7c7fb",
+      "bytes": 19259
+    },
+    {
+      "path": "docs/verification/r2-probe-result.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0102c661a944aa22d160211ac58cf4a21a80f24d27f2d9d5114254cb5b8707ac",
+      "bytes": 2819
+    },
+    {
+      "path": "docs/verification/source-inventory.json",
+      "change": "modified",
+      "before_sha256": "1c09caf89643e42812c076b7ed1482c76634dc7c594608ae69d1eea96bb2e24d",
+      "after_sha256": "6d270eeaf9f5c70447286f5cd9dcf63745ab8d346c0d5c6b0c45a17f3fcc7ec8",
+      "bytes": 18585
+    },
+    {
+      "path": "tools/check-docs.py",
+      "change": "modified",
+      "before_sha256": "7ddf52129aa19411db43e322aaf7c5e68276f4446ddf72ad10e20f7e6ee03a1b",
+      "after_sha256": "be34383f3ec878381ea6140f504b91af3213dcbb955aa35c0dffc63aa503a0be",
+      "bytes": 9896
+    },
+    {
+      "path": "tools/check-event-model.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "5dfd556d01f501d39d5de8a7335df674d84851fcb27605c7f8c174276de6dd38",
+      "bytes": 4525
+    },
+    {
+      "path": "tools/check-plan.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "edc6777275bd253d029acdb9f20fae25de54e2ca1ecb54c97eea5fc3ef5958b2",
+      "bytes": 7724
+    },
+    {
+      "path": "tools/probe-quic-tls.c",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "a043a574fed8815e0b0ddc14983a2ab80ae3eee8ddb6606b89f48c5e71370948",
+      "bytes": 5904
+    },
+    {
+      "path": "tools/probe-quic-tls.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0968b64497a446be0d59f2c0df8bfe59c4bd38e6986f669cbc1cf7567d53ebcb",
+      "bytes": 5063
+    }
+  ]
+}

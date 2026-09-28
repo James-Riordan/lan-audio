@@ -1,0 +1,459 @@
+{
+  "revision": "2026-09-26-r5",
+  "project": "tls-zig",
+  "status": "applied-and-verified",
+  "excluded_self_path": "docs/verification/r5-change-audit.json",
+  "deleted_paths": [],
+  "application_pins_modified": false,
+  "preexisting_source_modified": false,
+  "changes": [
+    {
+      "path": "docs/README.md",
+      "change": "modified",
+      "before_sha256": "fe5b8c044b39230eb6207b5c380b80ee0274b280cf680af5f6dbd840d79baf1f",
+      "after_sha256": "a2623f6f21d4d34c36f2d63560a3b8124701e7a9d5ef9ab9c4e20a9f17898dc6",
+      "bytes": 3044
+    },
+    {
+      "path": "docs/architecture/directory-map.md",
+      "change": "modified",
+      "before_sha256": "faf8a9ce0cffe6ace7f5a1674807c82eae1c2037503f6da2e7b91c129022df92",
+      "after_sha256": "3c7d82bdf69411932990b5bcd3bd5ad2d7ef7cec1ed9cd09a6036dea7f12967a",
+      "bytes": 2595
+    },
+    {
+      "path": "docs/architecture/target-tree.txt",
+      "change": "modified",
+      "before_sha256": "13a62efa3b6d88a7feec1abac9042aff9c04e3d163652819b1f226b42bf78ec3",
+      "after_sha256": "580116bc027c52b811056c1ccee3b34d9cbf06879f7ac6088ef983e3093fa444",
+      "bytes": 2307
+    },
+    {
+      "path": "docs/contracts/provider-leases.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1a055436dea1a450ff177838bbb25bba870e0e875493e5efa07459659a3f436d",
+      "bytes": 4696
+    },
+    {
+      "path": "docs/contracts/recordless-events.md",
+      "change": "modified",
+      "before_sha256": "760c29f8ca1506a3415b41cda253b939cad70798a902a3ac30380226ef02259e",
+      "after_sha256": "32f8c26a47266d3aecc3919cb3b57ceb23fa49c9175bca15e12145cabd949338",
+      "bytes": 9034
+    },
+    {
+      "path": "docs/reference/catalog.md",
+      "change": "modified",
+      "before_sha256": "5be0bd78062f984c984f56e07bd1fc5942cf0b0bf79cfbf94eef35bddab79946",
+      "after_sha256": "cdbb99c1dece1dcef4598b079b7ee191c7d75c1c24baf3040b95bb7825bbd1b2",
+      "bytes": 7960
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-pair.c.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "11a9d3ed8d94ab3ec8a18cf3daebc8b25502fb44eac087e5d06a8710faace983",
+      "bytes": 7297
+    },
+    {
+      "path": "docs/reference/files/tools/probe-quic-pair.py.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "ee77f0bd6ab69106b38d0ecb01748e35ed5efe93e21b085229d16fcfabacf09c",
+      "bytes": 2690
+    },
+    {
+      "path": "docs/roadmap/decision-register.md",
+      "change": "modified",
+      "before_sha256": "bdd82333b0cb094596486bef5c14f6dc2dd0f9c18ec44f18bfc874d518f409f3",
+      "after_sha256": "d697c7d4a9bf462a85dc2c707c4f020ee24db9beb00daf4d54f733afa96c15d4",
+      "bytes": 6263
+    },
+    {
+      "path": "docs/roadmap/files/src/backend/quic.c.md",
+      "change": "modified",
+      "before_sha256": "0e91597e8f4a0e05a479ab304bd8a663e61ab89bd661ea8c50ca66bfd1d344f4",
+      "after_sha256": "247893e55566396c4a39f60a0b78c10699b60f5334456be09605ea0dc2ec96ca",
+      "bytes": 4231
+    },
+    {
+      "path": "docs/roadmap/files/src/quic/engine.zig.md",
+      "change": "modified",
+      "before_sha256": "0fd4b00ed176c2a0cef33b1a0e9923e30427c201987b712926c8e028a1efd274",
+      "after_sha256": "bfe5a9581b76fc1d239596d82f3adda9ab9e9b3e9fc82a01d3f604cc952c7fa9",
+      "bytes": 4148
+    },
+    {
+      "path": "docs/roadmap/files/tests/quic_contract.zig.md",
+      "change": "modified",
+      "before_sha256": "7abd3518328c5f1c4975a4e26c68ee447126877f279f1df47d8375e17251f56a",
+      "after_sha256": "e747959286893ba6a13492c8ce45a405e74e329ee89aea11762ded86a31fb05f",
+      "bytes": 4065
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "modified",
+      "before_sha256": "c3952b88ce3d72b31ae18ac61e04f61efc3e1819d6f638e895e1477e699dc748",
+      "after_sha256": "772e591169cf18ce4f5bd2e55ab4f88c50928d79e59776596a1adc919e965140",
+      "bytes": 51514
+    },
+    {
+      "path": "docs/roadmap/takeover.md",
+      "change": "modified",
+      "before_sha256": "c119452e46bbb80b6780be492f0baf7c0003c4a7166f908fedb7fb3ab813d64a",
+      "after_sha256": "47c21d09c451abf3e669ab0b0ad354a482d0277fbabec7beafad57bac9cecc9c",
+      "bytes": 5104
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "6e96e58944b3c6bc59bd20dde2d7072967eb1effced7e948f98be06e735f648a",
+      "after_sha256": "d573f6f42b96822847c81acc5f3e80c9d4ffc19cb36305b24b4636fad7ab4bfe",
+      "bytes": 45964
+    },
+    {
+      "path": "docs/verification/baseline-r4.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "d2a99d4f8120265b41e54d7e011a1fca1ce00e4499f6ce2fa9de9c8e54193748",
+      "bytes": 1394
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "d2a99d4f8120265b41e54d7e011a1fca1ce00e4499f6ce2fa9de9c8e54193748",
+      "after_sha256": "165a2bf725da6fe97ffb6e88d8ddb0c45b50fe06ac3461133d4c042d0f14a4aa",
+      "bytes": 1571
+    },
+    {
+      "path": "docs/verification/provider-pair/O0.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "c35311c94ef578b9cd7ba2e6384fad45863456ae57525d6cfa49834366cae32d",
+      "bytes": 35635
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/alpn.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "dab29006ba28706ef899ea372ea1e2ceac4a912be6e84a169514aead1fe9413e",
+      "bytes": 878
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/backpressure.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9671ab946c6b40794fe2ebe00a37cf1db9564489b224cd562ca8a54d190c5e1b",
+      "bytes": 892
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/budgeted.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "5774b3fd7c1c087645feddd77836eae094fe41f01ee868c55890ae03d1da88a7",
+      "bytes": 896
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/combined.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0f035f9d904156536dc3ed1d8fc8f416e8502c952f82a70c055209a111d9fa92",
+      "bytes": 896
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/compile.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-alert.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f729326403ab73530dd28337a5c14d2681b3225f5ca7e35c65c571623be13eb7",
+      "bytes": 888
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-params.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0621389228280c333035f249c1a89de1cfe1a838be43de4e40d4b6f2c51c1a35",
+      "bytes": 883
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-receive.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "d7b45b21cc98421415c84008257318fdca75a34a84b606b4a681fd17eb442153",
+      "bytes": 883
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-release.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "aaf51e4e4f65f49a0b1e39d6972a4249be2d0cc6969bde8cc37b51cb5309b046",
+      "bytes": 885
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-secret.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "941cb74b2c91b52cb2097fc52ec8f4e8780db743e60a0cf9c4d0a7934adc2bdb",
+      "bytes": 884
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fail-send.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "30208b34bd2c2f51d238df9069657454f8b603a7e8e1cedb9ebcb1cb73facc6a",
+      "bytes": 882
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/fragmented.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "388bfef6adb4c024bf302721b79b89a4bd27939714c8afb1267912878d5f4226",
+      "bytes": 898
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/full.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "2a130ca3a6670307dc98706d977a2c23ddb2e4d15a9cb0266ce79174d8565f25",
+      "bytes": 879
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/missing-client.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "bebd5321bf49688d072adbc8c757d812521d8356aaa3f9cc3d2cf0d8e65e5ad4",
+      "bytes": 892
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/mutual.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "600d5588ee7cf53f8a57b429b17b1cfe0b35fde2a3499cabe41be73bde1c3c78",
+      "bytes": 882
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/tickets.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "73fdc9e29595c58f73322b9dc44df5ca5c3c1070c48f708b762be6ef03117e65",
+      "bytes": 882
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/wrong-ca.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1855329ff90744c03279b539088034482ab5fbd2782e8a7633e956428d9bde5e",
+      "bytes": 886
+    },
+    {
+      "path": "docs/verification/provider-pair/O0/wrong-host.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1242b0177c88b4fc25467cab7f40b64bd78a8059adf0d1bc0781a5d1b1cd5661",
+      "bytes": 888
+    },
+    {
+      "path": "docs/verification/provider-pair/O2.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "bf5682c7347687e59f8014a5b03b5b290701e20a50da6b4387e3bd81aaf3559b",
+      "bytes": 35635
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/alpn.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "dab29006ba28706ef899ea372ea1e2ceac4a912be6e84a169514aead1fe9413e",
+      "bytes": 878
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/backpressure.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "5e7938fe90f4e8d486caf54e136455b34ffb4309d2daee1013811a0795d22752",
+      "bytes": 892
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/budgeted.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "67198d2642a737ba8f33f3f4a2a1ad3198c56e98d9a72fbc108395469018d5d2",
+      "bytes": 896
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/combined.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0f035f9d904156536dc3ed1d8fc8f416e8502c952f82a70c055209a111d9fa92",
+      "bytes": 896
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/compile.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-alert.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f729326403ab73530dd28337a5c14d2681b3225f5ca7e35c65c571623be13eb7",
+      "bytes": 888
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-params.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "0621389228280c333035f249c1a89de1cfe1a838be43de4e40d4b6f2c51c1a35",
+      "bytes": 883
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-receive.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "d7b45b21cc98421415c84008257318fdca75a34a84b606b4a681fd17eb442153",
+      "bytes": 883
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-release.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "aaf51e4e4f65f49a0b1e39d6972a4249be2d0cc6969bde8cc37b51cb5309b046",
+      "bytes": 885
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-secret.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "941cb74b2c91b52cb2097fc52ec8f4e8780db743e60a0cf9c4d0a7934adc2bdb",
+      "bytes": 884
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fail-send.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "30208b34bd2c2f51d238df9069657454f8b603a7e8e1cedb9ebcb1cb73facc6a",
+      "bytes": 882
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/fragmented.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f5904fc5e1bb7504376cce6b4dd1b03ef93cbb53915e26fd494ab7a60aac4c69",
+      "bytes": 898
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/full.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "4004c65853619b66519293458af819f6472a09733f1ee8aa0a9f7bd035a0d6c0",
+      "bytes": 879
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/missing-client.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "bebd5321bf49688d072adbc8c757d812521d8356aaa3f9cc3d2cf0d8e65e5ad4",
+      "bytes": 892
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/mutual.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "10b7f651cc070e6055256d6fece4cbeb1da42d97b55c029e3471465e4cf2fcaa",
+      "bytes": 882
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/tickets.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "c0b690004cc8ebd135e3cf02101b1e3fcd011c1e488385627e2ac370bdc5edb6",
+      "bytes": 882
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/wrong-ca.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "11ccd9aefee6d3dba6419a4ad15646c1d845e71325ff549e8d5cb30b075cfd5b",
+      "bytes": 886
+    },
+    {
+      "path": "docs/verification/provider-pair/O2/wrong-host.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "44943eb6790c73cc4203dc523f160ac13b20d61c58bf16479c0e9b554926aca8",
+      "bytes": 888
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-1-wrong-ca.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "21746b656abaa690562ecdff80e57865062a3efbdaad702c4819513a7e759a2d",
+      "bytes": 831
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-1.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "55a244c0bf267f5814f50a4aca2454c4e8e10afb2fc83cf5f8601ee8721c3243",
+      "bytes": 15501
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-2-fail-release.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9cfc5323c57d9ecb05c28e164bc5ef5f11536a3e3305e799981c618963a88727",
+      "bytes": 1127
+    },
+    {
+      "path": "docs/verification/provider-pair/exploratory-2.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "8932d42f92b993637a52c1bf9f6b3538d195a935d5438f5c72c145792702bbf3",
+      "bytes": 22041
+    },
+    {
+      "path": "docs/verification/quic-provider-pair.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1496e23fbfb93023c432829d0b24c829e04645f736ec70dbd34bf03ed5efd52c",
+      "bytes": 8579
+    },
+    {
+      "path": "docs/verification/r5-check-results.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b5a22d70ebc20f0c5cfe3d925af0aaf42883bae786183b83fcb4fe7b8f8edbb8",
+      "bytes": 17985
+    },
+    {
+      "path": "docs/verification/source-inventory.json",
+      "change": "modified",
+      "before_sha256": "587d464903ad62c6c44fff4de62b0b6199a33c4035ef880847a7a66efef74783",
+      "after_sha256": "57f400db19492342e1783abddfa07c6a894046040fb45ded1b9c611594c7d200",
+      "bytes": 19713
+    },
+    {
+      "path": "tools/probe-quic-pair.c",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "3f30826b0ffbd28cf60ed238b45876468fefec704dfad5d2fdce8fedf358a442",
+      "bytes": 14683
+    },
+    {
+      "path": "tools/probe-quic-pair.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "a50f002c744bc9143376bfb974e994f1c032d0496ba45a6124ae74a286abec0a",
+      "bytes": 5850
+    }
+  ]
+}

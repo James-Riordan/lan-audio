@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "tools/check_transport.py",
+    "--staged"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:23.922508+00:00",
+  "elapsed_seconds": 0.893892699998105,
+  "exit_code": 0,
+  "log": "transport.log",
+  "log_sha256": "4759571745c41123f6adb9c2f32299472e99a9a6300a4c203aa8d03b871c104b"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "SessionWindow",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 9.541,
+    "log": "models-0.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "EndDrain",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 8.517,
+    "log": "models-1.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_models.py",
+      "--model",
+      "SpscPublication",
+      "--java",
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "--jar",
+      "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 9.726,
+    "log": "models-2.log"
+  }
+]

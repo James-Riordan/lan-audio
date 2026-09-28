@@ -1,0 +1,7 @@
+Independent TCP server: OpenSSL 3.0.18 30 Sep 2025
+PASS TCP consumer: clean
+PASS TCP consumer: raw_eof
+PASS TCP consumer: wrong_name
+PASS TCP consumer: stall_deadline
+PASS TCP consumer: stall_cancel
+5 external-consumer TCP cases passed

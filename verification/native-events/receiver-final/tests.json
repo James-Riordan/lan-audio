@@ -1,0 +1,63 @@
+{
+  "source_sha256": {
+    "src/runtime/receive_drain.zig": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+    "tests/integration/runtime_lifecycle.zig": "cb8dc5c7b329ceaa2fcac1758f730dd468ed6646f76a0d32d6f4bae9f8f2b86c",
+    "src/audio/callback_bridge.zig": "aa560ade34583d2fbcb2e024491fb232c1b90f3446b32a7ff731c6fbe0d2c3ef",
+    "build.zig": "e5a6a03eec9e58a477252e6dfbf61eabb4b4db88a60467383083eb41b2d2b3eb"
+  },
+  "runs": [
+    {
+      "name": "debug",
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 15.55228189999616
+    },
+    {
+      "name": "safe",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-test",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 47.70939290000388
+    },
+    {
+      "name": "monterey",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-check",
+        "-Dtarget=x86_64-macos",
+        "--verbose",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 8.421725399995921
+    },
+    {
+      "name": "macos-26",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-check",
+        "-Dtarget=x86_64-macos.26.0",
+        "--verbose",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 8.609491200004413
+    }
+  ]
+}

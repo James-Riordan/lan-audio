@@ -1,0 +1,9 @@
+Build Summary: 6/6 steps succeeded; 1/1 tests passed
+dependency-test success
++- run test 1 pass (1 total) 274ms MaxRSS:4M
+   +- compile test debug native success 3s MaxRSS:258M
+      +- WriteFile success
+      +- compile lib miniaudio debug native success 3s MaxRSS:22M
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c success 338ms MaxRSS:16M
+

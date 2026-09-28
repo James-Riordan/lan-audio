@@ -1,0 +1,5 @@
+reference 0
+docs 0
+handoff 0
+transport-custody 1
+{"receipt": "C:\\Projects\\lan-audio\\verification\\native-failures\\receipt.json", "sha256": "41309fc2307dfaf7f03b44c055dcece416bda097434e9463fd2520fc104e0f18", "changes": 21, "transport_mismatches": 1}

@@ -1,0 +1,34 @@
+install
++- install tls-tcp-consumer
+   +- compile exe tls-tcp-consumer debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+Build Summary: 5/5 steps succeeded
+install success
++- install tls-tcp-consumer success
+|  +- compile exe tls-tcp-consumer debug native success 16s MaxRSS:260M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+

@@ -1,0 +1,81 @@
+//! Standalone production-module consumer. Fixture time/credentials are test-only.
+const std = @import("std");
+const tls = @import("tls");
+const c = tls.contract;
+const Host = struct {
+    engine: *tls.Engine,
+    peer: *tls.Engine,
+    parameters: []const u8,
+    offset: usize = 0,
+    installed: [3][2]bool = @splat(@splat(false)),
+    accepted_parameters: bool = false,
+    completions: usize = 0,
+
+    fn accept(arg: *anyopaque, event: c.Event) c.ConsumeError!void {
+        const host: *Host = @ptrCast(@alignCast(arg));
+        switch (event.payload) {
+            .crypto => |value| {
+                const bytes = value.bytes[host.offset..];
+                const prefix = (host.peer.offerCrypto(value.level, bytes) catch return error.Rejected).acceptedPrefix(bytes) catch return error.Rejected;
+                host.offset += prefix.len;
+                if (host.offset != value.bytes.len) return error.WouldBlock;
+                host.offset = 0;
+            },
+            .secret => |secret| {
+                const slot = &host.installed[@backingInt(secret.level)][@backingInt(secret.direction)];
+                if (slot.* or secret.bytes.len != 32 or secret.suite != .aes128gcm_sha256) return error.Rejected;
+                // A real QUIC owner installs packet keys here before returning success.
+                // This demonstration validates receipt and deliberately retains no key.
+                slot.* = true;
+            },
+            .peer_parameters => |bytes| {
+                if (host.accepted_parameters or !std.mem.eql(u8, bytes, host.parameters)) return error.Rejected;
+                host.accepted_parameters = true;
+            },
+            .handshake_complete => {
+                if (host.completions != 0 or !host.accepted_parameters) return error.Rejected;
+                for ([_]usize{ 1, 2 }) |level| for (host.installed[level]) |key| {
+                    if (!key) return error.Rejected;
+                };
+                host.completions += 1;
+            },
+            .alert => return error.Rejected,
+        }
+    }
+    fn pump(host: *Host) !void {
+        while (try host.engine.nextEvent()) |event| {
+            host.engine.consume(event.id, .{ .context = host, .accept = accept }) catch |err| {
+                if (err == error.WouldBlock) return;
+                return err;
+            };
+            try host.engine.acknowledge(event.id);
+        }
+    }
+};
+fn config(server: bool) c.Config {
+    return .{
+        .policy = if (server) .{ .server = .{ .credentials = .{ .certificate_file = "tests/fixtures/server.pem", .private_key_file = "tests/fixtures/server.key" } } } else .{ .client = .{ .trust_file = "tests/fixtures/ca.pem", .peer = .{ .dns = "localhost" } } },
+        .alpn = "recordless-example",
+        .local_parameters = if (server) &.{ 15, 1, 2 } else &.{ 15, 1, 1 },
+        .wall_time = .{ .value = 1790424000 },
+        .now = .{ .value = 0 },
+    };
+}
+pub fn main() !void {
+    var client = try tls.Engine.init(std.heap.c_allocator, try c.normalize(config(false), &.{}, .{}, tls.capabilities()));
+    defer client.deinit() catch unreachable;
+    var server = try tls.Engine.init(std.heap.c_allocator, try c.normalize(config(true), &.{}, .{}, tls.capabilities()));
+    defer server.deinit() catch unreachable;
+    var client_host: Host = .{ .engine = &client, .peer = &server, .parameters = config(true).local_parameters };
+    var server_host: Host = .{ .engine = &server, .peer = &client, .parameters = config(false).local_parameters };
+    var tick: u64 = 1;
+    while (tick < 10000) : (tick += 1) {
+        try client_host.pump();
+        try server_host.pump();
+        _ = try client.advance(.{ .value = tick }, .{});
+        _ = try server.advance(.{ .value = tick }, .{});
+        if (try client.isReady() and try server.isReady()) break;
+    }
+    if (tick == 10000 or client_host.completions != 1 or server_host.completions != 1) return error.IncompleteHandshake;
+    std.debug.print("recordless consumer: both roles completed authenticated policy/key custody\n", .{});
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "lifecycle-check",
+    "-Dtarget=x86_64-macos",
+    "--summary",
+    "all"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:32:25.614172+00:00",
+  "elapsed_seconds": 23.062451099998725,
+  "exit_code": 0,
+  "log": "mac-compile.log",
+  "log_sha256": "57b08be365c4ed96c7537cb31819069cb951e692b26b060d3826f7438c0f7bc7"
+}

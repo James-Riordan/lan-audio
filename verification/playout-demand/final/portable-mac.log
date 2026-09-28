@@ -1,0 +1,14 @@
+Build Summary: 12/12 steps succeeded
+recovery-check success
++- compile test safe x86_64-macos.12.0 success 55s MaxRSS:271M
+timing-check success
++- compile test safe x86_64-macos.12.0 success 55s MaxRSS:271M
+policy-check success
++- compile test safe x86_64-macos.12.0 cached 378ms MaxRSS:62M
+lifecycle-check success
++- compile test safe x86_64-macos.12.0 cached 279ms MaxRSS:62M
+core-check success
++- compile test safe x86_64-macos.12.0 cached 328ms MaxRSS:62M
+config-check success
++- compile test safe x86_64-macos.12.0 cached 346ms MaxRSS:62M
+

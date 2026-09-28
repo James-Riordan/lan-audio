@@ -1,0 +1,18 @@
+1/11 driver.test.peer probe observes early response without changing blocked ciphertext or deadline...OK
+2/11 driver.test.peer probe during blocked write honors cancel deadline and raw EOF...OK
+3/11 driver.test.idle probe output flush preserves order before next application write...OK
+4/11 driver.test.host driver preserves partial writes and received suffixes across reads...OK
+5/11 driver.test.host shutdown preserves deadline across final plaintext reads and rejects raw EOF...OK
+6/11 driver.test.host operation deadline expires despite slow transport progress...OK
+7/11 driver.test.atomic cancellation stops blocked reads and writes without touching transport...OK
+8/11 driver.test.host cannot extend a shutdown deadline by switching to read...OK
+9/11 driver.test.host rejects invalid transport counts and backward clocks...OK
+10/11 driver.test.host authentication failure flushes fragmented alert and retains diagnostics...OK
+11/11 driver.test.host raw EOF during handshake is terminal even when alert delivery blocks...OK
+All 11 tests passed.
+Build Summary: 4/4 steps succeeded
+host-test success
++- run host driver tests success 262ms
+   +- WriteFile libssl-3-x64.dll success
+      +- compile test safe native success 16s MaxRSS:286M
+

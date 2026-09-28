@@ -1,0 +1,36 @@
+policy-test
++- run test 5 pass, 2 fail (7 total)
+error: 'peer_policy.test.independent 128-case authorization table requires every binding condition' failed:
+       expected 63, found 39
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:112:17: 0x7ff76ab1535a in expectEqualInner__anon_62524 (test_zcu.obj)
+                       return error.TestExpectedEqual;
+                       ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff76ab17d91 in expectEqual (test_zcu.obj)
+           return expectEqualInner(T, expected, actual);
+       
+       C:\Projects\lan-audio\tests\integration\peer_policy.zig:91:17: 0x7ff76ab17de1 in test.independent 128-case authorization table requires every binding condition (test_zcu.obj)
+                       try eq(@as(usize, 63), flags); // Independent conjunction oracle.
+                       ^
+error: 'peer_policy.test.changed current identity or policy revokes without reauthorizing or resetting' failed:
+       expected error.WrongPeer, found error.UnauthorizedPeer
+       C:\Projects\lan-audio\src\security\peer_policy.zig:93:9: 0x7ff76ab0d13c in authorize (test_zcu.obj)
+               return error.UnauthorizedPeer;
+               ^
+       C:\Projects\lan-audio\src\runtime\channel_admission.zig:43:27: 0x7ff76ab0c4f9 in authorize (test_zcu.obj)
+               const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);
+                                 ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:65:13: 0x7ff76ab0b7ab in expectError__anon_61665 (test_zcu.obj)
+                   return error.TestUnexpectedError;
+                   ^
+       C:\Projects\lan-audio\tests\integration\peer_policy.zig:142:5: 0x7ff76ab12987 in test.changed current identity or policy revokes without reauthorizing or resetting (test_zcu.obj)
+           try std.testing.expectError(error.WrongPeer, identity.authorize(&trusted, evidence(4, peer_b)));
+           ^
+failed command: ".\\.zig-cache\\o\\a3ccad8caf5df04321202215c5f6ed53\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0xafaea28d --listen=-
+
+Build Summary: 1/3 steps succeeded (1 failed); 5/7 tests passed (2 failed)
+policy-test transitive failure
++- run test 5 pass, 2 fail (7 total)
+   +- compile test debug native success 8s MaxRSS:280M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xafaea28d policy-test --summary all

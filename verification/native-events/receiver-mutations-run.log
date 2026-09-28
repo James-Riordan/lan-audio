@@ -1,0 +1,2 @@
+ignore_output_fault False
+prepare_ack_after_fault False

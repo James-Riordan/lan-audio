@@ -1,0 +1,483 @@
+{
+  "status": "passed",
+  "revision": "2026-09-26-r3",
+  "date_utc": "2026-09-26T12:59:39.214547+00:00",
+  "scope": "maintenance/lifecycle/evidence validation; synthetic fixtures do not complete protocol work",
+  "source_inventory_sha256": "587d464903ad62c6c44fff4de62b0b6199a33c4035ef880847a7a66efef74783",
+  "plan_sha256": "18ce173d92c3f2e00375c9849755b646550a8dad5c475fc31fc826dc6ff92506",
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "result": {
+        "project": "tls-zig",
+        "passed": true,
+        "errors": [],
+        "negative_controls_detected": [
+          "source hash drift",
+          "unindexed file",
+          "broken local link",
+          "missing contract",
+          "stale declaration location",
+          "unsafe inventory path",
+          "malformed JSON"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\quic-zig"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "project": "tls-zig",
+        "work_packages": 37,
+        "acceptance_obligations": 74,
+        "completion_order": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00",
+          "Q10",
+          "T01",
+          "T07",
+          "Q11",
+          "T03",
+          "T05",
+          "T08",
+          "T09",
+          "T04",
+          "T10",
+          "T02",
+          "T11",
+          "T06",
+          "T12",
+          "Q00",
+          "T13",
+          "T14",
+          "Q01",
+          "Q02",
+          "Q04",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q13",
+          "Q20",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q16",
+          "Q19",
+          "Q21"
+        ],
+        "peer_checked": true,
+        "states": {
+          "planned": 37,
+          "in_progress": 0,
+          "implemented": 0,
+          "complete": 0
+        },
+        "ready_to_implement": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00"
+        ],
+        "negative_controls_detected": [
+          "cycle",
+          "unknown dependency",
+          "duplicate id",
+          "unsafe path",
+          "noncanonical path",
+          "missing oracle",
+          "duplicate acceptance",
+          "false completion",
+          "invalid shape"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\tls-zig\\tools\\test-plan-lifecycle.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "scope": "synthetic lifecycle evidence fixtures; no real work completed",
+        "positive_controls": [
+          "consistent cross-project completion",
+          "reopened implemented work",
+          "in-progress documented source",
+          "planned without source"
+        ],
+        "negative_controls_detected": [
+          "failed run",
+          "boolean exit code",
+          "skipped run",
+          "missing acceptance",
+          "skipped acceptance",
+          "unknown run",
+          "stale design",
+          "stale obligation",
+          "missing source scope",
+          "source hash mismatch",
+          "duplicate input",
+          "unsafe log path",
+          "log hash mismatch",
+          "unresolved gap",
+          "missing environment",
+          "unknown input project",
+          "missing dependency receipt",
+          "stale dependency receipt",
+          "source changed after completion",
+          "planned state conceals existing source"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "result": {
+        "project": "tls-zig",
+        "passed": true,
+        "errors": [],
+        "negative_controls_detected": [
+          "source hash drift",
+          "unindexed file",
+          "broken local link",
+          "missing contract",
+          "stale declaration location",
+          "unsafe inventory path",
+          "malformed JSON"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\quic-zig"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "project": "tls-zig",
+        "work_packages": 37,
+        "acceptance_obligations": 74,
+        "completion_order": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00",
+          "Q10",
+          "T01",
+          "T07",
+          "Q11",
+          "T03",
+          "T05",
+          "T08",
+          "T09",
+          "T04",
+          "T10",
+          "T02",
+          "T11",
+          "T06",
+          "T12",
+          "Q00",
+          "T13",
+          "T14",
+          "Q01",
+          "Q02",
+          "Q04",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q13",
+          "Q20",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q16",
+          "Q19",
+          "Q21"
+        ],
+        "peer_checked": true,
+        "states": {
+          "planned": 37,
+          "in_progress": 0,
+          "implemented": 0,
+          "complete": 0
+        },
+        "ready_to_implement": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00"
+        ],
+        "negative_controls_detected": [
+          "cycle",
+          "unknown dependency",
+          "duplicate id",
+          "unsafe path",
+          "noncanonical path",
+          "missing oracle",
+          "duplicate acceptance",
+          "false completion",
+          "invalid shape"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r3\\stage\\tls-zig\\tools\\test-plan-lifecycle.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "scope": "synthetic lifecycle evidence fixtures; no real work completed",
+        "positive_controls": [
+          "consistent cross-project completion",
+          "reopened implemented work",
+          "in-progress documented source",
+          "planned without source"
+        ],
+        "negative_controls_detected": [
+          "failed run",
+          "boolean exit code",
+          "skipped run",
+          "missing acceptance",
+          "skipped acceptance",
+          "unknown run",
+          "stale design",
+          "stale obligation",
+          "missing source scope",
+          "source hash mismatch",
+          "duplicate input",
+          "unsafe log path",
+          "log hash mismatch",
+          "unresolved gap",
+          "missing environment",
+          "unknown input project",
+          "missing dependency receipt",
+          "stale dependency receipt",
+          "source changed after completion",
+          "planned state conceals existing source"
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "preexisting_source_unchanged": [
+    "AGENTS.md",
+    "CHECKPOINT.md",
+    "HANDOFF-shutdown.md",
+    "HANDOFF-tcp-consumer.md",
+    "HOST-DRIVER.md",
+    "README.md",
+    "SOURCE-ORIGIN.json",
+    "backend-lock.json",
+    "build.zig",
+    "build.zig.zon",
+    "evidence/build-recovery.md",
+    "evidence/source-provenance.json",
+    "examples/consumer/build.zig",
+    "examples/consumer/build.zig.zon",
+    "examples/consumer/main.zig",
+    "examples/consumer/socket.c",
+    "examples/roundtrip.zig",
+    "src/backend.c",
+    "src/backend.h",
+    "src/backend.zig",
+    "src/driver.zig",
+    "src/root.zig",
+    "tests/driver.zig",
+    "tests/fixtures/ca.pem",
+    "tests/fixtures/client.key",
+    "tests/fixtures/client.pem",
+    "tests/fixtures/expired.key",
+    "tests/fixtures/expired.pem",
+    "tests/fixtures/other-ca.pem",
+    "tests/fixtures/server.key",
+    "tests/fixtures/server.pem",
+    "tests/fixtures/wrong-purpose.key",
+    "tests/fixtures/wrong-purpose.pem",
+    "tests/transport.zig",
+    "tools/build-openssl.sh",
+    "tools/check-docs.py",
+    "tools/check-event-model.py",
+    "tools/check-models.py",
+    "tools/fetch-openssl.py",
+    "tools/interop.py",
+    "tools/make_fixtures.py",
+    "tools/pin-backend.py",
+    "tools/probe-quic-tls.c",
+    "tools/probe-quic-tls.py",
+    "tools/qualify.ps1",
+    "tools/tcp_interop.py",
+    "tools/tcp_server_interop.py",
+    "tools/tcp_upload_interop.py",
+    "tools/test-openssl.sh"
+  ],
+  "only_preexisting_source_modified": "tools/check-plan.py",
+  "actual_work_package_states": {
+    "planned": 37,
+    "in_progress": 0,
+    "implemented": 0,
+    "complete": 0
+  },
+  "native_protocol_tests": "not rerun; implementation unchanged and prior receipts retained",
+  "models": "unchanged; prior scoped results retained",
+  "live_adoption_checks": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-docs.py",
+        "--with-sdk"
+      ],
+      "exit_code": 0,
+      "result": {
+        "project": "tls-zig",
+        "passed": true,
+        "errors": []
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-plan.py",
+        "--peer",
+        "C:\\Projects\\quic-zig"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "project": "tls-zig",
+        "work_packages": 37,
+        "acceptance_obligations": 74,
+        "completion_order": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00",
+          "Q10",
+          "T01",
+          "T07",
+          "Q11",
+          "T03",
+          "T05",
+          "T08",
+          "T09",
+          "T04",
+          "T10",
+          "T02",
+          "T11",
+          "T06",
+          "T12",
+          "Q00",
+          "T13",
+          "T14",
+          "Q01",
+          "Q02",
+          "Q04",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q13",
+          "Q20",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q16",
+          "Q19",
+          "Q21"
+        ],
+        "peer_checked": true,
+        "states": {
+          "planned": 37,
+          "in_progress": 0,
+          "implemented": 0,
+          "complete": 0
+        },
+        "ready_to_implement": [
+          "Q09",
+          "Q12",
+          "Q14",
+          "T00"
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\test-plan-lifecycle.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "scope": "synthetic lifecycle evidence fixtures; no real work completed",
+        "positive_controls": [
+          "consistent cross-project completion",
+          "reopened implemented work",
+          "in-progress documented source",
+          "planned without source"
+        ],
+        "negative_controls_detected": [
+          "failed run",
+          "boolean exit code",
+          "skipped run",
+          "missing acceptance",
+          "skipped acceptance",
+          "unknown run",
+          "stale design",
+          "stale obligation",
+          "missing source scope",
+          "source hash mismatch",
+          "duplicate input",
+          "unsafe log path",
+          "log hash mismatch",
+          "unresolved gap",
+          "missing environment",
+          "unknown input project",
+          "missing dependency receipt",
+          "stale dependency receipt",
+          "source changed after completion",
+          "planned state conceals existing source"
+        ]
+      },
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+network-test
++- run test
+   +- compile test debug native 1 errors
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+src\host\net\socket.zig:5:11: error: invalid builtin function: '@cImport'
+const c = @cImport({
+          ^~~~~~~~
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" test -ODebug --dep network_host "-Mroot=tests\\integration\\network_host.zig" -cflags -std=c11 -Wall -Wextra -Werror -- "src\\host\\net\\native.c" -lws2_32 -ODebug -I "src\\host\\net" "-Mnetwork_host=src\\host\\net\\socket.zig" -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name test --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 0/3 steps succeeded (1 failed)
+network-test transitive failure
++- run test transitive failure
+   +- compile test debug native 1 errors
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x9dd3c905 network-test --summary all

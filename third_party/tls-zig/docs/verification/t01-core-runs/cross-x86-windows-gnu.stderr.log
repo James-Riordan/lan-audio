@@ -1,0 +1,5 @@
+Build Summary: 3/3 steps succeeded
+install success
++- install quic-contract-consumer success
+   +- compile exe quic-contract-consumer safe x86-windows-gnu success 1m MaxRSS:275M
+

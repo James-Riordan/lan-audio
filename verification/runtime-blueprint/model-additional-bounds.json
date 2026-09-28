@@ -1,0 +1,62 @@
+[
+  {
+    "name": "block-larger-than-queue",
+    "parameters": {
+      "Capacity": 1,
+      "Prefill": 1,
+      "MaxFrames": 4,
+      "MaxBlock": 3
+    },
+    "model_sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+    "config_sha256": "dbeca3c3813f29e1de9156bf77bf588ee29ba993960c4e45eb9cbdb19386785e",
+    "jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "command": [
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "-Xmx512m",
+      "-cp",
+      "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "1",
+      "-seed",
+      "1",
+      "-config",
+      "ReceiveDrain.cfg",
+      "ReceiveDrain.tla"
+    ],
+    "cwd_kind": "isolated temporary directory with copied model/config",
+    "exit_code": 0,
+    "passed": true,
+    "output": "TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)\nWarning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the \"-XX:+UseParallelGC\" property.\n(Use the -nowarning option to disable this warning.)\nRunning breadth-first search Model-Checking with fp 103 and seed 1 with 1 worker on 8 cores with 512MB heap and 64MB offheap memory [pid: 20640] (Windows 10 10.0 amd64, Eclipse Adoptium 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).\nParsing file C:\\Users\\James\\AppData\\Local\\Temp\\lan-audio-receive-bounds-mskxxmco\\ReceiveDrain.tla\nParsing file C:\\Users\\James\\AppData\\Local\\Temp\\Naturals.tla\nParsing file C:\\Users\\James\\AppData\\Local\\Temp\\Sequences.tla\nSemantic processing of module Naturals\nSemantic processing of module Sequences\nSemantic processing of module ReceiveDrain\nStarting... (2026-09-26 07:46:30)\nImplied-temporal checking--satisfiability problem has 1 branches.\nComputing initial states...\nFinished computing initial states: 1 distinct state generated at 2026-09-26 07:46:31.\nProgress(19) at 2026-09-26 07:46:31: 176 states generated, 98 distinct states found, 0 states left on queue.\nChecking temporal properties for the complete state space with 98 total distinct states at (2026-09-26 07:46:31)\nFinished checking temporal properties in 00s at 2026-09-26 07:46:31\nModel checking completed. No error has been found.\n  Estimates of the probability that TLC did not check all reachable states\n  because two distinct states had the same fingerprint:\n  calculated (optimistic):  val = 4.1E-16\n176 states generated, 98 distinct states found, 0 states left on queue.\nThe depth of the complete state graph search is 19.\nThe average outdegree of the complete state graph is 1 (minimum is 0, the maximum 4 and the 95th percentile is 2).\nFinished in 00s at (2026-09-26 07:46:31)\n"
+  },
+  {
+    "name": "larger-tail-domain",
+    "parameters": {
+      "Capacity": 3,
+      "Prefill": 3,
+      "MaxFrames": 5,
+      "MaxBlock": 3
+    },
+    "model_sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+    "config_sha256": "c85c1cc01427e8a15e20ee86bdf5bba57fe2573be297761ca1feff6db3de1e10",
+    "jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "command": [
+      "C:/Applications/Development/Toolchains/temurin/17.0.20+8/bin/java.exe",
+      "-Xmx512m",
+      "-cp",
+      "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\formal-tools\\tla2tools.jar",
+      "tlc2.TLC",
+      "-workers",
+      "1",
+      "-seed",
+      "1",
+      "-config",
+      "ReceiveDrain.cfg",
+      "ReceiveDrain.tla"
+    ],
+    "cwd_kind": "isolated temporary directory with copied model/config",
+    "exit_code": 0,
+    "passed": true,
+    "output": "TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)\nWarning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the \"-XX:+UseParallelGC\" property.\n(Use the -nowarning option to disable this warning.)\nRunning breadth-first search Model-Checking with fp 22 and seed 1 with 1 worker on 8 cores with 512MB heap and 64MB offheap memory [pid: 17012] (Windows 10 10.0 amd64, Eclipse Adoptium 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).\nParsing file C:\\Users\\James\\AppData\\Local\\Temp\\lan-audio-receive-bounds-w74oqm3e\\ReceiveDrain.tla\nParsing file C:\\Users\\James\\AppData\\Local\\Temp\\Naturals.tla\nParsing file C:\\Users\\James\\AppData\\Local\\Temp\\Sequences.tla\nSemantic processing of module Naturals\nSemantic processing of module Sequences\nSemantic processing of module ReceiveDrain\nStarting... (2026-09-26 07:46:32)\nImplied-temporal checking--satisfiability problem has 1 branches.\nComputing initial states...\nFinished computing initial states: 1 distinct state generated at 2026-09-26 07:46:32.\nProgress(13) at 2026-09-26 07:46:33: 506 states generated, 220 distinct states found, 0 states left on queue.\nChecking temporal properties for the complete state space with 220 total distinct states at (2026-09-26 07:46:33)\nFinished checking temporal properties in 00s at 2026-09-26 07:46:33\nModel checking completed. No error has been found.\n  Estimates of the probability that TLC did not check all reachable states\n  because two distinct states had the same fingerprint:\n  calculated (optimistic):  val = 3.4E-15\n506 states generated, 220 distinct states found, 0 states left on queue.\nThe depth of the complete state graph search is 13.\nThe average outdegree of the complete state graph is 1 (minimum is 0, the maximum 4 and the 95th percentile is 3).\nFinished in 01s at (2026-09-26 07:46:33)\n"
+  }
+]

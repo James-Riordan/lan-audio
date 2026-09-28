@@ -1,0 +1,10 @@
+[
+  {
+    "path": "docs/verification/acceptance-matrix.md",
+    "sha256": "3167c5bac3b6f6d4fb8a14649872bd1546344e9494b275913557bcf168c44649"
+  },
+  {
+    "path": "docs/verification/scenarios.md",
+    "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39"
+  }
+]

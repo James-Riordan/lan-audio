@@ -1,0 +1,266 @@
+[
+  {
+    "id": "core-Debug",
+    "scope": "native-run",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "quic-test",
+      "-Doptimize=Debug",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig",
+    "started_utc": "2026-09-26T15:51:39.411509+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "core-Debug.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "core-Debug.stderr.log",
+      "sha256": "5ba8c6375fd4caf5843d2afdb030f18ce427c02d8aa7ff1620afb01ee767b016"
+    }
+  },
+  {
+    "id": "consumer-Debug",
+    "scope": "native-run",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "run",
+      "-Doptimize=Debug",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T15:52:20.953257+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "consumer-Debug.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "consumer-Debug.stderr.log",
+      "sha256": "15f098f609276d75901cb39b1a6e58280700edf3a84d09823988f436c7ad00c8"
+    }
+  },
+  {
+    "id": "core-ReleaseSafe",
+    "scope": "native-run",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "quic-test",
+      "-Doptimize=ReleaseSafe",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig",
+    "started_utc": "2026-09-26T15:52:57.344812+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "core-ReleaseSafe.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "core-ReleaseSafe.stderr.log",
+      "sha256": "fc43665189b6d02a2c3834a44370639b2252ecbd68627888ebfa2e341d276639"
+    }
+  },
+  {
+    "id": "consumer-ReleaseSafe",
+    "scope": "native-run",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "run",
+      "-Doptimize=ReleaseSafe",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T15:55:29.594806+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "consumer-ReleaseSafe.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "consumer-ReleaseSafe.stderr.log",
+      "sha256": "f51266c11b7e84602313787f8e98805417081c96fbbdd9d8c59200033b44694e"
+    }
+  },
+  {
+    "id": "cross-x86-windows-gnu",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=x86-windows-gnu",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T15:56:47.265374+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-x86-windows-gnu.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-x86-windows-gnu.stderr.log",
+      "sha256": "b7357559dcb73f7cac3098b048e66f03dd3150db14ff6972e389a64c823c75b6"
+    }
+  },
+  {
+    "id": "cross-aarch64-windows-gnu",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=aarch64-windows-gnu",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T15:57:56.665140+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-aarch64-windows-gnu.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-aarch64-windows-gnu.stderr.log",
+      "sha256": "0ffb62566d58451304d8f683cc90ec889d2564664bc4aa0583c7e03a31b478dc"
+    }
+  },
+  {
+    "id": "cross-x86_64-linux-musl",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=x86_64-linux-musl",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T15:58:56.045597+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-x86_64-linux-musl.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-x86_64-linux-musl.stderr.log",
+      "sha256": "5c0e7ca284da0b2f06446065a354a68ea345c99b524e1617d6320dacab8fdc4f"
+    }
+  },
+  {
+    "id": "cross-aarch64-linux-musl",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=aarch64-linux-musl",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T16:00:40.380025+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-aarch64-linux-musl.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-aarch64-linux-musl.stderr.log",
+      "sha256": "28593c46e64b90f65197c269ad22f3ba5430ea1fc853f05ee7f934bc9b39cb86"
+    }
+  },
+  {
+    "id": "cross-x86_64-macos",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=x86_64-macos",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T16:02:30.804897+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-x86_64-macos.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-x86_64-macos.stderr.log",
+      "sha256": "b86d84d84569cd6156e3da79bd67cd2048ccd0db25d3486dad6a25e7e7df0bd1"
+    }
+  },
+  {
+    "id": "cross-aarch64-macos",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=aarch64-macos",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T16:04:21.839095+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-aarch64-macos.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-aarch64-macos.stderr.log",
+      "sha256": "8be4078d734fa48712273507f3ba137ce5d3e05c05b0e90098b2baeac16583b4"
+    }
+  },
+  {
+    "id": "cross-x86_64-freebsd",
+    "scope": "compile-only",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-Doptimize=ReleaseSafe",
+      "-Dtarget=x86_64-freebsd",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\tls-zig\\examples\\quic-contract",
+    "started_utc": "2026-09-26T16:05:44.356041+00:00",
+    "exit_code": 0,
+    "stdout": {
+      "path": "cross-x86_64-freebsd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "cross-x86_64-freebsd.stderr.log",
+      "sha256": "64c5a4c28b9608f070c69b450e5116d7487b0b6b9d3f38cfed101207f0ea1318"
+    }
+  }
+]

@@ -1,0 +1,189 @@
+1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:95:27: 0x7ff705526949 in acquire (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:130:9: 0x7ff70552aae4 in test.cancel before each dispatch reclaims exactly the acquired prefix (root_zcu.obj)
+        try host.acquire(prefix);
+        ^
+2/11 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:145:17: 0x7ff70552a862 in test.cancel during every acquisition retains parents for late success failure and partial debt (root_zcu.obj)
+            _ = try host.dispatch();
+                ^
+3/11 runtime_lifecycle.test.each rolled back failure and partial acquisition independently initiates cleanup...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:161:17: 0x7ff70552a537 in test.each rolled back failure and partial acquisition independently initiates cleanup (root_zcu.obj)
+            _ = try host.dispatch();
+                ^
+4/11 runtime_lifecycle.test.pending worker acquisition reserves device and storage across cancel and deadline...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:95:27: 0x7ff705526949 in acquire (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:172:5: 0x7ff705529f33 in test.pending worker acquisition reserves device and storage across cancel and deadline (root_zcu.obj)
+    try host.acquire(2);
+    ^
+5/11 runtime_lifecycle.test.callback may enter after stop and fence cannot return while callback is paused...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:95:27: 0x7ff705526949 in acquire (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:189:5: 0x7ff705529ae7 in test.callback may enter after stop and fence cannot return while callback is paused (root_zcu.obj)
+    try host.acquire(2);
+    ^
+6/11 runtime_lifecycle.test.every token field and contradictory result is rejected atomically...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:209:19: 0x7ff70552952a in test.every token field and contradictory result is rejected atomically (root_zcu.obj)
+    const token = try host.dispatch();
+                  ^
+7/11 runtime_lifecycle.test.each cleanup failure preserves ownership and requires explicit retry with new identity...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:95:27: 0x7ff705526949 in acquire (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:235:9: 0x7ff705528ad5 in test.each cleanup failure preserves ownership and requires explicit retry with new identity (root_zcu.obj)
+        try host.acquire(3);
+        ^
+8/11 runtime_lifecycle.test.old generation stop deadline and completion cannot affect restarted owner...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:265:23: 0x7ff705528477 in test.old generation stop deadline and completion cannot affect restarted owner (root_zcu.obj)
+    const old_token = try host.dispatch();
+                      ^
+9/11 runtime_lifecycle.test.namespace exhaustion never wraps and does not forget an acquired owner...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:95:27: 0x7ff705526949 in acquire (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:290:5: 0x7ff705526da6 in test.namespace exhaustion never wraps and does not forget an acquired owner (root_zcu.obj)
+    try host.acquire(1);
+    ^
+10/11 runtime_lifecycle.test.wrong executor observes no dispatch and deadline cannot change terminal outcome...OK
+11/11 runtime_lifecycle.test.result matrix rejects every inappropriate tag without settling an issued effect...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:197:21: 0x7ff70551bc98 in expectEqualInner__anon_61610 (root_zcu.obj)
+                    return error.TestExpectedEqual;
+                    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff70551bdbc in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:57:13: 0x7ff70551bde7 in noSecondDispatch (root_zcu.obj)
+            try eq(@as(?lc.Token, null), try self.controller.takeEffect(executor));
+            ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:48:17: 0x7ff70551c8df in dispatch (root_zcu.obj)
+                try self.noSecondDispatch();
+                ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:320:23: 0x7ff70551fda4 in test.result matrix rejects every inappropriate tag without settling an issued effect (root_zcu.obj)
+        const token = try host.dispatch();
+                      ^
+1 passed; 0 skipped; 10 failed.
+error: the following test command failed with exit code 1:
+C:\Users\James\Documents\Codex\2026-09-25\referenced-chatgpt-conversation-this-is-an-3\work\lifecycle-mutation-cache\o\7acd25c0cd68075cf9be42728c11909a\root.exe --seed=0x9468ca20

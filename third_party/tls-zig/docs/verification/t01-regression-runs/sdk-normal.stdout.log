@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "sdk_root": "deps/openssl-install",
+  "files": 166,
+  "lock_sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef",
+  "scope": "SDK file set and bytes; not loaded-runtime identity"
+}

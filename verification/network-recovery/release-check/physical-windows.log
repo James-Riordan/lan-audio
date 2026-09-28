@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "seconds": 11.539,
+  "process_cpu_seconds": 0.15625,
+  "percent_of_one_cpu": 1.3540966571618145,
+  "frames": 471840,
+  "nonzero_bytes": 0,
+  "observed_non_silent_audio": false,
+  "error": null,
+  "exit_code": 0,
+  "report": {
+    "attempt": 1,
+    "buffer_ms": 40,
+    "frames": 471840,
+    "failure": null,
+    "lifecycle": {
+      "phase": "stopped",
+      "generation": 1,
+      "serial": 1977,
+      "held": [
+        false,
+        false,
+        false
+      ],
+      "pending": null,
+      "worker_joined": true,
+      "device_fenced": true,
+      "first_cause": null,
+      "cleanup_blocked": false,
+      "deadline_expired": false,
+      "receive": null,
+      "send": {
+        "draining": true,
+        "committed": 471840,
+        "offered_frames": 0,
+        "frontier": 471840,
+        "local": "transferred",
+        "end": "copied",
+        "remote": "confirmed",
+        "secure_close": "clean"
+      }
+    },
+    "audio": {
+      "captured_frames": 471840,
+      "dropped_frames": 0,
+      "rendered_frames": 0,
+      "silent_frames": 0,
+      "missing_output_frames": 0,
+      "invalid_buffers": 0,
+      "capture_faults": 0,
+      "counters_exact": true
+    },
+    "active_ms": 10343,
+    "starved": false,
+    "unplayed_frames": 0,
+    "clock_keepalive": true
+  },
+  "stderr": "Capture started: 48 kHz stereo.\n"
+}

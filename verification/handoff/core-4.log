@@ -1,0 +1,8 @@
+Build Summary: 5/5 steps succeeded
+audio-check success
++- compile test debug x86_64-linux-gnu success 1s MaxRSS:144M
+   +- WriteFile cached
+   +- compile lib miniaudio debug x86_64-linux-gnu cached 25ms MaxRSS:41M
+   +- compile lib miniaudio debug x86_64-linux-gnu (reused)
+   +- translate-c cached 20ms MaxRSS:41M
+

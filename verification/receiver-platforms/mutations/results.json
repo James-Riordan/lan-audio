@@ -1,0 +1,74 @@
+[
+  {
+    "name": "skip-mutual-auth",
+    "source_path": "src/security/peer_policy.zig",
+    "original_sha256": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+    "mutant_sha256": "1400ceaf8c938ab7d14f8cf7b607231d407c72dc6a3d796a21323bc2c666425a",
+    "log_sha256": "2fd59300132358ec8ab93299638dc5a1842fe4baf360e08dc1eab74d264539e6",
+    "command": [
+      "zig",
+      "build",
+      "policy-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 21.282,
+    "witness": "independent 128-case authorization table requires every binding condition",
+    "detected": true
+  },
+  {
+    "name": "skip-selected-peer",
+    "source_path": "src/security/peer_policy.zig",
+    "original_sha256": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+    "mutant_sha256": "343dc0eb641bc34068e082bb04c6850670ed2bc922768675ce2f1312c1d0f329",
+    "log_sha256": "e73c659e6ffff93a9071b7799c6f3cc7c0ac37634d297e90ea17061357e77ec7",
+    "command": [
+      "zig",
+      "build",
+      "policy-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 11.476,
+    "witness": "independent 128-case authorization table requires every binding condition",
+    "detected": true
+  },
+  {
+    "name": "repeat-resets-stream",
+    "source_path": "src/runtime/channel_admission.zig",
+    "original_sha256": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+    "mutant_sha256": "4dfdda5a7af1f316ee9d2d8183bc45ed09e768191f458b34f1b83b653d3b9416",
+    "log_sha256": "ca9b1179e0c7cce5aa0f23ae4ca3950fa650ddc8bf759bc9cfc87372657572f0",
+    "command": [
+      "zig",
+      "build",
+      "policy-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 15.102,
+    "witness": "repeated authorization preserves an actual negotiated frame frontier",
+    "detected": true
+  },
+  {
+    "name": "stale-revokes-replacement",
+    "source_path": "src/runtime/channel_admission.zig",
+    "original_sha256": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+    "mutant_sha256": "1b8bcb15e83d7484750cc69cf1cd124ed6e5b85356edc9eb7fede4af7ea5c745",
+    "log_sha256": "b79fdf7c2d42c8ebb0d9398ed8b654ba3fe6d3db8dd64a8110362b2c20ed33a8",
+    "command": [
+      "zig",
+      "build",
+      "policy-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 9.7,
+    "witness": "stale platform events cannot change a replacement and repeated revocation converges",
+    "detected": true
+  }
+]

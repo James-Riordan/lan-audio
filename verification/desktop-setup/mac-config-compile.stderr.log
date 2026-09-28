@@ -1,0 +1,4 @@
+Build Summary: 2/2 steps succeeded
+config-check success
++- compile test debug x86_64-macos.12.0 success 3s MaxRSS:265M
+

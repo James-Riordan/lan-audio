@@ -1,0 +1,8 @@
+FAIL ('client', 'sender', 'valid', 'ipv4')
+FAIL ('client', 'sender', 'valid', 'ipv6')
+FAIL ('client', 'receiver', 'valid', 'ipv4')
+FAIL ('client', 'receiver', 'valid', 'ipv6')
+FAIL ('server', 'sender', 'valid', 'ipv4')
+FAIL ('server', 'sender', 'valid', 'ipv6')
+FAIL ('server', 'receiver', 'valid', 'ipv4')
+FAIL ('server', 'receiver', 'valid', 'ipv6')

@@ -1,0 +1,10 @@
+# 
+prefix=C:/Users/James/Documents/Codex/2026-09-13/zce-tls-zig/work/tls-zig-r2/deps/openssl-install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include 
+
+Name: OpenSSL
+Description: Secure Sockets Layer and cryptography libraries and tools
+Version: 3.5.8
+Requires: libssl libcrypto

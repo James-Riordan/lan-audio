@@ -1,0 +1,5 @@
+Build Summary: 3/3 steps succeeded
+run success
++- run exe quic-contract-consumer success 334ms
+   +- compile exe quic-contract-consumer safe native success 40s MaxRSS:272M
+

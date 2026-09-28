@@ -1,0 +1,46 @@
+[
+  {
+    "path": "build.zig",
+    "sha256": "68e4ec96c0cf5492467dbfefc8afd8d942726da31941137c58acc86306317060"
+  },
+  {
+    "path": "src/root.zig",
+    "sha256": "18c115a7c4c6c526dc44cbd8f78e493b8eb43f76314b84ba12d9788f50255812"
+  },
+  {
+    "path": "src/media/format.zig",
+    "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42"
+  },
+  {
+    "path": "src/protocol/v2.zig",
+    "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d"
+  },
+  {
+    "path": "src/protocol/negotiation.zig",
+    "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55"
+  },
+  {
+    "path": "tests/integration/tls_v2.zig",
+    "sha256": "10bd45080e329996c4e97c77bd1f6967ed647e312023a581b3ec0c10f41d3abd"
+  },
+  {
+    "path": "tests/integration/loopback_transport.zig",
+    "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5"
+  },
+  {
+    "path": "tests/integration/protocol_v2_peer.py",
+    "sha256": "53510f5124e696449f8f657264750cd58094ba304cc346db18f339258e9ce3ec"
+  },
+  {
+    "path": "tests/integration/protocol_v2_reference.py",
+    "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c"
+  },
+  {
+    "path": "tests/integration/v2_codec_probe.zig",
+    "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242"
+  },
+  {
+    "path": "tools/test_v2_differential.py",
+    "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4"
+  }
+]

@@ -1,0 +1,8 @@
+usage: build_mac_candidate.py [-h] --openssl-archive OPENSSL_ARCHIVE
+                              --output OUTPUT --zig ZIG
+
+options:
+  -h, --help            show this help message and exit
+  --openssl-archive OPENSSL_ARCHIVE
+  --output OUTPUT
+  --zig ZIG

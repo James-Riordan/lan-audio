@@ -1,0 +1,14 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "capture-test",
+    "-j1",
+    "--summary",
+    "all"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "exit_code": 0,
+  "seconds": 7.638420999999653,
+  "log": "capture-retry.log"
+}

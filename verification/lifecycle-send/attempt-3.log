@@ -1,0 +1,5 @@
+Build Summary: 3/3 steps succeeded; 31/31 tests passed
+lifecycle-test success
++- run test 31 pass (31 total) 234ms MaxRSS:3M
+   +- compile test debug native success 17s MaxRSS:289M
+

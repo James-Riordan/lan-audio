@@ -1,0 +1,76 @@
+[
+  {
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "fmt",
+      "--check",
+      "build.zig",
+      "build.zig.zon",
+      "src",
+      "tests"
+    ],
+    "exit_code": 0,
+    "seconds": 0.037,
+    "log": "core-0.log"
+  },
+  {
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 9.53,
+    "log": "core-1.log"
+  },
+  {
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "-j1",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 17.69,
+    "log": "core-2.log"
+  },
+  {
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "check",
+      "-j1",
+      "-Dtarget=x86_64-linux-gnu",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 1.42,
+    "log": "core-3.log"
+  },
+  {
+    "cwd": "C:\\Projects\\lan-audio",
+    "command": [
+      "zig",
+      "build",
+      "core-check",
+      "-j1",
+      "-Dtarget=aarch64-macos",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 4.452,
+    "log": "core-4.log"
+  }
+]

@@ -1,0 +1,877 @@
+{
+  "lan-audio/src/root.zig": {
+    "purpose": "Stable public core module entry; exports existing session, window, v1 wire, receiver and queue/bridge mechanisms.",
+    "contract": "No native backend or runtime owner is constructed here. Imports point into responsibility folders; preserve public export names during relocation.",
+    "failure": "Adding host imports creates an architectural cycle and makes pure target checks require platform SDKs. New exports require a consumer and a named contract.",
+    "verify": "Compile core on native Windows, Intel Mac target and optional ARM target; existing core tests consume only this public module.",
+    "next": "WP02 adds intentional Format/v2 exports; keep experimental v1 compatibility and do not expose all future runtime internals."
+  },
+  "lan-audio/src/session/session.zig": {
+    "purpose": "Serialized generation, authentication-attestation and stop state machine.",
+    "contract": "begin increments a nonwrapping u64 epoch only from idle; authenticate binds the current negotiating epoch; start requires attestation; admit is a pure gate. enter/leaveCallback model one token. requestStop closes admission; finishStop requires no token and clears authentication.",
+    "failure": "InvalidState, StaleEpoch, Unauthenticated, CallbackActive, NoCallback and EpochExhausted preserve state. The token does not join OS callbacks; one owner serializes methods.",
+    "verify": "tests/unit/core.zig covers gates and rejection preservation; spec/session/SessionWindow checks bounded safety and fair-stop progress plus four mutants.",
+    "next": "WP04 owns real worker/device joins outside this type. Extend only if the abstract lifecycle changes; map every new state to a composed runtime model."
+  },
+  "lan-audio/src/session/receiver.zig": {
+    "purpose": "Composes authenticated-channel attestation, v1 stream identity and one bounded playout window.",
+    "contract": "authorizeChannel is a once-only host attestation. accept validates bytes/profile before state admission, binds START once, decodes/copies AUDIO, and admits END only beyond all buffered frames. tick advances one block; completeIfDrained closes the serialized session.",
+    "failure": "WrongStream, UnexpectedMessage, Ended and InvalidEnd supplement parser/session/window errors. Reaching ended proves serialized array consumption, not native callback reclamation.",
+    "verify": "tests/unit/wire.zig checks unauthorized input, stream mismatch, END bounds and draining holes; spec/stream/EndDrain explores completion with three mutations.",
+    "next": "Do not retrofit variable-frame v2 positions into this v1-specific type silently. WP02/04 introduces explicitly versioned composition and keeps each owner serialized."
+  },
+  "lan-audio/src/media/playout_window.zig": {
+    "purpose": "Fixed-storage block-position admission and one-tick media/silence commitment.",
+    "contract": "Window(K,M) requires positive dimensions. init binds an epoch. insert checks finite complete PCM, epoch, reserved max sequence and [next,next+K) membership before copying. tick requires nonaliasing M-sample output and fills it completely before advancing.",
+    "failure": "Stale, late, far, duplicate, malformed or exhausted positions fail without publication. No counter wrap; reinitialize only after all old owners stop. It is not a concurrent queue.",
+    "verify": "Core boundary tests and the independent non-ring oracle exercise 32,768 traces, repeated modulo reuse, silence and exhaustion.",
+    "next": "WP05 supplies actual scheduling/contiguous prefill. If v2 uses variable frame ranges, define a separate range-based contract rather than assuming this fixed-block algebra still applies."
+  },
+  "lan-audio/src/protocol/v1.zig": {
+    "purpose": "Owns the complete experimental jcr-audio/1 binary and quantization contract.",
+    "contract": "Header is 36 bytes, maximum record 996; START profile is 48 kHz stereo 240-frame s16LE. Parser.feed returns one borrowed message plus consumed prefix; process before the next feed. Encoders validate bounds/finite samples before writing; decode uses bounded temporary storage.",
+    "failure": "Unknown/malformed header, invalid ID/profile/sequence/length, nonfinite samples and truncation fail explicitly. Parser errors are terminal. Encode input/output cannot overlap; decode permits overlap.",
+    "verify": "Independent golden bytes, every split position, coalescing/truncation, hostile lengths and all 65,536 s16 round trips in tests/unit/wire.zig; live TLS tests verify stream behavior.",
+    "next": "Freeze v1 semantics. WP02 adds protocol/v2.zig for finite f32 bit preservation; never label existing PCM16 quantization lossless for arbitrary captured f32."
+  },
+  "lan-audio/src/audio/frame_queue.zig": {
+    "purpose": "Sole-producer/sole-consumer interleaved frame transfer with fixed storage and modular cursors.",
+    "contract": "K is power-of-two <=2^30, channels 1..32, target x86_64/aarch64. write copies at most two spans before release publication; read copies before release reuse. Remote cursor loads acquire, own loads monotonic. producerPending belongs only to producer. Slice lengths are complete frames and must not alias storage.",
+    "failure": "Full/empty return a short/zero prefix; no wait/allocation/CAS loop. Misuse of owner count, movement, live reset or direct field access invalidates the memory-order argument. Values are copied raw; finite validation belongs before playback/network publication.",
+    "verify": "Unit partial/full/empty/suffix and u32-wrap tests, 250,000-frame concurrent FIFO stress and spec/concurrency/SpscPublication; manual acquire/release proof remains distinct from the SC model.",
+    "next": "WP04 preserves fixed addresses and joins. WP07 adds a separately designed snapshot if needed; never poll mutable queue internals from a third observer."
+  },
+  "lan-audio/src/audio/callback_bridge.zig": {
+    "purpose": "Two directional queues with callback silence, drop and diagnostic policy.",
+    "contract": "captureInput writes the fitting whole-frame prefix, saturates captured/dropped totals and sets sticky capture_overrun on loss. renderOutput reads available frames and zeros the entire missing tail. Capture and playback have opposite producer/consumer owners.",
+    "failure": "Read ordinary totals only after native callback teardown. A worker checks overrun after draining and before further publication, then ends/restarts the discontinuous stream. Clearing the flag while callbacks run is invalid.",
+    "verify": "Unit gap/tail/overflow tests plus actual null callback lifecycle and live TLS-to-null playback cover ownership paths.",
+    "next": "WP04 integrates sender discontinuity handling; WP07 creates race-free live diagnostics. Keep logging, encoding, clocks and device control out of this callback policy."
+  },
+  "lan-audio/src/host/audio_device.zig": {
+    "purpose": "Optional miniaudio control owner with explicit silent, Windows and Mac profiles.",
+    "contract": "Initialize at final address; userdata points back to self. Context outlives device. init resets only under quiescence; start/stop are serialized off-callback; deinit uninitializes any created device even after start/stop errors. Callback copies f32 stereo into/from bridge and increments diagnostics.",
+    "failure": "UnsupportedPlatform/InvalidState and native context/device/start/stop errors remain distinct; last_result retains native cause. No implicit backend fallback or microphone profile. Failed start/stop still requires deinit before storage reuse.",
+    "verify": "Eight null lifecycle cycles in tests/integration/audio_device.zig; explicit physical WASAPI fixture in tests/hardware/windows_capture.zig. Mac source declaration is not execution evidence.",
+    "next": "WP01 qualifies Intel Mac; WP04 adds selected native IDs and negotiated formats; WP05 adds clock observations without breaking callback bounds."
+  },
+  "lan-audio/tests/unit/core.zig": {
+    "purpose": "Session/window invariants and independent finite operation oracle.",
+    "contract": "Retain independent absolute-position expectations, all 32,768 traces, finite checks and rejected-transition state checks.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "WP04 adds composed lifecycle tests separately; do not replace this oracle with the production ring algorithm."
+  },
+  "lan-audio/tests/unit/wire.zig": {
+    "purpose": "V1 golden layouts, quantization and receiver end-state behavior.",
+    "contract": "Retain independently spelled bytes, every fragmentation boundary, all s16 values and hostile state/profile cases.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "WP02 adds separate v2 tests; old v1 fixtures stay byte-identical."
+  },
+  "lan-audio/tests/unit/callback.zig": {
+    "purpose": "SPSC and bridge contracts including actual concurrent owners.",
+    "contract": "Check full/empty/partial transfers, untouched read suffix, signed stereo ordering, wrap and joined thread results.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "Add minimized counterexamples from real races; external test timeout is required if a broken producer/consumer stalls."
+  },
+  "lan-audio/tests/dependency.zig": {
+    "purpose": "Stable external package consumer referenced by miniaudio-zig documentation.",
+    "contract": "Import the wrapper module and invoke native PCM unit helpers to prove transitive native linking.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "Keep this path stable unless the wrapper documentation is deliberately updated under custody review."
+  },
+  "lan-audio/tests/integration/audio_device.zig": {
+    "purpose": "Actual null-backend callbacks and repeated safe reconstruction.",
+    "contract": "Keep explicit null selection, callback progress bound, join/deinit before counter reads and eight lifecycle cycles.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "Extend error-acquisition and cancellation fixtures as the real runtime grows; physical tests remain opt-in."
+  },
+  "lan-audio/tests/integration/tls_receiver.zig": {
+    "purpose": "Synthetic mTLS receiver delivering v1 PCM through null playback callbacks.",
+    "contract": "Authenticate before media, own parser/receiver/device/Driver, retain partial writes, bound the total transfer, drain callback copying before ACK and require clean close.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "WP04 builds real runtime owners separately; frozen fixture wall time, public keys and loopback transport never become production defaults."
+  },
+  "lan-audio/tests/hardware/windows_capture.zig": {
+    "purpose": "Explicit WASAPI system-output acquisition and finite wire encoding.",
+    "contract": "Silent playback keeps engine active; bounded worker batches drain capture, validate/encode, then discard samples. Never save/transmit recorded PCM or use microphone.",
+    "failure": "Assertions must fail on unexpected behavior; no arbitrary crash counts as expected rejection. Threads/devices/sockets must be reclaimed on every test exit.",
+    "verify": "Run its owning build step in Debug and ReleaseSafe where native execution is supported; preserve exact commands and failures. Extracted test names below enumerate current cases.",
+    "next": "Rerun only for relevant physical changes; distinguish idle-source NoCaptureFrames from a passed run, and add actual selected-device/driver evidence."
+  },
+  "lan-audio/spec/session/SessionWindow.tla": {
+    "purpose": "Abstract authentication/generation/window/callback lifecycle. Transition system.",
+    "contract": "Two generations, three positions, capacity two; weak fairness of callback return/stop; four named safety mutations. Manual Session/Window map; real callbacks and weak memory are outside this model.",
+    "failure": "Do not suppress deadlock/invariant/liveness failures without changing the stated model contract. Bounds or fairness changes require new raw results; earlier state counts are historical.",
+    "verify": "Run tools/check_models.py --model SessionWindow with explicit Java/TLC paths; require normal pass and every expected counterexample.",
+    "next": "WP04–05 adds a composed runtime model for worker wait graphs and cancellation; do not infer composition correctness by adding individual PASS labels."
+  },
+  "lan-audio/spec/session/SessionWindow.cfg": {
+    "purpose": "Abstract authentication/generation/window/callback lifecycle. Finite TLC configuration.",
+    "contract": "Two generations, three positions, capacity two; weak fairness of callback return/stop; four named safety mutations. Manual Session/Window map; real callbacks and weak memory are outside this model.",
+    "failure": "Do not suppress deadlock/invariant/liveness failures without changing the stated model contract. Bounds or fairness changes require new raw results; earlier state counts are historical.",
+    "verify": "Run tools/check_models.py --model SessionWindow with explicit Java/TLC paths; require normal pass and every expected counterexample.",
+    "next": "WP04–05 adds a composed runtime model for worker wait graphs and cancellation; do not infer composition correctness by adding individual PASS labels."
+  },
+  "lan-audio/spec/stream/EndDrain.tla": {
+    "purpose": "Exclusive terminal frontier and no post-END admission. Transition system.",
+    "contract": "Capacity two, three positions; fair tick and three falsifying mutations for early completion/end bound/post-end input. Map receiver finish_sequence, window.next/present and ended; completion is serialized, not acoustic.",
+    "failure": "Do not suppress deadlock/invariant/liveness failures without changing the stated model contract. Bounds or fairness changes require new raw results; earlier state counts are historical.",
+    "verify": "Run tools/check_models.py --model EndDrain with explicit Java/TLC paths; require normal pass and every expected counterexample.",
+    "next": "WP04–05 adds a composed runtime model for worker wait graphs and cancellation; do not infer composition correctness by adding individual PASS labels."
+  },
+  "lan-audio/spec/stream/EndDrain.cfg": {
+    "purpose": "Exclusive terminal frontier and no post-END admission. Finite TLC configuration.",
+    "contract": "Capacity two, three positions; fair tick and three falsifying mutations for early completion/end bound/post-end input. Map receiver finish_sequence, window.next/present and ended; completion is serialized, not acoustic.",
+    "failure": "Do not suppress deadlock/invariant/liveness failures without changing the stated model contract. Bounds or fairness changes require new raw results; earlier state counts are historical.",
+    "verify": "Run tools/check_models.py --model EndDrain with explicit Java/TLC paths; require normal pass and every expected counterexample.",
+    "next": "WP04–05 adds a composed runtime model for worker wait graphs and cancellation; do not infer composition correctness by adding individual PASS labels."
+  },
+  "lan-audio/spec/concurrency/SpscPublication.tla": {
+    "purpose": "Separate copy/publication and copy/release actions for a two-slot FIFO. Transition system.",
+    "contract": "Four frames, two slots; fair producer/consumer completion and early-publish/early-release corruption mutations. Sequential consistency only; modular-counter and acquire/release compilation arguments remain separate.",
+    "failure": "Do not suppress deadlock/invariant/liveness failures without changing the stated model contract. Bounds or fairness changes require new raw results; earlier state counts are historical.",
+    "verify": "Run tools/check_models.py --model SpscPublication with explicit Java/TLC paths; require normal pass and every expected counterexample.",
+    "next": "WP04–05 adds a composed runtime model for worker wait graphs and cancellation; do not infer composition correctness by adding individual PASS labels."
+  },
+  "lan-audio/spec/concurrency/SpscPublication.cfg": {
+    "purpose": "Separate copy/publication and copy/release actions for a two-slot FIFO. Finite TLC configuration.",
+    "contract": "Four frames, two slots; fair producer/consumer completion and early-publish/early-release corruption mutations. Sequential consistency only; modular-counter and acquire/release compilation arguments remain separate.",
+    "failure": "Do not suppress deadlock/invariant/liveness failures without changing the stated model contract. Bounds or fairness changes require new raw results; earlier state counts are historical.",
+    "verify": "Run tools/check_models.py --model SpscPublication with explicit Java/TLC paths; require normal pass and every expected counterexample.",
+    "next": "WP04–05 adds a composed runtime model for worker wait graphs and cancellation; do not infer composition correctness by adding individual PASS labels."
+  },
+  "lan-audio/tools/check_models.py": {
+    "purpose": "Runs selected bounded TLC models and their falsifying mutations.",
+    "contract": "Select model folder/profile by explicit name; copy source/config into owned temporary storage; bound Java subprocess at 120 seconds and record tool/model hashes and named violations.",
+    "failure": "Absent Java/JAR, invalid model, timeout or missing expected counterexample is a failed/unexecuted qualification, never an inferred pass. Temporary model state is not a source mutation.",
+    "verify": "Execute all three profiles after path/runner changes; inspect results and model hashes, not only the shell pipeline exit code.",
+    "next": "Add a reviewed profile for the composed runtime model in WP04; retain explicit bounds and failure mutations."
+  },
+  "lan-audio/tools/check_transport.py": {
+    "purpose": "Read-only TLS adoption and staged-runtime custody verifier.",
+    "contract": "Resolve each lock path within the declared dependency root, compare exact SHA-256, and optionally compare the two installed DLLs with SDK pins. No fetch/repair/repin.",
+    "failure": "Missing, escaped or changed paths and staged DLL mismatches fail. A content mismatch needs review, not automatic lock regeneration.",
+    "verify": "Run before transport tests and packaging; inject a mismatch in isolated fixtures if the verifier changes.",
+    "next": "WP01 adds target-specific reviewed Mac custody while preserving Windows evidence and explicit update semantics."
+  },
+  "lan-audio/tools/test_transport.py": {
+    "purpose": "Independent Python SSL sender and expected-failure oracle for the audio TLS probe.",
+    "contract": "Own ephemeral loopback sockets, server thread and bounded Zig process. Verify SDK first; public credentials and known PCM have independent ACK/checksum expectations. Require callback frame counts and clean TLS close. Mandatory --output selects a new report inside verification/; existing reports fail before networking and final write uses exclusive creation.",
+    "failure": "Negative cases need named client errors and no PASS; untrusted-client additionally needs independent server certificate rejection. Cleanup is bounded. Current output targets callback evidence; preserve old files before reruns.",
+    "verify": "Sixteen scenarios: fragmented success; wrong name/ALPN/missing ALPN/expired/untrusted identity; size/profile/order/stream/duplicate/truncation/end/EOF/stall failures.",
+    "next": "WP02 adds v2 independent peers; WP04 adds two-host evidence. Keep per-run output paths unique and preserve both failure and corrected-run reports."
+  },
+  "lan-audio/tools/check_docs.py": {
+    "purpose": "Read-only local Markdown navigation and current authored-file coverage gate.",
+    "contract": "Validate links only as local navigation; ignore fenced/inline code and external schemes. Reference inventory owns complete path coverage after the handoff migration.",
+    "failure": "Missing files or malformed index fail. Passing navigation is not semantic or architectural approval; links in historical receipts may intentionally use old paths.",
+    "verify": "Run after documentation/layout changes and pair with check_handoff. Do not silently rewrite links or generate missing source.",
+    "next": "Keep filesystem scopes explicit; extend Markdown parsing only when a real valid construct causes a minimized false positive."
+  },
+  "lan-audio/tools/build_reference.py": {
+    "purpose": "Renders reviewed per-file contracts, declarations and SDK/evidence navigation.",
+    "contract": "Reads declared three sibling projects and explicit contract data; writes only docs/reference outputs. Excludes caches and inventories installed SDK assets without modifying them.",
+    "failure": "Missing or stale reviewed contract entries fail. Generated placeholders are overwritten during successful render; the tool must not touch pins, source, secrets or upstream bytes.",
+    "verify": "Run renderer then check_docs/check_handoff; review source-specific contract text and generated diff; verify exact SDK pins separately.",
+    "next": "When adding a file, write its concrete contract data first. Avoid generic filler and distinguish extracted declarations from semantic assurance."
+  },
+  "lan-audio/tools/check_handoff.py": {
+    "purpose": "Read-only exact file-index/reference/contract and local-import consistency gate.",
+    "contract": "Compare filesystem inventory with indexed paths, require every contract field and chapter anchor, check relative Zig imports and explicit work-package exit conditions.",
+    "failure": "Stale/missing/duplicate paths, broken imports and incomplete fields fail. It never calls the renderer main or updates custody.",
+    "verify": "Run after render and before handoff; use actual compiler/tests for semantics and syntax beyond the simple import scanner.",
+    "next": "Extend checks for machine-readable work dependencies if the roadmap grows; do not treat text-field length as proof of documentation quality."
+  },
+  "lan-audio/tools/reference_contracts.json": {
+    "purpose": "Reviewed semantic source of per-file documentation across the three admitted projects.",
+    "contract": "Each project-relative file key has purpose, contract, failure/change, verification and next-work text. Installed SDK rows use the explicit upstream asset policy instead.",
+    "failure": "Do not generate meaningless prose to satisfy field length; stale keys are errors. This is navigation/engineering data, not a dependency hash lock.",
+    "verify": "Renderer rejects missing/stale entries; check_handoff validates exact coverage and per-file references.",
+    "next": "Update concrete semantics when code changes, render chapters, and review both. Proposed files remain in work packages until implemented."
+  },
+  "lan-audio/transport-lock.json": {
+    "purpose": "Reviewed exact TLS source/SDK/fixture adoption identity for current Windows integration.",
+    "contract": "Contains 188 approved files, runtime DLL names/import observations and upstream build provenance; sibling root is local development layout.",
+    "failure": "Do not hand-edit a hash to hide source drift. A new platform/dependency revision needs an explicit adoption diff and qualified binaries.",
+    "verify": "tools/check_transport.py and staged DLL checks; independent runtime path validation belongs to the TLS tests.",
+    "next": "WP01 defines target-specific Mac identity and package closure; retain original Windows/source provenance."
+  },
+  "lan-audio/build.zig": {
+    "purpose": "Own core/audio_host modules and separate pure, native-null, explicit hardware and TLS probe steps.",
+    "contract": "Target and optimization flow to every dependent artifact. Compile steps are distinct from execution; do not open devices or network as an implicit build action.",
+    "failure": "Wrong targets, missing SDK/runtime and ABI/link mismatches must fail. A successful cached compile does not prove execution or correct runtime search paths.",
+    "verify": "Run owning native tests and independent downstream consumer after graph changes; inspect staged imports and target identity.",
+    "next": "WP01 extends native platform build qualification; preserve existing public module names and callback/test separation."
+  },
+  "lan-audio/build.zig.zon": {
+    "purpose": "Own package identity, version/compiler floor, dependency declarations and distribution allowlist.",
+    "contract": "ZON is Zig package metadata, distinct from ZSON. Fingerprint is identity, not artifact integrity. Sibling paths are development dependencies and require a release closure.",
+    "failure": "Do not silently rename identities or raise compiler floor; changes need compatibility and clean-checkout evidence. Excluded source/docs must not break packages.",
+    "verify": "Parse/build with pinned compiler; test package allowlist and downstream import from a clean layout.",
+    "next": "WP09 replaces development-only assumptions with reproducible source/package custody and includes all required handoff documents."
+  },
+  "lan-audio/.gitignore": {
+    "purpose": "Separate generated caches/output from authored source and custody.",
+    "contract": "Ignore only reproducible/disposable outputs; do not hide contracts, models, vendored bytes, locks or needed evidence.",
+    "failure": "Broad patterns can hide new source; inspect actual inventory after edits. Ignored status is not permission to delete user data.",
+    "verify": "Compare source inventory with build outputs and ensure all authored files remain documented.",
+    "next": "Add narrowly scoped patterns when new generators require them; keep release inputs explicit."
+  },
+  "miniaudio-zig/build.zig": {
+    "purpose": "Build exactly one static native C implementation plus matching translated Zig ABI and platform links.",
+    "contract": "Target and optimization flow to every dependent artifact. Compile steps are distinct from execution; do not open devices or network as an implicit build action.",
+    "failure": "Wrong targets, missing SDK/runtime and ABI/link mismatches must fail. A successful cached compile does not prove execution or correct runtime search paths.",
+    "verify": "Run owning native tests and independent downstream consumer after graph changes; inspect staged imports and target identity.",
+    "next": "WP01 extends native platform build qualification; preserve existing public module names and callback/test separation."
+  },
+  "miniaudio-zig/build.zig.zon": {
+    "purpose": "Own package identity, version/compiler floor, dependency declarations and distribution allowlist.",
+    "contract": "ZON is Zig package metadata, distinct from ZSON. Fingerprint is identity, not artifact integrity. Sibling paths are development dependencies and require a release closure.",
+    "failure": "Do not silently rename identities or raise compiler floor; changes need compatibility and clean-checkout evidence. Excluded source/docs must not break packages.",
+    "verify": "Parse/build with pinned compiler; test package allowlist and downstream import from a clean layout.",
+    "next": "WP09 replaces development-only assumptions with reproducible source/package custody and includes all required handoff documents."
+  },
+  "miniaudio-zig/.gitignore": {
+    "purpose": "Separate generated caches/output from authored source and custody.",
+    "contract": "Ignore only reproducible/disposable outputs; do not hide contracts, models, vendored bytes, locks or needed evidence.",
+    "failure": "Broad patterns can hide new source; inspect actual inventory after edits. Ignored status is not permission to delete user data.",
+    "verify": "Compare source inventory with build outputs and ensure all authored files remain documented.",
+    "next": "Add narrowly scoped patterns when new generators require them; keep release inputs explicit."
+  },
+  "tls-zig/build.zig": {
+    "purpose": "Build Zig/C TLS wrapper against the explicit private Windows OpenSSL SDK and stage matching DLLs.",
+    "contract": "Target and optimization flow to every dependent artifact. Compile steps are distinct from execution; do not open devices or network as an implicit build action.",
+    "failure": "Wrong targets, missing SDK/runtime and ABI/link mismatches must fail. A successful cached compile does not prove execution or correct runtime search paths.",
+    "verify": "Run owning native tests and independent downstream consumer after graph changes; inspect staged imports and target identity.",
+    "next": "WP01 extends native platform build qualification; preserve existing public module names and callback/test separation."
+  },
+  "tls-zig/build.zig.zon": {
+    "purpose": "Own package identity, version/compiler floor, dependency declarations and distribution allowlist.",
+    "contract": "ZON is Zig package metadata, distinct from ZSON. Fingerprint is identity, not artifact integrity. Sibling paths are development dependencies and require a release closure.",
+    "failure": "Do not silently rename identities or raise compiler floor; changes need compatibility and clean-checkout evidence. Excluded source/docs must not break packages.",
+    "verify": "Parse/build with pinned compiler; test package allowlist and downstream import from a clean layout.",
+    "next": "WP09 replaces development-only assumptions with reproducible source/package custody and includes all required handoff documents."
+  },
+  "miniaudio-zig/src/root.zig": {
+    "purpose": "Expose only the translated C API and upstream ownership/lifetime boundary.",
+    "contract": "The raw c import adds no pointer safety or alternate owning device hierarchy. Keep userdata/context/device addresses stable.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "WP04 keeps application policy in lan-audio; add wrapper abstractions only with a demonstrated reusable contract."
+  },
+  "miniaudio-zig/src/profile.h": {
+    "purpose": "Single authoritative ABI feature profile for C compilation and Zig translation.",
+    "contract": "Disabled high-level codecs/engine/resource-manager features must match on both paths; layout-changing macros cannot differ across consumers.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "Review any feature addition for symbols, dependencies, allocation/lifetime changes and all target ABI tests."
+  },
+  "miniaudio-zig/src/native.c": {
+    "purpose": "Sole MINIAUDIO_IMPLEMENTATION translation unit.",
+    "contract": "Include the shared profile; no second implementation definition in tests or consumers.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "Keep the wrapper thin; upstream changes require deliberate adoption, not local rewrites."
+  },
+  "miniaudio-zig/tests/contract.zig": {
+    "purpose": "Independent ABI/version/frame-unit/default configuration and explicit null initialization tests.",
+    "contract": "Context/device remain in stable local storage; context outlives device; explicit null backend prevents physical-device fallback.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "Add platform/profile regressions as needed; active callback and application teardown tests belong to the audio host."
+  },
+  "miniaudio-zig/tools/check_vendor.py": {
+    "purpose": "Read-only validation of the adopted upstream header/license.",
+    "contract": "Resolve only contained declared paths and compare SHA-256; no fetch, fallback, modification or automatic new hashes.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "Use before any upstream adoption; retain old/new hashes and native consumer evidence."
+  },
+  "miniaudio-zig/UPSTREAM.json": {
+    "purpose": "Own exact upstream tag/commit, source hashes and provenance limits.",
+    "contract": "Records unmodified miniaudio 0.11.25 at the adopted commit; authenticated retrieval is not signature verification.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "Revisit on a planned upgrade with source diff, license/profile/API review and platform qualification."
+  },
+  "miniaudio-zig/vendor/miniaudio/miniaudio.h": {
+    "purpose": "Preserved upstream declarations, manual, device backends and DSP implementation.",
+    "contract": "Do not annotate/reformat this 4 MB custody object. Application uses low-level devices/PCM; upstream allocation/driver timing is outside the project proof.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "For endpoint/resampler work inspect the exact pinned API sections and qualify behavior; never claim the whole upstream source was formally verified."
+  },
+  "miniaudio-zig/vendor/miniaudio/LICENSE": {
+    "purpose": "Unmodified upstream license notice.",
+    "contract": "Preserve byte-for-byte and include applicable notice in distributions; it does not choose a license for new JCR code.",
+    "failure": "Initialization failure must retain native error; uninitialized objects are not uninitialized again. ABI/custody discrepancies stop adoption rather than being ignored.",
+    "verify": "Wrapper custody check, three native adoption tests and tests/dependency.zig consumer; physical device/latency evidence is separate.",
+    "next": "WP09 resolves new-code licensing and retains dependency notices."
+  },
+  "tls-zig/src/root.zig": {
+    "purpose": "Public Engine API, validation, error/progress translation and ownership.",
+    "contract": "Config strings/ALPN are copied/consumed during init; Engine is move-only and serialized. tick enforces monotonic handshake time, queuePlaintext owns a nonempty <=16 KiB block, feed/drain preserve exact prefixes, shutdown distinguishes unread final plaintext from authenticated closure. cancel/deinit are idempotent.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01 preserves API semantics across native platforms. Peer policy belongs to the product; do not weaken name/CA/ALPN validation or deadlines."
+  },
+  "tls-zig/src/driver.zig": {
+    "purpose": "One-owner nonblocking TLS/transport scheduler with bounded byte custody.",
+    "contract": "Transport send null means would-block and zero fails; receive zero means EOF. beginRead borrows output until final result; beginWrite copies into Engine. step performs bounded driver work, preserves suffixes and absolute deadlines. probePeer preserves pending ciphertext; only cancellation flag is shared.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP03 supplies real cross-platform socket hosts; WP04 must use fresh times, cancellation wake and ownership joins instead of concurrent Engine access."
+  },
+  "tls-zig/src/backend.c": {
+    "purpose": "C implementation of TLS 1.3 using OpenSSL, memory BIOs and owned write/ALPN storage.",
+    "contract": "SSL_get_error immediately follows the SSL call. Initialize/free resources once; reject encrypted key prompting, certificate/ALPN mismatch and raw EOF. BIO/write buffers are bounded but OpenSSL total allocations are not. Shutdown preserves peer final plaintext.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01 changes build/platform integration only unless a demonstrated API issue requires a separately tested backend change. Keep generic HTTP compatibility."
+  },
+  "tls-zig/src/backend.h": {
+    "purpose": "Small stable C ABI including old HTTP-default constructor and configurable ALPN constructor.",
+    "contract": "Status integers, pointer optionality, sizes and ownership must agree exactly with backend.zig and the C implementation.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "For ABI changes update C/Zig/ctypes consumers together and add independent compatibility tests; preserve old constructor behavior."
+  },
+  "tls-zig/src/backend.zig": {
+    "purpose": "Manually maintained Zig extern mirror of backend.h.",
+    "contract": "Opaque Engine pointers have one owner; c_int/c_long/c_ulong/usize types follow target C ABI. Do not assume Windows C long width on Mac.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01 explicitly validates Darwin ABI widths/signatures and links an external C/Zig consumer."
+  },
+  "tls-zig/tests/transport.zig": {
+    "purpose": "Nineteen Engine tests for config, identity, ALPN, bytes, bounds and authenticated closure.",
+    "contract": "Test fixtures and frozen verification time are deterministic test inputs; preserve tamper/no-plaintext, suffix and blocked-close cases.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Keep existing 19 cases during target port; add Mac-specific ABI/runtime regressions rather than weakening assertions."
+  },
+  "tls-zig/tests/driver.zig": {
+    "purpose": "Eleven host-driver tests including prefix custody, probing, deadlines and cancellation.",
+    "contract": "Fake transports inject would-block, short I/O, invalid counts and raw EOF; snapshots ensure unsent data/deadline stay unchanged.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Add real host cancellation/reconnect cases in product tests while preserving these independent generic contracts."
+  },
+  "tls-zig/examples/roundtrip.zig": {
+    "purpose": "Minimal serialized TLS example under public test credentials.",
+    "contract": "Shows Engine pumping and authenticated data/close; never supplies production pairing, sockets or trust-store policy.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Retain as generic library consumer; do not turn it into the audio product entry point."
+  },
+  "tls-zig/examples/consumer/build.zig": {
+    "purpose": "Separately built downstream TLS package consumer.",
+    "contract": "Imports exported tls module and owns Windows Winsock C shim/linking; stages matching private runtime.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01 adds target-aware external consumers as needed to catch missing transitive link propagation."
+  },
+  "tls-zig/examples/consumer/build.zig.zon": {
+    "purpose": "Consumer package identity and relative library dependency.",
+    "contract": "Separate package boundary tests exported metadata/imports rather than direct source inclusion.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Retain clean consumer qualification when changing root build metadata."
+  },
+  "tls-zig/examples/consumer/main.zig": {
+    "purpose": "Real TCP client/server and early-response demonstration host.",
+    "contract": "Own socket/Driver/cancellation thread and bounded response storage; public fixtures, frozen clock and demo flags are test policy. Maintain early-response ciphertext custody and shared shutdown deadline.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Use as behavioral reference for WP03, not a source of production HTTP, address or credential defaults."
+  },
+  "tls-zig/examples/consumer/socket.c": {
+    "purpose": "Windows demonstration socket adapter shared by the current audio probe.",
+    "contract": "Loopback-only connect/listen, nonblocking poll, forced 7-byte sends and 113-byte receives; returns explicit would-block and owns WSA/socket cleanup.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP03 creates real platform adapters. Modifying this pinned shared fixture requires explicit transport-lock adoption and all consumers retested."
+  },
+  "tls-zig/tools/interop.py": {
+    "purpose": "Independent Python SSL peer against the C ABI with runtime path checks.",
+    "contract": "Loads specified backend and verifies DLL identity; exchanges fragmented records, validates TLS/auth/ALPN/closure and pending final data.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Run during TLS port/change; preserve old-C-ABI and independent-provider checks."
+  },
+  "tls-zig/tools/tcp_interop.py": {
+    "purpose": "Independent Python TCP server testing downstream client.",
+    "contract": "Own ephemeral listener/thread/process; bounded deadlines and exact response/clean-close/error expectations.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Extend target executable/path selection for Mac without loosening error or cleanup oracles."
+  },
+  "tls-zig/tools/tcp_server_interop.py": {
+    "purpose": "Independent Python TCP client testing downstream server roles.",
+    "contract": "Consume actual assigned port; require client certificate rejection, exact fragmented response and authenticated closure; join reader and process.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Retain missing/untrusted-client and raw-EOF cases through backend or runtime changes."
+  },
+  "tls-zig/tools/tcp_upload_interop.py": {
+    "purpose": "Early final response while ciphertext transmission is deliberately blocked.",
+    "contract": "Require observed early headers, retained accepted first body block, no second block, bounded cancel/deadline and clean/unclean close distinctions.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Keep as regression for any scheduling or probePeer change; application-level response policy remains caller-owned."
+  },
+  "tls-zig/tools/make_fixtures.py": {
+    "purpose": "Regenerates public certificate/key fixtures for isolated tests.",
+    "contract": "Writes test credentials with deliberate identity/purpose/validity differences; these private keys are public examples, never deployable identities.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Do not run as routine verification: replacement changes pinned fixture bytes. Review intended dates/identities and requalify all users on deliberate regeneration."
+  },
+  "tls-zig/tools/fetch-openssl.py": {
+    "purpose": "Downloads the exact adopted upstream archive using HTTPS ranges and final hash.",
+    "contract": "Validates response range/length, bounded retries and final SHA-256 before extracting with data-only tar filtering; writes under deps.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Only use for explicit rebuild/adoption. Existing checkout has SDK only; no source audit can be inferred from absent source trees."
+  },
+  "tls-zig/tools/build-openssl.sh": {
+    "purpose": "Reproduces the historical Windows SDK build with explicit local toolchain paths.",
+    "contract": "Uses isolated build/install paths, shared TLS without QUIC, one-job native make and exact compiler/shell configuration.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01 needs a distinct Mac build path; do not reuse mingw flags or overwrite a functioning SDK during qualification."
+  },
+  "tls-zig/tools/test-openssl.sh": {
+    "purpose": "Runs selected upstream TLS/certificate recipes with known Windows Perl/make adaptations.",
+    "contract": "Mutates generated build metadata/wrapper paths, not adopted upstream source; preserves metadata timestamps; does not claim full upstream test coverage.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Record exact source/build/tool prerequisites before running; unavailable historical paths require a deliberate reproduction plan."
+  },
+  "tls-zig/tools/pin-backend.py": {
+    "purpose": "Explicit adoption writer for SDK and historical build-tool hashes.",
+    "contract": "Runs private openssl version and records SDK/tool identities into backend-lock.json; unlike verifiers it intentionally mutates custody.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Never run to repair a mismatch. Review rebuilt artifacts/provenance first, then adopt and update downstream pins explicitly."
+  },
+  "tls-zig/tools/qualify.ps1": {
+    "purpose": "Windows qualification orchestration with scoped runtime paths/cache and retained logs.",
+    "contract": "Saves/restores process environment in finally; verifies compiler/SDK hashes before test/host-test/interop/example and formatting.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Its message suggesting pin-backend is not permission to rehash changed bytes. Add target-aware qualification rather than weakening custody checks."
+  },
+  "tls-zig/backend-lock.json": {
+    "purpose": "Exact Windows SDK artifacts and build provenance/tool identities.",
+    "contract": "The 166 SDK files are adopted inputs; target/tool/source metadata describes the recorded build, not a guarantee of current upstream support or signatures.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01 records Mac SDK separately and retains the Windows lock; review all changed imports/provenance."
+  },
+  "tls-zig/SOURCE-ORIGIN.json": {
+    "purpose": "Historical relocation provenance for an earlier TLS checkout.",
+    "contract": "Its source/target paths and status are dated observations; current user-selected source is C:/Projects/tls-zig.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "Preserve history; do not move repositories or assume old paths are active instructions."
+  },
+  "tls-zig/evidence/source-provenance.json": {
+    "purpose": "Historical upstream archive/configuration and build-recovery provenance.",
+    "contract": "Records URLs/hashes/config and explicitly absent signature verification. Historical support/date fields require fresh review before release claims.",
+    "failure": "Preserve exact error/custody/lifetime semantics and old users. Unexpected failures remain failures; a passing local test is not cross-platform or whole-library security certification.",
+    "verify": "Generic Engine/Driver tests, independent SSL/TCP consumers, exact backend/runtime checks and relevant source hashes; rerun only affected gates.",
+    "next": "WP01/WP09 retain it, add new target/release provenance and verify source availability before rebuilding."
+  },
+  "tls-zig/tests/fixtures/ca.pem": {
+    "purpose": "Public test certificate for trusted fixture authority.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/client.key": {
+    "purpose": "Public test private-key material for client authentication identity.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/client.pem": {
+    "purpose": "Public test certificate for client authentication identity.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/expired.key": {
+    "purpose": "Public test private-key material for deliberately expired server identity.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/expired.pem": {
+    "purpose": "Public test certificate for deliberately expired server identity.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/other-ca.pem": {
+    "purpose": "Public test certificate for unrelated authority used for rejection.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/server.key": {
+    "purpose": "Public test private-key material for localhost/IP server identity.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/server.pem": {
+    "purpose": "Public test certificate for localhost/IP server identity.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/wrong-purpose.key": {
+    "purpose": "Public test private-key material for client-only purpose presented as a server.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "tls-zig/tests/fixtures/wrong-purpose.pem": {
+    "purpose": "Public test certificate for client-only purpose presented as a server.",
+    "contract": "Fixture bytes belong only to bounded local tests; identity, validity and key/certificate relationships are deliberate negative/positive inputs.",
+    "failure": "Never deploy, copy into a product trust store or silently regenerate. Do not print private-key contents in diagnostics even though these fixtures are public.",
+    "verify": "tools/make_fixtures.py documents generation; TLS and independent peers check the corresponding auth/expiry/purpose case; downstream transport lock covers adopted bytes.",
+    "next": "WP03 provisions separate real credentials and rejects fixture defaults; deliberate fixture regeneration needs reviewed hashes and regression evidence."
+  },
+  "lan-audio/docs/reference/file-index.json": {
+    "purpose": "Exact machine-readable path-to-contract navigation for all three admitted project surfaces.",
+    "contract": "Each current authored/support/SDK file has one project-relative entry and a reference chapter/anchor. Cache/evidence classification is separate; this is not a trust lock.",
+    "failure": "Do not hand-edit to conceal missing source or dependency drift. Regenerate from reviewed contract data and explicit inventory scope.",
+    "verify": "tools/check_handoff.py compares indexed and actual paths, field coverage and reference anchors; dependency verifiers separately validate bytes.",
+    "next": "Regenerate after every authored-file addition/move and review newly admitted paths before claiming coverage."
+  },
+  "lan-audio/AGENTS.md": {
+    "purpose": "Authoritative scoped guide: Implementation entry point.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/README.md": {
+    "purpose": "Authoritative scoped guide: LAN audio — authenticated media and callback foundation.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/ARCHITECTURE.md": {
+    "purpose": "Authoritative scoped guide: Architecture, directory structure and file contracts.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/CALLBACKS.md": {
+    "purpose": "Authoritative scoped guide: Audio callbacks, frame queues and reclamation.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/DEPENDENCIES.md": {
+    "purpose": "Authoritative scoped guide: Dependency closure and architecture decisions.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/MATHEMATICS.md": {
+    "purpose": "Authoritative scoped guide: Mathematical specification and implementation argument.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/PRODUCT.md": {
+    "purpose": "Authoritative scoped guide: Product contract.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/TRANSPORT.md": {
+    "purpose": "Authoritative scoped guide: Experimental JCR audio/1 transport contract.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/VERIFICATION.md": {
+    "purpose": "Authoritative scoped guide: Verification, evidence and next gates.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/design/system-mathematics.md": {
+    "purpose": "Authoritative scoped guide: System mathematics and measurable limits.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/implementation/START_HERE.md": {
+    "purpose": "Authoritative scoped guide: Codex implementation handoff.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/implementation/decisions.md": {
+    "purpose": "Authoritative scoped guide: Decision register.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/implementation/interfaces.md": {
+    "purpose": "Authoritative scoped guide: Cross-module implementation contracts.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/implementation/layout.md": {
+    "purpose": "Authoritative scoped guide: Directory architecture and migration contract.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/implementation/roadmap.md": {
+    "purpose": "Authoritative scoped guide: Ordered implementation roadmap.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/implementation/work-packages/01-target-builds.md": {
+    "purpose": "Executable implementation specification: WP01 — Native target and dependency builds.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/02-fidelity-protocol.md": {
+    "purpose": "Executable implementation specification: WP02 — Fidelity-preserving v2 wire profile.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/03-identity-endpoints.md": {
+    "purpose": "Executable implementation specification: WP03 — Authorized peers and real network endpoints.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/04-first-sound.md": {
+    "purpose": "Executable implementation specification: WP04 — Complete Windows-to-Mac audio path.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/05-timing-clocks.md": {
+    "purpose": "Executable implementation specification: WP05 — Pacing, buffering and independent audio clocks.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/06-network-resilience.md": {
+    "purpose": "Executable implementation specification: WP06 — Measured resilience to the actual network adapter.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/07-observability.md": {
+    "purpose": "Executable implementation specification: WP07 — Bounded observability and reproducible diagnosis.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/08-user-experience.md": {
+    "purpose": "Executable implementation specification: WP08 — Usable control and recovery.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/09-packaging.md": {
+    "purpose": "Executable implementation specification: WP09 — Reproducible distribution and rollback.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/implementation/work-packages/10-qualification.md": {
+    "purpose": "Executable implementation specification: WP10 — Product acceptance and supported envelope.",
+    "contract": "Owns planned file destinations, dependencies, interface/failure obligations and exit criteria. Planned filenames do not assert existing implementation.",
+    "failure": "Changing scope requires updating roadmap/acceptance links and evidence assumptions. Do not mark done through scaffolding or unsupported claims.",
+    "verify": "Follow the file-specific positive/negative scenarios and explicit exit gate in this work package; retain independent oracles and source identities.",
+    "next": "Implement when prerequisites are satisfied, record what passed on which host, then advance the roadmap with unresolved gates visible."
+  },
+  "lan-audio/docs/reference/README.md": {
+    "purpose": "Authoritative scoped guide: File reference and review scope.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/reference/evidence.md": {
+    "purpose": "Generated reference/evidence navigation: docs/reference/evidence.md.",
+    "contract": "Derived from reviewed per-file contract data and current bounded inventory. SDK hashes are observations; dependency locks remain authoritative.",
+    "failure": "Direct edits are overwritten by the renderer; change source contracts instead. Do not confuse a file row with a semantic audit or a history link with current proof.",
+    "verify": "Run tools/build_reference.py, tools/check_docs.py and tools/check_handoff.py; inspect generated changes for accurate meaning.",
+    "next": "Refresh after source/layout/contract changes; preserve historical evidence and review new dependency scope explicitly."
+  },
+  "lan-audio/docs/reference/lan-audio.md": {
+    "purpose": "Generated reference/evidence navigation: docs/reference/lan-audio.md.",
+    "contract": "Derived from reviewed per-file contract data and current bounded inventory. SDK hashes are observations; dependency locks remain authoritative.",
+    "failure": "Direct edits are overwritten by the renderer; change source contracts instead. Do not confuse a file row with a semantic audit or a history link with current proof.",
+    "verify": "Run tools/build_reference.py, tools/check_docs.py and tools/check_handoff.py; inspect generated changes for accurate meaning.",
+    "next": "Refresh after source/layout/contract changes; preserve historical evidence and review new dependency scope explicitly."
+  },
+  "lan-audio/docs/reference/miniaudio-zig.md": {
+    "purpose": "Generated reference/evidence navigation: docs/reference/miniaudio-zig.md.",
+    "contract": "Derived from reviewed per-file contract data and current bounded inventory. SDK hashes are observations; dependency locks remain authoritative.",
+    "failure": "Direct edits are overwritten by the renderer; change source contracts instead. Do not confuse a file row with a semantic audit or a history link with current proof.",
+    "verify": "Run tools/build_reference.py, tools/check_docs.py and tools/check_handoff.py; inspect generated changes for accurate meaning.",
+    "next": "Refresh after source/layout/contract changes; preserve historical evidence and review new dependency scope explicitly."
+  },
+  "lan-audio/docs/reference/tls-zig.md": {
+    "purpose": "Generated reference/evidence navigation: docs/reference/tls-zig.md.",
+    "contract": "Derived from reviewed per-file contract data and current bounded inventory. SDK hashes are observations; dependency locks remain authoritative.",
+    "failure": "Direct edits are overwritten by the renderer; change source contracts instead. Do not confuse a file row with a semantic audit or a history link with current proof.",
+    "verify": "Run tools/build_reference.py, tools/check_docs.py and tools/check_handoff.py; inspect generated changes for accurate meaning.",
+    "next": "Refresh after source/layout/contract changes; preserve historical evidence and review new dependency scope explicitly."
+  },
+  "lan-audio/docs/reference/upstream-assets.md": {
+    "purpose": "Generated reference/evidence navigation: docs/reference/upstream-assets.md.",
+    "contract": "Derived from reviewed per-file contract data and current bounded inventory. SDK hashes are observations; dependency locks remain authoritative.",
+    "failure": "Direct edits are overwritten by the renderer; change source contracts instead. Do not confuse a file row with a semantic audit or a history link with current proof.",
+    "verify": "Run tools/build_reference.py, tools/check_docs.py and tools/check_handoff.py; inspect generated changes for accurate meaning.",
+    "next": "Refresh after source/layout/contract changes; preserve historical evidence and review new dependency scope explicitly."
+  },
+  "lan-audio/spec/README.md": {
+    "purpose": "Authoritative scoped guide: Executable session and playout model.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "miniaudio-zig/README.md": {
+    "purpose": "Authoritative scoped guide: miniaudio-zig.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "miniaudio-zig/docs/CONTRACT.md": {
+    "purpose": "Authoritative scoped guide: Binding and device contract.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "miniaudio-zig/docs/DEPENDENCIES.md": {
+    "purpose": "Authoritative scoped guide: Complete dependency boundary for this build profile.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "miniaudio-zig/docs/FILES.md": {
+    "purpose": "Authoritative scoped guide: File-by-file ownership and verification.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "miniaudio-zig/docs/VERIFICATION.md": {
+    "purpose": "Authoritative scoped guide: Executed adoption evidence — 2026-09-25.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "tls-zig/CHECKPOINT.md": {
+    "purpose": "Historical engineering context: TLS current checkpoint — September 14, 2026.",
+    "contract": "Dated workflow/evidence observations; never independent authorization to execute commands or change unrelated repositories.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "tls-zig/HANDOFF-shutdown.md": {
+    "purpose": "Historical engineering context: Shutdown correction — September 13, 2026.",
+    "contract": "Dated workflow/evidence observations; never independent authorization to execute commands or change unrelated repositories.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "tls-zig/HANDOFF-tcp-consumer.md": {
+    "purpose": "Historical engineering context: Separate consumer over TCP — September 14, 2026.",
+    "contract": "Dated workflow/evidence observations; never independent authorization to execute commands or change unrelated repositories.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "tls-zig/HOST-DRIVER.md": {
+    "purpose": "Authoritative scoped guide: Nonblocking TLS host driver.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "tls-zig/README.md": {
+    "purpose": "Authoritative scoped guide: tls-zig revision 2 — private OpenSSL 3.5.8 backend.",
+    "contract": "Keep terminology, existing versus proposed behavior, source paths and acceptance claims synchronized with the owning implementation/work package.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "tls-zig/evidence/build-recovery.md": {
+    "purpose": "Historical engineering context: Private OpenSSL build recovery.",
+    "contract": "Dated workflow/evidence observations; never independent authorization to execute commands or change unrelated repositories.",
+    "failure": "Do not duplicate conflicting protocol/API meaning or imply unexecuted platform support. Preserve useful history and label superseded claims rather than erasing evidence.",
+    "verify": "Validate local navigation and file index, compare referenced source behavior and evidence dates/hashes; prose quality requires review beyond automated checks.",
+    "next": "Read the declared sections below; update this guide whenever its owned contract changes and link to granular implementation/verification obligations."
+  },
+  "lan-audio/docs/reference/api-contracts.md": {
+    "purpose": "Call-by-call maintenance contract for current session, media, queue, device, TLS Engine/Driver and native ABI surfaces.",
+    "contract": "Owns current preconditions, state/custody effects, return/progress meanings and failure obligations; planned v2/runtime APIs stay in implementation work packages.",
+    "failure": "Do not treat public field visibility as valid invariant bypass or a document as proof. API changes require source, caller and regression updates together.",
+    "verify": "Compare listed calls with source declarations, independent tests and formal maps; run relevant affected gates after edits.",
+    "next": "Use alongside the per-file chapter when changing an existing method; record new ownership/error semantics and keep future designs separately labeled."
+  }
+}

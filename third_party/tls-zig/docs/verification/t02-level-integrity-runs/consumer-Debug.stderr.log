@@ -1,0 +1,7 @@
+recordless consumer: both roles completed authenticated policy/key custody
+Build Summary: 4/4 steps succeeded
+run success
++- external recordless consumer success 764ms
+   +- WriteFile libssl-3-x64.dll success
+      +- compile exe recordless-consumer debug native success 11s MaxRSS:281M
+

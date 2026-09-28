@@ -1,0 +1,199 @@
+{
+  "matched": true,
+  "sender": [
+    {
+      "attempt": 1,
+      "prefill_frames": 960,
+      "frames": 16080,
+      "failure": "TransportFailure",
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 75,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": "transport_failed",
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": {
+          "draining": false,
+          "committed": 16080,
+          "offered_frames": 0,
+          "frontier": null,
+          "local": "interrupted",
+          "end": "not_attempted",
+          "remote": "unknown",
+          "secure_close": "not_attempted"
+        }
+      },
+      "audio": {
+        "captured_frames": 16800,
+        "dropped_frames": 0,
+        "rendered_frames": 0,
+        "silent_frames": 16800,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 359,
+      "starved": false,
+      "unplayed_frames": 0
+    },
+    {
+      "attempt": 2,
+      "prefill_frames": 960,
+      "frames": 47520,
+      "failure": null,
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 209,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": null,
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": {
+          "draining": true,
+          "committed": 47520,
+          "offered_frames": 0,
+          "frontier": 47520,
+          "local": "transferred",
+          "end": "copied",
+          "remote": "confirmed",
+          "secure_close": "clean"
+        }
+      },
+      "audio": {
+        "captured_frames": 47520,
+        "dropped_frames": 0,
+        "rendered_frames": 0,
+        "silent_frames": 47520,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 1063,
+      "starved": false,
+      "unplayed_frames": 0
+    }
+  ],
+  "receiver": [
+    {
+      "attempt": 1,
+      "prefill_frames": 960,
+      "frames": 12720,
+      "failure": "PlaybackStarved",
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 8,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": "media_fault",
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": null,
+        "send": null
+      },
+      "audio": {
+        "captured_frames": 0,
+        "dropped_frames": 0,
+        "rendered_frames": 12720,
+        "silent_frames": 1440,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 297,
+      "starved": true,
+      "unplayed_frames": 0
+    },
+    {
+      "attempt": 2,
+      "prefill_frames": 1920,
+      "frames": 47520,
+      "failure": null,
+      "lifecycle": {
+        "phase": "stopped",
+        "generation": 1,
+        "serial": 10,
+        "held": [
+          false,
+          false,
+          false
+        ],
+        "pending": null,
+        "worker_joined": true,
+        "device_fenced": true,
+        "first_cause": null,
+        "cleanup_blocked": false,
+        "deadline_expired": false,
+        "receive": {
+          "frontier": 47520,
+          "publication_closed": true,
+          "local": "drained",
+          "ack": "copied",
+          "remote": "unobserved",
+          "secure_close": "clean"
+        },
+        "send": null
+      },
+      "audio": {
+        "captured_frames": 0,
+        "dropped_frames": 0,
+        "rendered_frames": 47520,
+        "silent_frames": 0,
+        "missing_output_frames": 0,
+        "invalid_buffers": 0,
+        "capture_faults": 0,
+        "counters_exact": true
+      },
+      "active_ms": 1000,
+      "starved": false,
+      "unplayed_frames": 0
+    }
+  ],
+  "proxy": [
+    {
+      "connection": 1,
+      "peak_queued_bytes": 23880,
+      "delayed": true,
+      "received_bytes": 134440,
+      "forwarded_bytes": 110560
+    },
+    {
+      "connection": 2,
+      "peak_queued_bytes": 3980,
+      "delayed": false,
+      "received_bytes": 399298,
+      "forwarded_bytes": 399298
+    }
+  ],
+  "sender_stderr": "Capture started: 48 kHz stereo.\nConnection interrupted (TransportFailure); retrying in 250 ms with 20 ms playback reserve.\nCapture started: 48 kHz stereo.\n",
+  "receiver_stderr": "Listening on 127.0.0.1:59831; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\nConnection interrupted (PlaybackStarved); retrying in 250 ms with 40 ms playback reserve.\nListening on 127.0.0.1:59831; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\n",
+  "binary_sha256": "877e27916271be007b4d8d26518ecc7c508c973b64ce7912f70929fadf2ebb86"
+}

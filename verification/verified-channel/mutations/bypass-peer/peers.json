@@ -1,0 +1,52 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "executable_sha256": "55c3b0db3d159ef987671aec438ea59ec1047832645d143f57c131f7c5051b53",
+  "fixture_fingerprints": {
+    "client": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+    "server": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd"
+  },
+  "results": [
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-peer",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongPeer"
+      ],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.243,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT UnauthorizedPeer revoked=true tls_released=true\nerror: UnauthorizedPeer\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:93:9: 0x7ff7d02dd2f7 in authorize (audio-verified-probe_zcu.obj)\n        return error.UnauthorizedPeer;\n        ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff7d02dad7f in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:121:16: 0x7ff7d02da9b0 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:110:16: 0x7ff7d02da7c5 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff7d0197b07 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:162:9: 0x7ff7d019bcb3 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-peer",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongPeer"
+      ],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.203,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 55217\nREJECT UnauthorizedPeer revoked=true tls_released=true\nerror: UnauthorizedPeer\nC:\\Projects\\lan-audio\\src\\security\\peer_policy.zig:93:9: 0x7ff7d02dd2f7 in authorize (audio-verified-probe_zcu.obj)\n        return error.UnauthorizedPeer;\n        ^\nC:\\Projects\\lan-audio\\src\\runtime\\channel_admission.zig:43:27: 0x7ff7d02dad7f in authorize (audio-verified-probe_zcu.obj)\n        const candidate = try policy.authorize(self.generation, self.gate.role, self.expected_peer, evidence);\n                          ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:121:16: 0x7ff7d02da9b0 in refresh (audio-verified-probe_zcu.obj)\n        return try self.channel.authorize(rules, .{\n               ^\nC:\\Projects\\lan-audio\\src\\host\\verified_channel.zig:110:16: 0x7ff7d02da7c5 in handshake (audio-verified-probe_zcu.obj)\n        return try self.refresh(generation, rules);\n               ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:21:9: 0x7ff7d0197b07 in exercise (audio-verified-probe_zcu.obj)\n    if (try connection.handshake(7, rules, deadline) != .established) return error.FirstAuthorization;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:162:9: 0x7ff7d019bcb3 in main (audio-verified-probe_zcu.obj)\n        return err;\n        ^\n"
+    }
+  ]
+}

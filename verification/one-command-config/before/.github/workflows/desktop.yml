@@ -1,0 +1,75 @@
+name: Desktop clone and build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish unsigned desktop candidates for this exact commit
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Windows clone launcher
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: start.cmd --prepare
+      - name: Intel Mac clone launcher
+        if: runner.os == 'macOS'
+        run: sh start --prepare
+      - name: Windows provisioning and control-plane tests
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          $python = (Get-ChildItem .lan-audio/python-*/python.exe).FullName
+          & $python tests/integration/repository_launcher.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Mac provisioning and control-plane tests
+        if: runner.os == 'macOS'
+        run: /usr/bin/python3 tests/integration/repository_launcher.py
+      - name: Package Windows candidate
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          $python = (Get-ChildItem .lan-audio/python-*/python.exe).FullName
+          & $python tools/desktop_release.py --output .lan-audio/packages --revision $env:GITHUB_SHA
+          exit $LASTEXITCODE
+      - name: Package Mac candidate
+        if: runner.os == 'macOS'
+        run: /usr/bin/python3 tools/desktop_release.py --output .lan-audio/packages --revision "$GITHUB_SHA"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: desktop-${{ matrix.os }}
+          path: .lan-audio/packages/*.zip
+          if-no-files-found: error
+          include-hidden-files: true
+  publish:
+    if: github.event_name == 'workflow_dispatch' && inputs.publish
+    needs: desktop
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          pattern: desktop-*
+          path: packages
+          merge-multiple: true
+      - name: Publish exact-revision candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create "desktop-$GITHUB_SHA" packages/*.zip --target "$GITHUB_SHA" --prerelease --title "Desktop candidate $GITHUB_SHA" --notes "Unsigned native build candidates. Build and provisioning checks passed in CI; physical Monterey, speaker playback, Wi-Fi and gaming latency qualification remain required."

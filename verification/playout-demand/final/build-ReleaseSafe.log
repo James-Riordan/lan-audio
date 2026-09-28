@@ -1,0 +1,72 @@
+Build Summary: 47/47 steps succeeded; 123/123 tests passed
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe safe native success 56s MaxRSS:326M
+|     +- translate-c cached 73ms MaxRSS:58M
+|     +- translate-c cached 24ms MaxRSS:58M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 125ms MaxRSS:58M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 73ms MaxRSS:58M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+worker-probe success
++- install audio-worker-probe success
+|  +- compile exe audio-worker-probe safe native success 53s MaxRSS:314M
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+app success
++- install lan-audio success
+|  +- compile exe lan-audio safe native success 44s MaxRSS:351M
+|     +- options cached
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+platform-test success
++- run test 2 pass (2 total) 135ms MaxRSS:3M
+   +- compile test safe native cached 126ms MaxRSS:58M
+      +- translate-c (reused)
+policy-test success
++- run test 7 pass (7 total) 256ms MaxRSS:2M
+   +- compile test safe native cached 261ms MaxRSS:60M
+network-test success
++- run test 6 pass (6 total) 6s MaxRSS:4M
+   +- compile test safe native cached 257ms MaxRSS:59M
+      +- translate-c (reused)
+audio-test success
++- run test 6 pass (6 total) 1s MaxRSS:7M
+|  +- compile test safe native cached 106ms MaxRSS:58M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- run test 8 pass (8 total) 616ms MaxRSS:8M
+   +- compile test safe native cached 125ms MaxRSS:58M
+      +- WriteFile (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c (reused)
+config-test success
++- run test 3 pass (3 total) 272ms MaxRSS:2M
+   +- compile test safe native cached 118ms MaxRSS:60M
+test success
++- run test 47 pass (47 total) 47s MaxRSS:3M
+|  +- compile test safe native cached 571ms MaxRSS:59M
++- run test 5 pass (5 total) 752ms MaxRSS:2M
+|  +- compile test safe native success 47s MaxRSS:286M
++- run test 2 pass (2 total) 286ms MaxRSS:2M
+|  +- compile test safe native cached 96ms MaxRSS:60M
++- run test 37 pass (37 total) 168ms MaxRSS:3M
+   +- compile test safe native cached 125ms MaxRSS:60M
+

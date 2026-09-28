@@ -1,0 +1,70 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/check_transport.py",
+      "--staged"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 0.2756283000053372,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "transport-0.log"
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "v2-transport-probes",
+      "transport-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=ReleaseSafe",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 49.29560610000044,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "transport-1.log"
+  },
+  {
+    "command": [
+      "python",
+      "tests/integration/protocol_v2_peer.py",
+      "--output",
+      "verification/pending-custody/interop-final.json"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 17.054459099999804,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "transport-2.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/test_transport.py",
+      "--output",
+      "verification/pending-custody/v1-regression.json"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "seconds": 7.003895599998941,
+    "environment_overrides": {
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "log": "transport-3.log"
+  }
+]

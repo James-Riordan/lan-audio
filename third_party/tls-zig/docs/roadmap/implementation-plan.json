@@ -1,0 +1,1114 @@
+{
+  "schema": 2,
+  "revision": "2026-09-26-q04-qualified",
+  "semantics": "Completion prerequisites remain stable across planned, in_progress, implemented and complete states. Complete requires source-bound evidence and completed prerequisites. Structural/hash checks do not attest test truth or production readiness.",
+  "nodes": [
+    {
+      "id": "T00",
+      "project": "tls-zig",
+      "path": "tools/verify-backend.py",
+      "card": "docs/roadmap/files/tools/verify-backend.py.md",
+      "milestone": "T0",
+      "status": "complete",
+      "depends_on": [],
+      "purpose": "Read-only exact SDK/lock verifier independent of lock generation.",
+      "tests": [
+        {
+          "id": "T00-01",
+          "stimulus": "Run verifier normally and with Python -O against changed, missing and extra SDK files; include ../ and drive-qualified lock paths.",
+          "expected": "Each invalid fixture exits nonzero without modifying the SDK or lock; unchanged exact set passes.",
+          "oracle": "Compare hashes and file set before/after; verifier test computes expected digests independently."
+        },
+        {
+          "id": "T00-02",
+          "stimulus": "Simulate wrong archive digest, ignored Range, short body and interrupted extraction in existing acquisition scripts.",
+          "expected": "No incomplete tree is promoted; next run verifies a complete staged extraction instead of trusting Configure presence.",
+          "oracle": "Fixture HTTP responses and independently enumerated final files; do not depend on assert statements."
+        }
+      ],
+      "evidence": "docs/verification/completions/T00.json"
+    },
+    {
+      "id": "T01",
+      "project": "tls-zig",
+      "path": "src/quic/contract.zig",
+      "card": "docs/roadmap/files/src/quic/contract.zig.md",
+      "milestone": "T1",
+      "status": "complete",
+      "depends_on": [
+        "T00"
+      ],
+      "purpose": "TLS-owned recordless boundary with precise provider capabilities.",
+      "tests": [
+        {
+          "id": "T01-01",
+          "stimulus": "Compile one host fixture and one provider against the same contract; request records-only provider in recordless mode.",
+          "expected": "Compatible fixtures link; unavailable recordless capability fails construction before input is accepted.",
+          "oracle": "Separate consumer build and explicit error observation."
+        },
+        {
+          "id": "T01-02",
+          "stimulus": "Specify input bytes, secret event, peer parameters, cancellation and stale event token in a contract-only fixture.",
+          "expected": "Every borrow has one ending action; units, direction and generation have explicit types; no accepted prefix exceeds input.",
+          "oracle": "Review ownership table and compile negative type examples; these are design checks until executable types exist."
+        },
+        {
+          "id": "T01-03",
+          "stimulus": "Normalize environment defaults and attempt an unauthorized trust/capability override before construction.",
+          "expected": "Typed effective options match the recorded normalized plan; unauthorized or unclassified changes fail before input/allocation.",
+          "oracle": "Independent selected-option/schema identity and caller allowlist; verify no post-hash native default was introduced."
+        }
+      ],
+      "evidence": "docs/verification/completions/T01.json"
+    },
+    {
+      "id": "T02",
+      "project": "tls-zig",
+      "path": "src/quic/engine.zig",
+      "card": "docs/roadmap/files/src/quic/engine.zig.md",
+      "milestone": "T1",
+      "status": "complete",
+      "depends_on": [
+        "T03",
+        "T04",
+        "T05"
+      ],
+      "purpose": "Public owner for recordless TLS handshake operations.",
+      "tests": [
+        {
+          "id": "T02-01",
+          "stimulus": "Run a complete real certificate handshake in both roles with fragmented per-level bytes and bounded output.",
+          "expected": "Completion occurs once after configured peer/ALPN policy; no record-layer feed API is called.",
+          "oracle": "Independent expected SAN/ALPN and peer implementation; record event order and per-level byte hashes."
+        },
+        {
+          "id": "T02-02",
+          "stimulus": "Use wrong SAN, untrusted CA, mismatched ALPN, cancellation and repeated calls after terminal failure.",
+          "expected": "No application-ready event; stable terminal error; all owned queues and secrets released once.",
+          "oracle": "Instrument allocation/free and event counters; do not infer authentication from traffic-secret availability."
+        },
+        {
+          "id": "T02-03",
+          "stimulus": "Cancel or fail while a provider lease remains held, including an alert callback failure and a failed release callback.",
+          "expected": "Public entry closes before destruction; callback state remains live through provider cleanup; owned custody and secrets are disposed once after provider access ends.",
+          "oracle": "Instrument allocation lifetime and poisoning at each retained state in the real Zig/C owner; compare with native cleanup traces."
+        }
+      ],
+      "evidence": "docs/verification/completions/T02.json"
+    },
+    {
+      "id": "T03",
+      "project": "tls-zig",
+      "path": "src/quic/events.zig",
+      "card": "docs/roadmap/files/src/quic/events.zig.md",
+      "milestone": "T1",
+      "status": "complete",
+      "depends_on": [
+        "T01"
+      ],
+      "purpose": "Bounded acknowledged event queue for bytes, secrets, peer parameters and completion.",
+      "tests": [
+        {
+          "id": "T03-01",
+          "stimulus": "Fill two event slots, borrow the head twice, then acknowledge tail or old-generation token.",
+          "expected": "Same head bytes/token remain stable; invalid acknowledgement changes neither queue nor custody.",
+          "oracle": "Finite custody model plus independently authored queue trace."
+        },
+        {
+          "id": "T03-02",
+          "stimulus": "Acknowledge a secret before copying/deriving it; then cancel with a borrowed event and attempt reuse.",
+          "expected": "Early acknowledgement rejected; cancel invalidates borrow, clears owned secret, and forbids reuse of old owner identity.",
+          "oracle": "Fault-injected model and memory lifecycle instrumentation; abstract erasure alone is insufficient."
+        }
+      ],
+      "evidence": "docs/verification/completions/T03.json"
+    },
+    {
+      "id": "T04",
+      "project": "tls-zig",
+      "path": "src/backend/quic.c",
+      "card": "docs/roadmap/files/src/backend/quic.c.md",
+      "milestone": "T1",
+      "status": "complete",
+      "depends_on": [
+        "T05",
+        "T03"
+      ],
+      "purpose": "OpenSSL external QUIC TLS callback adapter, isolated from records BIO backend.",
+      "tests": [
+        {
+          "id": "T04-01",
+          "stimulus": "Run send callback with zero, partial and full capacity, then inject failure into each callback during an actual handshake.",
+          "expected": "Only accepted prefix is committed; callback failure becomes terminal; no deferred reference points at temporary callback memory.",
+          "oracle": "Current capability probe is preliminary evidence; use real handshake fault injection for completion."
+        },
+        {
+          "id": "T04-02",
+          "stimulus": "Offer one input buffer, drive provider, and request another before release; deliver both directional secrets.",
+          "expected": "Borrow retained until matching release; at most one provider-held input; exact level/direction preserved for copied secrets.",
+          "oracle": "Poison released memory under instrumentation; compare callback trace to public wrapper events."
+        },
+        {
+          "id": "T04-03",
+          "stimulus": "Reject a matching input release before retirement, then destroy the provider; separately inject wrong length and a duplicate after successful release.",
+          "expected": "Failed release retains stable custody; matching teardown retry can retire once; invalid or already-retired release cannot double-free or advance input.",
+          "oracle": "Instrument actual wrapper lease/allocation effects and callback order through provider destruction; standalone static probe is supporting evidence only."
+        }
+      ],
+      "evidence": "docs/verification/completions/T04.json"
+    },
+    {
+      "id": "T05",
+      "project": "tls-zig",
+      "path": "src/backend/quic.h",
+      "card": "docs/roadmap/files/src/backend/quic.h.md",
+      "milestone": "T1",
+      "status": "complete",
+      "depends_on": [
+        "T01"
+      ],
+      "purpose": "Minimal internal ABI for the recordless backend.",
+      "tests": [
+        {
+          "id": "T05-01",
+          "stimulus": "Compile C and Zig ABI consumers with size, alignment and function-signature checks on native LLP64 and LP64.",
+          "expected": "Widths and nullable pointer/length rules agree or target is explicitly unsupported.",
+          "oracle": "C sizeof/alignof and Zig @sizeOf/@alignOf; link and invoke actual symbols."
+        },
+        {
+          "id": "T05-02",
+          "stimulus": "Pass null with nonzero length, unknown level/direction, closed handle via safe test hooks, and output capacity zero.",
+          "expected": "Declared validation error without output mutation; freed raw pointers are never deliberately dereferenced.",
+          "oracle": "C ABI harness snapshots output and allocation ownership around each safe invalid call."
+        }
+      ],
+      "evidence": "docs/verification/completions/T05.json"
+    },
+    {
+      "id": "T06",
+      "project": "tls-zig",
+      "path": "tests/quic_contract.zig",
+      "card": "docs/roadmap/files/tests/quic_contract.zig.md",
+      "milestone": "T1",
+      "status": "complete",
+      "depends_on": [
+        "T02"
+      ],
+      "purpose": "Adversarial conformance tests for the chosen QUIC boundary.",
+      "tests": [
+        {
+          "id": "T06-01",
+          "stimulus": "Exercise zero/partial/excess input consumption and reordered/duplicated acknowledgements against independent host/provider fixtures.",
+          "expected": "Overconsumption poisons owner; valid retry preserves bytes; stale acknowledgement never retires another event.",
+          "oracle": "Expected event traces authored independently; compare with bounded custody model."
+        },
+        {
+          "id": "T06-02",
+          "stimulus": "Run real client/server recordless handshake with bad identity, ALPN, parameters and fatal alert.",
+          "expected": "Negative policy denies readiness; both success roles finish with correct directional traffic keys.",
+          "oracle": "Use independently configured peer identity and packet decrypt check; symbol/ClientHello probes cannot satisfy this case."
+        },
+        {
+          "id": "T06-03",
+          "stimulus": "Queue one-byte fragments beyond a per-drive input budget, then process permitted and forbidden post-handshake CRYPTO after local completion.",
+          "expected": "Budget exhaustion defers local work without EOF or starvation; allowed post-handshake bytes obey normal custody; forbidden input fails without application plaintext delivery.",
+          "oracle": "Compare scheduler wakeups, byte retirement and public events to an independently specified trace; retain malformed-input and cancellation results."
+        }
+      ],
+      "evidence": "docs/verification/completions/T06.json"
+    },
+    {
+      "id": "T07",
+      "project": "tls-zig",
+      "path": "build/backend.zig",
+      "card": "docs/roadmap/files/build/backend.zig.md",
+      "milestone": "T2",
+      "status": "planned",
+      "depends_on": [
+        "T00"
+      ],
+      "purpose": "Platform-specific backend discovery, linkage and runtime staging.",
+      "tests": [
+        {
+          "id": "T07-01",
+          "stimulus": "Build Windows and proposed POSIX targets with missing SDK, wrong architecture and path containing spaces.",
+          "expected": "Qualified native target builds; unsupported or mismatched target fails with actionable reason.",
+          "oracle": "Native link/run smoke per target; cross-compilation alone is insufficient."
+        },
+        {
+          "id": "T07-02",
+          "stimulus": "Place an incompatible same-name library on search path while specifying locked SDK.",
+          "expected": "Resolver/staging chooses verified artifact or fails; recorded runtime provenance matches intended SDK.",
+          "oracle": "Capture loaded module identity and compare file digests; test outside development directory."
+        },
+        {
+          "id": "T07-03",
+          "stimulus": "Build lean and optional-adapter profiles; change a runtime-only setting and enable a disabled-dependency tripwire.",
+          "expected": "Lean graph does not configure/import the optional backend; runtime-only changes do not silently alter compiled feature identity.",
+          "oracle": "Independent graph tripwire, clean consumer and artifact/build-plan hashes with recorded producer version."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T08",
+      "project": "tls-zig",
+      "path": "examples/consumer/socket_posix.c",
+      "card": "docs/roadmap/files/examples/consumer/socket_posix.c.md",
+      "milestone": "T2",
+      "status": "planned",
+      "depends_on": [
+        "T07"
+      ],
+      "purpose": "POSIX demonstration transport matching the public Driver contract.",
+      "tests": [
+        {
+          "id": "T08-01",
+          "stimulus": "Drive nonblocking read/write with EINTR, EAGAIN, short transfer, clean EOF and hard error.",
+          "expected": "Driver receives distinct outcomes and exact transferred prefix; callbacks never block or retry forever.",
+          "oracle": "Injected syscall shim with finite call budget; real loopback test separately."
+        },
+        {
+          "id": "T08-02",
+          "stimulus": "Cancel during connect/read/write and cycle IPv4/IPv6 sockets repeatedly.",
+          "expected": "Host closes each descriptor exactly once; no descriptor growth; caller buffer released on completion.",
+          "oracle": "Descriptor counts and transport ownership trace before/after each case."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T09",
+      "project": "tls-zig",
+      "path": "tests/abi.zig",
+      "card": "docs/roadmap/files/tests/abi.zig.md",
+      "milestone": "T2",
+      "status": "planned",
+      "depends_on": [
+        "T07"
+      ],
+      "purpose": "Compile/link ABI contract tests across supported targets.",
+      "tests": [
+        {
+          "id": "T09-01",
+          "stimulus": "Compare C header and Zig extern scalar widths, pointer shapes and constructor argument order.",
+          "expected": "Compile/link/invocation agree on every supported native target.",
+          "oracle": "C-produced ABI constants and separate Zig consumer."
+        },
+        {
+          "id": "T09-02",
+          "stimulus": "Link a fixture library with deliberately incompatible ABI version or signature guard.",
+          "expected": "Compatibility check rejects mismatch before normal operations.",
+          "oracle": "Known wrong-library fixture; do not use an unsafe call to discover stack corruption."
+        },
+        {
+          "id": "T09-03",
+          "stimulus": "Supply declared target capability, unknown runtime observation, and runtime request for an omitted compiled branch.",
+          "expected": "A declaration is never treated as observed usability; unknown/absent required capability fails with a specific reason.",
+          "oracle": "Separately authored target/observation/compiled-capability fixtures; native ABI/runtime tests remain independent."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T10",
+      "project": "tls-zig",
+      "path": "src/policy/credentials.zig",
+      "card": "docs/roadmap/files/src/policy/credentials.zig.md",
+      "milestone": "T3",
+      "status": "planned",
+      "depends_on": [
+        "T07",
+        "T09"
+      ],
+      "purpose": "Versioned immutable credential configuration for new connections.",
+      "tests": [
+        {
+          "id": "T10-01",
+          "stimulus": "Rotate credential configuration while old and new handshakes run.",
+          "expected": "Existing owners retain original credential version; new owners receive new version; last release destroys retired version.",
+          "oracle": "Certificate fingerprint per peer and exact reference/free counters."
+        },
+        {
+          "id": "T10-02",
+          "stimulus": "Attempt rotation with missing key, invalid chain or allocation failure.",
+          "expected": "Previously active version remains usable; failed candidate resources are released.",
+          "oracle": "Independent pre/post configuration fingerprint and leak instrumentation."
+        },
+        {
+          "id": "T10-03",
+          "stimulus": "Change terminal context and logical credential locator while existing/new TLS owners coexist.",
+          "expected": "Ambient context cannot mutate existing credentials; explicitly accepted rotation uses distinct retained versions.",
+          "oracle": "Old/new credential fingerprints and owner lifetimes; no secret bytes in plan or diagnostic output."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T11",
+      "project": "tls-zig",
+      "path": "src/policy/verification.zig",
+      "card": "docs/roadmap/files/src/policy/verification.zig.md",
+      "milestone": "T3",
+      "status": "planned",
+      "depends_on": [
+        "T10"
+      ],
+      "purpose": "Explicit identity, trust and revocation policy profile.",
+      "tests": [
+        {
+          "id": "T11-01",
+          "stimulus": "Require revocation status; supply revoked, unknown, expired-cache and unavailable service outcomes.",
+          "expected": "Profile denies readiness unless its explicit policy accepts available evidence; no silent downgrade.",
+          "oracle": "Fixed certificate/status fixtures and injected clock; inspect stable decision reason."
+        },
+        {
+          "id": "T11-02",
+          "stimulus": "Validate DNS and IP identities across trust rotation and certificate time boundaries.",
+          "expected": "Decision matches configured identity type and trust version; no application authorization claim is inferred.",
+          "oracle": "Separate expected identities and fixed wall-clock instants; no network-dependent oracle."
+        },
+        {
+          "id": "T11-03",
+          "stimulus": "Resolve a logical service to a new address while retaining explicit expected identity; supply misleading context metadata.",
+          "expected": "Routing/context does not authenticate the peer or bypass trust, hostname/IP, ALPN or application authorization policy.",
+          "oracle": "Independent expected peer identity and negative certificate/policy fixtures, with metadata changes isolated."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T12",
+      "project": "tls-zig",
+      "path": "tests/resource_limits.zig",
+      "card": "docs/roadmap/files/tests/resource_limits.zig.md",
+      "milestone": "T3",
+      "status": "planned",
+      "depends_on": [
+        "T02",
+        "T10",
+        "T11"
+      ],
+      "purpose": "Measure and constrain provider allocation and work under adversarial input.",
+      "tests": [
+        {
+          "id": "T12-01",
+          "stimulus": "Feed large chains, repeated fragments and many simultaneous handshakes under declared quotas.",
+          "expected": "Peak provider and wrapper allocations/work are measured separately; enforced quotas terminate boundedly.",
+          "oracle": "Allocator/process measurements and callback operation budget; BIO size is not total heap."
+        },
+        {
+          "id": "T12-02",
+          "stimulus": "Fail each allocation ordinal during construction, progress and teardown.",
+          "expected": "No leak, double free or post-terminal delivery; preexisting owners remain valid.",
+          "oracle": "Allocator ledger and sanitizers/available native diagnostics with recorded limitations."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T13",
+      "project": "tls-zig",
+      "path": "tests/interop/matrix.py",
+      "card": "docs/roadmap/files/tests/interop/matrix.py.md",
+      "milestone": "T4",
+      "status": "planned",
+      "depends_on": [
+        "T06",
+        "T08",
+        "T09",
+        "T12"
+      ],
+      "purpose": "Run a recorded multi-provider/platform TLS qualification matrix.",
+      "tests": [
+        {
+          "id": "T13-01",
+          "stimulus": "Run both roles across recorded provider/platform combinations with custom ALPN and identity failures.",
+          "expected": "All required cells pass; missing tools/platforms are explicit unqualified cells.",
+          "oracle": "Pinned independent peer commands and full exit/output receipts."
+        },
+        {
+          "id": "T13-02",
+          "stimulus": "Exercise shutdown, partial records, backpressure and provider upgrade regression.",
+          "expected": "Authenticated closure distinguished from truncation; pending bytes preserved; prior compatibility profile retained or versioned.",
+          "oracle": "Wire/application hashes, EOF classification and before/after source/backend identities."
+        },
+        {
+          "id": "T13-03",
+          "stimulus": "Compare baseline/candidate shared TLS artifact across all declared consumers, including one missing or failed cell.",
+          "expected": "Coverage gaps block promotion; pre-existing/new/unattributed diagnostics remain visible; no implicit consumer repin.",
+          "oracle": "Exact consumer list, retained dual-stream outputs and independent baseline/candidate identities."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "T14",
+      "project": "tls-zig",
+      "path": "bench/engine.zig",
+      "card": "docs/roadmap/files/bench/engine.zig.md",
+      "milestone": "T4",
+      "status": "planned",
+      "depends_on": [
+        "T12"
+      ],
+      "purpose": "Measure handshake/read/write scheduling cost and resource use.",
+      "tests": [
+        {
+          "id": "T14-01",
+          "stimulus": "Measure cold/warm handshakes, fragmented records and many concurrent owners.",
+          "expected": "Report distributions, allocations and environment with identical authentication settings.",
+          "oracle": "Independent plaintext checks outside timed region; timer resolution recorded."
+        },
+        {
+          "id": "T14-02",
+          "stimulus": "Cancel at worst observed queue depth and certificate size.",
+          "expected": "Cancellation latency/work stays within declared measured envelope or fails the stated target.",
+          "oracle": "Injected scheduling trace and independent elapsed/work counters; no unmeasured universal bound."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q00",
+      "project": "quic-zig",
+      "path": "src/tls/adapter.zig",
+      "card": "docs/roadmap/files/src/tls/adapter.zig.md",
+      "milestone": "Q1",
+      "status": "complete",
+      "depends_on": [
+        "T06"
+      ],
+      "purpose": "Translate ordered per-level CRYPTO and TLS events into key installation and peer-parameter decisions.",
+      "tests": [
+        {
+          "id": "Q00-01",
+          "stimulus": "Consume real TLS bytes/secrets/parameters through adapter in both roles.",
+          "expected": "Correct level and direction reach packet crypto; event acknowledged only after bounded custody succeeds.",
+          "oracle": "TLS contract conformance suite plus independent packet decrypt and event ledger."
+        },
+        {
+          "id": "Q00-02",
+          "stimulus": "Force queue exhaustion, unsupported suite, stale token and unit-conversion overflow.",
+          "expected": "No byte loss, early readiness or wrapped deadline; terminal versus retryable errors remain distinct.",
+          "oracle": "Snapshot queues and per-level offsets; boundary clock values checked with integer oracle."
+        },
+        {
+          "id": "Q00-03",
+          "stimulus": "Select recordless transport through host configuration while provider only supports records or required capability is unknown.",
+          "expected": "Fail explicitly before CRYPTO acceptance; no record tunneling or weaker-security fallback.",
+          "oracle": "Independent capability fixture and event/byte counters proving no premature provider input."
+        },
+        {
+          "id": "Q00-04",
+          "stimulus": "Exhaust TLS local input-work allowance while QUIC already owns more admissible contiguous CRYPTO; then deliver post-handshake Application-level CRYPTO.",
+          "expected": "Adapter schedules deferred local work without requiring another datagram; no busy loop, EOF substitution, duplicate readiness or application-plaintext routing occurs.",
+          "oracle": "Independent host event trace with no new network input, bounded scheduler turns, level-specific byte accounting and terminal mapping."
+        }
+      ],
+      "evidence": "docs/verification/completions/Q00.json"
+    },
+    {
+      "id": "Q01",
+      "project": "quic-zig",
+      "path": "tests/integration/tls_handshake.zig",
+      "card": "docs/roadmap/files/tests/integration/tls_handshake.zig.md",
+      "milestone": "Q1",
+      "status": "complete",
+      "depends_on": [
+        "Q00"
+      ],
+      "purpose": "Prove the actual TLS-owned recordless provider interoperates with QUIC packet custody.",
+      "tests": [
+        {
+          "id": "Q01-01",
+          "stimulus": "Real handshake with lost Initial, reordered Handshake and accepted Retry.",
+          "expected": "Contiguous CRYPTO delivered once; packet-number history retained; both peers authenticate according to role.",
+          "oracle": "Independent expected identity, per-space sent/received ledger and packet trace."
+        },
+        {
+          "id": "Q01-02",
+          "stimulus": "Use malformed/role-invalid peer parameters, wrong SAN/ALPN and cancellation at every pending event.",
+          "expected": "No application release; cleanup bounded and once-only; stable mapped error.",
+          "oracle": "Separate expected error/event trace; no key-availability shortcut."
+        }
+      ],
+      "evidence": "docs/verification/completions/Q01.json"
+    },
+    {
+      "id": "Q02",
+      "project": "quic-zig",
+      "path": "src/packet/application.zig",
+      "card": "docs/roadmap/files/src/packet/application.zig.md",
+      "milestone": "Q2",
+      "status": "complete",
+      "depends_on": [
+        "Q01"
+      ],
+      "purpose": "Protect and open short-header 1-RTT packets.",
+      "tests": [
+        {
+          "id": "Q02-01",
+          "stimulus": "Protect/open short headers using independent known-answer material at packet-number length boundaries.",
+          "expected": "Exact wire bytes match; nonce uses full number; authenticated plaintext matches.",
+          "oracle": "Published vectors where available plus independently produced cross-implementation vectors."
+        },
+        {
+          "id": "Q02-02",
+          "stimulus": "Truncate sample, corrupt tag/reserved bits, exceed usage limit and overlap scratch buffers.",
+          "expected": "Rejected input cannot commit authenticated state; scratch behavior follows documented pre/post-copy contract.",
+          "oracle": "Pre/post buffer and replay-history snapshots; independent nonce uniqueness ledger."
+        }
+      ],
+      "evidence": "docs/verification/completions/Q02.json"
+    },
+    {
+      "id": "Q03",
+      "project": "quic-zig",
+      "path": "src/packet/key_update.zig",
+      "card": "docs/roadmap/files/src/packet/key_update.zig.md",
+      "milestone": "Q2",
+      "status": "complete",
+      "depends_on": [
+        "Q02"
+      ],
+      "purpose": "Own directional key generations and retirement.",
+      "tests": [
+        {
+          "id": "Q03-01",
+          "stimulus": "Reorder old/new-phase packets and perform simultaneous directional updates after confirmation.",
+          "expected": "Each direction advances under its own rules; bounded old-key retention; no nonce reuse.",
+          "oracle": "Generation/packet-number ledger and independent peer decrypt."
+        },
+        {
+          "id": "Q03-02",
+          "stimulus": "Forge apparent phase change, initiate too early, or exhaust AEAD usage budget.",
+          "expected": "Unauthenticated data cannot advance keys; unsafe send fails before encryption.",
+          "oracle": "Snapshot generation/key identifiers and sent-wire count; secret bytes excluded from logs."
+        }
+      ],
+      "evidence": "docs/verification/completions/Q03.json"
+    },
+    {
+      "id": "Q04",
+      "project": "quic-zig",
+      "path": "src/recovery/spaces.zig",
+      "card": "docs/roadmap/files/src/recovery/spaces.zig.md",
+      "milestone": "Q2",
+      "status": "complete",
+      "depends_on": [
+        "Q01"
+      ],
+      "purpose": "Coordinate Initial, Handshake and Application sent histories and one next-deadline result.",
+      "tests": [
+        {
+          "id": "Q04-01",
+          "stimulus": "Schedule equal deadlines across spaces; discard Handshake keys with bytes still in flight.",
+          "expected": "One next timer; discarded packets debit flight exactly once; no cross-space ACK effect.",
+          "oracle": "Independent integer accounting and explicit event order."
+        },
+        {
+          "id": "Q04-02",
+          "stimulus": "ACK after deliberately skipped packet numbers; compare packet/time thresholds and Application ACK delay.",
+          "expected": "Selected RFC interpretation is documented and regression matches it; current local skipped-number rule reviewed explicitly.",
+          "oracle": "RFC 9002 section 6.1.1 and independent peer trace, not current test expectations alone."
+        }
+      ],
+      "evidence": "docs/verification/completions/Q04.json"
+    },
+    {
+      "id": "Q05",
+      "project": "quic-zig",
+      "path": "src/ack/application.zig",
+      "card": "docs/roadmap/files/src/ack/application.zig.md",
+      "milestone": "Q2",
+      "status": "planned",
+      "depends_on": [
+        "Q04"
+      ],
+      "purpose": "Schedule Application acknowledgments under a documented policy.",
+      "tests": [
+        {
+          "id": "Q05-01",
+          "stimulus": "Receive out-of-order Application packets near delay deadline with more ranges than capacity.",
+          "expected": "Policy bounds delay and ranges; loss of an older range does not erase newer obligations.",
+          "oracle": "Independent receive set and timer oracle with exact-before/at/after times."
+        },
+        {
+          "id": "Q05-02",
+          "stimulus": "Prepare ACK, receive another packet, fail send, then commit stale ticket.",
+          "expected": "New obligation survives; failed send consumes none; cross-owner token rejected if public API permits exchange.",
+          "oracle": "Generation ledger and injected host send outcomes."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q06",
+      "project": "quic-zig",
+      "path": "src/connection/state.zig",
+      "card": "docs/roadmap/files/src/connection/state.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q10",
+        "Q11"
+      ],
+      "purpose": "Single-owner connection event reducer and capability gate.",
+      "tests": [
+        {
+          "id": "Q06-01",
+          "stimulus": "Enumerate events in handshaking, active, closing, draining and closed states.",
+          "expected": "Only permitted transitions occur; application readiness requires all policy gates.",
+          "oracle": "Independent transition table; each rejected event preserves relevant state."
+        },
+        {
+          "id": "Q06-02",
+          "stimulus": "Tie timeout, peer close, local cancel and handshake completion at the same timestamp.",
+          "expected": "Documented precedence gives one terminal owner; no revival or double release.",
+          "oracle": "Event permutation harness and owned-resource ledger."
+        },
+        {
+          "id": "Q06-03",
+          "stimulus": "Overload diagnostic sink and attempt callback reentry during failure and cancellation.",
+          "expected": "Bounded telemetry cannot change accepted protocol state or leak owned secret/plaintext buffers; reentry obeys declared rejection.",
+          "oracle": "Protocol-state snapshot plus sink operation/byte budget and redaction fixtures."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q07",
+      "project": "quic-zig",
+      "path": "src/connection/receive.zig",
+      "card": "docs/roadmap/files/src/connection/receive.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [
+        "Q06",
+        "Q09"
+      ],
+      "purpose": "Coordinate decrypt, CID checks, frame preflight and commit across components.",
+      "tests": [
+        {
+          "id": "Q07-01",
+          "stimulus": "Place a valid ACK/CRYPTO frame before a later malformed frame or unsent ACK claim.",
+          "expected": "Whole packet semantic admission fails without partial ACK, replay or CRYPTO commit.",
+          "oracle": "Snapshot all participating components, not only parser cursor."
+        },
+        {
+          "id": "Q07-02",
+          "stimulus": "Deliver coalesced packet with failed authentication followed by valid packet and mismatched CID.",
+          "expected": "Boundary iteration follows declared rules; path credit counted once per attributed datagram.",
+          "oracle": "Independent datagram boundary list, CID routing decision and path byte ledger."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q08",
+      "project": "quic-zig",
+      "path": "src/connection/send.zig",
+      "card": "docs/roadmap/files/src/connection/send.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [
+        "Q06",
+        "Q12"
+      ],
+      "purpose": "Plan an immutable datagram with all capacity and policy checks before transport submission.",
+      "tests": [
+        {
+          "id": "Q08-01",
+          "stimulus": "Prepare datagram then return would-block, known failure, success and ambiguous host result.",
+          "expected": "Accounting commits only per documented outcome; exposed packet numbers never encrypt changed plaintext.",
+          "oracle": "Immutable plan hash, nonce history and custody/congestion/amplification ledger."
+        },
+        {
+          "id": "Q08-02",
+          "stimulus": "Make queued arrivals or PTO state change between planning and attempted commit.",
+          "expected": "Stale plan rejected or validated transactionally; current ACK obligations survive.",
+          "oracle": "Generation snapshots for every participant and injected event ordering."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q09",
+      "project": "quic-zig",
+      "path": "src/streams/frame.zig",
+      "card": "docs/roadmap/files/src/streams/frame.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [],
+      "purpose": "Encode/decode STREAM, RESET_STREAM and STOP_SENDING with bounded lengths.",
+      "tests": [
+        {
+          "id": "Q09-01",
+          "stimulus": "Encode/decode FIN-only, maximum legal offsets, role/direction IDs and each truncation.",
+          "expected": "Exact checked length; errors restore cursor/output per contract.",
+          "oracle": "Independent byte corpus and arithmetic oracle."
+        },
+        {
+          "id": "Q09-02",
+          "stimulus": "Decode RESET final size and STREAM offset+length overflow without applying state.",
+          "expected": "Syntax errors rejected; semantic final-size decision delegated explicitly.",
+          "oracle": "Parser state snapshots and separate stream-state fixture."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q10",
+      "project": "quic-zig",
+      "path": "src/streams/state.zig",
+      "card": "docs/roadmap/files/src/streams/state.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [
+        "Q09"
+      ],
+      "purpose": "Model bidirectional/unidirectional stream send/receive lifecycle.",
+      "tests": [
+        {
+          "id": "Q10-01",
+          "stimulus": "Reorder data/FIN/reset across all role/direction stream kinds.",
+          "expected": "Ordered bytes delivered at most once; final size cannot change after commitment.",
+          "oracle": "Independent interval set and lifecycle table."
+        },
+        {
+          "id": "Q10-02",
+          "stimulus": "Cancel a stream with retransmissions outstanding, then deliver late data and ACK.",
+          "expected": "No revived delivery; custody retired under declared reset/ACK rules exactly once.",
+          "oracle": "Application byte log and allocation/range ownership ledger."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q11",
+      "project": "quic-zig",
+      "path": "src/streams/flow_control.zig",
+      "card": "docs/roadmap/files/src/streams/flow_control.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [
+        "Q10"
+      ],
+      "purpose": "Track stream and connection receive/send credit.",
+      "tests": [
+        {
+          "id": "Q11-01",
+          "stimulus": "Receive sparse offsets, duplicate bytes and reset with final size above highest received offset.",
+          "expected": "Charge aggregate highest offsets including reset delta; duplicates add no credit consumption.",
+          "oracle": "Integer sum over per-stream high-water marks."
+        },
+        {
+          "id": "Q11-02",
+          "stimulus": "Reorder credit updates and exhaust integer/stream limits.",
+          "expected": "Limits remain monotonic; overflow fails before mutation; closed-stream accounting retained as specified.",
+          "oracle": "Independent bounded counter oracle and complete pre/post snapshots."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q12",
+      "project": "quic-zig",
+      "path": "src/host/transport.zig",
+      "card": "docs/roadmap/files/src/host/transport.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [],
+      "purpose": "Define datagram I/O results and buffer lifetimes independent of OS sockets.",
+      "tests": [
+        {
+          "id": "Q12-01",
+          "stimulus": "Return would-block, short/ambiguous send, receive truncation and invalid byte count.",
+          "expected": "Only declared atomic datagram success is committed; invalid outcomes fail explicitly.",
+          "oracle": "Fake host with separate datagram ledger and callback count budget."
+        },
+        {
+          "id": "Q12-02",
+          "stimulus": "Attempt callback reentry or retain borrowed datagram after return.",
+          "expected": "Contract violation detected by debug/test hooks; owned copies survive required completion boundary.",
+          "oracle": "Poisoned temporary buffers and reentry guard harness; release behavior documented."
+        },
+        {
+          "id": "Q12-03",
+          "stimulus": "Move project/artifact roots and inject alternate host address/time capabilities without changing logical service identity.",
+          "expected": "No hardcoded workspace path or builder observation authorizes runtime operation; explicit resolved inputs govern behavior.",
+          "oracle": "Separate build/runtime host fixtures and relocated clean consumer with the same intended configuration."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q13",
+      "project": "quic-zig",
+      "path": "src/endpoint.zig",
+      "card": "docs/roadmap/files/src/endpoint.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [
+        "Q07",
+        "Q08",
+        "Q12",
+        "Q14"
+      ],
+      "purpose": "Demultiplex datagrams and schedule bounded active connections.",
+      "tests": [
+        {
+          "id": "Q13-01",
+          "stimulus": "Flood unknown CIDs and exhaust connection/global per-peer quotas.",
+          "expected": "Admission remains bounded; no TLS allocation before required routing/admission checks.",
+          "oracle": "Allocation and operation counters tied to input datagrams."
+        },
+        {
+          "id": "Q13-02",
+          "stimulus": "Schedule busy and quiet connections then cancel listener with sends pending.",
+          "expected": "Declared scheduling bound/fairness holds; each owner releases once and routing expires correctly.",
+          "oracle": "Deterministic network scheduler with independent ready-set and resource ledger."
+        },
+        {
+          "id": "Q13-03",
+          "stimulus": "Attach Contextz-style unknown/malformed/stale observations to service attribution while processing unknown CIDs.",
+          "expected": "Metadata remains separate from routing/admission/peer authority; invalid metadata cannot grant connection/path credit.",
+          "oracle": "Independent identity/admission ledger; distinguish absent context from malformed context and peer failure."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q14",
+      "project": "quic-zig",
+      "path": "tests/simulation/network.zig",
+      "card": "docs/roadmap/files/tests/simulation/network.zig.md",
+      "milestone": "Q3",
+      "status": "planned",
+      "depends_on": [],
+      "purpose": "Deterministic loss, duplication, delay and reordering scheduler.",
+      "tests": [
+        {
+          "id": "Q14-01",
+          "stimulus": "Replay fixed seed with loss, duplicates, delay and equal-time events.",
+          "expected": "Byte-for-byte event trace and terminal state reproduce.",
+          "oracle": "Golden trace independent of protocol implementation and stable tie-break ordering."
+        },
+        {
+          "id": "Q14-02",
+          "stimulus": "Enable permanent loss then minimize a failing finite trace.",
+          "expected": "No false liveness claim; event budget terminates with explicit reason; minimized trace retains failure.",
+          "oracle": "Finite action count and replay of minimized trace."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q15",
+      "project": "quic-zig",
+      "path": "src/path/validation.zig",
+      "card": "docs/roadmap/files/src/path/validation.zig.md",
+      "milestone": "Q4",
+      "status": "planned",
+      "depends_on": [
+        "Q13"
+      ],
+      "purpose": "Challenge/response validation for a newly observed path.",
+      "tests": [
+        {
+          "id": "Q15-01",
+          "stimulus": "NAT rebind with same CID and forged PATH_RESPONSE on unvalidated address.",
+          "expected": "New path has separate credit; only matching outstanding challenge validates it.",
+          "oracle": "Per-address byte/challenge ledger and injected random challenge source."
+        },
+        {
+          "id": "Q15-02",
+          "stimulus": "Expire challenge while two candidate paths compete.",
+          "expected": "Expired response cannot revive candidate; active path selection deterministic and bounded.",
+          "oracle": "Injected time and explicit candidate lifecycle table."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q16",
+      "project": "quic-zig",
+      "path": "src/path/mtu.zig",
+      "card": "docs/roadmap/files/src/path/mtu.zig.md",
+      "milestone": "Q4",
+      "status": "planned",
+      "depends_on": [
+        "Q15"
+      ],
+      "purpose": "Bound datagram sizes and manage PMTU probes.",
+      "tests": [
+        {
+          "id": "Q16-01",
+          "stimulus": "Drop probes above a threshold, report EMSGSIZE and change destination address.",
+          "expected": "Payload estimate falls back under policy; new path does not inherit unsafe MTU.",
+          "oracle": "Known simulated path ceiling and host result trace."
+        },
+        {
+          "id": "Q16-02",
+          "stimulus": "Lose probe amid ordinary congestion loss and ambiguous ICMP input.",
+          "expected": "Probe outcome and congestion event remain separate; unauthenticated signal cannot force arbitrary unsafe size.",
+          "oracle": "Independent probe registry and packet-flight accounting."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q17",
+      "project": "quic-zig",
+      "path": "src/connection/ids.zig",
+      "card": "docs/roadmap/files/src/connection/ids.zig.md",
+      "milestone": "Q4",
+      "status": "planned",
+      "depends_on": [
+        "Q13"
+      ],
+      "purpose": "CID issuance, retirement and stateless reset matching.",
+      "tests": [
+        {
+          "id": "Q17-01",
+          "stimulus": "Retire current CID, repeat sequence, exceed active limit and reorder issuance.",
+          "expected": "Routing remains usable per policy; bounded CID/token storage; duplicate effects idempotent.",
+          "oracle": "Independent sequence/routing set and allocation ledger."
+        },
+        {
+          "id": "Q17-02",
+          "stimulus": "Receive reset-looking unauthenticated packet with wrong or matching issued reset token.",
+          "expected": "Only eligible token/context terminates; no token bytes appear in diagnostic logs.",
+          "oracle": "Independent fixed tokens, equality test instrumentation and terminal event trace."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q18",
+      "project": "quic-zig",
+      "path": "src/packet/version.zig",
+      "card": "docs/roadmap/files/src/packet/version.zig.md",
+      "milestone": "Q4",
+      "status": "planned",
+      "depends_on": [
+        "Q13"
+      ],
+      "purpose": "Version negotiation policy and version-specific packet dispatch.",
+      "tests": [
+        {
+          "id": "Q18-01",
+          "stimulus": "Inject spoofed/reflected version lists and unsupported packet versions.",
+          "expected": "Policy rejects confusion without falling through to v1 parsing or unsafe downgrade.",
+          "oracle": "Independently authored negotiation corpus and selected-version log."
+        },
+        {
+          "id": "Q18-02",
+          "stimulus": "Replay current v1 codec vectors through version dispatch.",
+          "expected": "Existing v1 bytes and errors retained; supported versions explicitly enumerated.",
+          "oracle": "Frozen current vector corpus and separate dispatch table."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q19",
+      "project": "quic-zig",
+      "path": "tests/interop/runner.py",
+      "card": "docs/roadmap/files/tests/interop/runner.py.md",
+      "milestone": "Q5",
+      "status": "planned",
+      "depends_on": [
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q18",
+        "Q20",
+        "T13"
+      ],
+      "purpose": "Run both endpoint roles against independently built QUIC peers.",
+      "tests": [
+        {
+          "id": "Q19-01",
+          "stimulus": "Run handshake, streams, Retry, migration and key update against two independent peers in both roles.",
+          "expected": "Every required cell passes with source/backend/peer identities recorded.",
+          "oracle": "Pinned peer commands and application byte hashes; skipped cells are unqualified."
+        },
+        {
+          "id": "Q19-02",
+          "stimulus": "Inject loss, backpressure and closure failures; terminate stalled peer processes.",
+          "expected": "Bounded timeout, captured reason and complete cleanup; failure remains failure in aggregate.",
+          "oracle": "Process/socket ledger, monotonic deadline and retained stderr/exit code."
+        },
+        {
+          "id": "Q19-03",
+          "stimulus": "Run QUIC consumer qualification twice for the same candidate; then supply changed inputs, an interrupted host-promotion receipt or one missing declared consumer.",
+          "expected": "Runner emits fresh scoped evidence without publishing or repinning; incomplete coverage cannot report adoption complete. Host maintenance remains the reconciliation owner.",
+          "oracle": "Independent declared-consumer/input ledger and retained outputs; verify qualification changes no dependency pin or installed selector."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q20",
+      "project": "quic-zig",
+      "path": "tests/fuzz/packet.zig",
+      "card": "docs/roadmap/files/tests/fuzz/packet.zig.md",
+      "milestone": "Q5",
+      "status": "planned",
+      "depends_on": [
+        "Q07",
+        "Q09"
+      ],
+      "purpose": "Mutation/fuzz entry points for packet and frame parsers.",
+      "tests": [
+        {
+          "id": "Q20-01",
+          "stimulus": "Mutate each packet/frame truncation, offset limit and cross-level dispatch.",
+          "expected": "No crash, unbounded work or state mutation on rejected admission.",
+          "oracle": "Independent bounded input generator, operation counters and snapshot oracle."
+        },
+        {
+          "id": "Q20-02",
+          "stimulus": "Replay minimized saved crashes with compiler/source hashes.",
+          "expected": "Failure reproduces before fix and is rejected safely afterward; corpus remains versioned.",
+          "oracle": "Standalone replay entry point independent of fuzz discovery loop."
+        }
+      ],
+      "evidence": null
+    },
+    {
+      "id": "Q21",
+      "project": "quic-zig",
+      "path": "bench/transport.zig",
+      "card": "docs/roadmap/files/bench/transport.zig.md",
+      "milestone": "Q5",
+      "status": "planned",
+      "depends_on": [
+        "Q13",
+        "Q16"
+      ],
+      "purpose": "Measure throughput, latency and owned memory at declared capacities.",
+      "tests": [
+        {
+          "id": "Q21-01",
+          "stimulus": "Sweep payload, connections, loss and backpressure within configured capacities.",
+          "expected": "Report latency/throughput/memory distributions and correctness with environment details.",
+          "oracle": "Application hashes outside timing and independent process memory measurements."
+        },
+        {
+          "id": "Q21-02",
+          "stimulus": "Run repeated cancel/reconnect cycles at capacity boundary.",
+          "expected": "Memory returns to declared steady-state envelope; no growing retained custody.",
+          "oracle": "Long-run allocation/connection ledger; state limits and warmup separated from measured samples."
+        }
+      ],
+      "evidence": null
+    }
+  ]
+}

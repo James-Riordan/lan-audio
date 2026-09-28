@@ -1,0 +1,10 @@
+1/1 runtime_lifecycle.test.receiver short tail and maximum block preserve identities with zero writes and paused return...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7b0fdb67f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:453:9: 0x7ff7b0fe2d7f in test.receiver short tail and maximum block preserve identities with zero writes and paused return (root_zcu.obj)
+        try expect(try drain.takeStart(g));
+        ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\9edba6cfc7847ddc1eb83b40b6733a47\root.exe --seed=0xb6382b49

@@ -1,0 +1,432 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "binary_sha256": {
+    "sender": "6471c040664db60da23db40526fedba24618d7ad18a4601b90b0657dec188e52",
+    "receiver": "255a00a27558557c8338d8006e0f7e6405f3ad02d1c5a38d0dcd3397f3a7b378"
+  },
+  "results": [
+    {
+      "role": "receiver",
+      "case": "roundtrip",
+      "passed": true,
+      "exit_code": 0,
+      "expected_errors": null,
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": true,
+        "error": null,
+        "queue_observation": [
+          1285,
+          1680,
+          1260
+        ]
+      },
+      "output": "QUEUE frames=1285 short_writes=1680 zero_writes=1260\nPASS v2 role=receiver frames=1285 exact_words=true clean_close=true\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "empty",
+      "passed": true,
+      "exit_code": 0,
+      "expected_errors": null,
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": true,
+        "clean_close": true,
+        "error": null,
+        "queue_observation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "output": "QUEUE frames=0 short_writes=0 zero_writes=0\nPASS v2 role=receiver frames=0 exact_words=true clean_close=true\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "roundtrip",
+      "passed": true,
+      "exit_code": 0,
+      "expected_errors": null,
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": true,
+        "error": null
+      },
+      "output": "PASS v2 role=sender frames=1285 exact_words=true clean_close=true\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "bad-profile",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidProfile"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: InvalidProfile\nC:\\Projects\\lan-audio\\src\\media\\format.zig:19:13: 0x7ff73617787d in validate (audio-v2-receiver-probe_zcu.obj)\n            return error.InvalidProfile;\n            ^\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:77:5: 0x7ff7361785f3 in readProfile (audio-v2-receiver-probe_zcu.obj)\n    try format.validate();\n    ^\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:86:32: 0x7ff736177d47 in validate (audio-v2-receiver-probe_zcu.obj)\n        .offer, .accept => _ = try readProfile(message.body),\n                               ^\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:107:5: 0x7ff736178c19 in parse (audio-v2-receiver-probe_zcu.obj)\n    try validate(message);\n    ^\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:138:33: 0x7ff73617bb26 in feed (audio-v2-receiver-probe_zcu.obj)\n                const message = try parse(self.storage[0..self.used]);\n                                ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:60:29: 0x7ff736046207 in next (audio-v2-receiver-probe_zcu.obj)\n                const fed = try self.parser.feed(self.buffer[self.offset..self.used]);\n                            ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:125:35: 0x7ff7360479f0 in main (audio-v2-receiver-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n                                  ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "audio-before-offer",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: InvalidState\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:50:45: 0x7ff73617a758 in apply (audio-v2-receiver-probe_zcu.obj)\n                if (message.kind != .offer) return error.InvalidState;\n                                            ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:125:9: 0x7ff736047b06 in main (audio-v2-receiver-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "wrong-stream",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "WrongStream"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: WrongStream\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:66:70: 0x7ff73617ab57 in apply (audio-v2-receiver-probe_zcu.obj)\n                if (!std.mem.eql(u8, &self.stream, &message.stream)) return error.WrongStream;\n                                                                     ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:131:13: 0x7ff7360480a0 in main (audio-v2-receiver-probe_zcu.obj)\n            try candidate.apply(.incoming, message);\n            ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "duplicate",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Discontinuous\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:67:58: 0x7ff73617abbe in apply (audio-v2-receiver-probe_zcu.obj)\n                if (message.position != self.next_frame) return error.Discontinuous;\n                                                         ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:131:13: 0x7ff7360480a0 in main (audio-v2-receiver-probe_zcu.obj)\n            try candidate.apply(.incoming, message);\n            ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "gap",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Discontinuous\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:67:58: 0x7ff73617abbe in apply (audio-v2-receiver-probe_zcu.obj)\n                if (message.position != self.next_frame) return error.Discontinuous;\n                                                         ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:131:13: 0x7ff7360480a0 in main (audio-v2-receiver-probe_zcu.obj)\n            try candidate.apply(.incoming, message);\n            ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "nonfinite",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidSamples"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: InvalidSamples\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:89:95: 0x7ff736177cc5 in validate (audio-v2-receiver-probe_zcu.obj)\n                if (!finiteWord(std.mem.readInt(u32, message.body[4 * i ..][0..4], .little))) return error.InvalidSamples;\n                                                                                              ^\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:107:5: 0x7ff736178c19 in parse (audio-v2-receiver-probe_zcu.obj)\n    try validate(message);\n    ^\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:138:33: 0x7ff73617bb26 in feed (audio-v2-receiver-probe_zcu.obj)\n                const message = try parse(self.storage[0..self.used]);\n                                ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:60:29: 0x7ff736046207 in next (audio-v2-receiver-probe_zcu.obj)\n                const fed = try self.parser.feed(self.buffer[self.offset..self.used]);\n                            ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:129:82: 0x7ff736048011 in main (audio-v2-receiver-probe_zcu.obj)\n            const message = reader.next(&network, &driver, deadline) catch |err| return if (err == error.ChannelClosed) error.MissingEnd else err;\n                                                                                 ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "truncated",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Truncated"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: Truncated\nC:\\Projects\\lan-audio\\src\\protocol\\v2.zig:148:45: 0x7ff73617b397 in finish (audio-v2-receiver-probe_zcu.obj)\n        if (self.used != 0 and !self.ready) return error.Truncated;\n                                            ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:68:21: 0x7ff736046564 in next (audio-v2-receiver-probe_zcu.obj)\n                    try self.parser.finish();\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:125:35: 0x7ff7360479f0 in main (audio-v2-receiver-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n                                  ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "missing-end",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "MissingEnd"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: MissingEnd\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:69:21: 0x7ff7360464d5 in next (audio-v2-receiver-probe_zcu.obj)\n                    return error.ChannelClosed;\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:129:82: 0x7ff736048011 in main (audio-v2-receiver-probe_zcu.obj)\n            const message = reader.next(&network, &driver, deadline) catch |err| return if (err == error.ChannelClosed) error.MissingEnd else err;\n                                                                                 ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "after-end",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: DataAfterEnd\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:141:42: 0x7ff736048350 in main (audio-v2-receiver-probe_zcu.obj)\n        if (reader.offset < reader.used) return error.DataAfterEnd;\n                                         ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "raw-eof",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "TlsFailure",
+        "TransportFailure"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: TransportFailure\nC:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig:28:20: 0x7ff73617fb2c in send (audio-v2-receiver-probe_zcu.obj)\n        if (n < 0) return error.TransportFailure;\n                   ^\nC:\\Projects\\tls-zig\\src\\driver.zig:92:9: 0x7ff736174d2d in abort (audio-v2-receiver-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:300:85: 0x7ff73617d4bc in step (audio-v2-receiver-probe_zcu.obj)\n                const n = (self.transport.send(self.transport.context, bytes) catch return self.abort(error.TransportFailure)) orelse return .wait_output;\n                                                                                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig:40:28: 0x7ff736045e1b in run (audio-v2-receiver-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:85:9: 0x7ff736046970 in sendRecord (audio-v2-receiver-probe_zcu.obj)\n    if (try network.run(driver) != .complete) return error.WriteFailed;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:145:9: 0x7ff7360486de in main (audio-v2-receiver-probe_zcu.obj)\n        try sendRecord(&network, &driver, &gate, try wire.encodeControl(&outgoing, .ack, gate.stream, gate.next_frame), deadline);\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "stalled",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "OperationDeadline"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: OperationDeadline\nC:\\Projects\\tls-zig\\src\\driver.zig:92:9: 0x7ff736174d2d in abort (audio-v2-receiver-probe_zcu.obj)\n        return err;\n        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:99:41: 0x7ff7361749a2 in check (audio-v2-receiver-probe_zcu.obj)\n        if (now_ms >= self.deadline_ms) return self.abort(error.OperationDeadline);\n                                        ^\nC:\\Projects\\tls-zig\\src\\driver.zig:235:9: 0x7ff73617c7c6 in step (audio-v2-receiver-probe_zcu.obj)\n        try self.check(now_ms);\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig:40:28: 0x7ff736045e1b in run (audio-v2-receiver-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:66:32: 0x7ff73604647e in next (audio-v2-receiver-probe_zcu.obj)\n                const result = try network.run(driver);\n                               ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:125:35: 0x7ff7360479f0 in main (audio-v2-receiver-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n                                  ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "wrong-alpn",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "AlpnMismatch"
+      ],
+      "peer": {
+        "authenticated": false,
+        "alpn": null,
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"
+      },
+      "output": "error: AlpnMismatch\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff73617d18a in step (audio-v2-receiver-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig:40:28: 0x7ff736045e1b in run (audio-v2-receiver-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:106:9: 0x7ff736047663 in main (audio-v2-receiver-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.HandshakeFailed;\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "receiver",
+      "case": "wrong-name",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "peer": {
+        "authenticated": false,
+        "alpn": null,
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1081)"
+      },
+      "output": "error: PeerAuthentication\nC:\\Projects\\tls-zig\\src\\driver.zig:288:21: 0x7ff73617d18a in step (audio-v2-receiver-probe_zcu.obj)\n                    return err;\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig:40:28: 0x7ff736045e1b in run (audio-v2-receiver-probe_zcu.obj)\n            const result = try driver.step(demo_now());\n                           ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:106:9: 0x7ff736047663 in main (audio-v2-receiver-probe_zcu.obj)\n    if (try network.run(&driver) != .complete) return error.HandshakeFailed;\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "bad-accept",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "FormatMismatch"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: FormatMismatch\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:61:64: 0x7ff7dfab84ee in apply (audio-v2-sender-probe_zcu.obj)\n                if (!self.format.eql(try v2.profile(message))) return error.FormatMismatch;\n                                                               ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:115:9: 0x7ff7df987527 in main (audio-v2-sender-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "wrong-stream-accept",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "WrongStream"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: WrongStream\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:60:70: 0x7ff7dfab8416 in apply (audio-v2-sender-probe_zcu.obj)\n                if (!std.mem.eql(u8, &self.stream, &message.stream)) return error.WrongStream;\n                                                                     ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:115:9: 0x7ff7df987527 in main (audio-v2-sender-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "early-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 0,
+        "ack": false,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record"
+      },
+      "output": "error: InvalidState\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:58:46: 0x7ff7dfab8323 in apply (audio-v2-sender-probe_zcu.obj)\n                if (message.kind != .accept) return error.InvalidState;\n                                             ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:115:9: 0x7ff7df987527 in main (audio-v2-sender-probe_zcu.obj)\n        try gate.apply(.incoming, try reader.next(&network, &driver, deadline));\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "wrong-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Discontinuous\nC:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig:82:58: 0x7ff7dfab88f1 in apply (audio-v2-sender-probe_zcu.obj)\n                if (message.position != self.next_frame) return error.Discontinuous;\n                                                         ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:123:9: 0x7ff7df987c56 in main (audio-v2-sender-probe_zcu.obj)\n        try gate.apply(.incoming, ack);\n        ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "missing-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "MissingAck"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: MissingAck\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:69:21: 0x7ff7df986815 in next (audio-v2-sender-probe_zcu.obj)\n                    return error.ChannelClosed;\n                    ^\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:122:74: 0x7ff7df987be5 in main (audio-v2-sender-probe_zcu.obj)\n        const ack = reader.next(&network, &driver, deadline) catch |err| return if (err == error.ChannelClosed) error.MissingAck else err;\n                                                                         ^\n",
+      "peer_terminated": true
+    },
+    {
+      "role": "sender",
+      "case": "after-ack",
+      "passed": true,
+      "exit_code": 1,
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "peer": {
+        "authenticated": true,
+        "alpn": "jcr-audio/2",
+        "verified_frames": 1285,
+        "ack": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: DataAfterEnd\nC:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig:148:65: 0x7ff7df987cd9 in main (audio-v2-sender-probe_zcu.obj)\n    if (gate.phase != .complete or reader.offset < reader.used) return error.DataAfterEnd;\n                                                                ^\n",
+      "peer_terminated": true
+    }
+  ]
+}

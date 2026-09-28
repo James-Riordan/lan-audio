@@ -1,0 +1,3143 @@
+{
+  "schema": 1,
+  "node": "T00",
+  "status": "passed",
+  "obligation_sha256": "42961941b748d1db1cfb5fe92dbae922c0b0684d69a6838f35c400ddf67352fa",
+  "design_sha256": "bdae743c31f78de7cfe1bd5c27d747d5c62e3537fce0c5d808979826423e8978",
+  "created_utc": "2026-09-26T18:38:31.977216+00:00",
+  "reviewer": "Codex implementation/source review; not independent security certification",
+  "scope_review": "The surplus-Initial failure discovered during Q00 review is fixed by per-message input leasing and rejection of queued old-level surplus before events/readiness. The same external production probe now rejects with UnexpectedLevel; both roles and native budgets 1/16384 are covered by the tenth conformance test. Unchanged core, ABI and records evidence is reused after reviewing its unchanged execution closure; the actual Engine and production consumer are re-executed in both modes. The implemented native provider is Windows x86_64 with the exact OpenSSL 3.5.8 SDK and pinned Zig. LP64/other native targets explicitly remain unavailable, with no cross-build substituted for runtime/ABI evidence. T07/T09/T13 and the QUIC endpoint/resource/independent-interop graph remain unfinished. The direct reference adapter uses the same OpenSSL provider, bypasses the new C adapter/Engine and independently encrypts a genuine QUIC short-header packet; it is not independent QUIC endpoint interoperability. Existing records sources, package pins, frozen QUIC fixture and all SDK files are preserved. Backend/tool acceptance is refreshed for the final exported Engine build closure. Historical failed attempts remain unchanged; all runs selected into this receipt exited successfully.",
+  "remaining_gaps": [],
+  "environment": {
+    "zig": "0.17.0-dev.1859+dcceb318e",
+    "target": "x86_64-windows-gnu",
+    "os": "Windows x86_64",
+    "backend": "OpenSSL 3.5.8 25 Aug 2026",
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "python_executable_sha256": "cce21c0e8710e304273e98ac4b2b0f5aceb639acbcd2343cbaa5c4e81619c45b",
+    "zig_executable_sha256": "c55a2e58974d09c79653b3438312052102d5f06dab7eb19f22b6df0c4b10ce16",
+    "powershell": "pwsh from bundled Codex runtime; actual executable path resolved by shutil.which in test harness",
+    "overrides_native_runs": {
+      "PYTHONOPTIMIZE": "removed",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TLS_OPENSSL_BIN": "deps/openssl-install/bin",
+      "OPENSSL_CONF": "deps/openssl-install/ssl/openssl.cnf",
+      "OPENSSL_MODULES": "deps/openssl-install/lib/ossl-modules",
+      "ZIG_GLOBAL_CACHE_DIR": ".zig-global-cache",
+      "PATH": "Python directory; pinned Zig directory; locked SDK bin; inherited PATH"
+    },
+    "scope": "Native Windows x86_64 only. Pure consumers cross-compile for seven additional targets; other native providers remain unavailable/unqualified."
+  },
+  "inputs": [
+    {
+      "project": "tls-zig",
+      "path": "AGENTS.md",
+      "sha256": "801b092a51908202937dee31ea0aab3a858581a97b2b63269327573a3422dbf5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "CHECKPOINT.md",
+      "sha256": "01c99aeb4224f9693e2055b9d5702ff2da71fca3b2decb6a3a7b668fd0baab4a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "HANDOFF-shutdown.md",
+      "sha256": "ad78248b14893bfb5cc746facba0e9fa9798ac140928891d28d4df584a4389cb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "HANDOFF-tcp-consumer.md",
+      "sha256": "553c72bb57fe9ad49580aad89d30c3e607dda63e96720f9a04fba0d04e9a9f71"
+    },
+    {
+      "project": "tls-zig",
+      "path": "HOST-DRIVER.md",
+      "sha256": "184019fce5dbb97f50b21aa72de7231cf821f0dfb74a3c3f826d5f8b32296e97"
+    },
+    {
+      "project": "tls-zig",
+      "path": "README.md",
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90"
+    },
+    {
+      "project": "tls-zig",
+      "path": "SOURCE-ORIGIN.json",
+      "sha256": "94920eb7271a06691f20e91a9d06692f37c33f8700e5a2d91a46d79b3858d049"
+    },
+    {
+      "project": "tls-zig",
+      "path": "backend-lock.json",
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef"
+    },
+    {
+      "project": "tls-zig",
+      "path": "build.zig",
+      "sha256": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134"
+    },
+    {
+      "project": "tls-zig",
+      "path": "build.zig.zon",
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/bin/libcrypto-3-x64.dll",
+      "sha256": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/bin/libssl-3-x64.dll",
+      "sha256": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/bin/openssl.exe",
+      "sha256": "6785566f72a2c113629003c6c5b6b10e931b225d5f1f816750fd74355abf4f46"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/aes.h",
+      "sha256": "130e304c466bda5db6de2fdbca3a970905070ab935d702e61c8371334851ea27"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asn1.h",
+      "sha256": "07a4863ad1c13c558325deb9ccd0184f979f589d1c68bb1df9b903a404d02406"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asn1err.h",
+      "sha256": "9d60638b3d0c52170d390fe566c0b96a6381590590cc3dd71339eb85140fe1d6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asn1t.h",
+      "sha256": "1933928ab928f633ffd7d331d49894f386a478f2d3eddf095ba1cea280ce21b6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/async.h",
+      "sha256": "708d52ecd7bb5ca83d243ddecb132db0693b0809f65c093eabda549156934030"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asyncerr.h",
+      "sha256": "eb6ea0f0389aa7846ea5b8f5b7b8d2a82a7b52e7dbfa105bc137e52be1399a69"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bio.h",
+      "sha256": "5a5ae5e2fea83c1bccd40b5b9e0b2bd6219cd9d9424a6eda6b9c487a2114e721"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bioerr.h",
+      "sha256": "fe1bf57251e4eaab30d2a6aa2048ee93deb1f0f15ef6634f61093b4d405586c6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/blowfish.h",
+      "sha256": "97064924914f71425e48f5d53893abca0f07f329dde7a8b93b581dc9ee2e837a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bn.h",
+      "sha256": "da179e5d98e8351e3e29f148bd88b42cba84fe60c7927a584f213bf2d09c38ed"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bnerr.h",
+      "sha256": "beeb78746fbcc2c09e1f833f4c2ea72e845e757390aad7dc8699f7787b580204"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/buffer.h",
+      "sha256": "c7b9803f89bb492176a1e2738999dad86195ab8048a26e8ec9ef6948b8882e8a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/buffererr.h",
+      "sha256": "4dea6e8ec7f09bfbdaa85fa3e75572b95d2ea62a813e7420a04f5f56ee7ccdfd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/byteorder.h",
+      "sha256": "f062018f5fbe9f8459967dffaaa8e27f34596fb0da21fc011d0d556384a0305c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/camellia.h",
+      "sha256": "e03acf0f3406032e5322e4f3368e8e48e5b73e8846955c3bcb3a4f1cb54d2ebc"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cast.h",
+      "sha256": "4fafc375a53d88fe4c709d8ee5fb74dc0fcaf91915837c3c6b4df0d916b07f0a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmac.h",
+      "sha256": "048677b08aab6fd862d2b8b15556db8355d2142b93a9431ffba1d75a25912847"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmp.h",
+      "sha256": "a56346471600315a467bd3d7727a78c6b2b004be8a09f5c55af3ac86b1510433"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmp_util.h",
+      "sha256": "16c51c48c83c930b018ff711553e107f1870f1cedd32d94c06f15709b080c321"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmperr.h",
+      "sha256": "220d1a903b66e25fa1de92f3ee8b3f5ef27de6dface0a4ea68e683a19e3549a7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cms.h",
+      "sha256": "ac9030882559eaf3292aa59bf6a361505ac99f85318ce00b6c6b0671b162a97a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmserr.h",
+      "sha256": "1cfc091ae52fe85c79bccfe1cc2d0e2979afff511e6a91fd04142596a65ac31a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/comp.h",
+      "sha256": "3f95492b4054a8064bc75f770766aa6c8c0866cbd267939460786e13092a053e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/comperr.h",
+      "sha256": "03faa7ac9cf7ec99350a55758a685056dae8f75992887e0411c23b0d8c5d83b0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conf.h",
+      "sha256": "c6632d4644f9311e558ab71be30064729260f5e231e471d7c6ca88b0b6cf9647"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conf_api.h",
+      "sha256": "38dce9e9e0a438fcaf1d173c26e61c821bfd3756e221e3be76cf010580ac52f7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conferr.h",
+      "sha256": "ea9346e399d5dd1fbcca4f34078e1acb5039333602ecaf72faa04e32cdd55484"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/configuration.h",
+      "sha256": "63ad45c993c1f15fb37cb469865f6900fa478b8bffbc1c6d25913d5ca8b065bf"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conftypes.h",
+      "sha256": "496997cc0f4c32b840677eeefd3ecb488453254be6e228b8cd34d4a4061a9e28"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core.h",
+      "sha256": "4d4e63e2e01d06530515adbbe3c93601c5f0f5e1a96754d34d3470bccfcbdbc3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core_dispatch.h",
+      "sha256": "877d786bd366e80baa763d2c6c0b94e1d91c92cb0b6fa26d4004e6b0c3e6dd81"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core_names.h",
+      "sha256": "75fa3a3dab458aa2c0e84a61a052fccb92fc1aca74aaa3a1af8b3e5fe2407ce0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core_object.h",
+      "sha256": "e8fa8c62ad1367bd325d59d721214d1a7afd5423205134152f60cc39a8590c8a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/crmf.h",
+      "sha256": "b4b3fd06761da291414aac3cccf97503ec5704c2fb67c8c13c6eda0b8bcad92f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/crmferr.h",
+      "sha256": "9f2ff7a468b5048d543fef0324b39abdea63fa07bc915f62ff42a1937d7258c2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/crypto.h",
+      "sha256": "da6f7d83fba9ec56705709d7cd9b4cb4d528dcb8fb340465a99236f5bc38a0ee"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cryptoerr.h",
+      "sha256": "c457c0591449551657a69ff9727784a79cc1afd899ac733c682c1a41fefdaa19"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cryptoerr_legacy.h",
+      "sha256": "985664cb71a62441b2822028340bb4ad5e3f98d6c74ba4c1bc7c997e188b97d3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ct.h",
+      "sha256": "54b34eb7204903d64ed7100fc5d93f2f8f92fe2921682dec4857c861324d3b3e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cterr.h",
+      "sha256": "26d971ab2166ba4473864506dcd933290fa6c321956ef46220eb61fb33a04c89"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/decoder.h",
+      "sha256": "72dbf52e4dc4efbfaddbf31ab6f2bec3e9a5c22eed865d057b960a014a4b9ec8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/decodererr.h",
+      "sha256": "c6818c667bdf8c37c5423580e0551359c69efc884198d28675db23e9fc70946e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/des.h",
+      "sha256": "420afefcf27f28046912c5f156bc9e93d71a2c8a47bf0f605695a13f391cd5f9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dh.h",
+      "sha256": "25080c32c48d5a88053c4b83c326e8f024b68249a0ef65d3c45af4f9aab6e0c6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dherr.h",
+      "sha256": "70f9e260865a9aae4c5f9a72d42d878e4dc216c906709245a8da2cceb79c3a14"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dsa.h",
+      "sha256": "dac47d9779f83eb4e5a4f57c234e6eb25277cea68001384360e16c8859c38338"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dsaerr.h",
+      "sha256": "b8fb8dae664d18298ae4b0c5444378e3f5c5d095256acb50764230159b1a15d6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dtls1.h",
+      "sha256": "3477022a712ecbb2bfb61b297c57026f1c354d52c638dfb22292183bd68d2e8f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/e_os2.h",
+      "sha256": "d7300e16ec04f764e8fd45ae5288c37ab5af09dd1ea204d17c54c0155c69921c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/e_ostime.h",
+      "sha256": "0528cffa1548778b3ad52d4abb527e5f31590fb1bab4b0f55aad391efd79fd68"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ebcdic.h",
+      "sha256": "f50d3c91cb24772cf3155fe6464d811219b8f7c65ea3d4f974f58c03c3f27ab5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ec.h",
+      "sha256": "2cc0edb6a18c4c1199bfce6799ca56362a6c27d41dfdfee62177a3d53a8c9a65"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ecdh.h",
+      "sha256": "5b99fdd1dfea38640ed8a506fb9b66db381cc26a1254448a81cc6b161e41850f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ecdsa.h",
+      "sha256": "5b99fdd1dfea38640ed8a506fb9b66db381cc26a1254448a81cc6b161e41850f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ecerr.h",
+      "sha256": "c072432649cd1e4bd1eb8c1f636bc2b57045d6f620d69d61c85f589d1c6b63e3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/encoder.h",
+      "sha256": "73459b25f863cf9bbb3de66f04ffe7ddaf9450f3c26afb1d5827325fa0a89fd9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/encodererr.h",
+      "sha256": "d010ca78b1df89c7fe3410d2aa5674179bf6750a445382ab8a0314c20a5b9799"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/engine.h",
+      "sha256": "185311cc9702aa00fcafefad6f83ca1f597659d5075b66100c61053e1be5f47d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/engineerr.h",
+      "sha256": "2732c698916f320ba12ba690a80c1ef0651112015c5eac6141b1c3c315d1f5fc"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/err.h",
+      "sha256": "0d673984ff62d55d1fb4534d8136b7325e5264efeeb0b911cc94a4922681e080"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ess.h",
+      "sha256": "0b8cb052d0ed0e193465c39b61e11e9d17cc4c355077ab15da710103e23524b1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/esserr.h",
+      "sha256": "9ab984787cce1224e1426be57987e7726d8c5d38651dd96802a7d433c5288ae4"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/evp.h",
+      "sha256": "41b42c68adfd98b9d8a80fb2d78bbdaf1094f43dd02be045c7d8605edf36a706"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/evperr.h",
+      "sha256": "ee0a462f1985667434a2b8a91d5df67ce2ee74e4ad9246f660dece5fafcf4474"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/fips_names.h",
+      "sha256": "95f0ddd1271d1bb609acbe42924e903a2dda8e224cced9eb56f5680a6ae75a8e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/fipskey.h",
+      "sha256": "6d2280433f59da2d0f8a87ef67d0f83b74821f9ef625746982875ff104740e69"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/hmac.h",
+      "sha256": "9caf0b993c6ae2b3c75b9b585c8539dd358ca5f4edc42447295f87fc504eb1b9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/hpke.h",
+      "sha256": "58f81dab37eddc03b86db9dd640980fca872ddf19f4477482826a64f20454cb9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/http.h",
+      "sha256": "1f8d65d9633d54a74e8477396f2e3d34f5cdafc753fa8d56a5ee31753f5b734f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/httperr.h",
+      "sha256": "56b740a25198f30d19c8ed57b36679bbb32f8f2d97291155d4b3091c347ae423"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/idea.h",
+      "sha256": "d114cb69e2e820008c508b7ad9002586806d82e3006e88162bd4a7c2dcd1e801"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/indicator.h",
+      "sha256": "4be987d4fe4a4b39feac27c2ee85000e1b6ca7188d8ca9f75689a8205c2b4563"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/kdf.h",
+      "sha256": "a4a7c722598b9b5b5fa6e4d659a7c8cf659c5db60c7396ed021d434c45e552c6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/kdferr.h",
+      "sha256": "cbf4bd667f0a53459163f546920c2c98ce6d10b0db99176c779d8bf32f04e8b7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/lhash.h",
+      "sha256": "ba50a0dc4caa9662e138f913566c44454a68f6e59c405c761c1f387f58855af4"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/macros.h",
+      "sha256": "dc27bc9e94abbb9e49bbcb604da5c061a65145586ac388c3fb4fc311daaccf96"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/md2.h",
+      "sha256": "a8eb0a1cdd0ced053d0f5dc5d1f63fe67f96a83c1cc37b6bf7adde85a567a631"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/md4.h",
+      "sha256": "75d0ff7b22daa2ab31a0cd03ce9ca10cef64f431d32c49def33d0f0164e36f0d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/md5.h",
+      "sha256": "e22e567d09253eebf2c17f620783808f407bc7b969aa90bf3b44ac9001f6d329"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/mdc2.h",
+      "sha256": "740c2361d9b0ab5330ae0054e368f573416c401cb3855b72323967b29232421f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ml_kem.h",
+      "sha256": "58ecec9d4d95ab5172290a4c5725b7b6940149ecdbff5a33b93cc67ede1b25f7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/modes.h",
+      "sha256": "8ea97ace0601cdce6a12d0e1e92aefec062c299d0fcb5ff6477e3d752a9b9763"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/obj_mac.h",
+      "sha256": "d51cb3f619888a0485ba46ad886f76ac605ce78a3cfbc080460947ab2dbb3a02"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/objects.h",
+      "sha256": "b6227db488aa39ed20a29e67d48fe8fefb2f649a1afcc3149cba22ac26510057"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/objectserr.h",
+      "sha256": "fc14e6c9e71fb550363394f912cb72e6078dd11e300bdddfdd17ec118c88dc4b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ocsp.h",
+      "sha256": "fb6b98fe220246983fef2af0392e37578ef52a71cb2044eb07f5f57a84a66f88"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ocsperr.h",
+      "sha256": "51b319980fb406b70ff0aee9c145c260553f4ff6516305b9c2864643096cc30c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/opensslconf.h",
+      "sha256": "7f4b522c049d0bd0d651e6f6ebe71d6df0c37231a94e32524da3f4642ebda3be"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/opensslv.h",
+      "sha256": "b3edda4f71b6f328b62bb59339e76f945740c992c2509b8e53ef1afda937cce5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ossl_typ.h",
+      "sha256": "8d430751bbcd1d9695f3dd85b16958fd6255dfbf55775207923f67cba1754548"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/param_build.h",
+      "sha256": "f078c5549e172b49da9993ef68c7b7fedafd66b05255c9bf8a37154f0a40bdb7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/params.h",
+      "sha256": "b76d73449d8d44d14a7da9918caf3d1feee85b384e2d62ace73a8a1126152702"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pem.h",
+      "sha256": "9098124ff7a21c8f1db5ddead59b1cf092f88c9f44bf88dacd3c8de9c67ade76"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pem2.h",
+      "sha256": "5bd104c872bbfee2d16f5af88c01b0aeee9f177ecc88c0dd237c9c9948eeedc6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pemerr.h",
+      "sha256": "18c1dbdde2452416b1d49c7512b7c4b8bf26ac7b83f5c0ee5e27e9bec454d2fb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs12.h",
+      "sha256": "ab0eab4385122882f6e3fc65f7986a6d65c8b49a7d6148ed017762bbf5e17889"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs12err.h",
+      "sha256": "fbf4142e0ee58b6c6841890d873f07ba0362e21ad74702d70552122e01c096e9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs7.h",
+      "sha256": "280aac0483477bc2d55e94a5f93e42e96a72ec518ae082ebd6f1b394b95681d4"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs7err.h",
+      "sha256": "717e017e7d0981928b33820660e19d5c264a06a5e824b94194036a8be92be07c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/prov_ssl.h",
+      "sha256": "23b96759ae94e17c7c0e7ee32a531676be2a276a6d9802828e80268e20f224fd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/proverr.h",
+      "sha256": "3aaec27b2bf592b5861a3524b6f03a541d7de34e6dfcbcabc2b6bc40221bc743"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/provider.h",
+      "sha256": "dac4bfad226a8e5513cecf472e41e0b7ed93c95374a0ec3fd56f7b046e0aeff1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/quic.h",
+      "sha256": "a80af6c42394132eaad8de7177c6b0b3f747711730e8dd687acdc34284b3c2f8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rand.h",
+      "sha256": "cb240ffedfd9516ec7a8cd0796951d46a4707c0460f940371620c83f7bafd037"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/randerr.h",
+      "sha256": "a6acbb47da2f26fe5e572f232eb9d9ebcd65bb7c01d5984ab26229e5bf0bd45e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rc2.h",
+      "sha256": "b86a429de0c73aca6e0504b8833c1dcd9e8c7cdf65c2b31b38d0d0c7b19cc5e9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rc4.h",
+      "sha256": "1bb4fa9d14861cdcf0a721d8d1026be80ce019da459ffdd8b5c1d12365110e78"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rc5.h",
+      "sha256": "dd71ab468383a2a8ca4ff34f9273b481c1ed518c380da6d1ab82e9ca6b7edbd9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ripemd.h",
+      "sha256": "4457b36942bc0e298c993b48468ef8f3f00331a9d67bd0b894dd5bc5f58ab35d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rsa.h",
+      "sha256": "2c9780f9b4b35c3f14271962938e16b8505e9f5d38566c104bce9a82be23a0e1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rsaerr.h",
+      "sha256": "b4f87b5dddc672b81de0dfd7f3c4e6409887bd08b286c99ded8f1255e5836804"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/safestack.h",
+      "sha256": "050aa1f62de6d1473debd7405279a50fa17c79e9fee5484d605fa93c1bf6bf1d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/seed.h",
+      "sha256": "75a00b017f40beba051fdaad04876e18d3c80d1b1f1c21d78fafc69ae8e3b034"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/self_test.h",
+      "sha256": "4bb6ecb6d55e5e1bee6ef79c24bc8691174ad1b5c160f7d3daea150c140d3abb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/sha.h",
+      "sha256": "7e006accd6565cc97dee672c097acc5e38482be7cd4fa1e0c316bf466425b895"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/srp.h",
+      "sha256": "fb5313c401adeccd5970bc008d39dcde3892f165ac2207d646979566c4415783"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/srtp.h",
+      "sha256": "6efa8edb1f040ba35cb05a671efc74c1494b9d4badc32d47cd5bb99e1a9cda38"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ssl.h",
+      "sha256": "a6a87709e0726b6194269baac236daa473f04d23bc7de1f87e0baa44d9abe8a8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ssl2.h",
+      "sha256": "d33dc2afbcdee20f20ffcdd5cda6777c5e49a7cc37d513e4618b71a99129af20"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ssl3.h",
+      "sha256": "f98e0eb1702bf99614e92e2d09f1af5b59309e156441e40ab711df7d661536aa"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/sslerr.h",
+      "sha256": "7a9dab7a198ea5c17fe5cf8e1905a54ae88c0044a86c1accf1e7cc9e7de374e2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/sslerr_legacy.h",
+      "sha256": "988c235994713d83d73ee904804f7edb4f6e321b4ab94c5aa5a9a0c7134fb499"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/stack.h",
+      "sha256": "c81fbb17b5476dca609b96eb11372d1d246a49096838c2cf7e81ad6b25f69316"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/store.h",
+      "sha256": "0fd665a474792f49055d7bd6e2bebed1449fb2dfd21ac042aa2cbc4cb6c8c66e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/storeerr.h",
+      "sha256": "e13ecdf3c46b4dde5d857f8a7a3e2c0a444e309aa05d789bf99d73ecefab87aa"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/symhacks.h",
+      "sha256": "2b54552189bfbf4204c28c6a421b21702a3cd3dba37570dbcdadb7ee648f155b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/thread.h",
+      "sha256": "583716b74d6aa0596c1d1b06cb16f657d4d9fb9c13cf30505ec0327046af6baf"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/tls1.h",
+      "sha256": "f075f51b48cdc3503e40b8f81fb2b760ba2d4f315d2844759d9089ffb10613dc"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/trace.h",
+      "sha256": "5b7f86a453e6b404ff019e23e84de856c2a25b8243d4bfb92c92471a3735e332"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ts.h",
+      "sha256": "3de4eecd9a731d9a05a1b7baab18cb1c62f59f8a9f9e5ed049525a8ada9207b8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/tserr.h",
+      "sha256": "27e66bf494926dea06d8c3800823f2485cf1a7f8f41f5628ff4a443f9bcceb87"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/txt_db.h",
+      "sha256": "cbd03be764d6d12e12895703756fbe5f2b7611d4cd55d343837d48e8e6e60523"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/types.h",
+      "sha256": "de5422d2e621df11c17ab18473ea4f2368ecc64b1e45311c4890cc62b31f81c5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ui.h",
+      "sha256": "b5830554086cd2fcdfc7916f4a5ce9db5268da5471a2a9c1278729ee7949135c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/uierr.h",
+      "sha256": "a21be118ee97343a03dc28256370839e5751c82a2a7bcb4c60fcbd97a9e2bef5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/whrlpool.h",
+      "sha256": "d38ef40783400956d571e442d4f459e9c611239d719eb128e19bc64982d01922"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509.h",
+      "sha256": "a853a3e3a586a31dbb0ac8f88c900757748712e6ff6c82aa9897ea67a6218b1b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509_acert.h",
+      "sha256": "7e3b443e87f104f57950b3a49ee5711431567f939b40bcc50a22aa168b8fe885"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509_vfy.h",
+      "sha256": "bdaf17b19bccb7bd1ec6455a88b57cadcaf3b61eba250bc424b68da00e713119"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509err.h",
+      "sha256": "be93ee6c9d58aadb5f836d5e293ec93c94ffc603c46a1d8d1c8b31cf83959fb9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509v3.h",
+      "sha256": "0fa2c0d23ac6b34bd1de78818b0e67ef6df7f788b2d36b60abf111a553f429eb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509v3err.h",
+      "sha256": "b9be8b0429bfaefb973531e81d598e40779b3788e129c4cc9e33651d2308b990"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/cmake/OpenSSL/OpenSSLConfig.cmake",
+      "sha256": "c5a5d11fc9639570e9c9cf416b50739e5fc32d5704bc972f5cf762a171f237cf"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/cmake/OpenSSL/OpenSSLConfigVersion.cmake",
+      "sha256": "45aab6e3978b3dede5383cba2b47940f00c79bc64eea581cbcd319aa3d957089"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/engines-3/capi.dll",
+      "sha256": "dacc5c6cc5f0a09ff3618d580e33774df243efb77547554335e34ffda3c50dec"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/engines-3/loader_attic.dll",
+      "sha256": "eaec1312c2565b2fcf036841947c6c497782575b1cde2f3bfdee1c7c045769c3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/engines-3/padlock.dll",
+      "sha256": "5bc3ce76a46c964c700dc4faebfbc0b2e6077fbb84ee7fb647974e13733b6286"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libcrypto.a",
+      "sha256": "023a1e04c33b61549c23f0d5aba4fb197628a22897e2c953df00d6da4fd10446"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libcrypto.dll.a",
+      "sha256": "c0008586576bb1e85d12cd8f218a16b5a4d272990cf56f846ece749d05830f48"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libssl.a",
+      "sha256": "61c0fb61ec624cb2b90f277b0870f895fb5673d0b122e49268263ad2997349e5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libssl.dll.a",
+      "sha256": "48ed05721fb806a705329278ab8a5221f92c628f9e64eccaf379b30d5b65f356"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/ossl-modules/legacy.dll",
+      "sha256": "6731b1965bd470d427e3e0c31e991f29dd0971544b7f5c71b036b02b180663d2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/pkgconfig/libcrypto.pc",
+      "sha256": "822d6a62381e364ec9b6f07194f7721700b2aa8ce40992d07fea2b6bf4447c0c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/pkgconfig/libssl.pc",
+      "sha256": "2c5a463d8abbe7402460daf22ccfc76de220927414448d0462fc9aac8cea638b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/pkgconfig/openssl.pc",
+      "sha256": "b394288357bb68582514b062bc3f53a1cd6b59e3f0d53eb5e193c45c9b84939a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/ct_log_list.cnf",
+      "sha256": "f1c1803d13d1d0b755b13b23c28bd4e20e07baf9f2b744c9337ba5866aa0ec3b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/ct_log_list.cnf.dist",
+      "sha256": "f1c1803d13d1d0b755b13b23c28bd4e20e07baf9f2b744c9337ba5866aa0ec3b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/misc/CA.pl",
+      "sha256": "f87ea885e124ed592ccfce3010348c2286b83548e360d8c311925c0422891828"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/misc/tsget",
+      "sha256": "f12c221ef4a07e582031c7dfd72416aa176fdd530f48f8ccde3d47ed176a09d8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/misc/tsget.pl",
+      "sha256": "f12c221ef4a07e582031c7dfd72416aa176fdd530f48f8ccde3d47ed176a09d8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/openssl.cnf",
+      "sha256": "a65a2cb9f4ee8ffdc7ef4f0ac600c0bdafb95b7b1ab457188ac610a62f5ad6b3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/openssl.cnf.dist",
+      "sha256": "a65a2cb9f4ee8ffdc7ef4f0ac600c0bdafb95b7b1ab457188ac610a62f5ad6b3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/AGENTS.md.md",
+      "sha256": "fe89694bb7c6fdfdda1a0ce278bffc526549f5fb8edf0a55dce92aa53444a1b5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/CHECKPOINT.md.md",
+      "sha256": "4239486beb160409758d633f2e56e6a2e0955ba1f94805b8cf889b1d2009b68b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/HANDOFF-shutdown.md.md",
+      "sha256": "7e1e673abab0402422555ef80823a92f4cbb9c8a5a6e851d94dbd966b4343c7b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/HANDOFF-tcp-consumer.md.md",
+      "sha256": "d3eb4f833c75fcfa1c3b9ba3aae51c95c6095e425388a4c193eff57feb76624c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/HOST-DRIVER.md.md",
+      "sha256": "49eac385668966566f6bf28ee707734fab4e57abad89301bfcb3ab45e1e3eb05"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/README.md.md",
+      "sha256": "0fde8437a8e56c712499cdb10dc84da46486e92807a1359e82cb5875525cab3f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/SOURCE-ORIGIN.json.md",
+      "sha256": "ba26376052a9d76faaa4f6b616a09b84ade706d3b1f79c1a76df22334f167e2f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/backend-lock.json.md",
+      "sha256": "9e71cd0c8ff7cf7c6055e33022af8ec179368fb1466a2404adf907d11f9ced0f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/build.zig.md",
+      "sha256": "b64ba870b0f92f4f2aa02c89c403f5ec94432e4ae876041f96a9457b55b1aefa"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/build.zig.zon.md",
+      "sha256": "4746861771735159c4db0fe2f5efeddeaadf0eb6184837e2b458119d83b7fff8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/evidence/build-recovery.md.md",
+      "sha256": "8f3f1e4aeaeaa59c9881786ed94dc585702588c35dcac9ffa63b6eca516ae73a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/evidence/source-provenance.json.md",
+      "sha256": "8f935bb13ed93fbf3278720da7542f862c2f9378ee98e8dcbd71b5ddd8c2c14e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/consumer/build.zig.md",
+      "sha256": "6098ddc1738816907dffe8afd5c4035ff51489cec47be16f064ab1ce2ac75823"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/consumer/build.zig.zon.md",
+      "sha256": "bcc27d8d61fa7e4761b7674a4f509ed602dd2abaa3fdfaffd3d85aaa80307c69"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/consumer/main.zig.md",
+      "sha256": "dfdd08b926a5c3ddfbad504487fb9143c69f867e353fba19e1f33e11e9a50d24"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/consumer/socket.c.md",
+      "sha256": "009145e8d1ffc140a69fb7625c019918f3db323c356ae135d080fc599b137d46"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/build.zig.md",
+      "sha256": "9f24f763931d4db11a1a988b99d555ed51a0c75b9e52c75e765287c58f2b8831"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/build.zig.zon.md",
+      "sha256": "61fd08d6407a2473c472ab1963cf9cd089457a489f789a946e52c68c90b21cdd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/main.zig.md",
+      "sha256": "f893d6a54e53c5ff16764fe78e441ebe0734efc89dc975e581fe605a3978fec6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/provider.zig.md",
+      "sha256": "2bfa053a7347c3bf2badc172241c5bc1c5e1a1dd3b9bd5531b945dcd7b6222cf"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-engine/build.zig.md",
+      "sha256": "44d30a865457c6c7d05fe237fe4389f0633ee6db49527598938f6709b136e1ca"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-engine/build.zig.zon.md",
+      "sha256": "9a935d7c62731916db2a4c8aff42e5448216af420668675c0c9b41802ebdc33d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-engine/main.zig.md",
+      "sha256": "6dbaaa8947aa825abbee2b17a293e3d370f76bac0fec11a2ffc65f094b0fcf71"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/roundtrip.zig.md",
+      "sha256": "d7c3081d4bbde36e2178e82a8c7aa2f1192530dab0bd93aa5c2b4e12fbe7bf4c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/backend.c.md",
+      "sha256": "da23d73f8816f15bd98659a98a93185b95f288790547f1d0a7be76db92c7733c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/backend.h.md",
+      "sha256": "dbf05e2cf6a892570c646bc44dc5a24df4ff26a39b9135da0a44b37ab4614723"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/backend.zig.md",
+      "sha256": "d213b4947347647f44032fd4474f32c56057fa1970164e7b733d7b81fca4a58b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/backend/quic.c.md",
+      "sha256": "a76c547372c14a94bf9cc651a4792b4fff2899defc6d1235fb1520c9d0cc75b9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/backend/quic.h.md",
+      "sha256": "5127b13ca1b5cf9b1b4cc42e45d0286303b2a4120e8b982f8a499a57e1dbbe2f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/backend/quic.zig.md",
+      "sha256": "d5dfaef369d9b0df9c11a627debe7fae6d8f3c759c193413269617b93d57ba9d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/driver.zig.md",
+      "sha256": "169db7ef7ee60d0cc227216b09a2aca0287d43633e463d0c49d516e3f423ca30"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic.zig.md",
+      "sha256": "0e8404b1bf76228ef3e62a45eb47ad00912d6b64771576122a7a434b6bc67393"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic/contract.zig.md",
+      "sha256": "5c7be4a8942fd2e5081acf8308da9d6e3f5fb3e89f0bef0e5dc4117061cbc380"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic/engine.zig.md",
+      "sha256": "ac6fe50fa190b245bc20c679e46ce08d2e2701ab5b2714eee9e341c9bd2538c6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic/events.zig.md",
+      "sha256": "0ebcd61a8ad546b4a6050e14ac357c853ae3d2836e58321a491145d1e1bb762e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic_engine.zig.md",
+      "sha256": "845fabe971cf73071a3187359a2d07031faec7e8553a59efcd78956052e345c1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/root.zig.md",
+      "sha256": "7194ca31edeb278146cd3c22d1d495707b2a6bd3bd55a83c0fd43a475de003e3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/driver.zig.md",
+      "sha256": "1e037cc0b22f63f3b52bd527bc71a9ea3293951cca40139b74b2ca6d4b17daee"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/ca.pem.md",
+      "sha256": "84f7a19c3d0abe35adec486111a03548451e9e061de88c8dc12a40f764d2895f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/client.key.md",
+      "sha256": "337dcd5f45da73b6e21612450f21c0cf7e16920c61466e7694e70a6ca7afde5d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/client.pem.md",
+      "sha256": "ab0ccf490b280f181fb2a5533cbde0ef49bbfa91a4180e8802b4df070a9cd68f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/expired.key.md",
+      "sha256": "93be53144c0024e87381fd84b812734997d66411a3fd5cdc9fdc5e3f057a5bb1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/expired.pem.md",
+      "sha256": "60da210d62c095de6ce22bb15fe0be54b842e9dfb9560597f6fe5defe04443ab"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/other-ca.pem.md",
+      "sha256": "c455ae669628a6580c0c7898151c1b3ee750de15672399f5cfbf4964ed5cb891"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/server.key.md",
+      "sha256": "888c7294e37dedd9aea1ef5ef1875a3065ff4178d4876d1ae8839d5d1ed37fd6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/server.pem.md",
+      "sha256": "59dc78240574a61d5e0464d1ab783fc4cdaf60f3e5de58de02f9383f50b3e1ef"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/wrong-purpose.key.md",
+      "sha256": "13631bea54f388affe0835066b059f5e6ae18b527b6de3c95ba271d253b4673b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/fixtures/wrong-purpose.pem.md",
+      "sha256": "13d0f29e01a4bd745c64d049447cf803e4d69cf0475876f005d4ea22efc1535b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/backend.c.md",
+      "sha256": "ef31c59565bba047e5339b8fecf65f7265a1136787893e091861bd7f468640bb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/backend_abi.c.md",
+      "sha256": "618ccd1f0033087d835173c359a02ac77563bf1e712fb357d5825acf4c9b1a48"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/backend_abi.zig.md",
+      "sha256": "b5350875f32053099c925cba0cdc53433393fdc2ae94b1ee8f4c0d79b7d5c6a4"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/contract.zig.md",
+      "sha256": "d89bed13b8e9377edc61f586904dfb44bc4fdf1cf33ddada9e16d2f96a845746"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/events.zig.md",
+      "sha256": "2639a28ee4fb2d2fd40b774bb1b1bbe5d2aec4bfada72f90727f454f4899b51f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/direction-as-level.zig.md",
+      "sha256": "b7963e125d2ba3c683a1bba974d6c088da4f2e5feff6f1d3aeba257827e5c216"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/generation-as-sequence.zig.md",
+      "sha256": "ac1116bfa7bcb0c415c2c684889faa0da8310389887f9759ce7b2fdb55a01311"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/raw-byte-count.zig.md",
+      "sha256": "f5ff9793e30efb7dc4fbde5ed681f81e462111a7fbd73601ef213ed4cf07baf2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/valid.zig.md",
+      "sha256": "b9c69dde19fc9a9e4dbdc41b702d9cff1515b0a414dd9030fc9e28b6c763f040"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/wall-as-monotonic.zig.md",
+      "sha256": "4d989e919147124b7e51488a71da8a668d5bb4c935a47409eff600dee20fbc4e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/reference_peer.c.md",
+      "sha256": "999533e71f293ae9bdadccadb3f9ffbbc146c177919c26abe8e41f596548f83f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic_contract.zig.md",
+      "sha256": "9c516957ba237c513f0100e26fae2e4bf1e9998c3e9b20992a5f59f383b5f9ea"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/transport.zig.md",
+      "sha256": "11fb9a841f9cf56f3a514c191f716b125689dadb4fb64ccdb96d655c50624f71"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/build-openssl.sh.md",
+      "sha256": "d7e0aaf5f1f76f73991376a23e9c412f7562d335bfde609b5398657870681370"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-docs.py.md",
+      "sha256": "e28aba06192a8de563a4fe69308350332ff77bab1a6378146f7dac5d2711c7c7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-event-model.py.md",
+      "sha256": "dff0f83de45fd0b4f959f64657e59ee17f84efbc9ac0108b44ed922fa322da3c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-models.py.md",
+      "sha256": "dac5be88f12790f66f81bbb6f9eb41fde8b8207de774ff99b09a7f23cadad33f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-plan.py.md",
+      "sha256": "4924bc9aace993dd234b6cf797140f97d89aa2b5b38ac892fb2c93d71dfb181d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/fetch-openssl.py.md",
+      "sha256": "318d4ec6d21e249512f938176d1988893733b6f4b4f059556770dab1eaf2809d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/interop.py.md",
+      "sha256": "5d6e5a60d1f895e61b0c29a8255c9cecc1043c0d9b271a4bfe82a7e6084ece93"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/make_fixtures.py.md",
+      "sha256": "54848e98f554a1df8385e76809f87a3e3a9fba43c8c011e1b416e595545f62fe"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/pin-backend.py.md",
+      "sha256": "b2d47430e6316b5012e85d03d989f6144c20faca01b568280e50c2c650d1f1b5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/probe-quic-pair.c.md",
+      "sha256": "11a9d3ed8d94ab3ec8a18cf3daebc8b25502fb44eac087e5d06a8710faace983"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/probe-quic-pair.py.md",
+      "sha256": "ee77f0bd6ab69106b38d0ecb01748e35ed5efe93e21b085229d16fcfabacf09c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/probe-quic-tls.c.md",
+      "sha256": "84c09fa6083f6a608b4284ce28ea1f2f7283197380efd94c5fb485c961dfe483"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/probe-quic-tls.py.md",
+      "sha256": "1cd5913b31fe6d32a5b1d8a347af1f5d91a414109b4e5ae60e8975d19bc039ec"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/qualify-quic-backend.py.md",
+      "sha256": "513af389409c79b7d03f4c4d282b70b9cd799e30519291c5dd7da337e0af96c3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/qualify-quic-core.py.md",
+      "sha256": "25cbf75207b7946273e37198a1e08472d16fb74b868fab6760d64a51bee7efc0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/qualify-quic-engine.py.md",
+      "sha256": "7b2caa5a2fdc9207d76766352420406994ff14bb0a8c01164f2fc8dc18bf4b0d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/qualify.ps1.md",
+      "sha256": "af4337deca31f70834b0c357c5abb7a04024f541c1369db0f109ebc85e708509"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/tcp_interop.py.md",
+      "sha256": "dd604d5c812f485c76a0d03aa40d32e2ed7b07cc7002b4dcc7e0cd48a0f01a2c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/tcp_server_interop.py.md",
+      "sha256": "860ade38b4e067ca2e6ba1fcbda01fa4816734935cdec49b88eaa7a6c40729ed"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/tcp_upload_interop.py.md",
+      "sha256": "4fd46fca84b771872dc9903907d1d8056d41b81eb33a8fbf5b4d256915cfeeb5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/test-backend.py.md",
+      "sha256": "651eff8e32b71f336ff1a67da0893208739d67d13a198f3c088130050de2b962"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/test-openssl.sh.md",
+      "sha256": "62920f724b16886ee692d94507882d331da7100c00372cd4910332c860fe9905"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/test-plan-lifecycle.py.md",
+      "sha256": "5d1dc3089fb5ba0705617834f52ddee8be69f2e5c953bb4a79409a7c7dd87d3f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/test-quic-types.py.md",
+      "sha256": "6e98440446d0d70357e552674340477265b0b6250640bc613d9ccc87e7213479"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/verify-backend.py.md",
+      "sha256": "7c31965b44a81c82abb9e91b9e8bf938b1cb2d3446f0b77a4f49fd0f4db460c0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/roadmap/files/tools/verify-backend.py.md",
+      "sha256": "bdae743c31f78de7cfe1bd5c27d747d5c62e3537fce0c5d808979826423e8978"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/verification/t02-level-gap-probe/build.zig.txt",
+      "sha256": "8e7d64f94d8a9931eb2709c9cc06484b7e78948d05f17d5b05f65cd4cd886650"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/verification/t02-level-gap-probe/build.zig.zon.txt",
+      "sha256": "728456dceb3565c5eac490ed0ad4cbf6c9664235e85206ea18be0531cde97b56"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/verification/t02-level-gap-probe/main.zig.txt",
+      "sha256": "1ef211dec110995c6c86f662e254aac49080e7978669dc6fdd33341042a6502a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/verification/t02-level-gap-probe/surplus-initial-failure.json",
+      "sha256": "8f45e51280cff7f6fba3baf2b8edf7dce363fff9f7608f85b386c14196619eb1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/verification/t02-level-gap-probe/surplus-initial-fixed.json",
+      "sha256": "707bef39cb6e02273df0a0d86d36b9e5462d5dd1915e69e0f483fd0afbeaee45"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/verification/t02-level-integrity.md",
+      "sha256": "c73dde4a6756657ec1bac32726bc43ca4aab8d1ffc863fda2c76e0853286ae87"
+    },
+    {
+      "project": "tls-zig",
+      "path": "evidence/build-recovery.md",
+      "sha256": "62da642c146947480514adee7190f6b64a0f1c08156d0dda452afe6ff69085e9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "evidence/source-provenance.json",
+      "sha256": "23d65ebab94bef0b664985604cb19ac172146f95bd5154b0a93e55761e971830"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/build.zig",
+      "sha256": "8e67d1e2b2c25053c3c6b097a71f92d7e81bd8ef7920787d0c8032de94fdb620"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/build.zig.zon",
+      "sha256": "08021454f3c86bdf6fd55e42885a4d00259fd99b6b7889497d2bbf62d3b37f0c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/main.zig",
+      "sha256": "f0324d2e6867253c2611f8349666d04d885a1394b49efeef60e2778ff1100b30"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/socket.c",
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/build.zig",
+      "sha256": "6748052bac1238badda3164f7cedf4c00d873b30c6ea717c7f24b5bac538eb0f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/build.zig.zon",
+      "sha256": "66d19bd2e2988378a8da716257ec83840a7b52fc14122ad324044a9e2ac72057"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/main.zig",
+      "sha256": "7b7982c218c8e83741db7afde71d88579e92f36e7ee8c8b833d7418aa61427ff"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/provider.zig",
+      "sha256": "0c81a656f93b1dece96a0480e8e351dcfd543e225e0a7fc9483b8524180cc7b1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-engine/build.zig",
+      "sha256": "43a299083c92998b7f842930fae27bd09b739546fade46d0b99efd010e77df1f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-engine/build.zig.zon",
+      "sha256": "dd575a2931f3010dc679d42dff63f1ca013ea8e40ae001121777c3b4e6b81810"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-engine/main.zig",
+      "sha256": "7458353d8a7327d7f99c1ba65add2875e2acb41ec422c713e3ff1d2f0cad2775"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/roundtrip.zig",
+      "sha256": "e5e442435e8f30a7e34d9ac39dd70131bdcd7cb0cc48a0615c9f42974a4f79f0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend.c",
+      "sha256": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend.h",
+      "sha256": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend.zig",
+      "sha256": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend/quic.c",
+      "sha256": "c975b22d3ecdc8b791e976db36f798610f5e831287903c69e69588112d9e0374"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend/quic.h",
+      "sha256": "f8db26c414fe4e00f98d0d43046b40a1272e0d2ec68751d3fd2a8007015856bd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend/quic.zig",
+      "sha256": "45dbbea02b4fb8f0b04ab8a1ee92fe51e582bc54c4a8b0f0d300f5e395db28f0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/driver.zig",
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic.zig",
+      "sha256": "40b6f17b4cae413fc28a6b05f6fff1898b1288af1d36ebbce00379915e9478fd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic/contract.zig",
+      "sha256": "ad62cafbce1be4216229585513e73165a7817d512b222fecb4cbf2ed488f95c0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic/engine.zig",
+      "sha256": "850643b2f3c52022ac164bf9e975c07171458d093047ce31762aa038d2b0bc36"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic/events.zig",
+      "sha256": "8d1a96ace52219d318b6c85696f769d1533513ba493bf7a6d8b49cc8adfe5d22"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic_engine.zig",
+      "sha256": "0539e2b42f43244a97580be5f03775a676af524e3460176eff6c63600055cebb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/root.zig",
+      "sha256": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/driver.zig",
+      "sha256": "ebd171a3e78d7e0a9cf0111f57c05f3aafb4dc12b4d5e929e60f5f28a6281d09"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/ca.pem",
+      "sha256": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/client.key",
+      "sha256": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/client.pem",
+      "sha256": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/expired.key",
+      "sha256": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/expired.pem",
+      "sha256": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/other-ca.pem",
+      "sha256": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/server.key",
+      "sha256": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/server.pem",
+      "sha256": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/wrong-purpose.key",
+      "sha256": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/wrong-purpose.pem",
+      "sha256": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/backend.c",
+      "sha256": "b92fa2cff94104386fc6a88e80b78fb2c27c197543235dbafbdeead63073513f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/backend_abi.c",
+      "sha256": "b86da4507f9fc50766a5cb14e1906036118a79e83411d7e5119936fddfb2fc6a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/backend_abi.zig",
+      "sha256": "992c0e282f11b051a58c3acc2ecbd5a0e72eef039f24247b5820de090923185a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/contract.zig",
+      "sha256": "1a01a7c469b4a05306ed16ac7f4e803b47dfbb2ce6135c43505a8158d3ea1f8e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/events.zig",
+      "sha256": "150c5935bbcc29c660d11520bf8b4bdb77b6ef074ea6b493b48b917ccf3424bd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/direction-as-level.zig",
+      "sha256": "40f075f1ba0b63bcbba6a47bd32a8309e148710282f154ff1c72522ee36d5162"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/generation-as-sequence.zig",
+      "sha256": "298b368d0707b3d95b47fe1368c97d8a97f480851109456de51487d078a002b7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/raw-byte-count.zig",
+      "sha256": "bea0f5c4ea60a6f41d6bc716930439e8a09a628f7dd69bf190f8adafe8306f54"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/valid.zig",
+      "sha256": "b6de76e36b6927171ba47b6b2030ad78858e603c662e9f42f2c74416747f3fee"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/wall-as-monotonic.zig",
+      "sha256": "120f8a4b7b31c4d9206dc6513927d91091e6a4786b720c6204be10bb1369848d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/reference_peer.c",
+      "sha256": "e6372055edd9cf4d0c1ea801e60a6fc739d2ff4eee9f7f878b4780dc741d51e7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic_contract.zig",
+      "sha256": "d70ca89559bd6928ab6255a251b30b2e51eba7913d3cc29a8ed40c82aa82e4c9"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/transport.zig",
+      "sha256": "9d75a04ee6159fa82190682a43c4a8f0c10fdca4d6932a11fd6354ec26f03e99"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/build-openssl.sh",
+      "sha256": "935c6f9e7e03265544d099c1182eb4b8af6bc785f93a001734485c39a5435c4f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-docs.py",
+      "sha256": "be34383f3ec878381ea6140f504b91af3213dcbb955aa35c0dffc63aa503a0be"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-event-model.py",
+      "sha256": "5dfd556d01f501d39d5de8a7335df674d84851fcb27605c7f8c174276de6dd38"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-models.py",
+      "sha256": "ed5e57b103ca09e7fb519d46553f7db6b132245802196364672f5925e225acda"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-plan.py",
+      "sha256": "304aecf9670355b237408259b32058530b8fa9cf22fa414a1e7952859b01e12d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/fetch-openssl.py",
+      "sha256": "45f60f7284910375d14959e4dee8d9c1a844907262369b33721f93788ec7a734"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/interop.py",
+      "sha256": "e0b6a75eff49aed7c57ddc3bf53798e74e1a7693e9713d7a6d1b6a5ec6a4159c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/make_fixtures.py",
+      "sha256": "ac8d59c6da99f23f6db1484db277a101930925e731cb61fd52e5d007251ea1e3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/pin-backend.py",
+      "sha256": "bcac3b4fa4eaf4780be32793b879eb7fc09b1535283a8c118f833d88beea2d24"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/probe-quic-pair.c",
+      "sha256": "3f30826b0ffbd28cf60ed238b45876468fefec704dfad5d2fdce8fedf358a442"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/probe-quic-pair.py",
+      "sha256": "a50f002c744bc9143376bfb974e994f1c032d0496ba45a6124ae74a286abec0a"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/probe-quic-tls.c",
+      "sha256": "a043a574fed8815e0b0ddc14983a2ab80ae3eee8ddb6606b89f48c5e71370948"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/probe-quic-tls.py",
+      "sha256": "0968b64497a446be0d59f2c0df8bfe59c4bd38e6986f669cbc1cf7567d53ebcb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/qualify-quic-backend.py",
+      "sha256": "56f148da0377b5cb36dc207f29aa185504490b3c8fb2bafd3ab7d1ef80c09e56"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/qualify-quic-core.py",
+      "sha256": "841881e76e98316ec9f317a480de23f385f193b2f692b2ea6a2b2b8cf57ec2e0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/qualify-quic-engine.py",
+      "sha256": "ae57a810fbfdac4304439f97ee2852ae25e52e3de9c3075dfa2b8cf30756a617"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/qualify.ps1",
+      "sha256": "7918b074ef0e4012bfb7d969b46dfc1a6d60e06bf5fbf86ad0047bf3d89c6cc0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/tcp_interop.py",
+      "sha256": "0f1cf8172ae4c504ba4a0c14d0c360aba27f966e140c4b8abec3dfbbde76a3fc"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/tcp_server_interop.py",
+      "sha256": "d4381483e6af8ab7ca9ca2a15a3d1783857378d861e062ccc04ec5cd0555e4c2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/tcp_upload_interop.py",
+      "sha256": "84b1dee1314093d7c52b84245fee8439fed6275da4a8fe2ed96106516a37e080"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-backend.py",
+      "sha256": "e055e8c522a0fd777bc3b4d2831e057c406ed8e0bd880f934d9bfc19208eb8fb"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-openssl.sh",
+      "sha256": "ee8b7db47b7498e5765eb915a09f7ce47013aec1fcb3c551e2eb14d4a095064c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-plan-lifecycle.py",
+      "sha256": "a70b4cc785552c002c2ad746e6573d3e469ccfeb99def60dee9dff68ebcc4d92"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-quic-types.py",
+      "sha256": "ea2b297334871d86967f8d6467d22ae4e6ecb94f087996f858e7a1f2a48d046c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/verify-backend.py",
+      "sha256": "267c0576fd83f7295eabe576a8eefe17cf3ed353d42b914373b9524e1fbec5a7"
+    }
+  ],
+  "runs": [
+    {
+      "id": "backend-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/test-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T17:57:13.633522+00:00",
+      "elapsed_seconds": 134.755,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/backend-normal.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/backend-normal.stderr.log",
+        "sha256": "f41a2b2f441908ab4979cd50833780aa2e05d66a3299f7276e495272c54e73e0"
+      }
+    },
+    {
+      "id": "backend-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "tools/test-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T17:59:28.389627+00:00",
+      "elapsed_seconds": 129.076,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/backend-optimized.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/backend-optimized.stderr.log",
+        "sha256": "c6fa0fb0f45d48310a3039d8596460e9f3cb35dbfbb0e8a07ea9031a88a71d05"
+      }
+    },
+    {
+      "id": "sdk-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:01:37.466173+00:00",
+      "elapsed_seconds": 2.246,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/sdk-normal.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/sdk-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "sdk-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:01:39.713104+00:00",
+      "elapsed_seconds": 4.296,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/sdk-optimized.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/sdk-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "test",
+        "host-test",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "Debug",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:01:44.009528+00:00",
+      "elapsed_seconds": 7.304,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/debug.stderr.log",
+        "sha256": "6067555d7637b4600fa52a96fd0aa742e1b1babada476fb5e8b4082ab821dda6"
+      }
+    },
+    {
+      "id": "release-safe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "test",
+        "host-test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "ReleaseSafe",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:01:51.313807+00:00",
+      "elapsed_seconds": 6.932,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/release-safe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/release-safe.stderr.log",
+        "sha256": "d868e6597ff3667bc264f12aabd56c8cc099369c88cbff9f349051c022e011d5"
+      }
+    },
+    {
+      "id": "interop-example",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "interop",
+        "example",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "Debug",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:01:58.246446+00:00",
+      "elapsed_seconds": 8.288,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/interop-example.stdout.log",
+        "sha256": "a7a5d5fa4ec256ec3a335d6caee53898479c5549509d84c09adfc52d84ac0681"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/interop-example.stderr.log",
+        "sha256": "902fa032b7b1fb0f8f22f4549179201152617739adf8cc60ba0f58862f0704ee"
+      }
+    },
+    {
+      "id": "consumer-build",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/consumer",
+      "mode": "Debug",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:02:06.534966+00:00",
+      "elapsed_seconds": 34.763,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/consumer-build.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/consumer-build.stderr.log",
+        "sha256": "44211ef17227342b86390039c82ba3acb8a69fedb71e8bea80365ab3f4ff4e37"
+      }
+    },
+    {
+      "id": "tcp_interop",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/tcp_interop.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:02:41.298427+00:00",
+      "elapsed_seconds": 3.667,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/tcp_interop.stdout.log",
+        "sha256": "a7fd14b3d8af0d02ea3ec6112e08b270f49c2ff6b8b6825fa65e2aeaa4f39988"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/tcp_interop.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "tcp_server_interop",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/tcp_server_interop.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:02:44.966522+00:00",
+      "elapsed_seconds": 3.268,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/tcp_server_interop.stdout.log",
+        "sha256": "bc8a1cad16aba64188e73070db5355accb62950d5f4045a977fc510ceeb4b473"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/tcp_server_interop.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "tcp_upload_interop",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/tcp_upload_interop.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "outcome": "passed",
+      "started_utc": "2026-09-26T18:02:48.236268+00:00",
+      "elapsed_seconds": 3.665,
+      "stdout": {
+        "path": "docs/verification/t02-regression-runs/tcp_upload_interop.stdout.log",
+        "sha256": "74d16e173c5328376da2dc47b9a9958e32904f71d04468f959343d8994094a1d"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-regression-runs/tcp_upload_interop.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "test-quic-types-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "tools/test-quic-types.py",
+        "--zig",
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:10.530675+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stdout.log",
+        "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "check-models-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "tools/check-models.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:20.914771+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/check-models-normal.stdout.log",
+        "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/check-models-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "test-plan-lifecycle-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "tools/test-plan-lifecycle.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:23.873808+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stdout.log",
+        "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "test-quic-types-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "-X",
+        "utf8",
+        "tools/test-quic-types.py",
+        "--zig",
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:36.588868+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stdout.log",
+        "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "check-models-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "-X",
+        "utf8",
+        "tools/check-models.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:49.532138+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/check-models-optimized.stdout.log",
+        "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/check-models-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "test-plan-lifecycle-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "-X",
+        "utf8",
+        "tools/test-plan-lifecycle.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:51.514813+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stdout.log",
+        "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-core-Debug",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-test",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "started_utc": "2026-09-26T17:58:53.721510+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/core-Debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/core-Debug.stderr.log",
+        "sha256": "8bed93360d3694b29ca82be5f9232a64dd20281d5ad6ecd2b647a2c3173a9d96"
+      },
+      "mode": "Debug",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-consumer-Debug",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "run",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T17:59:37.854756+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/consumer-Debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/consumer-Debug.stderr.log",
+        "sha256": "53bc1e1e0a57db8a8894a500e3963b2e22fa54569e393d7edb184e3b74bcc550"
+      },
+      "mode": "Debug",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-core-ReleaseSafe",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "started_utc": "2026-09-26T18:00:29.142476+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/core-ReleaseSafe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/core-ReleaseSafe.stderr.log",
+        "sha256": "22e99a52f5750c92922a2b8bb5f8a291cf1b0aed83eb23ae0ac2ef6f0432a65a"
+      },
+      "mode": "ReleaseSafe",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-consumer-ReleaseSafe",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "run",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:02:51.985273+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/consumer-ReleaseSafe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/consumer-ReleaseSafe.stderr.log",
+        "sha256": "f0fba8771ffb4d483446c9c19da59fd5ea734c75f56347777dcea4b50c72048e"
+      },
+      "mode": "ReleaseSafe",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86-windows-gnu",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86-windows-gnu",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:03:35.431557+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86-windows-gnu.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86-windows-gnu.stderr.log",
+        "sha256": "5dab98cccb117b75500c8da93edfcb74ae31254ec0a69aecffc40d3c3dd83001"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-aarch64-windows-gnu",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=aarch64-windows-gnu",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:04:28.589336+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-windows-gnu.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-windows-gnu.stderr.log",
+        "sha256": "b6dc5b21275e689d70afba5d76e7894f28eb565f66fd547a5098d270fc4bb3f7"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86_64-linux-musl",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86_64-linux-musl",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:05:30.571937+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-linux-musl.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-linux-musl.stderr.log",
+        "sha256": "ffa0047ce2abda8676d4093889eaffece4035e4b044aef49a54e75762a618c18"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-aarch64-linux-musl",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=aarch64-linux-musl",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:06:38.918710+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-linux-musl.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-linux-musl.stderr.log",
+        "sha256": "01e8481ca464dd854c31c0a3010f4bc1edb1b4f2537e67e8ffa69d0db3fec7d2"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86_64-macos",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86_64-macos",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:08:39.866275+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-macos.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-macos.stderr.log",
+        "sha256": "45512ef5b5bf74d9d580b4f7930fd48e9e3691740f657960eeb4d82dd20e9d0d"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-aarch64-macos",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=aarch64-macos",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:10:33.101529+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-macos.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-macos.stderr.log",
+        "sha256": "3a1d5551351c5a990d249186dd7bcd16f62ff0728bc583e8a27d2b5afaaf8edf"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86_64-freebsd",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86_64-freebsd",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:12:48.549945+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-freebsd.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-freebsd.stderr.log",
+        "sha256": "e51e7ab628bf904cb3a4b734a71a533421792f7de1e5934794c990e4b3d61386"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "native-sdk",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "started_utc": "2026-09-26T17:56:27.092876+00:00",
+      "exit_code": 0,
+      "observed": [],
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t04-abi-production-runs/sdk.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "docs/verification/t04-abi-production-runs/sdk.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "native-backend-Debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-backend-test",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "Debug",
+      "started_utc": "2026-09-26T17:56:28.658575+00:00",
+      "exit_code": 0,
+      "observed": [
+        {
+          "case": "ip",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fragmented",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 680,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "budgeted",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 41,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-alert",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "config-copy",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "alpn",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "params-overflow",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "zero-budget",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-secret",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "mutual",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "backpressure",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 41,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-release",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "wrong-host",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "wrong-ca",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "null-lease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "combined",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 680,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overconsume",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-receive",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "validation",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "full",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "missing-client",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "fail-send",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-params",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "reentrant",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overlease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        }
+      ],
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t04-abi-production-runs/backend-Debug.stdout.log",
+        "sha256": "2321043c9d22de6ad4123fb8f048ebfb450e1dbfc4d2e46a2cacde801c92aa4e"
+      },
+      "stderr": {
+        "path": "docs/verification/t04-abi-production-runs/backend-Debug.stderr.log",
+        "sha256": "20570870da8388f6dfd5d3c9038db978ea37156228a9631621024932b7feb661"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "native-backend-ReleaseSafe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-backend-test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "ReleaseSafe",
+      "started_utc": "2026-09-26T17:57:03.232029+00:00",
+      "exit_code": 0,
+      "observed": [
+        {
+          "case": "fail-receive",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-alert",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-release",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "wrong-host",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "budgeted",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 41,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "config-copy",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overconsume",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "null-lease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "zero-budget",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "backpressure",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 41,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-secret",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "reentrant",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "params-overflow",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "mutual",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "alpn",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "full",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "wrong-ca",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "validation",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-params",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "missing-client",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "fail-send",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fragmented",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 680,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overlease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "ip",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "combined",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 680,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        }
+      ],
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t04-abi-production-runs/backend-ReleaseSafe.stdout.log",
+        "sha256": "f781270be2bffee095bed826362e98af8b1305205378607ad6e67ef406457c04"
+      },
+      "stderr": {
+        "path": "docs/verification/t04-abi-production-runs/backend-ReleaseSafe.stderr.log",
+        "sha256": "6b788474b44dd695f8193ca39f3533318f95b70d218fd901bae92c8c598f7158"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "native-sdk-after",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "started_utc": "2026-09-26T17:58:26.736534+00:00",
+      "exit_code": 0,
+      "observed": [],
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t04-abi-production-runs/sdk-after.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "docs/verification/t04-abi-production-runs/sdk-after.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "owner-sdk",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "started_utc": "2026-09-26T18:34:20.194158+00:00",
+      "exit_code": 0,
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t02-level-integrity-runs/sdk.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-level-integrity-runs/sdk.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "owner-engine-Debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-engine-test",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "Debug",
+      "started_utc": "2026-09-26T18:34:21.063139+00:00",
+      "exit_code": 0,
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t02-level-integrity-runs/engine-Debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-level-integrity-runs/engine-Debug.stderr.log",
+        "sha256": "a4a776c7fd03bccd810bc6f21330b5f1fd3644a6887db2c856a337c3efa61314"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "owner-consumer-Debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "run",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-engine",
+      "mode": "Debug",
+      "started_utc": "2026-09-26T18:34:23.226368+00:00",
+      "exit_code": 0,
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t02-level-integrity-runs/consumer-Debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-level-integrity-runs/consumer-Debug.stderr.log",
+        "sha256": "1713161bc7b5829da6b173682418067f67fc84ccc75727b36531810dc6cadc51"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "owner-engine-ReleaseSafe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-engine-test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "ReleaseSafe",
+      "started_utc": "2026-09-26T18:34:36.662185+00:00",
+      "exit_code": 0,
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t02-level-integrity-runs/engine-ReleaseSafe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-level-integrity-runs/engine-ReleaseSafe.stderr.log",
+        "sha256": "a198f83794e23d959f253aa4b33de31d54506c73834e50ba9befb3ff5c6dee59"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "owner-consumer-ReleaseSafe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "run",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-engine",
+      "mode": "ReleaseSafe",
+      "started_utc": "2026-09-26T18:35:31.272185+00:00",
+      "exit_code": 0,
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t02-level-integrity-runs/consumer-ReleaseSafe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-level-integrity-runs/consumer-ReleaseSafe.stderr.log",
+        "sha256": "d77aec244fab823fa3f449a9a9420cbc76b9d03489d0d07e845b056f279e8299"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "owner-sdk-after",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "started_utc": "2026-09-26T18:36:06.076706+00:00",
+      "exit_code": 0,
+      "adequate": true,
+      "stdout": {
+        "path": "docs/verification/t02-level-integrity-runs/sdk-after.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-level-integrity-runs/sdk-after.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "T00-01",
+      "outcome": "passed",
+      "observed": "Sixteen offline backend test groups pass normally and under Python -O, including corrupt/missing/wrong/mixed SDKs and no-side-effect refusal. Exact 166-file SDK verification passes before/after native qualification and both normal/optimized tool modes.",
+      "run_ids": [
+        "backend-normal",
+        "backend-optimized",
+        "sdk-normal",
+        "sdk-optimized"
+      ]
+    },
+    {
+      "id": "T00-02",
+      "outcome": "passed",
+      "observed": "Records/host-driver tests, public example, external records consumer, 17 independent peer cases and 14 TCP cases pass. New pure/native consumers and normal/-O models/type controls pass. Existing source and locked SDK hashes are bound to the reviewed closure.",
+      "run_ids": [
+        "backend-normal",
+        "backend-optimized",
+        "sdk-normal",
+        "sdk-optimized",
+        "debug",
+        "release-safe",
+        "interop-example",
+        "consumer-build",
+        "tcp_interop",
+        "tcp_server_interop",
+        "tcp_upload_interop",
+        "test-quic-types-normal",
+        "check-models-normal",
+        "test-plan-lifecycle-normal",
+        "test-quic-types-optimized",
+        "check-models-optimized",
+        "test-plan-lifecycle-optimized",
+        "pure-core-Debug",
+        "pure-consumer-Debug",
+        "pure-core-ReleaseSafe",
+        "pure-consumer-ReleaseSafe",
+        "pure-cross-x86-windows-gnu",
+        "pure-cross-aarch64-windows-gnu",
+        "pure-cross-x86_64-linux-musl",
+        "pure-cross-aarch64-linux-musl",
+        "pure-cross-x86_64-macos",
+        "pure-cross-aarch64-macos",
+        "pure-cross-x86_64-freebsd",
+        "native-sdk",
+        "native-backend-Debug",
+        "native-backend-ReleaseSafe",
+        "native-sdk-after",
+        "owner-sdk",
+        "owner-engine-Debug",
+        "owner-consumer-Debug",
+        "owner-engine-ReleaseSafe",
+        "owner-consumer-ReleaseSafe",
+        "owner-sdk-after"
+      ]
+    }
+  ],
+  "dependencies": []
+}

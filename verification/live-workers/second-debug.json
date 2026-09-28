@@ -1,0 +1,430 @@
+{
+  "executable_sha256": "4761cb8ba5d553d4871f3026296c9711197f866a170a8850386182189b67df49",
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "results": [
+    {
+      "role": "sender",
+      "mode": "valid",
+      "matched": true,
+      "seconds": 2.214,
+      "exit_code": 0,
+      "peer": {
+        "frames": 95520,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 95520,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 409,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95520,
+            "offered_frames": 0,
+            "frontier": 95520,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "confirmed",
+            "secure_close": "clean"
+          }
+        },
+        "audio": {
+          "captured_frames": 95520,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95520,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "valid",
+      "matched": true,
+      "seconds": 1.065,
+      "exit_code": 0,
+      "peer": {
+        "frames": 48000,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 48000,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 48000,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 48000,
+          "silent_frames": 480,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "short",
+      "matched": true,
+      "seconds": 0.066,
+      "exit_code": 0,
+      "peer": {
+        "frames": 17,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 17,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 17,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 17,
+          "silent_frames": 703,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "empty",
+      "matched": true,
+      "seconds": 0.048,
+      "exit_code": 0,
+      "peer": {
+        "frames": 0,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 0,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 0,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 0,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "wrong-ack",
+      "matched": true,
+      "seconds": 2.043,
+      "exit_code": 1,
+      "peer": {
+        "frames": 95040,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 95040,
+        "failure": "Discontinuous",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 406,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95040,
+            "offered_frames": 0,
+            "frontier": 95040,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 95040,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95040,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: Discontinuous\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:30:31: 0x7ff69ff3ddc0 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "disconnect",
+      "matched": true,
+      "seconds": 0.11,
+      "exit_code": 1,
+      "peer": {
+        "frames": 960,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 1440,
+        "failure": "TransportFailure",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 14,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": false,
+            "committed": 1440,
+            "offered_frames": 0,
+            "frontier": null,
+            "local": "interrupted",
+            "end": "not_attempted",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 2160,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 2160,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: TransportFailure\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:30:31: 0x7ff69ff3ddc0 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "duplicate",
+      "matched": true,
+      "seconds": 0.066,
+      "exit_code": 1,
+      "peer": {
+        "frames": 480,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 240,
+        "failure": "Discontinuous",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 0,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: Discontinuous\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:30:31: 0x7ff69ff3ddc0 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "stall",
+      "matched": true,
+      "seconds": 2.545,
+      "exit_code": 1,
+      "peer": {
+        "frames": 960,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 960,
+        "failure": "Deadline",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 960,
+          "silent_frames": 95760,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: Deadline\nC:\\Projects\\lan-audio\\tests\\integration\\live_worker.zig:30:31: 0x7ff69ff3ddc0 in main (audio-worker-probe_zcu.obj)\n    if (report.failure) |err| return err;\n                              ^\n",
+      "stdout": null
+    }
+  ]
+}

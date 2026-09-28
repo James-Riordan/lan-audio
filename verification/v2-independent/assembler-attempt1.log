@@ -1,0 +1,130 @@
+test
++- run test 34 pass, 1 crash (35 total)
+error: 'media.assembler.test.assembly preserves arbitrary callback prefixes and final partial block' exited with code 3 with stderr:
+       thread 21412 panic: integer overflow
+       error return context:
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:32:51: 0x7ff71bd62134 in insert (test_zcu.obj)
+                   if (sequence - self.next >= capacity) return error.TooFar;
+                                                         ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:32:51: 0x7ff71bd62134 in insert (test_zcu.obj)
+                   if (sequence - self.next >= capacity) return error.TooFar;
+                                                         ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:31:39: 0x7ff71bd620d8 in insert (test_zcu.obj)
+                   if (sequence < self.next) return error.Late;
+                                             ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:31:39: 0x7ff71bd620d8 in insert (test_zcu.obj)
+                   if (sequence < self.next) return error.Late;
+                                             ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:31:39: 0x7ff71bd620d8 in insert (test_zcu.obj)
+                   if (sequence < self.next) return error.Late;
+                                             ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:31:39: 0x7ff71bd620d8 in insert (test_zcu.obj)
+                   if (sequence < self.next) return error.Late;
+                                             ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       C:\Projects\lan-audio\src\media\playout_window.zig:34:37: 0x7ff71bd621e1 in insert (test_zcu.obj)
+                   if (self.present[slot]) return error.Duplicate;
+                                           ^
+       (53959 additional stack frames skipped due to buffer size limitations...)
+       
+       stack trace:
+       C:\Projects\lan-audio\tests\unit\media\assembler.zig:22:78: 0x7ff71bd6fda6 in test.assembly preserves arbitrary callback prefixes and final partial block (test_zcu.obj)
+                       const copied = try assembler.push(source[produced * 2 .. end * 2]);
+                                                                                    ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\compiler\test_runner.zig:143:68: 0x7ff71bd3162f in mainServer (test_zcu.obj)
+                       const status: TestResults.Status = if (test_fn.func()) |v| s: {
+                                                                          ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\compiler\test_runner.zig:72:26: 0x7ff71bd31c5b in main (test_zcu.obj)
+               return mainServer(init) catch |err| panic("internal test runner failure: {t}", .{err});
+                                ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\start.zig:788: 0x7ff71bd2fbbd in callMain (test_zcu.obj)
+           if (fn_info.param_types[0].? == std.process.Init.Minimal) return wrapMain(root.main(.{
+       
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\start.zig:575:17: 0x7ff71bd2fbbd in WinStartup (test_zcu.obj)
+               callMain(std.os.windows.peb().ProcessParameters.CommandLine.slice(), .global),
+                       ^
+       ???:?:?: 0x7ff9e43f7373 in ??? (KERNEL32.DLL)
+       ???:?:?: 0x7ff9e473cc90 in ??? (ntdll.dll)
+failed command: ".\\.zig-cache\\o\\82c516713a83d2c86d8f0b8074d94b1a\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x808f0469 --listen=-
+
+Build Summary: 1/3 steps succeeded (1 failed); 34/35 tests passed (1 crashed)
+test transitive failure
++- run test 34 pass, 1 crash (35 total)
+   +- compile test debug native cached 75ms MaxRSS:49M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x808f0469 test -j1 --summary all

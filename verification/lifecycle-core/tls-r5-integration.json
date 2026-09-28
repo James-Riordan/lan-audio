@@ -1,0 +1,386 @@
+{
+  "scope": "Reviewed TLS r5 documentation and isolated provider diagnostics; all pre-existing non-documentation source/SDK/locks preserved; no LAN Audio transport replacement.",
+  "added_contracts": [
+    "docs/contracts/provider-leases.md",
+    "docs/reference/files/tools/probe-quic-pair.c.md",
+    "docs/reference/files/tools/probe-quic-pair.py.md",
+    "docs/verification/baseline-r4.md",
+    "docs/verification/provider-pair/O0.json",
+    "docs/verification/provider-pair/O0/alpn.log",
+    "docs/verification/provider-pair/O0/backpressure.log",
+    "docs/verification/provider-pair/O0/budgeted.log",
+    "docs/verification/provider-pair/O0/combined.log",
+    "docs/verification/provider-pair/O0/compile.log",
+    "docs/verification/provider-pair/O0/fail-alert.log",
+    "docs/verification/provider-pair/O0/fail-params.log",
+    "docs/verification/provider-pair/O0/fail-receive.log",
+    "docs/verification/provider-pair/O0/fail-release.log",
+    "docs/verification/provider-pair/O0/fail-secret.log",
+    "docs/verification/provider-pair/O0/fail-send.log",
+    "docs/verification/provider-pair/O0/fragmented.log",
+    "docs/verification/provider-pair/O0/full.log",
+    "docs/verification/provider-pair/O0/missing-client.log",
+    "docs/verification/provider-pair/O0/mutual.log",
+    "docs/verification/provider-pair/O0/tickets.log",
+    "docs/verification/provider-pair/O0/wrong-ca.log",
+    "docs/verification/provider-pair/O0/wrong-host.log",
+    "docs/verification/provider-pair/O2.json",
+    "docs/verification/provider-pair/O2/alpn.log",
+    "docs/verification/provider-pair/O2/backpressure.log",
+    "docs/verification/provider-pair/O2/budgeted.log",
+    "docs/verification/provider-pair/O2/combined.log",
+    "docs/verification/provider-pair/O2/compile.log",
+    "docs/verification/provider-pair/O2/fail-alert.log",
+    "docs/verification/provider-pair/O2/fail-params.log",
+    "docs/verification/provider-pair/O2/fail-receive.log",
+    "docs/verification/provider-pair/O2/fail-release.log",
+    "docs/verification/provider-pair/O2/fail-secret.log",
+    "docs/verification/provider-pair/O2/fail-send.log",
+    "docs/verification/provider-pair/O2/fragmented.log",
+    "docs/verification/provider-pair/O2/full.log",
+    "docs/verification/provider-pair/O2/missing-client.log",
+    "docs/verification/provider-pair/O2/mutual.log",
+    "docs/verification/provider-pair/O2/tickets.log",
+    "docs/verification/provider-pair/O2/wrong-ca.log",
+    "docs/verification/provider-pair/O2/wrong-host.log",
+    "docs/verification/provider-pair/exploratory-1-wrong-ca.log",
+    "docs/verification/provider-pair/exploratory-1.json",
+    "docs/verification/provider-pair/exploratory-2-fail-release.log",
+    "docs/verification/provider-pair/exploratory-2.json",
+    "docs/verification/quic-provider-pair.md",
+    "docs/verification/r5-check-results.json",
+    "tools/probe-quic-pair.c",
+    "tools/probe-quic-pair.py",
+    "docs/verification/r5-change-audit.json"
+  ],
+  "changed_paths": [
+    "docs/README.md",
+    "docs/architecture/directory-map.md",
+    "docs/architecture/target-tree.txt",
+    "docs/contracts/provider-leases.md",
+    "docs/contracts/recordless-events.md",
+    "docs/reference/catalog.md",
+    "docs/reference/files/tools/probe-quic-pair.c.md",
+    "docs/reference/files/tools/probe-quic-pair.py.md",
+    "docs/roadmap/decision-register.md",
+    "docs/roadmap/files/src/backend/quic.c.md",
+    "docs/roadmap/files/src/quic/engine.zig.md",
+    "docs/roadmap/files/tests/quic_contract.zig.md",
+    "docs/roadmap/implementation-plan.json",
+    "docs/roadmap/takeover.md",
+    "docs/verification/artifact-register.json",
+    "docs/verification/baseline-r4.md",
+    "docs/verification/current.md",
+    "docs/verification/provider-pair/O0.json",
+    "docs/verification/provider-pair/O0/alpn.log",
+    "docs/verification/provider-pair/O0/backpressure.log",
+    "docs/verification/provider-pair/O0/budgeted.log",
+    "docs/verification/provider-pair/O0/combined.log",
+    "docs/verification/provider-pair/O0/compile.log",
+    "docs/verification/provider-pair/O0/fail-alert.log",
+    "docs/verification/provider-pair/O0/fail-params.log",
+    "docs/verification/provider-pair/O0/fail-receive.log",
+    "docs/verification/provider-pair/O0/fail-release.log",
+    "docs/verification/provider-pair/O0/fail-secret.log",
+    "docs/verification/provider-pair/O0/fail-send.log",
+    "docs/verification/provider-pair/O0/fragmented.log",
+    "docs/verification/provider-pair/O0/full.log",
+    "docs/verification/provider-pair/O0/missing-client.log",
+    "docs/verification/provider-pair/O0/mutual.log",
+    "docs/verification/provider-pair/O0/tickets.log",
+    "docs/verification/provider-pair/O0/wrong-ca.log",
+    "docs/verification/provider-pair/O0/wrong-host.log",
+    "docs/verification/provider-pair/O2.json",
+    "docs/verification/provider-pair/O2/alpn.log",
+    "docs/verification/provider-pair/O2/backpressure.log",
+    "docs/verification/provider-pair/O2/budgeted.log",
+    "docs/verification/provider-pair/O2/combined.log",
+    "docs/verification/provider-pair/O2/compile.log",
+    "docs/verification/provider-pair/O2/fail-alert.log",
+    "docs/verification/provider-pair/O2/fail-params.log",
+    "docs/verification/provider-pair/O2/fail-receive.log",
+    "docs/verification/provider-pair/O2/fail-release.log",
+    "docs/verification/provider-pair/O2/fail-secret.log",
+    "docs/verification/provider-pair/O2/fail-send.log",
+    "docs/verification/provider-pair/O2/fragmented.log",
+    "docs/verification/provider-pair/O2/full.log",
+    "docs/verification/provider-pair/O2/missing-client.log",
+    "docs/verification/provider-pair/O2/mutual.log",
+    "docs/verification/provider-pair/O2/tickets.log",
+    "docs/verification/provider-pair/O2/wrong-ca.log",
+    "docs/verification/provider-pair/O2/wrong-host.log",
+    "docs/verification/provider-pair/exploratory-1-wrong-ca.log",
+    "docs/verification/provider-pair/exploratory-1.json",
+    "docs/verification/provider-pair/exploratory-2-fail-release.log",
+    "docs/verification/provider-pair/exploratory-2.json",
+    "docs/verification/quic-provider-pair.md",
+    "docs/verification/r5-check-results.json",
+    "docs/verification/source-inventory.json",
+    "tools/probe-quic-pair.c",
+    "tools/probe-quic-pair.py"
+  ],
+  "evidence_files": [
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\README.md",
+      "sha256": "a2623f6f21d4d34c36f2d63560a3b8124701e7a9d5ef9ab9c4e20a9f17898dc6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\directory-map.md",
+      "sha256": "3c7d82bdf69411932990b5bcd3bd5ad2d7ef7cec1ed9cd09a6036dea7f12967a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\architecture\\target-tree.txt",
+      "sha256": "580116bc027c52b811056c1ccee3b34d9cbf06879f7ac6088ef983e3093fa444"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\contracts\\provider-leases.md",
+      "sha256": "1a055436dea1a450ff177838bbb25bba870e0e875493e5efa07459659a3f436d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\contracts\\recordless-events.md",
+      "sha256": "32f8c26a47266d3aecc3919cb3b57ceb23fa49c9175bca15e12145cabd949338"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\catalog.md",
+      "sha256": "cdbb99c1dece1dcef4598b079b7ee191c7d75c1c24baf3040b95bb7825bbd1b2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\probe-quic-pair.c.md",
+      "sha256": "11a9d3ed8d94ab3ec8a18cf3daebc8b25502fb44eac087e5d06a8710faace983"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\reference\\files\\tools\\probe-quic-pair.py.md",
+      "sha256": "ee77f0bd6ab69106b38d0ecb01748e35ed5efe93e21b085229d16fcfabacf09c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\decision-register.md",
+      "sha256": "d697c7d4a9bf462a85dc2c707c4f020ee24db9beb00daf4d54f733afa96c15d4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\backend\\quic.c.md",
+      "sha256": "247893e55566396c4a39f60a0b78c10699b60f5334456be09605ea0dc2ec96ca"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\src\\quic\\engine.zig.md",
+      "sha256": "bfe5a9581b76fc1d239596d82f3adda9ab9e9b3e9fc82a01d3f604cc952c7fa9"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\files\\tests\\quic_contract.zig.md",
+      "sha256": "e747959286893ba6a13492c8ce45a405e74e329ee89aea11762ded86a31fb05f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\implementation-plan.json",
+      "sha256": "772e591169cf18ce4f5bd2e55ab4f88c50928d79e59776596a1adc919e965140"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\roadmap\\takeover.md",
+      "sha256": "47c21d09c451abf3e669ab0b0ad354a482d0277fbabec7beafad57bac9cecc9c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\artifact-register.json",
+      "sha256": "d573f6f42b96822847c81acc5f3e80c9d4ffc19cb36305b24b4636fad7ab4bfe"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\baseline-r4.md",
+      "sha256": "d2a99d4f8120265b41e54d7e011a1fca1ce00e4499f6ce2fa9de9c8e54193748"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\current.md",
+      "sha256": "165a2bf725da6fe97ffb6e88d8ddb0c45b50fe06ac3461133d4c042d0f14a4aa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0.json",
+      "sha256": "c35311c94ef578b9cd7ba2e6384fad45863456ae57525d6cfa49834366cae32d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\alpn.log",
+      "sha256": "dab29006ba28706ef899ea372ea1e2ceac4a912be6e84a169514aead1fe9413e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\backpressure.log",
+      "sha256": "9671ab946c6b40794fe2ebe00a37cf1db9564489b224cd562ca8a54d190c5e1b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\budgeted.log",
+      "sha256": "5774b3fd7c1c087645feddd77836eae094fe41f01ee868c55890ae03d1da88a7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\combined.log",
+      "sha256": "0f035f9d904156536dc3ed1d8fc8f416e8502c952f82a70c055209a111d9fa92"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fail-alert.log",
+      "sha256": "f729326403ab73530dd28337a5c14d2681b3225f5ca7e35c65c571623be13eb7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fail-params.log",
+      "sha256": "0621389228280c333035f249c1a89de1cfe1a838be43de4e40d4b6f2c51c1a35"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fail-receive.log",
+      "sha256": "d7b45b21cc98421415c84008257318fdca75a34a84b606b4a681fd17eb442153"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fail-release.log",
+      "sha256": "aaf51e4e4f65f49a0b1e39d6972a4249be2d0cc6969bde8cc37b51cb5309b046"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fail-secret.log",
+      "sha256": "941cb74b2c91b52cb2097fc52ec8f4e8780db743e60a0cf9c4d0a7934adc2bdb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fail-send.log",
+      "sha256": "30208b34bd2c2f51d238df9069657454f8b603a7e8e1cedb9ebcb1cb73facc6a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\fragmented.log",
+      "sha256": "388bfef6adb4c024bf302721b79b89a4bd27939714c8afb1267912878d5f4226"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\full.log",
+      "sha256": "2a130ca3a6670307dc98706d977a2c23ddb2e4d15a9cb0266ce79174d8565f25"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\missing-client.log",
+      "sha256": "bebd5321bf49688d072adbc8c757d812521d8356aaa3f9cc3d2cf0d8e65e5ad4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\mutual.log",
+      "sha256": "600d5588ee7cf53f8a57b429b17b1cfe0b35fde2a3499cabe41be73bde1c3c78"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\tickets.log",
+      "sha256": "73fdc9e29595c58f73322b9dc44df5ca5c3c1070c48f708b762be6ef03117e65"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\wrong-ca.log",
+      "sha256": "1855329ff90744c03279b539088034482ab5fbd2782e8a7633e956428d9bde5e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O0\\wrong-host.log",
+      "sha256": "1242b0177c88b4fc25467cab7f40b64bd78a8059adf0d1bc0781a5d1b1cd5661"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2.json",
+      "sha256": "bf5682c7347687e59f8014a5b03b5b290701e20a50da6b4387e3bd81aaf3559b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\alpn.log",
+      "sha256": "dab29006ba28706ef899ea372ea1e2ceac4a912be6e84a169514aead1fe9413e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\backpressure.log",
+      "sha256": "5e7938fe90f4e8d486caf54e136455b34ffb4309d2daee1013811a0795d22752"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\budgeted.log",
+      "sha256": "67198d2642a737ba8f33f3f4a2a1ad3198c56e98d9a72fbc108395469018d5d2"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\combined.log",
+      "sha256": "0f035f9d904156536dc3ed1d8fc8f416e8502c952f82a70c055209a111d9fa92"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fail-alert.log",
+      "sha256": "f729326403ab73530dd28337a5c14d2681b3225f5ca7e35c65c571623be13eb7"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fail-params.log",
+      "sha256": "0621389228280c333035f249c1a89de1cfe1a838be43de4e40d4b6f2c51c1a35"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fail-receive.log",
+      "sha256": "d7b45b21cc98421415c84008257318fdca75a34a84b606b4a681fd17eb442153"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fail-release.log",
+      "sha256": "aaf51e4e4f65f49a0b1e39d6972a4249be2d0cc6969bde8cc37b51cb5309b046"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fail-secret.log",
+      "sha256": "941cb74b2c91b52cb2097fc52ec8f4e8780db743e60a0cf9c4d0a7934adc2bdb"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fail-send.log",
+      "sha256": "30208b34bd2c2f51d238df9069657454f8b603a7e8e1cedb9ebcb1cb73facc6a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\fragmented.log",
+      "sha256": "f5904fc5e1bb7504376cce6b4dd1b03ef93cbb53915e26fd494ab7a60aac4c69"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\full.log",
+      "sha256": "4004c65853619b66519293458af819f6472a09733f1ee8aa0a9f7bd035a0d6c0"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\missing-client.log",
+      "sha256": "bebd5321bf49688d072adbc8c757d812521d8356aaa3f9cc3d2cf0d8e65e5ad4"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\mutual.log",
+      "sha256": "10b7f651cc070e6055256d6fece4cbeb1da42d97b55c029e3471465e4cf2fcaa"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\tickets.log",
+      "sha256": "c0b690004cc8ebd135e3cf02101b1e3fcd011c1e488385627e2ac370bdc5edb6"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\wrong-ca.log",
+      "sha256": "11ccd9aefee6d3dba6419a4ad15646c1d845e71325ff549e8d5cb30b075cfd5b"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\O2\\wrong-host.log",
+      "sha256": "44943eb6790c73cc4203dc523f160ac13b20d61c58bf16479c0e9b554926aca8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\exploratory-1-wrong-ca.log",
+      "sha256": "21746b656abaa690562ecdff80e57865062a3efbdaad702c4819513a7e759a2d"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\exploratory-1.json",
+      "sha256": "55a244c0bf267f5814f50a4aca2454c4e8e10afb2fc83cf5f8601ee8721c3243"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\exploratory-2-fail-release.log",
+      "sha256": "9cfc5323c57d9ecb05c28e164bc5ef5f11536a3e3305e799981c618963a88727"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\provider-pair\\exploratory-2.json",
+      "sha256": "8932d42f92b993637a52c1bf9f6b3538d195a935d5438f5c72c145792702bbf3"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\quic-provider-pair.md",
+      "sha256": "1496e23fbfb93023c432829d0b24c829e04645f736ec70dbd34bf03ed5efd52c"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r5-check-results.json",
+      "sha256": "b5a22d70ebc20f0c5cfe3d925af0aaf42883bae786183b83fcb4fe7b8f8edbb8"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\source-inventory.json",
+      "sha256": "57f400db19492342e1783abddfa07c6a894046040fb45ded1b9c611594c7d200"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\probe-quic-pair.c",
+      "sha256": "3f30826b0ffbd28cf60ed238b45876468fefec704dfad5d2fdce8fedf358a442"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\tools\\probe-quic-pair.py",
+      "sha256": "a50f002c744bc9143376bfb974e994f1c032d0496ba45a6124ae74a286abec0a"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r5-change-audit.json",
+      "sha256": "f7309481744ac8b841ccaeeeacf34e5fe23c78929b01f40f3177d1d8b0c64e06"
+    }
+  ],
+  "previous_sources_checked": 349,
+  "application_pins_modified": false
+}

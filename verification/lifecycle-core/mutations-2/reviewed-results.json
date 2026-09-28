@@ -1,0 +1,152 @@
+{
+  "production_sha256": "42de3eb9a1906cd8078e2c3fda35f793c687dc6ab17a636532ebba2767615716",
+  "tests_sha256": "a0004bbb305fbd774de21bec24677e1fa3965db3d451b7b37e63cd46101bcd93",
+  "results": [
+    {
+      "mutation": "duplicate_dispatch",
+      "command": [
+        "zig",
+        "test",
+        "-ODebug",
+        "--dep",
+        "lifecycle",
+        "-Mroot=C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+        "-Mlifecycle=C:\\Projects\\lan-audio\\verification\\lifecycle-core\\mutations-2\\duplicate_dispatch.zig",
+        "--cache-dir",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\lifecycle-mutation-cache"
+      ],
+      "exit_code": 1,
+      "seconds": 15.015503100003116,
+      "expected_test": "cancel before each dispatch",
+      "witness": {
+        "test_header": "1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...expected null, found .{ .generation = 1, .serial = 2, .executor = .allocator, .kind = .acquire, .resource = .storage }",
+        "test_failure": "TestExpectedEqual"
+      },
+      "detected": true,
+      "source_sha256": "a6a668c027ce5e9c64d3681b14d7d4b0ec45adbba97f0f1e4fdf6302c352c194",
+      "log_sha256": "a9f87b2240f3ebc36ceafdc37f717a357efcb575aa0ab3ad54141b1512be1858"
+    },
+    {
+      "mutation": "lose_late_success",
+      "command": [
+        "zig",
+        "test",
+        "-ODebug",
+        "--dep",
+        "lifecycle",
+        "-Mroot=C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+        "-Mlifecycle=C:\\Projects\\lan-audio\\verification\\lifecycle-core\\mutations-2\\lose_late_success.zig",
+        "--cache-dir",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\lifecycle-mutation-cache"
+      ],
+      "exit_code": 1,
+      "seconds": 10.597409599999082,
+      "expected_test": "cancel during every acquisition",
+      "witness": {
+        "test_header": "2/11 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...slices differ. first difference occurs at index 0 (0x0)",
+        "test_failure": "TestExpectedEqual"
+      },
+      "detected": true,
+      "source_sha256": "b58820ae7b791018e0ccb545d0f5a4d1f8891398d66b15c0d04b1cd61097275a",
+      "log_sha256": "6e067dc264d75d79778bb5a1541e3f949ab16c4148f1be6614eb55ea38b17bf1"
+    },
+    {
+      "mutation": "ignore_token_fields",
+      "command": [
+        "zig",
+        "test",
+        "-ODebug",
+        "--dep",
+        "lifecycle",
+        "-Mroot=C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+        "-Mlifecycle=C:\\Projects\\lan-audio\\verification\\lifecycle-core\\mutations-2\\ignore_token_fields.zig",
+        "--cache-dir",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\lifecycle-mutation-cache"
+      ],
+      "exit_code": 1,
+      "seconds": 9.681272499998158,
+      "expected_test": "every token field",
+      "witness": {
+        "test_header": "6/11 runtime_lifecycle.test.every token field and contradictory result is rejected atomically...expected error.InvalidToken, found void",
+        "test_failure": "TestExpectedError"
+      },
+      "detected": true,
+      "source_sha256": "31e53f75164a5f696341962f6d2ac703b33d5f0d85435676325c45501081788b",
+      "log_sha256": "990621ec2293b81927a80f5267c0120eebad2bbe86d5645019dc9c8850df0751"
+    },
+    {
+      "mutation": "release_live_worker",
+      "command": [
+        "zig",
+        "test",
+        "-ODebug",
+        "--dep",
+        "lifecycle",
+        "-Mroot=C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+        "-Mlifecycle=C:\\Projects\\lan-audio\\verification\\lifecycle-core\\mutations-2\\release_live_worker.zig",
+        "--cache-dir",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\lifecycle-mutation-cache"
+      ],
+      "exit_code": 1,
+      "seconds": 10.757895499998995,
+      "expected_test": "cancel before each dispatch",
+      "witness": {
+        "test_header": "1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...FAIL (TestUnexpectedResult)",
+        "test_failure": "TestUnexpectedResult"
+      },
+      "detected": true,
+      "source_sha256": "8f58e0e032626a5e6b10790426a2f96650154dd9ecdef59356ba52e411b8f86d",
+      "log_sha256": "f0c85cd80f9930cc19ebb82af0678ac3733f232e4b452ca99638cae7a21a48ca"
+    },
+    {
+      "mutation": "release_unfenced_device",
+      "command": [
+        "zig",
+        "test",
+        "-ODebug",
+        "--dep",
+        "lifecycle",
+        "-Mroot=C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+        "-Mlifecycle=C:\\Projects\\lan-audio\\verification\\lifecycle-core\\mutations-2\\release_unfenced_device.zig",
+        "--cache-dir",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\lifecycle-mutation-cache"
+      ],
+      "exit_code": 1,
+      "seconds": 15.022808499998064,
+      "expected_test": "cancel before each dispatch",
+      "witness": {
+        "test_header": "1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...FAIL (TestUnexpectedResult)",
+        "test_failure": "TestUnexpectedResult"
+      },
+      "detected": true,
+      "source_sha256": "f19e73902dd3113b0b73954326d8bfa81a772d4b76673fe6631cde1bc75474ca",
+      "log_sha256": "4b28af7d68a04f15d109cb44a11358d8a53c02d54093c66f7cc314d1f6db7810"
+    },
+    {
+      "mutation": "forget_pending_at_terminal",
+      "command": [
+        "zig",
+        "test",
+        "-ODebug",
+        "--dep",
+        "lifecycle",
+        "-Mroot=C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+        "-Mlifecycle=C:\\Projects\\lan-audio\\verification\\lifecycle-core\\mutations-2\\forget_pending_at_terminal.zig",
+        "--cache-dir",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-25\\referenced-chatgpt-conversation-this-is-an-3\\work\\lifecycle-mutation-cache"
+      ],
+      "exit_code": 1,
+      "seconds": 15.56877379999787,
+      "expected_test": "cancel during every acquisition",
+      "witness": {
+        "test_header": "2/11 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...expected error.Busy, found 2",
+        "test_failure": "TestExpectedError"
+      },
+      "detected": true,
+      "source_sha256": "ded07341035dea59b8c1edbfb1cd020c83c176363d8611b5dc4a8924b18fea73",
+      "log_sha256": "47066c18a6be54d795293da93ba0fdddf0cf6fde7fa2268c229c36c9d09e7178"
+    }
+  ],
+  "passed": true,
+  "classification_correction": "Earlier classifier required FAIL at line start; Zig also emits it immediately after test-name ellipsis. No executables or logs rerun/changed; compiled tests already rejected all six mutations."
+}

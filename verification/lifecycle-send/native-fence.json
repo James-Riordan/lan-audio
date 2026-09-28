@@ -1,0 +1,16 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "audio-test",
+    "--summary",
+    "all"
+  ],
+  "exit_code": 0,
+  "seconds": 17.502907900001446,
+  "source_sha256": {
+    "src/host/audio_device.zig": "2f37acb03456713c24ce29eee3a8f253b8f9a5dc64eaf8dd54b9f58b9fb0e6a8",
+    "tests/integration/audio_device.zig": "39c02517a5f5a94c5b186c1151a79bdaeb873e7c6a4f5e05492c2c05b1e61403",
+    "src/audio/callback_bridge.zig": "23a7fb312641118a1b46f49ea637d3a60747acc40c75c0561632a155c0cf3e2f"
+  }
+}

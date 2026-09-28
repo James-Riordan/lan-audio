@@ -1,0 +1,83 @@
+{
+  "scope": "10 miniaudio ecosystem contract updates and eight TLS r4 additions; no library source or application pins changed.",
+  "miniaudio_delta_keys": [
+    "miniaudio-zig/docs/DEPENDENCIES.md",
+    "miniaudio-zig/docs/README.md",
+    "miniaudio-zig/docs/architecture/ecosystem-boundary.md",
+    "miniaudio-zig/docs/contracts/qualification-records.md",
+    "miniaudio-zig/docs/implementation/adoption-transaction.md",
+    "miniaudio-zig/docs/implementation/qualification.md",
+    "miniaudio-zig/docs/reference/catalog.json",
+    "miniaudio-zig/docs/reference/files.md",
+    "miniaudio-zig/docs/verification/README.md",
+    "miniaudio-zig/docs/verification/ecosystem.md"
+  ],
+  "tls_added_paths": [
+    "docs/ecosystem/configuration-and-capabilities.md",
+    "docs/ecosystem/docz-migration.md",
+    "docs/ecosystem/maintenance-and-observability.md",
+    "docs/ecosystem/overview.md",
+    "docs/ecosystem/producer-observations.json",
+    "docs/verification/baseline-r3.md",
+    "docs/verification/r4-change-audit.json",
+    "docs/verification/r4-check-results.json"
+  ],
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\audio-ecosystem-reference-contracts-additions.json",
+      "sha256": "8fd06b93a11ad5dca6362fdb0eb3dc4a1dd95774b031351805d0557371f9e2f7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-handoff.md",
+      "sha256": "d1713208785e3679b9e8f4964938e61a773283714f4741c66fa7fe4ae4c3bb46"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\applied.json",
+      "sha256": "b14c8867ff14dde6abdeaecbce9ab78b2b29610f03c45e78148f00fca97bb6ba"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\baseline.json",
+      "sha256": "637719fe10ac5397a402719910d3bbb935f28587b0d9ce9b58a946e0d6135aa6"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\documentation.log",
+      "sha256": "d226cd32185116cd6d50006deeca755be05a157e8efd3962dbd64234a7c5d543"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\receipt.json",
+      "sha256": "aca3ec79e2d74b57c6fe3fe2c00dd62adb78bd13309bab0c225807fb5f7e8501"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\RESULTS.md",
+      "sha256": "8c42b8060690e3dfa0d878f5a8f3925ecc8ac835639b30117da2f5e1d847952c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\spec_examples.py",
+      "sha256": "262e09cccafc068882c2253edd222be200b021f4cce510c48b0f29187d371c55"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\specification-examples.log",
+      "sha256": "c9eee88516a59d1533c211eba31cf308ed92e79f919e63e0d3aafaca0b8e8113"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-ecosystem-readiness\\miniaudio-zig\\verification\\ecosystem-readiness\\vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r4-change-audit.json",
+      "sha256": "4592f16e8c2c54210d9e74304d2ae07df6a1fb527fefcb2887c058d42c00ef18"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\r4-check-results.json",
+      "sha256": "4adae7a800ac92f9c0892b4539fe83e7bc4179f1c118f138638d3becdb0f247e"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\source-inventory.json",
+      "sha256": "587d464903ad62c6c44fff4de62b0b6199a33c4035ef880847a7a66efef74783"
+    },
+    {
+      "path": "C:\\Projects\\tls-zig\\docs\\verification\\artifact-register.json",
+      "sha256": "6e96e58944b3c6bc59bd20dde2d7072967eb1effced7e948f98be06e735f648a"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "tools/check_docs.py"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:22.338255+00:00",
+  "elapsed_seconds": 1.2800531000029878,
+  "exit_code": 0,
+  "log": "docs.log",
+  "log_sha256": "0d56ea2efcaecf6047d4a6afdff9f79e3b346bae9755020dd7e36067fdcaa8ee"
+}

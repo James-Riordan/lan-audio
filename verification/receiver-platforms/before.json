@@ -1,0 +1,773 @@
+{
+  "prior_receipt_sha256": "0dffee2e78dd45d29bf65bdb990ee1ad403d6308b73206f153fc2d32f587e029",
+  "application": [
+    {
+      "path": "C:\\Projects\\lan-audio\\.gitignore",
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+      "bytes": 61,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\AGENTS.md",
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+      "bytes": 1882,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig",
+      "sha256": "89ca045ca8faf3485bce6642f29ff530d337c261a3fd36f32529c2bcf0fc14be",
+      "bytes": 11093,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\build.zig.zon",
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+      "bytes": 662,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\architecture\\ecosystem-integration.md",
+      "sha256": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+      "bytes": 10194,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\architecture\\modules.md",
+      "sha256": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+      "bytes": 3839,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\architecture\\platform-capabilities.md",
+      "sha256": "89e2096f7b718003607ad6bb500ab83646d531a1abfb79d4054401c53315bc58",
+      "bytes": 5942,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\ARCHITECTURE.md",
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+      "bytes": 13449,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\CALLBACKS.md",
+      "sha256": "4b9fc9f5f77277339dbbfd4386081669cb28ee199b9b02a8e51ec679352a7260",
+      "bytes": 7763,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\DEPENDENCIES.md",
+      "sha256": "7f585eab6f3049884cba9c89d7aa27cd4f99f78aa19fbb31be2fc4c07450d39e",
+      "bytes": 7715,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\design\\configuration-resolution.md",
+      "sha256": "4c7b9834d8982a3f8772cf78d5dd56283c372f21c79c8fa710df1d40fab831b8",
+      "bytes": 9509,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\design\\lifecycle-transactions.md",
+      "sha256": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+      "bytes": 16779,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\design\\receive-drain.md",
+      "sha256": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+      "bytes": 8366,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\design\\system-mathematics.md",
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+      "bytes": 6660,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\development\\documentation.md",
+      "sha256": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+      "bytes": 4262,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\development\\workflow.md",
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+      "bytes": 2769,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\completion-sequence.md",
+      "sha256": "9541a5dda2e3c2b24c9fac3ac5f3adf02880a0f105c26762d0f4b634d0ca4cd7",
+      "bytes": 10775,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\decisions.md",
+      "sha256": "734b5e1f8b298a30775a6d8654628837925c53233434e14fc8fabd0c7b225d71",
+      "bytes": 7997,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\interfaces.md",
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+      "bytes": 7194,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\layout.md",
+      "sha256": "e6f832880c097ad2b7563a35d97b9299a1b517e81286f6008b2d87211b5297f6",
+      "bytes": 8240,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\roadmap.md",
+      "sha256": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+      "bytes": 4039,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\runtime-blueprint.md",
+      "sha256": "b23308e59b47d4b7dba38712d8771f132161827b8fe80770ca490ee4ce8cc540",
+      "bytes": 13792,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\START_HERE.md",
+      "sha256": "92df5dc6aa89de659441e8c414ef8b9166dd675f81f955c75073ac8df86121f2",
+      "bytes": 7218,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\takeover-readiness.md",
+      "sha256": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+      "bytes": 8881,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\01-target-builds.md",
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+      "bytes": 3079,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\02-fidelity-protocol.md",
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+      "bytes": 4625,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\03-identity-endpoints.md",
+      "sha256": "d6a4a62c6cf933f69af527607a8cfa4685d9cbe398e4f8de688205edfe4c42d7",
+      "bytes": 3495,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\04-first-sound.md",
+      "sha256": "9550de9bde0483fab2b6ab69f4a41ffbefdd974a381c45a945e6fc4e13a33d15",
+      "bytes": 4680,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\05-timing-clocks.md",
+      "sha256": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+      "bytes": 3505,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\06-network-resilience.md",
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+      "bytes": 2752,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\07-observability.md",
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+      "bytes": 2320,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\08-user-experience.md",
+      "sha256": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+      "bytes": 2815,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\09-packaging.md",
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+      "bytes": 2411,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\implementation\\work-packages\\10-qualification.md",
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+      "bytes": 2389,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\proof-ledger.md",
+      "sha256": "2da44c9650fca88235f2d98b802b816d468883907f0ff3b712e144926ba55ade",
+      "bytes": 8458,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\quantitative-design.md",
+      "sha256": "f68abc33e34faaa3729ce9789da947eb6d23355671da29aded7d6ba8bfbe102b",
+      "bytes": 6594,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\README.md",
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+      "bytes": 4639,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\runtime-argument.md",
+      "sha256": "29c72d4d36dfac4f87a7f2d33809dd1fc4cd74ab4c8edf07bfa1661b1f4262d9",
+      "bytes": 10428,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\literate\\stream-argument.md",
+      "sha256": "4e6d5ac4d58d4f430261f7d48de36942e124f4b923631b46e619a0ece028a819",
+      "bytes": 10101,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\MATHEMATICS.md",
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+      "bytes": 19013,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\media\\assembly.md",
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+      "bytes": 6768,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\media\\pending-block.md",
+      "sha256": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+      "bytes": 7285,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\PRODUCT.md",
+      "sha256": "9a76c9ca6441019737200befabab18e2dbc18d65014b1a3cc94e2017d9f4639a",
+      "bytes": 10632,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\protocol\\negotiation.md",
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+      "bytes": 5106,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\protocol\\v2.md",
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+      "bytes": 7835,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\README.md",
+      "sha256": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+      "bytes": 3392,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\api-contracts.md",
+      "sha256": "aa735a8e916b664cbbaed2135408e0635144d44944803af5e8d4c149615597cf",
+      "bytes": 16163,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\evidence.md",
+      "sha256": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+      "bytes": 220775,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\file-index.json",
+      "sha256": "4b62a92918322221570fd5f01123d35e9242a428a705d3c5bd4ab88a3db7458c",
+      "bytes": 136240,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\lan-audio.md",
+      "sha256": "2bf7ea09fb0d787b9621fe92ee1ca987e9305d354cd823d7fb436e9118e7c429",
+      "bytes": 164222,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\miniaudio-zig.md",
+      "sha256": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+      "bytes": 46334,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\README.md",
+      "sha256": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+      "bytes": 2773,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\tls-zig.md",
+      "sha256": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+      "bytes": 283610,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\reference\\upstream-assets.md",
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+      "bytes": 59427,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\lifecycle-core.md",
+      "sha256": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+      "bytes": 12628,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\native-events.md",
+      "sha256": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+      "bytes": 8616,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\native-failures.md",
+      "sha256": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+      "bytes": 3156,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\native-fence.md",
+      "sha256": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+      "bytes": 10074,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\network-owner.md",
+      "sha256": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+      "bytes": 7847,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\receive-drain.md",
+      "sha256": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+      "bytes": 10734,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\runtime\\send-drain.md",
+      "sha256": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+      "bytes": 8084,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\TRANSPORT.md",
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+      "bytes": 8295,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\acceptance-matrix.md",
+      "sha256": "bd9eb4a5879943db2d01d926c7a5cb224ad503f7780ccc2b0ee838f6d6510197",
+      "bytes": 4637,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\runtime-obligations.md",
+      "sha256": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+      "bytes": 11420,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\scenarios.md",
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+      "bytes": 4483,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\verification\\v2-independent.md",
+      "sha256": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+      "bytes": 6108,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\docs\\VERIFICATION.md",
+      "sha256": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+      "bytes": 5039,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\README.md",
+      "sha256": "7c2cbff297834198115650777ad4843ddfa704ac05949ec0595f58301db81bf2",
+      "bytes": 6321,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\concurrency\\SpscPublication.cfg",
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+      "bytes": 138,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\concurrency\\SpscPublication.tla",
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+      "bytes": 2292,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\README.md",
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+      "bytes": 6151,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\lifecycle_transactions.py",
+      "sha256": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+      "bytes": 9108,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\ReceiveDrain.cfg",
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+      "bytes": 202,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\ReceiveDrain.tla",
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+      "bytes": 5019,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\RuntimeOwnership.cfg",
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+      "bytes": 227,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\runtime\\RuntimeOwnership.tla",
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+      "bytes": 7664,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\session\\SessionWindow.cfg",
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+      "bytes": 212,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\session\\SessionWindow.tla",
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+      "bytes": 3912,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\stream\\EndDrain.cfg",
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+      "bytes": 166,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\spec\\stream\\EndDrain.tla",
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+      "bytes": 1949,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\audio\\callback_bridge.zig",
+      "sha256": "aa560ade34583d2fbcb2e024491fb232c1b90f3446b32a7ff731c6fbe0d2c3ef",
+      "bytes": 5409,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\audio\\frame_queue.zig",
+      "sha256": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+      "bytes": 4379,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\host\\audio_device.zig",
+      "sha256": "dc41cadb9c98068126f8651c645210fb4bb615c417005439adb6e1969dbf5350",
+      "bytes": 33384,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\host\\net\\native.c",
+      "sha256": "8a8be9c796430320dd18d9214e09e995c6819d9beab95c8a26dbdbd4d80203e8",
+      "bytes": 9492,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\host\\net\\native.h",
+      "sha256": "15f0bce3a92493a2e3c38126d411c37273ad107a3f2037eb1be4592e03a91448",
+      "bytes": 1283,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\host\\net\\socket.zig",
+      "sha256": "a70cabf46f185ef287fe2f37c9e7c777242e8e1d06e58946ea0d87f0ef9ac06e",
+      "bytes": 9097,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\block_assembler.zig",
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+      "bytes": 4262,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\format.zig",
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+      "bytes": 1886,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\media\\playout_window.zig",
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+      "bytes": 3125,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\negotiation.zig",
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+      "bytes": 4631,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\v1.zig",
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+      "bytes": 7648,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\protocol\\v2.zig",
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+      "bytes": 9445,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\README.md",
+      "sha256": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+      "bytes": 2907,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\root.zig",
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+      "bytes": 1037,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\runtime\\lifecycle.zig",
+      "sha256": "6217a0552185432991be5fbd1653073f6b09e0cfa51f32f8d9d29557e9fa7d50",
+      "bytes": 18349,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\runtime\\pending_block.zig",
+      "sha256": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+      "bytes": 3532,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\runtime\\receive_drain.zig",
+      "sha256": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+      "bytes": 8696,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\runtime\\send_drain.zig",
+      "sha256": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+      "bytes": 9389,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session\\receiver.zig",
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+      "bytes": 3727,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\src\\session\\session.zig",
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+      "bytes": 2946,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\dependency.zig",
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+      "bytes": 459,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\hardware\\windows_capture.zig",
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+      "bytes": 2160,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\audio_device.zig",
+      "sha256": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+      "bytes": 7905,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\loopback_transport.zig",
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+      "bytes": 2346,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\network_host.zig",
+      "sha256": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+      "bytes": 9593,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_peer.py",
+      "sha256": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+      "bytes": 11632,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\protocol_v2_reference.py",
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+      "bytes": 2599,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\runtime_lifecycle.zig",
+      "sha256": "cb8dc5c7b329ceaa2fcac1758f730dd468ed6646f76a0d32d6f4bae9f8f2b86c",
+      "bytes": 54783,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\tls_receiver.zig",
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+      "bytes": 6347,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\tls_v2.zig",
+      "sha256": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+      "bytes": 8102,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\integration\\v2_codec_probe.zig",
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+      "bytes": 2787,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\callback.zig",
+      "sha256": "a50ce904530b120949a7d61582e1bb250722368cc760824893e5f1d9ce9c8bdd",
+      "bytes": 8237,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\core.zig",
+      "sha256": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+      "bytes": 6681,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\media\\assembler.zig",
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+      "bytes": 6261,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\protocol\\negotiation.zig",
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+      "bytes": 7040,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\protocol\\v2.zig",
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+      "bytes": 7527,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\runtime\\pending_block.zig",
+      "sha256": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+      "bytes": 9158,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tests\\unit\\wire.zig",
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+      "bytes": 6153,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\build_reference.py",
+      "sha256": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+      "bytes": 12577,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_docs.py",
+      "sha256": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+      "bytes": 1756,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_handoff.py",
+      "sha256": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+      "bytes": 2723,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_lifecycle_spec.py",
+      "sha256": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+      "bytes": 2774,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_models.py",
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+      "bytes": 3889,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\check_transport.py",
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+      "bytes": 1708,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\reference_contracts.json",
+      "sha256": "091dea16274225e8e903e4e11f7c9bafd8b871e2976a0ab62b01214cf8b31070",
+      "bytes": 375479,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\test_transport.py",
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+      "bytes": 8958,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\tools\\test_v2_differential.py",
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+      "bytes": 7838,
+      "adoption": "application"
+    },
+    {
+      "path": "C:\\Projects\\lan-audio\\transport-lock.json",
+      "sha256": "06fc7ad3a0e9793f875180925595edf049c3e862a06765db90c82a60a4efe86a",
+      "bytes": 33515,
+      "adoption": "application"
+    }
+  ]
+}

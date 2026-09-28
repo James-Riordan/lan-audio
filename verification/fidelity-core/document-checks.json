@@ -1,0 +1,18 @@
+{
+  "commands": [
+    "python tools/build_reference.py",
+    "python tools/check_docs.py",
+    "python tools/check_handoff.py",
+    "python tools/check_transport.py",
+    "python ../miniaudio-zig/tools/check_vendor.py"
+  ],
+  "cwd": "C:/Projects/lan-audio",
+  "observation": {
+    "chunk_id": "cbce40",
+    "wall_time_seconds": 0.0000116,
+    "exit_code": 0,
+    "original_token_count": 102,
+    "output": "Rendered 311 file entries: 145 authored/support, 166 installed SDK files\r\nPASS: 311 authored/vendor files mapped; local Markdown targets exist (anchors not checked)\r\nPASS: 311 files have contract/index coverage; local Zig imports and work-package exits resolve\r\nPASS: 188 dependency files match reviewed custody; staged=False\r\nPASS: 2 unchanged upstream files at 9634bedb5b5a2ca38c1ee7108a9358a4e233f14d\r\n"
+  },
+  "note": "Combined sequential PowerShell output; final process exit status and each printed PASS marker are retained. This is not a fabricated array of per-command exit codes."
+}

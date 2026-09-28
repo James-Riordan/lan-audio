@@ -1,0 +1,48 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/build_reference.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "Rendered 329 file entries: 163 authored/support, 166 installed SDK files\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_docs.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 329 authored/vendor files mapped; local Markdown targets exist (anchors not checked)\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_handoff.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 329 files have contract/index coverage; local Zig imports and work-package exits resolve\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_transport.py",
+      "--staged"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 188 dependency files match reviewed custody; staged=True\n"
+  },
+  {
+    "command": [
+      "python",
+      "../miniaudio-zig/tools/check_vendor.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 2 unchanged upstream files at 9634bedb5b5a2ca38c1ee7108a9358a4e233f14d\n"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "verification/lifecycle-receive/mutate.py"
+  ],
+  "exit_code": 0,
+  "seconds": 90.91941909999878
+}

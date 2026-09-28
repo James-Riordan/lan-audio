@@ -1,0 +1,22 @@
+policy-test
++- run test 6 pass, 1 fail (7 total)
+error: 'peer_policy.test.independent 128-case authorization table requires every binding condition' failed:
+       expected 63, found 62
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:112:17: 0x7ff7a34c53aa in expectEqualInner__anon_62524 (test_zcu.obj)
+                       return error.TestExpectedEqual;
+                       ^
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff7a34c7de1 in expectEqual (test_zcu.obj)
+           return expectEqualInner(T, expected, actual);
+       
+       C:\Projects\lan-audio\tests\integration\peer_policy.zig:91:17: 0x7ff7a34c7e31 in test.independent 128-case authorization table requires every binding condition (test_zcu.obj)
+                       try eq(@as(usize, 63), flags); // Independent conjunction oracle.
+                       ^
+failed command: ".\\.zig-cache\\o\\2c8185e1b3c977f0b4f1097a5e6cd491\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x223f3a68 --listen=-
+
+Build Summary: 1/3 steps succeeded (1 failed); 6/7 tests passed (1 failed)
+policy-test transitive failure
++- run test 6 pass, 1 fail (7 total)
+   +- compile test debug native success 8s MaxRSS:281M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x223f3a68 policy-test --summary all

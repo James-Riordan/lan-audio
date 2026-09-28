@@ -1,0 +1,7 @@
+Build Summary: 5/5 steps succeeded; 76/76 tests passed
+test success
++- run test 44 pass (44 total) 2s MaxRSS:3M
+|  +- compile test debug native success 5s MaxRSS:288M
++- run test 32 pass (32 total) 104ms MaxRSS:3M
+   +- compile test debug native success 5s MaxRSS:286M
+

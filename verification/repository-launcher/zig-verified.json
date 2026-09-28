@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://pkg.hexops.org/zig/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz",
+    "sha256": "a84427195a7e34a648d4422f0c5c200092f78d505b6b32b7b7c2065b52171c34",
+    "size": 59216372,
+    "verified_zsf_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+  },
+  {
+    "url": "https://pkg.hexops.org/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip",
+    "sha256": "0d43c9a98a90c859a649294c3b56a7c857855634f9f8f2024289722c7ea927d3",
+    "size": 100971860,
+    "verified_zsf_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+  }
+]

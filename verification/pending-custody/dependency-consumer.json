@@ -1,0 +1,30 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "dependency-test",
+    "--cache-dir",
+    ".zig-cache/pending-dependency-consumer",
+    "-j1",
+    "--summary",
+    "all"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "exit_code": 0,
+  "seconds": 15.027597599997534,
+  "source_hashes": {
+    "C:\\Projects\\lan-audio\\build.zig": "5e9bbb25b2f753a6846005d2bf9dc0e1a06f5046423999d566d8d92c0b67ed20",
+    "C:\\Projects\\lan-audio\\build.zig.zon": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+    "C:\\Projects\\lan-audio\\tests\\dependency.zig": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+    "C:\\Projects\\miniaudio-zig\\build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+    "C:\\Projects\\miniaudio-zig\\build.zig.zon": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e",
+    "C:\\Projects\\miniaudio-zig\\src\\root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+    "C:\\Projects\\miniaudio-zig\\src\\profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+    "C:\\Projects\\miniaudio-zig\\src\\native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+    "C:\\Projects\\miniaudio-zig\\UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+    "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+  },
+  "sources_unchanged": true,
+  "log": "dependency-consumer.log",
+  "physical_devices": false
+}

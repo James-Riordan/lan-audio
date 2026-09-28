@@ -1,0 +1,158 @@
+{
+  "status": "verified",
+  "project": "tls-zig",
+  "created_utc": "2026-09-27T01:12:44.571035+00:00",
+  "scope": "Q04 adds coordinated recovery, bounded history, independent peer traces and a public consumer. The only existing source change is the additive QUIC root export/test import. Q00/Q01/Q02/Q03 receipts are requalified; exact prior receipts remain history. All TLS source/seven receipts, original pins/builds, frozen fixture and SDK are unchanged from the Q03 baseline",
+  "excluded_self_path": "docs/verification/q04-change-audit.json",
+  "deleted_paths": [],
+  "source_files": 86,
+  "changes": [
+    {
+      "path": "docs/architecture/decisions/0005-recovery-spaces.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f57b3b3a386518e5eb3759f892fa7821eb097683fd2fb5ae480a66117e70adff",
+      "bytes": 5501
+    },
+    {
+      "path": "docs/contracts/resource-budgets.md",
+      "change": "modified",
+      "before_sha256": "d69d7b6a43cd655bfd42ebd0e05281975b80edbae138bacdaeef5e8a1fecf2fe",
+      "after_sha256": "e54dc13869e7f7666397c289eadb4592fcbc5c29bee0a682217102cff93221b3",
+      "bytes": 7646
+    },
+    {
+      "path": "docs/formal/invariants.md",
+      "change": "modified",
+      "before_sha256": "688a2bf3e1a9d70643810e87a775f334e2c420314ddf46020a4dcf885f0b5026",
+      "after_sha256": "a69b2630f1b9df2202433e5b19330c18a9af322a6ffedc86ad41d3a8913da383",
+      "bytes": 5299
+    },
+    {
+      "path": "docs/roadmap/decision-register.md",
+      "change": "modified",
+      "before_sha256": "c536b1f9573d94e18f1911ee3738880415c180db1229a60b8993fe2b092bcee0",
+      "after_sha256": "3c6ff3df57df70e31d109747878d80fb33430e5b0016d1d7bb45f6b7c3c92ad6",
+      "bytes": 8170
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "modified",
+      "before_sha256": "c0bd3f2c96f3924f11596bcb5049e260776aebc7e28bb629d190aacabb865c5c",
+      "after_sha256": "9c24edfa47c9e8da3c824db1dd92f8532c3c8c9238b31d0a0eaea20506b63380",
+      "bytes": 51969
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "7f2cf2c67fb26ee7f5f7382670a747508049511ce496051eb550967877986af8",
+      "after_sha256": "379a88f4ee545863cb704e91ed71db84430445c58e30679caad619234329bd5d",
+      "bytes": 196780
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "37d3bac4ae4a1ffb0059bc4ee3325108c22bb25733cf1d4a69f8e8f3eb1389e4",
+      "after_sha256": "e10aeab3e1da6bafafcae903d5868b2b7316de38dbb13ff509416e3ed96b5845",
+      "bytes": 2754
+    },
+    {
+      "path": "docs/verification/q04-final-gates.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f9d32ae4dcc74f08d33b46b44a6da5922a7392367186301de27a242c23e1a929",
+      "bytes": 4087
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q04-final-runs/docs-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q04-final-runs/lifecycle-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b9c2088a31f77fd152cea9f9b965512367a7d66e58b0cd448ed9da57cfe56405",
+      "bytes": 1051
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q04-final-runs/plan-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b9c2088a31f77fd152cea9f9b965512367a7d66e58b0cd448ed9da57cfe56405",
+      "bytes": 1051
+    },
+    {
+      "path": "docs/verification/q04-implementation.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e10aeab3e1da6bafafcae903d5868b2b7316de38dbb13ff509416e3ed96b5845",
+      "bytes": 2754
+    }
+  ]
+}

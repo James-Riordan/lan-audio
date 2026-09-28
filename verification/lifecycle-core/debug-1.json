@@ -1,0 +1,15 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "lifecycle-test",
+    "--summary",
+    "all"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:29:23.422307+00:00",
+  "elapsed_seconds": 12.287307500002498,
+  "exit_code": 0,
+  "log": "debug-1.log",
+  "log_sha256": "f0345892ccb4a44391662957c23a684c060bcefe5fb5baa5860f9b3ec9410e7a"
+}

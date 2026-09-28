@@ -1,0 +1,9 @@
+Build Summary: 6/6 steps succeeded
+check success
++- compile test debug x86_64-linux-gnu success 1s MaxRSS:134M
++- compile test debug x86_64-linux-gnu cached 1s MaxRSS:39M
+   +- WriteFile cached
+   +- compile lib miniaudio debug x86_64-linux-gnu cached 26ms MaxRSS:39M
+   +- compile lib miniaudio debug x86_64-linux-gnu (reused)
+   +- translate-c cached 26ms MaxRSS:39M
+

@@ -1,0 +1,41 @@
+[
+  {
+    "label": "before-build",
+    "command": [
+      "zig",
+      "build",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "seconds": 12.616
+  },
+  {
+    "label": "buffered-deadline",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--only",
+      "buffered-deadline",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\buffered-record-regression\\buffered-deadline.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.346
+  },
+  {
+    "label": "after-end",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/integration/verified_channel_peer.py",
+      "--only",
+      "after-end",
+      "--output",
+      "C:\\Projects\\lan-audio\\verification\\verified-channel\\buffered-record-regression\\after-end.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.37
+  }
+]

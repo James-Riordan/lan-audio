@@ -1,0 +1,830 @@
+{
+  "adopted": "2026-09-26",
+  "root": "third_party/tls-zig",
+  "package_version": "0.1.5",
+  "profile": "Windows x86_64 records TLS1.3 mutual certificates, jcr-audio/1 and /2, copied verified peer leaf SHA256; Apple runtime unqualified",
+  "files": [
+    {
+      "path": "HOST-DRIVER.md",
+      "sha256": "184019fce5dbb97f50b21aa72de7231cf821f0dfb74a3c3f826d5f8b32296e97"
+    },
+    {
+      "path": "README.md",
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90"
+    },
+    {
+      "path": "backend-lock.json",
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef"
+    },
+    {
+      "path": "build.zig",
+      "sha256": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134"
+    },
+    {
+      "path": "build.zig.zon",
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d"
+    },
+    {
+      "path": "deps/openssl-install/LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+    },
+    {
+      "path": "deps/openssl-install/bin/libcrypto-3-x64.dll",
+      "sha256": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+    },
+    {
+      "path": "deps/openssl-install/bin/libssl-3-x64.dll",
+      "sha256": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce"
+    },
+    {
+      "path": "deps/openssl-install/bin/openssl.exe",
+      "sha256": "6785566f72a2c113629003c6c5b6b10e931b225d5f1f816750fd74355abf4f46"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/aes.h",
+      "sha256": "130e304c466bda5db6de2fdbca3a970905070ab935d702e61c8371334851ea27"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/asn1.h",
+      "sha256": "07a4863ad1c13c558325deb9ccd0184f979f589d1c68bb1df9b903a404d02406"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/asn1err.h",
+      "sha256": "9d60638b3d0c52170d390fe566c0b96a6381590590cc3dd71339eb85140fe1d6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/asn1t.h",
+      "sha256": "1933928ab928f633ffd7d331d49894f386a478f2d3eddf095ba1cea280ce21b6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/async.h",
+      "sha256": "708d52ecd7bb5ca83d243ddecb132db0693b0809f65c093eabda549156934030"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/asyncerr.h",
+      "sha256": "eb6ea0f0389aa7846ea5b8f5b7b8d2a82a7b52e7dbfa105bc137e52be1399a69"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/bio.h",
+      "sha256": "5a5ae5e2fea83c1bccd40b5b9e0b2bd6219cd9d9424a6eda6b9c487a2114e721"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/bioerr.h",
+      "sha256": "fe1bf57251e4eaab30d2a6aa2048ee93deb1f0f15ef6634f61093b4d405586c6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/blowfish.h",
+      "sha256": "97064924914f71425e48f5d53893abca0f07f329dde7a8b93b581dc9ee2e837a"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/bn.h",
+      "sha256": "da179e5d98e8351e3e29f148bd88b42cba84fe60c7927a584f213bf2d09c38ed"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/bnerr.h",
+      "sha256": "beeb78746fbcc2c09e1f833f4c2ea72e845e757390aad7dc8699f7787b580204"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/buffer.h",
+      "sha256": "c7b9803f89bb492176a1e2738999dad86195ab8048a26e8ec9ef6948b8882e8a"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/buffererr.h",
+      "sha256": "4dea6e8ec7f09bfbdaa85fa3e75572b95d2ea62a813e7420a04f5f56ee7ccdfd"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/byteorder.h",
+      "sha256": "f062018f5fbe9f8459967dffaaa8e27f34596fb0da21fc011d0d556384a0305c"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/camellia.h",
+      "sha256": "e03acf0f3406032e5322e4f3368e8e48e5b73e8846955c3bcb3a4f1cb54d2ebc"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cast.h",
+      "sha256": "4fafc375a53d88fe4c709d8ee5fb74dc0fcaf91915837c3c6b4df0d916b07f0a"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cmac.h",
+      "sha256": "048677b08aab6fd862d2b8b15556db8355d2142b93a9431ffba1d75a25912847"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cmp.h",
+      "sha256": "a56346471600315a467bd3d7727a78c6b2b004be8a09f5c55af3ac86b1510433"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cmp_util.h",
+      "sha256": "16c51c48c83c930b018ff711553e107f1870f1cedd32d94c06f15709b080c321"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cmperr.h",
+      "sha256": "220d1a903b66e25fa1de92f3ee8b3f5ef27de6dface0a4ea68e683a19e3549a7"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cms.h",
+      "sha256": "ac9030882559eaf3292aa59bf6a361505ac99f85318ce00b6c6b0671b162a97a"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cmserr.h",
+      "sha256": "1cfc091ae52fe85c79bccfe1cc2d0e2979afff511e6a91fd04142596a65ac31a"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/comp.h",
+      "sha256": "3f95492b4054a8064bc75f770766aa6c8c0866cbd267939460786e13092a053e"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/comperr.h",
+      "sha256": "03faa7ac9cf7ec99350a55758a685056dae8f75992887e0411c23b0d8c5d83b0"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/conf.h",
+      "sha256": "c6632d4644f9311e558ab71be30064729260f5e231e471d7c6ca88b0b6cf9647"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/conf_api.h",
+      "sha256": "38dce9e9e0a438fcaf1d173c26e61c821bfd3756e221e3be76cf010580ac52f7"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/conferr.h",
+      "sha256": "ea9346e399d5dd1fbcca4f34078e1acb5039333602ecaf72faa04e32cdd55484"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/configuration.h",
+      "sha256": "63ad45c993c1f15fb37cb469865f6900fa478b8bffbc1c6d25913d5ca8b065bf"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/conftypes.h",
+      "sha256": "496997cc0f4c32b840677eeefd3ecb488453254be6e228b8cd34d4a4061a9e28"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/core.h",
+      "sha256": "4d4e63e2e01d06530515adbbe3c93601c5f0f5e1a96754d34d3470bccfcbdbc3"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/core_dispatch.h",
+      "sha256": "877d786bd366e80baa763d2c6c0b94e1d91c92cb0b6fa26d4004e6b0c3e6dd81"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/core_names.h",
+      "sha256": "75fa3a3dab458aa2c0e84a61a052fccb92fc1aca74aaa3a1af8b3e5fe2407ce0"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/core_object.h",
+      "sha256": "e8fa8c62ad1367bd325d59d721214d1a7afd5423205134152f60cc39a8590c8a"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/crmf.h",
+      "sha256": "b4b3fd06761da291414aac3cccf97503ec5704c2fb67c8c13c6eda0b8bcad92f"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/crmferr.h",
+      "sha256": "9f2ff7a468b5048d543fef0324b39abdea63fa07bc915f62ff42a1937d7258c2"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/crypto.h",
+      "sha256": "da6f7d83fba9ec56705709d7cd9b4cb4d528dcb8fb340465a99236f5bc38a0ee"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cryptoerr.h",
+      "sha256": "c457c0591449551657a69ff9727784a79cc1afd899ac733c682c1a41fefdaa19"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cryptoerr_legacy.h",
+      "sha256": "985664cb71a62441b2822028340bb4ad5e3f98d6c74ba4c1bc7c997e188b97d3"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ct.h",
+      "sha256": "54b34eb7204903d64ed7100fc5d93f2f8f92fe2921682dec4857c861324d3b3e"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/cterr.h",
+      "sha256": "26d971ab2166ba4473864506dcd933290fa6c321956ef46220eb61fb33a04c89"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/decoder.h",
+      "sha256": "72dbf52e4dc4efbfaddbf31ab6f2bec3e9a5c22eed865d057b960a014a4b9ec8"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/decodererr.h",
+      "sha256": "c6818c667bdf8c37c5423580e0551359c69efc884198d28675db23e9fc70946e"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/des.h",
+      "sha256": "420afefcf27f28046912c5f156bc9e93d71a2c8a47bf0f605695a13f391cd5f9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/dh.h",
+      "sha256": "25080c32c48d5a88053c4b83c326e8f024b68249a0ef65d3c45af4f9aab6e0c6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/dherr.h",
+      "sha256": "70f9e260865a9aae4c5f9a72d42d878e4dc216c906709245a8da2cceb79c3a14"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/dsa.h",
+      "sha256": "dac47d9779f83eb4e5a4f57c234e6eb25277cea68001384360e16c8859c38338"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/dsaerr.h",
+      "sha256": "b8fb8dae664d18298ae4b0c5444378e3f5c5d095256acb50764230159b1a15d6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/dtls1.h",
+      "sha256": "3477022a712ecbb2bfb61b297c57026f1c354d52c638dfb22292183bd68d2e8f"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/e_os2.h",
+      "sha256": "d7300e16ec04f764e8fd45ae5288c37ab5af09dd1ea204d17c54c0155c69921c"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/e_ostime.h",
+      "sha256": "0528cffa1548778b3ad52d4abb527e5f31590fb1bab4b0f55aad391efd79fd68"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ebcdic.h",
+      "sha256": "f50d3c91cb24772cf3155fe6464d811219b8f7c65ea3d4f974f58c03c3f27ab5"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ec.h",
+      "sha256": "2cc0edb6a18c4c1199bfce6799ca56362a6c27d41dfdfee62177a3d53a8c9a65"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ecdh.h",
+      "sha256": "5b99fdd1dfea38640ed8a506fb9b66db381cc26a1254448a81cc6b161e41850f"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ecdsa.h",
+      "sha256": "5b99fdd1dfea38640ed8a506fb9b66db381cc26a1254448a81cc6b161e41850f"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ecerr.h",
+      "sha256": "c072432649cd1e4bd1eb8c1f636bc2b57045d6f620d69d61c85f589d1c6b63e3"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/encoder.h",
+      "sha256": "73459b25f863cf9bbb3de66f04ffe7ddaf9450f3c26afb1d5827325fa0a89fd9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/encodererr.h",
+      "sha256": "d010ca78b1df89c7fe3410d2aa5674179bf6750a445382ab8a0314c20a5b9799"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/engine.h",
+      "sha256": "185311cc9702aa00fcafefad6f83ca1f597659d5075b66100c61053e1be5f47d"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/engineerr.h",
+      "sha256": "2732c698916f320ba12ba690a80c1ef0651112015c5eac6141b1c3c315d1f5fc"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/err.h",
+      "sha256": "0d673984ff62d55d1fb4534d8136b7325e5264efeeb0b911cc94a4922681e080"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ess.h",
+      "sha256": "0b8cb052d0ed0e193465c39b61e11e9d17cc4c355077ab15da710103e23524b1"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/esserr.h",
+      "sha256": "9ab984787cce1224e1426be57987e7726d8c5d38651dd96802a7d433c5288ae4"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/evp.h",
+      "sha256": "41b42c68adfd98b9d8a80fb2d78bbdaf1094f43dd02be045c7d8605edf36a706"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/evperr.h",
+      "sha256": "ee0a462f1985667434a2b8a91d5df67ce2ee74e4ad9246f660dece5fafcf4474"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/fips_names.h",
+      "sha256": "95f0ddd1271d1bb609acbe42924e903a2dda8e224cced9eb56f5680a6ae75a8e"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/fipskey.h",
+      "sha256": "6d2280433f59da2d0f8a87ef67d0f83b74821f9ef625746982875ff104740e69"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/hmac.h",
+      "sha256": "9caf0b993c6ae2b3c75b9b585c8539dd358ca5f4edc42447295f87fc504eb1b9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/hpke.h",
+      "sha256": "58f81dab37eddc03b86db9dd640980fca872ddf19f4477482826a64f20454cb9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/http.h",
+      "sha256": "1f8d65d9633d54a74e8477396f2e3d34f5cdafc753fa8d56a5ee31753f5b734f"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/httperr.h",
+      "sha256": "56b740a25198f30d19c8ed57b36679bbb32f8f2d97291155d4b3091c347ae423"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/idea.h",
+      "sha256": "d114cb69e2e820008c508b7ad9002586806d82e3006e88162bd4a7c2dcd1e801"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/indicator.h",
+      "sha256": "4be987d4fe4a4b39feac27c2ee85000e1b6ca7188d8ca9f75689a8205c2b4563"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/kdf.h",
+      "sha256": "a4a7c722598b9b5b5fa6e4d659a7c8cf659c5db60c7396ed021d434c45e552c6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/kdferr.h",
+      "sha256": "cbf4bd667f0a53459163f546920c2c98ce6d10b0db99176c779d8bf32f04e8b7"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/lhash.h",
+      "sha256": "ba50a0dc4caa9662e138f913566c44454a68f6e59c405c761c1f387f58855af4"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/macros.h",
+      "sha256": "dc27bc9e94abbb9e49bbcb604da5c061a65145586ac388c3fb4fc311daaccf96"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/md2.h",
+      "sha256": "a8eb0a1cdd0ced053d0f5dc5d1f63fe67f96a83c1cc37b6bf7adde85a567a631"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/md4.h",
+      "sha256": "75d0ff7b22daa2ab31a0cd03ce9ca10cef64f431d32c49def33d0f0164e36f0d"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/md5.h",
+      "sha256": "e22e567d09253eebf2c17f620783808f407bc7b969aa90bf3b44ac9001f6d329"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/mdc2.h",
+      "sha256": "740c2361d9b0ab5330ae0054e368f573416c401cb3855b72323967b29232421f"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ml_kem.h",
+      "sha256": "58ecec9d4d95ab5172290a4c5725b7b6940149ecdbff5a33b93cc67ede1b25f7"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/modes.h",
+      "sha256": "8ea97ace0601cdce6a12d0e1e92aefec062c299d0fcb5ff6477e3d752a9b9763"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/obj_mac.h",
+      "sha256": "d51cb3f619888a0485ba46ad886f76ac605ce78a3cfbc080460947ab2dbb3a02"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/objects.h",
+      "sha256": "b6227db488aa39ed20a29e67d48fe8fefb2f649a1afcc3149cba22ac26510057"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/objectserr.h",
+      "sha256": "fc14e6c9e71fb550363394f912cb72e6078dd11e300bdddfdd17ec118c88dc4b"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ocsp.h",
+      "sha256": "fb6b98fe220246983fef2af0392e37578ef52a71cb2044eb07f5f57a84a66f88"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ocsperr.h",
+      "sha256": "51b319980fb406b70ff0aee9c145c260553f4ff6516305b9c2864643096cc30c"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/opensslconf.h",
+      "sha256": "7f4b522c049d0bd0d651e6f6ebe71d6df0c37231a94e32524da3f4642ebda3be"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/opensslv.h",
+      "sha256": "b3edda4f71b6f328b62bb59339e76f945740c992c2509b8e53ef1afda937cce5"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ossl_typ.h",
+      "sha256": "8d430751bbcd1d9695f3dd85b16958fd6255dfbf55775207923f67cba1754548"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/param_build.h",
+      "sha256": "f078c5549e172b49da9993ef68c7b7fedafd66b05255c9bf8a37154f0a40bdb7"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/params.h",
+      "sha256": "b76d73449d8d44d14a7da9918caf3d1feee85b384e2d62ace73a8a1126152702"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pem.h",
+      "sha256": "9098124ff7a21c8f1db5ddead59b1cf092f88c9f44bf88dacd3c8de9c67ade76"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pem2.h",
+      "sha256": "5bd104c872bbfee2d16f5af88c01b0aeee9f177ecc88c0dd237c9c9948eeedc6"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pemerr.h",
+      "sha256": "18c1dbdde2452416b1d49c7512b7c4b8bf26ac7b83f5c0ee5e27e9bec454d2fb"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pkcs12.h",
+      "sha256": "ab0eab4385122882f6e3fc65f7986a6d65c8b49a7d6148ed017762bbf5e17889"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pkcs12err.h",
+      "sha256": "fbf4142e0ee58b6c6841890d873f07ba0362e21ad74702d70552122e01c096e9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pkcs7.h",
+      "sha256": "280aac0483477bc2d55e94a5f93e42e96a72ec518ae082ebd6f1b394b95681d4"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/pkcs7err.h",
+      "sha256": "717e017e7d0981928b33820660e19d5c264a06a5e824b94194036a8be92be07c"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/prov_ssl.h",
+      "sha256": "23b96759ae94e17c7c0e7ee32a531676be2a276a6d9802828e80268e20f224fd"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/proverr.h",
+      "sha256": "3aaec27b2bf592b5861a3524b6f03a541d7de34e6dfcbcabc2b6bc40221bc743"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/provider.h",
+      "sha256": "dac4bfad226a8e5513cecf472e41e0b7ed93c95374a0ec3fd56f7b046e0aeff1"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/quic.h",
+      "sha256": "a80af6c42394132eaad8de7177c6b0b3f747711730e8dd687acdc34284b3c2f8"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/rand.h",
+      "sha256": "cb240ffedfd9516ec7a8cd0796951d46a4707c0460f940371620c83f7bafd037"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/randerr.h",
+      "sha256": "a6acbb47da2f26fe5e572f232eb9d9ebcd65bb7c01d5984ab26229e5bf0bd45e"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/rc2.h",
+      "sha256": "b86a429de0c73aca6e0504b8833c1dcd9e8c7cdf65c2b31b38d0d0c7b19cc5e9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/rc4.h",
+      "sha256": "1bb4fa9d14861cdcf0a721d8d1026be80ce019da459ffdd8b5c1d12365110e78"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/rc5.h",
+      "sha256": "dd71ab468383a2a8ca4ff34f9273b481c1ed518c380da6d1ab82e9ca6b7edbd9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ripemd.h",
+      "sha256": "4457b36942bc0e298c993b48468ef8f3f00331a9d67bd0b894dd5bc5f58ab35d"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/rsa.h",
+      "sha256": "2c9780f9b4b35c3f14271962938e16b8505e9f5d38566c104bce9a82be23a0e1"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/rsaerr.h",
+      "sha256": "b4f87b5dddc672b81de0dfd7f3c4e6409887bd08b286c99ded8f1255e5836804"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/safestack.h",
+      "sha256": "050aa1f62de6d1473debd7405279a50fa17c79e9fee5484d605fa93c1bf6bf1d"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/seed.h",
+      "sha256": "75a00b017f40beba051fdaad04876e18d3c80d1b1f1c21d78fafc69ae8e3b034"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/self_test.h",
+      "sha256": "4bb6ecb6d55e5e1bee6ef79c24bc8691174ad1b5c160f7d3daea150c140d3abb"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/sha.h",
+      "sha256": "7e006accd6565cc97dee672c097acc5e38482be7cd4fa1e0c316bf466425b895"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/srp.h",
+      "sha256": "fb5313c401adeccd5970bc008d39dcde3892f165ac2207d646979566c4415783"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/srtp.h",
+      "sha256": "6efa8edb1f040ba35cb05a671efc74c1494b9d4badc32d47cd5bb99e1a9cda38"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ssl.h",
+      "sha256": "a6a87709e0726b6194269baac236daa473f04d23bc7de1f87e0baa44d9abe8a8"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ssl2.h",
+      "sha256": "d33dc2afbcdee20f20ffcdd5cda6777c5e49a7cc37d513e4618b71a99129af20"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ssl3.h",
+      "sha256": "f98e0eb1702bf99614e92e2d09f1af5b59309e156441e40ab711df7d661536aa"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/sslerr.h",
+      "sha256": "7a9dab7a198ea5c17fe5cf8e1905a54ae88c0044a86c1accf1e7cc9e7de374e2"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/sslerr_legacy.h",
+      "sha256": "988c235994713d83d73ee904804f7edb4f6e321b4ab94c5aa5a9a0c7134fb499"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/stack.h",
+      "sha256": "c81fbb17b5476dca609b96eb11372d1d246a49096838c2cf7e81ad6b25f69316"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/store.h",
+      "sha256": "0fd665a474792f49055d7bd6e2bebed1449fb2dfd21ac042aa2cbc4cb6c8c66e"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/storeerr.h",
+      "sha256": "e13ecdf3c46b4dde5d857f8a7a3e2c0a444e309aa05d789bf99d73ecefab87aa"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/symhacks.h",
+      "sha256": "2b54552189bfbf4204c28c6a421b21702a3cd3dba37570dbcdadb7ee648f155b"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/thread.h",
+      "sha256": "583716b74d6aa0596c1d1b06cb16f657d4d9fb9c13cf30505ec0327046af6baf"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/tls1.h",
+      "sha256": "f075f51b48cdc3503e40b8f81fb2b760ba2d4f315d2844759d9089ffb10613dc"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/trace.h",
+      "sha256": "5b7f86a453e6b404ff019e23e84de856c2a25b8243d4bfb92c92471a3735e332"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ts.h",
+      "sha256": "3de4eecd9a731d9a05a1b7baab18cb1c62f59f8a9f9e5ed049525a8ada9207b8"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/tserr.h",
+      "sha256": "27e66bf494926dea06d8c3800823f2485cf1a7f8f41f5628ff4a443f9bcceb87"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/txt_db.h",
+      "sha256": "cbd03be764d6d12e12895703756fbe5f2b7611d4cd55d343837d48e8e6e60523"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/types.h",
+      "sha256": "de5422d2e621df11c17ab18473ea4f2368ecc64b1e45311c4890cc62b31f81c5"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/ui.h",
+      "sha256": "b5830554086cd2fcdfc7916f4a5ce9db5268da5471a2a9c1278729ee7949135c"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/uierr.h",
+      "sha256": "a21be118ee97343a03dc28256370839e5751c82a2a7bcb4c60fcbd97a9e2bef5"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/whrlpool.h",
+      "sha256": "d38ef40783400956d571e442d4f459e9c611239d719eb128e19bc64982d01922"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/x509.h",
+      "sha256": "a853a3e3a586a31dbb0ac8f88c900757748712e6ff6c82aa9897ea67a6218b1b"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/x509_acert.h",
+      "sha256": "7e3b443e87f104f57950b3a49ee5711431567f939b40bcc50a22aa168b8fe885"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/x509_vfy.h",
+      "sha256": "bdaf17b19bccb7bd1ec6455a88b57cadcaf3b61eba250bc424b68da00e713119"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/x509err.h",
+      "sha256": "be93ee6c9d58aadb5f836d5e293ec93c94ffc603c46a1d8d1c8b31cf83959fb9"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/x509v3.h",
+      "sha256": "0fa2c0d23ac6b34bd1de78818b0e67ef6df7f788b2d36b60abf111a553f429eb"
+    },
+    {
+      "path": "deps/openssl-install/include/openssl/x509v3err.h",
+      "sha256": "b9be8b0429bfaefb973531e81d598e40779b3788e129c4cc9e33651d2308b990"
+    },
+    {
+      "path": "deps/openssl-install/lib/cmake/OpenSSL/OpenSSLConfig.cmake",
+      "sha256": "c5a5d11fc9639570e9c9cf416b50739e5fc32d5704bc972f5cf762a171f237cf"
+    },
+    {
+      "path": "deps/openssl-install/lib/cmake/OpenSSL/OpenSSLConfigVersion.cmake",
+      "sha256": "45aab6e3978b3dede5383cba2b47940f00c79bc64eea581cbcd319aa3d957089"
+    },
+    {
+      "path": "deps/openssl-install/lib/engines-3/capi.dll",
+      "sha256": "dacc5c6cc5f0a09ff3618d580e33774df243efb77547554335e34ffda3c50dec"
+    },
+    {
+      "path": "deps/openssl-install/lib/engines-3/loader_attic.dll",
+      "sha256": "eaec1312c2565b2fcf036841947c6c497782575b1cde2f3bfdee1c7c045769c3"
+    },
+    {
+      "path": "deps/openssl-install/lib/engines-3/padlock.dll",
+      "sha256": "5bc3ce76a46c964c700dc4faebfbc0b2e6077fbb84ee7fb647974e13733b6286"
+    },
+    {
+      "path": "deps/openssl-install/lib/libcrypto.a",
+      "sha256": "023a1e04c33b61549c23f0d5aba4fb197628a22897e2c953df00d6da4fd10446"
+    },
+    {
+      "path": "deps/openssl-install/lib/libcrypto.dll.a",
+      "sha256": "c0008586576bb1e85d12cd8f218a16b5a4d272990cf56f846ece749d05830f48"
+    },
+    {
+      "path": "deps/openssl-install/lib/libssl.a",
+      "sha256": "61c0fb61ec624cb2b90f277b0870f895fb5673d0b122e49268263ad2997349e5"
+    },
+    {
+      "path": "deps/openssl-install/lib/libssl.dll.a",
+      "sha256": "48ed05721fb806a705329278ab8a5221f92c628f9e64eccaf379b30d5b65f356"
+    },
+    {
+      "path": "deps/openssl-install/lib/ossl-modules/legacy.dll",
+      "sha256": "6731b1965bd470d427e3e0c31e991f29dd0971544b7f5c71b036b02b180663d2"
+    },
+    {
+      "path": "deps/openssl-install/lib/pkgconfig/libcrypto.pc",
+      "sha256": "822d6a62381e364ec9b6f07194f7721700b2aa8ce40992d07fea2b6bf4447c0c"
+    },
+    {
+      "path": "deps/openssl-install/lib/pkgconfig/libssl.pc",
+      "sha256": "2c5a463d8abbe7402460daf22ccfc76de220927414448d0462fc9aac8cea638b"
+    },
+    {
+      "path": "deps/openssl-install/lib/pkgconfig/openssl.pc",
+      "sha256": "b394288357bb68582514b062bc3f53a1cd6b59e3f0d53eb5e193c45c9b84939a"
+    },
+    {
+      "path": "deps/openssl-install/ssl/ct_log_list.cnf",
+      "sha256": "f1c1803d13d1d0b755b13b23c28bd4e20e07baf9f2b744c9337ba5866aa0ec3b"
+    },
+    {
+      "path": "deps/openssl-install/ssl/ct_log_list.cnf.dist",
+      "sha256": "f1c1803d13d1d0b755b13b23c28bd4e20e07baf9f2b744c9337ba5866aa0ec3b"
+    },
+    {
+      "path": "deps/openssl-install/ssl/misc/CA.pl",
+      "sha256": "f87ea885e124ed592ccfce3010348c2286b83548e360d8c311925c0422891828"
+    },
+    {
+      "path": "deps/openssl-install/ssl/misc/tsget",
+      "sha256": "f12c221ef4a07e582031c7dfd72416aa176fdd530f48f8ccde3d47ed176a09d8"
+    },
+    {
+      "path": "deps/openssl-install/ssl/misc/tsget.pl",
+      "sha256": "f12c221ef4a07e582031c7dfd72416aa176fdd530f48f8ccde3d47ed176a09d8"
+    },
+    {
+      "path": "deps/openssl-install/ssl/openssl.cnf",
+      "sha256": "a65a2cb9f4ee8ffdc7ef4f0ac600c0bdafb95b7b1ab457188ac610a62f5ad6b3"
+    },
+    {
+      "path": "deps/openssl-install/ssl/openssl.cnf.dist",
+      "sha256": "a65a2cb9f4ee8ffdc7ef4f0ac600c0bdafb95b7b1ab457188ac610a62f5ad6b3"
+    },
+    {
+      "path": "evidence/source-provenance.json",
+      "sha256": "23d65ebab94bef0b664985604cb19ac172146f95bd5154b0a93e55761e971830"
+    },
+    {
+      "path": "examples/consumer/socket.c",
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c"
+    },
+    {
+      "path": "src/backend.c",
+      "sha256": "dfcc61371663a4fc54b7b6aad16518f966707cf376ab7cb4f83bf8689de622a4"
+    },
+    {
+      "path": "src/backend.h",
+      "sha256": "0e0f3dbfae408fe39bd33592e943e5cdce43abbaadbe906216b4d1bf93569cbd"
+    },
+    {
+      "path": "src/backend.zig",
+      "sha256": "9a7e22086f439b6381c0810f6259cd923c359b7e8c920222a1f974c0e7e91c9c"
+    },
+    {
+      "path": "src/driver.zig",
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f"
+    },
+    {
+      "path": "src/root.zig",
+      "sha256": "99587be81255039fef2f9e8c8d803097f0243748c9ba0e5f766ae257c56dc0b3"
+    },
+    {
+      "path": "tests/fixtures/ca.pem",
+      "sha256": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b"
+    },
+    {
+      "path": "tests/fixtures/client.key",
+      "sha256": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2"
+    },
+    {
+      "path": "tests/fixtures/client.pem",
+      "sha256": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde"
+    },
+    {
+      "path": "tests/fixtures/expired.key",
+      "sha256": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6"
+    },
+    {
+      "path": "tests/fixtures/expired.pem",
+      "sha256": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220"
+    },
+    {
+      "path": "tests/fixtures/other-ca.pem",
+      "sha256": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2"
+    },
+    {
+      "path": "tests/fixtures/server.key",
+      "sha256": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b"
+    },
+    {
+      "path": "tests/fixtures/server.pem",
+      "sha256": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4"
+    },
+    {
+      "path": "tests/fixtures/wrong-purpose.key",
+      "sha256": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575"
+    },
+    {
+      "path": "tests/fixtures/wrong-purpose.pem",
+      "sha256": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab"
+    }
+  ],
+  "runtime_dlls": [
+    "libssl-3-x64.dll",
+    "libcrypto-3-x64.dll"
+  ],
+  "runtime_imports": {
+    "libssl-3-x64.dll": [
+      "libcrypto-3-x64.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll"
+    ],
+    "libcrypto-3-x64.dll": [
+      "ADVAPI32.dll",
+      "CRYPT32.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "USER32.dll",
+      "WS2_32.dll"
+    ]
+  },
+  "upstream": {
+    "release": "3.5.8",
+    "make_url": "https://repo.msys2.org/msys/x86_64/make-4.4.1-3-x86_64.pkg.tar.zst",
+    "signature_verification": "Not performed; authenticated HTTPS downloads and official SHA-256 checks used",
+    "checked_at": "2026-09-13T17:27:29.0524444Z",
+    "source_url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz",
+    "configure": [
+      "mingw64",
+      "shared",
+      "no-quic",
+      "no-docs",
+      "--libdir=lib"
+    ],
+    "support_until": "2030-04-08",
+    "make_checksum_source": "https://packages.msys2.org/packages/make?repo=msys&variant=x86_64",
+    "make_sha256": "af0bdba17f06fe037f0194069adaa31a8fe45f1a11381501896aea1fae37bd5d",
+    "release_date": "2026-08-25",
+    "source_sha256": "a8f84a39918ec6415ce765d9b429d313ba97b8143169c172e734b9514464f5b2",
+    "final_make": "Native GNU Make 4.4.1 from read-only Strawberry toolchain; MSYS shell supplied explicitly",
+    "build_note": "MSYS make used initially; resumed with native make after slow process overhead. Same GCC compiler, configuration and source. Completed objects retained; interrupted targets rebuilt.",
+    "source_checksum_url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz.sha256",
+    "official_downloads_url": "https://openssl-library.org/source/",
+    "release_policy_url": "https://openssl-library.org/policies/releasestrat/"
+  },
+  "scope": "166 SDK files, adopted local TLS source/build/contracts/provenance, public credential fixtures and owner test socket adapter. OS DLLs and compiler runtime remain explicit platform contracts; no upstream whole-source or security certification.",
+  "reviewed_documentation_adoptions": [
+    {
+      "date": "2026-09-26",
+      "evidence": "verification/pending-custody/tls-documentation-adoption.json",
+      "scope": "Nine reviewed README/comment/package-documentation changes; original implementation bodies and SDK/fixture bytes unchanged."
+    }
+  ],
+  "review_receipt": "verification/verified-channel/dependency-adoption.json"
+}

@@ -1,0 +1,92 @@
+1/11 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:110:27: 0x7ff7620dfb80 in clean (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:135:9: 0x7ff7620eac49 in test.cancel before each dispatch reclaims exactly the acquired prefix (root_zcu.obj)
+        try host.clean();
+        ^
+2/11 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:110:27: 0x7ff7620dfb80 in clean (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:150:13: 0x7ff7620ea9eb in test.cancel during every acquisition retains parents for late success failure and partial debt (root_zcu.obj)
+            try host.clean();
+            ^
+3/11 runtime_lifecycle.test.each rolled back failure and partial acquisition independently initiates cleanup...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:110:27: 0x7ff7620dfb80 in clean (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:164:13: 0x7ff7620ea6c1 in test.each rolled back failure and partial acquisition independently initiates cleanup (root_zcu.obj)
+            try host.clean();
+            ^
+4/11 runtime_lifecycle.test.pending worker acquisition reserves device and storage across cancel and deadline...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:110:27: 0x7ff7620dfb80 in clean (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:182:5: 0x7ff7620ea37d in test.pending worker acquisition reserves device and storage across cancel and deadline (root_zcu.obj)
+    try host.clean();
+    ^
+5/11 runtime_lifecycle.test.callback may enter after stop and fence cannot return while callback is paused...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:193:19: 0x7ff7620e9c2b in test.callback may enter after stop and fence cannot return while callback is paused (root_zcu.obj)
+    const fence = try host.dispatch();
+                  ^
+6/11 runtime_lifecycle.test.every token field and contradictory result is rejected atomically...OK
+7/11 runtime_lifecycle.test.each cleanup failure preserves ownership and requires explicit retry with new identity...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:110:27: 0x7ff7620dfb80 in clean (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:258:9: 0x7ff7620e9305 in test.each cleanup failure preserves ownership and requires explicit retry with new identity (root_zcu.obj)
+        try host.clean();
+        ^
+8/11 runtime_lifecycle.test.old generation stop deadline and completion cannot affect restarted owner...OK
+9/11 runtime_lifecycle.test.namespace exhaustion never wraps and does not forget an acquired owner...OK
+10/11 runtime_lifecycle.test.wrong executor observes no dispatch and deadline cannot change terminal outcome...OK
+11/11 runtime_lifecycle.test.result matrix rejects every inappropriate tag without settling an issued effect...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7620db62f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:44:37: 0x7ff7620dc82f in dispatch (root_zcu.obj)
+                        if (r == 1) try expect(!self.callback_active and !self.callback_admission and self.device_fenced);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:320:23: 0x7ff7620dfda4 in test.result matrix rejects every inappropriate tag without settling an issued effect (root_zcu.obj)
+        const token = try host.dispatch();
+                      ^
+4 passed; 0 skipped; 7 failed.
+error: the following test command failed with exit code 1:
+C:\Users\James\Documents\Codex\2026-09-25\referenced-chatgpt-conversation-this-is-an-3\work\lifecycle-mutation-cache\o\f3acdd80ac40e5755d6dbb3f47244c35\root.exe --seed=0x4f0c1199

@@ -1,0 +1,12 @@
+{
+  "path": "C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone \u00e9 fh2g7ed8\\lan-audio",
+  "sibling_checkouts": false,
+  "seeded": "verified download archives only",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/c",
+    "start.cmd --prepare"
+  ],
+  "exit_code": 1
+}

@@ -1,0 +1,60 @@
+1/2 backend_abi.test.native C sizes alignments and offsets agree with independent Zig ABI declarations...OK
+2/2 backend_abi.test.native C invokes every Zig callback with the declared widths and calling convention...OK
+All 2 tests passed.
+Build Summary: 31/31 steps succeeded
+quic-backend-test success
++- recordless adapter full success 49ms
+|  +- WriteFile libssl-3-x64.dll cached
+|     +- compile exe quic-backend-test safe native cached 92ms MaxRSS:43M
++- recordless adapter fragmented success 73ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter backpressure success 39ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter combined success 50ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter mutual success 60ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter missing-client success 78ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter wrong-host success 37ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter wrong-ca success 75ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter alpn success 66ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter fail-send success 46ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter fail-receive success 64ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter fail-release success 89ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter fail-secret success 42ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter fail-params success 42ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter fail-alert success 46ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter budgeted success 87ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter zero-budget success 77ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter overconsume success 91ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter overlease success 40ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter null-lease success 42ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter params-overflow success 36ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter reentrant success 41ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter validation success 56ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter config-copy success 40ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- recordless adapter ip success 90ms
+|  +- WriteFile libssl-3-x64.dll (+1 more reused dependencies)
++- native recordless C and Zig ABI success 48ms
+   +- WriteFile libssl-3-x64.dll cached
+      +- compile test safe native cached 92ms MaxRSS:43M
+

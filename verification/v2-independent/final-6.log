@@ -1,0 +1,20 @@
+Build Summary: 17/17 steps succeeded
+transport-probe success
++- install audio-tls-probe success
+|  +- compile exe audio-tls-probe safe native success 13s MaxRSS:274M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 53ms MaxRSS:57M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 31ms MaxRSS:57M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+v2-transport-probes success
++- install audio-v2-sender-probe success
+|  +- compile exe audio-v2-sender-probe safe native success 20s MaxRSS:270M
+|     +- options cached
++- install audio-v2-receiver-probe success
+|  +- compile exe audio-v2-receiver-probe safe native success 20s MaxRSS:270M
+|     +- options cached
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+

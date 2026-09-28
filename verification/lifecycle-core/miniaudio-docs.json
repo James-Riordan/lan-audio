@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "../miniaudio-zig/tools/check_docs.py"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:25.432952+00:00",
+  "elapsed_seconds": 0.3360465000005206,
+  "exit_code": 0,
+  "log": "miniaudio-docs.log",
+  "log_sha256": "e11e9c8f97f8a9322282ca4b25b091259a91ddca52fbda0c3090c333c6d2751d"
+}

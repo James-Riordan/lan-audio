@@ -1,0 +1,14 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "run",
+    "--",
+    "devices",
+    "--json"
+  ],
+  "exit_code": 0,
+  "seconds": 2.965,
+  "reported_devices": 4,
+  "help_version_and_invalid_output_verified": true
+}

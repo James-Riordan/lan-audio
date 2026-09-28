@@ -1,0 +1,35 @@
+[
+  {
+    "name": "sealed-prepare",
+    "command": [
+      "cmd.exe",
+      "/d",
+      "/c",
+      "start.cmd --prepare"
+    ],
+    "exit_code": 0,
+    "seconds": 12.25
+  },
+  {
+    "name": "sealed-onboarding",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone \u00e9 fh2g7ed8\\lan-audio\\.lan-audio\\python-f6cca216a359be84\\python.exe",
+      "tests/integration/repository_launcher.py"
+    ],
+    "exit_code": 0,
+    "seconds": 18.34
+  },
+  {
+    "name": "sealed-package",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone \u00e9 fh2g7ed8\\lan-audio\\.lan-audio\\python-f6cca216a359be84\\python.exe",
+      "tools/desktop_release.py",
+      "--output",
+      ".lan-audio/test-package-final",
+      "--revision",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ],
+    "exit_code": 0,
+    "seconds": 0.83
+  }
+]

@@ -1,0 +1,9 @@
+Build Summary: 6/6 steps succeeded; 1/1 tests passed
+audio-test success
++- run test 1 pass (1 total) 598ms MaxRSS:6M
+   +- compile test debug native success 3s MaxRSS:263M
+      +- WriteFile cached
+      +- compile lib miniaudio debug native cached 28ms MaxRSS:30M
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c cached 14ms MaxRSS:30M
+

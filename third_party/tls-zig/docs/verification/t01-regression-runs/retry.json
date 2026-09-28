@@ -1,0 +1,24 @@
+{
+  "id": "backend-optimized-retry",
+  "command": [
+    "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-O",
+    "-X",
+    "utf8",
+    "C:\\Projects\\tls-zig\\tools\\test-backend.py"
+  ],
+  "cwd": ".",
+  "mode": "host-tool",
+  "exit_code": 0,
+  "outcome": "passed",
+  "stdout": {
+    "path": "docs/verification/t01-regression-runs/backend-optimized-retry.log",
+    "sha256": "cc4a3f614a5243de6d68bcdac45c15109bf4b3bd6d7131db49663f6b767af6a0"
+  },
+  "stderr": {
+    "path": "docs/verification/t01-regression-runs/backend-optimized-retry.log",
+    "sha256": "cc4a3f614a5243de6d68bcdac45c15109bf4b3bd6d7131db49663f6b767af6a0"
+  },
+  "capture": "PowerShell redirected stdout and stderr into one retained log; both stream references identify that merged artifact.",
+  "observed_process_exit": 0
+}

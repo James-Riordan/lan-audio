@@ -1,0 +1,8 @@
+.{
+    .name = .miniaudio_abi_consumer,
+    .fingerprint = 0xd923dfeac02ab29c,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.17.0-dev.1859+dcceb318e",
+    .dependencies = .{ .miniaudio_zig = .{ .path = "../.." } },
+    .paths = .{ "build.zig", "build.zig.zon", "consumer.zig" },
+}

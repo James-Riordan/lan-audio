@@ -1,0 +1,1 @@
+PASS: 163 application files have contract/index coverage; local Zig imports and work-package exits resolve

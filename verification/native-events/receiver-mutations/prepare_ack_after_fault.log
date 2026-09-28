@@ -1,0 +1,11 @@
+1/1 runtime_lifecycle.test.receiver output fault blocks new ACK but reconciles an issued late copy...expected error.MediaFault, found .{ .kind = .ack, .stream = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 }, .position = 0, .frames = 0, .body = {  } }
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff74251eda2 in expectError__anon_62152 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:77:33: 0x7ff7425228e8 in test.receiver output fault blocks new ACK but reconciles an issued late copy (root_zcu.obj)
+        if (!already_submitted) try std.testing.expectError(error.MediaFault, receiver.ackMessage(ack));
+                                ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\50459c0fdcad85091c08ac746e0d4d59\root.exe --seed=0x8faff1b7

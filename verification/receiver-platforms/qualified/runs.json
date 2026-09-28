@@ -1,0 +1,191 @@
+[
+  {
+    "name": "windows-debug",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "policy-test",
+      "app",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "expected_marker": "20/20 tests passed",
+    "matched": true,
+    "seconds": 9.734,
+    "at_utc": "2026-09-26T18:46:54.056441+00:00",
+    "binary_sha256": "acc1923d805efb5b83aec918160debcb792bf147ef513e5648ba38e2152d7366"
+  },
+  {
+    "name": "windows-safe",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "policy-test",
+      "app",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "expected_marker": "20/20 tests passed",
+    "matched": true,
+    "seconds": 72.275,
+    "at_utc": "2026-09-26T18:48:06.349613+00:00",
+    "binary_sha256": "65aebdf93999834a0fa3fd099ba43b78a2e1973b1db5ecf860a12a40bfa64cf1"
+  },
+  {
+    "name": "policy-monterey",
+    "command": [
+      "zig",
+      "build",
+      "policy-check",
+      "-Dtarget=x86_64-macos.12.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "expected_marker": "steps succeeded",
+    "matched": true,
+    "seconds": 8.151,
+    "at_utc": "2026-09-26T18:48:14.508296+00:00"
+  },
+  {
+    "name": "policy-linux",
+    "command": [
+      "zig",
+      "build",
+      "policy-check",
+      "-Dtarget=x86_64-linux-musl",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "expected_marker": "steps succeeded",
+    "matched": true,
+    "seconds": 2.264,
+    "at_utc": "2026-09-26T18:48:16.773101+00:00"
+  },
+  {
+    "name": "policy-ios-object",
+    "command": [
+      "zig",
+      "build",
+      "policy-object-check",
+      "-Dtarget=aarch64-ios.16.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "expected_marker": "steps succeeded",
+    "matched": true,
+    "seconds": 1.557,
+    "at_utc": "2026-09-26T18:48:18.331244+00:00"
+  },
+  {
+    "name": "policy-ios-link",
+    "command": [
+      "zig",
+      "build",
+      "policy-check",
+      "-Dtarget=aarch64-ios.16.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "expected_exit": 1,
+    "expected_marker": "unable to find libSystem system library",
+    "matched": true,
+    "seconds": 7.607,
+    "at_utc": "2026-09-26T18:48:25.939216+00:00"
+  },
+  {
+    "name": "ios-native-unavailable",
+    "command": [
+      "zig",
+      "build",
+      "app",
+      "-Dtarget=aarch64-ios.16.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "expected_exit": 1,
+    "expected_marker": "Native audio/application profile is not implemented for this target",
+    "matched": true,
+    "seconds": 0.167,
+    "at_utc": "2026-09-26T18:48:26.107135+00:00"
+  },
+  {
+    "name": "help",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "help"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "matched": true,
+    "seconds": 0.117,
+    "binary_sha256": "65aebdf93999834a0fa3fd099ba43b78a2e1973b1db5ecf860a12a40bfa64cf1"
+  },
+  {
+    "name": "version",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "version"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "matched": true,
+    "seconds": 0.015,
+    "binary_sha256": "65aebdf93999834a0fa3fd099ba43b78a2e1973b1db5ecf860a12a40bfa64cf1"
+  },
+  {
+    "name": "invalid",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "devices",
+      "--invalid"
+    ],
+    "exit_code": 2,
+    "expected_exit": 2,
+    "matched": true,
+    "seconds": 0.017,
+    "binary_sha256": "65aebdf93999834a0fa3fd099ba43b78a2e1973b1db5ecf860a12a40bfa64cf1"
+  },
+  {
+    "name": "devices-1",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "devices",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "matched": true,
+    "seconds": 0.045,
+    "binary_sha256": "65aebdf93999834a0fa3fd099ba43b78a2e1973b1db5ecf860a12a40bfa64cf1",
+    "reported_devices": 4
+  },
+  {
+    "name": "devices-2",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "devices",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "matched": true,
+    "seconds": 0.044,
+    "binary_sha256": "65aebdf93999834a0fa3fd099ba43b78a2e1973b1db5ecf860a12a40bfa64cf1",
+    "reported_devices": 4
+  }
+]

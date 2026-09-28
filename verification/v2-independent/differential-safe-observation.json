@@ -1,0 +1,7 @@
+{
+  "chunk_id": "ac1ff2",
+  "wall_time_seconds": 0.00001,
+  "exit_code": 0,
+  "original_token_count": 51,
+  "output": "{\"passed\": true, \"cases\": 13631, \"accepted\": 1017, \"rejected\": 12614, \"corpus_sha256\": \"27be576a11754eb00d7a86a1060f08fd35dcf5e9af6331243c79e5798e0a18f3\", \"seconds\": 9.293514299999515, \"exit_code\": 0}\r\n"
+}

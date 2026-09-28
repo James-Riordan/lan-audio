@@ -1,0 +1,315 @@
+{
+  "schema": 1,
+  "scope": "Exact authored/vendor file navigation. Excludes top-level verification observations and known generated caches; no assertion of full upstream semantic audit.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "reference": "docs/reference/files.md",
+      "anchor": "ignore"
+    },
+    {
+      "path": "README.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "readme"
+    },
+    {
+      "path": "UPSTREAM.json",
+      "reference": "docs/reference/files.md",
+      "anchor": "upstream-manifest"
+    },
+    {
+      "path": "build.zig",
+      "reference": "docs/reference/files.md",
+      "anchor": "build"
+    },
+    {
+      "path": "build.zig.zon",
+      "reference": "docs/reference/files.md",
+      "anchor": "package"
+    },
+    {
+      "path": "docs/CONTRACT.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "contract-doc"
+    },
+    {
+      "path": "docs/DEPENDENCIES.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "dependencies-doc"
+    },
+    {
+      "path": "docs/FILES.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "files-doc"
+    },
+    {
+      "path": "docs/README.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "docs-entry"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "old-verification"
+    },
+    {
+      "path": "docs/architecture/build-and-abi.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "abi-doc"
+    },
+    {
+      "path": "docs/architecture/ecosystem-boundary.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "ecosystem-boundary"
+    },
+    {
+      "path": "docs/contracts/conversion-control.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "conversion-control"
+    },
+    {
+      "path": "docs/contracts/conversion-custody.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "conversion-custody"
+    },
+    {
+      "path": "docs/contracts/device-lifecycle.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "lifecycle-doc"
+    },
+    {
+      "path": "docs/contracts/pcm-and-conversion.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "pcm-doc"
+    },
+    {
+      "path": "docs/contracts/qualification-records.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "qualification-records"
+    },
+    {
+      "path": "docs/implementation/adoption-transaction.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "adoption-transaction"
+    },
+    {
+      "path": "docs/implementation/conversion-handoff.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "conversion-handoff"
+    },
+    {
+      "path": "docs/implementation/qualification.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "qualification-doc"
+    },
+    {
+      "path": "docs/implementation/release-readiness.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "release-readiness"
+    },
+    {
+      "path": "docs/reference/catalog.json",
+      "reference": "docs/reference/files.md",
+      "anchor": "catalog"
+    },
+    {
+      "path": "docs/reference/files.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "handbook"
+    },
+    {
+      "path": "docs/reference/upstream.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "upstream-doc"
+    },
+    {
+      "path": "docs/verification/README.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "verification-doc"
+    },
+    {
+      "path": "docs/verification/abi.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "abi-verification"
+    },
+    {
+      "path": "docs/verification/conversion.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "conversion-verification"
+    },
+    {
+      "path": "docs/verification/ecosystem.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "ecosystem-verification"
+    },
+    {
+      "path": "docs/verification/source-package.md",
+      "reference": "docs/reference/files.md",
+      "anchor": "source-package-verification"
+    },
+    {
+      "path": "src/native.c",
+      "reference": "docs/reference/files.md",
+      "anchor": "native"
+    },
+    {
+      "path": "src/profile.h",
+      "reference": "docs/reference/files.md",
+      "anchor": "profile"
+    },
+    {
+      "path": "src/root.zig",
+      "reference": "docs/reference/files.md",
+      "anchor": "root"
+    },
+    {
+      "path": "tests/abi.zig",
+      "reference": "docs/reference/files.md",
+      "anchor": "abi-zig"
+    },
+    {
+      "path": "tests/abi_probe.c",
+      "reference": "docs/reference/files.md",
+      "anchor": "abi-probe"
+    },
+    {
+      "path": "tests/consumer/build.zig",
+      "reference": "docs/reference/files.md",
+      "anchor": "consumer-build"
+    },
+    {
+      "path": "tests/consumer/build.zig.zon",
+      "reference": "docs/reference/files.md",
+      "anchor": "consumer-package"
+    },
+    {
+      "path": "tests/consumer/consumer.zig",
+      "reference": "docs/reference/files.md",
+      "anchor": "consumer-source"
+    },
+    {
+      "path": "tests/contract.zig",
+      "reference": "docs/reference/files.md",
+      "anchor": "tests"
+    },
+    {
+      "path": "tests/test_abi_runner.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "abi-runner-tests"
+    },
+    {
+      "path": "tests/test_check_docs.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "docs-check-tests"
+    },
+    {
+      "path": "tests/test_package_runner.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "package-runner-tests"
+    },
+    {
+      "path": "tools/check_docs.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "docs-check"
+    },
+    {
+      "path": "tools/check_vendor.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "vendor-check"
+    },
+    {
+      "path": "tools/test_abi.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "abi-runner"
+    },
+    {
+      "path": "tools/test_package.py",
+      "reference": "docs/reference/files.md",
+      "anchor": "package-runner"
+    },
+    {
+      "path": "vendor/miniaudio/LICENSE",
+      "reference": "docs/reference/files.md",
+      "anchor": "vendor-license"
+    },
+    {
+      "path": "vendor/miniaudio/miniaudio.h",
+      "reference": "docs/reference/files.md",
+      "anchor": "vendor-header"
+    }
+  ],
+  "source_anchors": {
+    "src/root.zig": [
+      "pub const c = @import(\"miniaudio_c\");"
+    ],
+    "src/profile.h": [
+      "#define MA_NO_DECODING",
+      "#define MA_NO_ENCODING",
+      "#define MA_NO_RESOURCE_MANAGER",
+      "#define MA_NO_NODE_GRAPH",
+      "#define MA_NO_ENGINE",
+      "#include \"miniaudio.h\""
+    ],
+    "src/native.c": [
+      "#define MINIAUDIO_IMPLEMENTATION",
+      "#include \"profile.h\""
+    ],
+    "build.zig": [
+      "pub fn build(b: *std.Build) void {",
+      "translated.defineCMacro(\"MA_ENABLE_ONLY_SPECIFIC_BACKENDS\", null);",
+      "native.root_module.addCMacro(\"MA_ENABLE_ONLY_SPECIFIC_BACKENDS\", \"\");"
+    ],
+    "tests/contract.zig": [
+      "test \"pinned upstream version and interleaved PCM units\"",
+      "test \"configuration defaults are obtained from upstream\"",
+      "test \"explicit null context and device retain stable storage until teardown\""
+    ],
+    "vendor/miniaudio/miniaudio.h": [
+      "MA_API ma_result ma_context_init(const ma_backend backends[], ma_uint32 backendCount, const ma_context_config* pConfig, ma_context* pContext);",
+      "MA_API ma_result ma_context_uninit(ma_context* pContext);",
+      "MA_API ma_result ma_context_get_devices(ma_context* pContext, ma_device_info** ppPlaybackDeviceInfos, ma_uint32* pPlaybackDeviceCount, ma_device_info** ppCaptureDeviceInfos, ma_uint32* pCaptureDeviceCount);",
+      "MA_API ma_result ma_context_enumerate_devices(ma_context* pContext, ma_enum_devices_callback_proc callback, void* pUserData);",
+      "MA_API ma_result ma_context_get_device_info(ma_context* pContext, ma_device_type deviceType, const ma_device_id* pDeviceID, ma_device_info* pDeviceInfo);",
+      "MA_API ma_device_config ma_device_config_init(ma_device_type deviceType);",
+      "MA_API ma_result ma_device_init(ma_context* pContext, const ma_device_config* pConfig, ma_device* pDevice);",
+      "MA_API ma_result ma_device_start(ma_device* pDevice);",
+      "MA_API ma_result ma_device_stop(ma_device* pDevice);",
+      "MA_API void ma_device_uninit(ma_device* pDevice);",
+      "MA_API ma_result ma_resampler_process_pcm_frames(ma_resampler* pResampler, const void* pFramesIn, ma_uint64* pFrameCountIn, void* pFramesOut, ma_uint64* pFrameCountOut);",
+      "MA_API ma_result ma_resampler_set_rate_ratio(ma_resampler* pResampler, float ratio);",
+      "MA_API ma_uint64 ma_resampler_get_input_latency(const ma_resampler* pResampler);",
+      "MA_API ma_uint64 ma_resampler_get_output_latency(const ma_resampler* pResampler);",
+      "MA_API ma_result ma_pcm_rb_acquire_read(ma_pcm_rb* pRB, ma_uint32* pSizeInFrames, void** ppBufferOut);",
+      "MA_API ma_result ma_pcm_rb_commit_read(ma_pcm_rb* pRB, ma_uint32 sizeInFrames);",
+      "ma_bool32 allowDynamicSampleRate;",
+      "#if defined(MINIAUDIO_IMPLEMENTATION) || defined(MA_IMPLEMENTATION)",
+      "static void ma_linear_resampler_adjust_timer_for_new_rate(ma_linear_resampler* pResampler, ma_uint32 oldSampleRateOut, ma_uint32 newSampleRateOut)",
+      "((oldRateTimeFract * newSampleRateOut) / oldSampleRateOut);",
+      "    d = 1000;\n    n = (ma_uint32)(ratio * d);",
+      "    d = 1000000;\n    n = (ma_uint32)(ratioInOut * d);"
+    ],
+    "tests/abi_probe.c": [
+      "size_t mz_abi_size(unsigned int type_id)",
+      "size_t mz_abi_align(unsigned int type_id)",
+      "size_t mz_abi_offset(unsigned int field_id)",
+      "int mz_abi_enum(unsigned int value_id)",
+      "int mz_abi_call_callback(ma_device_data_proc callback)"
+    ],
+    "tests/abi.zig": [
+      "test \"C and Zig object sizes and alignments agree\"",
+      "test \"C invokes the translated callback type with intact arguments and guards\""
+    ],
+    "tests/consumer/consumer.zig": [
+      "test \"external package receives the linked native PCM and configuration API\""
+    ],
+    "tools/test_abi.py": [
+      "def classify(returncode, output, fault='none', consumer=False):"
+    ],
+    "tools/test_package.py": [
+      "def parse_fetch(output):",
+      "def require_selection(observed, expected):",
+      "def consumer_pass(returncode, output):",
+      "def extract_own_archive(archive_path, expected, destination, prefix='miniaudio-zig/'):"
+    ]
+  }
+}

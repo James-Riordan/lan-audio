@@ -1,0 +1,49 @@
+network-test
++- run test
+   +- compile test debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+network-test
++- run test 5 pass, 1 fail (6 total)
+error: 'network_host.test.IPv4 and IPv6 preserve byte prefixes and independent half close after listener release' failed:
+       C:\Projects\lan-audio\src\host\net\socket.zig:123:60: 0x7ff771a9e20d in send (test_zcu.obj)
+               if (self.state != .connected or self.write_closed) return error.InvalidState;
+                                                                  ^
+       C:\Projects\lan-audio\tests\integration\network_host.zig:42:13: 0x7ff771a99c17 in sendAll (test_zcu.obj)
+               if (try socket.send(bytes[offset..])) |n| offset += n else try socket.wait(.output, deadline, null);
+                   ^
+       C:\Projects\lan-audio\tests\integration\network_host.zig:77:9: 0x7ff771aaa0b5 in test.IPv4 and IPv6 preserve byte prefixes and independent half close after listener release (test_zcu.obj)
+               try sendAll(&pair.server, "reply", deadline); // Read EOF still permits sending.
+               ^
+failed command: ".\\.zig-cache\\o\\ee5f6aa441fdfa7298e45712113a0d68\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x91f4e44b --listen=-
+
+Build Summary: 2/4 steps succeeded (1 failed); 5/6 tests passed (1 failed)
+network-test transitive failure
++- run test 5 pass, 1 fail (6 total)
+   +- compile test debug native success 18s MaxRSS:294M
+      +- translate-c cached 672ms MaxRSS:60M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x91f4e44b network-test --summary all

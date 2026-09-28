@@ -1,0 +1,18 @@
+policy-test
++- run test 6 pass, 1 fail (7 total)
+error: 'peer_policy.test.repeated authorization preserves an actual negotiated frame frontier' failed:
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff7df80b7ef in expect (test_zcu.obj)
+           if (!ok) return error.TestUnexpectedResult;
+                    ^
+       C:\Projects\lan-audio\tests\integration\peer_policy.zig:119:9: 0x7ff7df813e3e in test.repeated authorization preserves an actual negotiated frame frontier (test_zcu.obj)
+               try expect(std.meta.eql(before, channel.snapshot()));
+               ^
+failed command: ".\\.zig-cache\\o\\7cf4c82379a96830212cdb7edf952c23\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x2d2ca7c --listen=-
+
+Build Summary: 1/3 steps succeeded (1 failed); 6/7 tests passed (1 failed)
+policy-test transitive failure
++- run test 6 pass, 1 fail (7 total)
+   +- compile test debug native success 13s MaxRSS:281M
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x2d2ca7c policy-test --summary all

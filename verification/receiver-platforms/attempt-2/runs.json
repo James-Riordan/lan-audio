@@ -1,0 +1,27 @@
+[
+  {
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "policy-test",
+      "app",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 6.54
+  },
+  {
+    "command": [
+      "zig",
+      "build",
+      "policy-check",
+      "-Dtarget=aarch64-ios.16.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 5.832
+  }
+]

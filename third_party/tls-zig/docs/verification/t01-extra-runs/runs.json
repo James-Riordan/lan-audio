@@ -1,0 +1,62 @@
+[
+  {
+    "id": "negative-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/test-quic-types.py",
+      "--zig",
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+    ],
+    "cwd": "C:\\Projects\\tls-zig",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/negative-normal.stdout.log",
+      "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/negative-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "negative-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "tools/test-quic-types.py",
+      "--zig",
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+    ],
+    "cwd": "C:\\Projects\\tls-zig",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/negative-optimized.stdout.log",
+      "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/negative-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "relocated-consumer",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "run",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\external consumer",
+    "exit_code": 0,
+    "stdout": {
+      "path": "docs/verification/t01-extra-runs/relocated-consumer.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "docs/verification/t01-extra-runs/relocated-consumer.stderr.log",
+      "sha256": "fa434b4142ed7c62a03ab79476dc74f3e5f32f5ed35a1de77c9c068e21a6026c"
+    }
+  }
+]

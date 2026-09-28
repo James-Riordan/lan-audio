@@ -1,0 +1,57 @@
+{
+  "scope": "finite abstract safety models; no Zig/C refinement or liveness proof",
+  "models": {
+    "ack_ticket": {
+      "correct_model": {
+        "states": 20,
+        "edges": 36,
+        "counterexample": null
+      },
+      "injected_fault": {
+        "states": 18,
+        "edges": 23,
+        "counterexample": [
+          "admit ack-eliciting packet",
+          "prepare ticket 1",
+          "admit ack-eliciting packet",
+          "send ticket 1"
+        ]
+      }
+    },
+    "late_ack_custody": {
+      "correct_model": {
+        "states": 10,
+        "edges": 14,
+        "counterexample": null
+      },
+      "injected_fault": {
+        "states": 11,
+        "edges": 13,
+        "counterexample": [
+          "send original span {0,1}",
+          "lose packet 0",
+          "send retransmission span {0,1}",
+          "ACK packet 0",
+          "lose packet 1"
+        ]
+      }
+    },
+    "authenticated_shutdown": {
+      "correct_model": {
+        "states": 15,
+        "edges": 20,
+        "counterexample": null
+      },
+      "injected_fault": {
+        "states": 15,
+        "edges": 20,
+        "counterexample": [
+          "consume one final plaintext byte",
+          "consume one final plaintext byte",
+          "receive raw transport EOF",
+          "finish shutdown"
+        ]
+      }
+    }
+  }
+}

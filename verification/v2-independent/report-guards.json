@@ -1,0 +1,46 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/test_v2_differential.py",
+      "--output",
+      "verification/v2-independent/differential-debug.json"
+    ],
+    "exit_code": 2,
+    "passed": true,
+    "output": "usage: test_v2_differential.py [-h] [--output OUTPUT] [--library LIBRARY]\ntest_v2_differential.py: error: Refusing to overwrite existing evidence\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/test_v2_differential.py",
+      "--output",
+      "../outside-v2-report.json"
+    ],
+    "exit_code": 2,
+    "passed": true,
+    "output": "usage: test_v2_differential.py [-h] [--output OUTPUT] [--library LIBRARY]\ntest_v2_differential.py: error: Report must stay under this project verification directory\n"
+  },
+  {
+    "command": [
+      "python",
+      "tests/integration/protocol_v2_peer.py",
+      "--output",
+      "verification/v2-independent/interop-final.json"
+    ],
+    "exit_code": 2,
+    "passed": true,
+    "output": "usage: protocol_v2_peer.py [-h] --output OUTPUT\nprotocol_v2_peer.py: error: Refusing to overwrite existing evidence\n"
+  },
+  {
+    "command": [
+      "python",
+      "tests/integration/protocol_v2_peer.py",
+      "--output",
+      "../outside-v2-report.json"
+    ],
+    "exit_code": 2,
+    "passed": true,
+    "output": "usage: protocol_v2_peer.py [-h] --output OUTPUT\nprotocol_v2_peer.py: error: Report must stay under verification\n"
+  }
+]

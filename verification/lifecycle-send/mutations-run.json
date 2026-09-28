@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "verification/lifecycle-send/mutate.py"
+  ],
+  "exit_code": 0,
+  "seconds": 51.640007500005595
+}

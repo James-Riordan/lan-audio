@@ -1,0 +1,7 @@
+{
+  "command": ["zig", "build", "test", "-j1", "--summary", "all"],
+  "cwd": "C:/Projects/lan-audio",
+  "exit_code": 0,
+  "output": "Build Summary: 3/3 steps succeeded; 35/35 tests passed\ntest success\n+- run test 35 pass (35 total) 2s MaxRSS:3M\n   +- compile test debug native success 7s MaxRSS:297M\n",
+  "source": "Observed completed command tool output after the explicit usize test-bound repair."
+}

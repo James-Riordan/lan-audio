@@ -1,0 +1,283 @@
+{
+  "scope": "Dependency-owned Windows ABI qualification contract integration; no production audio API or profile change. Application consumer was tested separately.",
+  "owner_chat": "Document lan-audio project structure",
+  "owner_thread_id": "01a0dd89-1bef-7430-9ace-245eff924dfe",
+  "changed_source_paths": [
+    "README.md",
+    "build.zig",
+    "docs/CONTRACT.md",
+    "docs/README.md",
+    "docs/architecture/build-and-abi.md",
+    "docs/implementation/qualification.md",
+    "docs/reference/catalog.json",
+    "docs/reference/files.md",
+    "docs/reference/upstream.md",
+    "docs/verification/README.md"
+  ],
+  "added_source_paths": [
+    "docs/verification/abi.md",
+    "tests/abi.zig",
+    "tests/abi_probe.c",
+    "tests/consumer/build.zig",
+    "tests/consumer/build.zig.zon",
+    "tests/consumer/consumer.zig",
+    "tests/test_abi_runner.py",
+    "tools/test_abi.py"
+  ],
+  "imported_contract_keys": [
+    "miniaudio-zig/README.md",
+    "miniaudio-zig/build.zig",
+    "miniaudio-zig/docs/CONTRACT.md",
+    "miniaudio-zig/docs/README.md",
+    "miniaudio-zig/docs/architecture/build-and-abi.md",
+    "miniaudio-zig/docs/implementation/qualification.md",
+    "miniaudio-zig/docs/reference/catalog.json",
+    "miniaudio-zig/docs/reference/files.md",
+    "miniaudio-zig/docs/reference/upstream.md",
+    "miniaudio-zig/docs/verification/README.md",
+    "miniaudio-zig/docs/verification/abi.md",
+    "miniaudio-zig/tests/abi.zig",
+    "miniaudio-zig/tests/abi_probe.c",
+    "miniaudio-zig/tests/consumer/build.zig",
+    "miniaudio-zig/tests/consumer/build.zig.zon",
+    "miniaudio-zig/tests/consumer/consumer.zig",
+    "miniaudio-zig/tests/test_abi_runner.py",
+    "miniaudio-zig/tools/test_abi.py"
+  ],
+  "new_registry_keys": [
+    "miniaudio-zig/docs/verification/abi.md",
+    "miniaudio-zig/tests/abi.zig",
+    "miniaudio-zig/tests/abi_probe.c",
+    "miniaudio-zig/tests/consumer/build.zig",
+    "miniaudio-zig/tests/consumer/build.zig.zon",
+    "miniaudio-zig/tests/consumer/consumer.zig",
+    "miniaudio-zig/tests/test_abi_runner.py",
+    "miniaudio-zig/tools/test_abi.py"
+  ],
+  "source_hashes": {
+    ".gitignore": "23ccdb9ea9e115eea42eeff7c2d98cebc0557c1cc07a7bed3c624cde15388f04",
+    "README.md": "e41025584d483566251a31bd0503be4c8f5ff10dc52b733b6c5a7d10f6afba7c",
+    "UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+    "build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+    "build.zig.zon": "cfa665f5c82d601427f187f50156b3b59aa8ff2f8da0ae772ad7de1a1f6ad52e",
+    "docs/CONTRACT.md": "da00459a2c49ab0bcf16d261826c852df692fb7b6d35ef1e45ce69c320ab09ca",
+    "docs/DEPENDENCIES.md": "2341b51711884963da4d2a7b7a5c4565836b65108e7f8209cccb6f60a49d84c2",
+    "docs/FILES.md": "4aca926aa99bc6e4f41649069c4e9c1f09868cfd5163bd02727d15efffc0b307",
+    "docs/README.md": "351e453ce373db8aebf1abe33328839d1290bd860a37216dec8dbe1644c607fe",
+    "docs/VERIFICATION.md": "4dd18a6bbba2035f1ea5f206afde7131c902106aa3a70f0ae921f0a6ce264f89",
+    "docs/architecture/build-and-abi.md": "f2da902c0c9a93ff8a8580dbe335e3cf457e026cc53f5f61fdedb51e2d3949d8",
+    "docs/contracts/device-lifecycle.md": "76937c50af6a70f97a9d35d0e348a249b40f5f79cfc58b60eba5e12a63abfb16",
+    "docs/contracts/pcm-and-conversion.md": "d9fb2daae301b8db8ff0f0595869641c8919d478b0e6dc3cbfeac9a7dc1fcea2",
+    "docs/implementation/qualification.md": "dc4e08adc0d52fce318010e33773a4e729fde256c18336b71a5599a038549625",
+    "docs/reference/catalog.json": "a9913588396a6505c11dc0c5bdaa89b7904fc7fca3f50d835f9020441e726651",
+    "docs/reference/files.md": "feb477b450fee5f8ff40421e175da4b4e901a4ceb47c0f19c72b8f391689371a",
+    "docs/reference/upstream.md": "dbc2ef620314cb8c34f66bd442ea0200db3b4dfaf6bccc0ace07f05af3d5f185",
+    "docs/verification/README.md": "347c6cc16bf91b9d44a2838e08bac23c36725700ddb72221c97e1affc0b2bb60",
+    "docs/verification/abi.md": "dedfcc8eaee92163028308e6e62c7d2b212de87e545dfc8c848dcc242ad3715e",
+    "src/native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+    "src/profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+    "src/root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+    "tests/abi.zig": "546b81390dbaed6148f144eb4f933ee335b85b3cbb6b3e70ebb81630f30f2f75",
+    "tests/abi_probe.c": "48cc227b60d07183cef25084d83ca1d9a03379380b45a19f118d5b5c8094e085",
+    "tests/consumer/build.zig": "29dea367b60d59c9160f843e3bd0c90034f7ab9e8009d28d0fb76ef653904a58",
+    "tests/consumer/build.zig.zon": "b35353f0cf4ff09d5a50a4483dc5e80f293862f4ad9fd67c599e3cf8471b59f2",
+    "tests/consumer/consumer.zig": "bf7e743fb99bfd726f237287e6ce4ac167a741470aca029edf23bd5822fba51f",
+    "tests/contract.zig": "29388ef98c0e6b988d708377a455cfe5b4fa05ca6c7f9ad7ec587cca3b037d5c",
+    "tests/test_abi_runner.py": "a3ffea36c573f7d8871192411ddb81c80b87726c7511e9bc157e84ac96c7a965",
+    "tests/test_check_docs.py": "73e17ea38b9f1b88a51bde0ae9faab4354bf52d706636babfc8a4f5fec0af8d8",
+    "tools/check_docs.py": "8dad3ddc7272243f0cba95de4b7844fff13fa52bd2db1b7a980d8db808bbee16",
+    "tools/check_vendor.py": "fad1dde8431845c3d452c0a0e7eb818020827c0335a3a623e9adddf08e15a949",
+    "tools/test_abi.py": "c8945663c7eaffbee90bdd83d097b9c47479f057e26d2e0937c7bbf28d2840c7",
+    "vendor/miniaudio/LICENSE": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb",
+    "vendor/miniaudio/miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89"
+  },
+  "matrix_commands": 16,
+  "accepted_commands": 16,
+  "limits": [
+    "Windows host/profile evidence only; native Mac/Linux and physical callback lifetime remain open.",
+    "Eight intentional runtime rejections are accepted negative controls, not zero-exit commands.",
+    "Initial incomplete classifier run remains in the owner snapshot; final receipts supersede its qualification status without rewriting it."
+  ],
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\audio-abi-reference-contracts-additions.json",
+      "sha256": "6ff01e92f7bd52e6304bb2f0f501dc171d4519cce971413c1f356d4b2a16d575",
+      "bytes": 12661
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-handoff.md",
+      "sha256": "1587aeeb37208cfd2d63a903514ea5dba6903501c7a3e2a19806c824c83e9c23",
+      "bytes": 5262
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-consumer.log",
+      "sha256": "9adeb223e533670e36a53f493faa90508f7689d01151f576eae70d7031933c1b",
+      "bytes": 367
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-none.log",
+      "sha256": "e432491ab06210d76acf12bdc72c9bdf1a377607f05798604d1a5b5e9f234f0a",
+      "bytes": 638
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-profile.log",
+      "sha256": "6175b3289118fe8149835cb9dd3b5d93938ea730de9ce992cb72c5154ce41071",
+      "bytes": 3269
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-native-size.log",
+      "sha256": "6f9bc0648e601b8d91db93b2e2a7c91f0962d9b9adb2d42c43b75dd37a960c0b",
+      "bytes": 2235
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-consumer.log",
+      "sha256": "c3e3ae4cc1302193de60e20b17c55a6227d969e6888e9163b1f3974229174409",
+      "bytes": 365
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-none.log",
+      "sha256": "bdc12420fb36c4a9b2005878a61d6dd0a6ddc05fe9cfcc7586163eab6883e062",
+      "bytes": 637
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-profile.log",
+      "sha256": "44422b4abda102a6bbbdc4537cdeca001f147ab4cc3a514a3c8c70ab66198046",
+      "bytes": 3270
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\Debug-null-size.log",
+      "sha256": "4b491bffae160573c05062c479c00c5d29d21ed66ff5ed64c51e3ae59659f744",
+      "bytes": 2233
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\documentation.log",
+      "sha256": "f12dcfdcdc965871458cfae3e57c25ff4a75bfb0cdec2b0ed5cfdc87085a8dae",
+      "bytes": 98
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\final-receipt.json",
+      "sha256": "4fc9ff38bd35f168081613515e23ccc50f8d030e82e27acc043112140d9cf12f",
+      "bytes": 6129
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-consumer.log",
+      "sha256": "b439cd1f0a2819708bb9d83c810152416b8ae8d5c68f00c49528a210dd6bd532",
+      "bytes": 366
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-none.log",
+      "sha256": "00371691cc47484aceb41f7559427ef4f1dfe6fb4836bc4c158b0372915d3df9",
+      "bytes": 638
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-profile.log",
+      "sha256": "ee9c1a5f5b062ee4eca04f77e46ce066465dcaab9991412a31dd2bebdaab8799",
+      "bytes": 3259
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-native-size.log",
+      "sha256": "d330402c9084bfeb067ec1727138c6b1b97b4ed68cac6f862a58fc6a7c73b6b4",
+      "bytes": 2227
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-consumer.log",
+      "sha256": "2ef2e13518b409d28185731b458361fc654684402fdbe0a21fe5bab2be801c35",
+      "bytes": 367
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-none.log",
+      "sha256": "8199a6bba609b61bee55e6957cb67629ef5509cffedba96ebba98e33c3d91f14",
+      "bytes": 637
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-profile.log",
+      "sha256": "09782e51f2df022b389a18b1347017d5ac0d7ab8d93ffeafa7740cae98bfadc3",
+      "bytes": 3258
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\Debug-null-size.log",
+      "sha256": "5e0b2fc2f426fed4b8cbadc92f880562df4b4ed0ec096e56afb8c41f4ffc6b70",
+      "bytes": 2225
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\receipt.json",
+      "sha256": "969868452df711a28fe783a4673193cf19ce0eb0b26035c604787befb8896af5",
+      "bytes": 12311
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\ReleaseSafe-native-none.log",
+      "sha256": "92439ec1962db10c50d5f6e13348c319b5fa5ef360168c11c2728ef8c92d9088",
+      "bytes": 633
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\initial-incomplete-attempt\\ReleaseSafe-native-size.log",
+      "sha256": "f7e7cf8577a3fe90164afec64c73275117bcc19b51002a3521ed208eddf47203",
+      "bytes": 1534
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\python-tests.log",
+      "sha256": "4fe8b7ff4a89ff334bb1f02d3f1dc3f3a68adbf27f545d0449ddbfab3b19ed16",
+      "bytes": 2640
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\receipt.json",
+      "sha256": "202ec27b60d4916158fe26ce963d649e8522da964de4e04c41bd6efa1a70ac92",
+      "bytes": 17346
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-consumer.log",
+      "sha256": "cc58a5f1ab89b9f0457e5ac3977eea4aa26f1a7fc2b0fb4c95f5d9ad6b0ba884",
+      "bytes": 366
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-none.log",
+      "sha256": "24932c81a0709bd67a48598a0b52ffde7d13247e2b50375bfb3b62ae290ba5df",
+      "bytes": 634
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-profile.log",
+      "sha256": "634aab803ffb3972e07649f713e0361ff7da15137b846864d99b9ff03f448385",
+      "bytes": 1861
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-native-size.log",
+      "sha256": "336c24023a1bee48ef9fd3de9fe1b80288067b1f5665eb709db7afeb7b4584f4",
+      "bytes": 1543
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-consumer.log",
+      "sha256": "4903ef13c9efaccc8eb9086d18d9cab5fc9d1551493e74e02f82569518eddd54",
+      "bytes": 364
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-none.log",
+      "sha256": "9a11f2a7ff55091ef9c12298847fea1decde715425bf0c0714400f341a3ebdd7",
+      "bytes": 634
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-profile.log",
+      "sha256": "e50ebe283622ee419a5b6a3c2d095e081f9bd06fef026139d8d1cefbab8082f1",
+      "bytes": 1860
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\ReleaseSafe-null-size.log",
+      "sha256": "2e311f6bcfc8c969e2abadefce37c78760d346772fa8ac6940b8f5d1c0bf9c67",
+      "bytes": 1541
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\RESULTS.md",
+      "sha256": "2f167b4abaf1521ce3cc53d19fd7760c01503ffab199b0989754dd5b4b411009",
+      "bytes": 3421
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f",
+      "bytes": 78
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-abi-qualification\\miniaudio-zig\\verification\\abi-20260926\\zig-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ]
+}

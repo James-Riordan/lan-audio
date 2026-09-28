@@ -1,0 +1,4 @@
+Build Summary: 2/2 steps succeeded
+lifecycle-check success
++- compile test debug aarch64-linux success 27s MaxRSS:272M
+

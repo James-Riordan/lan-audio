@@ -1,0 +1,11 @@
+# Application key handoff and generations
+
+Status: selected for Q03 implementation; 2026-09-26. Qualification remains in progress until the canonical receipt closes the work.
+
+The adapter currently derives generation-zero packet keys and discards the TLS application traffic secret. Packet keys cannot reconstruct the next traffic secret. Retaining full original secrets indefinitely would unnecessarily extend their lifetime, and deriving updates from packet keys would violate the protocol.
+
+During each application secret callback, copy only the derived next traffic secret after validating the suite/length. Retain it alongside generation-zero packet keys until configured TLS authentication is complete. A new once-only handoff transfers both directions to an application key owner, clearing adapter copies. Existing callers that do not request handoff retain the original packetKeys behavior. After handoff, application packetKeys export is denied; Handshake key access and bounded TLS post-handshake driving continue. All failure/cancel/deinit paths clear retained update secrets. Readiness and handshake confirmation remain distinct.
+
+The generation owner derives new key/IV through the standard quic ku chain and retains original header-protection keys. Send PNs continue across updates; per-key encryption count resets only on a real key replacement. Connection-wide authentication-failure accounting persists. Candidate future keys are prepared outside packet admission; unauthenticated phase changes never promote a generation. Authenticated candidate plaintext is provisional until an explicit host commit after CID/replay/frame admission. Peer updates require corresponding send-key updates before ACK; local updates require confirmation and later-generation ACK gates. Old read keys have a checked, bounded retirement deadline.
+
+Host-validated confirmation, ACK/sent history, frame admission, packet-width policy and PTO timing are explicit inputs. This component does not infer socket success or replace the future connection/recovery owner. Tests require independent multi-generation crypto vectors, forged phase changes, simultaneous updates/reordering, early-update and usage exhaustion, expired old keys, stale/cross-owner admission tokens and actual native TLS handoff. No new cipher, native platform, root pin or TLS provider API is selected here.

@@ -1,0 +1,8 @@
+.{
+    .name = .tls_zig,
+    .version = "0.1.5",
+    .fingerprint = 0xe9eea81f95b1f806,
+    .minimum_zig_version = "0.17.0-dev.1859+dcceb318e",
+    .dependencies = .{},
+    .paths = .{ "docs", "AGENTS.md", "build.zig", "build.zig.zon", "src", "tests", "examples", "tools", "README.md", "HOST-DRIVER.md", "backend-lock.json", "evidence/source-provenance.json", "evidence/build-recovery.md" },
+}

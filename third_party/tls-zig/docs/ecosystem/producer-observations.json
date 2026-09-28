@@ -1,0 +1,89 @@
+{
+  "scope": "read-only local source/document observations; no producer test rerun or pin adoption",
+  "files": [
+    {
+      "project": "zson",
+      "path": "docs/BUILD-CONFIG.md",
+      "observed_absolute_path": "C:\\Projects\\zson\\docs\\BUILD-CONFIG.md",
+      "sha256": "d17e52d138fdad6e4d1288689a567dbb5897b06245acf108905caefad6a5796d",
+      "finding": "Host build evaluation and emitted compile-time options; no general comptime parser."
+    },
+    {
+      "project": "zson",
+      "path": "docs/ENVIRONMENTS.md",
+      "observed_absolute_path": "C:\\Projects\\zson\\docs\\ENVIRONMENTS.md",
+      "sha256": "3c70f905fe81e9249802e43cb0320f87e93c2176399c493eb3c8c6c0592c291f",
+      "finding": "Explicit environment scopes, precedence, whole-value replacement and provenance."
+    },
+    {
+      "project": "zson",
+      "path": "docs/VALIDATED-PLANNING.md",
+      "observed_absolute_path": "C:\\Projects\\zson\\docs\\VALIDATED-PLANNING.md",
+      "sha256": "84c8daaca100903cc642a6ab664f83678dc33a30eeb8583ab10b9ac5165d51d9",
+      "finding": "Schema-authoritative normalized plans, identities and nonexecuting change classification."
+    },
+    {
+      "project": "zson",
+      "path": "docs/CAPABILITY-POLICY.md",
+      "observed_absolute_path": "C:\\Projects\\zson\\docs\\CAPABILITY-POLICY.md",
+      "sha256": "190e07e0f56753805a37c33bdb4ae39f45b64b4693139b7a577ee12857a2b969",
+      "finding": "Explicit declared/observed candidates; no implicit hardware probing or installation."
+    },
+    {
+      "project": "zson",
+      "path": "tests/build-consumer/build.zig",
+      "observed_absolute_path": "C:\\Projects\\zson\\tests\\build-consumer\\build.zig",
+      "sha256": "91e0e41ec5aa6d487503e47f38ee8d06f574010eb81f718f8b505da429b7ffbe",
+      "finding": "Inspected implementation of conditional lazy dependency and build options; not rerun here."
+    },
+    {
+      "project": "updatez",
+      "path": "docs/ECOSYSTEM-CONTRACT.md",
+      "observed_absolute_path": "C:\\Projects\\updatez\\docs\\ECOSYSTEM-CONTRACT.md",
+      "sha256": "219328f3ed269b95ccac3c50478b39bc29142f0caf17954f4a4e217e7fe5d99b",
+      "finding": "Selected reconciliation/diagnostic capabilities and remaining whole-fleet gaps."
+    },
+    {
+      "project": "contextz",
+      "path": "docs/CONSUMER-HANDOFF.md",
+      "observed_absolute_path": "C:\\Projects\\contextz\\docs\\CONSUMER-HANDOFF.md",
+      "sha256": "d4d210ea31fbe9a16f14296483edf7ed2fb920c439c171f392975506feb12fbd",
+      "finding": "Validated context observations; fingerprints are not authority."
+    },
+    {
+      "project": "quartz",
+      "path": "docs/architecture/decisions/0002-identity-before-location.md",
+      "observed_absolute_path": "C:\\Projects\\quartz\\docs\\architecture\\decisions\\0002-identity-before-location.md",
+      "sha256": "ad115b8d4c13d7de53e8a24caec0b3658f47f36c9768c2ac378ef474a6ed32f7",
+      "finding": "Identity/custody separation and explicit future MetaOS boundary."
+    },
+    {
+      "project": "docz",
+      "path": "docs/markdown-import-v1.md",
+      "observed_absolute_path": "C:\\Projects\\docz\\docs\\markdown-import-v1.md",
+      "sha256": "59e24ac28e06be27fbbb0b93ff64edacd086c936d41127780ba3ac04a925a709",
+      "finding": "Declared subset, conversion reports and preservation limits."
+    },
+    {
+      "project": "jcr-architecture",
+      "path": "docs/ONTOLOGY-AND-OWNERSHIP.md",
+      "observed_absolute_path": "C:\\Projects\\jcr-architecture\\docs\\ONTOLOGY-AND-OWNERSHIP.md",
+      "sha256": "ca8db359fb24cae42fe7efb1b8fd07acee4149ef8501863b79bfaf6789d4da15",
+      "finding": "Reusable transport versus application, orchestration, identity and data owners."
+    },
+    {
+      "project": "jcr-architecture",
+      "path": "docs/AUTHORITY-AND-COMPATIBILITY.md",
+      "observed_absolute_path": "C:\\Projects\\jcr-architecture\\docs\\AUTHORITY-AND-COMPATIBILITY.md",
+      "sha256": "76305c29084add47578851d5c64500996c9505ade59e80c376dd80aeb10c2607",
+      "finding": "Source authority, version axes and explicit consumer adoption."
+    },
+    {
+      "project": "hydra",
+      "path": "START-HERE.md",
+      "observed_absolute_path": "C:\\Projects\\hydra\\START-HERE.md",
+      "sha256": "6a5f3e23bf4d49f649e77fdebec4cc34689dce62deafc0753ef857b8c45a6002",
+      "finding": "Producer-reported minimal runtime and unfinished broader orchestration; not rerun here."
+    }
+  ]
+}

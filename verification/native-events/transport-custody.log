@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Projects\lan-audio\tools\check_transport.py", line 37, in <module>
+    print(f'PASS: {verify(args.staged)} dependency files match reviewed custody; staged={args.staged}')
+                   ~~~~~~^^^^^^^^^^^^^
+  File "C:\Projects\lan-audio\tools\check_transport.py", line 23, in verify
+    raise RuntimeError(f"dependency changed: {entry['path']}")
+RuntimeError: dependency changed: build.zig

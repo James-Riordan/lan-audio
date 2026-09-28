@@ -1,0 +1,145 @@
+{
+  "passed": false,
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "model_sha256": "e1c7f7c60203f4615acffdcc1347a38c9e96fc2871054a939769a00069fdccaa",
+  "runner_sha256": "b22ea742100ad97ebd66500e6ef445fe3071b25487e3ac53ce49e376b125c206",
+  "normal": [
+    {
+      "passed": false,
+      "fault": "none",
+      "max_generations": 1,
+      "states": 63,
+      "edges": 340,
+      "violation": "WorkerLifetime",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "complete success (1, 1, 1)",
+        "issue acquire 2",
+        "complete success (1, 2, 2)",
+        "issue acquire 4",
+        "cancel",
+        "request native fence",
+        "native seals admission",
+        "native fence returns",
+        "release device",
+        "complete success (1, 3, 4)"
+      ]
+    },
+    {
+      "passed": false,
+      "fault": "none",
+      "max_generations": 2,
+      "states": 96,
+      "edges": 475,
+      "violation": "WorkerLifetime",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "complete success (1, 1, 1)",
+        "issue acquire 2",
+        "complete success (1, 2, 2)",
+        "issue acquire 4",
+        "cancel",
+        "request native fence",
+        "native seals admission",
+        "native fence returns",
+        "release device",
+        "complete success (1, 3, 4)"
+      ]
+    }
+  ],
+  "mutations": [
+    {
+      "passed": false,
+      "fault": "forget_pending",
+      "max_generations": 2,
+      "states": 4,
+      "edges": 7,
+      "violation": "OutstandingTracked",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "cancel"
+      ],
+      "expected_violation": "OutstandingTracked",
+      "detected_expected": true
+    },
+    {
+      "passed": false,
+      "fault": "lose_late_success",
+      "max_generations": 2,
+      "states": 8,
+      "edges": 20,
+      "violation": "SuccessfulAcquisitionTracked",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "cancel",
+        "complete success (1, 1, 1)"
+      ],
+      "expected_violation": "SuccessfulAcquisitionTracked",
+      "detected_expected": true
+    },
+    {
+      "passed": false,
+      "fault": "stale_completion",
+      "max_generations": 2,
+      "states": 7,
+      "edges": 10,
+      "violation": "TokenIsolation",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "reject old generation"
+      ],
+      "expected_violation": "TokenIsolation",
+      "detected_expected": true
+    },
+    {
+      "passed": false,
+      "fault": "free_live_worker",
+      "max_generations": 2,
+      "states": 52,
+      "edges": 204,
+      "violation": "WorkerLifetime",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "complete success (1, 1, 1)",
+        "issue acquire 2",
+        "complete success (1, 2, 2)",
+        "issue acquire 4",
+        "cancel",
+        "complete success (1, 3, 4)",
+        "release worker"
+      ],
+      "expected_violation": "WorkerLifetime",
+      "detected_expected": true
+    },
+    {
+      "passed": false,
+      "fault": "free_unjoined_device",
+      "max_generations": 2,
+      "states": 27,
+      "edges": 92,
+      "violation": "NativeJoinBeforeRelease",
+      "trace": [
+        "begin",
+        "issue acquire 1",
+        "complete success (1, 1, 1)",
+        "issue acquire 2",
+        "cancel",
+        "complete success (1, 2, 2)",
+        "release device"
+      ],
+      "expected_violation": "NativeJoinBeforeRelease",
+      "detected_expected": true
+    }
+  ],
+  "limits": [
+    "Finite specification, not production lifecycle code.",
+    "Cleanup reachability is existential, not all-schedule liveness or an OS deadline.",
+    "Media, authorization, TLS buffers, weak memory and process crash are not modeled."
+  ]
+}

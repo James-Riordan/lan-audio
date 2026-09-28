@@ -1,0 +1,11 @@
+Build Summary: 8/8 steps succeeded
+transport-probe success
++- install audio-tls-probe success
+|  +- compile exe audio-tls-probe safe native success 13s MaxRSS:257M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 31ms MaxRSS:40M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 343ms MaxRSS:40M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+

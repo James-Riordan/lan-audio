@@ -1,0 +1,15 @@
+{
+  "command": [
+    "zig",
+    "fmt",
+    "src/runtime/lifecycle.zig",
+    "tests/integration/runtime_lifecycle.zig",
+    "build.zig"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:28:59.161723+00:00",
+  "elapsed_seconds": 0.21266879999893717,
+  "exit_code": 0,
+  "log": "format.log",
+  "log_sha256": "3fb4fd4a40b6461d29d03e70a58e2212ffe83a5c83ec04b274e9582e6b641e83"
+}

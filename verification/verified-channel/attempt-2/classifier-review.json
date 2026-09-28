@@ -1,0 +1,8 @@
+{
+  "failed_cases": [
+    "server wrong-alpn",
+    "wrong-ack",
+    "duplicate"
+  ],
+  "finding": "Implementation rejected and released TLS in all three cases. Harness expected incorrect error names. Negotiation emits Discontinuous for ACK/audio frontier mismatch; records server ALPN callback emits fatal no_application_protocol as TlsFailure. Raw results retained; classifier corrected before fresh campaign."
+}

@@ -1,0 +1,294 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393"
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba"
+  },
+  {
+    "path": "build.zig",
+    "sha256": "44046340287a336bcdeffdd41510cf12fd0ec1a8445f42f226f7b66b1c68337c"
+  },
+  {
+    "path": "build.zig.zon",
+    "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "sha256": "5a72820db65bee330833b385dd5f30926503dcb3bb2e76b57501b8235f715d49"
+  },
+  {
+    "path": "docs/CALLBACKS.md",
+    "sha256": "af94844cc303677942177e63004306a1892f9532b3f60dfdf1d04aa114c05b0f"
+  },
+  {
+    "path": "docs/DEPENDENCIES.md",
+    "sha256": "7f585eab6f3049884cba9c89d7aa27cd4f99f78aa19fbb31be2fc4c07450d39e"
+  },
+  {
+    "path": "docs/design/system-mathematics.md",
+    "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087"
+  },
+  {
+    "path": "docs/implementation/decisions.md",
+    "sha256": "a41b9f47d15a24f4ececb6e343f99762bfa39b6ae9805a43d0329a801e7e9e10"
+  },
+  {
+    "path": "docs/implementation/interfaces.md",
+    "sha256": "0f510e85bdafcbbe21f1564e09135cb41303c3aad2af898e9809c8706aa4b31e"
+  },
+  {
+    "path": "docs/implementation/layout.md",
+    "sha256": "ff05eff9b53aa1e3c077c6341f5915c71b9f480961de0c6ecec875f608788dc4"
+  },
+  {
+    "path": "docs/implementation/roadmap.md",
+    "sha256": "7bbe622dd249e8560331d9e51e72c696c248430c8f24d563b5c424face2e65f4"
+  },
+  {
+    "path": "docs/implementation/START_HERE.md",
+    "sha256": "90e92595afab27796ec8770db7d124c4e9f95156f481bb8fef50ccb1d61eddd5"
+  },
+  {
+    "path": "docs/implementation/work-packages/01-target-builds.md",
+    "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba"
+  },
+  {
+    "path": "docs/implementation/work-packages/02-fidelity-protocol.md",
+    "sha256": "f8ef2d3c760e285769ccbf3f43778f68daec0ed5342f06498a4fc37042cd043f"
+  },
+  {
+    "path": "docs/implementation/work-packages/03-identity-endpoints.md",
+    "sha256": "e4db7111a5620a577d3b253f7fcf23a7c36322ca56bd8190aa77a7d07dce9757"
+  },
+  {
+    "path": "docs/implementation/work-packages/04-first-sound.md",
+    "sha256": "81674944d131dc4996eb5ad1df16f4bdaed480b366c5b39db68388f4c631b6bc"
+  },
+  {
+    "path": "docs/implementation/work-packages/05-timing-clocks.md",
+    "sha256": "504cc4c20cbe9718d5822b9d881fc239d264c53e9750dbfb985a6f606ba91ed4"
+  },
+  {
+    "path": "docs/implementation/work-packages/06-network-resilience.md",
+    "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260"
+  },
+  {
+    "path": "docs/implementation/work-packages/07-observability.md",
+    "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a"
+  },
+  {
+    "path": "docs/implementation/work-packages/08-user-experience.md",
+    "sha256": "bff51a468f61e821ffbe3ed34fa11c13e88dc27e074470576e50851067e40ccc"
+  },
+  {
+    "path": "docs/implementation/work-packages/09-packaging.md",
+    "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c"
+  },
+  {
+    "path": "docs/implementation/work-packages/10-qualification.md",
+    "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726"
+  },
+  {
+    "path": "docs/literate/proof-ledger.md",
+    "sha256": "475dd8421c467bfa60c497f24e4829ada1ec112857238d169fbd9ff0dde4b413"
+  },
+  {
+    "path": "docs/literate/quantitative-design.md",
+    "sha256": "21cb2b054940bc0cb2079142107ce705368c9de5111d8a575c0895a0ac059892"
+  },
+  {
+    "path": "docs/literate/README.md",
+    "sha256": "4c19916f7d612f4badd5cd057dbd788a434adeebd4ddc4b248cd62d7eacdafab"
+  },
+  {
+    "path": "docs/literate/runtime-argument.md",
+    "sha256": "341b579ff3cd08b6804d9ec9111d58884e7e9f7cd1fa0c7639f6ab4d173c83f7"
+  },
+  {
+    "path": "docs/literate/stream-argument.md",
+    "sha256": "a5d0a9b6ff88c64f5d029b4b2b48d65eff4c6e2f0f8b99a06435754bae5a7884"
+  },
+  {
+    "path": "docs/MATHEMATICS.md",
+    "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99"
+  },
+  {
+    "path": "docs/PRODUCT.md",
+    "sha256": "6de406291c90508c7e5acada35a157706b219223f204c88808f271258c0b5c4b"
+  },
+  {
+    "path": "docs/reference/api-contracts.md",
+    "sha256": "66d941428586e29c3185d90bd52ded3691aa24e527575ec246d33e90fc7b9b45"
+  },
+  {
+    "path": "docs/reference/evidence.md",
+    "sha256": "5e3e9f09a1177ddd021147db2b65e15f3bc3e0d57573ea69a9fc66cb27972860"
+  },
+  {
+    "path": "docs/reference/file-index.json",
+    "sha256": "1c6c265ed64ce05332bf09053763e1be42aa1cc2932324ab45c9f7935efaa258"
+  },
+  {
+    "path": "docs/reference/lan-audio.md",
+    "sha256": "b58a5ee686eb42c57d3571fb8a6767488b40fb555ef7461f24427789cdee8d12"
+  },
+  {
+    "path": "docs/reference/miniaudio-zig.md",
+    "sha256": "bfa7168727e78512c2b79fb4e07d6f37c7117e8ecc10b6367e29b698db642dd8"
+  },
+  {
+    "path": "docs/reference/README.md",
+    "sha256": "81f39d6d73a8464e04e6d93b90707c46363cc173e1d61b6c3699afdb94356fe5"
+  },
+  {
+    "path": "docs/reference/tls-zig.md",
+    "sha256": "3a61bcadc085f631119aeb42b85d5070a4b66cfd43ca5a7272f8dd8ec246682a"
+  },
+  {
+    "path": "docs/reference/upstream-assets.md",
+    "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9"
+  },
+  {
+    "path": "docs/TRANSPORT.md",
+    "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a"
+  },
+  {
+    "path": "docs/VERIFICATION.md",
+    "sha256": "a8f0b72af81a8dafbed3b39906e2802cb7f5838581a59f419cf03cf48656d296"
+  },
+  {
+    "path": "README.md",
+    "sha256": "5275f9965b334d830be949249e66286698dc77c6082bd491722577391ace9ecc"
+  },
+  {
+    "path": "spec/concurrency/SpscPublication.cfg",
+    "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb"
+  },
+  {
+    "path": "spec/concurrency/SpscPublication.tla",
+    "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22"
+  },
+  {
+    "path": "spec/README.md",
+    "sha256": "bce1e1c777e3b5f6276eb42d694c0717643e9ad6414237c79d7e1c727584a585"
+  },
+  {
+    "path": "spec/runtime/RuntimeOwnership.cfg",
+    "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995"
+  },
+  {
+    "path": "spec/runtime/RuntimeOwnership.tla",
+    "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1"
+  },
+  {
+    "path": "spec/session/SessionWindow.cfg",
+    "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c"
+  },
+  {
+    "path": "spec/session/SessionWindow.tla",
+    "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742"
+  },
+  {
+    "path": "spec/stream/EndDrain.cfg",
+    "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378"
+  },
+  {
+    "path": "spec/stream/EndDrain.tla",
+    "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7"
+  },
+  {
+    "path": "src/audio/callback_bridge.zig",
+    "sha256": "ee3a23ab715ca3afe07dc62b0752fc6f1c1c97fd4a1d8cec33e585bf2c473c54"
+  },
+  {
+    "path": "src/audio/frame_queue.zig",
+    "sha256": "2f5e21108e3bcf0fcc98f3dc57af22db38d4e23c89f2f88de4bcece9faaa7777"
+  },
+  {
+    "path": "src/host/audio_device.zig",
+    "sha256": "87c2326dd76963d7da783cfab83660ae553bdf779a240a1e0e6da4f8fa52b327"
+  },
+  {
+    "path": "src/media/playout_window.zig",
+    "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e"
+  },
+  {
+    "path": "src/protocol/v1.zig",
+    "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0"
+  },
+  {
+    "path": "src/root.zig",
+    "sha256": "21f7c54c59453cff94cc646e27429a23014be1ac867160ed064a4ac0057a9fe1"
+  },
+  {
+    "path": "src/session/receiver.zig",
+    "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e"
+  },
+  {
+    "path": "src/session/session.zig",
+    "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124"
+  },
+  {
+    "path": "tests/dependency.zig",
+    "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3"
+  },
+  {
+    "path": "tests/hardware/windows_capture.zig",
+    "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b"
+  },
+  {
+    "path": "tests/integration/audio_device.zig",
+    "sha256": "9d7f658e26ebfcc57fb0b6cbf391af9098c5ea53aaa67b81f75faeb31e2034f8"
+  },
+  {
+    "path": "tests/integration/tls_receiver.zig",
+    "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353"
+  },
+  {
+    "path": "tests/unit/callback.zig",
+    "sha256": "af29243eca657a06a895eefda7e4aca2f1e19cd6ea502ca594adf2ff0b40eff6"
+  },
+  {
+    "path": "tests/unit/core.zig",
+    "sha256": "8ef337a01283909767c32e09920b2668546f70ca3b424c2bcae681d154e72568"
+  },
+  {
+    "path": "tests/unit/wire.zig",
+    "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052"
+  },
+  {
+    "path": "tools/build_reference.py",
+    "sha256": "1420d99eeeadc9b41df3560a951a90d9264d131affa92e60dc0942e28e8756dd"
+  },
+  {
+    "path": "tools/check_docs.py",
+    "sha256": "2f10ce5c88dd3cc1ea61b20ed44dc76a7e02ccfe5806167ff42bd6f4b4c5828a"
+  },
+  {
+    "path": "tools/check_handoff.py",
+    "sha256": "2fe93a9c900f994297361f1299536c860baf194d18984e613036a291cc8d263c"
+  },
+  {
+    "path": "tools/check_models.py",
+    "sha256": "5de1d2ac2d25c92cba4c5943adfe9076abd5faf6e26994d65c74b2c03fc13d25"
+  },
+  {
+    "path": "tools/check_transport.py",
+    "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488"
+  },
+  {
+    "path": "tools/reference_contracts.json",
+    "sha256": "9df371f8ee8b69fb74e463a2e8a4f0dcaf9a95b63d0d2ad8cc3d96c008664175"
+  },
+  {
+    "path": "tools/test_transport.py",
+    "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7"
+  },
+  {
+    "path": "transport-lock.json",
+    "sha256": "8373c873f1a87e51fa0ca33b5dedf78647f116c3dee86a749a298c14d6781200"
+  }
+]

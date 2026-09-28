@@ -1,0 +1,57 @@
+[
+  {
+    "name": "help",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "help"
+    ],
+    "exit_code": 0,
+    "seconds": 0.308,
+    "binary_sha256": "acc1923d805efb5b83aec918160debcb792bf147ef513e5648ba38e2152d7366"
+  },
+  {
+    "name": "version",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "version"
+    ],
+    "exit_code": 0,
+    "seconds": 0.136,
+    "binary_sha256": "acc1923d805efb5b83aec918160debcb792bf147ef513e5648ba38e2152d7366"
+  },
+  {
+    "name": "invalid",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "devices",
+      "--invalid"
+    ],
+    "exit_code": 2,
+    "seconds": 0.049,
+    "binary_sha256": "acc1923d805efb5b83aec918160debcb792bf147ef513e5648ba38e2152d7366"
+  },
+  {
+    "name": "devices-1",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "devices",
+      "--json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.084,
+    "binary_sha256": "acc1923d805efb5b83aec918160debcb792bf147ef513e5648ba38e2152d7366",
+    "reported_devices": 4
+  },
+  {
+    "name": "devices-2",
+    "command": [
+      "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+      "devices",
+      "--json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.091,
+    "binary_sha256": "acc1923d805efb5b83aec918160debcb792bf147ef513e5648ba38e2152d7366",
+    "reported_devices": 4
+  }
+]

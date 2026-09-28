@@ -1,0 +1,276 @@
+[
+  {
+    "id": "backend-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/test-backend.py"
+    ],
+    "cwd": ".",
+    "mode": "Python",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/backend-normal.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/backend-normal.stderr.log",
+        "sha256": "f41a2b2f441908ab4979cd50833780aa2e05d66a3299f7276e495272c54e73e0"
+      }
+    ],
+    "started_utc": "2026-09-26T17:57:13.633522+00:00",
+    "elapsed_seconds": 134.755
+  },
+  {
+    "id": "backend-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "tools/test-backend.py"
+    ],
+    "cwd": ".",
+    "mode": "Python-O",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/backend-optimized.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/backend-optimized.stderr.log",
+        "sha256": "c6fa0fb0f45d48310a3039d8596460e9f3cb35dbfbb0e8a07ea9031a88a71d05"
+      }
+    ],
+    "started_utc": "2026-09-26T17:59:28.389627+00:00",
+    "elapsed_seconds": 129.076
+  },
+  {
+    "id": "sdk-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/verify-backend.py"
+    ],
+    "cwd": ".",
+    "mode": "Python",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/sdk-normal.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/sdk-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "started_utc": "2026-09-26T18:01:37.466173+00:00",
+    "elapsed_seconds": 2.246
+  },
+  {
+    "id": "sdk-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "tools/verify-backend.py"
+    ],
+    "cwd": ".",
+    "mode": "Python-O",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/sdk-optimized.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/sdk-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "started_utc": "2026-09-26T18:01:39.713104+00:00",
+    "elapsed_seconds": 4.296
+  },
+  {
+    "id": "debug",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "test",
+      "host-test",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": ".",
+    "mode": "Debug",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/debug.stderr.log",
+        "sha256": "6067555d7637b4600fa52a96fd0aa742e1b1babada476fb5e8b4082ab821dda6"
+      }
+    ],
+    "started_utc": "2026-09-26T18:01:44.009528+00:00",
+    "elapsed_seconds": 7.304
+  },
+  {
+    "id": "release-safe",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "test",
+      "host-test",
+      "-Doptimize=ReleaseSafe",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": ".",
+    "mode": "ReleaseSafe",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/release-safe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/release-safe.stderr.log",
+        "sha256": "d868e6597ff3667bc264f12aabd56c8cc099369c88cbff9f349051c022e011d5"
+      }
+    ],
+    "started_utc": "2026-09-26T18:01:51.313807+00:00",
+    "elapsed_seconds": 6.932
+  },
+  {
+    "id": "interop-example",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "interop",
+      "example",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": ".",
+    "mode": "Debug",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/interop-example.stdout.log",
+        "sha256": "a7a5d5fa4ec256ec3a335d6caee53898479c5549509d84c09adfc52d84ac0681"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/interop-example.stderr.log",
+        "sha256": "902fa032b7b1fb0f8f22f4549179201152617739adf8cc60ba0f58862f0704ee"
+      }
+    ],
+    "started_utc": "2026-09-26T18:01:58.246446+00:00",
+    "elapsed_seconds": 8.288
+  },
+  {
+    "id": "consumer-build",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-j1",
+      "--summary",
+      "all"
+    ],
+    "cwd": "examples/consumer",
+    "mode": "Debug",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/consumer-build.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/consumer-build.stderr.log",
+        "sha256": "44211ef17227342b86390039c82ba3acb8a69fedb71e8bea80365ab3f4ff4e37"
+      }
+    ],
+    "started_utc": "2026-09-26T18:02:06.534966+00:00",
+    "elapsed_seconds": 34.763
+  },
+  {
+    "id": "tcp_interop",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/tcp_interop.py"
+    ],
+    "cwd": ".",
+    "mode": "Python",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/tcp_interop.stdout.log",
+        "sha256": "a7fd14b3d8af0d02ea3ec6112e08b270f49c2ff6b8b6825fa65e2aeaa4f39988"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/tcp_interop.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "started_utc": "2026-09-26T18:02:41.298427+00:00",
+    "elapsed_seconds": 3.667
+  },
+  {
+    "id": "tcp_server_interop",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/tcp_server_interop.py"
+    ],
+    "cwd": ".",
+    "mode": "Python",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/tcp_server_interop.stdout.log",
+        "sha256": "bc8a1cad16aba64188e73070db5355accb62950d5f4045a977fc510ceeb4b473"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/tcp_server_interop.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "started_utc": "2026-09-26T18:02:44.966522+00:00",
+    "elapsed_seconds": 3.268
+  },
+  {
+    "id": "tcp_upload_interop",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tools/tcp_upload_interop.py"
+    ],
+    "cwd": ".",
+    "mode": "Python",
+    "exit_code": 0,
+    "outcome": "passed",
+    "logs": [
+      {
+        "path": "docs/verification/t02-regression-runs/tcp_upload_interop.stdout.log",
+        "sha256": "74d16e173c5328376da2dc47b9a9958e32904f71d04468f959343d8994094a1d"
+      },
+      {
+        "path": "docs/verification/t02-regression-runs/tcp_upload_interop.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "started_utc": "2026-09-26T18:02:48.236268+00:00",
+    "elapsed_seconds": 3.665
+  }
+]

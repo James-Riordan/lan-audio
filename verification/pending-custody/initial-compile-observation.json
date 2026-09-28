@@ -1,0 +1,8 @@
+{
+  "commands": ["zig fmt build.zig src/runtime/pending_block.zig tests/unit/core.zig tests/unit/runtime/pending_block.zig", "zig build test -j1 --summary all"],
+  "cwd": "C:/Projects/lan-audio",
+  "combined_exit_code": 1,
+  "diagnostic_excerpt": "tests/unit/runtime/pending_block.zig:49:58: error: expected ';' after statement\nconst requested = [_]usize{ 1, 7, 3 }[(turns / 4) % 3];",
+  "observation_source": "Completed command tool session 68323. Both formatting and compilation diagnosed the array-literal indexing syntax. This is an excerpt, not the full compiler transcript.",
+  "before_source": "pending-test-attempt1.zig"
+}

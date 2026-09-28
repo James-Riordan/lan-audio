@@ -1,0 +1,23 @@
+Custody: 188 pins plus private DLLs verified
+receiver/roundtrip: PASS
+receiver/empty: PASS
+sender/roundtrip: PASS
+receiver/bad-profile: PASS
+receiver/audio-before-offer: PASS
+receiver/wrong-stream: PASS
+receiver/duplicate: PASS
+receiver/gap: PASS
+receiver/nonfinite: PASS
+receiver/truncated: PASS
+receiver/missing-end: PASS
+receiver/after-end: PASS
+receiver/raw-eof: PASS
+receiver/stalled: PASS
+receiver/wrong-alpn: PASS
+receiver/wrong-name: PASS
+sender/bad-accept: PASS
+sender/wrong-stream-accept: PASS
+sender/early-ack: PASS
+sender/wrong-ack: PASS
+sender/missing-ack: PASS
+sender/after-ack: PASS

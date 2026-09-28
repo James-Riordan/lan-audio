@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "scope": "finite proposed custody model; no implementation refinement or liveness proof",
+  "normal": [
+    {
+      "passed": true,
+      "capacity": 1,
+      "states": 23,
+      "edges": 155
+    },
+    {
+      "passed": true,
+      "capacity": 2,
+      "states": 33,
+      "edges": 233
+    }
+  ],
+  "injected_faults": {
+    "overwrite": {
+      "passed": false,
+      "capacity": 2,
+      "states": 6,
+      "edges": 24,
+      "violation": "lost emitted event",
+      "trace": [
+        "emit 0",
+        "emit 1",
+        "overwrite full queue"
+      ]
+    },
+    "stale-ack": {
+      "passed": false,
+      "capacity": 2,
+      "states": 11,
+      "edges": 65,
+      "violation": "stale/foreign acknowledgement mutated state",
+      "trace": [
+        "emit 0",
+        "nextEvent",
+        "copy/derive 0",
+        "ack issuer=7 sequence=1"
+      ]
+    },
+    "early-ack": {
+      "passed": false,
+      "capacity": 2,
+      "states": 9,
+      "edges": 37,
+      "violation": "retired before independent copy/derivation",
+      "trace": [
+        "emit 0",
+        "nextEvent",
+        "ack issuer=7 sequence=0"
+      ]
+    }
+  }
+}

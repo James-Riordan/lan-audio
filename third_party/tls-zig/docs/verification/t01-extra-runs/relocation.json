@@ -1,0 +1,1207 @@
+{
+  "sdk_present": false,
+  "source_root": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package",
+  "consumer_root": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\external consumer",
+  "files": [
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\AGENTS.md",
+      "sha256": "801b092a51908202937dee31ea0aab3a858581a97b2b63269327573a3422dbf5"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\backend-lock.json",
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\build.zig",
+      "sha256": "b61f99699d71fbc481c52fa81fd2a39a8e59520f8cb330717807713b5c4ee638"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\build.zig.zon",
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\HOST-DRIVER.md",
+      "sha256": "184019fce5dbb97f50b21aa72de7231cf821f0dfb74a3c3f826d5f8b32296e97"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\README.md",
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\README.md",
+      "sha256": "fa76fecfe2706b926074bda2f8d76f985181162bd14f702d3b148e181d2544e2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\evidence\\build-recovery.md",
+      "sha256": "62da642c146947480514adee7190f6b64a0f1c08156d0dda452afe6ff69085e9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\evidence\\source-provenance.json",
+      "sha256": "23d65ebab94bef0b664985604cb19ac172146f95bd5154b0a93e55761e971830"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\roundtrip.zig",
+      "sha256": "e5e442435e8f30a7e34d9ac39dd70131bdcd7cb0cc48a0615c9f42974a4f79f0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\backend.c",
+      "sha256": "0583d26ca425a159e113afb8259aacbf0ac4d99b4935b09f49d8c7e1c6138c21"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\backend.h",
+      "sha256": "867fbf3c00fc45fd872b490b49056e4fbb0abf5dbde540bc364cdfa1335d5ecc"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\backend.zig",
+      "sha256": "b9cc5179b2aeea584574e58c5084a58f0d7488c80356dd6a31233c683615fba6"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\driver.zig",
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\quic.zig",
+      "sha256": "40b6f17b4cae413fc28a6b05f6fff1898b1288af1d36ebbce00379915e9478fd"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\root.zig",
+      "sha256": "be1c0e48a846142f9507097da00204b0a830bbb3d154870c910aebb6ccbbeb57"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\driver.zig",
+      "sha256": "ebd171a3e78d7e0a9cf0111f57c05f3aafb4dc12b4d5e929e60f5f28a6281d09"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\transport.zig",
+      "sha256": "9d75a04ee6159fa82190682a43c4a8f0c10fdca4d6932a11fd6354ec26f03e99"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\build-openssl.sh",
+      "sha256": "935c6f9e7e03265544d099c1182eb4b8af6bc785f93a001734485c39a5435c4f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\check-docs.py",
+      "sha256": "be34383f3ec878381ea6140f504b91af3213dcbb955aa35c0dffc63aa503a0be"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\check-event-model.py",
+      "sha256": "5dfd556d01f501d39d5de8a7335df674d84851fcb27605c7f8c174276de6dd38"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\check-models.py",
+      "sha256": "ed5e57b103ca09e7fb519d46553f7db6b132245802196364672f5925e225acda"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\check-plan.py",
+      "sha256": "304aecf9670355b237408259b32058530b8fa9cf22fa414a1e7952859b01e12d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\fetch-openssl.py",
+      "sha256": "45f60f7284910375d14959e4dee8d9c1a844907262369b33721f93788ec7a734"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\interop.py",
+      "sha256": "e0b6a75eff49aed7c57ddc3bf53798e74e1a7693e9713d7a6d1b6a5ec6a4159c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\make_fixtures.py",
+      "sha256": "ac8d59c6da99f23f6db1484db277a101930925e731cb61fd52e5d007251ea1e3"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\pin-backend.py",
+      "sha256": "bcac3b4fa4eaf4780be32793b879eb7fc09b1535283a8c118f833d88beea2d24"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\probe-quic-pair.c",
+      "sha256": "3f30826b0ffbd28cf60ed238b45876468fefec704dfad5d2fdce8fedf358a442"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\probe-quic-pair.py",
+      "sha256": "a50f002c744bc9143376bfb974e994f1c032d0496ba45a6124ae74a286abec0a"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\probe-quic-tls.c",
+      "sha256": "a043a574fed8815e0b0ddc14983a2ab80ae3eee8ddb6606b89f48c5e71370948"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\probe-quic-tls.py",
+      "sha256": "0968b64497a446be0d59f2c0df8bfe59c4bd38e6986f669cbc1cf7567d53ebcb"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\qualify.ps1",
+      "sha256": "7918b074ef0e4012bfb7d969b46dfc1a6d60e06bf5fbf86ad0047bf3d89c6cc0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\tcp_interop.py",
+      "sha256": "0f1cf8172ae4c504ba4a0c14d0c360aba27f966e140c4b8abec3dfbbde76a3fc"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\tcp_server_interop.py",
+      "sha256": "d4381483e6af8ab7ca9ca2a15a3d1783857378d861e062ccc04ec5cd0555e4c2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\tcp_upload_interop.py",
+      "sha256": "84b1dee1314093d7c52b84245fee8439fed6275da4a8fe2ed96106516a37e080"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\test-backend.py",
+      "sha256": "e055e8c522a0fd777bc3b4d2831e057c406ed8e0bd880f934d9bfc19208eb8fb"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\test-openssl.sh",
+      "sha256": "ee8b7db47b7498e5765eb915a09f7ce47013aec1fcb3c551e2eb14d4a095064c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\test-plan-lifecycle.py",
+      "sha256": "a70b4cc785552c002c2ad746e6573d3e469ccfeb99def60dee9dff68ebcc4d92"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\test-quic-types.py",
+      "sha256": "ea2b297334871d86967f8d6467d22ae4e6ecb94f087996f858e7a1f2a48d046c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tools\\verify-backend.py",
+      "sha256": "267c0576fd83f7295eabe576a8eefe17cf3ed353d42b914373b9524e1fbec5a7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\ca.pem",
+      "sha256": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\client.key",
+      "sha256": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\client.pem",
+      "sha256": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\expired.key",
+      "sha256": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\expired.pem",
+      "sha256": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\other-ca.pem",
+      "sha256": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\server.key",
+      "sha256": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\server.pem",
+      "sha256": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\wrong-purpose.key",
+      "sha256": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\fixtures\\wrong-purpose.pem",
+      "sha256": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\contract.zig",
+      "sha256": "1a01a7c469b4a05306ed16ac7f4e803b47dfbb2ce6135c43505a8158d3ea1f8e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\events.zig",
+      "sha256": "150c5935bbcc29c660d11520bf8b4bdb77b6ef074ea6b493b48b917ccf3424bd"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\negative\\direction-as-level.zig",
+      "sha256": "40f075f1ba0b63bcbba6a47bd32a8309e148710282f154ff1c72522ee36d5162"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\negative\\generation-as-sequence.zig",
+      "sha256": "298b368d0707b3d95b47fe1368c97d8a97f480851109456de51487d078a002b7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\negative\\raw-byte-count.zig",
+      "sha256": "bea0f5c4ea60a6f41d6bc716930439e8a09a628f7dd69bf190f8adafe8306f54"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\negative\\valid.zig",
+      "sha256": "b6de76e36b6927171ba47b6b2030ad78858e603c662e9f42f2c74416747f3fee"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\tests\\quic\\negative\\wall-as-monotonic.zig",
+      "sha256": "120f8a4b7b31c4d9206dc6513927d91091e6a4786b720c6204be10bb1369848d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\quic\\contract.zig",
+      "sha256": "d1f61aa6c13b7c1e3ce5f92df3c1df839b27ec94f88bf173af465e6d03e3dee8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\src\\quic\\events.zig",
+      "sha256": "8d1a96ace52219d318b6c85696f769d1533513ba493bf7a6d8b49cc8adfe5d22"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\consumer\\build.zig",
+      "sha256": "8e67d1e2b2c25053c3c6b097a71f92d7e81bd8ef7920787d0c8032de94fdb620"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\consumer\\build.zig.zon",
+      "sha256": "08021454f3c86bdf6fd55e42885a4d00259fd99b6b7889497d2bbf62d3b37f0c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\consumer\\main.zig",
+      "sha256": "f0324d2e6867253c2611f8349666d04d885a1394b49efeef60e2778ff1100b30"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\consumer\\socket.c",
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\quic-contract\\build.zig",
+      "sha256": "6748052bac1238badda3164f7cedf4c00d873b30c6ea717c7f24b5bac538eb0f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\quic-contract\\build.zig.zon",
+      "sha256": "66d19bd2e2988378a8da716257ec83840a7b52fc14122ad324044a9e2ac72057"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\quic-contract\\main.zig",
+      "sha256": "7b7982c218c8e83741db7afde71d88579e92f36e7ee8c8b833d7418aa61427ff"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\examples\\quic-contract\\provider.zig",
+      "sha256": "0c81a656f93b1dece96a0480e8e351dcfd543e225e0a7fc9483b8524180cc7b1"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\directory-map.md",
+      "sha256": "99258cc48a5f44b3b04e16cb49e0574f42477f96f2a8103c16d7a53c97fdf581"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\portability.md",
+      "sha256": "fd9e17b74da50e33004702dcac930294bfd138247c5763d0e23fc6c6c55e8e3a"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\principles.md",
+      "sha256": "c0ba87e7754781176091b91e35d3454179f93a332484148cb2dca3727fe30841"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\structure.md",
+      "sha256": "af22b84ad6a0ec9db26e2aaf6830997823c58d55f9e5e7570bf629e9cf7c152f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\target-tree.txt",
+      "sha256": "580116bc027c52b811056c1ccee3b34d9cbf06879f7ac6088ef983e3093fa444"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\contracts\\connection-transactions.md",
+      "sha256": "97eb58e5146cc525cd3ba4cc9e57441f060a4a1bc04a95e232db7561cae44085"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\contracts\\provider-leases.md",
+      "sha256": "1a055436dea1a450ff177838bbb25bba870e0e875493e5efa07459659a3f436d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\contracts\\quic-tls.md",
+      "sha256": "68fb19975e33b8ab2178c7ef7601440f986a6b0a0b878e12a7aee44940b57298"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\contracts\\recordless-events.md",
+      "sha256": "32f8c26a47266d3aecc3919cb3b57ceb23fa49c9175bca15e12145cabd949338"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\contracts\\resource-budgets.md",
+      "sha256": "d69d7b6a43cd655bfd42ebd0e05281975b80edbae138bacdaeef5e8a1fecf2fe"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\ecosystem\\configuration-and-capabilities.md",
+      "sha256": "738d1de012c7129fa0619a09151b33ceff1de8f77b41feba05e396e340595e71"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\ecosystem\\docz-migration.md",
+      "sha256": "d079bc0e80271827d86c7ec79bdce4f8f250334e38c32ce029774266c6ab388e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\ecosystem\\maintenance-and-observability.md",
+      "sha256": "9d6cc1ec3a26a3a356fe596dac7c293dd18b35041c2709bb97312530fb94df36"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\ecosystem\\overview.md",
+      "sha256": "3ef0433a0d68ad280d511e9b22e712a2305b8bd57bbf86726000e1a5dcc297f9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\ecosystem\\producer-observations.json",
+      "sha256": "2fab87fa53105da64ba596d9dbc777bbd98c8267a2d3400713f6f820271d5d11"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\formal\\event-custody.md",
+      "sha256": "dd19b261a34a82847ec1df249cdbf0c1077fa562354aa798d58f0456370c0584"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\formal\\invariants.md",
+      "sha256": "688a2bf3e1a9d70643810e87a775f334e2c420314ddf46020a4dcf885f0b5026"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\formal\\recovery.md",
+      "sha256": "f38aafd164ec7ed7c42769cf15048a7a64661d30691303e35aac3523e33ebada"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\formal\\tls-driver.md",
+      "sha256": "f2df35d4b3810e6429423f7af9938f65bfc1c7099d2257a710ae04a9b71b84d2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\guides\\host-usage.md",
+      "sha256": "2bbfd5d9368d414522769209e4b5d2bf9dde3c137e766d65f41e06e31a68b5fa"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\catalog.md",
+      "sha256": "be91f788221a5d282995938487345a7b7085a26d9f2dc1e34a379389e0b1fbe5"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\standards.md",
+      "sha256": "e8a910ea1a52e853fe316f748489129651a4dc3d0ca842487e0025c5b5816e1e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\completion-protocol.md",
+      "sha256": "aee353636cd73ef3662a8ceb6218cd7d990307bf4fccbeebafd0ba0960bc77d8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\decision-register.md",
+      "sha256": "d697c7d4a9bf462a85dc2c707c4f020ee24db9beb00daf4d54f733afa96c15d4"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\first-work-orders.md",
+      "sha256": "2219d692ace26ae2b110f3201ff2f96ad154e126431de50b16bb32fb4570297e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\implementation-plan.json",
+      "sha256": "46c9a3dfe9552374765376ccb9fab092da64facda25d2428735d3bb6cc12217e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\README.md",
+      "sha256": "b0b2395f64752b0f868b9af53f986e1c8f8176236d78e070571f6c4e0491cd11"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\takeover.md",
+      "sha256": "fb94b89b352150e7a1a4346f87b4e8ce88d0bb06393dcb74d7884ed622bf6d4e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\work-graph.md",
+      "sha256": "12255d4853eaafadb9912f7a1892aa57fff72619aa992b6f772bb86ebf27cd70"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\security\\threat-model.md",
+      "sha256": "e1bd44f87641861d01d3474d5b84f0b9eba9510a1ae2a1386fb5bf2e660f944d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\artifact-register.json",
+      "sha256": "04de97f7ee1cd4212d88d6aef5ab419ceb5724b5de5340cc2a46b7ee7250cf5c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\baseline-r2.md",
+      "sha256": "43f6efe7ee9191dbd86020a6dc4498772ac34feb0ed11de9c39cb3f5fb39d063"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\baseline-r3.md",
+      "sha256": "a15eb85f0b9c3d0707590981b40bfe65361ac06890ed6f9085dfbcd1ec754518"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\baseline-r4.md",
+      "sha256": "d2a99d4f8120265b41e54d7e011a1fca1ce00e4499f6ce2fa9de9c8e54193748"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\baseline-r5.md",
+      "sha256": "165a2bf725da6fe97ffb6e88d8ddb0c45b50fe06ac3461133d4c042d0f14a4aa"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\baseline-v1.md",
+      "sha256": "ad87c49b5712a3fc00252ec6b4fe095c8fc91286452b74f0921e63986363968c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\change-audit.json",
+      "sha256": "4d2d4987cadfdeaf29e8e00c854c594de614697ba7ed5df11006ee9ac6461f98"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\current.md",
+      "sha256": "5ea1502c65a173a6856f393156871ce4abfe7669c82471969d040845f0aafec3"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\dependency-inventory.json",
+      "sha256": "bee48802922ecac6e0a960bce3cd906df0eed4ecded2c4ebc615a08a1969cc3d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\quic-provider-pair.md",
+      "sha256": "1496e23fbfb93023c432829d0b24c829e04645f736ec70dbd34bf03ed5efd52c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\quic-provider-probe.md",
+      "sha256": "caec4ace198d876a27977cd4a0ed265025042eeb83b2a0edd9949229111bd1c7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r2-change-audit.json",
+      "sha256": "96ea9acca4675ca46db139ae213c0bf4e95145a73699c59afe287c500233437e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r2-check-results.json",
+      "sha256": "c0c199f88301dad084fa98f2b4ceffb4008a3818efdc16fbdbbc989470a7c7fb"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r2-probe-result.json",
+      "sha256": "0102c661a944aa22d160211ac58cf4a21a80f24d27f2d9d5114254cb5b8707ac"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r3-change-audit.json",
+      "sha256": "89af2ae3857a4e560bbf4b4391d7c65dd0922a78e8441801cefed59295583507"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r3-check-results.json",
+      "sha256": "baeda104e1ccf33d39ba5c381ab9ae66f3af0f1ab55877aeedb431ced92cc445"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r4-change-audit.json",
+      "sha256": "4592f16e8c2c54210d9e74304d2ae07df6a1fb527fefcb2887c058d42c00ef18"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r4-check-results.json",
+      "sha256": "4adae7a800ac92f9c0892b4539fe83e7bc4179f1c118f138638d3becdb0f247e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r5-change-audit.json",
+      "sha256": "f7309481744ac8b841ccaeeeacf34e5fe23c78929b01f40f3177d1d8b0c64e06"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\r5-check-results.json",
+      "sha256": "b5a22d70ebc20f0c5cfe3d925af0aaf42883bae786183b83fcb4fe7b8f8edbb8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\requirements.json",
+      "sha256": "343de571b0ad8539ccc59b28be6b04e99208f89f007bcbe288581fcdf2426d62"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\requirements.md",
+      "sha256": "d6b422e7aa7a214b95bd3889aabea77abeed17c0eb281f9de51c04b8cc4f77ee"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\run-results.json",
+      "sha256": "bcd9692343ef20b04e1e91ec32046942736158d9127a547d33c16ba07606d397"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\source-inventory.json",
+      "sha256": "8519fbc258d3b52fe96dd6a4de2f5f912618a829f03ff293a093764c1e61efe7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\strategy.md",
+      "sha256": "f57b3253ba236d0de05ec77377f632ce570bd7f9b4a16ba5ffd526d5da0284e0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-change-audit.json",
+      "sha256": "b6600ba66c59c8c23e12dedb1ba88aaf389120642777a34eac227004eceb300b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-final-gates.json",
+      "sha256": "6460556bb09a5b60b62071e71d9dad3fdc5429f1c67fe18189c707ab3ca0375d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-implementation.md",
+      "sha256": "35cc3e078322e55aa16f25fac2cf70b8e6c24f6f4273dc84ed0e5af516cfd799"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\completions\\T00.json",
+      "sha256": "7eb8714f6918eb8c4b3c2f7ba1c50cd43b7b148b0f93cbffe21edfaa19f3ebcf"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\failed-attempt-121343\\run-results.json",
+      "sha256": "97c06b98aa3457f7ea16785b742766f172247d9c500454c33f4bb75515356996"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\exploratory-1-wrong-ca.log",
+      "sha256": "21746b656abaa690562ecdff80e57865062a3efbdaad702c4819513a7e759a2d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\exploratory-1.json",
+      "sha256": "55a244c0bf267f5814f50a4aca2454c4e8e10afb2fc83cf5f8601ee8721c3243"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\exploratory-2-fail-release.log",
+      "sha256": "9cfc5323c57d9ecb05c28e164bc5ef5f11536a3e3305e799981c618963a88727"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\exploratory-2.json",
+      "sha256": "8932d42f92b993637a52c1bf9f6b3538d195a935d5438f5c72c145792702bbf3"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0.json",
+      "sha256": "c35311c94ef578b9cd7ba2e6384fad45863456ae57525d6cfa49834366cae32d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2.json",
+      "sha256": "bf5682c7347687e59f8014a5b03b5b290701e20a50da6b4387e3bd81aaf3559b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\consumer-build.log",
+      "sha256": "de9c60f8eae65f2aabcf833ec40c310312cac8f9a044ec39b2ea92d595dfc815"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\debug.log",
+      "sha256": "6345705e92b6b2f4adacf10df69844cbd52b587a2b13f32ec3744b1e8534c76d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\docs.log",
+      "sha256": "fafef72bbe51e69c54e144e540f35cb1c0aeb9193853acc9df5f2147fd05c02e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\interop-example.log",
+      "sha256": "d12c38abab91731a99fd146bdd104b5348ccde750412c159ceff03ce6d370156"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\models.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\release-safe.log",
+      "sha256": "1f890de2fce78e9dae808273a3ae1f00f60b54dff83d14750032293d9ff613f9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\tcp_interop.log",
+      "sha256": "a7fd14b3d8af0d02ea3ec6112e08b270f49c2ff6b8b6825fa65e2aeaa4f39988"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\tcp_server_interop.log",
+      "sha256": "bc8a1cad16aba64188e73070db5355accb62950d5f4045a977fc510ceeb4b473"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\runs\\tcp_upload_interop.log",
+      "sha256": "74d16e173c5328376da2dc47b9a9958e32904f71d04468f959343d8994094a1d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\backend-normal.stderr.log",
+      "sha256": "64050194a9edb6c7cbdc377fa0093466191b21c3994c84b3eed5c98c72e1ad33"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\backend-normal.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\backend-optimized.stderr.log",
+      "sha256": "f4dba9e6506be254ce0601ca7f5badcb2d4afbde0e7fe411fa27db55ec12aad2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\backend-optimized.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-event-model-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-event-model-normal.stdout.log",
+      "sha256": "67eb28a8740d242f5f52c30d2f5a3706b6062e7eec5c0f44a531d9d3b2723b06"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-event-model-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-event-model-optimized.stdout.log",
+      "sha256": "67eb28a8740d242f5f52c30d2f5a3706b6062e7eec5c0f44a531d9d3b2723b06"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-models-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-models-normal.stdout.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-models-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\check-models-optimized.stdout.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\consumer-build.stderr.log",
+      "sha256": "96ea0a9c93900e02ad2b058739339da26b3d57aeca8e7ad852f12bf7ad419d43"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\consumer-build.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\debug.stderr.log",
+      "sha256": "80722867e08d8d173f9884205afe2c70f925e24d7a1197a36181e9030c7134df"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\debug.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-docs-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-docs-normal.stdout.log",
+      "sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-docs-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-docs-optimized.stdout.log",
+      "sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-plan-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-plan-normal.stdout.log",
+      "sha256": "b76b987819fc68553c949748d0d96d0aa8b14fa377f4556497ae4196153274cd"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-plan-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\final-plan-optimized.stdout.log",
+      "sha256": "b76b987819fc68553c949748d0d96d0aa8b14fa377f4556497ae4196153274cd"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\interop-example.stderr.log",
+      "sha256": "34595cc513fe99a83eaaf40e4816c28651294057cfcbc8d066a6ab0ce8e48153"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\interop-example.stdout.log",
+      "sha256": "a7a5d5fa4ec256ec3a335d6caee53898479c5549509d84c09adfc52d84ac0681"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\release-safe.stderr.log",
+      "sha256": "42a55b8b412647bc5443a15f5ec1ef5c7d1a0668448a6faa2fbc1da19bb9d250"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\release-safe.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\sdk-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\sdk-normal.stdout.log",
+      "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\sdk-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\sdk-optimized.stdout.log",
+      "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\tcp_interop.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\tcp_interop.stdout.log",
+      "sha256": "a7fd14b3d8af0d02ea3ec6112e08b270f49c2ff6b8b6825fa65e2aeaa4f39988"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\tcp_server_interop.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\tcp_server_interop.stdout.log",
+      "sha256": "bc8a1cad16aba64188e73070db5355accb62950d5f4045a977fc510ceeb4b473"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\tcp_upload_interop.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\tcp_upload_interop.stdout.log",
+      "sha256": "74d16e173c5328376da2dc47b9a9958e32904f71d04468f959343d8994094a1d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\test-plan-lifecycle-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\test-plan-lifecycle-normal.stdout.log",
+      "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\test-plan-lifecycle-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\t00-runs\\test-plan-lifecycle-optimized.stdout.log",
+      "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\alpn.log",
+      "sha256": "dab29006ba28706ef899ea372ea1e2ceac4a912be6e84a169514aead1fe9413e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\backpressure.log",
+      "sha256": "9671ab946c6b40794fe2ebe00a37cf1db9564489b224cd562ca8a54d190c5e1b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\budgeted.log",
+      "sha256": "5774b3fd7c1c087645feddd77836eae094fe41f01ee868c55890ae03d1da88a7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\combined.log",
+      "sha256": "0f035f9d904156536dc3ed1d8fc8f416e8502c952f82a70c055209a111d9fa92"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fail-alert.log",
+      "sha256": "f729326403ab73530dd28337a5c14d2681b3225f5ca7e35c65c571623be13eb7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fail-params.log",
+      "sha256": "0621389228280c333035f249c1a89de1cfe1a838be43de4e40d4b6f2c51c1a35"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fail-receive.log",
+      "sha256": "d7b45b21cc98421415c84008257318fdca75a34a84b606b4a681fd17eb442153"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fail-release.log",
+      "sha256": "aaf51e4e4f65f49a0b1e39d6972a4249be2d0cc6969bde8cc37b51cb5309b046"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fail-secret.log",
+      "sha256": "941cb74b2c91b52cb2097fc52ec8f4e8780db743e60a0cf9c4d0a7934adc2bdb"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fail-send.log",
+      "sha256": "30208b34bd2c2f51d238df9069657454f8b603a7e8e1cedb9ebcb1cb73facc6a"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\fragmented.log",
+      "sha256": "388bfef6adb4c024bf302721b79b89a4bd27939714c8afb1267912878d5f4226"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\full.log",
+      "sha256": "2a130ca3a6670307dc98706d977a2c23ddb2e4d15a9cb0266ce79174d8565f25"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\missing-client.log",
+      "sha256": "bebd5321bf49688d072adbc8c757d812521d8356aaa3f9cc3d2cf0d8e65e5ad4"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\mutual.log",
+      "sha256": "600d5588ee7cf53f8a57b429b17b1cfe0b35fde2a3499cabe41be73bde1c3c78"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\tickets.log",
+      "sha256": "73fdc9e29595c58f73322b9dc44df5ca5c3c1070c48f708b762be6ef03117e65"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\wrong-ca.log",
+      "sha256": "1855329ff90744c03279b539088034482ab5fbd2782e8a7633e956428d9bde5e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O0\\wrong-host.log",
+      "sha256": "1242b0177c88b4fc25467cab7f40b64bd78a8059adf0d1bc0781a5d1b1cd5661"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\alpn.log",
+      "sha256": "dab29006ba28706ef899ea372ea1e2ceac4a912be6e84a169514aead1fe9413e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\backpressure.log",
+      "sha256": "5e7938fe90f4e8d486caf54e136455b34ffb4309d2daee1013811a0795d22752"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\budgeted.log",
+      "sha256": "67198d2642a737ba8f33f3f4a2a1ad3198c56e98d9a72fbc108395469018d5d2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\combined.log",
+      "sha256": "0f035f9d904156536dc3ed1d8fc8f416e8502c952f82a70c055209a111d9fa92"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fail-alert.log",
+      "sha256": "f729326403ab73530dd28337a5c14d2681b3225f5ca7e35c65c571623be13eb7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fail-params.log",
+      "sha256": "0621389228280c333035f249c1a89de1cfe1a838be43de4e40d4b6f2c51c1a35"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fail-receive.log",
+      "sha256": "d7b45b21cc98421415c84008257318fdca75a34a84b606b4a681fd17eb442153"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fail-release.log",
+      "sha256": "aaf51e4e4f65f49a0b1e39d6972a4249be2d0cc6969bde8cc37b51cb5309b046"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fail-secret.log",
+      "sha256": "941cb74b2c91b52cb2097fc52ec8f4e8780db743e60a0cf9c4d0a7934adc2bdb"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fail-send.log",
+      "sha256": "30208b34bd2c2f51d238df9069657454f8b603a7e8e1cedb9ebcb1cb73facc6a"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\fragmented.log",
+      "sha256": "f5904fc5e1bb7504376cce6b4dd1b03ef93cbb53915e26fd494ab7a60aac4c69"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\full.log",
+      "sha256": "4004c65853619b66519293458af819f6472a09733f1ee8aa0a9f7bd035a0d6c0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\missing-client.log",
+      "sha256": "bebd5321bf49688d072adbc8c757d812521d8356aaa3f9cc3d2cf0d8e65e5ad4"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\mutual.log",
+      "sha256": "10b7f651cc070e6055256d6fece4cbeb1da42d97b55c029e3471465e4cf2fcaa"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\tickets.log",
+      "sha256": "c0b690004cc8ebd135e3cf02101b1e3fcd011c1e488385627e2ac370bdc5edb6"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\wrong-ca.log",
+      "sha256": "11ccd9aefee6d3dba6419a4ad15646c1d845e71325ff549e8d5cb30b075cfd5b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\provider-pair\\O2\\wrong-host.log",
+      "sha256": "44943eb6790c73cc4203dc523f160ac13b20d61c58bf16479c0e9b554926aca8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\failed-attempt-121343\\runs\\debug.log",
+      "sha256": "99da015693a2e298f02c34fa00c4d4fbbea4abc3cfd0a9046bdd76886b00549f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\failed-attempt-121343\\runs\\format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\verification\\failed-attempt-121343\\runs\\models.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\bench\\engine.zig.md",
+      "sha256": "57e65434ca94b90979ea6ea2384cc5b6e75cc86fb569ed048c949b085d5d44c9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\build\\backend.zig.md",
+      "sha256": "d344a712b04a4ed936173ef3a71ba4cdb0c8881a586f1fff0a35206d4663ff43"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\tests\\abi.zig.md",
+      "sha256": "869bfaa7474182d86381af1dde2f97a9835e71af796fb09c9930f70c5b14d658"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\tests\\quic_contract.zig.md",
+      "sha256": "e747959286893ba6a13492c8ce45a405e74e329ee89aea11762ded86a31fb05f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\tests\\resource_limits.zig.md",
+      "sha256": "ab9170945da552372ff76ea8c65631e19be4f4f8ed6b7bfe07f5aa36dfe62a0b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\tools\\verify-backend.py.md",
+      "sha256": "a180f967f3b9db3c038c6a7fddb65af53444599d393371456bb162522f503683"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\tests\\interop\\matrix.py.md",
+      "sha256": "aa948597b5bd0dd1acfefa773eff233bfcc200c9163d21d1956dcc19bb1eafa2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\backend\\quic.c.md",
+      "sha256": "247893e55566396c4a39f60a0b78c10699b60f5334456be09605ea0dc2ec96ca"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\backend\\quic.h.md",
+      "sha256": "dfa2b941cb52a9393f13d4d61ed46417e3d8cb6f14212ab715929959e483e51e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\policy\\credentials.zig.md",
+      "sha256": "5ae82f879ea8623c4351d1ed348ea5b1ac96df21c30981adef52d087a9bce2d8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\policy\\verification.zig.md",
+      "sha256": "f013acb1afd80110aa40ad791bf97206b3b97bf79665c685b7f099c96244c6e2"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\quic\\contract.zig.md",
+      "sha256": "a82cd47b1da7a544f23a64860bd4fc9a80dc58cf66675eb31f8e4179d853e77c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\quic\\engine.zig.md",
+      "sha256": "bfe5a9581b76fc1d239596d82f3adda9ab9e9b3e9fc82a01d3f604cc952c7fa9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\src\\quic\\events.zig.md",
+      "sha256": "ebb5567e52692d45c9125b521d200a232db7d8a3e567cb31fdee34682a15c613"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\roadmap\\files\\examples\\consumer\\socket_posix.c.md",
+      "sha256": "5f3426ba29d9ca6ec0008279aafda1d89c5053e0aa724d244a8e6dd4044d592f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\AGENTS.md.md",
+      "sha256": "fe89694bb7c6fdfdda1a0ce278bffc526549f5fb8edf0a55dce92aa53444a1b5"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\backend-lock.json.md",
+      "sha256": "9e71cd0c8ff7cf7c6055e33022af8ec179368fb1466a2404adf907d11f9ced0f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\build.zig.md",
+      "sha256": "486158d4900070ab44af0388383d8e06dee77a88ff61e5d6df293d3f8fc99135"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\build.zig.zon.md",
+      "sha256": "4746861771735159c4db0fe2f5efeddeaadf0eb6184837e2b458119d83b7fff8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\CHECKPOINT.md.md",
+      "sha256": "4239486beb160409758d633f2e56e6a2e0955ba1f94805b8cf889b1d2009b68b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\HANDOFF-shutdown.md.md",
+      "sha256": "7e1e673abab0402422555ef80823a92f4cbb9c8a5a6e851d94dbd966b4343c7b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\HANDOFF-tcp-consumer.md.md",
+      "sha256": "d3eb4f833c75fcfa1c3b9ba3aae51c95c6095e425388a4c193eff57feb76624c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\HOST-DRIVER.md.md",
+      "sha256": "49eac385668966566f6bf28ee707734fab4e57abad89301bfcb3ab45e1e3eb05"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\README.md.md",
+      "sha256": "0fde8437a8e56c712499cdb10dc84da46486e92807a1359e82cb5875525cab3f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\SOURCE-ORIGIN.json.md",
+      "sha256": "ba26376052a9d76faaa4f6b616a09b84ade706d3b1f79c1a76df22334f167e2f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\evidence\\build-recovery.md.md",
+      "sha256": "8f3f1e4aeaeaa59c9881786ed94dc585702588c35dcac9ffa63b6eca516ae73a"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\evidence\\source-provenance.json.md",
+      "sha256": "8f935bb13ed93fbf3278720da7542f862c2f9378ee98e8dcbd71b5ddd8c2c14e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\examples\\roundtrip.zig.md",
+      "sha256": "d7c3081d4bbde36e2178e82a8c7aa2f1192530dab0bd93aa5c2b4e12fbe7bf4c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\src\\backend.c.md",
+      "sha256": "da23d73f8816f15bd98659a98a93185b95f288790547f1d0a7be76db92c7733c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\src\\backend.h.md",
+      "sha256": "dbf05e2cf6a892570c646bc44dc5a24df4ff26a39b9135da0a44b37ab4614723"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\src\\backend.zig.md",
+      "sha256": "d213b4947347647f44032fd4474f32c56057fa1970164e7b733d7b81fca4a58b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\src\\driver.zig.md",
+      "sha256": "169db7ef7ee60d0cc227216b09a2aca0287d43633e463d0c49d516e3f423ca30"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\src\\root.zig.md",
+      "sha256": "7194ca31edeb278146cd3c22d1d495707b2a6bd3bd55a83c0fd43a475de003e3"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\driver.zig.md",
+      "sha256": "1e037cc0b22f63f3b52bd527bc71a9ea3293951cca40139b74b2ca6d4b17daee"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\transport.zig.md",
+      "sha256": "11fb9a841f9cf56f3a514c191f716b125689dadb4fb64ccdb96d655c50624f71"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\build-openssl.sh.md",
+      "sha256": "d7e0aaf5f1f76f73991376a23e9c412f7562d335bfde609b5398657870681370"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\check-docs.py.md",
+      "sha256": "e28aba06192a8de563a4fe69308350332ff77bab1a6378146f7dac5d2711c7c7"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\check-event-model.py.md",
+      "sha256": "dff0f83de45fd0b4f959f64657e59ee17f84efbc9ac0108b44ed922fa322da3c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\check-models.py.md",
+      "sha256": "dac5be88f12790f66f81bbb6f9eb41fde8b8207de774ff99b09a7f23cadad33f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\check-plan.py.md",
+      "sha256": "4924bc9aace993dd234b6cf797140f97d89aa2b5b38ac892fb2c93d71dfb181d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\fetch-openssl.py.md",
+      "sha256": "318d4ec6d21e249512f938176d1988893733b6f4b4f059556770dab1eaf2809d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\interop.py.md",
+      "sha256": "5d6e5a60d1f895e61b0c29a8255c9cecc1043c0d9b271a4bfe82a7e6084ece93"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\make_fixtures.py.md",
+      "sha256": "54848e98f554a1df8385e76809f87a3e3a9fba43c8c011e1b416e595545f62fe"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\pin-backend.py.md",
+      "sha256": "b2d47430e6316b5012e85d03d989f6144c20faca01b568280e50c2c650d1f1b5"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\probe-quic-pair.c.md",
+      "sha256": "11a9d3ed8d94ab3ec8a18cf3daebc8b25502fb44eac087e5d06a8710faace983"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\probe-quic-pair.py.md",
+      "sha256": "ee77f0bd6ab69106b38d0ecb01748e35ed5efe93e21b085229d16fcfabacf09c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\probe-quic-tls.c.md",
+      "sha256": "84c09fa6083f6a608b4284ce28ea1f2f7283197380efd94c5fb485c961dfe483"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\probe-quic-tls.py.md",
+      "sha256": "1cd5913b31fe6d32a5b1d8a347af1f5d91a414109b4e5ae60e8975d19bc039ec"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\qualify.ps1.md",
+      "sha256": "af4337deca31f70834b0c357c5abb7a04024f541c1369db0f109ebc85e708509"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\tcp_interop.py.md",
+      "sha256": "dd604d5c812f485c76a0d03aa40d32e2ed7b07cc7002b4dcc7e0cd48a0f01a2c"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\tcp_server_interop.py.md",
+      "sha256": "860ade38b4e067ca2e6ba1fcbda01fa4816734935cdec49b88eaa7a6c40729ed"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\tcp_upload_interop.py.md",
+      "sha256": "4fd46fca84b771872dc9903907d1d8056d41b81eb33a8fbf5b4d256915cfeeb5"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\test-backend.py.md",
+      "sha256": "651eff8e32b71f336ff1a67da0893208739d67d13a198f3c088130050de2b962"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\test-openssl.sh.md",
+      "sha256": "62920f724b16886ee692d94507882d331da7100c00372cd4910332c860fe9905"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\test-plan-lifecycle.py.md",
+      "sha256": "5d1dc3089fb5ba0705617834f52ddee8be69f2e5c953bb4a79409a7c7dd87d3f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tools\\verify-backend.py.md",
+      "sha256": "7c31965b44a81c82abb9e91b9e8bf938b1cb2d3446f0b77a4f49fd0f4db460c0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\ca.pem.md",
+      "sha256": "84f7a19c3d0abe35adec486111a03548451e9e061de88c8dc12a40f764d2895f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\client.key.md",
+      "sha256": "337dcd5f45da73b6e21612450f21c0cf7e16920c61466e7694e70a6ca7afde5d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\client.pem.md",
+      "sha256": "ab0ccf490b280f181fb2a5533cbde0ef49bbfa91a4180e8802b4df070a9cd68f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\expired.key.md",
+      "sha256": "93be53144c0024e87381fd84b812734997d66411a3fd5cdc9fdc5e3f057a5bb1"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\expired.pem.md",
+      "sha256": "60da210d62c095de6ce22bb15fe0be54b842e9dfb9560597f6fe5defe04443ab"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\other-ca.pem.md",
+      "sha256": "c455ae669628a6580c0c7898151c1b3ee750de15672399f5cfbf4964ed5cb891"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\server.key.md",
+      "sha256": "888c7294e37dedd9aea1ef5ef1875a3065ff4178d4876d1ae8839d5d1ed37fd6"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\server.pem.md",
+      "sha256": "59dc78240574a61d5e0464d1ab783fc4cdaf60f3e5de58de02f9383f50b3e1ef"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\wrong-purpose.key.md",
+      "sha256": "13631bea54f388affe0835066b059f5e6ae18b527b6de3c95ba271d253b4673b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\tests\\fixtures\\wrong-purpose.pem.md",
+      "sha256": "13d0f29e01a4bd745c64d049447cf803e4d69cf0475876f005d4ea22efc1535b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\examples\\consumer\\build.zig.md",
+      "sha256": "6098ddc1738816907dffe8afd5c4035ff51489cec47be16f064ab1ce2ac75823"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\examples\\consumer\\build.zig.zon.md",
+      "sha256": "bcc27d8d61fa7e4761b7674a4f509ed602dd2abaa3fdfaffd3d85aaa80307c69"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\examples\\consumer\\main.zig.md",
+      "sha256": "dfdd08b926a5c3ddfbad504487fb9143c69f867e353fba19e1f33e11e9a50d24"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\reference\\files\\examples\\consumer\\socket.c.md",
+      "sha256": "009145e8d1ffc140a69fb7625c019918f3db323c356ae135d080fc599b137d46"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\decisions\\0001-compatible-growth.md",
+      "sha256": "c795015b731672bcff419e32078603465a423e8823bbe30868c12451ed930a2e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\source package\\docs\\architecture\\decisions\\0002-implementation-profile.md",
+      "sha256": "ae189bfbbeaec6562002b63680f11140013c17548ea1b30715b35128be9ed88f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\external consumer\\build.zig",
+      "sha256": "6748052bac1238badda3164f7cedf4c00d873b30c6ea717c7f24b5bac538eb0f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\external consumer\\build.zig.zon",
+      "sha256": "2b55ac6aab9da3dc51a5c08c2f5894c8b473df228e977be79126b9d1171f9410"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\external consumer\\main.zig",
+      "sha256": "7b7982c218c8e83741db7afde71d88579e92f36e7ee8c8b833d7418aa61427ff"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\quic-tls-codex-implementation\\work\\t01\\relocated\\external consumer\\provider.zig",
+      "sha256": "0c81a656f93b1dece96a0480e8e351dcfd543e225e0a7fc9483b8524180cc7b1"
+    }
+  ]
+}

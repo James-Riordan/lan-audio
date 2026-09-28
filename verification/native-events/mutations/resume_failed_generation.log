@@ -1,0 +1,74 @@
+audio-test
++- run test
+   +- compile test debug native
+      +- compile lib miniaudio debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+audio-test
++- run test 3 pass, 1 fail (4 total)
+error: 'audio_device.test.installed native notifications invalidate both directions without consuming media' failed:
+       slices differ. first difference occurs at index 0 (0x0)
+       
+       ============ expected this output: =============  len: 4 (0x4)
+       
+       [0]: 0
+       [1]: 0
+       [2]: 0
+       [3]: 0
+       
+       ============= instead found this: ==============  len: 4 (0x4)
+       
+       [0]: 1
+       [1]: -1
+       [2]: 2
+       [3]: -2
+       
+       ================================================
+       
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:379:5: 0x7ff6ebdeee2f in expectEqualSlices__anon_66024 (test_zcu.obj)
+           return error.TestExpectedEqual;
+           ^
+       C:\Projects\lan-audio\verification\native-events\mutations\resume_failed_generation\src\host\audio_device.zig:436:9: 0x7ff6ebdeffb4 in test.installed native notifications invalidate both directions without consuming media (test_zcu.obj)
+               try std.testing.expectEqualSlices(f32, &@as([4]f32, @splat(0)), &output);
+               ^
+failed command: "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations\\o\\eb97e70595116c542975223bed3afc4e\\test.exe" "--cache-dir=C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations" --seed=0x71c8e32a --listen=-
+
+Build Summary: 6/8 steps succeeded (1 failed); 9/10 tests passed (1 failed)
+audio-test transitive failure
++- run test 6 pass (6 total) 1s MaxRSS:6M
+|  +- compile test debug native success 10s MaxRSS:308M
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 146ms MaxRSS:69M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 2s MaxRSS:69M
++- run test 3 pass, 1 fail (4 total)
+   +- compile test debug native success 10s MaxRSS:307M
+      +- WriteFile (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c (reused)
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x71c8e32a audio-test --summary all --cache-dir C:\Projects\lan-audio\.zig-cache\native-events-mutations

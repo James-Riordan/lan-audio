@@ -1,0 +1,11 @@
+{
+  "source": "C:\\Users\\James\\AppData\\Local\\Temp\\LAN standalone \u00e9 fh2g7ed8\\lan-audio\\.lan-audio\\builds\\405a1f7f2913acad67133053",
+  "destination": "C:\\Projects\\lan-audio\\.lan-audio\\builds\\405a1f7f2913acad67133053",
+  "source_key": "405a1f7f2913acad67133053",
+  "files": {
+    "lan-audio.exe": "6fc6696fa3e43b64ede4ccadbe795bde0e61510970df758a4357cbb1307ec5bf",
+    "libssl-3-x64.dll": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce",
+    "libcrypto-3-x64.dll": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+  },
+  "reason": "reuse the just-qualified clean standalone artifact; all native source/build/dependency key inputs matched byte for byte"
+}

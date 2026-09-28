@@ -1,0 +1,13 @@
+1/1 runtime_lifecycle.test.receiver zero END fences without starting and separates ACK close and cleanup...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff67dd7b63f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:91:52: 0x7ff67dd7c9dd in dispatch (root_zcu.obj)
+                    .send_ack, .close_transport => try expect(self.owned[2] and self.worker_alive and self.device_fenced and !self.callback_active and self.publication_closed),
+                                                   ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:401:19: 0x7ff67dd804d6 in test.receiver zero END fences without starting and separates ACK close and cleanup (root_zcu.obj)
+    const fence = try host.dispatch();
+                  ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\c4c2a045aba43f5d42f4dabc67bd6635\root.exe --seed=0xca616d09

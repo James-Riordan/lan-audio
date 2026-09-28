@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/test_transport.py",
+      "--output",
+      "verification/handoff/interop.json"
+    ],
+    "exit_code": 1,
+    "expected_rejection": "Refusing to overwrite existing evidence",
+    "passed": true,
+    "output": "Refusing to overwrite existing evidence: C:\\Projects\\lan-audio\\verification\\handoff\\interop.json\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/test_transport.py",
+      "--output",
+      "../outside-report.json"
+    ],
+    "exit_code": 1,
+    "expected_rejection": "Report must stay under",
+    "passed": true,
+    "output": "Report must stay under this project verification/ directory\n"
+  }
+]

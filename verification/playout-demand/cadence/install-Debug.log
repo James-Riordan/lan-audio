@@ -1,0 +1,36 @@
+Build Summary: 21/21 steps succeeded
+worker-probe success
++- install audio-worker-probe success
+|  +- compile exe audio-worker-probe debug native cached 599ms MaxRSS:62M
+|     +- translate-c cached 64ms MaxRSS:61M
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 65ms MaxRSS:61M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 893ms MaxRSS:61M
+|     +- translate-c cached 64ms MaxRSS:61M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe debug native cached 70ms MaxRSS:62M
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+app success
++- install lan-audio success
+|  +- compile exe lan-audio debug native cached 140ms MaxRSS:62M
+|     +- options cached
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+

@@ -1,0 +1,6 @@
+{
+  "initial_check": "python work/register_ecosystem_contracts.py",
+  "exit_code": 1,
+  "diagnostic": "AssertionError: docs/README.md",
+  "meaning": "r2-only after-hash validation rejected concurrent completed r3 documentation; application registry write had not yet occurred. Reviewed the r2/r3 chain and reran successfully, with no dependency lock change."
+}

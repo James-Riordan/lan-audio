@@ -1,0 +1,95 @@
+//! Product authorization after TLS verification; never a replacement for TLS.
+//! Serialized immutable policy snapshots. No keys, clocks, storage, sockets or UI.
+const std = @import("std");
+const core = @import("lan_audio");
+
+pub const Fingerprint = [32]u8; // SHA-256 of the verified leaf certificate DER.
+pub const Role = core.Negotiation.Role;
+pub const max_peers = 32;
+pub const Error = error{ InvalidFingerprint, InvalidPolicy, TooManyPeers, DuplicatePeer, InvalidGeneration, StaleGeneration, Unauthenticated, WrongProtocol, WrongPeer, UnauthorizedPeer, WrongRole, AuthorizationChanged, Revoked };
+
+pub fn parseFingerprint(text: []const u8) Error!Fingerprint {
+    if (text.len != 64 and text.len != 95) return error.InvalidFingerprint;
+    const stride: usize = if (text.len == 95) 3 else 2;
+    var result: Fingerprint = undefined;
+    for (&result, 0..) |*byte, i| {
+        const offset = i * stride;
+        if (stride == 3 and i < 31 and text[offset + 2] != ':') return error.InvalidFingerprint;
+        const high = std.fmt.charToDigit(text[offset], 16) catch return error.InvalidFingerprint;
+        const low = std.fmt.charToDigit(text[offset + 1], 16) catch return error.InvalidFingerprint;
+        byte.* = high * 16 + low;
+    }
+    return result;
+}
+
+pub fn formatFingerprint(value: Fingerprint) [64]u8 {
+    const hex = "0123456789abcdef";
+    var text: [64]u8 = undefined;
+    for (value, 0..) |byte, i| {
+        text[2 * i] = hex[byte >> 4];
+        text[2 * i + 1] = hex[byte & 15];
+    }
+    return text;
+}
+
+pub const Roles = struct {
+    sender: bool = false,
+    receiver: bool = false,
+    fn allows(self: Roles, role: Role) bool {
+        return if (role == .sender) self.sender else self.receiver;
+    }
+};
+pub const Rule = struct { peer: Fingerprint, roles: Roles };
+
+/// Host-supplied evidence from ONE live, completed, mutually verified TLS channel.
+/// generation is local owner metadata, never a value supplied by the remote peer.
+/// alpn is the verified negotiated identifier, not an unverified peer proposal.
+/// Do not construct this from certificate files or peer-controlled wire fields.
+pub const Evidence = struct {
+    generation: u64,
+    mutually_authenticated: bool,
+    verified_leaf: Fingerprint,
+    alpn: []const u8,
+};
+
+pub const Permit = struct {
+    generation: u64,
+    policy_revision: u64,
+    peer: Fingerprint,
+    remote_role: Role,
+};
+
+pub const Policy = struct {
+    revision: u64,
+    rules: [max_peers]Rule = undefined,
+    count: usize,
+
+    /// Copy all rules. An empty list deliberately denies everyone. Certificates
+    /// with renewed/reissued DER require a new explicitly approved fingerprint.
+    pub fn init(revision: u64, rules: []const Rule) Error!Policy {
+        if (revision == 0) return error.InvalidPolicy;
+        if (rules.len > max_peers) return error.TooManyPeers;
+        for (rules, 0..) |rule, i| {
+            if (!rule.roles.sender and !rule.roles.receiver) return error.InvalidPolicy;
+            for (rules[0..i]) |previous| if (std.mem.eql(u8, &previous.peer, &rule.peer)) return error.DuplicatePeer;
+        }
+        var result: Policy = .{ .revision = revision, .count = rules.len };
+        @memcpy(result.rules[0..rules.len], rules);
+        return result;
+    }
+
+    pub fn authorize(self: *const Policy, generation: u64, local_role: Role, expected_peer: Fingerprint, evidence: Evidence) Error!Permit {
+        if (generation == 0) return error.InvalidGeneration;
+        if (evidence.generation != generation) return error.StaleGeneration;
+        // Deliberate missing mutual authentication check.
+        if (!std.mem.eql(u8, evidence.alpn, core.wire_v2.alpn)) return error.WrongProtocol;
+        if (!std.mem.eql(u8, &evidence.verified_leaf, &expected_peer)) return error.WrongPeer;
+        const remote_role: Role = if (local_role == .sender) .receiver else .sender;
+        for (self.rules[0..self.count]) |rule| {
+            if (!std.mem.eql(u8, &rule.peer, &evidence.verified_leaf)) continue;
+            if (!rule.roles.allows(remote_role)) return error.WrongRole;
+            return .{ .generation = generation, .policy_revision = self.revision, .peer = rule.peer, .remote_role = remote_role };
+        }
+        return error.UnauthorizedPeer;
+    }
+};

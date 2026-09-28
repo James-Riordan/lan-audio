@@ -1,0 +1,31 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "executable_sha256": "fa5955fc9d5a1ac5cc8b7e3ee715899961ee554fc20901f0a658dc9671140374",
+  "fixture_fingerprints": {
+    "client": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+    "server": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd"
+  },
+  "results": [
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "buffered-deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline"
+      ],
+      "exit_code": 1,
+      "matched": false,
+      "seconds": 0.172,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 55978\nREJECT AcceptedExpiredRead revoked=false tls_released=false\nerror: UnrevokedFailure\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:66:9: 0x7ff6277f8ff0 in exercise (audio-verified-probe_zcu.obj)\n        return error.AcceptedExpiredRead;\n        ^\nC:\\Projects\\lan-audio\\tests\\integration\\verified_channel.zig:167:85: 0x7ff6277fbe9f in main (audio-verified-probe_zcu.obj)\n        if (!connection.channel.revoked or connection.driver.engine.handle != null) return error.UnrevokedFailure;\n                                                                                    ^\n"
+    }
+  ]
+}

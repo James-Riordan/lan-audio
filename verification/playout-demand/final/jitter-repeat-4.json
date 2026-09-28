@@ -1,0 +1,80 @@
+{
+  "binary_sha256": "65988d3b6f37b0009f1ea1478534d1b87fe38b18193c9461be224634b181bbf2",
+  "results": [
+    {
+      "role": "receiver",
+      "mode": "jitter",
+      "listener": false,
+      "matched": false,
+      "seconds": 2.262,
+      "exit_code": 1,
+      "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+      "events": [
+        {
+          "attempt": 1,
+          "prefill_frames": 2880,
+          "frames": 5280,
+          "failure": "PlaybackStarved",
+          "lifecycle": {
+            "phase": "stopped",
+            "generation": 1,
+            "serial": 8,
+            "held": [
+              false,
+              false,
+              false
+            ],
+            "pending": null,
+            "worker_joined": true,
+            "device_fenced": true,
+            "first_cause": "media_fault",
+            "cleanup_blocked": false,
+            "deadline_expired": false,
+            "receive": null,
+            "send": null
+          },
+          "audio": {
+            "max_output_request_frames": 240,
+            "first_starvation_requested": 240,
+            "first_starvation_available": 0,
+            "first_starvation_rendered": 5280,
+            "captured_frames": 0,
+            "dropped_frames": 0,
+            "rendered_frames": 5280,
+            "silent_frames": 7440,
+            "missing_output_frames": 0,
+            "invalid_buffers": 0,
+            "capture_faults": 0,
+            "counters_exact": true
+          },
+          "active_ms": 216,
+          "starved": true,
+          "unplayed_frames": 0,
+          "delivery_timing": {
+            "last_publication_ms": 5590864,
+            "max_publication_gap_ms": 11,
+            "max_receive_ms": 11,
+            "starvation_gap_ms": 63,
+            "published_frames": 5280,
+            "playback_started_ms": 5590807,
+            "playback_observed_ms": 5590927,
+            "observed_playback_frames": 5280,
+            "max_playback_lead_frames": 480,
+            "max_frames_between_observations": 2160
+          }
+        }
+      ],
+      "peers": [
+        {
+          "frames": 5520,
+          "clean": false,
+          "authenticated": true,
+          "stream": "01010101010101010101010101010101",
+          "max_send_gap_ms": 76.184,
+          "max_send_call_ms": 1.25
+        }
+      ],
+      "stderr": "Playback started: 48 kHz stereo.\nConnection interrupted (PlaybackStarved); retrying in 250 ms with 80 ms playback reserve.\n"
+    }
+  ]
+}

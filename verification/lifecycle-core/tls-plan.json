@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "../tls-zig/tools/check-plan.py",
+    "--self-test"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:41:31.553893+00:00",
+  "elapsed_seconds": 0.2506442000012612,
+  "exit_code": 0,
+  "log": "tls-plan.log",
+  "log_sha256": "cd229d2a0ffa534057c66a3fa8f8d271f8a2c7c835cd1ebefb71ffe022f2b618"
+}

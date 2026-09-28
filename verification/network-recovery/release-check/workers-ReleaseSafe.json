@@ -1,0 +1,634 @@
+{
+  "executable_sha256": "391c18b3b515db29b51dc9e94a6535d73b1f1d01a24cf3ee449cf952515c90b9",
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "results": [
+    {
+      "role": "sender",
+      "mode": "valid",
+      "matched": true,
+      "seconds": 3.054,
+      "exit_code": 0,
+      "peer": {
+        "frames": 95520,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 95520,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 409,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95520,
+            "offered_frames": 0,
+            "frontier": 95520,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "confirmed",
+            "secure_close": "clean"
+          }
+        },
+        "audio": {
+          "captured_frames": 95520,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95520,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "valid",
+      "matched": true,
+      "seconds": 1.438,
+      "exit_code": 0,
+      "peer": {
+        "frames": 48000,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 48000,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 48000,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 48000,
+          "silent_frames": 4560,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "short",
+      "matched": true,
+      "seconds": 0.406,
+      "exit_code": 0,
+      "peer": {
+        "frames": 17,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 17,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 17,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 17,
+          "silent_frames": 1183,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "empty",
+      "matched": true,
+      "seconds": 0.673,
+      "exit_code": 0,
+      "peer": {
+        "frames": 0,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 0,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 0,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 1440,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "wrong-ack",
+      "matched": true,
+      "seconds": 2.672,
+      "exit_code": 1,
+      "peer": {
+        "frames": 95520,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 95520,
+        "failure": "Discontinuous",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 408,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95520,
+            "offered_frames": 0,
+            "frontier": 95520,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 95520,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95520,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\nerror: Discontinuous\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "disconnect",
+      "matched": true,
+      "seconds": 0.477,
+      "exit_code": 1,
+      "peer": {
+        "frames": 960,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 1440,
+        "failure": "TransportFailure",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 14,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": false,
+            "committed": 1440,
+            "offered_frames": 0,
+            "frontier": null,
+            "local": "interrupted",
+            "end": "not_attempted",
+            "remote": "unknown",
+            "secure_close": "not_attempted"
+          }
+        },
+        "audio": {
+          "captured_frames": 2160,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 2160,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Capture started: 48 kHz stereo.\nerror: TransportFailure\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "duplicate",
+      "matched": true,
+      "seconds": 0.739,
+      "exit_code": 1,
+      "peer": {
+        "frames": 480,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 240,
+        "failure": "Discontinuous",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 5040,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: Discontinuous\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "stall",
+      "matched": true,
+      "seconds": 2.895,
+      "exit_code": 1,
+      "peer": {
+        "frames": 960,
+        "authenticated": true,
+        "clean_close": false,
+        "error": null
+      },
+      "result": {
+        "frames": 960,
+        "failure": "Deadline",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "transport_failed",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 960,
+          "silent_frames": 97680,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\nerror: Deadline\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "cancel",
+      "matched": true,
+      "seconds": 1.798,
+      "exit_code": 1,
+      "peer": {
+        "frames": 0,
+        "authenticated": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "result": {
+        "frames": 0,
+        "failure": "Canceled",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "requested",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 0,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "error: Canceled\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "cancel",
+      "matched": true,
+      "seconds": 1.38,
+      "exit_code": 1,
+      "peer": {
+        "frames": 14640,
+        "authenticated": true,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "result": {
+        "frames": 13920,
+        "failure": "Canceled",
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 8,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": "requested",
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 13440,
+          "silent_frames": 10560,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Playback started: 48 kHz stereo.\nerror: Canceled\n",
+      "stdout": null
+    },
+    {
+      "role": "sender",
+      "mode": "listener",
+      "matched": true,
+      "seconds": 2.51,
+      "exit_code": 0,
+      "peer": {
+        "frames": 95520,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 95520,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 409,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": null,
+          "send": {
+            "draining": true,
+            "committed": 95520,
+            "offered_frames": 0,
+            "frontier": 95520,
+            "local": "transferred",
+            "end": "copied",
+            "remote": "confirmed",
+            "secure_close": "clean"
+          }
+        },
+        "audio": {
+          "captured_frames": 95520,
+          "dropped_frames": 0,
+          "rendered_frames": 0,
+          "silent_frames": 95520,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Listening on 127.0.0.1:63939; waiting for the approved peer.\nCapture started: 48 kHz stereo.\n",
+      "stdout": null
+    },
+    {
+      "role": "receiver",
+      "mode": "listener",
+      "matched": true,
+      "seconds": 1.319,
+      "exit_code": 0,
+      "peer": {
+        "frames": 48000,
+        "authenticated": true,
+        "clean_close": true,
+        "error": null
+      },
+      "result": {
+        "frames": 48000,
+        "failure": null,
+        "lifecycle": {
+          "phase": "stopped",
+          "generation": 1,
+          "serial": 10,
+          "held": [
+            false,
+            false,
+            false
+          ],
+          "pending": null,
+          "worker_joined": true,
+          "device_fenced": true,
+          "first_cause": null,
+          "cleanup_blocked": false,
+          "deadline_expired": false,
+          "receive": {
+            "frontier": 48000,
+            "publication_closed": true,
+            "local": "drained",
+            "ack": "copied",
+            "remote": "unobserved",
+            "secure_close": "clean"
+          },
+          "send": null
+        },
+        "audio": {
+          "captured_frames": 0,
+          "dropped_frames": 0,
+          "rendered_frames": 48000,
+          "silent_frames": 4800,
+          "missing_output_frames": 0,
+          "invalid_buffers": 0,
+          "capture_faults": 0,
+          "counters_exact": true
+        }
+      },
+      "stderr": "Listening on 127.0.0.1:63944; waiting for the approved peer.\nPlayback started: 48 kHz stereo.\n",
+      "stdout": null
+    }
+  ]
+}

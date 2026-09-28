@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "analytic_cases": [
+    {
+      "frequency": 1000,
+      "amplitude": 0.125,
+      "passed": true
+    },
+    {
+      "frequency": 500,
+      "amplitude": 0.125,
+      "passed": true
+    },
+    {
+      "frequency": 1500,
+      "amplitude": 0.125,
+      "passed": true
+    },
+    {
+      "frequency": 1000,
+      "amplitude": 0,
+      "passed": true
+    }
+  ],
+  "nonfinite_rejected": true
+}

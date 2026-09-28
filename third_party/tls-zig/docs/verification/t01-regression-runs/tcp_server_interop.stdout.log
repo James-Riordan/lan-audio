@@ -1,0 +1,6 @@
+Independent TCP client: OpenSSL 3.0.18 30 Sep 2025
+PASS TCP server: clean
+PASS TCP server: missing_client
+PASS TCP server: untrusted_client
+PASS TCP server: raw_eof
+4 external-consumer server TCP cases passed

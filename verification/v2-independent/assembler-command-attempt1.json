@@ -1,0 +1,11 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "test",
+    "-j1",
+    "--summary",
+    "all"
+  ],
+  "exit_code": 1
+}

@@ -1,0 +1,14 @@
+1/1 runtime_lifecycle.test.receiver short tail and maximum block preserve identities with zero writes and paused return...expected 1, found 0
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:112:17: 0x7ff6a79ffb1a in expectEqualInner__anon_62539 (root_zcu.obj)
+                return error.TestExpectedEqual;
+                ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff6a7a01fe9 in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:444:13: 0x7ff6a7a0203a in test.receiver short tail and maximum block preserve identities with zero writes and paused return (root_zcu.obj)
+            try eq(@as(usize, 1), got);
+            ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\f16b5084afcfe8381d06257909bc1689\root.exe --seed=0xcf50d9b8

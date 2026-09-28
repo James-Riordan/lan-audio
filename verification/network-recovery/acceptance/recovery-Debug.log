@@ -1,0 +1,13 @@
+FAIL ('receiver', 'starve', False) ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host ['PlaybackStarved']
+FAIL ('receiver', 'starve', True) ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host ['PlaybackStarved', 'PlaybackBacklog']
+FAIL ('receiver', 'backlog', False) ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host ['PlaybackBacklog']
+Traceback (most recent call last):
+  File "C:\Projects\lan-audio\tests\integration\recovery_peer.py", line 217, in <module>
+    main()
+    ~~~~^^
+  File "C:\Projects\lan-audio\tests\integration\recovery_peer.py", line 208, in main
+    result=run_case(*spec); results.append(result)
+  File "C:\Projects\lan-audio\tests\integration\recovery_peer.py", line 175, in run_case
+    good &= events[0]['prefill_frames'] == 2880
+            ~~~~~~^^^
+IndexError: list index out of range

@@ -1,0 +1,902 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "executable_sha256": "ed2d130d9045079897f789ad29732f72020a91b11c6065920786c628752a54bb",
+  "fixture_fingerprints": {
+    "client": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+    "server": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd"
+  },
+  "results": [
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.049,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.049,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.054,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.056,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "PASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-peer",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.043,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT WrongPeer revoked=true tls_released=true\nerror: WrongPeer\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-role",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongRole"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.05,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT WrongRole revoked=true tls_released=true\nerror: WrongRole\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "unapproved",
+      "family": "ipv4",
+      "expected_errors": [
+        "UnauthorizedPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.073,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT UnauthorizedPeer revoked=true tls_released=true\nerror: UnauthorizedPeer\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "cancel",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.049,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT Canceled revoked=true tls_released=true\nerror: Canceled\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "revoke",
+      "family": "ipv4",
+      "expected_errors": [
+        "Revoked"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.044,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT Revoked revoked=true tls_released=true\nerror: Revoked\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.1,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "cancel-wait",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.137,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "REJECT Canceled revoked=true tls_released=true\nerror: Canceled\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "raw-eof",
+      "family": "ipv4",
+      "expected_errors": [
+        "TlsFailure",
+        "TransportFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.038,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "REJECT TransportFailure revoked=true tls_released=true\nerror: TransportFailure\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "current-revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.037,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "REJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "before-handshake",
+      "family": "ipv4",
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.053,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "REJECT InvalidState revoked=true tls_released=true\nerror: InvalidState\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-alpn",
+      "family": "ipv4",
+      "expected_errors": [
+        "AlpnMismatch"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.034,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+        "application_received": 0
+      },
+      "output": "REJECT AlpnMismatch revoked=true tls_released=true\nerror: AlpnMismatch\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "expired",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.03,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_EXPIRED] sslv3 alert certificate expired (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "REJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline",
+        "OperationDeadline"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.115,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "REJECT Deadline revoked=true tls_released=true\nerror: Deadline\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.122,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "READY 62503\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.062,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 10584
+      },
+      "output": "READY 62505\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv4",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.068,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 62507\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "valid",
+      "family": "ipv6",
+      "expected_errors": [],
+      "exit_code": 0,
+      "matched": true,
+      "seconds": 0.101,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 1285,
+        "clean_close": true,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 62509\nPASS verified frames=1285 exact_words=true clean_close=true repeat=32 stale=8\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-peer",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.039,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62511\nREJECT WrongPeer revoked=true tls_released=true\nerror: WrongPeer\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-role",
+      "family": "ipv4",
+      "expected_errors": [
+        "WrongRole"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.045,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62513\nREJECT WrongRole revoked=true tls_released=true\nerror: WrongRole\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "unapproved",
+      "family": "ipv4",
+      "expected_errors": [
+        "UnauthorizedPeer"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.069,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62515\nREJECT UnauthorizedPeer revoked=true tls_released=true\nerror: UnauthorizedPeer\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "cancel",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.086,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62517\nREJECT Canceled revoked=true tls_released=true\nerror: Canceled\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "revoke",
+      "family": "ipv4",
+      "expected_errors": [
+        "Revoked"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.073,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62519\nREJECT Revoked revoked=true tls_released=true\nerror: Revoked\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.082,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62521\nREJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "cancel-wait",
+      "family": "ipv4",
+      "expected_errors": [
+        "Canceled"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.138,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 62523\nREJECT Canceled revoked=true tls_released=true\nerror: Canceled\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "raw-eof",
+      "family": "ipv4",
+      "expected_errors": [
+        "TlsFailure",
+        "TransportFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.032,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 62525\nREJECT TransportFailure revoked=true tls_released=true\nerror: TransportFailure\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "current-revision",
+      "family": "ipv4",
+      "expected_errors": [
+        "AuthorizationChanged"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.046,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 62527\nREJECT AuthorizationChanged revoked=true tls_released=true\nerror: AuthorizationChanged\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "before-handshake",
+      "family": "ipv4",
+      "expected_errors": [
+        "InvalidState"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.03,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 0
+      },
+      "output": "READY 62529\nREJECT InvalidState revoked=true tls_released=true\nerror: InvalidState\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "wrong-alpn",
+      "family": "ipv4",
+      "expected_errors": [
+        "TlsFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.028,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL] tlsv1 alert no application protocol (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "READY 62531\nREJECT TlsFailure revoked=true tls_released=true\nerror: TlsFailure\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "expired",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.034,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_EXPIRED] sslv3 alert certificate expired (_ssl.c:2710)",
+        "application_received": 0
+      },
+      "output": "READY 62533\nREJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "sender",
+      "mode": "deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline",
+        "OperationDeadline"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 1.121,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 0
+      },
+      "output": "READY 62535\nREJECT Deadline revoked=true tls_released=true\nerror: Deadline\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-name",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.037,
+      "peer": {
+        "authenticated": false,
+        "fingerprint": null,
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1081)",
+        "application_received": 0
+      },
+      "output": "REJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "missing-client",
+      "family": "ipv4",
+      "expected_errors": [
+        "PeerAuthentication",
+        "TlsFailure"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.031,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLError: [SSL: TLSV13_ALERT_CERTIFICATE_REQUIRED] tlsv13 alert certificate required (_ssl.c:2710)",
+        "application_received": 0
+      },
+      "output": "READY 62539\nREJECT PeerAuthentication revoked=true tls_released=true\nerror: PeerAuthentication\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "buffered-deadline",
+      "family": "ipv4",
+      "expected_errors": [
+        "Deadline"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.031,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": null,
+        "application_received": 64
+      },
+      "output": "READY 62541\nREJECT Deadline revoked=true tls_released=true\nerror: Deadline\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "bad-accept",
+      "family": "ipv4",
+      "expected_errors": [
+        "FormatMismatch"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.035,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 0,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record",
+        "application_received": 64
+      },
+      "output": "REJECT FormatMismatch revoked=true tls_released=true\nerror: FormatMismatch\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "wrong-ack",
+      "family": "ipv4",
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.037,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 10584
+      },
+      "output": "REJECT Discontinuous revoked=true tls_released=true\nerror: Discontinuous\n"
+    },
+    {
+      "tls_role": "client",
+      "audio_role": "sender",
+      "mode": "after-ack",
+      "family": "ipv4",
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.041,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "26d690e9a54cdd8d90e428fe02651762248a5f3728534a8c680f87152775e5cf",
+        "frames": 1285,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 10584
+      },
+      "output": "REJECT DataAfterEnd revoked=true tls_released=true\nerror: DataAfterEnd\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "truncated",
+      "family": "ipv4",
+      "expected_errors": [
+        "Truncated"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.035,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)",
+        "application_received": 0
+      },
+      "output": "READY 62549\nREJECT Truncated revoked=true tls_released=true\nerror: Truncated\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "duplicate",
+      "family": "ipv4",
+      "expected_errors": [
+        "Discontinuous"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.038,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host",
+        "application_received": 64
+      },
+      "output": "READY 62551\nREJECT Discontinuous revoked=true tls_released=true\nerror: Discontinuous\n"
+    },
+    {
+      "tls_role": "server",
+      "audio_role": "receiver",
+      "mode": "after-end",
+      "family": "ipv4",
+      "expected_errors": [
+        "DataAfterEnd"
+      ],
+      "exit_code": 1,
+      "matched": true,
+      "seconds": 0.035,
+      "peer": {
+        "authenticated": true,
+        "fingerprint": "67495f2574f958a9106517e3e93532030ed3569fced3f46a63183dfea13ecacd",
+        "frames": 0,
+        "clean_close": false,
+        "error": "ValueError: EOF before full record",
+        "application_received": 64
+      },
+      "output": "READY 62553\nREJECT DataAfterEnd revoked=true tls_released=true\nerror: DataAfterEnd\n"
+    }
+  ]
+}

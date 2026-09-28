@@ -1,0 +1,17 @@
+Build Summary: 14/14 steps succeeded; 3/3 tests passed
+config-test success
++- run test 3 pass (3 total) 37ms MaxRSS:3M
+   +- compile test debug native cached 355ms MaxRSS:38M
+app success
++- install lan-audio success
+|  +- compile exe lan-audio debug native success 5s MaxRSS:316M
+|     +- options cached
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 29ms MaxRSS:38M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 16ms MaxRSS:38M
+|     +- translate-c cached 14ms MaxRSS:38M
+|     +- translate-c cached 17ms MaxRSS:38M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+

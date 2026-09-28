@@ -1,0 +1,181 @@
+{
+  "phase": "human-readmes",
+  "observed_at_utc": "2026-09-27T01:27:05.509531+00:00",
+  "documentation_only": true,
+  "production_qualified": false,
+  "previous_runtime_publication": {
+    "path": "C:\\Projects\\lan-audio\\verification\\playout-demand-publication\\receipt.json",
+    "sha256": "3846d5ec05d5ea1bef312153fc6e3a691f99b3e94828ceee46106ed9a4bbfaf5"
+  },
+  "changed_files": {
+    "lan-audio/README.md": "33080acd38a6c411e4c764a1e7b92abbe523471864108eaf19c25fcbf9bf1612",
+    "lan-audio/docs/README.md": "2b1681193dcd54b1dcd9e222c37ce43b3e98c7c7c4eb443efeeb06cc0c483713",
+    "lan-audio/docs/first-run.md": "4f90be8ae9a90945d884d0903182e26adb663f66bb480b626bc46df4689b2036",
+    "lan-audio/docs/development/documentation.md": "7309d855dc2d61f777133c04d80d7e399aae111f3e3417970df96c28392bb70e",
+    "lan-audio/tools/reference_contracts.json": "a9d5b8a0424a729ac29944b905d55bb4221fd8877dff1d11b8d616b6e14c58b4",
+    "lan-audio/docs/reference/lan-audio.md": "4e59ee840e5f65cea30328b26af311972a26fbc92505685e8e4b5dfd44c8cc10",
+    "miniaudio-zig/README.md": "950999756c08bb9145b72c81b1e4b44ac7346471d63e69b9c7e2da1f169affa4"
+  },
+  "application_differences": [
+    "docs/development/documentation.md",
+    "docs/first-run.md",
+    "docs/README.md",
+    "docs/reference/lan-audio.md",
+    "README.md",
+    "tools/reference_contracts.json"
+  ],
+  "unchanged_native_inputs": {
+    "C:\\Projects\\miniaudio-zig\\src\\native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+    "C:\\Projects\\miniaudio-zig\\src\\profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+    "C:\\Projects\\miniaudio-zig\\src\\root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+    "C:\\Projects\\miniaudio-zig\\build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+    "C:\\Projects\\miniaudio-zig\\build.zig.zon": "18ee754b8351cf9b847acc2ee54ac6a86f9d7dde7304cd78b750eb6d0b9871f4",
+    "C:\\Projects\\miniaudio-zig\\UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+    "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89",
+    "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\LICENSE": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+  },
+  "unchanged_binaries": {
+    "lan-audio.exe": "d860fcc323dd6e9c9c569cafa92a9bfef9ef5579a318135b1b243ff586fc89c0",
+    "audio-worker-probe.exe": "73a472260230f2595ffbcce8a68972cb3d88ef315b47ec7648cb1470eb4687a7",
+    "audio-recovery-probe.exe": "65988d3b6f37b0009f1ea1478534d1b87fe38b18193c9461be224634b181bbf2",
+    "libssl-3-x64.dll": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce",
+    "libcrypto-3-x64.dll": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+  },
+  "checks": [
+    {
+      "name": "render",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/build_reference.py",
+        "--application-only"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "application-docs",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_docs.py",
+        "--application-only"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "application-contracts",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_handoff.py",
+        "--application-only"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "tls-custody",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_transport.py",
+        "--staged"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "miniaudio-docs",
+      "cwd": "C:\\Projects\\miniaudio-zig",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_docs.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "miniaudio-vendor",
+      "cwd": "C:\\Projects\\miniaudio-zig",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_vendor.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "full-docs",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_docs.py"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "full-contracts",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check_handoff.py"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "application-help",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Projects\\lan-audio\\zig-out\\bin\\lan-audio.exe",
+        "help"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "pair-helper-help",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/create_pair.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "mac-helper-help",
+      "cwd": "C:\\Projects\\lan-audio",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/build_mac_candidate.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    }
+  ],
+  "edited_guide_links": 57,
+  "initial_review_failure": "miniaudio link checker rejected ../lan-audio/README.md as outside its self-contained package; replaced with plain project navigation, without weakening the gate.",
+  "limitations": [
+    "Full three-project docs/contract checks still fail on previously unadopted TLS files; no pins or sibling adoption references updated.",
+    "No Mac build, native audio, Wi-Fi or physical listening run performed for prose changes.",
+    "TLS README remains unchanged because it is an exact adopted dependency input.",
+    "Existing distributed archives and runtime receipts remain unchanged."
+  ]
+}

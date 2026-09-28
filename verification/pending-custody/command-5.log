@@ -1,0 +1,11 @@
+Build Summary: 9/9 steps succeeded
+v2-transport-probes success
++- install audio-v2-sender-probe success
+|  +- compile exe audio-v2-sender-probe safe native success 37s MaxRSS:251M
+|     +- options cached
++- install audio-v2-receiver-probe success
+|  +- compile exe audio-v2-receiver-probe safe native success 37s MaxRSS:254M
+|     +- options cached
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+

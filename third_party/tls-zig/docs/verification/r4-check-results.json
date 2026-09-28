@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "revision": "2026-09-26-r4",
+  "scope": "documentation/graph extension and source preservation; no protocol/native integration tests rerun",
+  "date_utc": "2026-09-26T13:12:02.766596+00:00",
+  "source_inventory_sha256": "587d464903ad62c6c44fff4de62b0b6199a33c4035ef880847a7a66efef74783",
+  "plan_sha256": "c3952b88ce3d72b31ae18ac61e04f61efc3e1819d6f638e895e1477e699dc748",
+  "all_indexed_source_bytes_unchanged": true,
+  "work_packages": 37,
+  "baseline_obligations": 74,
+  "added_obligations": 11,
+  "total_obligations": 85,
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r4\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r4\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": [],\n  \"negative_controls_detected\": [\n    \"source hash drift\",\n    \"unindexed file\",\n    \"broken local link\",\n    \"missing contract\",\n    \"stale declaration location\",\n    \"unsafe inventory path\",\n    \"malformed JSON\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r4\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r4\\stage\\quic-zig"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r4\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"project\": \"tls-zig\",\n  \"work_packages\": 37,\n  \"acceptance_obligations\": 85,\n  \"completion_order\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\",\n    \"Q10\",\n    \"T01\",\n    \"T07\",\n    \"Q11\",\n    \"T03\",\n    \"T05\",\n    \"T08\",\n    \"T09\",\n    \"T04\",\n    \"T10\",\n    \"T02\",\n    \"T11\",\n    \"T06\",\n    \"T12\",\n    \"Q00\",\n    \"T13\",\n    \"T14\",\n    \"Q01\",\n    \"Q02\",\n    \"Q04\",\n    \"Q03\",\n    \"Q05\",\n    \"Q06\",\n    \"Q07\",\n    \"Q08\",\n    \"Q13\",\n    \"Q20\",\n    \"Q15\",\n    \"Q17\",\n    \"Q18\",\n    \"Q16\",\n    \"Q19\",\n    \"Q21\"\n  ],\n  \"peer_checked\": true,\n  \"states\": {\n    \"planned\": 37,\n    \"in_progress\": 0,\n    \"implemented\": 0,\n    \"complete\": 0\n  },\n  \"ready_to_implement\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\"\n  ],\n  \"negative_controls_detected\": [\n    \"cycle\",\n    \"unknown dependency\",\n    \"duplicate id\",\n    \"unsafe path\",\n    \"noncanonical path\",\n    \"missing oracle\",\n    \"duplicate acceptance\",\n    \"false completion\",\n    \"invalid shape\"\n  ]\n}\n",
+      "stderr": ""
+    }
+  ],
+  "live_adoption_checks": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-docs.py",
+        "--with-sdk"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-plan.py",
+        "--peer",
+        "C:\\Projects\\quic-zig"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"project\": \"tls-zig\",\n  \"work_packages\": 37,\n  \"acceptance_obligations\": 85,\n  \"completion_order\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\",\n    \"Q10\",\n    \"T01\",\n    \"T07\",\n    \"Q11\",\n    \"T03\",\n    \"T05\",\n    \"T08\",\n    \"T09\",\n    \"T04\",\n    \"T10\",\n    \"T02\",\n    \"T11\",\n    \"T06\",\n    \"T12\",\n    \"Q00\",\n    \"T13\",\n    \"T14\",\n    \"Q01\",\n    \"Q02\",\n    \"Q04\",\n    \"Q03\",\n    \"Q05\",\n    \"Q06\",\n    \"Q07\",\n    \"Q08\",\n    \"Q13\",\n    \"Q20\",\n    \"Q15\",\n    \"Q17\",\n    \"Q18\",\n    \"Q16\",\n    \"Q19\",\n    \"Q21\"\n  ],\n  \"peer_checked\": true,\n  \"states\": {\n    \"planned\": 37,\n    \"in_progress\": 0,\n    \"implemented\": 0,\n    \"complete\": 0\n  },\n  \"ready_to_implement\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\"\n  ]\n}\n",
+      "stderr": ""
+    }
+  ]
+}

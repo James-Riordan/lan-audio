@@ -1,0 +1,5 @@
+Build Summary: 3/3 steps succeeded
+network-check success
++- compile test debug x86_64-macos.12.0 success 22s MaxRSS:258M
+   +- translate-c success 1s MaxRSS:58M
+

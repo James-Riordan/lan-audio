@@ -1,0 +1,6 @@
+usage: create_pair.py [-h] --output OUTPUT [--openssl OPENSSL]
+
+options:
+  -h, --help         show this help message and exit
+  --output OUTPUT
+  --openssl OPENSSL

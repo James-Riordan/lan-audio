@@ -1,0 +1,53 @@
+app
++- install lan-audio
+   +- compile exe lan-audio safe native
+      +- compile lib miniaudio safe native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+Build Summary: 14/14 steps succeeded; 20/20 tests passed
+app success
++- install lan-audio success
+   +- compile exe lan-audio safe native success 39s MaxRSS:280M
+      +- WriteFile cached
+      +- compile lib miniaudio safe native cached 44ms MaxRSS:51M
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c cached 30s MaxRSS:51M
+policy-test success
++- run test 7 pass (7 total) 39s MaxRSS:3M
+   +- compile test safe native success 30s MaxRSS:290M
+audio-test success
++- run test 6 pass (6 total) 864ms MaxRSS:6M
+|  +- compile test safe native success 39s MaxRSS:298M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- run test 7 pass (7 total) 840ms MaxRSS:6M
+   +- compile test safe native success 39s MaxRSS:308M
+      +- WriteFile (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c (reused)
+

@@ -1,0 +1,11 @@
+1/1 runtime_lifecycle.test.sender sticky source fault prevents END before read before submission or at copied completion...expected error.Discontinuity, found 2
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff73319fd5b in expectError__anon_62197 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:886:13: 0x7ff7331a27c1 in test.sender sticky source fault prevents END before read before submission or at copied completion (root_zcu.obj)
+            try std.testing.expectError(error.Discontinuity, sender.pump(g));
+            ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\54855d9d9208fa465018867261b123d7\root.exe --seed=0xd07b2ad

@@ -1,0 +1,5 @@
+{"case":"fail-release","passed":false,"setup":true,"authenticated_pair":false,"ticks":1,"peers":[{"role":"client","complete":false,"ssl_error":0,"verify_error":0,"leases":0,"releases":0,"released_bytes":0,"lease_remaining":0,"secret_callbacks":0,"parameter_callbacks":0,"alert":-1,"injected_failures":0,"max_callbacks_per_call":2,"blocked_calls":0,"tickets":0,"invariant_failure":false},{"role":"server","complete":false,"ssl_error":1,"verify_error":0,"leases":1,"releases":2,"released_bytes":218,"lease_remaining":0,"secret_callbacks":0,"parameter_callbacks":0,"alert":80,"injected_failures":1,"max_callbacks_per_call":3,"blocked_calls":0,"tickets":0,"invariant_failure":true}]}
+084D0000:error:0A0C0103:SSL routines:quic_release_record:internal error:../openssl-3.5.8/ssl/quic/quic_tls.c:433:
+084D0000:error:0A000139:SSL routines::record layer failure:../openssl-3.5.8/ssl/record/rec_layer_s3.c:566:
+084D0000:error:0A0C0103:SSL routines:quic_release_record:internal error:../openssl-3.5.8/ssl/quic/quic_tls.c:433:
+084D0000:error:0A000139:SSL routines::record layer failure:../openssl-3.5.8/ssl/record/rec_layer_s3.c:566:

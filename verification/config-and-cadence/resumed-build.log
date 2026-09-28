@@ -1,0 +1,48 @@
+Build Summary: 31/31 steps succeeded; 102/102 tests passed
+recovery-probe success
++- install audio-recovery-probe cached
+|  +- compile exe audio-recovery-probe safe native cached 77ms MaxRSS:16M
+|     +- translate-c cached 48ms MaxRSS:30M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 2s MaxRSS:21M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 41ms MaxRSS:30M
+|     +- translate-c cached 55ms MaxRSS:16M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+app success
++- install lan-audio success
+|  +- compile exe lan-audio safe native success 35s MaxRSS:332M
+|     +- options cached
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+audio-test success
++- run test 6 pass (6 total) 35s MaxRSS:8M
+|  +- compile test safe native success 29s MaxRSS:290M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- run test 7 pass (7 total) 393ms MaxRSS:8M
+   +- compile test safe native cached 306ms MaxRSS:29M
+      +- WriteFile (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c (reused)
+test success
++- run test 47 pass (47 total) 279ms MaxRSS:3M
+|  +- compile test safe native success 24s MaxRSS:305M
++- run test 2 pass (2 total) 69ms MaxRSS:2M
+|  +- compile test safe native cached 24s MaxRSS:16M
++- run test 37 pass (37 total) 67ms MaxRSS:3M
+   +- compile test safe native cached 263ms MaxRSS:16M
+config-test success
++- run test 3 pass (3 total) 59ms MaxRSS:2M
+   +- compile test safe native cached 262ms MaxRSS:16M
+

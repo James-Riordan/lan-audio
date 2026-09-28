@@ -1,0 +1,197 @@
+{
+  "python_ssl": "OpenSSL 3.0.18 30 Sep 2025",
+  "results": [
+    {
+      "case": "fragmented-roundtrip",
+      "passed": true,
+      "exit_code": 0,
+      "peer": {
+        "authenticated": true,
+        "ack": true,
+        "clean_close": true,
+        "error": null
+      },
+      "output": "PASS audio TLS probe: blocks=20 samples=9600 checksum=15014 clean_close=true\ncallback_frames=4800 silent_frames=1200 backend=null\n"
+    },
+    {
+      "case": "wrong-name",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_BAD_CERTIFICATE] sslv3 alert bad certificate (_ssl.c:1081)"
+      },
+      "output": "error: PeerAuthentication\n"
+    },
+    {
+      "case": "wrong-alpn",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"
+      },
+      "output": "error: AlpnMismatch\n"
+    },
+    {
+      "case": "missing-alpn",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine"
+      },
+      "output": "error: AlpnMismatch\n"
+    },
+    {
+      "case": "expired",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_EXPIRED] sslv3 alert certificate expired (_ssl.c:1081)"
+      },
+      "output": "error: PeerAuthentication\n"
+    },
+    {
+      "case": "untrusted-client",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": false,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1081)"
+      },
+      "output": "error: TransportFailure\n"
+    },
+    {
+      "case": "oversized",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: InvalidLength\n"
+    },
+    {
+      "case": "bad-profile",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: InvalidProfile\n"
+    },
+    {
+      "case": "audio-before-start",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: UnexpectedMessage\n"
+    },
+    {
+      "case": "wrong-stream",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: WrongStream\n"
+    },
+    {
+      "case": "duplicate",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host"
+      },
+      "output": "error: Late\n"
+    },
+    {
+      "case": "truncated-frame",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: Truncated\n"
+    },
+    {
+      "case": "missing-end",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:2838)"
+      },
+      "output": "error: MissingEnd\n"
+    },
+    {
+      "case": "after-end",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": "RuntimeError: EOF before acknowledgement"
+      },
+      "output": "error: DataAfterEnd\n"
+    },
+    {
+      "case": "raw-eof",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: TransportFailure\n"
+    },
+    {
+      "case": "stalled",
+      "passed": true,
+      "exit_code": 1,
+      "peer": {
+        "authenticated": true,
+        "ack": false,
+        "clean_close": false,
+        "error": null
+      },
+      "output": "error: OperationDeadline\n"
+    }
+  ]
+}

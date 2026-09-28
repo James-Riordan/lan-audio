@@ -1,0 +1,156 @@
+{
+  "scope": "Reviewed 12-entry miniaudio package delta. Exact live/snapshot source, archive, command logs and historical receipt verified; owner tests not relabeled as fresh application tests.",
+  "changed": [
+    "build.zig.zon",
+    "docs/architecture/build-and-abi.md",
+    "docs/implementation/qualification.md",
+    "docs/README.md",
+    "docs/reference/catalog.json",
+    "docs/reference/files.md",
+    "docs/verification/README.md",
+    "README.md"
+  ],
+  "new": [
+    "docs/implementation/release-readiness.md",
+    "docs/verification/source-package.md",
+    "tests/test_package_runner.py",
+    "tools/test_package.py"
+  ],
+  "live_files_verified": 47,
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\audio-package-reference-contracts-additions.json",
+      "sha256": "a0026dc0b0404663cc8456ee2dadfeadfebcfafae5b871f3aa4d0c4812f62fca"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-handoff.md",
+      "sha256": "223a537b8d6c12121829b9e87ca826bfcd3b4e272508136b1d071a918e8c8ebb"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-zig-qualified-source.tar",
+      "sha256": "7011dbe3b273debe0f8ebe96c5c6246e67d77c71a261ea0a14e99ad08d9c1e95"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\archive-selection.log",
+      "sha256": "1a2e02d57682e77c1b9862c73a5368988ed0093581afe40a0caa5c5c5da978ad"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\baseline-fetch.log",
+      "sha256": "53d80b5a3f60a4c44d9b6338d943992e52d80a29920305d31843fd3bd30f95c9"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\baseline-findings.json",
+      "sha256": "7c4c6dbc27eed99b3602750f977df141315f64e107ece3ac6428f4c7dea30108"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\baseline-tar-fetch.log",
+      "sha256": "cb52a197f7ca4187ee8c52f1b824dc016f0476f02ebefeabbd5e36657f84448d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\baseline.json",
+      "sha256": "965305f0bafdaad3b1b2523e67d1693e3b4608e195492dccdb23cb1ca41cdb29"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\compiler.log",
+      "sha256": "6d772c1af112030e0b32b7f86e58780c711e73ddde831b29318c3a9222537888"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\consumer-debug-native.log",
+      "sha256": "e9dd25f3aa11915b48410f26bf81f5197fef1149efafe21fd955889525c97da0"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\consumer-releasesafe-null.log",
+      "sha256": "6b2c7d13405aec1fc0b7c1604d8ea42dbe9238112c4d4295a2d372770dc33f08"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\final-tooling-tests.log",
+      "sha256": "70707e765ff8da29c7421dccf9f0aeb0043134aa1c90b0fb79d21dd7f64d524e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\integration-receipt.json",
+      "sha256": "77d1891e1850e14f2993f5b91e9082b0cf0502975ad6dbf982493a3d43667798"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\live-documentation.log",
+      "sha256": "e11e9c8f97f8a9322282ca4b25b091259a91ddca52fbda0c3090c333c6d2751d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\live-package-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\live-selection.log",
+      "sha256": "c524ba02e72596f75dd5e2936c1947474a8193af1a0338a008f09a637700722e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\live-vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\noisy-selection.log",
+      "sha256": "c524ba02e72596f75dd5e2936c1947474a8193af1a0338a008f09a637700722e"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\package-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\archive-selection.log",
+      "sha256": "3d0cc07417ec1e9784eebf9fd28ede9679ce35ddc78204d7ee43315527f04e3b"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\compiler.log",
+      "sha256": "6d772c1af112030e0b32b7f86e58780c711e73ddde831b29318c3a9222537888"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\consumer-debug-native.log",
+      "sha256": "15d11afefe952be5e4fcfd41d2b9b1b4ad01b21dff60ac203aa0dcb5bd7fb9e4"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\consumer-releasesafe-null.log",
+      "sha256": "6a7f0166281051764f95f1297052f4d3fafda1d50fb5bdf3d4fb7bc3e3140014"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\live-selection.log",
+      "sha256": "28b6de774b08a787b011dfb55d78d1ef10fc8291d4faeeace3fa4c0793065061"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\noisy-selection.log",
+      "sha256": "28b6de774b08a787b011dfb55d78d1ef10fc8291d4faeeace3fa4c0793065061"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\receipt.json",
+      "sha256": "9ccf2c3b211d434ce7300a731320b20a0add7404c289d9343c6677f1da405aa4"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\relocated-docs.log",
+      "sha256": "e11e9c8f97f8a9322282ca4b25b091259a91ddca52fbda0c3090c333c6d2751d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\relocated-vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\pre-format-candidate\\source.tar",
+      "sha256": "f271d42db0bf0d5d27855738bc387ab0b6085d62cdf3b158befef311244d2f3f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\receipt.json",
+      "sha256": "8585a1d04a5a046372cdc005d750dfa4a527a89dd399bd77e8293d8f5e8e0bb8"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\relocated-docs.log",
+      "sha256": "e11e9c8f97f8a9322282ca4b25b091259a91ddca52fbda0c3090c333c6d2751d"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\relocated-vendor.log",
+      "sha256": "fec11ca1ab1627d70eecd66f3fad95683d519002f767d27fbd98190794c5cd3f"
+    },
+    {
+      "path": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to-2\\outputs\\miniaudio-package-readiness\\miniaudio-zig\\verification\\source-package\\RESULTS.md",
+      "sha256": "d1b9ae1743faf028df58cbfe706180324b0bf1218a1af9abece0358c408724b2"
+    }
+  ],
+  "runtime_build_vendor_profile_unchanged": true,
+  "manifest_allowlist_changed": true
+}

@@ -1,0 +1,7 @@
+{
+  "lan-audio.exe": "d860fcc323dd6e9c9c569cafa92a9bfef9ef5579a318135b1b243ff586fc89c0",
+  "audio-recovery-probe.exe": "65988d3b6f37b0009f1ea1478534d1b87fe38b18193c9461be224634b181bbf2",
+  "audio-worker-probe.exe": "73a472260230f2595ffbcce8a68972cb3d88ef315b47ec7648cb1470eb4687a7",
+  "libssl-3-x64.dll": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce",
+  "libcrypto-3-x64.dll": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+}

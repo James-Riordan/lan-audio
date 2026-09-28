@@ -1,0 +1,527 @@
+{
+  "scope": "Actual native C adapter and independent C/Zig ABI; same-provider TLS pair, no QUIC packets",
+  "zig": "0.17.0-dev.1859+dcceb318e",
+  "target": "x86_64-windows-gnu",
+  "source_inputs": {
+    "build.zig": "0d93d2b9f3cbd0950661a537dd8e55314f8b3ad09c0a77591786331841b215c1",
+    "build.zig.zon": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d",
+    "backend-lock.json": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef",
+    "src/backend/quic.h": "f8db26c414fe4e00f98d0d43046b40a1272e0d2ec68751d3fd2a8007015856bd",
+    "src/backend/quic.c": "c975b22d3ecdc8b791e976db36f798610f5e831287903c69e69588112d9e0374",
+    "tests/quic/backend.c": "e6da0397ddec343273520d659f4150e5bd52bc5e1377af78bd91188f82be0a92",
+    "tests/quic/backend_abi.c": "b86da4507f9fc50766a5cb14e1906036118a79e83411d7e5119936fddfb2fc6a",
+    "tests/quic/backend_abi.zig": "a5d4c41649190530fe225acfa584d306065478ff01c535147c33c74c68b38bf5",
+    "tools/qualify-quic-backend.py": "7afedba449e6b733d4f62f9c604eed6b833b1737844bc82540d5e74a8a82a8e1",
+    "tools/verify-backend.py": "267c0576fd83f7295eabe576a8eefe17cf3ed353d42b914373b9524e1fbec5a7",
+    "tests/fixtures/ca.pem": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b",
+    "tests/fixtures/client.key": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2",
+    "tests/fixtures/client.pem": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde",
+    "tests/fixtures/expired.key": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6",
+    "tests/fixtures/expired.pem": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220",
+    "tests/fixtures/other-ca.pem": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2",
+    "tests/fixtures/server.key": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b",
+    "tests/fixtures/server.pem": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4",
+    "tests/fixtures/wrong-purpose.key": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575",
+    "tests/fixtures/wrong-purpose.pem": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab"
+  },
+  "sdk_lock_sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef",
+  "runs": [
+    {
+      "id": "sdk",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "started_utc": "2026-09-26T16:41:02.274038+00:00",
+      "exit_code": 0,
+      "observed": [],
+      "adequate": true,
+      "stdout": {
+        "path": "sdk.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "sdk.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "backend-Debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-backend-test",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "Debug",
+      "started_utc": "2026-09-26T16:41:02.750721+00:00",
+      "exit_code": 0,
+      "observed": [
+        {
+          "case": "overconsume",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "missing-client",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "zero-budget",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "budgeted",
+          "passed": true,
+          "steps": 56,
+          "client_leases": 42,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fragmented",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 681,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-secret",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "wrong-ca",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "alpn",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-alert",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "params-overflow",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "combined",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 680,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "wrong-host",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "null-lease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-receive",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "full",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "reentrant",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "backpressure",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 41,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-send",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overlease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "validation",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-params",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "mutual",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "ip",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-release",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "config-copy",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        }
+      ],
+      "adequate": true,
+      "stdout": {
+        "path": "backend-Debug.stdout.log",
+        "sha256": "ca811abc937e3a026ada471f6755f0fa3508c029d0070f28d6365011eb847155"
+      },
+      "stderr": {
+        "path": "backend-Debug.stderr.log",
+        "sha256": "166a31258e2421176fa5a903da80f7c97ab8615a5ca34e213686bd432914ca57"
+      }
+    },
+    {
+      "id": "backend-ReleaseSafe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-backend-test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "mode": "ReleaseSafe",
+      "started_utc": "2026-09-26T16:41:04.258884+00:00",
+      "exit_code": 0,
+      "observed": [
+        {
+          "case": "mutual",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "null-lease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fragmented",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 681,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-send",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-receive",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "alpn",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-alert",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "full",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "wrong-host",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "config-copy",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "params-overflow",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-secret",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "backpressure",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 41,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overlease",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 0,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "missing-client",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "budgeted",
+          "passed": true,
+          "steps": 56,
+          "client_leases": 42,
+          "server_leases": 16,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "wrong-ca",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "validation",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "combined",
+          "passed": true,
+          "steps": 55,
+          "client_leases": 680,
+          "server_leases": 244,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-release",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 1
+        },
+        {
+          "case": "ip",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "zero-budget",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "overconsume",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "fail-params",
+          "passed": true,
+          "steps": 1,
+          "client_leases": 0,
+          "server_leases": 1,
+          "server_teardown_releases": 0
+        },
+        {
+          "case": "reentrant",
+          "passed": true,
+          "steps": 2,
+          "client_leases": 2,
+          "server_leases": 2,
+          "server_teardown_releases": 0
+        }
+      ],
+      "adequate": true,
+      "stdout": {
+        "path": "backend-ReleaseSafe.stdout.log",
+        "sha256": "d4d1b31f74885f6000e2e8158d26e070233467f1e9ac72840d27095804afaa2d"
+      },
+      "stderr": {
+        "path": "backend-ReleaseSafe.stderr.log",
+        "sha256": "b0f236444f7ef117052bbeaa1b72ecbf488da8857043d359e5693dae7a34a953"
+      }
+    },
+    {
+      "id": "sdk-after",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/verify-backend.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "started_utc": "2026-09-26T16:41:06.078122+00:00",
+      "exit_code": 0,
+      "observed": [],
+      "adequate": true,
+      "stdout": {
+        "path": "sdk-after.stdout.log",
+        "sha256": "1376f16a300c10eeb7b3eda728f2172bbe5bd4c3804d6e5bdcc11496f6520cff"
+      },
+      "stderr": {
+        "path": "sdk-after.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "passed": true
+}

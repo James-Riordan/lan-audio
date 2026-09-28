@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python",
+    "tools/check_lifecycle_spec.py"
+  ],
+  "exit_code": 1,
+  "cwd": "C:\\Projects\\lan-audio"
+}

@@ -1,0 +1,8 @@
+.{
+    .name = .lan_audio,
+    .fingerprint = 0xb8118a297f99bde9,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.17.0-dev.1859+dcceb318e",
+    .dependencies = .{ .miniaudio_zig = .{ .path = "../miniaudio-zig" } },
+    .paths = .{ "build.zig", "build.zig.zon", "src", "tests", "docs", "spec", "tools", "README.md", "verification/RESULTS.md", "verification/models.json", "verification/source-snapshot.json" },
+}

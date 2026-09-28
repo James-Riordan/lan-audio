@@ -1,0 +1,12 @@
+policy-check
++- compile test debug aarch64-ios.16.0 1 errors
+error: unable to find libSystem system library
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" test -ODebug -target aarch64-ios.16.0 -mcpu baseline --dep lan_audio --dep peer_policy --dep channel_admission "-Mroot=tests\\integration\\peer_policy.zig" -ODebug -target aarch64-ios.16.0 -mcpu baseline "-Mlan_audio=src\\root.zig" -ODebug -target aarch64-ios.16.0 -mcpu baseline --dep lan_audio "-Mpeer_policy=src\\security\\peer_policy.zig" -ODebug -target aarch64-ios.16.0 -mcpu baseline --dep lan_audio --dep peer_policy "-Mchannel_admission=src\\runtime\\channel_admission.zig" --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name test --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 0/2 steps succeeded (1 failed)
+policy-check transitive failure
++- compile test debug aarch64-ios.16.0 1 errors
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xa3897b87 policy-check -Dtarget=aarch64-ios.16.0 --summary all

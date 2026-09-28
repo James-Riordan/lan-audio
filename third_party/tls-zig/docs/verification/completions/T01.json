@@ -1,0 +1,756 @@
+{
+  "schema": 1,
+  "node": "T01",
+  "status": "passed",
+  "obligation_sha256": "6dbca6468596d95d94d944f4643218080449a96c8f02fb4a5b65ccfe07b1cb8e",
+  "design_sha256": "4d1085644aa35a18627573763ee381773f59796ae5509873c55c2b575d07a015",
+  "created_utc": "2026-09-26T18:57:46.868562+00:00",
+  "reviewer": "Codex implementation/source review; not independent security certification",
+  "scope_review": "SDK-free contract/event storage, complete pure import closure, finite independent custody model and type-negative controls. Core suites pass in Debug/ReleaseSafe; logs explicitly distinguish cached and executed steps. Seven external consumer targets compile only. Plans use borrowed explicit configuration and detect drift; they do not authorize configuration or pin certificate file contents. Input capacity is per level in the native consumer and input_capacity is distinct from event/network/local waits. The surplus-Initial failure discovered during Q00 review is fixed by per-message input leasing and rejection of queued old-level surplus before events/readiness. The same external production probe now rejects with UnexpectedLevel; both roles and native budgets 1/16384 are covered by the tenth conformance test. Unchanged core, ABI and records evidence is reused after reviewing its unchanged execution closure; the actual Engine and production consumer are re-executed in both modes. The implemented native provider is Windows x86_64 with the exact OpenSSL 3.5.8 SDK and pinned Zig. LP64/other native targets explicitly remain unavailable, with no cross-build substituted for runtime/ABI evidence. T07/T09/T13 and the QUIC endpoint/resource/independent-interop graph remain unfinished. The direct reference adapter uses the same OpenSSL provider, bypasses the new C adapter/Engine and independently encrypts a genuine QUIC short-header packet; it is not independent QUIC endpoint interoperability. Records Engine gains an additive copied verified-peer leaf SHA-256 query with a separate error set. Existing method signatures and Error remain unchanged. Records/driver, independent peer, public example and both-role external TCP consumer execute freshly in both modes; digest lifecycle and output atomicity are checked. Exact package pins, frozen QUIC fixture and all SDK files are preserved. New Engine/ABI qualification binds the current complete source closure; unchanged pure/core and backend-integrity evidence is reused after import/operation review. ",
+  "remaining_gaps": [],
+  "environment": {
+    "zig": "0.17.0-dev.1859+dcceb318e",
+    "target": "x86_64-windows-gnu",
+    "os": "Windows x86_64",
+    "backend": "OpenSSL 3.5.8 25 Aug 2026",
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "python_executable_sha256": "cce21c0e8710e304273e98ac4b2b0f5aceb639acbcd2343cbaa5c4e81619c45b",
+    "zig_executable_sha256": "c55a2e58974d09c79653b3438312052102d5f06dab7eb19f22b6df0c4b10ce16",
+    "powershell": "pwsh from bundled Codex runtime; actual executable path resolved by shutil.which in test harness",
+    "overrides_native_runs": {
+      "PYTHONOPTIMIZE": "removed",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TLS_OPENSSL_BIN": "deps/openssl-install/bin",
+      "OPENSSL_CONF": "deps/openssl-install/ssl/openssl.cnf",
+      "OPENSSL_MODULES": "deps/openssl-install/lib/ossl-modules",
+      "ZIG_GLOBAL_CACHE_DIR": ".zig-global-cache",
+      "PATH": "Python directory; pinned Zig directory; locked SDK bin; inherited PATH"
+    },
+    "scope": "Native Windows x86_64 only. Pure consumers cross-compile for seven additional targets; other native providers remain unavailable/unqualified."
+  },
+  "inputs": [
+    {
+      "project": "tls-zig",
+      "path": "backend-lock.json",
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef"
+    },
+    {
+      "project": "tls-zig",
+      "path": "build.zig",
+      "sha256": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134"
+    },
+    {
+      "project": "tls-zig",
+      "path": "build.zig.zon",
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/backend-lock.json.md",
+      "sha256": "9e71cd0c8ff7cf7c6055e33022af8ec179368fb1466a2404adf907d11f9ced0f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/build.zig.md",
+      "sha256": "b64ba870b0f92f4f2aa02c89c403f5ec94432e4ae876041f96a9457b55b1aefa"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/build.zig.zon.md",
+      "sha256": "4746861771735159c4db0fe2f5efeddeaadf0eb6184837e2b458119d83b7fff8"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/build.zig.md",
+      "sha256": "9f24f763931d4db11a1a988b99d555ed51a0c75b9e52c75e765287c58f2b8831"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/build.zig.zon.md",
+      "sha256": "61fd08d6407a2473c472ab1963cf9cd089457a489f789a946e52c68c90b21cdd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/main.zig.md",
+      "sha256": "f893d6a54e53c5ff16764fe78e441ebe0734efc89dc975e581fe605a3978fec6"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/examples/quic-contract/provider.zig.md",
+      "sha256": "2bfa053a7347c3bf2badc172241c5bc1c5e1a1dd3b9bd5531b945dcd7b6222cf"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic.zig.md",
+      "sha256": "0e8404b1bf76228ef3e62a45eb47ad00912d6b64771576122a7a434b6bc67393"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic/contract.zig.md",
+      "sha256": "5c7be4a8942fd2e5081acf8308da9d6e3f5fb3e89f0bef0e5dc4117061cbc380"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/quic/events.zig.md",
+      "sha256": "0ebcd61a8ad546b4a6050e14ac357c853ae3d2836e58321a491145d1e1bb762e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/src/root.zig.md",
+      "sha256": "3796778a28afd751d9fc165afeebdb0cd3183bee8996b27d8c9b38a51e0d21a5"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/contract.zig.md",
+      "sha256": "d89bed13b8e9377edc61f586904dfb44bc4fdf1cf33ddada9e16d2f96a845746"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/events.zig.md",
+      "sha256": "2639a28ee4fb2d2fd40b774bb1b1bbe5d2aec4bfada72f90727f454f4899b51f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/direction-as-level.zig.md",
+      "sha256": "b7963e125d2ba3c683a1bba974d6c088da4f2e5feff6f1d3aeba257827e5c216"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/generation-as-sequence.zig.md",
+      "sha256": "ac1116bfa7bcb0c415c2c684889faa0da8310389887f9759ce7b2fdb55a01311"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/raw-byte-count.zig.md",
+      "sha256": "f5ff9793e30efb7dc4fbde5ed681f81e462111a7fbd73601ef213ed4cf07baf2"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/valid.zig.md",
+      "sha256": "b9c69dde19fc9a9e4dbdc41b702d9cff1515b0a414dd9030fc9e28b6c763f040"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tests/quic/negative/wall-as-monotonic.zig.md",
+      "sha256": "4d989e919147124b7e51488a71da8a668d5bb4c935a47409eff600dee20fbc4e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-event-model.py.md",
+      "sha256": "dff0f83de45fd0b4f959f64657e59ee17f84efbc9ac0108b44ed922fa322da3c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-models.py.md",
+      "sha256": "dac5be88f12790f66f81bbb6f9eb41fde8b8207de774ff99b09a7f23cadad33f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/check-plan.py.md",
+      "sha256": "4924bc9aace993dd234b6cf797140f97d89aa2b5b38ac892fb2c93d71dfb181d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/qualify-quic-core.py.md",
+      "sha256": "25cbf75207b7946273e37198a1e08472d16fb74b868fab6760d64a51bee7efc0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/test-plan-lifecycle.py.md",
+      "sha256": "5d1dc3089fb5ba0705617834f52ddee8be69f2e5c953bb4a79409a7c7dd87d3f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/reference/files/tools/test-quic-types.py.md",
+      "sha256": "6e98440446d0d70357e552674340477265b0b6250640bc613d9ccc87e7213479"
+    },
+    {
+      "project": "tls-zig",
+      "path": "docs/roadmap/files/src/quic/contract.zig.md",
+      "sha256": "4d1085644aa35a18627573763ee381773f59796ae5509873c55c2b575d07a015"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/build.zig",
+      "sha256": "6748052bac1238badda3164f7cedf4c00d873b30c6ea717c7f24b5bac538eb0f"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/build.zig.zon",
+      "sha256": "66d19bd2e2988378a8da716257ec83840a7b52fc14122ad324044a9e2ac72057"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/main.zig",
+      "sha256": "7b7982c218c8e83741db7afde71d88579e92f36e7ee8c8b833d7418aa61427ff"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/quic-contract/provider.zig",
+      "sha256": "0c81a656f93b1dece96a0480e8e351dcfd543e225e0a7fc9483b8524180cc7b1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic.zig",
+      "sha256": "40b6f17b4cae413fc28a6b05f6fff1898b1288af1d36ebbce00379915e9478fd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic/contract.zig",
+      "sha256": "ad62cafbce1be4216229585513e73165a7817d512b222fecb4cbf2ed488f95c0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/quic/events.zig",
+      "sha256": "8d1a96ace52219d318b6c85696f769d1533513ba493bf7a6d8b49cc8adfe5d22"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/root.zig",
+      "sha256": "99587be81255039fef2f9e8c8d803097f0243748c9ba0e5f766ae257c56dc0b3"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/contract.zig",
+      "sha256": "1a01a7c469b4a05306ed16ac7f4e803b47dfbb2ce6135c43505a8158d3ea1f8e"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/events.zig",
+      "sha256": "150c5935bbcc29c660d11520bf8b4bdb77b6ef074ea6b493b48b917ccf3424bd"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/direction-as-level.zig",
+      "sha256": "40f075f1ba0b63bcbba6a47bd32a8309e148710282f154ff1c72522ee36d5162"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/generation-as-sequence.zig",
+      "sha256": "298b368d0707b3d95b47fe1368c97d8a97f480851109456de51487d078a002b7"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/raw-byte-count.zig",
+      "sha256": "bea0f5c4ea60a6f41d6bc716930439e8a09a628f7dd69bf190f8adafe8306f54"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/valid.zig",
+      "sha256": "b6de76e36b6927171ba47b6b2030ad78858e603c662e9f42f2c74416747f3fee"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/quic/negative/wall-as-monotonic.zig",
+      "sha256": "120f8a4b7b31c4d9206dc6513927d91091e6a4786b720c6204be10bb1369848d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-event-model.py",
+      "sha256": "5dfd556d01f501d39d5de8a7335df674d84851fcb27605c7f8c174276de6dd38"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-models.py",
+      "sha256": "ed5e57b103ca09e7fb519d46553f7db6b132245802196364672f5925e225acda"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/check-plan.py",
+      "sha256": "304aecf9670355b237408259b32058530b8fa9cf22fa414a1e7952859b01e12d"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/qualify-quic-core.py",
+      "sha256": "841881e76e98316ec9f317a480de23f385f193b2f692b2ea6a2b2b8cf57ec2e0"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-plan-lifecycle.py",
+      "sha256": "a70b4cc785552c002c2ad746e6573d3e469ccfeb99def60dee9dff68ebcc4d92"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-quic-types.py",
+      "sha256": "ea2b297334871d86967f8d6467d22ae4e6ecb94f087996f858e7a1f2a48d046c"
+    }
+  ],
+  "runs": [
+    {
+      "id": "pure-core-Debug",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-test",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "started_utc": "2026-09-26T17:58:53.721510+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/core-Debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/core-Debug.stderr.log",
+        "sha256": "8bed93360d3694b29ca82be5f9232a64dd20281d5ad6ecd2b647a2c3173a9d96"
+      },
+      "mode": "Debug",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-consumer-Debug",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "run",
+        "-Doptimize=Debug",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T17:59:37.854756+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/consumer-Debug.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/consumer-Debug.stderr.log",
+        "sha256": "53bc1e1e0a57db8a8894a500e3963b2e22fa54569e393d7edb184e3b74bcc550"
+      },
+      "mode": "Debug",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-core-ReleaseSafe",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "quic-test",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": ".",
+      "started_utc": "2026-09-26T18:00:29.142476+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/core-ReleaseSafe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/core-ReleaseSafe.stderr.log",
+        "sha256": "22e99a52f5750c92922a2b8bb5f8a291cf1b0aed83eb23ae0ac2ef6f0432a65a"
+      },
+      "mode": "ReleaseSafe",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-consumer-ReleaseSafe",
+      "scope": "native-run",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "run",
+        "-Doptimize=ReleaseSafe",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:02:51.985273+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/consumer-ReleaseSafe.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/consumer-ReleaseSafe.stderr.log",
+        "sha256": "f0fba8771ffb4d483446c9c19da59fd5ea734c75f56347777dcea4b50c72048e"
+      },
+      "mode": "ReleaseSafe",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86-windows-gnu",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86-windows-gnu",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:03:35.431557+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86-windows-gnu.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86-windows-gnu.stderr.log",
+        "sha256": "5dab98cccb117b75500c8da93edfcb74ae31254ec0a69aecffc40d3c3dd83001"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-aarch64-windows-gnu",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=aarch64-windows-gnu",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:04:28.589336+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-windows-gnu.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-windows-gnu.stderr.log",
+        "sha256": "b6dc5b21275e689d70afba5d76e7894f28eb565f66fd547a5098d270fc4bb3f7"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86_64-linux-musl",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86_64-linux-musl",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:05:30.571937+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-linux-musl.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-linux-musl.stderr.log",
+        "sha256": "ffa0047ce2abda8676d4093889eaffece4035e4b044aef49a54e75762a618c18"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-aarch64-linux-musl",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=aarch64-linux-musl",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:06:38.918710+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-linux-musl.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-linux-musl.stderr.log",
+        "sha256": "01e8481ca464dd854c31c0a3010f4bc1edb1b4f2537e67e8ffa69d0db3fec7d2"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86_64-macos",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86_64-macos",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:08:39.866275+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-macos.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-macos.stderr.log",
+        "sha256": "45512ef5b5bf74d9d580b4f7930fd48e9e3691740f657960eeb4d82dd20e9d0d"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-aarch64-macos",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=aarch64-macos",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:10:33.101529+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-macos.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-aarch64-macos.stderr.log",
+        "sha256": "3a1d5551351c5a990d249186dd7bcd16f62ff0728bc583e8a27d2b5afaaf8edf"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "pure-cross-x86_64-freebsd",
+      "scope": "compile-only",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-Doptimize=ReleaseSafe",
+        "-Dtarget=x86_64-freebsd",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "examples/quic-contract",
+      "started_utc": "2026-09-26T18:12:48.549945+00:00",
+      "exit_code": 0,
+      "stdout": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-freebsd.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-core-runs/cross-x86_64-freebsd.stderr.log",
+        "sha256": "e51e7ab628bf904cb3a4b734a71a533421792f7de1e5934794c990e4b3d61386"
+      },
+      "mode": "other-qualified",
+      "outcome": "passed"
+    },
+    {
+      "id": "test-quic-types-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "tools/test-quic-types.py",
+        "--zig",
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:10.530675+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stdout.log",
+        "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "check-models-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "tools/check-models.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:20.914771+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/check-models-normal.stdout.log",
+        "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/check-models-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "test-plan-lifecycle-normal",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "tools/test-plan-lifecycle.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:23.873808+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stdout.log",
+        "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "test-quic-types-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "-X",
+        "utf8",
+        "tools/test-quic-types.py",
+        "--zig",
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:36.588868+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stdout.log",
+        "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "check-models-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "-X",
+        "utf8",
+        "tools/check-models.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:49.532138+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/check-models-optimized.stdout.log",
+        "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/check-models-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    },
+    {
+      "id": "test-plan-lifecycle-optimized",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "-X",
+        "utf8",
+        "tools/test-plan-lifecycle.py"
+      ],
+      "cwd": ".",
+      "mode": "host-tool",
+      "exit_code": 0,
+      "started_utc": "2026-09-26T17:58:51.514813+00:00",
+      "stdout": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stdout.log",
+        "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+      },
+      "stderr": {
+        "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "outcome": "passed"
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "T01-01",
+      "outcome": "passed",
+      "observed": "Separate host/provider pure consumer rejects unavailable/record-only capability before effects and preserves typed copied-prefix/event semantics; it builds and runs natively in both modes. Seven other targets compile without SDK inputs.",
+      "run_ids": [
+        "pure-consumer-Debug",
+        "pure-consumer-ReleaseSafe",
+        "pure-cross-x86-windows-gnu",
+        "pure-cross-aarch64-windows-gnu",
+        "pure-cross-x86_64-linux-musl",
+        "pure-cross-aarch64-linux-musl",
+        "pure-cross-x86_64-macos",
+        "pure-cross-aarch64-macos",
+        "pure-cross-x86_64-freebsd"
+      ]
+    },
+    {
+      "id": "T01-02",
+      "outcome": "passed",
+      "observed": "Bounded prefix validation and exact owner/sequence custody reject stale, foreign, tail and early acknowledgement. Four independent misuse programs fail for their intended unit/direction/generation type errors and the positive fixture compiles, normally and under -O.",
+      "run_ids": [
+        "pure-core-Debug",
+        "pure-core-ReleaseSafe",
+        "test-quic-types-normal",
+        "check-models-normal",
+        "test-plan-lifecycle-normal",
+        "test-quic-types-optimized",
+        "check-models-optimized",
+        "test-plan-lifecycle-optimized"
+      ]
+    },
+    {
+      "id": "T01-03",
+      "outcome": "passed",
+      "observed": "Schema/configuration negatives, override allowlists, selected-field inspection, independent canonical SHA256 oracle, borrowed ALPN mutation, DNS/IP/client/server/mTLS and clock/capacity boundaries pass.",
+      "run_ids": [
+        "pure-core-Debug",
+        "pure-core-ReleaseSafe"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "node": "T00",
+      "project": "tls-zig",
+      "path": "docs/verification/completions/T00.json",
+      "sha256": "c0f263dcd5896af803c369466321369ba1a99fd231ad47441576c136796cdeaa"
+    }
+  ]
+}

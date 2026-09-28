@@ -1,0 +1,69 @@
+{
+  "date_utc": "2026-09-26T12:07:33.209790+00:00",
+  "project": "tls-zig",
+  "source_inventory_sha256": "1c09caf89643e42812c076b7ed1482c76634dc7c594608ae69d1eea96bb2e24d",
+  "zig": "0.17.0-dev.1859+dcceb318e",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "environment_overrides": {
+    "ZIG_GLOBAL_CACHE_DIR": "C:\\Projects\\tls-zig\\.zig-global-cache",
+    "OPENSSL_CONF": "C:\\Projects\\tls-zig\\deps\\openssl-install\\ssl\\openssl.cnf",
+    "OPENSSL_MODULES": "C:\\Projects\\tls-zig\\deps\\openssl-install\\lib\\ossl-modules",
+    "TLS_OPENSSL_BIN": "C:\\Projects\\tls-zig\\deps\\openssl-install\\bin"
+  },
+  "runs": [
+    {
+      "label": "format",
+      "command": [
+        "zig",
+        "fmt",
+        "--check",
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "examples",
+        "tests"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "started_utc": "2026-09-26T12:07:33.262452+00:00",
+      "elapsed_seconds": 0.034258,
+      "exit_code": 0,
+      "log": "docs/verification/runs/format.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reported_test_totals": []
+    },
+    {
+      "label": "models",
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tools/check-models.py"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "started_utc": "2026-09-26T12:07:33.316846+00:00",
+      "elapsed_seconds": 0.081024,
+      "exit_code": 0,
+      "log": "docs/verification/runs/models.log",
+      "log_sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228",
+      "reported_test_totals": []
+    },
+    {
+      "label": "debug",
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "host-test",
+        "-j1",
+        "--summary",
+        "all"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "started_utc": "2026-09-26T12:07:33.427857+00:00",
+      "elapsed_seconds": 314.603515,
+      "exit_code": 124,
+      "log": "docs/verification/runs/debug.log",
+      "log_sha256": "99da015693a2e298f02c34fa00c4d4fbbea4abc3cfd0a9046bdd76886b00549f",
+      "reported_test_totals": []
+    }
+  ],
+  "status": "failed"
+}

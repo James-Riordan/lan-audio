@@ -1,0 +1,11 @@
+{
+  "project": "tls-zig",
+  "passed": true,
+  "errors": [],
+  "negative_controls_detected": [
+    "source hash drift",
+    "unindexed file",
+    "broken local link",
+    "missing contract"
+  ]
+}

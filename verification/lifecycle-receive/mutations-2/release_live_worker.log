@@ -1,0 +1,16 @@
+1/1 runtime_lifecycle.test.cancel before each dispatch reclaims exactly the acquired prefix...FAIL (TestUnexpectedResult)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff6d7f6b63f in expect (root_zcu.obj)
+    if (!ok) return error.TestUnexpectedResult;
+             ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:95:37: 0x7ff6d7f6c800 in dispatch (root_zcu.obj)
+                        if (r == 2) try expect(!self.worker_alive and self.worker_joined);
+                                    ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:162:27: 0x7ff6d7f70545 in clean (root_zcu.obj)
+            const token = try self.dispatch();
+                          ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:189:9: 0x7ff6d7f707e8 in test.cancel before each dispatch reclaims exactly the acquired prefix (root_zcu.obj)
+        try host.clean();
+        ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\ebba4515c8ead4dcdc9d00af9cecfcda\root.exe --seed=0x98d6506a

@@ -1,0 +1,230 @@
+[
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/first-run.md"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/first-run.md#troubleshooting"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/runtime/configuration.md"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "verification/playout-demand/RESULTS.md"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/implementation/START_HERE.md"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/README.md"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/first-run.md#build"
+  },
+  {
+    "source": "lan-audio/README.md",
+    "target": "docs/development/workflow.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "first-run.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "first-run.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "first-run.md#troubleshooting"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "runtime/configuration.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "runtime/network-recovery.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "../verification/playout-demand/RESULTS.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "implementation/START_HERE.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "development/workflow.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "PRODUCT.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "verification/acceptance-matrix.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "literate/README.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "runtime/live-workers.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "architecture/modules.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "../src/README.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "DEPENDENCIES.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "protocol/v2.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "protocol/negotiation.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "media/assembly.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "CALLBACKS.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "design/receive-drain.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "design/lifecycle-transactions.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "MATHEMATICS.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "literate/proof-ledger.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "reference/README.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "reference/api-contracts.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "implementation/completion-sequence.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "implementation/roadmap.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "architecture/ecosystem-integration.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "design/configuration-resolution.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "VERIFICATION.md"
+  },
+  {
+    "source": "lan-audio/docs/README.md",
+    "target": "development/documentation.md"
+  },
+  {
+    "source": "lan-audio/docs/first-run.md",
+    "target": "#pair"
+  },
+  {
+    "source": "lan-audio/docs/first-run.md",
+    "target": "runtime/configuration.md"
+  },
+  {
+    "source": "lan-audio/docs/first-run.md",
+    "target": "runtime/network-recovery.md"
+  },
+  {
+    "source": "lan-audio/docs/first-run.md",
+    "target": "../verification/playout-demand/RESULTS.md"
+  },
+  {
+    "source": "lan-audio/docs/development/documentation.md",
+    "target": "../architecture/ecosystem-integration.md"
+  },
+  {
+    "source": "lan-audio/docs/development/documentation.md",
+    "target": "../reference/README.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/VERIFICATION.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/implementation/release-readiness.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "tests/consumer/build.zig"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "tests/consumer/consumer.zig"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/contracts/device-lifecycle.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/DEPENDENCIES.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/CONTRACT.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/README.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/FILES.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/verification/abi.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "docs/verification/source-package.md"
+  },
+  {
+    "source": "miniaudio-zig/README.md",
+    "target": "vendor/miniaudio/LICENSE"
+  }
+]

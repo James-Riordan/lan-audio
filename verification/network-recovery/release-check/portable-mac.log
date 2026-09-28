@@ -1,0 +1,8 @@
+Build Summary: 6/6 steps succeeded
+policy-check success
++- compile test safe x86_64-macos.12.0 cached 984ms MaxRSS:65M
+lifecycle-check success
++- compile test safe x86_64-macos.12.0 cached 787ms MaxRSS:65M
+core-check success
++- compile test safe x86_64-macos.12.0 cached 958ms MaxRSS:65M
+

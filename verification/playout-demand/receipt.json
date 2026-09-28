@@ -1,0 +1,2751 @@
+{
+  "phase": "playout-demand",
+  "observed_at_utc": "2026-09-27T01:12:42.851483+00:00",
+  "host": "Windows-10-10.0.19045-SP0",
+  "zig": "0.17.0-dev.1859+dcceb318e",
+  "prior_receipt": {
+    "path": "C:\\Projects\\lan-audio\\verification\\measured-recovery\\receipt.json",
+    "sha256": "84528a0577c8af7262cb1859b62f24731e3b1969be65e98b277c165d99d405fc"
+  },
+  "qualification_passed": false,
+  "failed_checks": [],
+  "initial_failed_checks": [
+    "recovery-Debug",
+    "recovery-ReleaseSafe",
+    "jitter-repeat-0",
+    "jitter-repeat-1",
+    "jitter-repeat-2",
+    "jitter-repeat-3",
+    "jitter-repeat-4"
+  ],
+  "runs": [
+    {
+      "name": "meter-self-test",
+      "command": [
+        "python",
+        "tests/hardware/windows_live_capture.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.293
+    },
+    {
+      "name": "fmt",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "fmt",
+        "--check",
+        "build.zig",
+        "src",
+        "tests"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.07
+    },
+    {
+      "name": "build-Debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-j1",
+        "test",
+        "config-test",
+        "audio-test",
+        "network-test",
+        "policy-test",
+        "platform-test",
+        "app",
+        "worker-probe",
+        "recovery-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=Debug",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 59.353
+    },
+    {
+      "name": "configuration-Debug",
+      "command": [
+        "python",
+        "tests/integration/configuration.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.567
+    },
+    {
+      "name": "recovery-Debug",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--output",
+        "verification/playout-demand/final/recovery-Debug.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 14.217
+    },
+    {
+      "name": "proxy-Debug",
+      "command": [
+        "python",
+        "tests/integration/recovery_proxy.py",
+        "--output",
+        "verification/playout-demand/final/proxy-Debug.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.301
+    },
+    {
+      "name": "workers-Debug",
+      "command": [
+        "python",
+        "tests/integration/live_worker_peer.py",
+        "--output",
+        "verification/playout-demand/final/workers-Debug.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 14.021
+    },
+    {
+      "name": "build-ReleaseSafe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-j1",
+        "test",
+        "config-test",
+        "audio-test",
+        "network-test",
+        "policy-test",
+        "platform-test",
+        "app",
+        "worker-probe",
+        "recovery-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 213.981
+    },
+    {
+      "name": "configuration-ReleaseSafe",
+      "command": [
+        "python",
+        "tests/integration/configuration.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 6.544
+    },
+    {
+      "name": "recovery-ReleaseSafe",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--output",
+        "verification/playout-demand/final/recovery-ReleaseSafe.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 16.636
+    },
+    {
+      "name": "proxy-ReleaseSafe",
+      "command": [
+        "python",
+        "tests/integration/recovery_proxy.py",
+        "--output",
+        "verification/playout-demand/final/proxy-ReleaseSafe.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.999
+    },
+    {
+      "name": "workers-ReleaseSafe",
+      "command": [
+        "python",
+        "tests/integration/live_worker_peer.py",
+        "--output",
+        "verification/playout-demand/final/workers-ReleaseSafe.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 16.381
+    },
+    {
+      "name": "jitter-repeat-0",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/final/jitter-repeat-0.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 2.575
+    },
+    {
+      "name": "jitter-repeat-1",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/final/jitter-repeat-1.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 2.106
+    },
+    {
+      "name": "jitter-repeat-2",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/final/jitter-repeat-2.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 2.339
+    },
+    {
+      "name": "jitter-repeat-3",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/final/jitter-repeat-3.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 2.097
+    },
+    {
+      "name": "jitter-repeat-4",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/final/jitter-repeat-4.json"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 5.288
+    },
+    {
+      "name": "physical-tone",
+      "command": [
+        "python",
+        "tests/hardware/windows_live_capture.py",
+        "--run",
+        "--seconds",
+        "10",
+        "--from-config",
+        "--test-tone"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 20.55
+    },
+    {
+      "name": "physical-config",
+      "command": [
+        "python",
+        "tests/hardware/windows_live_capture.py",
+        "--run",
+        "--seconds",
+        "10",
+        "--from-config"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 14.469
+    },
+    {
+      "name": "pairing",
+      "command": [
+        "python",
+        "tests/integration/pairing.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 6.747
+    },
+    {
+      "name": "portable-mac",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-j1",
+        "config-check",
+        "core-check",
+        "lifecycle-check",
+        "policy-check",
+        "timing-check",
+        "recovery-check",
+        "-Dtarget=x86_64-macos.12.0",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 58.532
+    },
+    {
+      "name": "custody",
+      "command": [
+        "python",
+        "tools/check_transport.py",
+        "--staged"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.235
+    }
+  ],
+  "cadence_runs": [
+    {
+      "name": "install-Debug",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-j1",
+        "app",
+        "recovery-probe",
+        "worker-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=Debug",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.385
+    },
+    {
+      "name": "recovery-Debug",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--output",
+        "verification/playout-demand/cadence/recovery-Debug.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 13.827
+    },
+    {
+      "name": "workers-Debug",
+      "command": [
+        "python",
+        "tests/integration/live_worker_peer.py",
+        "--output",
+        "verification/playout-demand/cadence/workers-Debug.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 16.707
+    },
+    {
+      "name": "install-ReleaseSafe",
+      "command": [
+        "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+        "build",
+        "-j1",
+        "app",
+        "recovery-probe",
+        "worker-probe",
+        "-Dtransport-tests=true",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 7.787
+    },
+    {
+      "name": "recovery-ReleaseSafe",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--output",
+        "verification/playout-demand/cadence/recovery-ReleaseSafe.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 14.877
+    },
+    {
+      "name": "workers-ReleaseSafe",
+      "command": [
+        "python",
+        "tests/integration/live_worker_peer.py",
+        "--output",
+        "verification/playout-demand/cadence/workers-ReleaseSafe.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 16.362
+    },
+    {
+      "name": "jitter-repeat-0",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/cadence/jitter-repeat-0.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.286
+    },
+    {
+      "name": "jitter-repeat-1",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/cadence/jitter-repeat-1.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.131
+    },
+    {
+      "name": "jitter-repeat-2",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/cadence/jitter-repeat-2.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.886
+    },
+    {
+      "name": "jitter-repeat-3",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/cadence/jitter-repeat-3.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.557
+    },
+    {
+      "name": "jitter-repeat-4",
+      "command": [
+        "python",
+        "tests/integration/recovery_peer.py",
+        "--only",
+        "jitter",
+        "--output",
+        "verification/playout-demand/cadence/jitter-repeat-4.json"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.122
+    }
+  ],
+  "checks": [
+    {
+      "name": "reference",
+      "exit_code": 0
+    },
+    {
+      "name": "docs",
+      "exit_code": 0
+    },
+    {
+      "name": "handoff",
+      "exit_code": 0
+    },
+    {
+      "name": "custody",
+      "exit_code": 0
+    }
+  ],
+  "application_files": {
+    ".gitignore": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+    "AGENTS.md": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+    "build.zig": "90a9eae17002ba0bda7be9ede104a28348597a75c40d137c834e8881ff6b9b79",
+    "build.zig.zon": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+    "docs/architecture/ecosystem-integration.md": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+    "docs/architecture/modules.md": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+    "docs/architecture/platform-capabilities.md": "7bfd20dc55aa93457abf88b44f7f7496b35d1a4329e7807041adc8dc7d270aef",
+    "docs/ARCHITECTURE.md": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+    "docs/CALLBACKS.md": "cb830d96158d5349e88a5a016f91c1b1d13fda2d88efeef915162186e884c77c",
+    "docs/DEPENDENCIES.md": "bc24cdf5c5df25cd24a4bef5c932aedf9b5029bc2f12361c9fdea5237c8ef529",
+    "docs/design/configuration-resolution.md": "35e3f06c63019f77f37ea712c1609ac0cf0fbda2726181cfb886b9d0e827215a",
+    "docs/design/lifecycle-transactions.md": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+    "docs/design/receive-drain.md": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+    "docs/design/system-mathematics.md": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+    "docs/development/documentation.md": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+    "docs/development/workflow.md": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+    "docs/first-run.md": "fb74a5be2061667a66fb6d896f6ff5b7daf064597cff515723efa5a0f2d06e2e",
+    "docs/implementation/completion-sequence.md": "c70cdb5dc4d490a7ffd962a8fd63356172238342554dbca599f878a09bc797f5",
+    "docs/implementation/decisions.md": "c8ebf56107012eb399526a687fa121d44b8f0aaa62871ccb5352598f394982bc",
+    "docs/implementation/interfaces.md": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+    "docs/implementation/layout.md": "7322a7bb959892618541b9f2fffecb5d2703459eaf9dfbee18ea8b4a63463c3a",
+    "docs/implementation/roadmap.md": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+    "docs/implementation/runtime-blueprint.md": "413c0237d3d544b0e679e21763a54346013daa31833aeecaf5c4414686fbafd3",
+    "docs/implementation/START_HERE.md": "12615819e4754e67443047222bd74b0647d659dd51f7486dbf9740174ce01101",
+    "docs/implementation/takeover-readiness.md": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+    "docs/implementation/work-packages/01-target-builds.md": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+    "docs/implementation/work-packages/02-fidelity-protocol.md": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+    "docs/implementation/work-packages/03-identity-endpoints.md": "b8dc46f7e6852eb0a287bf15062fd516d5ec6339c7136a62062886682c1feab5",
+    "docs/implementation/work-packages/04-first-sound.md": "3526b1c9c19fa71f126910413acf868d8074e48c6c1106e7bac5d6b287a36cd7",
+    "docs/implementation/work-packages/05-timing-clocks.md": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+    "docs/implementation/work-packages/06-network-resilience.md": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+    "docs/implementation/work-packages/07-observability.md": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+    "docs/implementation/work-packages/08-user-experience.md": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+    "docs/implementation/work-packages/09-packaging.md": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+    "docs/implementation/work-packages/10-qualification.md": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+    "docs/implementation/work-packages/11-apple-receivers.md": "635d583935c8775c94dd992915a57111280257c811efecd1cb6523db336c7822",
+    "docs/literate/proof-ledger.md": "150a8b55d7cc9588a662fd1c737c7db02bec4a46a08494c4530d2fb1f4c80df4",
+    "docs/literate/quantitative-design.md": "71a603ab5dba85bbb161069b251d1c24a2b78bb32031886e4eff79a1f12f4ed2",
+    "docs/literate/README.md": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+    "docs/literate/runtime-argument.md": "7e5f250d5981ab8d60c62bd8cd51114abddc104c96ac8efaf9897695dd17a0ac",
+    "docs/literate/stream-argument.md": "a63938e251179520822cd3b8ca50da9d76ef4ad391dea71f2ef044e6b5fd460a",
+    "docs/MATHEMATICS.md": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+    "docs/media/assembly.md": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+    "docs/media/pending-block.md": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+    "docs/PRODUCT.md": "c0885c8bb5a9159460ac57b11612051c2f3ba75928aeaa96c92cc941952f56d9",
+    "docs/protocol/negotiation.md": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+    "docs/protocol/v2.md": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+    "docs/README.md": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+    "docs/reference/api-contracts.md": "3f01f5f37e715b62d1f8f52fbc25be2afe93c5dd77b62509db014466c21040d3",
+    "docs/reference/evidence.md": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+    "docs/reference/file-index.json": "99a60d392f26e2ff21e33de0bf0fad82c1e9aadaf945403e5f448666e9cb6f61",
+    "docs/reference/lan-audio.md": "404ae9eecf35375e1f005e75b796c4881b589ddb763b12fe8fb0426e34798412",
+    "docs/reference/miniaudio-zig.md": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+    "docs/reference/README.md": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+    "docs/reference/tls-zig.md": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+    "docs/reference/upstream-assets.md": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+    "docs/runtime/configuration.md": "7a631d9b3495f409885e659bf714dc16eb4bd48c3dfbbc812fd06edd7fce61e5",
+    "docs/runtime/device-discovery.md": "a084ce3eefa860caa3be57d63ce4d63d4234d035e82de8c84f33232e696d5fce",
+    "docs/runtime/lifecycle-core.md": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+    "docs/runtime/live-workers.md": "b831af8eb94df5d97db23e15a1a3e70ad407e223c7c4d56efec6100f1b9c6af5",
+    "docs/runtime/native-events.md": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+    "docs/runtime/native-failures.md": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+    "docs/runtime/native-fence.md": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+    "docs/runtime/network-owner.md": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+    "docs/runtime/network-recovery.md": "a1258d7d2c5538bdc19faedd99708eb17c3742b858a61ec89a04d92873590e7d",
+    "docs/runtime/peer-authorization.md": "7f5f427920fda5418a1ff428fc7144d4fb1dbc060ec1429be175ab3d2347afc4",
+    "docs/runtime/receive-drain.md": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+    "docs/runtime/send-drain.md": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+    "docs/runtime/verified-channel.md": "3b542f1ae51415ce888989376e35362ae398373ab413a7857897a4896f01dbfe",
+    "docs/TRANSPORT.md": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+    "docs/verification/acceptance-matrix.md": "6558db3075a0c4dc22464945789380d000ad020e84871e1e9241c289cb568c74",
+    "docs/verification/runtime-obligations.md": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+    "docs/verification/scenarios.md": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+    "docs/verification/v2-independent.md": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+    "docs/VERIFICATION.md": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+    "README.md": "cd6ba5a13dac310d27bb5c7cbdef79a9ba640d1e414a408257aa507e8169d8d5",
+    "spec/concurrency/SpscPublication.cfg": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+    "spec/concurrency/SpscPublication.tla": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+    "spec/README.md": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+    "spec/runtime/lifecycle_transactions.py": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+    "spec/runtime/ReceiveDrain.cfg": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+    "spec/runtime/ReceiveDrain.tla": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+    "spec/runtime/RuntimeOwnership.cfg": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+    "spec/runtime/RuntimeOwnership.tla": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+    "spec/session/SessionWindow.cfg": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+    "spec/session/SessionWindow.tla": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+    "spec/stream/EndDrain.cfg": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+    "spec/stream/EndDrain.tla": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+    "src/app/config.zig": "a34075b45232c5793755c39ad2ebf23a5b0e9b51c7ba24b4c2fa175e9cc3863e",
+    "src/app/main.zig": "2aed41a42b8695bf253c65ab9d7ed89eb8032e42f4dfe6c4763714efced33fe4",
+    "src/app/stream_command.zig": "ca6e7122e7fd93b0cf9d3f3a025468322f0cb6e1ae2f2059157c7fd30d8f2185",
+    "src/audio/callback_bridge.zig": "790ca5c49e88d466dc04d381f0a895f86e00c0f7304dfa08dc8d2cd7154833ac",
+    "src/audio/frame_queue.zig": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+    "src/host/audio_device.zig": "2cefcaefc6e134b87f864769d05c36a0fe077211656deabd6b636f6606d5493c",
+    "src/host/net/native.c": "7525e48b232df0bfc3cfbd129d1bddadbd6d1a81021f06e43bbf0149a42b857c",
+    "src/host/net/native.h": "23710fac20e3a59fbf73fd269efea4473869562fa665cd9541747817868861d5",
+    "src/host/net/socket.zig": "c98cd5b53bec3632c8c816f0ee1e0e5bac3c511859503c6f886a289109045cd4",
+    "src/host/platform.c": "50cc6875c59da99d329d26902653780c2f19690caa4c8ce55554b64a8eedad50",
+    "src/host/platform.h": "846639cac85d9184bc00ecb3013193afd9fe8a431721eccb50bf0cc088beba22",
+    "src/host/platform.zig": "582c8e3cd71d331f73f4f2353735b53337f6113d426af37c561de7f4dac3e611",
+    "src/host/verified_channel.zig": "62c20e2bf2327e581713376d030750cd03c7f282be220aff47d82a1deee12e0a",
+    "src/media/block_assembler.zig": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+    "src/media/format.zig": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+    "src/media/playout_window.zig": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+    "src/protocol/negotiation.zig": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+    "src/protocol/v1.zig": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+    "src/protocol/v2.zig": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+    "src/README.md": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+    "src/root.zig": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+    "src/runtime/capture_sender.zig": "4e4e457bae5bc82dc208eea23110cbabb69a52f6c91504afa39b05515930c742",
+    "src/runtime/channel_admission.zig": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+    "src/runtime/delivery_timing.zig": "0c071f2d1e388950d22b8db15a00ee286f877c423b01c74dcf90c3b41da96631",
+    "src/runtime/lifecycle.zig": "8e5605e0ee7d19a6e5045b1c386202ce83a26bdbb0c9dec0ecc33a3dc8284aaf",
+    "src/runtime/pending_block.zig": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+    "src/runtime/playback_receiver.zig": "5ad46c97b5901fea6b5fc6d397e4cadf719e7611862fb333e29765021666cfca",
+    "src/runtime/receive_drain.zig": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+    "src/runtime/recovery_policy.zig": "b1b1f8ee421f4852d439eafb3d4c215e1553d9dddb1ed38a1549bc4eb7983c4c",
+    "src/runtime/send_drain.zig": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+    "src/runtime/session_supervisor.zig": "31a1899bd2bdcac685128374223d8e44faf9f4301619cf74dd2883c4f2a7a449",
+    "src/runtime/stream.zig": "8f6f4f44abfe64c5065d061af29037162b1eae011dde83495d8df7e104311a6a",
+    "src/security/peer_policy.zig": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+    "src/session/receiver.zig": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+    "src/session/session.zig": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+    "tests/dependency.zig": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+    "tests/hardware/windows_capture.zig": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+    "tests/hardware/windows_live_capture.py": "ec8f86052d19bb8c02c0d816db59827c7f386f4205e40fd61634e5643e8d66ba",
+    "tests/integration/audio_device.zig": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+    "tests/integration/configuration.py": "4a0054fa558053545deb0d3110220b0d56a43ae8ff8b48ad1129c3ef6383db18",
+    "tests/integration/live_worker.zig": "c7f7166f62299e702d8ccced58ce6ae9eec29e3621ef73ab6b9198defae21fdd",
+    "tests/integration/live_worker_peer.py": "fc4c38e7ce3a90ee0ec2f1bee07ca6583ce421d565b49dfc38c03811650303f3",
+    "tests/integration/loopback_transport.zig": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+    "tests/integration/network_host.zig": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+    "tests/integration/pairing.py": "8db3d90140dad6db88283910a39bec21a3fa91d2e971b76bedf5ce576241a644",
+    "tests/integration/peer_policy.zig": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520",
+    "tests/integration/protocol_v2_peer.py": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+    "tests/integration/protocol_v2_reference.py": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+    "tests/integration/recovery_peer.py": "7272536ed268b35e0b41cc345749c6a6345f29a4a7e693137f7f1f02bf899b49",
+    "tests/integration/recovery_proxy.py": "602502d1ca70eaf8b60b5dcdb0f1ad8fa6e2bda158f7c06b3075aac42fecec91",
+    "tests/integration/recovery_session.zig": "71b4e4508d825fdd7e43355d7d1aa60c07e2546e27e3cb241ca37f4429898a8c",
+    "tests/integration/runtime_lifecycle.zig": "f5952dc29211582bd5a239563eef15a334a39ad6644c86258b378c75c71bbbde",
+    "tests/integration/tls_receiver.zig": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+    "tests/integration/tls_v2.zig": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+    "tests/integration/v2_codec_probe.zig": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+    "tests/integration/verified_channel.zig": "051e9db55c89d6a2fe0197ae854748fc40842ef5f0c74218141ce70fd508fdd9",
+    "tests/integration/verified_channel_peer.py": "963ebd165c77aedc59e8491d09f354f58d1f34e7e1dfcbfbe26c355474973e46",
+    "tests/unit/callback.zig": "ab39f0eb78950b514bebaf3d2db292659a6ecea1dac0309059b29c32a411cebd",
+    "tests/unit/core.zig": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+    "tests/unit/media/assembler.zig": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+    "tests/unit/protocol/negotiation.zig": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+    "tests/unit/protocol/v2.zig": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+    "tests/unit/runtime/pending_block.zig": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+    "tests/unit/wire.zig": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+    "tools/build_mac_candidate.py": "9c2d38e716ce5b71d484c3f2f7a34f89fff405d158800c2886aed0e3aed6aceb",
+    "tools/build_reference.py": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+    "tools/check_docs.py": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+    "tools/check_handoff.py": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+    "tools/check_lifecycle_spec.py": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+    "tools/check_models.py": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+    "tools/check_transport.py": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+    "tools/create_pair.py": "a268c823203b07d660658bc633fc4e05c2c821006da3de07df572f37d02b0a4f",
+    "tools/reference_contracts.json": "76c84d291acab5ea00b8ae4dc226b20c39b83bbe527824eeccab6d35b0534963",
+    "tools/test_transport.py": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+    "tools/test_v2_differential.py": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+    "transport-lock.json": "e2ffcfcbab87ccf7f1f10ec20f334e65457e8220c9572fec28adf9fe3c5bf061"
+  },
+  "source_snapshot": "source-snapshot",
+  "native_inputs": {
+    "C:\\Projects\\miniaudio-zig\\src\\native.c": "31743606c734f1d5c653605244f0b6f3b5ebf585480c12c849e2ffeea3025b9b",
+    "C:\\Projects\\miniaudio-zig\\src\\profile.h": "8120aeebb5d470aba45299465cefa43710c04e1e8e281b3cd6bd10a9cf02da6f",
+    "C:\\Projects\\miniaudio-zig\\src\\root.zig": "52276fdaa6c0bd2b9c1a741bf5dc377fe5d871374236a2e6f73cf562d68e99ab",
+    "C:\\Projects\\miniaudio-zig\\build.zig": "15a32d1cbf3428996cc6a2f8268b5e2c18c111442bb5c7826a7891d12dc819dc",
+    "C:\\Projects\\miniaudio-zig\\build.zig.zon": "18ee754b8351cf9b847acc2ee54ac6a86f9d7dde7304cd78b750eb6d0b9871f4",
+    "C:\\Projects\\miniaudio-zig\\UPSTREAM.json": "8c2c2caac24e915131f33c16cbd30b1bc809681d715ef28895da32a0d6b67713",
+    "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\miniaudio.h": "ac7af4de748b7e26b777f37e01cee313a308a7296a3eb080e2906b320cc55c89",
+    "C:\\Projects\\miniaudio-zig\\vendor\\miniaudio\\LICENSE": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+  },
+  "changed_or_added_paths": [
+    "docs/CALLBACKS.md",
+    "docs/first-run.md",
+    "docs/literate/proof-ledger.md",
+    "docs/reference/lan-audio.md",
+    "docs/runtime/network-recovery.md",
+    "src/host/audio_device.zig",
+    "src/runtime/delivery_timing.zig",
+    "src/runtime/playback_receiver.zig",
+    "src/runtime/recovery_policy.zig",
+    "src/runtime/session_supervisor.zig",
+    "src/runtime/stream.zig",
+    "tests/hardware/windows_live_capture.py",
+    "tests/integration/live_worker_peer.py",
+    "tests/integration/recovery_peer.py",
+    "tools/reference_contracts.json"
+  ],
+  "installed_ReleaseSafe_binaries": {
+    "lan-audio.exe": "d860fcc323dd6e9c9c569cafa92a9bfef9ef5579a318135b1b243ff586fc89c0",
+    "audio-worker-probe.exe": "73a472260230f2595ffbcce8a68972cb3d88ef315b47ec7648cb1470eb4687a7",
+    "audio-recovery-probe.exe": "65988d3b6f37b0009f1ea1478534d1b87fe38b18193c9461be224634b181bbf2",
+    "libssl-3-x64.dll": "78afd0150d49f9b526df52a359fc6269a3a752fe78eaa79adfc431bdba1754ce",
+    "libcrypto-3-x64.dll": "bc8010dff1c5b57ca576a0a978943e5768d23f4dc2b3329b58ee13093fce884d"
+  },
+  "limits": [
+    "No native Mac application or speaker qualification.",
+    "Independent clock correction and sustained Wi-Fi playback remain open.",
+    "No phone app, SvelteKit UI or process/tab capture."
+  ],
+  "evidence_files": [
+    {
+      "path": "baseline.json",
+      "sha256": "7804e966de1aced4464bf6b61cbffd8cf79ab7a688918b91461ca155e2355a6c",
+      "bytes": 17654
+    },
+    {
+      "path": "before/.gitignore",
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+      "bytes": 61
+    },
+    {
+      "path": "before/AGENTS.md",
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+      "bytes": 1882
+    },
+    {
+      "path": "before/build.zig",
+      "sha256": "90a9eae17002ba0bda7be9ede104a28348597a75c40d137c834e8881ff6b9b79",
+      "bytes": 23765
+    },
+    {
+      "path": "before/build.zig.zon",
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+      "bytes": 662
+    },
+    {
+      "path": "before/docs/architecture/ecosystem-integration.md",
+      "sha256": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+      "bytes": 10194
+    },
+    {
+      "path": "before/docs/architecture/modules.md",
+      "sha256": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+      "bytes": 3839
+    },
+    {
+      "path": "before/docs/architecture/platform-capabilities.md",
+      "sha256": "7bfd20dc55aa93457abf88b44f7f7496b35d1a4329e7807041adc8dc7d270aef",
+      "bytes": 6448
+    },
+    {
+      "path": "before/docs/ARCHITECTURE.md",
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+      "bytes": 13449
+    },
+    {
+      "path": "before/docs/CALLBACKS.md",
+      "sha256": "c92964d41ac6b2ab3077cd6fa9f77cef1a0199d5fb5bfdbd4744aa555467a4ac",
+      "bytes": 8426
+    },
+    {
+      "path": "before/docs/DEPENDENCIES.md",
+      "sha256": "bc24cdf5c5df25cd24a4bef5c932aedf9b5029bc2f12361c9fdea5237c8ef529",
+      "bytes": 8243
+    },
+    {
+      "path": "before/docs/design/configuration-resolution.md",
+      "sha256": "35e3f06c63019f77f37ea712c1609ac0cf0fbda2726181cfb886b9d0e827215a",
+      "bytes": 9783
+    },
+    {
+      "path": "before/docs/design/lifecycle-transactions.md",
+      "sha256": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+      "bytes": 16779
+    },
+    {
+      "path": "before/docs/design/receive-drain.md",
+      "sha256": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+      "bytes": 8366
+    },
+    {
+      "path": "before/docs/design/system-mathematics.md",
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+      "bytes": 6660
+    },
+    {
+      "path": "before/docs/development/documentation.md",
+      "sha256": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+      "bytes": 4262
+    },
+    {
+      "path": "before/docs/development/workflow.md",
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+      "bytes": 2769
+    },
+    {
+      "path": "before/docs/first-run.md",
+      "sha256": "aecdb373d63b059ae277946f8695f68b73384c0d80158eb33eccacf40bbfb8c3",
+      "bytes": 4804
+    },
+    {
+      "path": "before/docs/implementation/completion-sequence.md",
+      "sha256": "c70cdb5dc4d490a7ffd962a8fd63356172238342554dbca599f878a09bc797f5",
+      "bytes": 11239
+    },
+    {
+      "path": "before/docs/implementation/decisions.md",
+      "sha256": "c8ebf56107012eb399526a687fa121d44b8f0aaa62871ccb5352598f394982bc",
+      "bytes": 8632
+    },
+    {
+      "path": "before/docs/implementation/interfaces.md",
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+      "bytes": 7194
+    },
+    {
+      "path": "before/docs/implementation/layout.md",
+      "sha256": "7322a7bb959892618541b9f2fffecb5d2703459eaf9dfbee18ea8b4a63463c3a",
+      "bytes": 8866
+    },
+    {
+      "path": "before/docs/implementation/roadmap.md",
+      "sha256": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+      "bytes": 4039
+    },
+    {
+      "path": "before/docs/implementation/runtime-blueprint.md",
+      "sha256": "413c0237d3d544b0e679e21763a54346013daa31833aeecaf5c4414686fbafd3",
+      "bytes": 14390
+    },
+    {
+      "path": "before/docs/implementation/START_HERE.md",
+      "sha256": "12615819e4754e67443047222bd74b0647d659dd51f7486dbf9740174ce01101",
+      "bytes": 8417
+    },
+    {
+      "path": "before/docs/implementation/takeover-readiness.md",
+      "sha256": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+      "bytes": 8881
+    },
+    {
+      "path": "before/docs/implementation/work-packages/01-target-builds.md",
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+      "bytes": 3079
+    },
+    {
+      "path": "before/docs/implementation/work-packages/02-fidelity-protocol.md",
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+      "bytes": 4625
+    },
+    {
+      "path": "before/docs/implementation/work-packages/03-identity-endpoints.md",
+      "sha256": "b8dc46f7e6852eb0a287bf15062fd516d5ec6339c7136a62062886682c1feab5",
+      "bytes": 4226
+    },
+    {
+      "path": "before/docs/implementation/work-packages/04-first-sound.md",
+      "sha256": "3526b1c9c19fa71f126910413acf868d8074e48c6c1106e7bac5d6b287a36cd7",
+      "bytes": 4838
+    },
+    {
+      "path": "before/docs/implementation/work-packages/05-timing-clocks.md",
+      "sha256": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+      "bytes": 3505
+    },
+    {
+      "path": "before/docs/implementation/work-packages/06-network-resilience.md",
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+      "bytes": 2752
+    },
+    {
+      "path": "before/docs/implementation/work-packages/07-observability.md",
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+      "bytes": 2320
+    },
+    {
+      "path": "before/docs/implementation/work-packages/08-user-experience.md",
+      "sha256": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+      "bytes": 2815
+    },
+    {
+      "path": "before/docs/implementation/work-packages/09-packaging.md",
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+      "bytes": 2411
+    },
+    {
+      "path": "before/docs/implementation/work-packages/10-qualification.md",
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+      "bytes": 2389
+    },
+    {
+      "path": "before/docs/implementation/work-packages/11-apple-receivers.md",
+      "sha256": "635d583935c8775c94dd992915a57111280257c811efecd1cb6523db336c7822",
+      "bytes": 5754
+    },
+    {
+      "path": "before/docs/literate/proof-ledger.md",
+      "sha256": "feec898c99e7b00885ebed85a5dc276eb8ba2b0517aecadf03b4d0b8fdd95a2b",
+      "bytes": 11630
+    },
+    {
+      "path": "before/docs/literate/quantitative-design.md",
+      "sha256": "71a603ab5dba85bbb161069b251d1c24a2b78bb32031886e4eff79a1f12f4ed2",
+      "bytes": 6713
+    },
+    {
+      "path": "before/docs/literate/README.md",
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+      "bytes": 4639
+    },
+    {
+      "path": "before/docs/literate/runtime-argument.md",
+      "sha256": "7e5f250d5981ab8d60c62bd8cd51114abddc104c96ac8efaf9897695dd17a0ac",
+      "bytes": 11170
+    },
+    {
+      "path": "before/docs/literate/stream-argument.md",
+      "sha256": "a63938e251179520822cd3b8ca50da9d76ef4ad391dea71f2ef044e6b5fd460a",
+      "bytes": 10859
+    },
+    {
+      "path": "before/docs/MATHEMATICS.md",
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+      "bytes": 19013
+    },
+    {
+      "path": "before/docs/media/assembly.md",
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+      "bytes": 6768
+    },
+    {
+      "path": "before/docs/media/pending-block.md",
+      "sha256": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+      "bytes": 7285
+    },
+    {
+      "path": "before/docs/PRODUCT.md",
+      "sha256": "c0885c8bb5a9159460ac57b11612051c2f3ba75928aeaa96c92cc941952f56d9",
+      "bytes": 11558
+    },
+    {
+      "path": "before/docs/protocol/negotiation.md",
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+      "bytes": 5106
+    },
+    {
+      "path": "before/docs/protocol/v2.md",
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+      "bytes": 7835
+    },
+    {
+      "path": "before/docs/README.md",
+      "sha256": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+      "bytes": 3392
+    },
+    {
+      "path": "before/docs/reference/api-contracts.md",
+      "sha256": "3f01f5f37e715b62d1f8f52fbc25be2afe93c5dd77b62509db014466c21040d3",
+      "bytes": 17413
+    },
+    {
+      "path": "before/docs/reference/evidence.md",
+      "sha256": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+      "bytes": 220775
+    },
+    {
+      "path": "before/docs/reference/file-index.json",
+      "sha256": "99a60d392f26e2ff21e33de0bf0fad82c1e9aadaf945403e5f448666e9cb6f61",
+      "bytes": 144858
+    },
+    {
+      "path": "before/docs/reference/lan-audio.md",
+      "sha256": "7a558f8dffce8d726fa1eaacbcf72989f7a1f79d368b6f9174d2e7f455084960",
+      "bytes": 205964
+    },
+    {
+      "path": "before/docs/reference/miniaudio-zig.md",
+      "sha256": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+      "bytes": 46334
+    },
+    {
+      "path": "before/docs/reference/README.md",
+      "sha256": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+      "bytes": 2773
+    },
+    {
+      "path": "before/docs/reference/tls-zig.md",
+      "sha256": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+      "bytes": 283610
+    },
+    {
+      "path": "before/docs/reference/upstream-assets.md",
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+      "bytes": 59427
+    },
+    {
+      "path": "before/docs/runtime/configuration.md",
+      "sha256": "7a631d9b3495f409885e659bf714dc16eb4bd48c3dfbbc812fd06edd7fce61e5",
+      "bytes": 7229
+    },
+    {
+      "path": "before/docs/runtime/device-discovery.md",
+      "sha256": "a084ce3eefa860caa3be57d63ce4d63d4234d035e82de8c84f33232e696d5fce",
+      "bytes": 2635
+    },
+    {
+      "path": "before/docs/runtime/lifecycle-core.md",
+      "sha256": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+      "bytes": 12628
+    },
+    {
+      "path": "before/docs/runtime/live-workers.md",
+      "sha256": "b831af8eb94df5d97db23e15a1a3e70ad407e223c7c4d56efec6100f1b9c6af5",
+      "bytes": 7352
+    },
+    {
+      "path": "before/docs/runtime/native-events.md",
+      "sha256": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+      "bytes": 8616
+    },
+    {
+      "path": "before/docs/runtime/native-failures.md",
+      "sha256": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+      "bytes": 3156
+    },
+    {
+      "path": "before/docs/runtime/native-fence.md",
+      "sha256": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+      "bytes": 10074
+    },
+    {
+      "path": "before/docs/runtime/network-owner.md",
+      "sha256": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+      "bytes": 7847
+    },
+    {
+      "path": "before/docs/runtime/network-recovery.md",
+      "sha256": "15def1ba4cc9bcd360f4c48e58acfe1f5eadad8abc3699f7f9013a0db0fb4a39",
+      "bytes": 12451
+    },
+    {
+      "path": "before/docs/runtime/peer-authorization.md",
+      "sha256": "7f5f427920fda5418a1ff428fc7144d4fb1dbc060ec1429be175ab3d2347afc4",
+      "bytes": 6572
+    },
+    {
+      "path": "before/docs/runtime/receive-drain.md",
+      "sha256": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+      "bytes": 10734
+    },
+    {
+      "path": "before/docs/runtime/send-drain.md",
+      "sha256": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+      "bytes": 8084
+    },
+    {
+      "path": "before/docs/runtime/verified-channel.md",
+      "sha256": "3b542f1ae51415ce888989376e35362ae398373ab413a7857897a4896f01dbfe",
+      "bytes": 7467
+    },
+    {
+      "path": "before/docs/TRANSPORT.md",
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+      "bytes": 8295
+    },
+    {
+      "path": "before/docs/verification/acceptance-matrix.md",
+      "sha256": "6558db3075a0c4dc22464945789380d000ad020e84871e1e9241c289cb568c74",
+      "bytes": 5939
+    },
+    {
+      "path": "before/docs/verification/runtime-obligations.md",
+      "sha256": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+      "bytes": 11420
+    },
+    {
+      "path": "before/docs/verification/scenarios.md",
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+      "bytes": 4483
+    },
+    {
+      "path": "before/docs/verification/v2-independent.md",
+      "sha256": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+      "bytes": 6108
+    },
+    {
+      "path": "before/docs/VERIFICATION.md",
+      "sha256": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+      "bytes": 5039
+    },
+    {
+      "path": "before/README.md",
+      "sha256": "cd6ba5a13dac310d27bb5c7cbdef79a9ba640d1e414a408257aa507e8169d8d5",
+      "bytes": 8102
+    },
+    {
+      "path": "before/spec/concurrency/SpscPublication.cfg",
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+      "bytes": 138
+    },
+    {
+      "path": "before/spec/concurrency/SpscPublication.tla",
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+      "bytes": 2292
+    },
+    {
+      "path": "before/spec/README.md",
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+      "bytes": 6151
+    },
+    {
+      "path": "before/spec/runtime/lifecycle_transactions.py",
+      "sha256": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+      "bytes": 9108
+    },
+    {
+      "path": "before/spec/runtime/ReceiveDrain.cfg",
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+      "bytes": 202
+    },
+    {
+      "path": "before/spec/runtime/ReceiveDrain.tla",
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+      "bytes": 5019
+    },
+    {
+      "path": "before/spec/runtime/RuntimeOwnership.cfg",
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+      "bytes": 227
+    },
+    {
+      "path": "before/spec/runtime/RuntimeOwnership.tla",
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+      "bytes": 7664
+    },
+    {
+      "path": "before/spec/session/SessionWindow.cfg",
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+      "bytes": 212
+    },
+    {
+      "path": "before/spec/session/SessionWindow.tla",
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+      "bytes": 3912
+    },
+    {
+      "path": "before/spec/stream/EndDrain.cfg",
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+      "bytes": 166
+    },
+    {
+      "path": "before/spec/stream/EndDrain.tla",
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+      "bytes": 1949
+    },
+    {
+      "path": "before/src/app/config.zig",
+      "sha256": "a34075b45232c5793755c39ad2ebf23a5b0e9b51c7ba24b4c2fa175e9cc3863e",
+      "bytes": 10761
+    },
+    {
+      "path": "before/src/app/main.zig",
+      "sha256": "2aed41a42b8695bf253c65ab9d7ed89eb8032e42f4dfe6c4763714efced33fe4",
+      "bytes": 5047
+    },
+    {
+      "path": "before/src/app/stream_command.zig",
+      "sha256": "ca6e7122e7fd93b0cf9d3f3a025468322f0cb6e1ae2f2059157c7fd30d8f2185",
+      "bytes": 9149
+    },
+    {
+      "path": "before/src/audio/callback_bridge.zig",
+      "sha256": "790ca5c49e88d466dc04d381f0a895f86e00c0f7304dfa08dc8d2cd7154833ac",
+      "bytes": 6909
+    },
+    {
+      "path": "before/src/audio/frame_queue.zig",
+      "sha256": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+      "bytes": 4379
+    },
+    {
+      "path": "before/src/host/audio_device.zig",
+      "sha256": "9599356af64e8963553bc0867dedf9c26afa237e5915b726858009ed86ba5ebb",
+      "bytes": 40450
+    },
+    {
+      "path": "before/src/host/net/native.c",
+      "sha256": "7525e48b232df0bfc3cfbd129d1bddadbd6d1a81021f06e43bbf0149a42b857c",
+      "bytes": 10337
+    },
+    {
+      "path": "before/src/host/net/native.h",
+      "sha256": "23710fac20e3a59fbf73fd269efea4473869562fa665cd9541747817868861d5",
+      "bytes": 1451
+    },
+    {
+      "path": "before/src/host/net/socket.zig",
+      "sha256": "c98cd5b53bec3632c8c816f0ee1e0e5bac3c511859503c6f886a289109045cd4",
+      "bytes": 10215
+    },
+    {
+      "path": "before/src/host/platform.c",
+      "sha256": "50cc6875c59da99d329d26902653780c2f19690caa4c8ce55554b64a8eedad50",
+      "bytes": 3426
+    },
+    {
+      "path": "before/src/host/platform.h",
+      "sha256": "846639cac85d9184bc00ecb3013193afd9fe8a431721eccb50bf0cc088beba22",
+      "bytes": 688
+    },
+    {
+      "path": "before/src/host/platform.zig",
+      "sha256": "582c8e3cd71d331f73f4f2353735b53337f6113d426af37c561de7f4dac3e611",
+      "bytes": 3314
+    },
+    {
+      "path": "before/src/host/verified_channel.zig",
+      "sha256": "62c20e2bf2327e581713376d030750cd03c7f282be220aff47d82a1deee12e0a",
+      "bytes": 11331
+    },
+    {
+      "path": "before/src/media/block_assembler.zig",
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+      "bytes": 4262
+    },
+    {
+      "path": "before/src/media/format.zig",
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+      "bytes": 1886
+    },
+    {
+      "path": "before/src/media/playout_window.zig",
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+      "bytes": 3125
+    },
+    {
+      "path": "before/src/protocol/negotiation.zig",
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+      "bytes": 4631
+    },
+    {
+      "path": "before/src/protocol/v1.zig",
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+      "bytes": 7648
+    },
+    {
+      "path": "before/src/protocol/v2.zig",
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+      "bytes": 9445
+    },
+    {
+      "path": "before/src/README.md",
+      "sha256": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+      "bytes": 2907
+    },
+    {
+      "path": "before/src/root.zig",
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+      "bytes": 1037
+    },
+    {
+      "path": "before/src/runtime/capture_sender.zig",
+      "sha256": "4e4e457bae5bc82dc208eea23110cbabb69a52f6c91504afa39b05515930c742",
+      "bytes": 3350
+    },
+    {
+      "path": "before/src/runtime/channel_admission.zig",
+      "sha256": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+      "bytes": 4212
+    },
+    {
+      "path": "before/src/runtime/delivery_timing.zig",
+      "sha256": "385894363a18990fe7a7d5a548f50446c2702ff58dbc43a5eedcbf03d9fa421e",
+      "bytes": 2144
+    },
+    {
+      "path": "before/src/runtime/lifecycle.zig",
+      "sha256": "8e5605e0ee7d19a6e5045b1c386202ce83a26bdbb0c9dec0ecc33a3dc8284aaf",
+      "bytes": 18904
+    },
+    {
+      "path": "before/src/runtime/pending_block.zig",
+      "sha256": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+      "bytes": 3532
+    },
+    {
+      "path": "before/src/runtime/playback_receiver.zig",
+      "sha256": "791f9bfffbdbcc3c9b740bdfc8689c725fee710bfa395bd7d1bc0ce804e957de",
+      "bytes": 4945
+    },
+    {
+      "path": "before/src/runtime/receive_drain.zig",
+      "sha256": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+      "bytes": 8696
+    },
+    {
+      "path": "before/src/runtime/recovery_policy.zig",
+      "sha256": "45d8307c35c7a34325ea9bfe61a44f203470b4ff0071e3cabc81da2c7ab38cde",
+      "bytes": 7749
+    },
+    {
+      "path": "before/src/runtime/send_drain.zig",
+      "sha256": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+      "bytes": 9389
+    },
+    {
+      "path": "before/src/runtime/session_supervisor.zig",
+      "sha256": "615f84dfd32cd150df4047601ff9e8b78dceed0ab79bdd337638c626958474bb",
+      "bytes": 3930
+    },
+    {
+      "path": "before/src/runtime/stream.zig",
+      "sha256": "90ee57c89e439f732dc7caed5a0b05751950b5ea9bb84dea9538772223cba513",
+      "bytes": 16912
+    },
+    {
+      "path": "before/src/security/peer_policy.zig",
+      "sha256": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+      "bytes": 4277
+    },
+    {
+      "path": "before/src/session/receiver.zig",
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+      "bytes": 3727
+    },
+    {
+      "path": "before/src/session/session.zig",
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+      "bytes": 2946
+    },
+    {
+      "path": "before/tests/dependency.zig",
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+      "bytes": 459
+    },
+    {
+      "path": "before/tests/hardware/windows_capture.zig",
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+      "bytes": 2160
+    },
+    {
+      "path": "before/tests/hardware/windows_live_capture.py",
+      "sha256": "582c847029465583fb2e04246f416cda1a5baee285626cf12590bebfb5c209d9",
+      "bytes": 6545
+    },
+    {
+      "path": "before/tests/integration/audio_device.zig",
+      "sha256": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+      "bytes": 7905
+    },
+    {
+      "path": "before/tests/integration/configuration.py",
+      "sha256": "4a0054fa558053545deb0d3110220b0d56a43ae8ff8b48ad1129c3ef6383db18",
+      "bytes": 4760
+    },
+    {
+      "path": "before/tests/integration/live_worker.zig",
+      "sha256": "c7f7166f62299e702d8ccced58ce6ae9eec29e3621ef73ab6b9198defae21fdd",
+      "bytes": 2328
+    },
+    {
+      "path": "before/tests/integration/live_worker_peer.py",
+      "sha256": "2dbe5da9fda422bf5216a382667cace67ca7daf2d38a215acd66708ba5858608",
+      "bytes": 8524
+    },
+    {
+      "path": "before/tests/integration/loopback_transport.zig",
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+      "bytes": 2346
+    },
+    {
+      "path": "before/tests/integration/network_host.zig",
+      "sha256": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+      "bytes": 9593
+    },
+    {
+      "path": "before/tests/integration/pairing.py",
+      "sha256": "8db3d90140dad6db88283910a39bec21a3fa91d2e971b76bedf5ce576241a644",
+      "bytes": 5335
+    },
+    {
+      "path": "before/tests/integration/peer_policy.zig",
+      "sha256": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520",
+      "bytes": 10693
+    },
+    {
+      "path": "before/tests/integration/protocol_v2_peer.py",
+      "sha256": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+      "bytes": 11632
+    },
+    {
+      "path": "before/tests/integration/protocol_v2_reference.py",
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+      "bytes": 2599
+    },
+    {
+      "path": "before/tests/integration/recovery_peer.py",
+      "sha256": "d82a9a32669639425ce4f6d0ad1b34b57e6aac1184bb54ea8df855c80e8e18ec",
+      "bytes": 13491
+    },
+    {
+      "path": "before/tests/integration/recovery_proxy.py",
+      "sha256": "602502d1ca70eaf8b60b5dcdb0f1ad8fa6e2bda158f7c06b3075aac42fecec91",
+      "bytes": 7105
+    },
+    {
+      "path": "before/tests/integration/recovery_session.zig",
+      "sha256": "71b4e4508d825fdd7e43355d7d1aa60c07e2546e27e3cb241ca37f4429898a8c",
+      "bytes": 4839
+    },
+    {
+      "path": "before/tests/integration/runtime_lifecycle.zig",
+      "sha256": "f5952dc29211582bd5a239563eef15a334a39ad6644c86258b378c75c71bbbde",
+      "bytes": 56142
+    },
+    {
+      "path": "before/tests/integration/tls_receiver.zig",
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+      "bytes": 6347
+    },
+    {
+      "path": "before/tests/integration/tls_v2.zig",
+      "sha256": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+      "bytes": 8102
+    },
+    {
+      "path": "before/tests/integration/v2_codec_probe.zig",
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+      "bytes": 2787
+    },
+    {
+      "path": "before/tests/integration/verified_channel.zig",
+      "sha256": "051e9db55c89d6a2fe0197ae854748fc40842ef5f0c74218141ce70fd508fdd9",
+      "bytes": 9926
+    },
+    {
+      "path": "before/tests/integration/verified_channel_peer.py",
+      "sha256": "963ebd165c77aedc59e8491d09f354f58d1f34e7e1dfcbfbe26c355474973e46",
+      "bytes": 12913
+    },
+    {
+      "path": "before/tests/unit/callback.zig",
+      "sha256": "ab39f0eb78950b514bebaf3d2db292659a6ecea1dac0309059b29c32a411cebd",
+      "bytes": 10927
+    },
+    {
+      "path": "before/tests/unit/core.zig",
+      "sha256": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+      "bytes": 6681
+    },
+    {
+      "path": "before/tests/unit/media/assembler.zig",
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+      "bytes": 6261
+    },
+    {
+      "path": "before/tests/unit/protocol/negotiation.zig",
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+      "bytes": 7040
+    },
+    {
+      "path": "before/tests/unit/protocol/v2.zig",
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+      "bytes": 7527
+    },
+    {
+      "path": "before/tests/unit/runtime/pending_block.zig",
+      "sha256": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+      "bytes": 9158
+    },
+    {
+      "path": "before/tests/unit/wire.zig",
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+      "bytes": 6153
+    },
+    {
+      "path": "before/tools/build_mac_candidate.py",
+      "sha256": "9c2d38e716ce5b71d484c3f2f7a34f89fff405d158800c2886aed0e3aed6aceb",
+      "bytes": 4904
+    },
+    {
+      "path": "before/tools/build_reference.py",
+      "sha256": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+      "bytes": 12577
+    },
+    {
+      "path": "before/tools/check_docs.py",
+      "sha256": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+      "bytes": 1756
+    },
+    {
+      "path": "before/tools/check_handoff.py",
+      "sha256": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+      "bytes": 2723
+    },
+    {
+      "path": "before/tools/check_lifecycle_spec.py",
+      "sha256": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+      "bytes": 2774
+    },
+    {
+      "path": "before/tools/check_models.py",
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+      "bytes": 3889
+    },
+    {
+      "path": "before/tools/check_transport.py",
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+      "bytes": 1708
+    },
+    {
+      "path": "before/tools/create_pair.py",
+      "sha256": "a268c823203b07d660658bc633fc4e05c2c821006da3de07df572f37d02b0a4f",
+      "bytes": 6894
+    },
+    {
+      "path": "before/tools/reference_contracts.json",
+      "sha256": "69af057aad1d448826d4d0117b9c4e4a5fb349ea23b91e3d54b6088949952662",
+      "bytes": 404624
+    },
+    {
+      "path": "before/tools/test_transport.py",
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+      "bytes": 8958
+    },
+    {
+      "path": "before/tools/test_v2_differential.py",
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+      "bytes": 7838
+    },
+    {
+      "path": "before/transport-lock.json",
+      "sha256": "e2ffcfcbab87ccf7f1f10ec20f334e65457e8220c9572fec28adf9fe3c5bf061",
+      "bytes": 33627
+    },
+    {
+      "path": "cadence/before/tests/integration/live_worker_peer.py",
+      "sha256": "2dbe5da9fda422bf5216a382667cace67ca7daf2d38a215acd66708ba5858608",
+      "bytes": 8524
+    },
+    {
+      "path": "cadence/before/tests/integration/recovery_peer.py",
+      "sha256": "b0b72df4042351c6807401b2c65fd444be1891f225f2be9fe959d2c4dfad06f8",
+      "bytes": 13588
+    },
+    {
+      "path": "cadence/before/tools/reference_contracts.json",
+      "sha256": "5777e6263d851689ef1cbcfce47fba862e7efa879da03b279b2cc38bd9e23be5",
+      "bytes": 405501
+    },
+    {
+      "path": "cadence/binaries-Debug.json",
+      "sha256": "14c518e0afe4796c1fccd1d194e4e5d359d8650a3f863fa6ed2a32ac8d8f0898",
+      "bytes": 474
+    },
+    {
+      "path": "cadence/binaries-ReleaseSafe.json",
+      "sha256": "cf05175f3b36b81b37fe8a18439928f2fc19b6adc6bf7fd3529e616c8d21d23f",
+      "bytes": 474
+    },
+    {
+      "path": "cadence/install-Debug.log",
+      "sha256": "f24d527ca7c535a2418e52a75a947b8ed88f9e5c2a6b316eb6bd9fde1404d6b6",
+      "bytes": 1664
+    },
+    {
+      "path": "cadence/install-ReleaseSafe.log",
+      "sha256": "6dcddf9132c637b27230e2d4e50969ade642232e7fc173ec51eae6b1b0b26df2",
+      "bytes": 1658
+    },
+    {
+      "path": "cadence/jitter-repeat-0.json",
+      "sha256": "04bab2c9e1ca4445d901a57feba9633ffaec0cc167ac29e5bdaf6894b20d798d",
+      "bytes": 2695
+    },
+    {
+      "path": "cadence/jitter-repeat-0.log",
+      "sha256": "ac41dd9a754a7d40c7936a25108063b726e88ec9aff195c4d70fd055cf287486",
+      "bytes": 48
+    },
+    {
+      "path": "cadence/jitter-repeat-1.json",
+      "sha256": "5bc432b932e2e4c8fa06516255942be69b5da986f8e536b03434af8871208ffd",
+      "bytes": 2694
+    },
+    {
+      "path": "cadence/jitter-repeat-1.log",
+      "sha256": "ac41dd9a754a7d40c7936a25108063b726e88ec9aff195c4d70fd055cf287486",
+      "bytes": 48
+    },
+    {
+      "path": "cadence/jitter-repeat-2.json",
+      "sha256": "e462f5c567a84e70906a9ebd0c6dd40b553f44f0d7ba8914c957ddd5dcb7590e",
+      "bytes": 2696
+    },
+    {
+      "path": "cadence/jitter-repeat-2.log",
+      "sha256": "ac41dd9a754a7d40c7936a25108063b726e88ec9aff195c4d70fd055cf287486",
+      "bytes": 48
+    },
+    {
+      "path": "cadence/jitter-repeat-3.json",
+      "sha256": "7d8435b8588c910a92b7c6e974fce08b4f0d8a79f257841ff9a3e267e95e84b1",
+      "bytes": 2695
+    },
+    {
+      "path": "cadence/jitter-repeat-3.log",
+      "sha256": "ac41dd9a754a7d40c7936a25108063b726e88ec9aff195c4d70fd055cf287486",
+      "bytes": 48
+    },
+    {
+      "path": "cadence/jitter-repeat-4.json",
+      "sha256": "3e3935cbdf96c9bc5ac9886a2355e47a9446e0075e38f94ed31969a7fc423710",
+      "bytes": 2694
+    },
+    {
+      "path": "cadence/jitter-repeat-4.log",
+      "sha256": "ac41dd9a754a7d40c7936a25108063b726e88ec9aff195c4d70fd055cf287486",
+      "bytes": 48
+    },
+    {
+      "path": "cadence/recovery-Debug.json",
+      "sha256": "4e384f8021f8f50037a08df6745e53ab6d6a80d07dfa4c8e25bcaaa23580f391",
+      "bytes": 36916
+    },
+    {
+      "path": "cadence/recovery-Debug.log",
+      "sha256": "9b4c413a243f5bf464be625fadd6f6f7a44e5042555c06fa998a321fd66a2873",
+      "bytes": 648
+    },
+    {
+      "path": "cadence/recovery-ReleaseSafe.json",
+      "sha256": "4da0cd1df29a7f35f006cfd20a044ff1694ea294f2976a904485d51686f76710",
+      "bytes": 36635
+    },
+    {
+      "path": "cadence/recovery-ReleaseSafe.log",
+      "sha256": "eb53db33108e6c11f49d4d0acbca821aad82fb7b805ec826849a0fc30aa3ffa9",
+      "bytes": 640
+    },
+    {
+      "path": "cadence/runs.json",
+      "sha256": "f37e40b9ca346240032c4014c56c3de7359a07d181dd88f8a0a48db41d13f8e3",
+      "bytes": 3551
+    },
+    {
+      "path": "cadence/starting-code.json",
+      "sha256": "79b3ad11cc2118c84107789e9e366ac3cfb07d3a4fe02f7b7638ba2328bf953e",
+      "bytes": 7885
+    },
+    {
+      "path": "cadence/workers-Debug.json",
+      "sha256": "83cc4a1646824a773802ca64ba92658913f4acdaa490e2f1438bb5c9d1f7eb6e",
+      "bytes": 20666
+    },
+    {
+      "path": "cadence/workers-Debug.log",
+      "sha256": "19909ccf589d3ea9a88b87e8e8e49eb1060ad164a8372c45e55aac39b18ecd51",
+      "bytes": 9293
+    },
+    {
+      "path": "cadence/workers-ReleaseSafe.json",
+      "sha256": "278cc71486d8e166b4fec13f9aafe1b97f2a002e263885669407d9cf26e33acc",
+      "bytes": 19485
+    },
+    {
+      "path": "cadence/workers-ReleaseSafe.log",
+      "sha256": "98a9157fe2db7b31ba0e45d5f987fbf3df906a5b652826504eeb6f2e08a21986",
+      "bytes": 9294
+    },
+    {
+      "path": "custody.log",
+      "sha256": "4759571745c41123f6adb9c2f32299472e99a9a6300a4c203aa8d03b871c104b",
+      "bytes": 64
+    },
+    {
+      "path": "diagnostic-build.log",
+      "sha256": "858cfbc785002d59362aaa823bcf4660713607a321e92b5e684abba38edba28d",
+      "bytes": 1071
+    },
+    {
+      "path": "direct-callback-build.log",
+      "sha256": "4a218bd44e0447633e5d8b6655df63ea325a5e7608255ec6153cc8d48abcd5a6",
+      "bytes": 2151
+    },
+    {
+      "path": "direct-callback-peer.json",
+      "sha256": "3392eefe4193d3faf83758ec7df765acba6139b9f7c244096c8e33583a106de9",
+      "bytes": 36232
+    },
+    {
+      "path": "direct-callback-peer.log",
+      "sha256": "9fe7d0d56ba74a70190ec09f6eaebbd136b63c0332f8df34beb26862ff4edf20",
+      "bytes": 749
+    },
+    {
+      "path": "docs.log",
+      "sha256": "07e762a37c4e802b0128bf94764fa24e6fd52adfcd1c8461ea4d60364e44bf4f",
+      "bytes": 88
+    },
+    {
+      "path": "final/binaries-Debug.json",
+      "sha256": "f8286d9e83cd334c81c5716406356528609aa2413c03adaa7054f5738ada5409",
+      "bytes": 968
+    },
+    {
+      "path": "final/binaries-ReleaseSafe.json",
+      "sha256": "1cf2958f404de05f8bf90a3f94fd4f6769c4919ff5b81061c7333d95c81655dd",
+      "bytes": 968
+    },
+    {
+      "path": "final/build-Debug.log",
+      "sha256": "f8fec105382fa56d788cf7d0cfcf2b3c6dc75bfc58c6fa56dd87936c4ba9bdd4",
+      "bytes": 3177
+    },
+    {
+      "path": "final/build-ReleaseSafe.log",
+      "sha256": "8556ba660e96e379f7f230cdd5e708ab118e20b4388bdbf3798a8855447204cd",
+      "bytes": 3172
+    },
+    {
+      "path": "final/configuration-Debug.log",
+      "sha256": "79752895d650525a11cc1245491c2c0c4843760287f5fa49d230c4dcd25614d5",
+      "bytes": 3223
+    },
+    {
+      "path": "final/configuration-ReleaseSafe.log",
+      "sha256": "79752895d650525a11cc1245491c2c0c4843760287f5fa49d230c4dcd25614d5",
+      "bytes": 3223
+    },
+    {
+      "path": "final/custody.log",
+      "sha256": "4759571745c41123f6adb9c2f32299472e99a9a6300a4c203aa8d03b871c104b",
+      "bytes": 64
+    },
+    {
+      "path": "final/fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "final/jitter-repeat-0.json",
+      "sha256": "323486f5b6af986f65973f5e5e161de05064c55a789404da6ef67bee16b02a5e",
+      "bytes": 2599
+    },
+    {
+      "path": "final/jitter-repeat-0.log",
+      "sha256": "6e81d88ce459ad4950f66888a392e3f71d780e3017729461e323484e0decfa55",
+      "bytes": 157
+    },
+    {
+      "path": "final/jitter-repeat-1.json",
+      "sha256": "4091568e3a74c8d1febe5ef5abf2c7d62888bdbef13569b0ac2c69348167f62d",
+      "bytes": 2598
+    },
+    {
+      "path": "final/jitter-repeat-1.log",
+      "sha256": "6e81d88ce459ad4950f66888a392e3f71d780e3017729461e323484e0decfa55",
+      "bytes": 157
+    },
+    {
+      "path": "final/jitter-repeat-2.json",
+      "sha256": "275785b60ee66b62ae55381862e0a9f68d5dcc509be8173c2ec394de090b3844",
+      "bytes": 2610
+    },
+    {
+      "path": "final/jitter-repeat-2.log",
+      "sha256": "bb3eb0721ffc1238e52ab355cc7940c3a5ed8187f40d1fe081b3da42b649cffd",
+      "bytes": 172
+    },
+    {
+      "path": "final/jitter-repeat-3.json",
+      "sha256": "9b6f1bccba047a8dc9078b9d1e0825b71dc675a4df9e21ed8ac2ac4288a19c4d",
+      "bytes": 2593
+    },
+    {
+      "path": "final/jitter-repeat-3.log",
+      "sha256": "6e81d88ce459ad4950f66888a392e3f71d780e3017729461e323484e0decfa55",
+      "bytes": 157
+    },
+    {
+      "path": "final/jitter-repeat-4.json",
+      "sha256": "ab23adbe65163e234e4a4f07dafa4552da33b5d8435fe6cbcc33edf60fbc58cf",
+      "bytes": 2592
+    },
+    {
+      "path": "final/jitter-repeat-4.log",
+      "sha256": "6e81d88ce459ad4950f66888a392e3f71d780e3017729461e323484e0decfa55",
+      "bytes": 157
+    },
+    {
+      "path": "final/meter-self-test.log",
+      "sha256": "a17100ac0d377e3fecf758577eb4d21a30bc1853aca2fd3c468bd5c5e2affc27",
+      "bytes": 438
+    },
+    {
+      "path": "final/pairing.log",
+      "sha256": "cd155eb7c1fa7d7b246a3d34287344ab9f46c1bec39004d9c923e2c07e395015",
+      "bytes": 800
+    },
+    {
+      "path": "final/physical-config-binding.json",
+      "sha256": "0404cdbbc39885d621bbdbc7b5a187e22608edbef9137c6b768074804d71f7e3",
+      "bytes": 211
+    },
+    {
+      "path": "final/physical-config.log",
+      "sha256": "a198d7620c9bb5aa7ccbeccb2e82a3a5a2f833f603dfb88dc0f4212f8d092f69",
+      "bytes": 2058
+    },
+    {
+      "path": "final/physical-tone.log",
+      "sha256": "43b15b6561a50063dff474356fb971c95f54eeb4b3a66ac427c832a6a48310ed",
+      "bytes": 2303
+    },
+    {
+      "path": "final/portable-mac.log",
+      "sha256": "38e5341898bb666c7d84123ba0be006e179acb06494f18b0cc11920d2633515e",
+      "bytes": 545
+    },
+    {
+      "path": "final/proxy-Debug.json",
+      "sha256": "2b258d19d30cb35d957dc340ff52a6d616c720616ba04405fd96617760db689e",
+      "bytes": 7970
+    },
+    {
+      "path": "final/proxy-Debug.log",
+      "sha256": "2b258d19d30cb35d957dc340ff52a6d616c720616ba04405fd96617760db689e",
+      "bytes": 7970
+    },
+    {
+      "path": "final/proxy-ReleaseSafe.json",
+      "sha256": "330d042a2502080609bcef6792bae461ba847c072c3efe4146e3962175f950d1",
+      "bytes": 7969
+    },
+    {
+      "path": "final/proxy-ReleaseSafe.log",
+      "sha256": "330d042a2502080609bcef6792bae461ba847c072c3efe4146e3962175f950d1",
+      "bytes": 7969
+    },
+    {
+      "path": "final/recovery-Debug.json",
+      "sha256": "57ba23a8abe81e4cef6b03de67449bcd067d167b163bd6bce2bc3cba38747ef3",
+      "bytes": 36509
+    },
+    {
+      "path": "final/recovery-Debug.log",
+      "sha256": "bcd28c2631e2736d053ab142ef6dbbed3f8837eb7931812ee05ad647c186456c",
+      "bytes": 749
+    },
+    {
+      "path": "final/recovery-ReleaseSafe.json",
+      "sha256": "37b0821f66d806b0195223abe2da06bcae5e01628b15453d6d86845c74683eb4",
+      "bytes": 36223
+    },
+    {
+      "path": "final/recovery-ReleaseSafe.log",
+      "sha256": "9fe7d0d56ba74a70190ec09f6eaebbd136b63c0332f8df34beb26862ff4edf20",
+      "bytes": 749
+    },
+    {
+      "path": "final/runs.json",
+      "sha256": "dc39b38c523bb9fb8da8e376ac9ad52a62195c45a003d7bd29822598ad9c6b23",
+      "bytes": 6703
+    },
+    {
+      "path": "final/starting-code.json",
+      "sha256": "426f3e6c63138b8094594a20c1f1ad8b4d9c6c25edda3a0b0d1b331ee05657bd",
+      "bytes": 7885
+    },
+    {
+      "path": "final/starting-native-inputs.json",
+      "sha256": "de9483ba0116c4c3c2a8564292161c89e903c68ab33d58811eafa959fb8eb521",
+      "bytes": 968
+    },
+    {
+      "path": "final/workers-Debug.json",
+      "sha256": "781ea88a16ad5d41634ecaf8efef458a54785c730870a119cd96708c8ac6504d",
+      "bytes": 20664
+    },
+    {
+      "path": "final/workers-Debug.log",
+      "sha256": "51d8c7b36162cfbf9c247774a66dd0a94d4815474b21ba5fa24407e0f6ac439d",
+      "bytes": 9291
+    },
+    {
+      "path": "final/workers-ReleaseSafe.json",
+      "sha256": "1ec33ef79929a21c940381ce9124ae00deaa9ab0a57569da193aa245cde84f43",
+      "bytes": 19480
+    },
+    {
+      "path": "final/workers-ReleaseSafe.log",
+      "sha256": "f8bf8a9e811577beef9720108125b4b0eed7ec910164c80316aef424351d2b45",
+      "bytes": 9290
+    },
+    {
+      "path": "fixed-callback-jitter.json",
+      "sha256": "b14e3b94badcb5bb22aecf16d2a882f9fcfa29e5a3dcb470c73094371cf491ce",
+      "bytes": 2652
+    },
+    {
+      "path": "fixed-staging-regression.log",
+      "sha256": "f73deed5860ba276d5736399beaa8faf5dc31b3e86155751af4fadfd32b43ac6",
+      "bytes": 1432
+    },
+    {
+      "path": "handoff.log",
+      "sha256": "bd382ef80655a4e4d8ab747d5d768bc2472113834295a993a95fc5a5baf3856c",
+      "bytes": 108
+    },
+    {
+      "path": "physical-tone-preflight.log",
+      "sha256": "5d805d9961f1005573814ee03cefceaf9381e815f907d7197aacc63a69184a56",
+      "bytes": 2304
+    },
+    {
+      "path": "reference.log",
+      "sha256": "200405af90470e8723171d280633373c52b3075f8fc0b7f8092cbdfdc4eb47a7",
+      "bytes": 145
+    },
+    {
+      "path": "RESULTS.md",
+      "sha256": "08602e7f3c989038d2dcc1cf01711cebd0ac37ead7468c66f5618af88ebd10f2",
+      "bytes": 5231
+    },
+    {
+      "path": "source-snapshot/.gitignore",
+      "sha256": "33fad8d56ed430f7a5f5cc430ff912a039816390d1b343f4ddd8a33eb4311393",
+      "bytes": 61
+    },
+    {
+      "path": "source-snapshot/AGENTS.md",
+      "sha256": "5151c17d8bac0f245a653b561546d7cdcaf007a42b5109cfc00cdf25d00f01ba",
+      "bytes": 1882
+    },
+    {
+      "path": "source-snapshot/build.zig",
+      "sha256": "90a9eae17002ba0bda7be9ede104a28348597a75c40d137c834e8881ff6b9b79",
+      "bytes": 23765
+    },
+    {
+      "path": "source-snapshot/build.zig.zon",
+      "sha256": "583112a14f30401352a67a55609d864ff023cd378e269d15389660346ec945fe",
+      "bytes": 662
+    },
+    {
+      "path": "source-snapshot/docs/architecture/ecosystem-integration.md",
+      "sha256": "d0ecfb6fed6b91c21eee77293c3da88b2f377906fcd025d40704cd341426e68a",
+      "bytes": 10194
+    },
+    {
+      "path": "source-snapshot/docs/architecture/modules.md",
+      "sha256": "89e8addacd015f9deb00db7930e86dd1087520d4b71182d1202e774af0f144fa",
+      "bytes": 3839
+    },
+    {
+      "path": "source-snapshot/docs/architecture/platform-capabilities.md",
+      "sha256": "7bfd20dc55aa93457abf88b44f7f7496b35d1a4329e7807041adc8dc7d270aef",
+      "bytes": 6448
+    },
+    {
+      "path": "source-snapshot/docs/ARCHITECTURE.md",
+      "sha256": "8688470d158248107cec16f475b7fdf2aa3ce50737cadaaaf2aa8211be886ad2",
+      "bytes": 13449
+    },
+    {
+      "path": "source-snapshot/docs/CALLBACKS.md",
+      "sha256": "cb830d96158d5349e88a5a016f91c1b1d13fda2d88efeef915162186e884c77c",
+      "bytes": 9366
+    },
+    {
+      "path": "source-snapshot/docs/DEPENDENCIES.md",
+      "sha256": "bc24cdf5c5df25cd24a4bef5c932aedf9b5029bc2f12361c9fdea5237c8ef529",
+      "bytes": 8243
+    },
+    {
+      "path": "source-snapshot/docs/design/configuration-resolution.md",
+      "sha256": "35e3f06c63019f77f37ea712c1609ac0cf0fbda2726181cfb886b9d0e827215a",
+      "bytes": 9783
+    },
+    {
+      "path": "source-snapshot/docs/design/lifecycle-transactions.md",
+      "sha256": "bc169b2309860f9e7174ea2b38288a1d3f5c25f1856fe67098d0bca2208a3214",
+      "bytes": 16779
+    },
+    {
+      "path": "source-snapshot/docs/design/receive-drain.md",
+      "sha256": "81cd0310fe014b9044af30f0dc06fb1dac0af40af6f5325b1faedfac0dd1d224",
+      "bytes": 8366
+    },
+    {
+      "path": "source-snapshot/docs/design/system-mathematics.md",
+      "sha256": "68bfe0c36d890dbbf104e56dbf835391ca92841c2f825624083cc55142bd2087",
+      "bytes": 6660
+    },
+    {
+      "path": "source-snapshot/docs/development/documentation.md",
+      "sha256": "5be255979401ef484f304e82db19c96e511c6261c1e9214c928b8bfa6b2f2233",
+      "bytes": 4262
+    },
+    {
+      "path": "source-snapshot/docs/development/workflow.md",
+      "sha256": "d57337c45ddc991f5b745741c53eaff6b785ce87b8e45f4c88854e0c7aa809f5",
+      "bytes": 2769
+    },
+    {
+      "path": "source-snapshot/docs/first-run.md",
+      "sha256": "fb74a5be2061667a66fb6d896f6ff5b7daf064597cff515723efa5a0f2d06e2e",
+      "bytes": 5740
+    },
+    {
+      "path": "source-snapshot/docs/implementation/completion-sequence.md",
+      "sha256": "c70cdb5dc4d490a7ffd962a8fd63356172238342554dbca599f878a09bc797f5",
+      "bytes": 11239
+    },
+    {
+      "path": "source-snapshot/docs/implementation/decisions.md",
+      "sha256": "c8ebf56107012eb399526a687fa121d44b8f0aaa62871ccb5352598f394982bc",
+      "bytes": 8632
+    },
+    {
+      "path": "source-snapshot/docs/implementation/interfaces.md",
+      "sha256": "83c5bc95ce8150a237ee0116411a4cd72d4e95345f923acf90708a0a2e8c4c38",
+      "bytes": 7194
+    },
+    {
+      "path": "source-snapshot/docs/implementation/layout.md",
+      "sha256": "7322a7bb959892618541b9f2fffecb5d2703459eaf9dfbee18ea8b4a63463c3a",
+      "bytes": 8866
+    },
+    {
+      "path": "source-snapshot/docs/implementation/roadmap.md",
+      "sha256": "051ef9207ba82acbf522a77887a70600d4ed3acff748fd2ce017b8f4c0ff8f61",
+      "bytes": 4039
+    },
+    {
+      "path": "source-snapshot/docs/implementation/runtime-blueprint.md",
+      "sha256": "413c0237d3d544b0e679e21763a54346013daa31833aeecaf5c4414686fbafd3",
+      "bytes": 14390
+    },
+    {
+      "path": "source-snapshot/docs/implementation/START_HERE.md",
+      "sha256": "12615819e4754e67443047222bd74b0647d659dd51f7486dbf9740174ce01101",
+      "bytes": 8417
+    },
+    {
+      "path": "source-snapshot/docs/implementation/takeover-readiness.md",
+      "sha256": "cd29d65790b499c349dbeaf4bb5e5b6f1831b3ef127eb1c02bcd1622fd0626fc",
+      "bytes": 8881
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/01-target-builds.md",
+      "sha256": "13286f31a0439f7b26c72911f5172ec817e50e8ca887b06442f540344de638ba",
+      "bytes": 3079
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/02-fidelity-protocol.md",
+      "sha256": "f780bef8543911c67ff55807b8bab7330b8af7c550883b9365ae5670dc15b4d1",
+      "bytes": 4625
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/03-identity-endpoints.md",
+      "sha256": "b8dc46f7e6852eb0a287bf15062fd516d5ec6339c7136a62062886682c1feab5",
+      "bytes": 4226
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/04-first-sound.md",
+      "sha256": "3526b1c9c19fa71f126910413acf868d8074e48c6c1106e7bac5d6b287a36cd7",
+      "bytes": 4838
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/05-timing-clocks.md",
+      "sha256": "075f1cb5484d7cc075fbfb2b89e98ccd415936d03ee3ac4b8df2e2f391d4f77c",
+      "bytes": 3505
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/06-network-resilience.md",
+      "sha256": "998082c8786f1230784a9f418732c55d47e4d9fd501fab46dda2096331664260",
+      "bytes": 2752
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/07-observability.md",
+      "sha256": "db1dd63a83581512543616c0d3c8111f0ddf98d7237dcf12d52879bb6c27428a",
+      "bytes": 2320
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/08-user-experience.md",
+      "sha256": "75fa623b5b272a318d3f5ec26e2067f1475b5ad9f5141f23d7f6db9cd7dadc39",
+      "bytes": 2815
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/09-packaging.md",
+      "sha256": "77331e4657e777a56d564e1f1912ac7c3f7d23e39104a41a1eecf9a118aaa60c",
+      "bytes": 2411
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/10-qualification.md",
+      "sha256": "2bd0b396edd02477556114b576dcfc3f7a5ca695ba72ff6bbc187de9d93fe726",
+      "bytes": 2389
+    },
+    {
+      "path": "source-snapshot/docs/implementation/work-packages/11-apple-receivers.md",
+      "sha256": "635d583935c8775c94dd992915a57111280257c811efecd1cb6523db336c7822",
+      "bytes": 5754
+    },
+    {
+      "path": "source-snapshot/docs/literate/proof-ledger.md",
+      "sha256": "150a8b55d7cc9588a662fd1c737c7db02bec4a46a08494c4530d2fb1f4c80df4",
+      "bytes": 12359
+    },
+    {
+      "path": "source-snapshot/docs/literate/quantitative-design.md",
+      "sha256": "71a603ab5dba85bbb161069b251d1c24a2b78bb32031886e4eff79a1f12f4ed2",
+      "bytes": 6713
+    },
+    {
+      "path": "source-snapshot/docs/literate/README.md",
+      "sha256": "e0007021678cc7276b118037bd1a7a640c9029687fac975802fc2c554df05011",
+      "bytes": 4639
+    },
+    {
+      "path": "source-snapshot/docs/literate/runtime-argument.md",
+      "sha256": "7e5f250d5981ab8d60c62bd8cd51114abddc104c96ac8efaf9897695dd17a0ac",
+      "bytes": 11170
+    },
+    {
+      "path": "source-snapshot/docs/literate/stream-argument.md",
+      "sha256": "a63938e251179520822cd3b8ca50da9d76ef4ad391dea71f2ef044e6b5fd460a",
+      "bytes": 10859
+    },
+    {
+      "path": "source-snapshot/docs/MATHEMATICS.md",
+      "sha256": "df7afd0c378d03a2ca0872cc8af5d16590e9afaaa72df4b435e23c593c4e9b99",
+      "bytes": 19013
+    },
+    {
+      "path": "source-snapshot/docs/media/assembly.md",
+      "sha256": "2d8c9e666799a3adb1c3e3a0584fa47c0fb4d872130a63096e7f81ca216104bc",
+      "bytes": 6768
+    },
+    {
+      "path": "source-snapshot/docs/media/pending-block.md",
+      "sha256": "822d7b18a155ece038c79e849393c70e0f69ea236774c4221e32c9436112c4f2",
+      "bytes": 7285
+    },
+    {
+      "path": "source-snapshot/docs/PRODUCT.md",
+      "sha256": "c0885c8bb5a9159460ac57b11612051c2f3ba75928aeaa96c92cc941952f56d9",
+      "bytes": 11558
+    },
+    {
+      "path": "source-snapshot/docs/protocol/negotiation.md",
+      "sha256": "65f06afc180880b6ef362e4eab25d082e5b81d3da97d625cac2bb99e27b06f02",
+      "bytes": 5106
+    },
+    {
+      "path": "source-snapshot/docs/protocol/v2.md",
+      "sha256": "d5b09ee370dc542013ba386d5f09f83ade8b3a76bc08fd0e76d057e00d471f8e",
+      "bytes": 7835
+    },
+    {
+      "path": "source-snapshot/docs/README.md",
+      "sha256": "88054fbb480c09ad14f8922d789f108e086b80eb77bb2fb0817ff138883d84c1",
+      "bytes": 3392
+    },
+    {
+      "path": "source-snapshot/docs/reference/api-contracts.md",
+      "sha256": "3f01f5f37e715b62d1f8f52fbc25be2afe93c5dd77b62509db014466c21040d3",
+      "bytes": 17413
+    },
+    {
+      "path": "source-snapshot/docs/reference/evidence.md",
+      "sha256": "09f264949e81545cdfaaad056ee43e72e938573454b506d43e4de32df1377108",
+      "bytes": 220775
+    },
+    {
+      "path": "source-snapshot/docs/reference/file-index.json",
+      "sha256": "99a60d392f26e2ff21e33de0bf0fad82c1e9aadaf945403e5f448666e9cb6f61",
+      "bytes": 144858
+    },
+    {
+      "path": "source-snapshot/docs/reference/lan-audio.md",
+      "sha256": "404ae9eecf35375e1f005e75b796c4881b589ddb763b12fe8fb0426e34798412",
+      "bytes": 207621
+    },
+    {
+      "path": "source-snapshot/docs/reference/miniaudio-zig.md",
+      "sha256": "18baad90a631ae2ad8729ef7d5896e631ca974fa5d67c258e82061ca2affa72f",
+      "bytes": 46334
+    },
+    {
+      "path": "source-snapshot/docs/reference/README.md",
+      "sha256": "e22fe651b645d0dc04b583a80b6137f824003fd9aa7333818f167a916b8bf54b",
+      "bytes": 2773
+    },
+    {
+      "path": "source-snapshot/docs/reference/tls-zig.md",
+      "sha256": "8621708f3d0f2bc4f644bdcc5a06e664179c3618c8ee7ce62a12bf8642854c01",
+      "bytes": 283610
+    },
+    {
+      "path": "source-snapshot/docs/reference/upstream-assets.md",
+      "sha256": "427a505c0fe47413a8d0db5d55f5f3f798f0dfb7f3e6eb96bafdc6f4094612b9",
+      "bytes": 59427
+    },
+    {
+      "path": "source-snapshot/docs/runtime/configuration.md",
+      "sha256": "7a631d9b3495f409885e659bf714dc16eb4bd48c3dfbbc812fd06edd7fce61e5",
+      "bytes": 7229
+    },
+    {
+      "path": "source-snapshot/docs/runtime/device-discovery.md",
+      "sha256": "a084ce3eefa860caa3be57d63ce4d63d4234d035e82de8c84f33232e696d5fce",
+      "bytes": 2635
+    },
+    {
+      "path": "source-snapshot/docs/runtime/lifecycle-core.md",
+      "sha256": "26aef821d2b27c85096e119a66c336b0594e7da1656b292d130777dedc5e80e7",
+      "bytes": 12628
+    },
+    {
+      "path": "source-snapshot/docs/runtime/live-workers.md",
+      "sha256": "b831af8eb94df5d97db23e15a1a3e70ad407e223c7c4d56efec6100f1b9c6af5",
+      "bytes": 7352
+    },
+    {
+      "path": "source-snapshot/docs/runtime/native-events.md",
+      "sha256": "eda92b5ed77f9efb3d4776584b0a1ddc04e9caa236971c0acc7d211d5db8cc55",
+      "bytes": 8616
+    },
+    {
+      "path": "source-snapshot/docs/runtime/native-failures.md",
+      "sha256": "e11af8f4eb254c8f4104857a59f3754d654bad3f6c1ce67f95e1abee8ac00416",
+      "bytes": 3156
+    },
+    {
+      "path": "source-snapshot/docs/runtime/native-fence.md",
+      "sha256": "39cb712ff3b3be57edcab014724c7ef96030b63304793ac670f4fc0d797fb67a",
+      "bytes": 10074
+    },
+    {
+      "path": "source-snapshot/docs/runtime/network-owner.md",
+      "sha256": "a8e6bd387a36e94d20ab39f4bf2a75d2a316ff738ecc100b3d7878587a660428",
+      "bytes": 7847
+    },
+    {
+      "path": "source-snapshot/docs/runtime/network-recovery.md",
+      "sha256": "a1258d7d2c5538bdc19faedd99708eb17c3742b858a61ec89a04d92873590e7d",
+      "bytes": 14588
+    },
+    {
+      "path": "source-snapshot/docs/runtime/peer-authorization.md",
+      "sha256": "7f5f427920fda5418a1ff428fc7144d4fb1dbc060ec1429be175ab3d2347afc4",
+      "bytes": 6572
+    },
+    {
+      "path": "source-snapshot/docs/runtime/receive-drain.md",
+      "sha256": "9ba74e13bf20a508cf9e343188082363554cf149d80cf22ea768fab6e6924d3f",
+      "bytes": 10734
+    },
+    {
+      "path": "source-snapshot/docs/runtime/send-drain.md",
+      "sha256": "3567cf5d7c1ce078aa285ad48b336cab6c45bf0ff215e04889b7608bff2b9418",
+      "bytes": 8084
+    },
+    {
+      "path": "source-snapshot/docs/runtime/verified-channel.md",
+      "sha256": "3b542f1ae51415ce888989376e35362ae398373ab413a7857897a4896f01dbfe",
+      "bytes": 7467
+    },
+    {
+      "path": "source-snapshot/docs/TRANSPORT.md",
+      "sha256": "39d24bfe84deca93e1736b9418a5f37451cd44646adb687e09bebcd28c6a490a",
+      "bytes": 8295
+    },
+    {
+      "path": "source-snapshot/docs/verification/acceptance-matrix.md",
+      "sha256": "6558db3075a0c4dc22464945789380d000ad020e84871e1e9241c289cb568c74",
+      "bytes": 5939
+    },
+    {
+      "path": "source-snapshot/docs/verification/runtime-obligations.md",
+      "sha256": "bbeacd488bf9b5b0aac870359b1c8962e31b1204ab30b22acf967245ca252eb0",
+      "bytes": 11420
+    },
+    {
+      "path": "source-snapshot/docs/verification/scenarios.md",
+      "sha256": "f5c7f9d716a7aa6ba0cc0c78376480c7c039ec892eb501c8fdc199c1f7843a39",
+      "bytes": 4483
+    },
+    {
+      "path": "source-snapshot/docs/verification/v2-independent.md",
+      "sha256": "86393e2e6681a3bc01600fb4e92c4d2a62d61990a3347022f4257f9be03f7470",
+      "bytes": 6108
+    },
+    {
+      "path": "source-snapshot/docs/VERIFICATION.md",
+      "sha256": "6535a9b19ed64d95ca8f699c195c2aa4a3f57a14701d07dd3c07d55f91e01f88",
+      "bytes": 5039
+    },
+    {
+      "path": "source-snapshot/README.md",
+      "sha256": "cd6ba5a13dac310d27bb5c7cbdef79a9ba640d1e414a408257aa507e8169d8d5",
+      "bytes": 8102
+    },
+    {
+      "path": "source-snapshot/spec/concurrency/SpscPublication.cfg",
+      "sha256": "21a9c1f95f12de7e5d492e764db37ec3b27bca2cce26eb74c41f36212d86fafb",
+      "bytes": 138
+    },
+    {
+      "path": "source-snapshot/spec/concurrency/SpscPublication.tla",
+      "sha256": "b63ca4ad0fc1c196619dc560ea0d00bb6334c04e79cc33b9d3db6a5281b81e22",
+      "bytes": 2292
+    },
+    {
+      "path": "source-snapshot/spec/README.md",
+      "sha256": "d680fb280b92a946884e802c11b8a1411d965a5548e3d709f8d3338164d6693f",
+      "bytes": 6151
+    },
+    {
+      "path": "source-snapshot/spec/runtime/lifecycle_transactions.py",
+      "sha256": "004df4d6082d34e510c34d53cc8bce1a692714d9c2a3ba30ac88b6d26d56899f",
+      "bytes": 9108
+    },
+    {
+      "path": "source-snapshot/spec/runtime/ReceiveDrain.cfg",
+      "sha256": "dd4095e5a5d353c153b2b9372d8cbdcf770f7347e5752a2d2502f385a09198f4",
+      "bytes": 202
+    },
+    {
+      "path": "source-snapshot/spec/runtime/ReceiveDrain.tla",
+      "sha256": "1a0a3654bd37f0f61591c80e1ef3ab7b50ad18a6d57ced817dc0d86c35764b6e",
+      "bytes": 5019
+    },
+    {
+      "path": "source-snapshot/spec/runtime/RuntimeOwnership.cfg",
+      "sha256": "c5116db72142a4d27c9d977c6c5cd86c10e31833c1ad5c2615bb35ae7b878995",
+      "bytes": 227
+    },
+    {
+      "path": "source-snapshot/spec/runtime/RuntimeOwnership.tla",
+      "sha256": "3c36c306d4b043c3a84a05fcfaf2a2b7619fdaf89db78bb2f00afb1bfbbc56f1",
+      "bytes": 7664
+    },
+    {
+      "path": "source-snapshot/spec/session/SessionWindow.cfg",
+      "sha256": "a8230c3fe52d5503df0790174ec1edcc7cc4535b61960e0891f50a3b187c5e4c",
+      "bytes": 212
+    },
+    {
+      "path": "source-snapshot/spec/session/SessionWindow.tla",
+      "sha256": "710da33d647b2d33ca9d34e5a7b6a588e17554e8ad7858c7fca3760807922742",
+      "bytes": 3912
+    },
+    {
+      "path": "source-snapshot/spec/stream/EndDrain.cfg",
+      "sha256": "35092d9b1ff8e8bcb3db26fc54b6215d6282d37e4ed762d743cae55afb70e378",
+      "bytes": 166
+    },
+    {
+      "path": "source-snapshot/spec/stream/EndDrain.tla",
+      "sha256": "4c2629ede6c48eb29d598243b526392165cd70bb01690ff02c0db23f8fffddf7",
+      "bytes": 1949
+    },
+    {
+      "path": "source-snapshot/src/app/config.zig",
+      "sha256": "a34075b45232c5793755c39ad2ebf23a5b0e9b51c7ba24b4c2fa175e9cc3863e",
+      "bytes": 10761
+    },
+    {
+      "path": "source-snapshot/src/app/main.zig",
+      "sha256": "2aed41a42b8695bf253c65ab9d7ed89eb8032e42f4dfe6c4763714efced33fe4",
+      "bytes": 5047
+    },
+    {
+      "path": "source-snapshot/src/app/stream_command.zig",
+      "sha256": "ca6e7122e7fd93b0cf9d3f3a025468322f0cb6e1ae2f2059157c7fd30d8f2185",
+      "bytes": 9149
+    },
+    {
+      "path": "source-snapshot/src/audio/callback_bridge.zig",
+      "sha256": "790ca5c49e88d466dc04d381f0a895f86e00c0f7304dfa08dc8d2cd7154833ac",
+      "bytes": 6909
+    },
+    {
+      "path": "source-snapshot/src/audio/frame_queue.zig",
+      "sha256": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+      "bytes": 4379
+    },
+    {
+      "path": "source-snapshot/src/host/audio_device.zig",
+      "sha256": "2cefcaefc6e134b87f864769d05c36a0fe077211656deabd6b636f6606d5493c",
+      "bytes": 42901
+    },
+    {
+      "path": "source-snapshot/src/host/net/native.c",
+      "sha256": "7525e48b232df0bfc3cfbd129d1bddadbd6d1a81021f06e43bbf0149a42b857c",
+      "bytes": 10337
+    },
+    {
+      "path": "source-snapshot/src/host/net/native.h",
+      "sha256": "23710fac20e3a59fbf73fd269efea4473869562fa665cd9541747817868861d5",
+      "bytes": 1451
+    },
+    {
+      "path": "source-snapshot/src/host/net/socket.zig",
+      "sha256": "c98cd5b53bec3632c8c816f0ee1e0e5bac3c511859503c6f886a289109045cd4",
+      "bytes": 10215
+    },
+    {
+      "path": "source-snapshot/src/host/platform.c",
+      "sha256": "50cc6875c59da99d329d26902653780c2f19690caa4c8ce55554b64a8eedad50",
+      "bytes": 3426
+    },
+    {
+      "path": "source-snapshot/src/host/platform.h",
+      "sha256": "846639cac85d9184bc00ecb3013193afd9fe8a431721eccb50bf0cc088beba22",
+      "bytes": 688
+    },
+    {
+      "path": "source-snapshot/src/host/platform.zig",
+      "sha256": "582c8e3cd71d331f73f4f2353735b53337f6113d426af37c561de7f4dac3e611",
+      "bytes": 3314
+    },
+    {
+      "path": "source-snapshot/src/host/verified_channel.zig",
+      "sha256": "62c20e2bf2327e581713376d030750cd03c7f282be220aff47d82a1deee12e0a",
+      "bytes": 11331
+    },
+    {
+      "path": "source-snapshot/src/media/block_assembler.zig",
+      "sha256": "e216abee7d2361afa565e8e909472c9c50214f7580275520faa070bb1b880561",
+      "bytes": 4262
+    },
+    {
+      "path": "source-snapshot/src/media/format.zig",
+      "sha256": "95a579f2f84e20f29fc1ce50359f5af381752db05b643eea3a31b617ce2dad42",
+      "bytes": 1886
+    },
+    {
+      "path": "source-snapshot/src/media/playout_window.zig",
+      "sha256": "6944d9745299f7962838059d8ee00becc60b94b3c6a9f8426317eeafa5cc9a3e",
+      "bytes": 3125
+    },
+    {
+      "path": "source-snapshot/src/protocol/negotiation.zig",
+      "sha256": "bb6e2bf9f66d325b3c72c6440cbe8e3260fcaa1ea1a48d25df0d99eb4d539a55",
+      "bytes": 4631
+    },
+    {
+      "path": "source-snapshot/src/protocol/v1.zig",
+      "sha256": "5f38131920a64b228fbede5ee41c9e1bbcb4b55e2b1675c7b3113681837668e0",
+      "bytes": 7648
+    },
+    {
+      "path": "source-snapshot/src/protocol/v2.zig",
+      "sha256": "72c2643185e753b92739c1d8d3a8c8ecc32d4db459f591d926abc8ef74b4ee4d",
+      "bytes": 9445
+    },
+    {
+      "path": "source-snapshot/src/README.md",
+      "sha256": "47d3a771f816e9b309b1e2279760e4b7f8dab648bacdb98a67a731055688932c",
+      "bytes": 2907
+    },
+    {
+      "path": "source-snapshot/src/root.zig",
+      "sha256": "ca252005552def0d7b0de355b1d79b283759be17c2e2b9e7fd3a2ec650ac2fa6",
+      "bytes": 1037
+    },
+    {
+      "path": "source-snapshot/src/runtime/capture_sender.zig",
+      "sha256": "4e4e457bae5bc82dc208eea23110cbabb69a52f6c91504afa39b05515930c742",
+      "bytes": 3350
+    },
+    {
+      "path": "source-snapshot/src/runtime/channel_admission.zig",
+      "sha256": "eb169ae2515b2dc2b8db4b45157e115d46b78f78945a9c4c055cb63b7416c2ee",
+      "bytes": 4212
+    },
+    {
+      "path": "source-snapshot/src/runtime/delivery_timing.zig",
+      "sha256": "0c071f2d1e388950d22b8db15a00ee286f877c423b01c74dcf90c3b41da96631",
+      "bytes": 5688
+    },
+    {
+      "path": "source-snapshot/src/runtime/lifecycle.zig",
+      "sha256": "8e5605e0ee7d19a6e5045b1c386202ce83a26bdbb0c9dec0ecc33a3dc8284aaf",
+      "bytes": 18904
+    },
+    {
+      "path": "source-snapshot/src/runtime/pending_block.zig",
+      "sha256": "deebc0a88ec68b401912cbfda28d4f2427182b4cf68e1713b7cc0d69357b3edd",
+      "bytes": 3532
+    },
+    {
+      "path": "source-snapshot/src/runtime/playback_receiver.zig",
+      "sha256": "5ad46c97b5901fea6b5fc6d397e4cadf719e7611862fb333e29765021666cfca",
+      "bytes": 5311
+    },
+    {
+      "path": "source-snapshot/src/runtime/receive_drain.zig",
+      "sha256": "3e0d18318a68350f8c8d7e2c163138391039c02c1d5dcff72b07992b6fd1b4df",
+      "bytes": 8696
+    },
+    {
+      "path": "source-snapshot/src/runtime/recovery_policy.zig",
+      "sha256": "b1b1f8ee421f4852d439eafb3d4c215e1553d9dddb1ed38a1549bc4eb7983c4c",
+      "bytes": 8334
+    },
+    {
+      "path": "source-snapshot/src/runtime/send_drain.zig",
+      "sha256": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+      "bytes": 9389
+    },
+    {
+      "path": "source-snapshot/src/runtime/session_supervisor.zig",
+      "sha256": "31a1899bd2bdcac685128374223d8e44faf9f4301619cf74dd2883c4f2a7a449",
+      "bytes": 4015
+    },
+    {
+      "path": "source-snapshot/src/runtime/stream.zig",
+      "sha256": "8f6f4f44abfe64c5065d061af29037162b1eae011dde83495d8df7e104311a6a",
+      "bytes": 17156
+    },
+    {
+      "path": "source-snapshot/src/security/peer_policy.zig",
+      "sha256": "29217db48b7f89ef93816e076bbdd10854e3131bf1954062a20d04a4145a9254",
+      "bytes": 4277
+    },
+    {
+      "path": "source-snapshot/src/session/receiver.zig",
+      "sha256": "eb7d67e5939bbb46faf74e5241ffe59272e4c8819e678a3c24238a9ecbe20a5e",
+      "bytes": 3727
+    },
+    {
+      "path": "source-snapshot/src/session/session.zig",
+      "sha256": "61bdaa7c055f2a5d3b31da52f484db4d0a22abaaf97df760165edd217401f124",
+      "bytes": 2946
+    },
+    {
+      "path": "source-snapshot/tests/dependency.zig",
+      "sha256": "5c15cbb9756adc0f06eb77a256194927ef24832b094a6e0da97dc45716ba56e3",
+      "bytes": 459
+    },
+    {
+      "path": "source-snapshot/tests/hardware/windows_capture.zig",
+      "sha256": "efb2fe1154cc5a259311d35f5d19fdc1bcc173bba8219991b53693642529218b",
+      "bytes": 2160
+    },
+    {
+      "path": "source-snapshot/tests/hardware/windows_live_capture.py",
+      "sha256": "ec8f86052d19bb8c02c0d816db59827c7f386f4205e40fd61634e5643e8d66ba",
+      "bytes": 10746
+    },
+    {
+      "path": "source-snapshot/tests/integration/audio_device.zig",
+      "sha256": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+      "bytes": 7905
+    },
+    {
+      "path": "source-snapshot/tests/integration/configuration.py",
+      "sha256": "4a0054fa558053545deb0d3110220b0d56a43ae8ff8b48ad1129c3ef6383db18",
+      "bytes": 4760
+    },
+    {
+      "path": "source-snapshot/tests/integration/live_worker.zig",
+      "sha256": "c7f7166f62299e702d8ccced58ce6ae9eec29e3621ef73ab6b9198defae21fdd",
+      "bytes": 2328
+    },
+    {
+      "path": "source-snapshot/tests/integration/live_worker_peer.py",
+      "sha256": "fc4c38e7ce3a90ee0ec2f1bee07ca6583ce421d565b49dfc38c03811650303f3",
+      "bytes": 8750
+    },
+    {
+      "path": "source-snapshot/tests/integration/loopback_transport.zig",
+      "sha256": "61a95bb95cdb540897d807f41126af0e088d846e8812990cdf7798e2443e73c5",
+      "bytes": 2346
+    },
+    {
+      "path": "source-snapshot/tests/integration/network_host.zig",
+      "sha256": "18364d36495466e7a7513d2985f412343778d928126c67ef2d8301bf98587b31",
+      "bytes": 9593
+    },
+    {
+      "path": "source-snapshot/tests/integration/pairing.py",
+      "sha256": "8db3d90140dad6db88283910a39bec21a3fa91d2e971b76bedf5ce576241a644",
+      "bytes": 5335
+    },
+    {
+      "path": "source-snapshot/tests/integration/peer_policy.zig",
+      "sha256": "019a982c452af981b3860030401188bd638d43b6bbc2c0fb3a1b9f2a2d62a520",
+      "bytes": 10693
+    },
+    {
+      "path": "source-snapshot/tests/integration/protocol_v2_peer.py",
+      "sha256": "c2e039d534ea4080d03b9d74ef550aabc6965b7964ecbf0593520a2a4a914901",
+      "bytes": 11632
+    },
+    {
+      "path": "source-snapshot/tests/integration/protocol_v2_reference.py",
+      "sha256": "6fe1c149db4930f2a044031d2f4a516498e70be46fc1680fadc22b95709ac63c",
+      "bytes": 2599
+    },
+    {
+      "path": "source-snapshot/tests/integration/recovery_peer.py",
+      "sha256": "7272536ed268b35e0b41cc345749c6a6345f29a4a7e693137f7f1f02bf899b49",
+      "bytes": 14049
+    },
+    {
+      "path": "source-snapshot/tests/integration/recovery_proxy.py",
+      "sha256": "602502d1ca70eaf8b60b5dcdb0f1ad8fa6e2bda158f7c06b3075aac42fecec91",
+      "bytes": 7105
+    },
+    {
+      "path": "source-snapshot/tests/integration/recovery_session.zig",
+      "sha256": "71b4e4508d825fdd7e43355d7d1aa60c07e2546e27e3cb241ca37f4429898a8c",
+      "bytes": 4839
+    },
+    {
+      "path": "source-snapshot/tests/integration/runtime_lifecycle.zig",
+      "sha256": "f5952dc29211582bd5a239563eef15a334a39ad6644c86258b378c75c71bbbde",
+      "bytes": 56142
+    },
+    {
+      "path": "source-snapshot/tests/integration/tls_receiver.zig",
+      "sha256": "120e072d579c0414e8d4c9d13b569fc4f18ed9a5c03eed6b42d5e36adb3b3353",
+      "bytes": 6347
+    },
+    {
+      "path": "source-snapshot/tests/integration/tls_v2.zig",
+      "sha256": "a4104406db7b7e51f3325ef8f75ca213c06d8b44875fe9366af1cd4ae97f05c8",
+      "bytes": 8102
+    },
+    {
+      "path": "source-snapshot/tests/integration/v2_codec_probe.zig",
+      "sha256": "29f1c1e1acde8a805820760a4cd39f84539fdf0bbab5a939dfb0759d1c85f242",
+      "bytes": 2787
+    },
+    {
+      "path": "source-snapshot/tests/integration/verified_channel.zig",
+      "sha256": "051e9db55c89d6a2fe0197ae854748fc40842ef5f0c74218141ce70fd508fdd9",
+      "bytes": 9926
+    },
+    {
+      "path": "source-snapshot/tests/integration/verified_channel_peer.py",
+      "sha256": "963ebd165c77aedc59e8491d09f354f58d1f34e7e1dfcbfbe26c355474973e46",
+      "bytes": 12913
+    },
+    {
+      "path": "source-snapshot/tests/unit/callback.zig",
+      "sha256": "ab39f0eb78950b514bebaf3d2db292659a6ecea1dac0309059b29c32a411cebd",
+      "bytes": 10927
+    },
+    {
+      "path": "source-snapshot/tests/unit/core.zig",
+      "sha256": "83a721c403ebb514bfcf8fb10e3ee3993fee96f6b1143e113d0e8bf7faa91829",
+      "bytes": 6681
+    },
+    {
+      "path": "source-snapshot/tests/unit/media/assembler.zig",
+      "sha256": "fdfcc8f77de7d65c7fb639d39f205d145836400d900824706957368182488b2e",
+      "bytes": 6261
+    },
+    {
+      "path": "source-snapshot/tests/unit/protocol/negotiation.zig",
+      "sha256": "3a99e7e790d51ad83fd9155ddfc01bc94a375847fde54d0b90cde1039ad1ca02",
+      "bytes": 7040
+    },
+    {
+      "path": "source-snapshot/tests/unit/protocol/v2.zig",
+      "sha256": "5e30142108fe187b11cbf599030125a7ce078690e4214745f0ecac98a18bf84c",
+      "bytes": 7527
+    },
+    {
+      "path": "source-snapshot/tests/unit/runtime/pending_block.zig",
+      "sha256": "d9dce0c24993b69d1618826a445efe6655048bc1fc8c246c16d2bcbd746a9f06",
+      "bytes": 9158
+    },
+    {
+      "path": "source-snapshot/tests/unit/wire.zig",
+      "sha256": "47b301e0d9c7ca4d7c0955dde9f27ad8ee26940329e4fb3d13e55b76f9ada052",
+      "bytes": 6153
+    },
+    {
+      "path": "source-snapshot/tools/build_mac_candidate.py",
+      "sha256": "9c2d38e716ce5b71d484c3f2f7a34f89fff405d158800c2886aed0e3aed6aceb",
+      "bytes": 4904
+    },
+    {
+      "path": "source-snapshot/tools/build_reference.py",
+      "sha256": "a64b77593be3f64069973e5748dbfdfa11f52f96383c01f3d2e5b1b341c0ba85",
+      "bytes": 12577
+    },
+    {
+      "path": "source-snapshot/tools/check_docs.py",
+      "sha256": "9575d18b4ea6a0e12c4701d1457f320a9ba83bb715d8f32c85753af312f1a88b",
+      "bytes": 1756
+    },
+    {
+      "path": "source-snapshot/tools/check_handoff.py",
+      "sha256": "6fc2169c509f646884e2f63c96532083b49d4a82463856febd5c94a667835923",
+      "bytes": 2723
+    },
+    {
+      "path": "source-snapshot/tools/check_lifecycle_spec.py",
+      "sha256": "0a8aaf2bdd915a4f0267aa6f04d8bac4c84025cd0ba29c36b8fd7fe73faa2c67",
+      "bytes": 2774
+    },
+    {
+      "path": "source-snapshot/tools/check_models.py",
+      "sha256": "1a147976808c7fbf74e09f7536273510bc588aea68cf4f73b7d22d6140e11b75",
+      "bytes": 3889
+    },
+    {
+      "path": "source-snapshot/tools/check_transport.py",
+      "sha256": "d86bbd3bd39f433235f82b6e0fa80fa6a772ca3d9571fe5bdac75373a6382488",
+      "bytes": 1708
+    },
+    {
+      "path": "source-snapshot/tools/create_pair.py",
+      "sha256": "a268c823203b07d660658bc633fc4e05c2c821006da3de07df572f37d02b0a4f",
+      "bytes": 6894
+    },
+    {
+      "path": "source-snapshot/tools/reference_contracts.json",
+      "sha256": "76c84d291acab5ea00b8ae4dc226b20c39b83bbe527824eeccab6d35b0534963",
+      "bytes": 405946
+    },
+    {
+      "path": "source-snapshot/tools/test_transport.py",
+      "sha256": "5c96a0b58861fa1acc474bd03e04491ca8d16e3947ffb929a85cbf742ebf08c7",
+      "bytes": 8958
+    },
+    {
+      "path": "source-snapshot/tools/test_v2_differential.py",
+      "sha256": "a4560da195b17b15092cddf095b372c73057577b39a7043b35ec119f655267e4",
+      "bytes": 7838
+    },
+    {
+      "path": "source-snapshot/transport-lock.json",
+      "sha256": "e2ffcfcbab87ccf7f1f10ec20f334e65457e8220c9572fec28adf9fe3c5bf061",
+      "bytes": 33627
+    },
+    {
+      "path": "tone-meter-self-test.log",
+      "sha256": "a17100ac0d377e3fecf758577eb4d21a30bc1853aca2fd3c468bd5c5e2affc27",
+      "bytes": 438
+    }
+  ]
+}

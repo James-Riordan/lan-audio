@@ -1,0 +1,14 @@
+{
+  "fresh_mtls_exchange": true,
+  "repeat_preserved": true,
+  "changed_pair_rejected": true,
+  "issuer_key_removed": true,
+  "path_with_spaces": true,
+  "invalid_cli": [
+    "Stream stopped: RequiredOptions. Run 'lan-audio help' for options.",
+    "Stream stopped: UnknownOption. Run 'lan-audio help' for options.",
+    "Stream stopped: DuplicateOption. Run 'lan-audio help' for options.",
+    "Stream stopped: InvalidFingerprint. Run 'lan-audio help' for options."
+  ],
+  "platform": "nt"
+}

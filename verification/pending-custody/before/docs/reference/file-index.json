@@ -1,0 +1,2309 @@
+{
+  "schema": 1,
+  "scope": "Current authored/support files and admitted installed SDK; generated evidence indexed separately; caches excluded.",
+  "entries": [
+    {
+      "project": "lan-audio",
+      "path": ".gitignore",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-gitignore"
+    },
+    {
+      "project": "lan-audio",
+      "path": "AGENTS.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-agents-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "build.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-build-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "build.zig.zon",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-build-zig-zon"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/architecture/modules.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-architecture-modules-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/architecture/platform-capabilities.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-architecture-platform-capabilities-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/ARCHITECTURE.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-architecture-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/CALLBACKS.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-callbacks-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/DEPENDENCIES.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-dependencies-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/design/receive-drain.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-design-receive-drain-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/design/system-mathematics.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-design-system-mathematics-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/development/documentation.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-development-documentation-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/development/workflow.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-development-workflow-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/completion-sequence.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-completion-sequence-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/decisions.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-decisions-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/interfaces.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-interfaces-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/layout.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-layout-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/roadmap.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-roadmap-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/runtime-blueprint.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-runtime-blueprint-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/START_HERE.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-start-here-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/01-target-builds.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-01-target-builds-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/02-fidelity-protocol.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-02-fidelity-protocol-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/03-identity-endpoints.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-03-identity-endpoints-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/04-first-sound.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-04-first-sound-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/05-timing-clocks.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-05-timing-clocks-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/06-network-resilience.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-06-network-resilience-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/07-observability.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-07-observability-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/08-user-experience.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-08-user-experience-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/09-packaging.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-09-packaging-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/implementation/work-packages/10-qualification.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-implementation-work-packages-10-qualification-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/literate/proof-ledger.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-literate-proof-ledger-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/literate/quantitative-design.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-literate-quantitative-design-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/literate/README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-literate-readme-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/literate/runtime-argument.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-literate-runtime-argument-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/literate/stream-argument.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-literate-stream-argument-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/MATHEMATICS.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-mathematics-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/media/assembly.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-media-assembly-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/PRODUCT.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-product-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/protocol/negotiation.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-protocol-negotiation-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/protocol/v2.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-protocol-v2-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-readme-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/api-contracts.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-api-contracts-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/evidence.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-evidence-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/file-index.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-file-index-json"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/lan-audio.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-lan-audio-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/miniaudio-zig.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-miniaudio-zig-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-readme-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/tls-zig.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-tls-zig-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/reference/upstream-assets.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-reference-upstream-assets-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/TRANSPORT.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-transport-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/verification/acceptance-matrix.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-verification-acceptance-matrix-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/verification/runtime-obligations.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-verification-runtime-obligations-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/verification/scenarios.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-verification-scenarios-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/verification/v2-independent.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-verification-v2-independent-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "docs/VERIFICATION.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-docs-verification-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-readme-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/concurrency/SpscPublication.cfg",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-concurrency-spscpublication-cfg"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/concurrency/SpscPublication.tla",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-concurrency-spscpublication-tla"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-readme-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/runtime/ReceiveDrain.cfg",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-runtime-receivedrain-cfg"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/runtime/ReceiveDrain.tla",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-runtime-receivedrain-tla"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/runtime/RuntimeOwnership.cfg",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-runtime-runtimeownership-cfg"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/runtime/RuntimeOwnership.tla",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-runtime-runtimeownership-tla"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/session/SessionWindow.cfg",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-session-sessionwindow-cfg"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/session/SessionWindow.tla",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-session-sessionwindow-tla"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/stream/EndDrain.cfg",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-stream-enddrain-cfg"
+    },
+    {
+      "project": "lan-audio",
+      "path": "spec/stream/EndDrain.tla",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-spec-stream-enddrain-tla"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/audio/callback_bridge.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-audio-callback-bridge-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/audio/frame_queue.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-audio-frame-queue-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/host/audio_device.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-host-audio-device-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/media/block_assembler.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-media-block-assembler-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/media/format.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-media-format-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/media/playout_window.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-media-playout-window-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/protocol/negotiation.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-protocol-negotiation-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/protocol/v1.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-protocol-v1-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/protocol/v2.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-protocol-v2-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-readme-md"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/root.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-root-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/session/receiver.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-session-receiver-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "src/session/session.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-src-session-session-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/dependency.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-dependency-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/hardware/windows_capture.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-hardware-windows-capture-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/audio_device.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-audio-device-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/loopback_transport.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-loopback-transport-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/protocol_v2_peer.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-protocol-v2-peer-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/protocol_v2_reference.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-protocol-v2-reference-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/tls_receiver.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-tls-receiver-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/tls_v2.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-tls-v2-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/integration/v2_codec_probe.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-integration-v2-codec-probe-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/unit/callback.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-unit-callback-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/unit/core.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-unit-core-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/unit/media/assembler.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-unit-media-assembler-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/unit/protocol/negotiation.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-unit-protocol-negotiation-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/unit/protocol/v2.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-unit-protocol-v2-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tests/unit/wire.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tests-unit-wire-zig"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/build_reference.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-build-reference-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/check_docs.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-check-docs-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/check_handoff.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-check-handoff-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/check_models.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-check-models-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/check_transport.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-check-transport-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/reference_contracts.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-reference-contracts-json"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/test_transport.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-test-transport-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "tools/test_v2_differential.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-tools-test-v2-differential-py"
+    },
+    {
+      "project": "lan-audio",
+      "path": "transport-lock.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/lan-audio.md",
+      "anchor": "file-transport-lock-json"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": ".gitignore",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-gitignore"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "build.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-build-zig"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "build.zig.zon",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-build-zig-zon"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "docs/CONTRACT.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-docs-contract-md"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "docs/DEPENDENCIES.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-docs-dependencies-md"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "docs/FILES.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-docs-files-md"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "docs/VERIFICATION.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-docs-verification-md"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-readme-md"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "src/native.c",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-src-native-c"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "src/profile.h",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-src-profile-h"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "src/root.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-src-root-zig"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "tests/contract.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-tests-contract-zig"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "tools/check_vendor.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-tools-check-vendor-py"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "UPSTREAM.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-upstream-json"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "vendor/miniaudio/LICENSE",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-vendor-miniaudio-license"
+    },
+    {
+      "project": "miniaudio-zig",
+      "path": "vendor/miniaudio/miniaudio.h",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/miniaudio-zig.md",
+      "anchor": "file-vendor-miniaudio-miniaudio-h"
+    },
+    {
+      "project": "tls-zig",
+      "path": "backend-lock.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-backend-lock-json"
+    },
+    {
+      "project": "tls-zig",
+      "path": "build.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-build-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "build.zig.zon",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-build-zig-zon"
+    },
+    {
+      "project": "tls-zig",
+      "path": "CHECKPOINT.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-checkpoint-md"
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/bin/libcrypto-3-x64.dll",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/bin/libssl-3-x64.dll",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/bin/openssl.exe",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/aes.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asn1.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asn1err.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asn1t.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/async.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/asyncerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bio.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bioerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/blowfish.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bn.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/bnerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/buffer.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/buffererr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/byteorder.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/camellia.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cast.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmac.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmp.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmp_util.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmperr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cms.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cmserr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/comp.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/comperr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conf.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conf_api.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conferr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/configuration.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/conftypes.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core_dispatch.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core_names.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/core_object.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/crmf.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/crmferr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/crypto.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cryptoerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cryptoerr_legacy.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ct.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/cterr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/decoder.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/decodererr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/des.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dh.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dherr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dsa.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dsaerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/dtls1.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/e_os2.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/e_ostime.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ebcdic.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ec.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ecdh.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ecdsa.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ecerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/encoder.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/encodererr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/engine.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/engineerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/err.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ess.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/esserr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/evp.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/evperr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/fips_names.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/fipskey.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/hmac.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/hpke.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/http.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/httperr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/idea.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/indicator.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/kdf.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/kdferr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/lhash.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/macros.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/md2.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/md4.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/md5.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/mdc2.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ml_kem.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/modes.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/obj_mac.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/objects.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/objectserr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ocsp.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ocsperr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/opensslconf.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/opensslv.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ossl_typ.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/param_build.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/params.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pem.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pem2.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pemerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs12.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs12err.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs7.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/pkcs7err.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/prov_ssl.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/proverr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/provider.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/quic.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rand.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/randerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rc2.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rc4.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rc5.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ripemd.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rsa.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/rsaerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/safestack.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/seed.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/self_test.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/sha.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/srp.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/srtp.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ssl.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ssl2.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ssl3.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/sslerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/sslerr_legacy.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/stack.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/store.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/storeerr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/symhacks.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/thread.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/tls1.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/trace.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ts.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/tserr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/txt_db.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/types.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/ui.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/uierr.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/whrlpool.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509_acert.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509_vfy.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509err.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509v3.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/include/openssl/x509v3err.h",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/cmake/OpenSSL/OpenSSLConfig.cmake",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/cmake/OpenSSL/OpenSSLConfigVersion.cmake",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/engines-3/capi.dll",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/engines-3/loader_attic.dll",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/engines-3/padlock.dll",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libcrypto.a",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libcrypto.dll.a",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libssl.a",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/libssl.dll.a",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/ossl-modules/legacy.dll",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/pkgconfig/libcrypto.pc",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/pkgconfig/libssl.pc",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/lib/pkgconfig/openssl.pc",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/LICENSE.txt",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/ct_log_list.cnf",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/ct_log_list.cnf.dist",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/misc/CA.pl",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/misc/tsget",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/misc/tsget.pl",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/openssl.cnf",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "deps/openssl-install/ssl/openssl.cnf.dist",
+      "kind": "upstream-sdk",
+      "reference": "docs/reference/upstream-assets.md",
+      "anchor": null
+    },
+    {
+      "project": "tls-zig",
+      "path": "evidence/build-recovery.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-evidence-build-recovery-md"
+    },
+    {
+      "project": "tls-zig",
+      "path": "evidence/source-provenance.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-evidence-source-provenance-json"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/build.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-examples-consumer-build-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/build.zig.zon",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-examples-consumer-build-zig-zon"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/main.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-examples-consumer-main-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/consumer/socket.c",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-examples-consumer-socket-c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "examples/roundtrip.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-examples-roundtrip-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "HANDOFF-shutdown.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-handoff-shutdown-md"
+    },
+    {
+      "project": "tls-zig",
+      "path": "HANDOFF-tcp-consumer.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-handoff-tcp-consumer-md"
+    },
+    {
+      "project": "tls-zig",
+      "path": "HOST-DRIVER.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-host-driver-md"
+    },
+    {
+      "project": "tls-zig",
+      "path": "README.md",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-readme-md"
+    },
+    {
+      "project": "tls-zig",
+      "path": "SOURCE-ORIGIN.json",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-source-origin-json"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend.c",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-src-backend-c"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend.h",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-src-backend-h"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/backend.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-src-backend-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/driver.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-src-driver-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "src/root.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-src-root-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/driver.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-driver-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/ca.pem",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-ca-pem"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/client.key",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-client-key"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/client.pem",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-client-pem"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/expired.key",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-expired-key"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/expired.pem",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-expired-pem"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/other-ca.pem",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-other-ca-pem"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/server.key",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-server-key"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/server.pem",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-server-pem"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/wrong-purpose.key",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-wrong-purpose-key"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/fixtures/wrong-purpose.pem",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-fixtures-wrong-purpose-pem"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tests/transport.zig",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tests-transport-zig"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/build-openssl.sh",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-build-openssl-sh"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/fetch-openssl.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-fetch-openssl-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/interop.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-interop-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/make_fixtures.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-make-fixtures-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/pin-backend.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-pin-backend-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/qualify.ps1",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-qualify-ps1"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/tcp_interop.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-tcp-interop-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/tcp_server_interop.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-tcp-server-interop-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/tcp_upload_interop.py",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-tcp-upload-interop-py"
+    },
+    {
+      "project": "tls-zig",
+      "path": "tools/test-openssl.sh",
+      "kind": "authored-or-support",
+      "reference": "docs/reference/tls-zig.md",
+      "anchor": "file-tools-test-openssl-sh"
+    }
+  ]
+}

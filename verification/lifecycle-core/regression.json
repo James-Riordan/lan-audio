@@ -1,0 +1,19 @@
+{
+  "command": [
+    "zig",
+    "build",
+    "test",
+    "dependency-test",
+    "audio-test",
+    "--summary",
+    "all",
+    "--cache-dir",
+    "C:/Users/James/Documents/Codex/2026-09-25/referenced-chatgpt-conversation-this-is-an-3/work/lifecycle-regression-cache"
+  ],
+  "cwd": "C:\\Projects\\lan-audio",
+  "observed_at_utc": "2026-09-26T14:35:59.427889+00:00",
+  "elapsed_seconds": 68.85594759999367,
+  "exit_code": 0,
+  "log": "regression.log",
+  "log_sha256": "78f85dc844f1418961cda8b19d900e81256a7f6f684b054874d3995ea0387b37"
+}

@@ -1,0 +1,150 @@
+{
+  "cases": [
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": null,
+      "exit_code": 0
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": null,
+      "exit_code": 0
+    },
+    {
+      "command": "validate",
+      "profile": "other",
+      "expected": null,
+      "exit_code": 0
+    },
+    {
+      "command": "validate",
+      "profile": "absent",
+      "expected": "ProfileNotFound",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidOptions",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidOptions",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidOptions",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidAddress",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidConfigString",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidConfigType",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidConfigType",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "Overflow",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "UnexpectedToken",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "UnknownField",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "ConfigNullUnsupported",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "InvalidFingerprint",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "UnsupportedCaptureSelection",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "UnsupportedCaptureSelection",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "UnsupportedConfigSchema",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "DuplicateProfile",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "DuplicateField",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "ConfigTooDeep",
+      "exit_code": 1
+    },
+    {
+      "command": "validate",
+      "profile": "home",
+      "expected": "StreamTooLong",
+      "exit_code": 1
+    },
+    {
+      "command": "run",
+      "profile": "home",
+      "expected": "SystemFailure",
+      "exit_code": 1
+    }
+  ],
+  "repeat_deterministic": true,
+  "temporary_config_only": true
+}

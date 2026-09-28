@@ -1,0 +1,67 @@
+{
+  "binary_sha256": "5b166539efbbec8ece5926d2ab2fb0b1ea7ae485e0426847d4f648d13e302a80",
+  "results": [
+    {
+      "role": "receiver",
+      "mode": "jitter",
+      "listener": false,
+      "matched": false,
+      "seconds": 3.979,
+      "exit_code": 1,
+      "error": "ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine",
+      "events": [
+        {
+          "attempt": 1,
+          "prefill_frames": 2880,
+          "frames": 2880,
+          "failure": "PlaybackStarved",
+          "lifecycle": {
+            "phase": "stopped",
+            "generation": 1,
+            "serial": 8,
+            "held": [
+              false,
+              false,
+              false
+            ],
+            "pending": null,
+            "worker_joined": true,
+            "device_fenced": true,
+            "first_cause": "media_fault",
+            "cleanup_blocked": false,
+            "deadline_expired": false,
+            "receive": null,
+            "send": null
+          },
+          "audio": {
+            "max_output_request_frames": 240,
+            "first_starvation_requested": 240,
+            "first_starvation_available": 0,
+            "first_starvation_rendered": 2880,
+            "captured_frames": 0,
+            "dropped_frames": 0,
+            "rendered_frames": 2880,
+            "silent_frames": 54960,
+            "missing_output_frames": 0,
+            "invalid_buffers": 0,
+            "capture_faults": 0,
+            "counters_exact": true
+          },
+          "active_ms": 391,
+          "starved": true,
+          "unplayed_frames": 0
+        }
+      ],
+      "peers": [
+        {
+          "frames": 3120,
+          "clean": false,
+          "authenticated": true,
+          "stream": "01010101010101010101010101010101",
+          "max_send_gap_ms": 136.306
+        }
+      ],
+      "stderr": "Playback started: 48 kHz stereo.\nConnection interrupted (PlaybackStarved); retrying in 250 ms with 80 ms playback reserve.\n"
+    }
+  ]
+}

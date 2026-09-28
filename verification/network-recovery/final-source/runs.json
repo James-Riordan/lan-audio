@@ -1,0 +1,255 @@
+[
+  {
+    "name": "fmt",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "fmt",
+      "--check",
+      "build.zig",
+      "src",
+      "tests"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 0.255
+  },
+  {
+    "name": "build-Debug",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-j2",
+      "test",
+      "audio-test",
+      "network-test",
+      "policy-test",
+      "platform-test",
+      "app",
+      "worker-probe",
+      "recovery-probe",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=Debug",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 88.643
+  },
+  {
+    "name": "recovery-Debug",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--output",
+      "verification/network-recovery/final-source/recovery-Debug.json"
+    ],
+    "exit_code": 1,
+    "passed": false,
+    "seconds": 15.263
+  },
+  {
+    "name": "proxy-Debug",
+    "command": [
+      "python",
+      "tests/integration/recovery_proxy.py",
+      "--output",
+      "verification/network-recovery/final-source/proxy-Debug.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 2.657
+  },
+  {
+    "name": "workers-Debug",
+    "command": [
+      "python",
+      "tests/integration/live_worker_peer.py",
+      "--output",
+      "verification/network-recovery/final-source/workers-Debug.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 16.118
+  },
+  {
+    "name": "verified-Debug",
+    "command": [
+      "python",
+      "tests/integration/verified_channel_peer.py",
+      "--output",
+      "verification/network-recovery/final-source/verified-Debug.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 12.527
+  },
+  {
+    "name": "build-ReleaseSafe",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "-j2",
+      "test",
+      "audio-test",
+      "network-test",
+      "policy-test",
+      "platform-test",
+      "app",
+      "worker-probe",
+      "recovery-probe",
+      "verified-transport-probe",
+      "-Dtransport-tests=true",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 154.369
+  },
+  {
+    "name": "recovery-ReleaseSafe",
+    "command": [
+      "python",
+      "tests/integration/recovery_peer.py",
+      "--output",
+      "verification/network-recovery/final-source/recovery-ReleaseSafe.json"
+    ],
+    "exit_code": 1,
+    "passed": false,
+    "seconds": 20.015
+  },
+  {
+    "name": "proxy-ReleaseSafe",
+    "command": [
+      "python",
+      "tests/integration/recovery_proxy.py",
+      "--output",
+      "verification/network-recovery/final-source/proxy-ReleaseSafe.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.585
+  },
+  {
+    "name": "workers-ReleaseSafe",
+    "command": [
+      "python",
+      "tests/integration/live_worker_peer.py",
+      "--output",
+      "verification/network-recovery/final-source/workers-ReleaseSafe.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 18.017
+  },
+  {
+    "name": "verified-ReleaseSafe",
+    "command": [
+      "python",
+      "tests/integration/verified_channel_peer.py",
+      "--output",
+      "verification/network-recovery/final-source/verified-ReleaseSafe.json"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 14.039
+  },
+  {
+    "name": "pairing",
+    "command": [
+      "python",
+      "tests/integration/pairing.py"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.567
+  },
+  {
+    "name": "physical-windows",
+    "command": [
+      "python",
+      "tests/hardware/windows_live_capture.py",
+      "--run",
+      "--seconds",
+      "10"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 16.245
+  },
+  {
+    "name": "run-help",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "run",
+      "-Doptimize=ReleaseSafe",
+      "--",
+      "help"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 21.282
+  },
+  {
+    "name": "mac-needs-sdk",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "app",
+      "-Dstreaming=true",
+      "-Dtarget=x86_64-macos.12.0",
+      "-Doptimize=ReleaseSafe"
+    ],
+    "exit_code": 1,
+    "passed": true,
+    "seconds": 3.274
+  },
+  {
+    "name": "mac-script-host",
+    "command": [
+      "python",
+      "tools/build_mac_candidate.py",
+      "--openssl-archive",
+      "missing.tar.gz",
+      "--output",
+      "missing-build",
+      "--zig",
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+    ],
+    "exit_code": 2,
+    "passed": true,
+    "seconds": 6.45
+  },
+  {
+    "name": "portable-mac",
+    "command": [
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe",
+      "build",
+      "core-check",
+      "lifecycle-check",
+      "policy-check",
+      "-Dtarget=x86_64-macos.12.0",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 3.966
+  },
+  {
+    "name": "custody",
+    "command": [
+      "python",
+      "tools/check_transport.py",
+      "--staged"
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "seconds": 4.271
+  }
+]

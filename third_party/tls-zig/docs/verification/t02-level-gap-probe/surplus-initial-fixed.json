@@ -1,0 +1,8 @@
+{
+  "scope": "Same external production Engine probe after message-bounded leasing and surplus check; direct absolute-path execution",
+  "chunk_id": "6f43d3",
+  "wall_time_seconds": 2.8562955,
+  "exit_code": 0,
+  "original_token_count": 13,
+  "output": "surplus Initial correctly rejected: UnexpectedLevel\n"
+}

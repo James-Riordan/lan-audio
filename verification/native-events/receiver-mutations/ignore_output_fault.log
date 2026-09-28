@@ -1,0 +1,11 @@
+1/1 runtime_lifecycle.test.receiver output failure blocks admission publication start and drain...expected error.MediaFault, found void
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff7a49cedca in expectError__anon_62179 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:29:18: 0x7ff7a49d0dde in test.receiver output failure blocks admission publication start and drain (root_zcu.obj)
+            0 => try std.testing.expectError(error.MediaFault, receiver.admit(g, media(&body, 0, 3))),
+                 ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\1b9db77a8a45bb434674608c43ec629d\root.exe --seed=0xf3436a94

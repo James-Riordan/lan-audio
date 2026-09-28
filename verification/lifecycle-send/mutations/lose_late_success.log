@@ -1,0 +1,35 @@
+1/1 runtime_lifecycle.test.cancel during every acquisition retains parents for late success failure and partial debt...slices differ. first difference occurs at index 0 (0x0)
+
+============ expected this output: =============  len: 3 (0x3)
+
+[0]: true
+[1]: false
+[2]: false
+
+============= instead found this: ==============  len: 3 (0x3)
+
+[0]: false
+[1]: false
+[2]: false
+
+================================================
+
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:379:5: 0x7ff74ca8df48 in expectEqualSlices__anon_61888 (root_zcu.obj)
+    return error.TestExpectedEqual;
+    ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:137:27: 0x7ff74ca8dfe7 in expectEqualInner__anon_61873 (root_zcu.obj)
+        .array => |array| try expectEqualSlices(array.child, &expected, &actual),
+                          ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff74ca8e5da in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:159:9: 0x7ff74ca8e60b in finish (root_zcu.obj)
+        try eq(self.owned, self.controller.snapshot().held);
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:223:13: 0x7ff74ca8fe90 in test.cancel during every acquisition retains parents for late success failure and partial debt (root_zcu.obj)
+            try host.finish(result);
+            ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\31e64654001b806633bb16c2d57358b6\root.exe --seed=0xd6c6b975

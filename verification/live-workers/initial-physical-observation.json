@@ -1,0 +1,14 @@
+{
+  "kind": "transcribed tool-output observation, not final-source qualification",
+  "command": "python tests/hardware/windows_live_capture.py --run --seconds 3",
+  "exit_code": 0,
+  "seconds": 3.06,
+  "frames": 143040,
+  "nonzero_bytes": 453585,
+  "observed_non_silent_audio": true,
+  "dropped_frames": 0,
+  "lifecycle": "stopped, all held false, worker joined, device fenced, no pending token",
+  "transport": "remote confirmed, secure close clean",
+  "binary_sha256": null,
+  "limit": "Observed before final ReleaseSafe campaign; do not substitute for final executable evidence. No PCM or private keys retained."
+}

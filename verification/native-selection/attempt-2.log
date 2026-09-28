@@ -1,0 +1,57 @@
+audio-test
++- run test
+   +- compile test debug native
+      +- compile lib miniaudio debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+audio-test
++- run test
+   +- compile test debug native 1 errors
+src\host\audio_device.zig:182:39: error: expected type '[*c]u8', found '*const [2]u8'
+        config.playback.pChannelMap = &channel_map;
+                                      ^~~~~~~~~~~~
+src\host\audio_device.zig:182:39: note: cast discards const qualifier
+referenced by:
+    test.selected silent endpoint survives name borrow and rejected opens are reusable: tests\integration\audio_device.zig:9:80
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" test -ODebug --dep audio_host "-Mroot=tests\\integration\\audio_device.zig" -ODebug --dep lan_audio --dep miniaudio "-Maudio_host=src\\host\\audio_device.zig" -ODebug "-Mlan_audio=src\\root.zig" ".zig-cache\\o\\26174f75dfdb6b1828e7dfda93e323dd\\miniaudio.lib" -ODebug -I ".zig-cache\\o\\b612c90714d41c109b931981da111308" --dep miniaudio_c "-Mminiaudio=../miniaudio-zig\\src\\root.zig" -ODebug "-Mminiaudio_c=.zig-cache\\o\\0eab571a7df1a9a352f9b745fc27678a\\profile.zig" -lole32 -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name test --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 5/8 steps succeeded (1 failed); 2/2 tests passed
+audio-test transitive failure
++- run test transitive failure
+|  +- compile test debug native 1 errors
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 451ms MaxRSS:62M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 5s MaxRSS:62M
++- run test 2 pass (2 total) 565ms MaxRSS:4M
+   +- compile test debug native success 16s MaxRSS:290M
+      +- WriteFile (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c (reused)
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x5de9053 audio-test --summary all

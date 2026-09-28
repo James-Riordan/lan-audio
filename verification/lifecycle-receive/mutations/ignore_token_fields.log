@@ -1,0 +1,11 @@
+1/1 runtime_lifecycle.test.every token field and contradictory result is rejected atomically...expected error.InvalidToken, found void
+FAIL (TestExpectedError)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:58:9: 0x7ff6f511cb4a in expectError__anon_61834 (root_zcu.obj)
+        return error.TestExpectedError;
+        ^
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:272:9: 0x7ff6f512090c in test.every token field and contradictory result is rejected atomically (root_zcu.obj)
+        try std.testing.expectError(error.InvalidToken, host.controller.complete(bad, .acquired));
+        ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\84882601d69bb960336d0c69ffa8d9ae\root.exe --seed=0x4a03178c

@@ -1,0 +1,34 @@
+{
+  "source_sha256": {
+    "src/host/audio_device.zig": "5563438991222af515d6cc149a72d36800635fb2c94bbef02e9d86cd36868205",
+    "tests/integration/audio_device.zig": "5a6e684c91616bfd8b5cb4b527e074ede5ccaff85a59d5595c219fd8f6bb066b",
+    "build.zig": "35314312e5eb78efd380d46a3dfcae29e7d53b1de00d3955c0cf26cda308bf0d"
+  },
+  "runs": [
+    {
+      "name": "final-debug",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 43.38415140000143
+    },
+    {
+      "name": "final-safe",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 105.98588220000238
+    }
+  ]
+}

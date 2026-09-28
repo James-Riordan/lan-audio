@@ -1,0 +1,99 @@
+[
+  {
+    "command": [
+      "python",
+      "tools/check_lifecycle_spec.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "stdout_file": "model-normal.json",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "-O",
+      "tools/check_lifecycle_spec.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "stdout_file": "model-optimized.json",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "tools/build_reference.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "Rendered 505 file entries: 339 authored/support, 166 installed SDK files\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_docs.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 505 authored/vendor files mapped; local Markdown targets exist (anchors not checked)\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_handoff.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 505 files have contract/index coverage; local Zig imports and work-package exits resolve\n"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_transport.py",
+      "--staged"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 188 dependency files match reviewed custody; staged=True\n"
+  },
+  {
+    "command": [
+      "python",
+      "../miniaudio-zig/tools/check_docs.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 43 files mapped; local links, explicit anchors, source snippets and vendor custody checked\n"
+  },
+  {
+    "command": [
+      "python",
+      "../miniaudio-zig/tools/check_vendor.py"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "PASS: 2 unchanged upstream files at 9634bedb5b5a2ca38c1ee7108a9358a4e233f14d\n"
+  },
+  {
+    "command": [
+      "python",
+      "../tls-zig/tools/check-docs.py",
+      "--self-test",
+      "--with-sdk"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": [],\n  \"negative_controls_detected\": [\n    \"source hash drift\",\n    \"unindexed file\",\n    \"broken local link\",\n    \"missing contract\",\n    \"stale declaration location\",\n    \"unsafe inventory path\",\n    \"malformed JSON\"\n  ]\n}\n"
+  },
+  {
+    "command": [
+      "python",
+      "../tls-zig/tools/check-plan.py",
+      "--self-test"
+    ],
+    "cwd": "C:\\Projects\\lan-audio",
+    "exit_code": 0,
+    "output": "{\n  \"passed\": true,\n  \"project\": \"tls-zig\",\n  \"work_packages\": 37,\n  \"acceptance_obligations\": 85,\n  \"completion_order\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\",\n    \"Q10\",\n    \"T01\",\n    \"T07\",\n    \"Q11\",\n    \"T03\",\n    \"T05\",\n    \"T08\",\n    \"T09\",\n    \"T04\",\n    \"T10\",\n    \"T02\",\n    \"T11\",\n    \"T06\",\n    \"T12\",\n    \"Q00\",\n    \"T13\",\n    \"T14\",\n    \"Q01\",\n    \"Q02\",\n    \"Q04\",\n    \"Q03\",\n    \"Q05\",\n    \"Q06\",\n    \"Q07\",\n    \"Q08\",\n    \"Q13\",\n    \"Q20\",\n    \"Q15\",\n    \"Q17\",\n    \"Q18\",\n    \"Q16\",\n    \"Q19\",\n    \"Q21\"\n  ],\n  \"peer_checked\": false,\n  \"states\": {\n    \"planned\": 37,\n    \"in_progress\": 0,\n    \"implemented\": 0,\n    \"complete\": 0\n  },\n  \"ready_to_implement\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\"\n  ],\n  \"negative_controls_detected\": [\n    \"cycle\",\n    \"unknown dependency\",\n    \"duplicate id\",\n    \"unsafe path\",\n    \"noncanonical path\",\n    \"missing oracle\",\n    \"duplicate acceptance\",\n    \"false completion\",\n    \"invalid shape\"\n  ]\n}\n"
+  }
+]

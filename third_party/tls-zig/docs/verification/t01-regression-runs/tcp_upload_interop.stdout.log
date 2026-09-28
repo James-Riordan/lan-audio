@@ -1,0 +1,8 @@
+Independent TCP server: OpenSSL 3.0.18 30 Sep 2025
+Transport fixture: real TCP with deterministic send would-block after 17 ciphertext bytes
+PASS early-response TCP: clean
+PASS early-response TCP: blocked_deadline
+PASS early-response TCP: blocked_cancel
+PASS early-response TCP: raw_eof
+PASS early-response TCP: no_close
+5 early-response TCP cases passed

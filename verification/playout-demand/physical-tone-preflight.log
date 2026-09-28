@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "from_config": true,
+  "test_tone": true,
+  "signal": {
+    "frames": 480480,
+    "finite": true,
+    "rms": 0.022094454333347713,
+    "tone_amplitudes": [
+      0.031246275847272124,
+      0.031246275847272124
+    ],
+    "tone_energy_fraction": 0.9999999280438309,
+    "detected": true
+  },
+  "seconds": 11.083,
+  "process_cpu_seconds": 0.171875,
+  "percent_of_one_cpu": 1.5508216363561338,
+  "frames": 480480,
+  "nonzero_bytes": 2282280,
+  "observed_non_silent_audio": true,
+  "error": null,
+  "exit_code": 0,
+  "report": {
+    "attempt": 1,
+    "buffer_ms": 40,
+    "frames": 480480,
+    "failure": null,
+    "lifecycle": {
+      "phase": "stopped",
+      "generation": 1,
+      "serial": 2013,
+      "held": [
+        false,
+        false,
+        false
+      ],
+      "pending": null,
+      "worker_joined": true,
+      "device_fenced": true,
+      "first_cause": null,
+      "cleanup_blocked": false,
+      "deadline_expired": false,
+      "receive": null,
+      "send": {
+        "draining": true,
+        "committed": 480480,
+        "offered_frames": 0,
+        "frontier": 480480,
+        "local": "transferred",
+        "end": "copied",
+        "remote": "confirmed",
+        "secure_close": "clean"
+      }
+    },
+    "audio": {
+      "max_output_request_frames": 0,
+      "first_starvation_requested": 0,
+      "first_starvation_available": 0,
+      "first_starvation_rendered": 0,
+      "captured_frames": 480480,
+      "dropped_frames": 0,
+      "rendered_frames": 0,
+      "silent_frames": 0,
+      "missing_output_frames": 0,
+      "invalid_buffers": 0,
+      "capture_faults": 0,
+      "counters_exact": true
+    },
+    "active_ms": 10108,
+    "starved": false,
+    "unplayed_frames": 0,
+    "clock_keepalive": true,
+    "media_priority": true,
+    "delivery_timing": {
+      "last_publication_ms": null,
+      "max_publication_gap_ms": 0,
+      "max_receive_ms": 0,
+      "starvation_gap_ms": 0,
+      "published_frames": 0,
+      "playback_started_ms": null,
+      "playback_observed_ms": null,
+      "observed_playback_frames": 0,
+      "max_playback_lead_frames": 0,
+      "max_frames_between_observations": 0
+    }
+  },
+  "stderr": "Capture started: 48 kHz stereo.\n"
+}

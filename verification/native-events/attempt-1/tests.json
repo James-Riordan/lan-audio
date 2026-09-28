@@ -1,0 +1,51 @@
+{
+  "source_sha256": {
+    "src/host/audio_device.zig": "46604467f91ebbe21fe8ef5339afc5b716cf2061ca56ed14ac24aeef155b374b",
+    "src/audio/callback_bridge.zig": "aa560ade34583d2fbcb2e024491fb232c1b90f3446b32a7ff731c6fbe0d2c3ef",
+    "tests/integration/audio_device.zig": "9fb1efebb9ece468bd99c7a36e215d8b1bed8f43acbbf33db4133617a660cae5",
+    "tests/unit/callback.zig": "a50ce904530b120949a7d61582e1bb250722368cc760824893e5f1d9ce9c8bdd",
+    "build.zig": "e5a6a03eec9e58a477252e6dfbf61eabb4b4db88a60467383083eb41b2d2b3eb"
+  },
+  "runs": [
+    {
+      "name": "debug",
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "audio-test",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 49.55473960000381
+    },
+    {
+      "name": "native-safe",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 58.22493519999989
+    },
+    {
+      "name": "monterey-default",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-check",
+        "-Dtarget=x86_64-macos",
+        "--verbose",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 23.608030499999586
+    }
+  ]
+}

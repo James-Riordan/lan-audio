@@ -1,0 +1,14 @@
+1/1 runtime_lifecycle.test.sender rejection preserves bytes and commits once despite short transport progress...expected 0, found 3
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:112:17: 0x7ff60d94b6ea in expectEqualInner__anon_61669 (root_zcu.obj)
+                return error.TestExpectedEqual;
+                ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff60d953dfd in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:782:5: 0x7ff60d953e6c in test.sender rejection preserves bytes and commits once despite short transport progress (root_zcu.obj)
+    try eq(@as(u64, 0), sender.gate.next_frame);
+    ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\3c56859f7a79a5f53e8b50a88a3e3714\root.exe --seed=0xdba961f9

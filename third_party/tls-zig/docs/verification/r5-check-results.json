@@ -1,0 +1,165 @@
+{
+  "revision": "2026-09-26-r5",
+  "status": "passed",
+  "date_utc": "2026-09-26T13:36:22.509557+00:00",
+  "scope": "native diagnostic plus documentation/model/plan checks; no production protocol suites rerun",
+  "all_preexisting_source_bytes_unchanged": true,
+  "source_inventory_sha256": "57f400db19492342e1783abddfa07c6a894046040fb45ded1b9c611594c7d200",
+  "plan_sha256": "772e591169cf18ce4f5bd2e55ab4f88c50928d79e59776596a1adc919e965140",
+  "work_packages": 37,
+  "acceptance_obligations": 89,
+  "planned_packages": 37,
+  "source_contracts": 53,
+  "native_experiments": [
+    {
+      "path": "docs/verification/provider-pair/O0.json",
+      "sha256": "c35311c94ef578b9cd7ba2e6384fad45863456ae57525d6cfa49834366cae32d",
+      "passed_cases": 17
+    },
+    {
+      "path": "docs/verification/provider-pair/O2.json",
+      "sha256": "bf5682c7347687e59f8014a5b03b5b290701e20a50da6b4387e3bd81aaf3559b",
+      "passed_cases": 17
+    }
+  ],
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": [],\n  \"negative_controls_detected\": [\n    \"source hash drift\",\n    \"unindexed file\",\n    \"broken local link\",\n    \"missing contract\",\n    \"stale declaration location\",\n    \"unsafe inventory path\",\n    \"malformed JSON\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\quic-zig"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"project\": \"tls-zig\",\n  \"work_packages\": 37,\n  \"acceptance_obligations\": 89,\n  \"completion_order\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\",\n    \"Q10\",\n    \"T01\",\n    \"T07\",\n    \"Q11\",\n    \"T03\",\n    \"T05\",\n    \"T08\",\n    \"T09\",\n    \"T04\",\n    \"T10\",\n    \"T02\",\n    \"T11\",\n    \"T06\",\n    \"T12\",\n    \"Q00\",\n    \"T13\",\n    \"T14\",\n    \"Q01\",\n    \"Q02\",\n    \"Q04\",\n    \"Q03\",\n    \"Q05\",\n    \"Q06\",\n    \"Q07\",\n    \"Q08\",\n    \"Q13\",\n    \"Q20\",\n    \"Q15\",\n    \"Q17\",\n    \"Q18\",\n    \"Q16\",\n    \"Q19\",\n    \"Q21\"\n  ],\n  \"peer_checked\": true,\n  \"states\": {\n    \"planned\": 37,\n    \"in_progress\": 0,\n    \"implemented\": 0,\n    \"complete\": 0\n  },\n  \"ready_to_implement\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\"\n  ],\n  \"negative_controls_detected\": [\n    \"cycle\",\n    \"unknown dependency\",\n    \"duplicate id\",\n    \"unsafe path\",\n    \"noncanonical path\",\n    \"missing oracle\",\n    \"duplicate acceptance\",\n    \"false completion\",\n    \"invalid shape\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\test-plan-lifecycle.py"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scope\": \"synthetic lifecycle evidence fixtures; no real work completed\",\n  \"positive_controls\": [\n    \"consistent cross-project completion\",\n    \"reopened implemented work\",\n    \"in-progress documented source\",\n    \"planned without source\"\n  ],\n  \"negative_controls_detected\": [\n    \"failed run\",\n    \"boolean exit code\",\n    \"skipped run\",\n    \"missing acceptance\",\n    \"skipped acceptance\",\n    \"unknown run\",\n    \"stale design\",\n    \"stale obligation\",\n    \"missing source scope\",\n    \"source hash mismatch\",\n    \"duplicate input\",\n    \"unsafe log path\",\n    \"log hash mismatch\",\n    \"unresolved gap\",\n    \"missing environment\",\n    \"unknown input project\",\n    \"missing dependency receipt\",\n    \"stale dependency receipt\",\n    \"source changed after completion\",\n    \"planned state conceals existing source\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-models.py"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"finite abstract safety models; no Zig/C refinement or liveness proof\",\n  \"models\": {\n    \"ack_ticket\": {\n      \"correct_model\": {\n        \"states\": 20,\n        \"edges\": 36,\n        \"counterexample\": null\n      },\n      \"injected_fault\": {\n        \"states\": 18,\n        \"edges\": 23,\n        \"counterexample\": [\n          \"admit ack-eliciting packet\",\n          \"prepare ticket 1\",\n          \"admit ack-eliciting packet\",\n          \"send ticket 1\"\n        ]\n      }\n    },\n    \"late_ack_custody\": {\n      \"correct_model\": {\n        \"states\": 10,\n        \"edges\": 14,\n        \"counterexample\": null\n      },\n      \"injected_fault\": {\n        \"states\": 11,\n        \"edges\": 13,\n        \"counterexample\": [\n          \"send original span {0,1}\",\n          \"lose packet 0\",\n          \"send retransmission span {0,1}\",\n          \"ACK packet 0\",\n          \"lose packet 1\"\n        ]\n      }\n    },\n    \"authenticated_shutdown\": {\n      \"correct_model\": {\n        \"states\": 15,\n        \"edges\": 20,\n        \"counterexample\": null\n      },\n      \"injected_fault\": {\n        \"states\": 15,\n        \"edges\": 20,\n        \"counterexample\": [\n          \"consume one final plaintext byte\",\n          \"consume one final plaintext byte\",\n          \"receive raw transport EOF\",\n          \"finish shutdown\"\n        ]\n      }\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-event-model.py"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scope\": \"finite proposed custody model; no implementation refinement or liveness proof\",\n  \"normal\": [\n    {\n      \"passed\": true,\n      \"capacity\": 1,\n      \"states\": 23,\n      \"edges\": 155\n    },\n    {\n      \"passed\": true,\n      \"capacity\": 2,\n      \"states\": 33,\n      \"edges\": 233\n    }\n  ],\n  \"injected_faults\": {\n    \"overwrite\": {\n      \"passed\": false,\n      \"capacity\": 2,\n      \"states\": 6,\n      \"edges\": 24,\n      \"violation\": \"lost emitted event\",\n      \"trace\": [\n        \"emit 0\",\n        \"emit 1\",\n        \"overwrite full queue\"\n      ]\n    },\n    \"stale-ack\": {\n      \"passed\": false,\n      \"capacity\": 2,\n      \"states\": 11,\n      \"edges\": 65,\n      \"violation\": \"stale/foreign acknowledgement mutated state\",\n      \"trace\": [\n        \"emit 0\",\n        \"nextEvent\",\n        \"copy/derive 0\",\n        \"ack issuer=7 sequence=1\"\n      ]\n    },\n    \"early-ack\": {\n      \"passed\": false,\n      \"capacity\": 2,\n      \"states\": 9,\n      \"edges\": 37,\n      \"violation\": \"retired before independent copy/derivation\",\n      \"trace\": [\n        \"emit 0\",\n        \"nextEvent\",\n        \"ack issuer=7 sequence=0\"\n      ]\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-docs.py",
+        "--self-test"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": [],\n  \"negative_controls_detected\": [\n    \"source hash drift\",\n    \"unindexed file\",\n    \"broken local link\",\n    \"missing contract\",\n    \"stale declaration location\",\n    \"unsafe inventory path\",\n    \"malformed JSON\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-plan.py",
+        "--self-test",
+        "--peer",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\quic-zig"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"project\": \"tls-zig\",\n  \"work_packages\": 37,\n  \"acceptance_obligations\": 89,\n  \"completion_order\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\",\n    \"Q10\",\n    \"T01\",\n    \"T07\",\n    \"Q11\",\n    \"T03\",\n    \"T05\",\n    \"T08\",\n    \"T09\",\n    \"T04\",\n    \"T10\",\n    \"T02\",\n    \"T11\",\n    \"T06\",\n    \"T12\",\n    \"Q00\",\n    \"T13\",\n    \"T14\",\n    \"Q01\",\n    \"Q02\",\n    \"Q04\",\n    \"Q03\",\n    \"Q05\",\n    \"Q06\",\n    \"Q07\",\n    \"Q08\",\n    \"Q13\",\n    \"Q20\",\n    \"Q15\",\n    \"Q17\",\n    \"Q18\",\n    \"Q16\",\n    \"Q19\",\n    \"Q21\"\n  ],\n  \"peer_checked\": true,\n  \"states\": {\n    \"planned\": 37,\n    \"in_progress\": 0,\n    \"implemented\": 0,\n    \"complete\": 0\n  },\n  \"ready_to_implement\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\"\n  ],\n  \"negative_controls_detected\": [\n    \"cycle\",\n    \"unknown dependency\",\n    \"duplicate id\",\n    \"unsafe path\",\n    \"noncanonical path\",\n    \"missing oracle\",\n    \"duplicate acceptance\",\n    \"false completion\",\n    \"invalid shape\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\test-plan-lifecycle.py"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scope\": \"synthetic lifecycle evidence fixtures; no real work completed\",\n  \"positive_controls\": [\n    \"consistent cross-project completion\",\n    \"reopened implemented work\",\n    \"in-progress documented source\",\n    \"planned without source\"\n  ],\n  \"negative_controls_detected\": [\n    \"failed run\",\n    \"boolean exit code\",\n    \"skipped run\",\n    \"missing acceptance\",\n    \"skipped acceptance\",\n    \"unknown run\",\n    \"stale design\",\n    \"stale obligation\",\n    \"missing source scope\",\n    \"source hash mismatch\",\n    \"duplicate input\",\n    \"unsafe log path\",\n    \"log hash mismatch\",\n    \"unresolved gap\",\n    \"missing environment\",\n    \"unknown input project\",\n    \"missing dependency receipt\",\n    \"stale dependency receipt\",\n    \"source changed after completion\",\n    \"planned state conceals existing source\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-models.py"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"finite abstract safety models; no Zig/C refinement or liveness proof\",\n  \"models\": {\n    \"ack_ticket\": {\n      \"correct_model\": {\n        \"states\": 20,\n        \"edges\": 36,\n        \"counterexample\": null\n      },\n      \"injected_fault\": {\n        \"states\": 18,\n        \"edges\": 23,\n        \"counterexample\": [\n          \"admit ack-eliciting packet\",\n          \"prepare ticket 1\",\n          \"admit ack-eliciting packet\",\n          \"send ticket 1\"\n        ]\n      }\n    },\n    \"late_ack_custody\": {\n      \"correct_model\": {\n        \"states\": 10,\n        \"edges\": 14,\n        \"counterexample\": null\n      },\n      \"injected_fault\": {\n        \"states\": 11,\n        \"edges\": 13,\n        \"counterexample\": [\n          \"send original span {0,1}\",\n          \"lose packet 0\",\n          \"send retransmission span {0,1}\",\n          \"ACK packet 0\",\n          \"lose packet 1\"\n        ]\n      }\n    },\n    \"authenticated_shutdown\": {\n      \"correct_model\": {\n        \"states\": 15,\n        \"edges\": 20,\n        \"counterexample\": null\n      },\n      \"injected_fault\": {\n        \"states\": 15,\n        \"edges\": 20,\n        \"counterexample\": [\n          \"consume one final plaintext byte\",\n          \"consume one final plaintext byte\",\n          \"receive raw transport EOF\",\n          \"finish shutdown\"\n        ]\n      }\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-O",
+        "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig\\tools\\check-event-model.py"
+      ],
+      "cwd": "C:\\Users\\James\\Documents\\Codex\\2026-09-26\\your-job-chatgpt-work-is-to\\work\\r5\\stage\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scope\": \"finite proposed custody model; no implementation refinement or liveness proof\",\n  \"normal\": [\n    {\n      \"passed\": true,\n      \"capacity\": 1,\n      \"states\": 23,\n      \"edges\": 155\n    },\n    {\n      \"passed\": true,\n      \"capacity\": 2,\n      \"states\": 33,\n      \"edges\": 233\n    }\n  ],\n  \"injected_faults\": {\n    \"overwrite\": {\n      \"passed\": false,\n      \"capacity\": 2,\n      \"states\": 6,\n      \"edges\": 24,\n      \"violation\": \"lost emitted event\",\n      \"trace\": [\n        \"emit 0\",\n        \"emit 1\",\n        \"overwrite full queue\"\n      ]\n    },\n    \"stale-ack\": {\n      \"passed\": false,\n      \"capacity\": 2,\n      \"states\": 11,\n      \"edges\": 65,\n      \"violation\": \"stale/foreign acknowledgement mutated state\",\n      \"trace\": [\n        \"emit 0\",\n        \"nextEvent\",\n        \"copy/derive 0\",\n        \"ack issuer=7 sequence=1\"\n      ]\n    },\n    \"early-ack\": {\n      \"passed\": false,\n      \"capacity\": 2,\n      \"states\": 9,\n      \"edges\": 37,\n      \"violation\": \"retired before independent copy/derivation\",\n      \"trace\": [\n        \"emit 0\",\n        \"nextEvent\",\n        \"ack issuer=7 sequence=0\"\n      ]\n    }\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "live_adoption_checks": [
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-docs.py",
+        "--with-sdk"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"project\": \"tls-zig\",\n  \"passed\": true,\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Projects\\tls-zig\\tools\\check-plan.py",
+        "--peer",
+        "C:\\Projects\\quic-zig"
+      ],
+      "cwd": "C:\\Projects\\tls-zig",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"project\": \"tls-zig\",\n  \"work_packages\": 37,\n  \"acceptance_obligations\": 89,\n  \"completion_order\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\",\n    \"Q10\",\n    \"T01\",\n    \"T07\",\n    \"Q11\",\n    \"T03\",\n    \"T05\",\n    \"T08\",\n    \"T09\",\n    \"T04\",\n    \"T10\",\n    \"T02\",\n    \"T11\",\n    \"T06\",\n    \"T12\",\n    \"Q00\",\n    \"T13\",\n    \"T14\",\n    \"Q01\",\n    \"Q02\",\n    \"Q04\",\n    \"Q03\",\n    \"Q05\",\n    \"Q06\",\n    \"Q07\",\n    \"Q08\",\n    \"Q13\",\n    \"Q20\",\n    \"Q15\",\n    \"Q17\",\n    \"Q18\",\n    \"Q16\",\n    \"Q19\",\n    \"Q21\"\n  ],\n  \"peer_checked\": true,\n  \"states\": {\n    \"planned\": 37,\n    \"in_progress\": 0,\n    \"implemented\": 0,\n    \"complete\": 0\n  },\n  \"ready_to_implement\": [\n    \"Q09\",\n    \"Q12\",\n    \"Q14\",\n    \"T00\"\n  ]\n}\n",
+      "stderr": ""
+    }
+  ]
+}

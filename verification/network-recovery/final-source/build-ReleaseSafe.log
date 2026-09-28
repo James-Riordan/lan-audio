@@ -1,0 +1,73 @@
+Build Summary: 47/47 steps succeeded; 114/114 tests passed
+verified-transport-probe success
++- install audio-verified-probe success
+|  +- compile exe audio-verified-probe safe native cached 192ms MaxRSS:65M
+|     +- translate-c cached 102ms MaxRSS:65M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+recovery-probe success
++- install audio-recovery-probe success
+|  +- compile exe audio-recovery-probe safe native success 45s MaxRSS:323M
+|     +- translate-c cached 39ms MaxRSS:65M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 192ms MaxRSS:65M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c cached 58ms MaxRSS:65M
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+worker-probe success
++- install audio-worker-probe success
+|  +- compile exe audio-worker-probe safe native success 46s MaxRSS:319M
+|     +- translate-c (reused)
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+app success
++- install lan-audio success
+|  +- compile exe lan-audio safe native success 55s MaxRSS:323M
+|     +- options cached
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
+|     +- translate-c (reused)
++- install deps\openssl-install\bin\libssl-3-x64.dll to libssl-3-x64.dll cached
++- install deps\openssl-install\bin\libcrypto-3-x64.dll to libcrypto-3-x64.dll cached
+platform-test success
++- run test 2 pass (2 total) 199ms MaxRSS:4M
+   +- compile test safe native success 45s MaxRSS:297M
+      +- translate-c (reused)
+policy-test success
++- run test 7 pass (7 total) 55s MaxRSS:3M
+   +- compile test safe native cached 241ms MaxRSS:65M
+network-test success
++- run test 6 pass (6 total) 3s MaxRSS:4M
+   +- compile test safe native cached 173ms MaxRSS:65M
+      +- translate-c (reused)
+audio-test success
++- run test 6 pass (6 total) 1s MaxRSS:8M
+|  +- compile test safe native cached 128ms MaxRSS:65M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c (reused)
++- run test 7 pass (7 total) 979ms MaxRSS:9M
+   +- compile test safe native cached 127ms MaxRSS:65M
+      +- WriteFile (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c (reused)
+test success
++- run test 47 pass (47 total) 1s MaxRSS:3M
+|  +- compile test safe native cached 267ms MaxRSS:65M
++- run test 2 pass (2 total) 277ms MaxRSS:3M
+|  +- compile test safe native cached 167ms MaxRSS:65M
++- run test 37 pass (37 total) 252ms MaxRSS:3M
+   +- compile test safe native cached 1s MaxRSS:65M
+

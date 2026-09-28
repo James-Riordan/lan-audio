@@ -1,0 +1,14 @@
+1/1 runtime_lifecycle.test.sender uncertain write preserves exact local and uncertain frame partition...expected 3, found 0
+FAIL (TestExpectedEqual)
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:112:17: 0x7ff63a2db6ea in expectEqualInner__anon_61669 (root_zcu.obj)
+                return error.TestExpectedEqual;
+                ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:76: 0x7ff63a2e3832 in expectEqual (root_zcu.obj)
+    return expectEqualInner(T, expected, actual);
+
+C:\Projects\lan-audio\tests\integration\runtime_lifecycle.zig:868:5: 0x7ff63a2e38a2 in test.sender uncertain write preserves exact local and uncertain frame partition (root_zcu.obj)
+    try eq(@as(u64, 3), a.uncertain_transfer);
+    ^
+0 passed; 0 skipped; 1 failed.
+error: the following test command failed with exit code 1:
+.zig-cache\o\2b7c653a6613a2d17ef2e2992b5fa9f6\root.exe --seed=0xb0e03c49

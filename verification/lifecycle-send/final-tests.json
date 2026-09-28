@@ -1,0 +1,80 @@
+{
+  "source_sha256": {
+    "src/runtime/lifecycle.zig": "6217a0552185432991be5fbd1653073f6b09e0cfa51f32f8d9d29557e9fa7d50",
+    "src/runtime/send_drain.zig": "47c85b0517c1d26e2339f0e61e04abc9900ec68a025a97b243fa15333ccd2bab",
+    "src/runtime/receive_drain.zig": "899fe13fc967708de564c79b8b92739393373d3b27a2ef2667b16fa8d16173fb",
+    "src/audio/frame_queue.zig": "cf6fe600839bbec640a4c295c5489387e3cbcb131b9d892760727bdd7b6e5b0e",
+    "src/audio/callback_bridge.zig": "23a7fb312641118a1b46f49ea637d3a60747acc40c75c0561632a155c0cf3e2f",
+    "src/host/audio_device.zig": "1bb5bb233358b15ed9e40d2fcc97d4fb68b474545d89531fbc59832d1f8719e1",
+    "tests/unit/callback.zig": "3a50a3d6553e48e74c25534510337b927d627330ae977941e353b16e950866c2",
+    "tests/integration/runtime_lifecycle.zig": "32176d773b97f1d0269316c7501b0efd960886b35abc66aa5adb9affe39191af",
+    "build.zig": "90c1ae397e53c6b1118467796feffeaa9330091b71f101389794c8a4cbfc8521"
+  },
+  "runs": [
+    {
+      "name": "final-debug",
+      "command": [
+        "zig",
+        "build",
+        "test",
+        "--cache-dir",
+        ".zig-cache/lifecycle-send-final",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 8.369233099998382
+    },
+    {
+      "name": "final-release-safe",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-test",
+        "-Doptimize=ReleaseSafe",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 47.49102649999986
+    },
+    {
+      "name": "final-silent-native",
+      "command": [
+        "zig",
+        "build",
+        "audio-test",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 25.93769130000146
+    },
+    {
+      "name": "final-intel-mac-compile",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-check",
+        "-Dtarget=x86_64-macos",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 6.034746199999063
+    },
+    {
+      "name": "final-linux-compile",
+      "command": [
+        "zig",
+        "build",
+        "lifecycle-check",
+        "-Dtarget=aarch64-linux",
+        "--summary",
+        "all"
+      ],
+      "exit_code": 0,
+      "seconds": 9.181423100002576
+    }
+  ]
+}

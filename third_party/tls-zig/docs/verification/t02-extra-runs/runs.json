@@ -1,0 +1,135 @@
+[
+  {
+    "id": "test-quic-types-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-X",
+      "utf8",
+      "tools/test-quic-types.py",
+      "--zig",
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+    ],
+    "cwd": ".",
+    "mode": "host-tool",
+    "exit_code": 0,
+    "started_utc": "2026-09-26T17:58:10.530675+00:00",
+    "stdout": {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stdout.log",
+      "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+    },
+    "stderr": {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "check-models-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-X",
+      "utf8",
+      "tools/check-models.py"
+    ],
+    "cwd": ".",
+    "mode": "host-tool",
+    "exit_code": 0,
+    "started_utc": "2026-09-26T17:58:20.914771+00:00",
+    "stdout": {
+      "path": "docs/verification/t02-extra-runs/check-models-normal.stdout.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    "stderr": {
+      "path": "docs/verification/t02-extra-runs/check-models-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "test-plan-lifecycle-normal",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-X",
+      "utf8",
+      "tools/test-plan-lifecycle.py"
+    ],
+    "cwd": ".",
+    "mode": "host-tool",
+    "exit_code": 0,
+    "started_utc": "2026-09-26T17:58:23.873808+00:00",
+    "stdout": {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stdout.log",
+      "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+    },
+    "stderr": {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-normal.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "test-quic-types-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "-X",
+      "utf8",
+      "tools/test-quic-types.py",
+      "--zig",
+      "C:/Applications/Development/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e/zig.exe"
+    ],
+    "cwd": ".",
+    "mode": "host-tool",
+    "exit_code": 0,
+    "started_utc": "2026-09-26T17:58:36.588868+00:00",
+    "stdout": {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stdout.log",
+      "sha256": "cf36ed7222177f6ec48fe520b7f77fe13ec53a5a225dd77edb8bd7cb309dcf22"
+    },
+    "stderr": {
+      "path": "docs/verification/t02-extra-runs/test-quic-types-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "check-models-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "-X",
+      "utf8",
+      "tools/check-models.py"
+    ],
+    "cwd": ".",
+    "mode": "host-tool",
+    "exit_code": 0,
+    "started_utc": "2026-09-26T17:58:49.532138+00:00",
+    "stdout": {
+      "path": "docs/verification/t02-extra-runs/check-models-optimized.stdout.log",
+      "sha256": "385902c9dc6f9a5a561770144a16fc966bf12037195ca56bfc27285cc0d02228"
+    },
+    "stderr": {
+      "path": "docs/verification/t02-extra-runs/check-models-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "id": "test-plan-lifecycle-optimized",
+    "command": [
+      "C:\\Users\\James\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-O",
+      "-X",
+      "utf8",
+      "tools/test-plan-lifecycle.py"
+    ],
+    "cwd": ".",
+    "mode": "host-tool",
+    "exit_code": 0,
+    "started_utc": "2026-09-26T17:58:51.514813+00:00",
+    "stdout": {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stdout.log",
+      "sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065"
+    },
+    "stderr": {
+      "path": "docs/verification/t02-extra-runs/test-plan-lifecycle-optimized.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]

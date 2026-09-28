@@ -1,0 +1,41 @@
+[
+  {
+    "name": "reference",
+    "command": [
+      "python",
+      "tools/build_reference.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "seconds": 15.581028699991293
+  },
+  {
+    "name": "docs",
+    "command": [
+      "python",
+      "tools/check_docs.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "seconds": 19.18153980000352
+  },
+  {
+    "name": "handoff",
+    "command": [
+      "python",
+      "tools/check_handoff.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "seconds": 21.377750499988906
+  },
+  {
+    "name": "transport-custody",
+    "command": [
+      "python",
+      "tools/check_transport.py"
+    ],
+    "exit_code": 1,
+    "seconds": 9.737866299998132
+  }
+]

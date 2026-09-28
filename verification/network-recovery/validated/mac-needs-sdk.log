@@ -1,0 +1,21 @@
+panic: Intel Mac streaming requires -Dmac-openssl-root pointing to a reviewed static OpenSSL SDK
+C:\Projects\lan-audio\build.zig:201:42: 0x7ff7940ce223 in build (configurer_zcu.obj)
+        if (mac and mac_openssl == null) @panic("Intel Mac streaming requires -Dmac-openssl-root pointing to a reviewed static OpenSSL SDK");
+                                         ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\Build.zig:2145: 0x7ff79405a385 in runPackageScript (configurer_zcu.obj)
+    const result: anyerror!void = build_zig.build(b);
+
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\compiler\configurer.zig:138:29: 0x7ff79405a385 in main (configurer_zcu.obj)
+    builder.runPackageScript(root);
+                            ^
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\start.zig:788: 0x7ff79405aa5a in callMain (configurer_zcu.obj)
+    if (fn_info.param_types[0].? == std.process.Init.Minimal) return wrapMain(root.main(.{
+
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\start.zig:575:17: 0x7ff79405aa5a in WinStartup (configurer_zcu.obj)
+        callMain(std.os.windows.peb().ProcessParameters.CommandLine.slice(), .global),
+                ^
+???:?:?: 0x7ff9e43f7373 in ??? (KERNEL32.DLL)
+???:?:?: 0x7ff9e473cc90 in ??? (ntdll.dll)
+error: configure command exited with code 3: ".zig-cache\\o\\43c57bf5138e280acce78ab754ed8aff\\configurer.exe" --zig "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" --build-root "C:\\Projects\\lan-audio" -Dstreaming=true -Dtarget=x86_64-macos.12.0 -Doptimize=ReleaseSafe
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x8aa718a2 app -Dstreaming=true -Dtarget=x86_64-macos.12.0 -Doptimize=ReleaseSafe

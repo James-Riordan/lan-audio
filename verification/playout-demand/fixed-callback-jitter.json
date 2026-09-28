@@ -1,0 +1,88 @@
+{
+  "binary_sha256": "97e5754adff9709588730b82c83dcde5fb18e36ce2fd3880ac9fe37e4129686a",
+  "results": [
+    {
+      "role": "receiver",
+      "mode": "jitter",
+      "listener": false,
+      "matched": true,
+      "seconds": 1.185,
+      "exit_code": 0,
+      "error": null,
+      "events": [
+        {
+          "attempt": 1,
+          "prefill_frames": 2880,
+          "frames": 48000,
+          "failure": null,
+          "lifecycle": {
+            "phase": "stopped",
+            "generation": 1,
+            "serial": 10,
+            "held": [
+              false,
+              false,
+              false
+            ],
+            "pending": null,
+            "worker_joined": true,
+            "device_fenced": true,
+            "first_cause": null,
+            "cleanup_blocked": false,
+            "deadline_expired": false,
+            "receive": {
+              "frontier": 48000,
+              "publication_closed": true,
+              "local": "drained",
+              "ack": "copied",
+              "remote": "unobserved",
+              "secure_close": "clean"
+            },
+            "send": null
+          },
+          "audio": {
+            "max_output_request_frames": 240,
+            "first_starvation_requested": 0,
+            "first_starvation_available": 0,
+            "first_starvation_rendered": 0,
+            "captured_frames": 0,
+            "dropped_frames": 0,
+            "rendered_frames": 48000,
+            "silent_frames": 2880,
+            "missing_output_frames": 0,
+            "invalid_buffers": 0,
+            "capture_faults": 0,
+            "counters_exact": true
+          },
+          "active_ms": 1008,
+          "starved": false,
+          "unplayed_frames": 0,
+          "delivery_timing": {
+            "last_publication_ms": 4559828,
+            "max_publication_gap_ms": 12,
+            "max_receive_ms": 12,
+            "starvation_gap_ms": 0,
+            "published_frames": 48000,
+            "playback_started_ms": 4558888,
+            "playback_observed_ms": 4559828,
+            "observed_playback_frames": 45120,
+            "max_playback_lead_frames": 720,
+            "max_frames_between_observations": 960
+          }
+        }
+      ],
+      "peers": [
+        {
+          "frames": 48000,
+          "clean": true,
+          "authenticated": true,
+          "stream": "01010101010101010101010101010101",
+          "max_send_gap_ms": 12.174,
+          "max_send_call_ms": 0.725,
+          "end_send_gap_ms": 4.831
+        }
+      ],
+      "stderr": "Playback started: 48 kHz stereo.\n"
+    }
+  ]
+}

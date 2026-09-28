@@ -1,0 +1,84 @@
+[
+  {
+    "name": "network-debug",
+    "command": [
+      "zig",
+      "build",
+      "network-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 36.585,
+    "at_utc": "2026-09-26T17:55:53.318274+00:00"
+  },
+  {
+    "name": "network-safe",
+    "command": [
+      "zig",
+      "build",
+      "network-test",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 85.123,
+    "at_utc": "2026-09-26T17:57:18.449573+00:00"
+  },
+  {
+    "name": "audio-debug",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 14.053,
+    "at_utc": "2026-09-26T17:57:32.503687+00:00"
+  },
+  {
+    "name": "audio-safe",
+    "command": [
+      "zig",
+      "build",
+      "audio-test",
+      "-Doptimize=ReleaseSafe",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 110.738,
+    "at_utc": "2026-09-26T17:59:23.242605+00:00"
+  },
+  {
+    "name": "network-linux",
+    "command": [
+      "zig",
+      "build",
+      "network-check",
+      "-Dtarget=x86_64-linux-musl",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 102.185,
+    "at_utc": "2026-09-26T18:01:05.429063+00:00"
+  },
+  {
+    "name": "network-macos",
+    "command": [
+      "zig",
+      "build",
+      "network-check",
+      "-Dtarget=x86_64-macos.12.0",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 27.32,
+    "at_utc": "2026-09-26T18:01:32.750395+00:00"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "debug",
+    "command": [
+      "zig",
+      "build",
+      "test",
+      "--cache-dir",
+      ".zig-cache/lifecycle-send-final",
+      "--summary",
+      "all"
+    ],
+    "exit_code": 1,
+    "seconds": 15.619615299998259
+  }
+]

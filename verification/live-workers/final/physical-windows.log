@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "seconds": 10.071,
+  "frames": 480000,
+  "nonzero_bytes": 0,
+  "observed_non_silent_audio": false,
+  "error": null,
+  "exit_code": 0,
+  "report": {
+    "frames": 480000,
+    "failure": null,
+    "lifecycle": {
+      "phase": "stopped",
+      "generation": 1,
+      "serial": 2011,
+      "held": [
+        false,
+        false,
+        false
+      ],
+      "pending": null,
+      "worker_joined": true,
+      "device_fenced": true,
+      "first_cause": null,
+      "cleanup_blocked": false,
+      "deadline_expired": false,
+      "receive": null,
+      "send": {
+        "draining": true,
+        "committed": 480000,
+        "offered_frames": 0,
+        "frontier": 480000,
+        "local": "transferred",
+        "end": "copied",
+        "remote": "confirmed",
+        "secure_close": "clean"
+      }
+    },
+    "audio": {
+      "captured_frames": 480000,
+      "dropped_frames": 0,
+      "rendered_frames": 0,
+      "silent_frames": 0,
+      "missing_output_frames": 0,
+      "invalid_buffers": 0,
+      "capture_faults": 0,
+      "counters_exact": true
+    }
+  },
+  "stderr": "Capture started: 48 kHz stereo.\n"
+}

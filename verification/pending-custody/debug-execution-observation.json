@@ -1,0 +1,7 @@
+{
+  "command": ["zig", "build", "test", "-j1", "--summary", "all"],
+  "cwd": "C:/Projects/lan-audio",
+  "exit_code": 0,
+  "output": "Build Summary: 3/3 steps succeeded; 42/42 tests passed\ntest success\n+- run test 42 pass (42 total) 1s MaxRSS:3M\n   +- compile test debug native success 4s MaxRSS:278M\n",
+  "source": "Completed command tool output from session 17565 after repairing the test array-literal syntax. The later command-1.log is explicitly a cached rerun, not a second fresh execution."
+}

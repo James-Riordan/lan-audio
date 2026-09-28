@@ -1,0 +1,67 @@
+audio-test
++- run test
+   +- compile test debug native
+      +- compile lib miniaudio debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+audio-test
++- run test 3 pass, 1 fail (4 total)
+error: 'audio_device.test.installed native notifications invalidate both directions without consuming media' failed:
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff773b3819f in expect (test_zcu.obj)
+           if (!ok) return error.TestUnexpectedResult;
+                    ^
+       C:\Projects\lan-audio\verification\native-events\mutations\fault_expected_stop\src\host\audio_device.zig:422:9: 0x7ff773b3f89e in test.installed native notifications invalidate both directions without consuming media (test_zcu.obj)
+               try std.testing.expect(!host.health().failed());
+               ^
+failed command: "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations\\o\\eb813d4d296cf96b5ac9f5fd47fcb381\\test.exe" "--cache-dir=C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations" --seed=0xdacf182d --listen=-
+
+audio-test
++- run test 5 pass, 1 fail (6 total)
+error: 'audio_device.test.silent native fence preserves device storage and grants a stable final snapshot' failed:
+       C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\testing.zig:615:14: 0x7ff79f85826f in expect (test_zcu.obj)
+           if (!ok) return error.TestUnexpectedResult;
+                    ^
+       C:\Projects\lan-audio\verification\native-events\mutations\fault_expected_stop\tests\integration\audio_device.zig:98:5: 0x7ff79f85e662 in test.silent native fence preserves device storage and grants a stable final snapshot (test_zcu.obj)
+           try std.testing.expect(!host.health().failed());
+           ^
+failed command: "C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations\\o\\05994e12027f7d198d35ce0d2789e914\\test.exe" "--cache-dir=C:\\Projects\\lan-audio\\.zig-cache\\native-events-mutations" --seed=0xdacf182d --listen=-
+
+Build Summary: 5/8 steps succeeded (2 failed); 8/10 tests passed (2 failed)
+audio-test transitive failure
++- run test 5 pass, 1 fail (6 total)
+|  +- compile test debug native success 15s MaxRSS:307M
+|     +- WriteFile cached
+|     +- compile lib miniaudio debug native cached 64ms MaxRSS:69M
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c cached 1s MaxRSS:69M
++- run test 3 pass, 1 fail (4 total)
+   +- compile test debug native success 15s MaxRSS:306M
+      +- WriteFile (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c (reused)
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xdacf182d audio-test --summary all --cache-dir C:\Projects\lan-audio\.zig-cache\native-events-mutations

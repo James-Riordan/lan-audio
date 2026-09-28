@@ -1,0 +1,858 @@
+{
+  "schema": 1,
+  "project": "tls-zig",
+  "date": "2026-09-26",
+  "historical_documents": [],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1272,
+      "sha256": "801b092a51908202937dee31ea0aab3a858581a97b2b63269327573a3422dbf5",
+      "contract": "docs/reference/files/AGENTS.md.md",
+      "purpose": "Maintainer entry point for this project and its implementation handoff.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "CHECKPOINT.md",
+      "bytes": 8567,
+      "sha256": "01c99aeb4224f9693e2055b9d5702ff2da71fca3b2decb6a3a7b668fd0baab4a",
+      "contract": "docs/reference/files/CHECKPOINT.md.md",
+      "purpose": "Historical provenance, checkpoint or handoff record.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "HANDOFF-shutdown.md",
+      "bytes": 2172,
+      "sha256": "ad78248b14893bfb5cc746facba0e9fa9798ac140928891d28d4df584a4389cb",
+      "contract": "docs/reference/files/HANDOFF-shutdown.md.md",
+      "purpose": "Historical provenance, checkpoint or handoff record.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "HANDOFF-tcp-consumer.md",
+      "bytes": 1833,
+      "sha256": "553c72bb57fe9ad49580aad89d30c3e607dda63e96720f9a04fba0d04e9a9f71",
+      "contract": "docs/reference/files/HANDOFF-tcp-consumer.md.md",
+      "purpose": "Historical provenance, checkpoint or handoff record.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "HOST-DRIVER.md",
+      "bytes": 7714,
+      "sha256": "184019fce5dbb97f50b21aa72de7231cf821f0dfb74a3c3f826d5f8b32296e97",
+      "contract": "docs/reference/files/HOST-DRIVER.md.md",
+      "purpose": "Existing user-facing documentation: HOST-DRIVER.md.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "README.md",
+      "bytes": 14357,
+      "sha256": "62ae6611e602069145ee563029a3079f5c0a067555b302fbe92cda9e494d5a90",
+      "contract": "docs/reference/files/README.md.md",
+      "purpose": "Existing user-facing documentation: README.md.",
+      "imports": [
+        "tls"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "SOURCE-ORIGIN.json",
+      "bytes": 858,
+      "sha256": "94920eb7271a06691f20e91a9d06692f37c33f8700e5a2d91a46d79b3858d049",
+      "contract": "docs/reference/files/SOURCE-ORIGIN.json.md",
+      "purpose": "Historical provenance, checkpoint or handoff record.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "backend-lock.json",
+      "bytes": 27737,
+      "sha256": "d4d905865bddf009683d703345873bf4fba06ba742a26d5bf2079dee1df7c2ef",
+      "contract": "docs/reference/files/backend-lock.json.md",
+      "purpose": "Exact historical SDK/build-tool provenance lock.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "build.zig",
+      "bytes": 10498,
+      "sha256": "7c0523998971a6f23f8db89a6597141433ad0a6778b398b934e99c7874558134",
+      "contract": "docs/reference/files/build.zig.md",
+      "purpose": "Build graph for records, portable core and native recordless Engine.",
+      "imports": [
+        "std"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "build.zig.zon",
+      "bytes": 394,
+      "sha256": "b49178f2ca98a3ee812e20e3b555f850673636474d84d4853b94d45ab52f3e4d",
+      "contract": "docs/reference/files/build.zig.zon.md",
+      "purpose": "Package identity, pinned minimum compiler and distributed source allowlist.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "evidence/build-recovery.md",
+      "bytes": 3242,
+      "sha256": "62da642c146947480514adee7190f6b64a0f1c08156d0dda452afe6ff69085e9",
+      "contract": "docs/reference/files/evidence/build-recovery.md.md",
+      "purpose": "Historical provenance, checkpoint or handoff record.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "evidence/source-provenance.json",
+      "bytes": 1407,
+      "sha256": "23d65ebab94bef0b664985604cb19ac172146f95bd5154b0a93e55761e971830",
+      "contract": "docs/reference/files/evidence/source-provenance.json.md",
+      "purpose": "Historical provenance, checkpoint or handoff record.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/consumer/build.zig",
+      "bytes": 1441,
+      "sha256": "8e67d1e2b2c25053c3c6b097a71f92d7e81bd8ef7920787d0c8032de94fdb620",
+      "contract": "docs/reference/files/examples/consumer/build.zig.md",
+      "purpose": "Standalone consumer build that imports the public TLS package.",
+      "imports": [
+        "std"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/consumer/build.zig.zon",
+      "bytes": 285,
+      "sha256": "08021454f3c86bdf6fd55e42885a4d00259fd99b6b7889497d2bbf62d3b37f0c",
+      "contract": "docs/reference/files/examples/consumer/build.zig.zon.md",
+      "purpose": "Standalone consumer package metadata.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/consumer/main.zig",
+      "bytes": 11880,
+      "sha256": "2248f9026d2312679d110460bd59f824d71bc9bb0f806a0880618a27f1d07087",
+      "contract": "docs/reference/files/examples/consumer/main.zig.md",
+      "purpose": "External package consumer exercising client/server TLS and early-response upload probing.",
+      "imports": [
+        "std",
+        "tls"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/consumer/socket.c",
+      "bytes": 4830,
+      "sha256": "478368d14b74bde70c923fdba05287c1ad0ce404cfe8fa6028ea6acc9ae4975c",
+      "contract": "docs/reference/files/examples/consumer/socket.c.md",
+      "purpose": "Windows-only nonblocking loopback transport demonstration.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-contract/build.zig",
+      "bytes": 685,
+      "sha256": "6748052bac1238badda3164f7cedf4c00d873b30c6ea717c7f24b5bac538eb0f",
+      "contract": "docs/reference/files/examples/quic-contract/build.zig.md",
+      "purpose": "Separate package consumer of the pure recordless contract and event queue.",
+      "imports": [
+        "std"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-contract/build.zig.zon",
+      "bytes": 299,
+      "sha256": "66d19bd2e2988378a8da716257ec83840a7b52fc14122ad324044a9e2ac72057",
+      "contract": "docs/reference/files/examples/quic-contract/build.zig.zon.md",
+      "purpose": "Separate package consumer of the pure recordless contract and event queue.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-contract/main.zig",
+      "bytes": 2287,
+      "sha256": "7b7982c218c8e83741db7afde71d88579e92f36e7ee8c8b833d7418aa61427ff",
+      "contract": "docs/reference/files/examples/quic-contract/main.zig.md",
+      "purpose": "Separate package consumer of the pure recordless contract and event queue.",
+      "imports": [
+        "provider.zig",
+        "std",
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-contract/provider.zig",
+      "bytes": 663,
+      "sha256": "0c81a656f93b1dece96a0480e8e351dcfd543e225e0a7fc9483b8524180cc7b1",
+      "contract": "docs/reference/files/examples/quic-contract/provider.zig.md",
+      "purpose": "Separate package consumer of the pure recordless contract and event queue.",
+      "imports": [
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-engine/build.zig",
+      "bytes": 1338,
+      "sha256": "43a299083c92998b7f842930fae27bd09b739546fade46d0b99efd010e77df1f",
+      "contract": "docs/reference/files/examples/quic-engine/build.zig.md",
+      "purpose": "Separate production native Engine import and runtime staging.",
+      "imports": [
+        "std"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-engine/build.zig.zon",
+      "bytes": 276,
+      "sha256": "dd575a2931f3010dc679d42dff63f1ca013ea8e40ae001121777c3b4e6b81810",
+      "contract": "docs/reference/files/examples/quic-engine/build.zig.zon.md",
+      "purpose": "Standalone native recordless consumer manifest.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/quic-engine/main.zig",
+      "bytes": 4063,
+      "sha256": "7458353d8a7327d7f99c1ba65add2875e2acb41ec422c713e3ff1d2f0cad2775",
+      "contract": "docs/reference/files/examples/quic-engine/main.zig.md",
+      "purpose": "Production-import recordless handshake and acknowledged custody demonstration.",
+      "imports": [
+        "std",
+        "tls"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "examples/roundtrip.zig",
+      "bytes": 2846,
+      "sha256": "e5e442435e8f30a7e34d9ac39dd70131bdcd7cb0cc48a0615c9f42974a4f79f0",
+      "contract": "docs/reference/files/examples/roundtrip.zig.md",
+      "purpose": "Public consumer demonstration of authenticated in-memory TLS records roundtrip.",
+      "imports": [
+        "std",
+        "tls"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "src/backend.c",
+      "bytes": 10411,
+      "sha256": "dfcc61371663a4fc54b7b6aad16518f966707cf376ab7cb4f83bf8689de622a4",
+      "contract": "docs/reference/files/src/backend.c.md",
+      "purpose": "Small OpenSSL records adapter owning SSL_CTX, SSL, paired BIOs and immutable pending write data.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "src/backend.h",
+      "bytes": 2754,
+      "sha256": "0e0f3dbfae408fe39bd33592e943e5cdce43abbaadbe906216b4d1bf93569cbd",
+      "contract": "docs/reference/files/src/backend.h.md",
+      "purpose": "Internal C ABI declarations and status-number vocabulary.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "src/backend.zig",
+      "bytes": 2072,
+      "sha256": "9a7e22086f439b6381c0810f6259cd923c359b7e8c920222a1f974c0e7e91c9c",
+      "contract": "docs/reference/files/src/backend.zig.md",
+      "purpose": "Manual Zig extern mirror of the internal C ABI.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "src/backend/quic.c",
+      "bytes": 17800,
+      "sha256": "c975b22d3ecdc8b791e976db36f798610f5e831287903c69e69588112d9e0374",
+      "contract": "docs/reference/files/src/backend/quic.c.md",
+      "purpose": "OpenSSL external recordless callback adapter and authenticated TLS state.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "src/backend/quic.h",
+      "bytes": 4716,
+      "sha256": "f8db26c414fe4e00f98d0d43046b40a1272e0d2ec68751d3fd2a8007015856bd",
+      "contract": "docs/reference/files/src/backend/quic.h.md",
+      "purpose": "Private fixed-width recordless C ABI and live-handle lifetime.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "src/backend/quic.zig",
+      "bytes": 1871,
+      "sha256": "45dbbea02b4fb8f0b04ab8a1ee92fe51e582bc54c4a8b0f0d300f5e395db28f0",
+      "contract": "docs/reference/files/src/backend/quic.zig.md",
+      "purpose": "Independent Zig declarations for the actual private native ABI.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "src/driver.zig",
+      "bytes": 16070,
+      "sha256": "f33d5d2a494c6918497af4d0133ae1c2b4e267a5c6a9fd5d24aafd08fed4556f",
+      "contract": "docs/reference/files/src/driver.zig.md",
+      "purpose": "Serialized nonblocking transport driver with bounded ciphertext queues and early-response probe.",
+      "imports": [
+        "root.zig",
+        "std"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "src/quic.zig",
+      "bytes": 187,
+      "sha256": "40b6f17b4cae413fc28a6b05f6fff1898b1288af1d36ebbce00379915e9478fd",
+      "contract": "docs/reference/files/src/quic.zig.md",
+      "purpose": "Pure recordless configuration and event-custody module exports.",
+      "imports": [
+        "quic/contract.zig",
+        "quic/events.zig"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "src/quic/contract.zig",
+      "bytes": 14725,
+      "sha256": "ad62cafbce1be4216229585513e73165a7817d512b222fecb4cbf2ed488f95c0",
+      "contract": "docs/reference/files/src/quic/contract.zig.md",
+      "purpose": "Typed recordless protocol contract and allocation-free configuration admission.",
+      "imports": [
+        "std"
+      ],
+      "named_tests": 1
+    },
+    {
+      "path": "src/quic/engine.zig",
+      "bytes": 20611,
+      "sha256": "850643b2f3c52022ac164bf9e975c07171458d093047ce31762aa038d2b0bc36",
+      "contract": "docs/reference/files/src/quic/engine.zig.md",
+      "purpose": "Stable native owner, bounded input custody, event acknowledgement and authenticated readiness.",
+      "imports": [
+        "builtin",
+        "quic_native_abi",
+        "std",
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "src/quic/events.zig",
+      "bytes": 9478,
+      "sha256": "8d1a96ace52219d318b6c85696f769d1533513ba493bf7a6d8b49cc8adfe5d22",
+      "contract": "docs/reference/files/src/quic/events.zig.md",
+      "purpose": "Bounded queue retaining bytes, secrets, controls and acknowledged consumer custody.",
+      "imports": [
+        "contract.zig",
+        "std"
+      ],
+      "named_tests": 1
+    },
+    {
+      "path": "src/quic_engine.zig",
+      "bytes": 403,
+      "sha256": "0539e2b42f43244a97580be5f03775a676af524e3460176eff6c63600055cebb",
+      "contract": "docs/reference/files/src/quic_engine.zig.md",
+      "purpose": "Public native recordless Engine module exports.",
+      "imports": [
+        "quic/engine.zig"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "src/root.zig",
+      "bytes": 10496,
+      "sha256": "99587be81255039fef2f9e8c8d803097f0243748c9ba0e5f766ae257c56dc0b3",
+      "contract": "docs/reference/files/src/root.zig.md",
+      "purpose": "Public TLS records Engine, configuration validation and C-status translation.",
+      "imports": [
+        "backend.zig",
+        "driver.zig",
+        "std"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/driver.zig",
+      "bytes": 17276,
+      "sha256": "ebd171a3e78d7e0a9cf0111f57c05f3aafb4dc12b4d5e929e60f5f28a6281d09",
+      "contract": "docs/reference/files/tests/driver.zig.md",
+      "purpose": "Executable regression suite for driver.",
+      "imports": [
+        "std",
+        "tls"
+      ],
+      "named_tests": 11
+    },
+    {
+      "path": "tests/fixtures/ca.pem",
+      "bytes": 583,
+      "sha256": "5ae21a1137c70d57dde3e2e6f9344f7a3e92d60c8574cb8d4c7ed9117c86024b",
+      "contract": "docs/reference/files/tests/fixtures/ca.pem.md",
+      "purpose": "Public disposable certificate for the ca TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/client.key",
+      "bytes": 241,
+      "sha256": "f749efcb553a578c5dddc625d521ad8a5b5906519ddbc7f1f43955692094adc2",
+      "contract": "docs/reference/files/tests/fixtures/client.key.md",
+      "purpose": "Public disposable private test key for the client TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/client.pem",
+      "bytes": 652,
+      "sha256": "5ea5c4a7c98d80dfe16d37ff2d1f1b6fbd30ec20bdf56ea9dcd32ee4b964bcde",
+      "contract": "docs/reference/files/tests/fixtures/client.pem.md",
+      "purpose": "Public disposable certificate for the client TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/expired.key",
+      "bytes": 241,
+      "sha256": "79416a6c509e4a057ede8e36441d6768b0a81b6e082d594b0a1443ad5f8a3bf6",
+      "contract": "docs/reference/files/tests/fixtures/expired.key.md",
+      "purpose": "Public disposable private test key for the expired TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/expired.pem",
+      "bytes": 652,
+      "sha256": "f27207039e40fe80694bad38d8f9472cbf66a04625f76e29448660b81e1e2220",
+      "contract": "docs/reference/files/tests/fixtures/expired.pem.md",
+      "purpose": "Public disposable certificate for the expired TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/other-ca.pem",
+      "bytes": 599,
+      "sha256": "c15ad0dafef51faf044dcfeec829d87c4039a9d4cc30c0720a7acb984c7fa7a2",
+      "contract": "docs/reference/files/tests/fixtures/other-ca.pem.md",
+      "purpose": "Public disposable certificate for the other-ca TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/server.key",
+      "bytes": 241,
+      "sha256": "1c3573c21c3dedf99100eeabf4217b4c363b8e9c05771942bddc1a92a5021e6b",
+      "contract": "docs/reference/files/tests/fixtures/server.key.md",
+      "purpose": "Public disposable private test key for the server TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/server.pem",
+      "bytes": 648,
+      "sha256": "763d572834ff319bef34a5a4410a5592ca5070093597a14da3b52623ae014cc4",
+      "contract": "docs/reference/files/tests/fixtures/server.pem.md",
+      "purpose": "Public disposable certificate for the server TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/wrong-purpose.key",
+      "bytes": 241,
+      "sha256": "8554260b7cf446acb9855c309c6ccd526d03720ad4014b79f5fb46fc8c43a575",
+      "contract": "docs/reference/files/tests/fixtures/wrong-purpose.key.md",
+      "purpose": "Public disposable private test key for the wrong-purpose TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/fixtures/wrong-purpose.pem",
+      "bytes": 660,
+      "sha256": "c511af497310978988cf737691bfcb1c277a1d81be33860f9609152e31fce9ab",
+      "contract": "docs/reference/files/tests/fixtures/wrong-purpose.pem.md",
+      "purpose": "Public disposable certificate for the wrong-purpose TLS test role.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/backend.c",
+      "bytes": 17834,
+      "sha256": "b92fa2cff94104386fc6a88e80b78fb2c27c197543235dbafbdeead63073513f",
+      "contract": "docs/reference/files/tests/quic/backend.c.md",
+      "purpose": "Independent native host, wire ledger, callback faults and OpenSSL allocation instrumentation.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/backend_abi.c",
+      "bytes": 2767,
+      "sha256": "b86da4507f9fc50766a5cb14e1906036118a79e83411d7e5119936fddfb2fc6a",
+      "contract": "docs/reference/files/tests/quic/backend_abi.c.md",
+      "purpose": "Independent C layout probes and C-to-Zig callback invocation.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/backend_abi.zig",
+      "bytes": 3191,
+      "sha256": "992c0e282f11b051a58c3acc2ecbd5a0e72eef039f24247b5820de090923185a",
+      "contract": "docs/reference/files/tests/quic/backend_abi.zig.md",
+      "purpose": "Production Zig extern ABI layout and native symbol tests.",
+      "imports": [
+        "quic_native_abi",
+        "std"
+      ],
+      "named_tests": 2
+    },
+    {
+      "path": "tests/quic/contract.zig",
+      "bytes": 6326,
+      "sha256": "1a01a7c469b4a05306ed16ac7f4e803b47dfbb2ce6135c43505a8158d3ea1f8e",
+      "contract": "docs/reference/files/tests/quic/contract.zig.md",
+      "purpose": "Independent admission, identity, normalization and canonical hash tests.",
+      "imports": [
+        "std",
+        "tls_quic"
+      ],
+      "named_tests": 5
+    },
+    {
+      "path": "tests/quic/events.zig",
+      "bytes": 12763,
+      "sha256": "150c5935bbcc29c660d11520bf8b4bdb77b6ef074ea6b493b48b917ccf3424bd",
+      "contract": "docs/reference/files/tests/quic/events.zig.md",
+      "purpose": "Adversarial queue traces, allocator cleanup and model refinement tests.",
+      "imports": [
+        "std",
+        "tls_quic"
+      ],
+      "named_tests": 8
+    },
+    {
+      "path": "tests/quic/negative/direction-as-level.zig",
+      "bytes": 174,
+      "sha256": "40f075f1ba0b63bcbba6a47bd32a8309e148710282f154ff1c72522ee36d5162",
+      "contract": "docs/reference/files/tests/quic/negative/direction-as-level.zig.md",
+      "purpose": "Compiler misuse control for distinct recordless semantic types.",
+      "imports": [
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/negative/generation-as-sequence.zig",
+      "bytes": 183,
+      "sha256": "298b368d0707b3d95b47fe1368c97d8a97f480851109456de51487d078a002b7",
+      "contract": "docs/reference/files/tests/quic/negative/generation-as-sequence.zig.md",
+      "purpose": "Compiler misuse control for distinct recordless semantic types.",
+      "imports": [
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/negative/raw-byte-count.zig",
+      "bytes": 158,
+      "sha256": "bea0f5c4ea60a6f41d6bc716930439e8a09a628f7dd69bf190f8adafe8306f54",
+      "contract": "docs/reference/files/tests/quic/negative/raw-byte-count.zig.md",
+      "purpose": "Compiler misuse control for distinct recordless semantic types.",
+      "imports": [
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/negative/valid.zig",
+      "bytes": 198,
+      "sha256": "b6de76e36b6927171ba47b6b2030ad78858e603c662e9f42f2c74416747f3fee",
+      "contract": "docs/reference/files/tests/quic/negative/valid.zig.md",
+      "purpose": "Compiler misuse control for distinct recordless semantic types.",
+      "imports": [
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/negative/wall-as-monotonic.zig",
+      "bytes": 186,
+      "sha256": "120f8a4b7b31c4d9206dc6513927d91091e6a4786b720c6204be10bb1369848d",
+      "contract": "docs/reference/files/tests/quic/negative/wall-as-monotonic.zig.md",
+      "purpose": "Compiler misuse control for distinct recordless semantic types.",
+      "imports": [
+        "tls_quic"
+      ],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic/reference_peer.c",
+      "bytes": 7177,
+      "sha256": "e6372055edd9cf4d0c1ea801e60a6fc739d2ff4eee9f7f878b4780dc741d51e7",
+      "contract": "docs/reference/files/tests/quic/reference_peer.c.md",
+      "purpose": "Direct OpenSSL test peer, independent byte ledgers and QUIC packet encryption.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tests/quic_contract.zig",
+      "bytes": 27975,
+      "sha256": "d70ca89559bd6928ab6255a251b30b2e51eba7913d3cc29a8ed40c82aa82e4c9",
+      "contract": "docs/reference/files/tests/quic_contract.zig.md",
+      "purpose": "Actual Engine conformance with separate host ledgers and direct OpenSSL reference peer.",
+      "imports": [
+        "std",
+        "tls_quic_engine"
+      ],
+      "named_tests": 10
+    },
+    {
+      "path": "tests/transport.zig",
+      "bytes": 23282,
+      "sha256": "c97defce062ed89884aa56049df477b10d38e1c26b3f25e35b47c89bc345f2c4",
+      "contract": "docs/reference/files/tests/transport.zig.md",
+      "purpose": "Executable regression suite for transport.",
+      "imports": [
+        "std",
+        "tls"
+      ],
+      "named_tests": 23
+    },
+    {
+      "path": "tools/build-openssl.sh",
+      "bytes": 1080,
+      "sha256": "935c6f9e7e03265544d099c1182eb4b8af6bc785f93a001734485c39a5435c4f",
+      "contract": "docs/reference/files/tools/build-openssl.sh.md",
+      "purpose": "Windows/MSYS/MinGW private SDK build recipe.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/check-docs.py",
+      "bytes": 9896,
+      "sha256": "be34383f3ec878381ea6140f504b91af3213dcbb955aa35c0dffc63aa503a0be",
+      "contract": "docs/reference/files/tools/check-docs.py.md",
+      "purpose": "Read-only integrity gate for source contracts, declaration locations, documentation links and registrations.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/check-event-model.py",
+      "bytes": 4525,
+      "sha256": "5dfd556d01f501d39d5de8a7335df674d84851fcb27605c7f8c174276de6dd38",
+      "contract": "docs/reference/files/tools/check-event-model.py.md",
+      "purpose": "Exhaustively explore finite proposed event custody and require three defect counterexamples.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/check-models.py",
+      "bytes": 3870,
+      "sha256": "ed5e57b103ca09e7fb519d46553f7db6b132245802196364672f5925e225acda",
+      "contract": "docs/reference/files/tools/check-models.py.md",
+      "purpose": "Runner for finite abstract safety models with injected-fault counterexamples.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/check-plan.py",
+      "bytes": 17521,
+      "sha256": "304aecf9670355b237408259b32058530b8fa9cf22fa414a1e7952859b01e12d",
+      "contract": "docs/reference/files/tools/check-plan.py.md",
+      "purpose": "Validate work lifecycle and source-bound completion evidence.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/fetch-openssl.py",
+      "bytes": 7098,
+      "sha256": "45f60f7284910375d14959e4dee8d9c1a844907262369b33721f93788ec7a734",
+      "contract": "docs/reference/files/tools/fetch-openssl.py.md",
+      "purpose": "Acquire the unchanged pinned OpenSSL release with verified staging.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/interop.py",
+      "bytes": 10676,
+      "sha256": "49ceb9cb3baadf03b262ec67eafdba3551174a1610117aab076a0342b6d97e8c",
+      "contract": "docs/reference/files/tools/interop.py.md",
+      "purpose": "Runner for 17 in-memory backend/Python TLS interoperability cases.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/make_fixtures.py",
+      "bytes": 2479,
+      "sha256": "ac8d59c6da99f23f6db1484db277a101930925e731cb61fd52e5d007251ea1e3",
+      "contract": "docs/reference/files/tools/make_fixtures.py.md",
+      "purpose": "Generate disposable local-test certificates and public private-key fixtures.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/pin-backend.py",
+      "bytes": 2998,
+      "sha256": "bcac3b4fa4eaf4780be32793b879eb7fc09b1535283a8c118f833d88beea2d24",
+      "contract": "docs/reference/files/tools/pin-backend.py.md",
+      "purpose": "Explicit atomic provenance producer after a controlled backend build.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/probe-quic-pair.c",
+      "bytes": 14683,
+      "sha256": "3f30826b0ffbd28cf60ed238b45876468fefec704dfad5d2fdce8fedf358a442",
+      "contract": "docs/reference/files/tools/probe-quic-pair.c.md",
+      "purpose": "Offline authenticated recordless TLS provider experiment and bounded failure checks.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/probe-quic-pair.py",
+      "bytes": 5850,
+      "sha256": "a50f002c744bc9143376bfb974e994f1c032d0496ba45a6124ae74a286abec0a",
+      "contract": "docs/reference/files/tools/probe-quic-pair.py.md",
+      "purpose": "Offline authenticated recordless TLS provider experiment and bounded failure checks.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/probe-quic-tls.c",
+      "bytes": 5904,
+      "sha256": "a043a574fed8815e0b0ddc14983a2ab80ae3eee8ddb6606b89f48c5e71370948",
+      "contract": "docs/reference/files/tools/probe-quic-tls.c.md",
+      "purpose": "Test-only native exercise of external QUIC TLS ClientHello output and failure behavior.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/probe-quic-tls.py",
+      "bytes": 5063,
+      "sha256": "0968b64497a446be0d59f2c0df8bfe59c4bd38e6986f669cbc1cf7567d53ebcb",
+      "contract": "docs/reference/files/tools/probe-quic-tls.py.md",
+      "purpose": "Compile and run the Windows native initial-callback probe against an exact verified SDK.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/qualify-quic-backend.py",
+      "bytes": 5659,
+      "sha256": "56f148da0377b5cb36dc207f29aa185504490b3c8fb2bafd3ab7d1ef80c09e56",
+      "contract": "docs/reference/files/tools/qualify-quic-backend.py.md",
+      "purpose": "Offline source-bound native C adapter and ABI qualification.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/qualify-quic-core.py",
+      "bytes": 3042,
+      "sha256": "841881e76e98316ec9f317a480de23f385f193b2f692b2ea6a2b2b8cf57ec2e0",
+      "contract": "docs/reference/files/tools/qualify-quic-core.py.md",
+      "purpose": "Retain native pure-core runs and optional cross-build evidence separately.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/qualify-quic-engine.py",
+      "bytes": 5277,
+      "sha256": "ae57a810fbfdac4304439f97ee2852ae25e52e3de9c3075dfa2b8cf30756a617",
+      "contract": "docs/reference/files/tools/qualify-quic-engine.py.md",
+      "purpose": "Offline source-bound native Engine and standalone production consumer qualification.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/qualify.ps1",
+      "bytes": 2703,
+      "sha256": "7918b074ef0e4012bfb7d969b46dfc1a6d60e06bf5fbf86ad0047bf3d89c6cc0",
+      "contract": "docs/reference/files/tools/qualify.ps1.md",
+      "purpose": "Qualification entry point with independent exact SDK verification.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/tcp_interop.py",
+      "bytes": 4571,
+      "sha256": "0f1cf8172ae4c504ba4a0c14d0c360aba27f966e140c4b8abec3dfbbde76a3fc",
+      "contract": "docs/reference/files/tools/tcp_interop.py.md",
+      "purpose": "Runner for five TCP client cases.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/tcp_server_interop.py",
+      "bytes": 4160,
+      "sha256": "d4381483e6af8ab7ca9ca2a15a3d1783857378d861e062ccc04ec5cd0555e4c2",
+      "contract": "docs/reference/files/tools/tcp_server_interop.py.md",
+      "purpose": "Runner for four TCP server cases.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/tcp_upload_interop.py",
+      "bytes": 4817,
+      "sha256": "84b1dee1314093d7c52b84245fee8439fed6275da4a8fe2ed96106516a37e080",
+      "contract": "docs/reference/files/tools/tcp_upload_interop.py.md",
+      "purpose": "Runner for five early-response TCP upload cases.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/test-backend.py",
+      "contract": "docs/reference/files/tools/test-backend.py.md",
+      "imports": [],
+      "named_tests": 0,
+      "bytes": 14684,
+      "sha256": "e055e8c522a0fd777bc3b4d2831e057c406ed8e0bd880f934d9bfc19208eb8fb",
+      "purpose": "Offline adversarial SDK, acquisition, pin-version and interop-guard acceptance tests."
+    },
+    {
+      "path": "tools/test-openssl.sh",
+      "bytes": 1742,
+      "sha256": "ee8b7db47b7498e5765eb915a09f7ce47013aec1fcb3c551e2eb14d4a095064c",
+      "contract": "docs/reference/files/tools/test-openssl.sh.md",
+      "purpose": "Selected upstream certificate and TLS recipe runner with native Perl recovery.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/test-plan-lifecycle.py",
+      "bytes": 8805,
+      "sha256": "a70b4cc785552c002c2ad746e6573d3e469ccfeb99def60dee9dff68ebcc4d92",
+      "contract": "docs/reference/files/tools/test-plan-lifecycle.py.md",
+      "purpose": "Exercise lifecycle/evidence validation with disposable positive and negative fixtures.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/test-quic-types.py",
+      "bytes": 1901,
+      "sha256": "ea2b297334871d86967f8d6467d22ae4e6ecb94f087996f858e7a1f2a48d046c",
+      "contract": "docs/reference/files/tools/test-quic-types.py.md",
+      "purpose": "Run positive and negative compiler type controls with explicit diagnostics.",
+      "imports": [],
+      "named_tests": 0
+    },
+    {
+      "path": "tools/verify-backend.py",
+      "contract": "docs/reference/files/tools/verify-backend.py.md",
+      "imports": [],
+      "named_tests": 0,
+      "bytes": 5078,
+      "sha256": "267c0576fd83f7295eabe576a8eefe17cf3ed353d42b914373b9524e1fbec5a7",
+      "purpose": "Read-only exact SDK verification independent of lock generation."
+    }
+  ],
+  "revision": "2026-09-26-r5"
+}

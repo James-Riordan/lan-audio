@@ -1,0 +1,88 @@
+audio-test
++- run test
+   +- compile test debug native
+      +- compile lib miniaudio debug native failure
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+error: perl: warning: Setting locale failed.
+       perl: warning: Please check that your locale settings:
+       	LC_ALL = "C.UTF-8",
+       	LC_CTYPE = "C.UTF-8",
+       	LC_NUMERIC = (unset),
+       	LC_COLLATE = (unset),
+       	LC_TIME = (unset),
+       	LC_MONETARY = (unset),
+       	LANG = "C.UTF-8"
+           are supported and installed on your system.
+       perl: warning: Falling back to the system default locale ("English_United States.1252").
+       
+
+audio-test
++- run test
+   +- compile test debug native 1 errors
+src\host\audio_device.zig:90:76: error: expected type '[]const u8', found '[]allowzero align(8) const u8'
+            if (length == 0 or !std.unicode.utf8ValidateSlice(infos[i].name[0..length])) return error.InvalidNativeMetadata;
+                                                              ~~~~~~~~~~~~~^~~~~~~~~~~
+src\host\audio_device.zig:90:76: note: '[]allowzero align(8) const u8' could have null values which are illegal in type '[]const u8'
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\unicode.zig:231:33: note: parameter type declared here
+pub fn utf8ValidateSlice(input: []const u8) bool {
+                                ^~~~~~~~~~
+referenced by:
+    discoverWith__anon_71102: src\host\audio_device.zig:72:24
+    test.catalog copies native names before context release and marks ambiguity: src\host\audio_device.zig:217:44
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" test -ODebug --dep lan_audio --dep miniaudio "-Mroot=src\\host\\audio_device.zig" -ODebug "-Mlan_audio=src\\root.zig" ".zig-cache\\o\\26174f75dfdb6b1828e7dfda93e323dd\\miniaudio.lib" -ODebug -I ".zig-cache\\o\\b612c90714d41c109b931981da111308" --dep miniaudio_c "-Mminiaudio=../miniaudio-zig\\src\\root.zig" -ODebug "-Mminiaudio_c=.zig-cache\\o\\0eab571a7df1a9a352f9b745fc27678a\\profile.zig" -lole32 -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name test --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+app
++- install lan-audio
+   +- compile exe lan-audio debug native 1 errors
+src\host\audio_device.zig:90:76: error: expected type '[]const u8', found '[]allowzero align(8) const u8'
+            if (length == 0 or !std.unicode.utf8ValidateSlice(infos[i].name[0..length])) return error.InvalidNativeMetadata;
+                                                              ~~~~~~~~~~~~~^~~~~~~~~~~
+src\host\audio_device.zig:90:76: note: '[]allowzero align(8) const u8' could have null values which are illegal in type '[]const u8'
+C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib\std\unicode.zig:231:33: note: parameter type declared here
+pub fn utf8ValidateSlice(input: []const u8) bool {
+                                ^~~~~~~~~~
+referenced by:
+    discoverWith__anon_2805: src\host\audio_device.zig:72:24
+    discover: src\host\audio_device.zig:55:28
+    5 reference(s) hidden; use '-freference-trace=7' to see all references
+error: 1 compilation errors
+failed command: "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\zig.exe" build-exe -ODebug --dep audio_host "-Mroot=src\\app\\main.zig" -ODebug --dep lan_audio --dep miniaudio "-Maudio_host=src\\host\\audio_device.zig" -ODebug "-Mlan_audio=src\\root.zig" ".zig-cache\\o\\26174f75dfdb6b1828e7dfda93e323dd\\miniaudio.lib" -ODebug -I ".zig-cache\\o\\b612c90714d41c109b931981da111308" --dep miniaudio_c "-Mminiaudio=../miniaudio-zig\\src\\root.zig" -ODebug "-Mminiaudio_c=.zig-cache\\o\\0eab571a7df1a9a352f9b745fc27678a\\profile.zig" -lole32 -lc --cache-dir .zig-cache --global-cache-dir "C:\\Users\\James\\AppData\\Local\\zig" --build-root . --name lan-audio --zig-lib-dir "C:\\Applications\\Development\\zig\\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\\lib\\" --listen=-
+
+Build Summary: 8/14 steps succeeded (2 failed); 13/13 tests passed
+app transitive failure
++- install lan-audio transitive failure
+   +- compile exe lan-audio debug native 1 errors
+      +- WriteFile cached
+      +- compile lib miniaudio debug native cached 78ms MaxRSS:65M
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c cached 188ms MaxRSS:65M
+policy-test success
++- run test 7 pass (7 total) 219ms MaxRSS:3M
+   +- compile test debug native cached 114ms MaxRSS:65M
+audio-test transitive failure
++- run test 6 pass (6 total) 1s MaxRSS:10M
+|  +- compile test debug native success 10s MaxRSS:303M
+|     +- WriteFile (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- compile lib miniaudio debug native (reused)
+|     +- translate-c (reused)
++- run test transitive failure
+   +- compile test debug native 1 errors
+      +- WriteFile (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c (reused)
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0xf29b2709 audio-test policy-test app --summary all

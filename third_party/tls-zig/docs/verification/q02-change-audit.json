@@ -1,0 +1,144 @@
+{
+  "status": "verified",
+  "project": "tls-zig",
+  "created_utc": "2026-09-26T20:25:43.646617+00:00",
+  "scope": "Q02 adds application codec/tests, independent vectors/recreation, public/native consumers and qualification. Only existing QUIC src/root.zig changes. Q00/Q01 receipts are explicitly requalified with their exact prior bytes retained as history. All TLS source/seven receipts, original root builds/manifests, frozen fixture and SDK remain unchanged from the Q01 baseline.",
+  "excluded_self_path": "docs/verification/q02-change-audit.json",
+  "deleted_paths": [],
+  "source_files": 86,
+  "changes": [
+    {
+      "path": "docs/architecture/decisions/0003-application-packet-custody.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "187822e3919a2d684c238d781f22898c84da758c3e43732a9a312952c3d935eb",
+      "bytes": 2799
+    },
+    {
+      "path": "docs/architecture/principles.md",
+      "change": "modified",
+      "before_sha256": "c0ba87e7754781176091b91e35d3454179f93a332484148cb2dca3727fe30841",
+      "after_sha256": "f94d396d00f24e6ac157bcd1b5e8aae45ce68cff4c7d8ab359ee72e96e397e83",
+      "bytes": 3131
+    },
+    {
+      "path": "docs/roadmap/implementation-plan.json",
+      "change": "modified",
+      "before_sha256": "83061b363261d280972134aea0e9f44e58f56a2dbb4d00f07335f8191169da69",
+      "after_sha256": "5d959ea4c49fcf27a8e4d1194066d20640f2a024e535c025bbf9d2fda6b6b99b",
+      "bytes": 51895
+    },
+    {
+      "path": "docs/verification/artifact-register.json",
+      "change": "modified",
+      "before_sha256": "aa9c8ec62f9a9143a57a4125dc33e51c4c8482a771f7cb6f1357a56f6e27d857",
+      "after_sha256": "556bc6f7745d6b90dd3adef84a165f4d691c78eb53291483fff3e8820446d897",
+      "bytes": 188902
+    },
+    {
+      "path": "docs/verification/current.md",
+      "change": "modified",
+      "before_sha256": "7cfed0539913dbfc654544f790cf0c003df78d09980c9c2cf6af610f791a3464",
+      "after_sha256": "9fbc297dc3a3725c8350de7ab2dd6e89e6c7aa230a9b333e546035f0ef0fe1b0",
+      "bytes": 3858
+    },
+    {
+      "path": "docs/verification/q02-final-gates.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "4659c42840fc0b10b16591fe0f01ef37b7cbbdf841d4342923fa1474e4efb2ed",
+      "bytes": 4087
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q02-final-runs/docs-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "36c7d9c6d76fdeca3de1855293918c8f9a0029860d126f565c2697b5272011a0",
+      "bytes": 294
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q02-final-runs/lifecycle-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "f80c2e69d7f24d7ebc0ab7986c36037df00ca3bdef58ea11166cde99de8e2065",
+      "bytes": 929
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-normal.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-normal.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e5cdb3add896776851cbac4bd404995d6fbdf9496857036f5b82199754c85234",
+      "bytes": 1063
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-optimized.stderr.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/q02-final-runs/plan-optimized.stdout.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e5cdb3add896776851cbac4bd404995d6fbdf9496857036f5b82199754c85234",
+      "bytes": 1063
+    },
+    {
+      "path": "docs/verification/q02-implementation.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9fbc297dc3a3725c8350de7ab2dd6e89e6c7aa230a9b333e546035f0ef0fe1b0",
+      "bytes": 3858
+    }
+  ]
+}

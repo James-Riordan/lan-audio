@@ -1,0 +1,4 @@
+Build Summary: 2/2 steps succeeded
+policy-object-check success
++- compile test_obj peer-policy-object debug aarch64-ios.16.0 success 1s MaxRSS:108M
+

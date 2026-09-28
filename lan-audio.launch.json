@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "environments": {
+    "windows-x86_64": {},
+    "macos-x86_64": {}
+  }
+}

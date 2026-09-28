@@ -1,0 +1,41 @@
+[
+  {
+    "name": "sealed-render",
+    "command": [
+      "python",
+      "tools/build_reference.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "seconds": 0.8345780999952694
+  },
+  {
+    "name": "sealed-docs",
+    "command": [
+      "python",
+      "tools/check_docs.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "seconds": 0.8067649000004167
+  },
+  {
+    "name": "sealed-handoff",
+    "command": [
+      "python",
+      "tools/check_handoff.py",
+      "--application-only"
+    ],
+    "exit_code": 0,
+    "seconds": 2.741502799995942
+  },
+  {
+    "name": "sealed-custody",
+    "command": [
+      "python",
+      "tools/check_transport.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.4552849999963655
+  }
+]

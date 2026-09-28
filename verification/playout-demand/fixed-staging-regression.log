@@ -1,0 +1,23 @@
+audio-test
++- run test 7 pass, 1 fail (8 total)
+error: 'audio_device.test.backend requests consume exactly their frames and fully initialize output' failed:
+       expected 755, found 532
+failed command: ".\\.zig-cache\\o\\28b98fee9bc30bf9c96fb2ee31f22709\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0x746fc1a7 --listen=-
+
+Build Summary: 6/8 steps succeeded (1 failed); 13/14 tests passed (1 failed)
+audio-test transitive failure
++- run test 6 pass (6 total) 1s MaxRSS:7M
+|  +- compile test safe native success 27s MaxRSS:305M
+|     +- WriteFile cached
+|     +- compile lib miniaudio safe native cached 52ms MaxRSS:56M
+|     +- compile lib miniaudio safe native (reused)
+|     +- translate-c cached 1s MaxRSS:55M
++- run test 7 pass, 1 fail (8 total)
+   +- compile test safe native success 38s MaxRSS:314M
+      +- WriteFile (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- compile lib miniaudio safe native (reused)
+      +- translate-c (reused)
+
+error: the following build command exited with code 1:
+C:\Users\James\AppData\Local\zig\o\10197263dd28ab69b11a8211df93e131\maker.exe build --zig-lib=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\lib --zig=C:\Applications\Development\zig\zig-x86_64-windows-0.17.0-dev.1859+dcceb318e\zig.exe --global-cache=C:\Users\James\AppData\Local\zig --seed=0x746fc1a7 -j1 audio-test -Doptimize=ReleaseSafe --summary all

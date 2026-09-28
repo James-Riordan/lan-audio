@@ -1,0 +1,14 @@
+capture-test
++- run test w
+WASAPI loopback: blocks=370 frames=88800 callbacks=372 drops=0; samples discarded
+failed command: ".\\.zig-cache\\o\\71fe23f586989f3abaca0b3ba81f94f9\\test.exe" "--cache-dir=.\\.zig-cache" --seed=0xa0b9979d --listen=-
+
+Build Summary: 6/6 steps succeeded; 1/1 tests passed
+capture-test success
++- run test 1 pass (1 total) 2s MaxRSS:13M
+   +- compile test debug native success 4s MaxRSS:260M
+      +- WriteFile cached
+      +- compile lib miniaudio debug native cached 42ms MaxRSS:16M
+      +- compile lib miniaudio debug native (reused)
+      +- translate-c cached 27ms MaxRSS:16M
+

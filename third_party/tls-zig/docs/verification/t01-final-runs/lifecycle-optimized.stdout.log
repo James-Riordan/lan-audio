@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "synthetic lifecycle evidence fixtures; no real work completed",
+  "positive_controls": [
+    "consistent cross-project completion",
+    "negative controls from already-complete baseline",
+    "reopened implemented work",
+    "in-progress documented source",
+    "planned without source"
+  ],
+  "negative_controls_detected": [
+    "failed run",
+    "boolean exit code",
+    "skipped run",
+    "missing acceptance",
+    "skipped acceptance",
+    "unknown run",
+    "stale design",
+    "stale obligation",
+    "missing source scope",
+    "source hash mismatch",
+    "duplicate input",
+    "unsafe log path",
+    "log hash mismatch",
+    "unresolved gap",
+    "missing environment",
+    "unknown input project",
+    "missing dependency receipt",
+    "stale dependency receipt",
+    "source changed after completion",
+    "planned state conceals existing source"
+  ]
+}
