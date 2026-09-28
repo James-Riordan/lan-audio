@@ -1,0 +1,21 @@
+{
+  "base_revision": "9397013e1f24e6e179f7f9f677d28291af14495f",
+  "recorded_utc": "2026-09-28T02:35:39.302392+00:00",
+  "bootstrap_tests": 25,
+  "pinned_python": "3.13.7",
+  "pin_fields_unchanged": true,
+  "native_mac_executed": false,
+  "full_mirror_download_verified": false,
+  "sha256": {
+    "tools/bootstrap.py": "00919f1fb5bebd17c8714243875476906f73bb3afc6319932d5048fe8585a7d5",
+    "tools/bootstrap_assets.json": "b21540cdd2c0b0b66291d24c618399a2bf9c2d9eeb57b988e84b8d8a74120043",
+    "tests/integration/repository_launcher.py": "051df33d8a34a18c1172c48c087d2238a92761f2763c35ba0f28ce0ccfa6aa72",
+    "tools/reference_contracts.json": "cb6ec02c2d606d227757cb692389c039d2160f2a97a8320c50c0c80e1332cb23",
+    "docs/runtime/repository-launcher.md": "eef0e3469ac0015a2c31b1141596ac0944cf161827c2bd42dd4e116ec262cade",
+    "docs/reference/lan-audio.md": "a99b992e075e82d2434365c88b0b5ffe05c19494cc01eed620469bf0c82b2267"
+  },
+  "pairing_tests": 8,
+  "skipped": 0,
+  "windows_prepare": "passed",
+  "final_source_key": "3a137dc7e6d0eef324783599"
+}

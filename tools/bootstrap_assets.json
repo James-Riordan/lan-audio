@@ -2,25 +2,39 @@
   "schema": 1,
   "zig_version": "0.17.0-dev.1859+dcceb318e",
   "zig-windows-x86_64": {
-    "urls": ["https://pkg.hexops.org/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip?source=lan-audio", "https://ziglang.org/builds/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip"],
+    "urls": [
+      "https://zig.tilok.dev/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip?source=lan-audio",
+      "https://zig.mirror.mschae23.de/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip?source=lan-audio",
+      "https://pkg.hexops.org/zig/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip?source=lan-audio",
+      "https://ziglang.org/builds/zig-x86_64-windows-0.17.0-dev.1859+dcceb318e.zip"
+    ],
     "sha256": "0d43c9a98a90c859a649294c3b56a7c857855634f9f8f2024289722c7ea927d3",
     "size": 100971860,
     "archive": "zip"
   },
   "zig-macos-x86_64": {
-    "urls": ["https://pkg.hexops.org/zig/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz?source=lan-audio", "https://ziglang.org/builds/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz"],
+    "urls": [
+      "https://zig.tilok.dev/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz?source=lan-audio",
+      "https://zig.mirror.mschae23.de/zig/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz?source=lan-audio",
+      "https://pkg.hexops.org/zig/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz?source=lan-audio",
+      "https://ziglang.org/builds/zig-x86_64-macos-0.17.0-dev.1859+dcceb318e.tar.xz"
+    ],
     "sha256": "a84427195a7e34a648d4422f0c5c200092f78d505b6b32b7b7c2065b52171c34",
     "size": 59216372,
     "archive": "tar.xz"
   },
   "openssl": {
-    "urls": ["https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz"],
+    "urls": [
+      "https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz"
+    ],
     "sha256": "a8f84a39918ec6415ce765d9b429d313ba97b8143169c172e734b9514464f5b2",
     "size": 53213818,
     "archive": "tar.gz"
   },
   "python-windows-x86_64": {
-    "urls": ["https://www.python.org/ftp/python/3.13.7/python-3.13.7-embed-amd64.zip"],
+    "urls": [
+      "https://www.python.org/ftp/python/3.13.7/python-3.13.7-embed-amd64.zip"
+    ],
     "sha256": "f6cca216a359be84797cabb54149ce5e062afb16cc7567eb7fc51cacb2d86b65",
     "size": 10922561,
     "archive": "zip"

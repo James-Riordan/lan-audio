@@ -189,6 +189,94 @@ class BootstrapTests(unittest.TestCase):
                 with self.assertRaises(ValueError):boot.extract(archive,destination,'zip')
         self.assertFalse((self.base/'escaped').exists())
 
+    def test_mac_python_tls_failure_retries_same_url_and_verifies_hash(self):
+        asset=dict(sha256=hashlib.sha256(b'good').hexdigest(),archive='zip',size=4,
+                   urls=['https://example.invalid/file'])
+        tls=boot.urllib.error.URLError(ssl.SSLError('SSLV3_ALERT_ILLEGAL_PARAMETER'))
+        for body in (b'bad',b'good'):
+            with self.subTest(body=body), patch.object(boot.platform,'system',return_value='Darwin'), \
+                 patch.object(boot.urllib.request,'urlopen',side_effect=tls), \
+                 patch.object(boot,'download_with_curl',side_effect=lambda url,path,maximum:path.write_bytes(body)) as curl:
+                if body == b'bad':
+                    with self.assertRaisesRegex(ValueError,'SHA256 mismatch'):boot.download(asset,self.base)
+                    self.assertEqual(list(self.base.iterdir()),[])
+                else:
+                    result=boot.download(asset,self.base)
+                    self.assertEqual(result.read_bytes(),b'good')
+                self.assertEqual(curl.call_args.args[0],asset['urls'][0])
+                self.assertEqual(curl.call_args.args[2],4)
+
+    def test_partial_python_tls_download_is_removed_before_curl_retry(self):
+        class Response(io.BytesIO):
+            def geturl(self):return 'https://example.invalid/file'
+            def read(self,maximum):
+                if self.tell():raise ssl.SSLError('connection lost during body')
+                return super().read(maximum)
+        asset=dict(sha256=hashlib.sha256(b'complete').hexdigest(),archive='zip',size=8,
+                   urls=['https://example.invalid/file'])
+        def retry(url,path,maximum):
+            self.assertFalse(path.exists())
+            path.write_bytes(b'complete')
+        with patch.object(boot.platform,'system',return_value='Darwin'), \
+             patch.object(boot.urllib.request,'urlopen',return_value=Response(b'part')), \
+             patch.object(boot,'download_with_curl',side_effect=retry):
+            self.assertEqual(boot.download(asset,self.base).read_bytes(),b'complete')
+
+    def test_mac_curl_failure_cleans_partial_file_and_continues_to_mirror(self):
+        class Response(io.BytesIO):
+            def geturl(self):return 'https://example.invalid/mirror'
+        asset=dict(sha256=hashlib.sha256(b'good').hexdigest(),archive='zip',size=4,
+                   urls=['https://example.invalid/file','https://example.invalid/mirror'])
+        def fail(url,path,maximum):
+            path.write_bytes(b'part')
+            raise OSError('curl TLS failed')
+        tls=boot.urllib.error.URLError(ssl.SSLError('handshake failed'))
+        with patch.object(boot.platform,'system',return_value='Darwin'), \
+             patch.object(boot.urllib.request,'urlopen',side_effect=[tls,Response(b'good')]), \
+             patch.object(boot,'download_with_curl',side_effect=fail):
+            result=boot.download(asset,self.base)
+            self.assertEqual(result.read_bytes(),b'good')
+            self.assertEqual(list(self.base.iterdir()),[result])
+
+    def test_http_error_or_windows_tls_failure_does_not_use_mac_curl(self):
+        asset=dict(sha256='0'*64,archive='zip',size=4,urls=['https://example.invalid/file'])
+        http=boot.urllib.error.HTTPError(asset['urls'][0],404,'Not Found',{},None)
+        tls=boot.urllib.error.URLError(ssl.SSLError('handshake failed'))
+        for host,error in [('Darwin',http),('Windows',tls)]:
+            with self.subTest(host=host),patch.object(boot.platform,'system',return_value=host), \
+                 patch.object(boot.urllib.request,'urlopen',side_effect=error), \
+                 patch.object(boot,'download_with_curl') as curl:
+                with self.assertRaises(ValueError):boot.download(asset,self.base)
+                curl.assert_not_called()
+                self.assertEqual(list(self.base.iterdir()),[])
+
+    def test_curl_streaming_bounds_exit_status_and_child_cleanup(self):
+        real_popen=subprocess.Popen
+        for code,maximum,expected_error in [
+            ('import sys;sys.stdout.buffer.write(b"good")',4,None),
+            ('import sys;sys.stdout.buffer.write(b"part");sys.exit(7)',4,OSError),
+            ('import sys;sys.stdout.buffer.write(b"x"*(2*1024*1024))',4,ValueError),
+        ]:
+            with self.subTest(code=code):
+                children=[]
+                def spawn(command,**kwargs):
+                    self.assertEqual(command[:2],['/usr/bin/curl','-q'])
+                    for option,value in [('--proto','=https'),('--proto-redir','=https'),('--max-time','300')]:
+                        self.assertEqual(command[command.index(option)+1],value)
+                    self.assertNotIn('--insecure',command)
+                    child=real_popen([sys.executable,'-c',code],**kwargs)
+                    children.append(child)
+                    return child
+                destination=self.base/secrets.token_hex(5)
+                with patch.object(boot.subprocess,'Popen',side_effect=spawn):
+                    if expected_error:
+                        with self.assertRaises(expected_error):boot.download_with_curl('https://example.invalid/file',destination,maximum)
+                    else:
+                        boot.download_with_curl('https://example.invalid/file',destination,maximum)
+                        self.assertEqual(destination.read_bytes(),b'good')
+                self.assertLessEqual(destination.stat().st_size,maximum)
+                self.assertTrue(all(child.poll() is not None for child in children))
+
     def test_tar_link_rejected_without_following_target(self):
         archive=self.base/'test.tar'; destination=self.base/'out';destination.mkdir()
         with tarfile.open(archive,'w') as out:

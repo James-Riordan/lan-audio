@@ -11,10 +11,12 @@ import os
 from pathlib import Path
 import platform
 import shutil
+import ssl
 import subprocess
 import sys
 import tarfile
 import tempfile
+import urllib.error
 import urllib.request
 import uuid
 import zipfile
@@ -91,6 +93,40 @@ def verify_dependencies():
     verify()
 
 
+def copy_download(response, stream, maximum):
+    total = 0
+    while block := response.read(1024*1024):
+        total += len(block)
+        if total > maximum:
+            raise ValueError('archive exceeds pinned size limit')
+        stream.write(block)
+
+
+def download_with_curl(url, temporary, maximum, executable='/usr/bin/curl'):
+    """Use the OS TLS stack; Python still bounds bytes and verifies the hash."""
+    command = [executable, '-q', '--fail', '--silent', '--show-error', '--location',
+               '--proto', '=https', '--proto-redir', '=https', '--max-redirs', '5',
+               '--connect-timeout', '45', '--max-time', '300', '--globoff', url]
+    # -q must be first so a user's .curlrc cannot disable certificate validation.
+    # Streaming enforces the ceiling even with old curl and no Content-Length.
+    with tempfile.TemporaryFile() as errors, temporary.open('xb') as stream:
+        process = subprocess.Popen(command, stdin=subprocess.DEVNULL,
+                                   stdout=subprocess.PIPE, stderr=errors)
+        try:
+            copy_download(process.stdout, stream, maximum)
+            if process.wait(timeout=5) != 0:
+                errors.seek(0)
+                detail = errors.read(4096).decode('utf-8', errors='replace').strip()
+                raise OSError('system curl download failed: '+detail)
+        except subprocess.TimeoutExpired:
+            raise OSError('system curl did not finish after closing its output') from None
+        finally:
+            if process.poll() is None:
+                process.kill()
+            process.wait()
+            process.stdout.close()
+
+
 def download(asset, cache):
     destination = cache/(asset['sha256']+'.'+asset['archive'])
     if destination.is_symlink():
@@ -106,21 +142,29 @@ def download(asset, cache):
         temporary = cache/('download-'+uuid.uuid4().hex)
         try:
             print('Downloading '+url.split('?')[0], flush=True)
-            with urllib.request.urlopen(url, timeout=45) as response, temporary.open('xb') as stream:
-                if not response.geturl().startswith('https://'):
-                    raise ValueError('insecure download redirect')
-                total = 0
-                while block := response.read(1024*1024):
-                    total += len(block)
-                    if total > asset['size']:
-                        raise ValueError('archive exceeds pinned size limit')
-                    stream.write(block)
+            try:
+                with urllib.request.urlopen(url, timeout=45) as response, temporary.open('xb') as stream:
+                    if not response.geturl().startswith('https://'):
+                        raise ValueError('insecure download redirect')
+                    copy_download(response, stream, asset['size'])
+            except (urllib.error.URLError, ssl.SSLError) as error:
+                reason = getattr(error, 'reason', error)
+                if platform.system() != 'Darwin' or not isinstance(reason, ssl.SSLError):
+                    raise
+                print('Python TLS download failed; retrying with macOS system curl.', flush=True)
+                temporary.unlink(missing_ok=True)
+                try:
+                    download_with_curl(url, temporary, asset['size'])
+                except (OSError, ValueError) as fallback:
+                    raise OSError(f'Python TLS: {error}; macOS fallback: {fallback}') from fallback
             if digest(temporary) != asset['sha256']:
                 raise ValueError('download SHA256 mismatch')
             temporary.rename(destination)
             return destination
         except (OSError, ValueError) as error:
             errors.append(str(error))
+            if isinstance(error, urllib.error.HTTPError):
+                error.close()
         finally:
             temporary.unlink(missing_ok=True)
     raise ValueError('All pinned download locations failed: '+'; '.join(errors))

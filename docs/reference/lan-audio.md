@@ -2761,15 +2761,15 @@ Generated from reviewed `tools/reference_contracts.json`. Edit the contract data
 
 **Responsibility.** Prepare pinned toolchains and verified source builds, then start saved desktop state.
 
-**Contract and ownership.** Validate copied dependency custody; bounded hashed HTTPS downloads; reject unsafe archive members; source-keyed builds; OS locks; state outside the checkout; delegate pairing and native audio. Shared automatic launcher configuration selects environment overrides without rewriting saved profiles; final native session validation precedes audio, and help avoids downloads.
+**Contract and ownership.** Validate copied dependency custody; bounded hashed HTTPS downloads; reject unsafe archive members; source-keyed builds; OS locks; state outside the checkout; delegate pairing and native audio. Shared automatic launcher configuration selects environment overrides without rewriting saved profiles; final native session validation precedes audio, and help avoids downloads. Mac Python TLS errors retry the same pinned HTTPS URL with /usr/bin/curl; curlrc is disabled, HTTPS-only redirects and process timeout apply, and Python enforces the byte ceiling and unchanged SHA256 before publication.
 
 **Failure/change obligations.** Reject incomplete, conflicting or untrusted inputs; preserve original errors and saved identities. Do not turn Windows or loopback checks into Mac speaker readiness.
 
-**Verification.** Run repository_launcher.py and desktop_setup.py plus custody and application documentation gates; inspect native Mac CI and hardware evidence separately.
+**Verification.** Run repository_launcher.py and desktop_setup.py plus custody and application documentation gates; inspect native Mac CI and hardware evidence separately. Exercise fallback success, corruption, partial TLS failure, mirror recovery, HTTP/platform selection, subprocess exit errors and oversized child output.
 
 **Next actionable work.** Execute the clean native Mac build and real Windows-to-Mac speaker session; preserve target-specific failures before expanding platform claims.
 
-**Declared surface / navigation:** `digest`; `exclusive`; `atomic_json`; `verify_dependencies`; `download`; `extract`; `run`; `compiler`; `source_key`; `prepare`; `default_state`; `main`.
+**Declared surface / navigation:** `digest`; `exclusive`; `atomic_json`; `verify_dependencies`; `copy_download`; `download_with_curl`; `download`; `extract`; `run`; `compiler`; `source_key`; `prepare`; `default_state`; `main`.
 
 
 <a id="file-tools-bootstrap-assets-json"></a>

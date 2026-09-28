@@ -37,6 +37,19 @@ may disappear: it tries the pinned locations and fails explicitly if unavailable
 without upgrading tools or accepting a different hash. Repository trust is still
 required. Neither local hashes nor source compilation establish publisher signing.
 
+Zig locations include multiple entries from the [community mirror list](https://ziglang.org/download/community-mirrors/).
+Every mirror must supply the exact archive whose signature was verified during
+adoption; locations do not change its pinned digest, size or compiler version.
+On macOS, a Python TLS error retries the same URL through `/usr/bin/curl` before
+moving to the next mirror. This accommodates different OS/Python TLS providers;
+it is not evidence that any particular provider or network will succeed.
+The [curl invocation](https://curl.se/docs/manpage.html) disables `.curlrc`, keeps
+certificate verification, restricts transfers and redirects to HTTPS, allows at
+most five redirects and has a 45-second connection/300-second total timeout.
+Python bounds streamed bytes even without Content-Length, verifies the original
+SHA256, and publishes only a complete matching archive. Failed attempts remove
+temporary files and reap the child process. No system TLS configuration changes.
+
 Tools, build outputs and failed Mac build logs live in ignored `.lan-audio/`.
 Archive extraction rejects traversal, duplicate paths, links and device entries.
 Zig uses one build job. The Mac recipe uses Apple Command Line Tools, builds and
