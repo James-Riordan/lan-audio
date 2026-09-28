@@ -1,0 +1,41 @@
+{
+  "base_revision": "e48aae6efcc53f12a682522cd502de85134f5484",
+  "recorded_utc": "2026-09-28T02:23:37.263314+00:00",
+  "host": "Windows-10-10.0.19045-SP0",
+  "python": "3.14.3",
+  "dependency_files": 1030,
+  "index_hash_mismatches": 0,
+  "restored_committed_files": 15,
+  "transport_files": 188,
+  "tests": {
+    "git_clone_round_trip": {
+      "passed": 1,
+      "autocrlf": [
+        "false",
+        "true",
+        "input"
+      ],
+      "seconds": 48.019
+    },
+    "bootstrap_and_pairing": {
+      "passed": 28,
+      "skipped": 0,
+      "seconds": 10.227
+    }
+  },
+  "sha256": {
+    ".gitattributes": "cc8439348705da322fa074f4ab0c96b8749cfe07d1169df83f72c557f44fa67a",
+    "tests/integration/repository_launcher.py": "254a9ed28875255614164200f3c90034cf91e999796c7b41e69e0abfee7fa7c2",
+    "docs/runtime/repository-launcher.md": "13d145c60145dcb2479ff92b3fb76b6b8db7b6031bc0771c7526d6c1093c32c3",
+    "docs/development/workflow.md": "35a8037bfa30e292b3cd9ad1f81d019b8429565edf1101ecc857d300da5e4606",
+    "tools/reference_contracts.json": "ed8927458dc8c59159dfe941a4362a7f38a6c9a3fc2081d7a41e64e32942676e",
+    "docs/reference/lan-audio.md": "1db9196b6c3365362d4caa7dda73acdf3b401f6e4f50f2ecf767ccf1fcd2ee96",
+    "third_party/lock.json": "8ac6e79914585003aba79facffaa3fbd2421b0e322dcddfb9ab4e39ef12f4fc1",
+    "transport-lock.json": "99efcf71beddbdbb2d0e0ed2b84590bb80f0f6272ebb97d530c7062504a1b271"
+  },
+  "limits": [
+    "No native Mac execution or two-device audio test",
+    "Original CI failed in launcher steps; unauthenticated log API returned HTTP 403",
+    "Changes staged locally, not committed or pushed"
+  ]
+}

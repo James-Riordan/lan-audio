@@ -12,9 +12,11 @@ import os
 from pathlib import Path
 import queue
 import secrets
+import shutil
 import socket
 import ssl
 import struct
+import subprocess
 import sys
 import tarfile
 import tempfile
@@ -30,6 +32,42 @@ import local_pairing as pairing
 import desktop_release as release
 import launcher_config as config
 from create_pair import create
+
+
+class GitCustodyTests(unittest.TestCase):
+    def test_reviewed_bytes_survive_git_clone_with_each_line_ending_mode(self):
+        # A copied worktree can pass custody while Git stores different bytes.
+        # Exercise Git's clean/smudge filters using the complete reviewed closure.
+        with tempfile.TemporaryDirectory(prefix='lan-audio git custody ') as directory:
+            base = Path(directory)
+            source = base/'source'
+            source.mkdir()
+            shutil.copyfile(ROOT/'.gitattributes', source/'.gitattributes')
+            lock = json.loads((ROOT/'third_party/lock.json').read_text(encoding='utf-8'))
+            for name in lock['files']:
+                destination = source/'third_party'/name
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ROOT/'third_party'/name, destination)
+
+            def git(*args, cwd=source):
+                return subprocess.run(['git', '-c', 'core.safecrlf=false',
+                    '-c', 'core.hooksPath='+str(base/'no-hooks'),
+                    '-c', 'commit.gpgsign=false', '-c', 'user.name=Custody test',
+                    '-c', 'user.email=custody@example.invalid', *args], cwd=cwd,
+                    check=True, capture_output=True)
+
+            git('init', '--quiet')
+            git('config', 'core.autocrlf', 'true')
+            git('add', '--force', '.',)
+            git('commit', '--quiet', '-m', 'Temporary dependency custody test')
+            for mode in ('false', 'true', 'input'):
+                with self.subTest(autocrlf=mode):
+                    checkout = base/('clone-'+mode)
+                    git('-c', 'core.autocrlf='+mode, 'clone', '--quiet', '--no-local', '--config',
+                        'core.autocrlf='+mode, str(source), str(checkout))
+                    for name, expected in lock['files'].items():
+                        self.assertEqual(boot.digest(checkout/'third_party'/name),
+                                         expected, name)
 
 
 class BootstrapTests(unittest.TestCase):

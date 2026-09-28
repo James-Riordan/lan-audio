@@ -3195,7 +3195,7 @@
     "purpose": "Exercise independent bootstrap and enrollment failure boundaries without audio.",
     "contract": "Real loopback TLS and fresh private test identities; wrong pin/token rejection, exact transfer bytes, repeat preservation, bounded framing, malicious archives, OS locks and keyed discovery. Shared automatic launcher configuration selects environment overrides without rewriting saved profiles; final native session validation precedes audio, and help avoids downloads.",
     "failure": "Reject incomplete, conflicting or untrusted inputs; preserve original errors and saved identities. Do not turn Windows or loopback checks into Mac speaker readiness.",
-    "verify": "Run repository_launcher.py and desktop_setup.py plus custody and application documentation gates; inspect native Mac CI and hardware evidence separately.",
+    "verify": "Run repository_launcher.py and desktop_setup.py plus custody and application documentation gates; inspect native Mac CI and hardware evidence separately. Git clone round trips must preserve all 1,030 reviewed dependency hashes for core.autocrlf=false, true and input.",
     "next": "Execute the clean native Mac build and real Windows-to-Mac speaker session; preserve target-specific failures before expanding platform claims."
   },
   "lan-audio/third_party/lock.json": {

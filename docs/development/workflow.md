@@ -2,9 +2,10 @@
 
 Start with [the engineering explanation](../literate/README.md), the current proof
 ledger and relevant domain/source contracts. Consult AGENTS.md and inspect local
-changes before edits. This checkout currently has no Git repository metadata;
-preserve before-images with hashes and review changed paths rather than assuming
-a clean Git status. Do not initialize or publish a repository implicitly.
+changes before edits. Use Git status and diffs to preserve unrelated work and
+review the exact change. Historical pre-Git evidence includes before-images;
+retain those records without requiring new duplicate source trees for each edit.
+Do not initialize or publish a repository implicitly.
 
 ## Choose a bounded responsibility
 
@@ -38,8 +39,9 @@ Dependency custody uses its separate checkers.
 ## Seal the observation
 
 Use a fresh `verification/<phase>/` directory for commands, logs, tool versions,
-source/config/dependency hashes and a human RESULTS.md with limitations. Keep
-before-images. Final receipts may be hashed after documentation generation; avoid
+source/config/dependency hashes and a human RESULTS.md with limitations. Record
+the Git base revision (or preserve before-images when Git is unavailable).
+Final receipts may be hashed after documentation generation; avoid
 self-hash cycles and record which files were intentionally excluded. A build is
 not execution, an expected rejection is not a successful operation, and a bounded
 model pass is not an implementation proof.

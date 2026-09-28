@@ -21,6 +21,14 @@ reviewed source package. Existing TLS digests are unchanged. The launcher verifi
 them before using a cached build. Copies retain library ownership; other chats
 editing live sibling libraries cannot change this build implicitly.
 
+The final `.gitattributes` rule disables text conversion for `third_party/**`.
+It must follow extension rules: Git applies later matching attributes, and even
+line-ending-only changes invalidate the reviewed byte hashes. Custody tests
+round-trip the complete dependency closure through Git with `core.autocrlf`
+set to `false`, `true` and `input`. Changing attributes alone cannot repair bytes
+already normalized in a commit; those files must be restored from the reviewed
+source and committed again. Never regenerate the locks to accept conversion.
+
 `tools/bootstrap_assets.json` pins Zig, the Windows embedded Python archive and
 the Mac OpenSSL source archive. Zig signatures and trusted archive names were
 verified against the [ZSF key](https://ziglang.org/download/) during adoption;

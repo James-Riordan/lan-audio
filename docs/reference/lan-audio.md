@@ -2493,11 +2493,11 @@ Generated from reviewed `tools/reference_contracts.json`. Edit the contract data
 
 **Failure/change obligations.** Reject incomplete, conflicting or untrusted inputs; preserve original errors and saved identities. Do not turn Windows or loopback checks into Mac speaker readiness.
 
-**Verification.** Run repository_launcher.py and desktop_setup.py plus custody and application documentation gates; inspect native Mac CI and hardware evidence separately.
+**Verification.** Run repository_launcher.py and desktop_setup.py plus custody and application documentation gates; inspect native Mac CI and hardware evidence separately. Git clone round trips must preserve all 1,030 reviewed dependency hashes for core.autocrlf=false, true and input.
 
 **Next actionable work.** Execute the clean native Mac build and real Windows-to-Mac speaker session; preserve target-specific failures before expanding platform claims.
 
-**Declared surface / navigation:** `BootstrapTests`; `PairingTests`.
+**Declared surface / navigation:** `GitCustodyTests`; `BootstrapTests`; `PairingTests`.
 
 
 <a id="file-tests-integration-runtime-lifecycle-zig"></a>
